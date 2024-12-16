@@ -1,0 +1,42 @@
+{% set moduleName = 'u4m-000' %}
+{% include "../partials/u4-module-includes.html" %}
+
+
+
+<div class="page-center  {{ module.module_settings.theme }}">
+
+
+  <div class="intro_wrapp">
+    {{macros.introGroup(module.intro_content)}}
+  </div>
+
+    {% if module.include_button %}
+  <div class="bottom_button">
+    {{macros.buttonGroup(module.button_group)}}
+  </div>
+  {% endif %}
+
+  
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

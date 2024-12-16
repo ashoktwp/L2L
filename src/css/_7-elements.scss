@@ -17,12 +17,7 @@ html {
 
 /* make html visible after Firefox flash in hack */
 body {
-  font-family: $font1;
-  font-size: $baseFontSize;
-  line-height: $baseLineHeight;
-  color: $black;
-  font-weight: normal;
-  margin-top: 78rem;
+  @include bodyStyle;
 
   &.hide-header {
     margin-top: 0;

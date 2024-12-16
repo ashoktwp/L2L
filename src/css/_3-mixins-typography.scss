@@ -1,12 +1,13 @@
 //heading styles
 @mixin h1 {
-  font-family: $font1;
-  font-size: 60rem;
+  font-size: 72rem;
+  font-family: $secondaryFont;
   font-weight: bold;
-  letter-spacing: .25rem;
+  letter-spacing: -0.5px;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.0833;
   margin-top: 0;
+  color: $headingColor;
   @include tablet {
     font-size: 48rem;
   }
@@ -15,13 +16,15 @@
     margin-bottom: 20rem;
   }
 }
+
 @mixin h2 {
-  font-family: $font1;
-  font-size: 44rem;
-  font-weight: bold;
-  letter-spacing: .25rem;
+  font-size: 48rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.125;
+  color: $headingColor;
+  font-family: $secondaryFont;
+  font-weight: bold;
+  letter-spacing: -0.5px;
   @include tablet {
     font-size: 38rem;
   }
@@ -31,71 +34,71 @@
   }
 }
 @mixin h3 {
-  font-family: $font1;
-  font-size: 38rem;
-  font-weight: bold;
-  letter-spacing: .25rem;
+  font-size: 32rem;
   margin-bottom: 30rem;
   line-height: 1.2;
+  color: $baseColor;
+  font-family: $secondaryFont;
+  font-weight: bold;
+  letter-spacing: -0.5px;
   @include tablet {
-    font-size: 32rem;
-  }
-  @include phone {
     font-size: 28rem;
+  }
+
+  @include phone {
+    font-size: 22rem;
     margin-bottom: 20rem;
   }
 }
+
 @mixin h4 {
-  font-family: $font1;
-  font-size: 34rem;
-  font-weight: bold;
-  letter-spacing: .25rem;
+  font-size: 21rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
-  @include tablet {
-    font-size: 28rem;
-  }
+  line-height: 1.57;
+  color: $baseColor;
+  font-family: $primaryFont;
+  font-weight: 400;
+  letter-spacing: 0px;
+
   @include phone {
-    font-size: 24rem;
+    font-size: 16rem;
     margin-bottom: 20rem;
   }
 }
 @mixin h5 {
-  font-family: $font1;
-  font-size: 30rem;
-  font-weight: bold;
-  letter-spacing: .25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
-  @include tablet {
-    font-size: 24rem;
-  }
-  @include phone {
-    font-size: 20rem;
-    margin-bottom: 20rem;
-  }
+  line-height: 1.71;
+  color: $baseColor;
+  font-family: $primaryFont;
+  font-weight: 400;
+  letter-spacing: 0px;
 }
+
 @mixin h6 {
-  font-family: $font1;
-  font-size: 24rem;
-  font-weight: bold;
-  letter-spacing: .25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
-  @include tablet {
-    font-size: 20rem;
-  }
-  @include phone {
-    font-size: 18rem;
-    margin-bottom: 20rem;
-  }
+  line-height: 1.71;
+  color: $baseColor;
+  font-family: $primaryFont;
+  font-weight: bold;
+  letter-spacing: 0px;
 }
+
 //body styles
+@mixin bodyStyle {
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $baseColor;
+  font-family: $primaryFont;
+  font-weight: $baseFontWeight;
+}
+
 @mixin b1 {
   font-family: $font1;
   font-size: 22rem;
   line-height: 1.4;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
   margin-bottom: 20rem;
   @include phone {
     font-size: 17rem;
@@ -105,7 +108,7 @@
   font-family: $font1;
   font-size: 18rem;
   line-height: 1.6;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
   margin-bottom: 20rem;
   @include phone {
     font-size: 16rem;
@@ -115,7 +118,7 @@
   font-family: $font1;
   font-size: 16rem;
   line-height: 1.6;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
   margin-bottom: 20rem;
   @include phone {
     font-size: 15rem;
@@ -125,7 +128,7 @@
   font-family: $font1;
   font-size: 14rem;
   line-height: 1.6;
-  letter-spacing: .35rem;
+  letter-spacing: 0.35rem;
   margin-bottom: 20rem;
   @include phone {
     font-size: 14rem;
@@ -135,7 +138,7 @@
   font-family: $font1;
   font-size: 13rem;
   line-height: 1.6;
-  letter-spacing: .35rem;
+  letter-spacing: 0.35rem;
   margin-bottom: 20rem;
   @include phone {
     font-size: 13rem;
@@ -145,7 +148,7 @@
   font-family: $font1;
   font-size: 12rem;
   line-height: 1.6;
-  letter-spacing: .35rem;
+  letter-spacing: 0.35rem;
   margin-bottom: 10rem;
   @include phone {
     font-size: 12rem;
@@ -166,10 +169,11 @@
   }
 }
 @mixin eyebrow {
-  font-family: $font1;
-  font-size: 16rem;
+  font-family: $primaryFont;
+  font-size: 14rem;
   font-weight: bold;
-  letter-spacing: 1rem;
+  line-height: 1.5em;
+  letter-spacing: 1.5rem;
   text-transform: uppercase;
   display: block;
   margin-bottom: 10rem;

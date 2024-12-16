@@ -1,3 +1,37 @@
+$baseColor: #2e2e2e;
+$headingColor: #0e2514;
+
+// color pallets
+$Prismic_mango: #f7c36e;
+$Prismic_mint: #b8ffd2;
+$Frostee: #e3f5e6;
+$Mint_cream: #f3faf4;
+$White: #ffffff;
+$Menthol: #c0fc95;
+$L2L_green: #409650;
+$Fern_green: #2c6938;
+$Dark_jungle: #0e2514;
+$Mystic_green: #d0f76f;
+$Lime_Green: #9bf75f;
+
+// color shades
+$Nori_Green: #0e2514;
+$Dark_Green: #22452a;
+$Forest_Green: #275430;
+$Olive_Green: #2c6938;
+$Medium_Sea_Green: #348543;
+$Sea_Green: #409650;
+$Medium_Aquamarine: #6abe7a;
+$Pale_Green: #9dd8a7;
+$Very_Pale_Green: #c8eace;
+$Pale_Mint: #e3f5e6;
+$Off-White: #f3faf4;
+
+$light_grey: #969696;
+$Pale_Yellow_Green: #d0f76e;
+
+//==============
+
 // Colors - For transparency use rgba($action1, 0.5) = 50% opaque
 $action1: #733bf7;
 $action2: #00a4bd;
@@ -7,9 +41,26 @@ $gray1: #edf0f2;
 $gray2: #cbd6e2;
 $gray3: #7c98b6;
 $gradient1: linear-gradient(-45deg, $black 0%, $action2 50%);
-$font1: "Montserrat";
-$baseFontSize: 16rem;
-$baseLineHeight: 1.61803398875; // Golden ratio
+
+$gradient1: linear-gradient(129.51deg, $white -3.8%, $Frostee 107.08%);
+
+$gradient2: linear-gradient(
+  260.94deg,
+  $Pale_Yellow_Green 3.36%,
+  $Prismic_mint 98.11%
+);
+
+// ==============
+
+//============
+$primaryFont: "Sofia Sans";
+$secondaryFont: "Inter";
+
+$font1: $primaryFont;
+$baseFontSize: 21rem;
+$baseLineHeight: 1.57; // Golden ratio
+$baseFontWeight: 400;
+
 // Border Radius
 $border1: 4rem;
 $border2: 5rem;
@@ -25,5 +76,5 @@ $animation2: 0.25s ease-in;
 $animation3: 1s ease-in;
 
 $borderRadius: 25rem;
-$containerSize: 1340rem;
+$containerSize: 1224rem;
 $introContainer: 810rem;
