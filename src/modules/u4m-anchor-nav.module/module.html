@@ -1,0 +1,15 @@
+{% set moduleName = 'u4m-anchor-nav' %}
+{% if module.make_sticky %} 
+  {% set moduleName = 'u4m-anchor-nav has-sticky' %}
+{% endif %}
+{% set imageMax = 300 %}
+
+{% include "../partials/u4-module-includes.html" %}
+    <div class="wrapper">
+      <div class="anchor-nav">
+      {% for item in module.anchor_link %}
+        <a class="single-anchor hs-skip-lang-url-rewrite" href="#{{ item.anchor_link|replace('#', '') }}">{{ item.text }}</a>
+      {% endfor %}
+      </div>
+    </div>
+</section>

@@ -1,0 +1,71 @@
+@import "../../css/_module-imports";
+
+section.u4m-accordion {
+
+  .intro {
+    @include center;
+    max-width: 768rem;
+    text-align: center;
+
+    h2 {
+      @include h2;
+    }
+
+    p {
+      @include b2;
+    }
+  }
+
+  .accordions {
+    @include center;
+    margin: 50rem auto;
+
+    details {
+      border-top: 1rem solid $gray2;
+      transition: background-color .2s;
+      cursor: pointer;
+
+      summary {
+        @include b2;
+        font-weight: bold;
+        margin: 0;
+        padding: 20rem 40rem 20rem 20rem;
+        position: relative;
+        list-style: none; // detail uses list style for summary, like ul > li
+
+        &:after {
+          content: '+';
+          font-size: 30rem;
+          font-weight: normal;
+          line-height: 1;
+          position: absolute;
+          right: 5%;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: transform .2s ease-in-out;
+        }
+      }
+
+      // open = 'active' state
+      &[open] {
+        summary {
+          &:after {
+            transform: translateY(-50%) rotate(45deg);
+          }
+        }
+      }
+
+      &:hover {
+        background-color: $gray1;
+      }
+
+      &:last-child {
+        border-bottom: 1rem solid $gray2;
+      }
+
+      div {
+        padding: 20rem;
+      }
+    }
+  }
+}

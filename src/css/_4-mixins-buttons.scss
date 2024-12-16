@@ -1,0 +1,279 @@
+// 
+@mixin button {
+  display: inline-block;
+  font-family: $font1;
+  color: $white;
+  background-color: $action1;
+  border: 0;
+  border-radius: $border1;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: $animation1;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: .25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: $shadow1;
+
+  &:hover,
+  &:focus {
+    background-color: $black;
+    color: $white;
+  }
+}
+
+// 
+@mixin buttonSmall {
+  @include button;
+  padding: 8rem 20rem 7rem 20rem;
+  font-size: 12rem;
+  line-height: 1.2;
+}
+
+// 
+@mixin buttonStroked {
+  display: inline-block;
+  font-family: $font1;
+  color: $black;
+  background-color: transparent;
+  border: solid 1rem $black;
+  // border-radius: 50rem;
+  padding: 13rem 30rem;
+  margin: 20rem 0;
+  transition: $animation1;
+  font-weight: bold;
+  letter-spacing: .25rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $black;
+    color: $white;
+  }
+}
+
+// Text Button 
+@mixin buttonText {
+  font-weight: bold;
+  margin: 20rem 0;
+  cursor: pointer;
+
+  &:after {
+    display: inline-block;
+    margin-left: 5rem;
+    width: 9rem;
+    height: 7rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: $black;
+  }
+}
+
+// Dark Versions of Buttons 
+@mixin buttonDark {
+  @include button;
+  background-color: $black;
+
+  &:hover,
+  &:focus {
+    background-color: $action1;
+  }
+}
+
+@mixin buttonDarkSmall {
+  @include buttonSmall;
+  background-color: $black;
+
+  &:hover,
+  &:focus {
+    background-color: $action1;
+  }
+}
+
+@mixin buttonDarkStroked {
+  @include buttonStroked;
+  color: $gray1;
+}
+
+// Dot navigation for slick.js 
+@mixin slickDots {
+  //bottom: 30rem;
+  position: relative;
+
+  li {
+    button {
+      background-color: $gray2;
+      transition: $animation1;
+      border-radius: 100%;
+
+      &:before {
+        opacity: 0;
+      }
+
+      &:hover {
+        background-color: $gray3;
+      }
+    }
+
+    &.slick-active {
+      button {
+        background-color: $action1;
+      }
+    }
+  }
+
+  >li:only-child {
+    display: none;
+  }
+}
+
+// Arrow navigation for slick.js 
+@mixin slickArrows {
+
+  &.slick-next,
+  &.slick-prev {
+    &:before {
+      opacity: 1;
+      color: $black;
+      content: "<";
+      transition: $animation1;
+    }
+
+    &:hover {
+      &:before {
+        color: $action2;
+      }
+    }
+  }
+
+  &.slick-next {
+    right: -65rem;
+
+    &:before {
+      content: ">";
+    }
+  }
+
+  &.slick-prev {
+    left: -65rem;
+
+    &:before {
+      content: "<";
+    }
+  }
+}
+
+// Hamburger Menu 
+@mixin x-close {
+  display: none;
+
+  html.menu-open & {
+    display: block;
+  }
+
+  @include tablet {
+    display: block;
+
+    .u4-landing-page & {
+      display: none;
+    }
+  }
+
+  padding: 0;
+  transition: .3s;
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  z-index: 99;
+
+  &.close {
+    transform: scale3d(0.8, 0.8, 0.8)
+  }
+
+  &.x2 .lines {
+    transition: background .3s .5s ease
+  }
+
+  &.x2 .lines:before,
+  &.x2 .lines:after {
+    transform-origin: 50% 50%;
+    transition: top .3s .6s ease, transform .3s ease;
+  }
+
+  &.x2.close .lines {
+    transition: background .3s 0 ease;
+    background: transparent
+  }
+
+  &.x2.close .lines:before,
+  &.x2.close .lines:after {
+    transition: top .3s ease, transform .3s .5s ease;
+    top: 0;
+    width: 30rem;
+  }
+
+  &.x2.close .lines:before {
+    transform: rotate3d(0, 0, 1, 45deg)
+  }
+
+  &.x2.close .lines:after {
+    transform: rotate3d(0, 0, 1, -45deg)
+  }
+
+  &:hover,
+  &:focus {
+    background: transparent;
+    opacity: 1
+  }
+
+  &:active {
+    background: transparent;
+    transition: 0
+  }
+
+  .lines {
+    display: inline-block;
+    width: 30rem;
+    height: 3rem;
+    background: $black;
+    border-radius: 0;
+    transition: .3s;
+    position: relative
+  }
+
+  .lines:before,
+  .lines:after {
+    display: inline-block;
+    width: 30rem;
+    height: 3rem;
+    background: $black;
+    border-radius: 0;
+    transition: .3s;
+    position: absolute;
+    left: 0;
+    content: '';
+    transform-origin: .28571rem center
+  }
+
+  .menu-open & .lines:before,
+  .menu-open & .lines:after {
+    background: $white;
+  }
+
+  .lines:before {
+    top: 10rem
+  }
+
+  .lines:after {
+    top: -10rem
+  }
+}

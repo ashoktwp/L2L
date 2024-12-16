@@ -1,0 +1,90 @@
+@import "../../css/_module-imports";
+section.u4m-quote-cards {
+  padding-top: 100rem;
+  background-color: $gray1;
+  &.reverse-text {
+    .heading {
+      color: $white;
+    }
+  }
+  .heading {
+    @include center;
+    max-width: 1280rem;
+    @include h2;
+    margin-top: 0;
+    text-align: center;
+  }
+  div.dialog-bubbles {
+    @include center;
+    max-width: 1280rem;
+    display: flex;
+    flex-wrap: wrap;
+    @include phone {
+      display: block;
+    }
+    div.item {
+      margin: 20rem 20rem 160rem 20rem;
+      padding: 30rem;
+      flex-grow: 1;
+      flex-basis: 0;
+      position: relative;
+      background: $white;
+      text-align: center;
+      position: relative;
+      @include phone {
+        margin-bottom: 180rem;
+      }
+      p.quote {
+        @include b4;
+      }
+      p.author {
+        @include b4;
+      }
+      span {
+        color: $action1;
+        font-weight: bold;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -14rem;
+        left: calc(50% - 13rem);
+        border-width: 14rem 14rem 0;
+        border-style: solid;
+        border-color: rgba($gray2, .11) transparent;
+        display: block;
+        width: 0;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -13rem;
+        left: calc(50% - 12rem);
+        border-width: 13rem 13rem 0;
+        border-style: solid;
+        border-color: #fff transparent;
+        display: block;
+        width: 0;
+      }
+      div.thumbnail {
+        position: absolute;
+        bottom: -130rem;
+        width: 100rem;
+        height: 100rem;
+        background-size: cover;
+        background-position: 50%;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  div.centered-button {
+    @include center;
+    text-align: center;
+    padding: 30rem 0 50rem 0;
+    a {
+      @include button;
+    }
+  }
+}

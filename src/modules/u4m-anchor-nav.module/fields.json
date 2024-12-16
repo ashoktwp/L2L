@@ -1,0 +1,65 @@
+[ {
+  "id" : "9fbe8677-c238-8fde-d3aa-b9b15079e83f",
+  "name" : "anchor_link",
+  "display_width" : null,
+  "label" : "Anchor Link",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "5dfa2fc3-0691-775f-201b-04796a53939f",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "5dfa2fc3-0691-775f-201b-04796a53939f",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Anchor Link Text"
+  }, {
+    "id" : "5924033f-d279-15ca-bbf3-7c66627699ef",
+    "name" : "anchor_link",
+    "display_width" : null,
+    "label" : "Anchor link",
+    "help_text" : "add the id of the section you want to link to. No need to include the '#'",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "anchor-link"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "text" : "Anchor Link Text",
+    "anchor_link" : "anchor-link"
+  }, {
+    "text" : "Anchor Link Text",
+    "anchor_link" : "anchor-link"
+  }, {
+    "text" : "Anchor Link Text",
+    "anchor_link" : "anchor-link"
+  } ]
+}, {
+  "id" : "9f9778a2-6567-8f68-f82c-62c96c9b4261",
+  "name" : "make_sticky",
+  "display_width" : null,
+  "label" : "Make Sticky",
+  "help_text" : "have the anchor bar follow each section as you scroll down the page",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+} ]

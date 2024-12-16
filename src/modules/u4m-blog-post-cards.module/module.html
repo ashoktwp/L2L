@@ -1,0 +1,44 @@
+{% set moduleName = 'u4m-blog-post-cards' %}
+  {% set imageMax = 1000 %}
+  {% set bgImageMax = 1920 %}
+  
+  {% include "../partials/u4-module-includes.html" %}
+  
+    <div class="top-wrapper">
+      {% if module.include_heading %}
+      <h2 class="heading {% unless module.include_all_posts_link %} no-link {% endunless %}">{{ module.cards_heading }}</h2>
+      {% endif %}
+      {% if module.include_all_posts_link %}
+      <a class="link" href="{{ module.blog_link.url.href }}">{{ module.blog_link_text }}</a>
+      {% endif %}
+    </div>
+  
+    <div class="wrapper">
+      {% if module.post_feed_type == "related" %}
+      {% macro related_blog_post_formatter(post, index, count) %}
+      {% include "/unified4/modules/partials/u4-blog-cards.html" %}
+      {% endmacro %}
+      {% related_blog_posts blog_ids="{{ module.blog_field }}", limit=3, post_formatter="related_blog_post_formatter",  no_wrapper=true %}
+      {% endif %}
+  
+      {# RECENT POSTS SYNTAX #}
+      {% if module.post_feed_type == "recent" %}
+      {% set blogID = blog_recent_posts(module.blog_field, limit=3)  %}
+      {% for post in blogID %}
+      {% if loop.index < 4 %}
+      {% include "../modules/partials/u4-blog-cards.html" %}
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+    
+      {# MANUAL POSTS SYNTAX #}
+      {% if module.post_feed_type == "manual" %}    
+      {% set post = content_by_id(module.blog_post_one) %}
+      {% include "../modules/partials/u4-blog-cards.html" %}
+      {% set post = content_by_id(module.blog_post_two) %}
+      {% include "../modules/partials/u4-blog-cards.html" %}
+      {% set post = content_by_id(module.blog_post_three) %}
+      {% include "../modules/partials/u4-blog-cards.html" %}
+      {% endif %}     
+    </div>  
+  </section>

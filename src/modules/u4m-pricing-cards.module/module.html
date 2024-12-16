@@ -1,0 +1,66 @@
+{% set moduleName = 'u4m-pricing-cards' %}
+  {% set imageMax = 300 %}
+  {% set imageFillMax = 720 %}
+  {% set bgImageMax = 1920 %}
+  
+  {# sample lazy load bg <div class="lazy" data-bg="{{ resize_image_url(item.card_image.src, 0,0,imageMax) }}"></div> #}
+  
+  
+  {% include "../partials/u4-module-includes.html" %}
+  
+  
+  <div class="intro">
+    {% if module.cards_heading %}
+    <h2 class="heading">{{ module.cards_heading }}</h2>
+    {% endif %}
+  
+    {% if module.include_subheading %}
+    <p class="subheading">{{ module.cards_subheading }}</p>
+    {% endif %}
+  
+  </div>
+  
+  <div class="wrapper">
+    {% for item in module.card %}
+    <div data-aos="fade-up" class="card">
+      {% if item.title %}<span class="title {% if item.popular_label %}popular-label{% endif %}">{{ item.title }}</span>{% endif %}
+      <div class="content">
+        <div class="price-container">
+          {% if item.price %}<span class="price">{{ item.price }}{% if item.price_frequency %}<span class="price-frequency">{{ item.price_frequency }}</span>{% endif %}</span>{% endif %}
+  
+          {% if item.description %}<span class="teaser">{{ item.description }}</span>{% endif %}
+          <!-- Link under description -->
+          <div class="top-link">
+            {% if item.top_link_group.link_type == "cta" %}
+            <span class="top-link-cta">{% cta guid="{{ item.top_link_group.call_to_action }}" %}</span>
+            {% elif item.top_link_group.link_type == "url" %}
+            <span class="top-link-url"><a href="{{ item.top_link_group.link.href }}" {% if item.top_link_group.open_in_new_window %}target="_blank"{% endif %}>{{ item.top_link_group.link_text }}</a></span>
+            {% else %}
+            <!-- No link -->
+            {% endif %} 
+          </div>
+        </div>
+        <span class="list-title">{{ item.list_title }}</span>
+  
+        <ul>
+          {% for item2 in item.bulleted_list %}
+          {% if item2.bullet_point_type == "check" %}
+          <li><span><img src="https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/icon-yes.svg" alt="Check"></span>
+            {{ item2.list_item_text }}
+          </li>
+          {% elif item2.bullet_point_type == "minus" %}
+          <li class="excluded-reports"><span><img src="https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/icon-no.svg" alt="No"></span>
+            {{ item2.list_item_text }}
+          </li>
+  
+          {% endif %}
+          {% endfor %}
+        </ul>
+  
+      </div>
+  
+    </div>
+    {% endfor %}
+  </div>
+  
+  </section>

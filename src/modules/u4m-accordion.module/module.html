@@ -1,0 +1,22 @@
+{% set moduleName = 'u4m-accordion' %}
+{% include "../partials/u4-module-includes.html" %}
+  <div class='intro'>
+    <div class="heading">
+      {% if module.include_heading %}
+      <h2>{{ module.heading }}</h2>
+      {% endif %}
+      {% if module.include_copy %}
+      <p>{{ module.copy }}</p>
+      {% endif %}     
+    </div>
+  </div>
+  <div class='accordions'>
+  {# Using details.js as a polyfill for browsers that don't suppose details/open #}
+    {% for accordion in module.accordions %}
+    <details>
+      <summary>{{ accordion.summary }}</summary>
+      <div>{{ accordion.detail }}</div>
+    </details>
+    {% endfor %}
+  </div>
+</section>

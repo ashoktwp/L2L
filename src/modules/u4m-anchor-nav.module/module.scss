@@ -1,0 +1,82 @@
+@import "../../css/module-imports";
+
+.u4m-anchor-nav {
+  position: relative;
+  z-index: 100;
+  background-color: $black;
+
+  .wrapper {
+    @include centerSmall;
+    padding: 25rem 0;
+    border: 0;
+    position: relative;
+
+    .anchor-nav {
+      position: absolute;
+      transition: opacity $animation1;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: none;
+      letter-spacing: 1rem;
+
+      a {
+        color: $white;
+        padding: 0 25rem;
+        height: 100%;
+        font-weight: bold;
+        font-size: 14rem;
+        display: flex;
+        align-items: center;
+        top: -100rem;
+
+        @include phone {
+          padding: 0 8rem;
+          font-size: 12rem;
+        }
+      }
+    }
+  }
+
+  &.sticky {
+    .wrapper {
+      .anchor-nav {
+        background-color: $black;
+        position: fixed;
+
+        a {
+          &.active-anchor {
+            color: $white;
+            background-color: $action1;
+          }
+        }
+      }
+    }
+  }
+
+  &.bottom {
+    .wrapper {
+      .anchor-nav {
+        //position: absolute;
+        opacity: 0;
+        transition: $animation1;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &.non-sticky {
+    .wrapper {
+      .anchor-nav {
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../css/_module-imports";
+section.u4m-banner {
+  background-color: $black;
+  padding: 8rem 0 7rem 0;
+  &.offscreen {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  div.content {
+    @include center;
+    max-width: 1200rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div.image {
+      img {
+        max-width: 134rem;
+        position: relative;
+        top: -3rem;
+        @include tabletvert {
+          max-width: 67rem;
+        }
+      }
+    }
+    div.text {
+      font-size: 16rem;
+      color: $white;
+      line-height: 1;
+      letter-spacing: 1rem;
+      span.bar {
+        margin: 0 12rem;
+        @include tabletvert {
+          display: none;
+        }
+      }
+      @include tabletvert {
+        font-size: 12rem;
+        margin-left: 10rem;
+        text-align: center;
+      }
+    }
+    div.cta {
+      margin-left: 15rem;
+      color: $action1;
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: 1rem;
+      a {
+        color: $white;
+        &:hover {
+          color: $action2;
+        }
+        @include tabletvert {
+          font-size: 12rem;
+        }
+      }
+      @include tabletvert {
+        margin-left: 10rem;
+      }
+    }
+    div.close {
+      span {
+        color: $white;
+        cursor: pointer;
+        margin-left: 15rem;
+        &:hover {
+          color: $action2;
+        }
+      }
+    }
+  }
+}

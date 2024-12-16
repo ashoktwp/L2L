@@ -1,0 +1,7 @@
+{
+  "global": false,
+  "host_template_types" : [ "PAGE" ],
+"icon": "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
+  "label": "Pricing Cards",
+  "is_available_for_new_content": true
+}

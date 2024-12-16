@@ -1,0 +1,36 @@
+{% set moduleName = 'u4m-cta-row' %}
+  {% set bgImageMax = 1920 %}
+    
+  {% include "../partials/u4-module-includes.html" %}
+    <div class="inner {% if module.center_content %}centered{% endif %}">
+      <div class="copy">
+        {% if module.include_heading %}<h2 class="heading">{{ module.cta_row_heading }}</h2>{% endif %}
+        {% if module.include_text %}
+          <p class="text">{{ module.text }}</p>
+        {% endif %}
+        <div class="cta">
+          {% if module.use_normal_link %}
+            {% set href = module.link_field.url.href %}
+            {% if module.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+              {% if module.link_field.open_in_new_tab %}target="_blank"{% endif %}
+              {% if module.link_field.rel %}rel="{{ module.link_field.rel }}"{% endif %}
+              >
+              {{ module.link_text }}
+            </a>
+          {% else %}
+            {% cta guid="{{ module.call_to_action }}" %}
+          {% endif %}        
+        </div>
+      </div>
+  
+      {% if module.include_image %}
+          <div class="image">
+            <img loading="lazy" src="{{ module.image.src }}" width="400" alt="{{ module.image.alt }}">
+          </div>
+      {% endif %}
+  
+    </div>
+  </section>

@@ -1,0 +1,29 @@
+@import "../../css/_module-imports";
+section.u4m-share-page {
+  &.reverse-text {
+    color: $white;
+  }
+  margin-top: 50rem;
+  margin-bottom: 100rem;
+  text-align: center;
+  .heading {
+    @include center;
+    @include h6;
+    margin-bottom: 0;
+  }
+  div.content {
+    @include center;
+    max-width: 720rem;
+    a.download-button {
+      @include button;
+    }
+    div.share {
+      span {
+        padding-right: 10rem;
+      }
+      a {
+        font-size: 32rem;
+      }
+    }
+  }
+}

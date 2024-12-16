@@ -1,0 +1,123 @@
+{
+  "name": "u4_logos",
+  "useForPages": false,
+  "label": "U4 Logos",
+  "allowChildTables": false,
+  "allowPublicApiAccess": false,
+  "dynamicMetaTags": {},
+  "enableChildTablePages": false,
+  "columns": [
+    { "name": "internal_name", "label": "Internal Name", "type": "TEXT" },
+    { "name": "Name", "label": "Name", "type": "TEXT" },
+    { "name": "logo", "label": "Logo", "width": 237, "type": "IMAGE" },
+    { "name": "link", "label": "Link", "type": "TEXT" },
+    { "name": "show_by_default", "label": "Show by Default", "type": "BOOLEAN" }
+  ],
+  "rows": [
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "internal_name": "Intel",
+        "logo": {
+          "url": "https://cdn2.hubspot.net/hubfs/302335/logo-intel-1.png",
+          "width": 242,
+          "height": 160,
+          "type": "image"
+        },
+        "show_by_default": 1,
+        "Name": "Intel"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "internal_name": "Google",
+        "logo": {
+          "url": "https://cdn2.hubspot.net/hubfs/302335/logo-google.png",
+          "width": 336,
+          "height": 110,
+          "type": "image"
+        },
+        "show_by_default": 1,
+        "Name": "Google"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "internal_name": "Kalibrate",
+        "logo": {
+          "url": "https://cdn2.hubspot.net/hubfs/302335/logo-kalibrate.png",
+          "width": 300,
+          "height": 100,
+          "type": "image"
+        },
+        "show_by_default": 1,
+        "Name": "Kalibrate"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "internal_name": "SpringCM",
+        "logo": {
+          "url": "https://cdn2.hubspot.net/hubfs/302335/logo-springcm.png",
+          "width": 300,
+          "height": 100,
+          "type": "image"
+        },
+        "show_by_default": 1,
+        "Name": "SpringCM"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "internal_name": "OneStream",
+        "logo": {
+          "url": "https://cdn2.hubspot.net/hubfs/302335/logo-onestream.png",
+          "width": 300,
+          "height": 100,
+          "type": "image"
+        },
+        "show_by_default": 1,
+        "Name": "OneStream"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "internal_name": "Bedrock Data",
+        "logo": {
+          "url": "https://cdn2.hubspot.net/hubfs/302335/logo-bedrock-data.png",
+          "width": 300,
+          "height": 100,
+          "type": "image"
+        },
+        "show_by_default": 1,
+        "Name": "Bedrock Data"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "internal_name": "Reward Gateway",
+        "logo": {
+          "url": "https://cdn2.hubspot.net/hubfs/302335/logo-reward-gateway.png",
+          "width": 300,
+          "height": 100,
+          "type": "image"
+        },
+        "show_by_default": 1,
+        "Name": "Reward Gateway"
+      }
+    }
+  ]
+}

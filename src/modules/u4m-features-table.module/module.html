@@ -1,0 +1,34 @@
+{% set moduleName = 'u4m-features-table {{ "narrow" if module.narrow_table }}' %}
+{% set imageMax = 1000 %}
+{% set bgImageMax = 1920 %}
+   
+{% include "../partials/u4-module-includes.html" %}
+    {% if module.include_heading_and_labels %}
+    <div class="header">
+      <div class="intro">
+        <h2 class="title">{{ module.Heading }}</h2>
+        <p>{{ module.intro_text }}</p>  
+      </div>
+      <span class="version">{{ module.version_1_label }}</span>
+      <span class="version">{{ module.version_2_label }}</span>
+    </div>
+    {% endif %}
+    <div class="section">
+      <h3 class="title">{{ module.section_headline }}</h3>
+      {% for item in module.features_comparison_item %}
+      <div class="item">
+        <div class="item-name">{{ item.feature_name }}</div>
+        <div class="second-box">
+          {% if item.version_1_text_override %} {{ item.version_1_text_override }}{% else %}    
+          <span class="includes">{% if item.version_1_includes_ %}✓{% else %}−{% endif %}</span>
+          {% endif %} 
+        </div>
+        <div class="third-box">
+          {% if item.version_2_text_override %}{{ item.version_2_text_override }}{% else %}  
+          <span class="includes">{% if item.version_2_includes_ %}✓{% else %}−{% endif %}</span>
+          {% endif %} 
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>

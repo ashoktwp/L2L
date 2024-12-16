@@ -1,0 +1,1798 @@
+{
+  "name": "u4_resource_library",
+  "useForPages": false,
+  "label": "U4 Resource Library",
+  "allowChildTables": false,
+  "allowPublicApiAccess": false,
+  "dynamicMetaTags": {},
+  "enableChildTablePages": false,
+  "columns": [
+    {
+      "name": "internal_name",
+      "label": "Internal Name",
+      "width": 407,
+      "type": "TEXT"
+    },
+    { "name": "name", "label": "Name", "width": 251, "type": "TEXT" },
+    { "name": "featured_offer", "label": "Featured Offer", "type": "BOOLEAN" },
+    {
+      "name": "medium",
+      "label": "Medium",
+      "options": [
+        { "id": "1", "name": "eBook", "type": "option", "order": null },
+        { "id": "2", "name": "Guide", "type": "option", "order": null },
+        { "id": "3", "name": "Template", "type": "option", "order": null },
+        { "id": "4", "name": "Webinar", "type": "option", "order": null },
+        { "id": "5", "name": "Checklist", "type": "option", "order": null },
+        { "id": "6", "name": "Assessment", "type": "option", "order": null },
+        { "id": "7", "name": "Audit", "type": "option", "order": null }
+      ],
+      "type": "SELECT",
+      "optionCount": 7
+    },
+    {
+      "name": "category",
+      "label": "Category",
+      "options": [
+        {
+          "id": "1",
+          "name": "Demand Generation",
+          "type": "option",
+          "order": null
+        },
+        {
+          "id": "2",
+          "name": "Sales Conversion",
+          "type": "option",
+          "order": null
+        },
+        {
+          "id": "3",
+          "name": "Growth Acquisition",
+          "type": "option",
+          "order": null
+        },
+        {
+          "id": "4",
+          "name": "Insight Analytics",
+          "type": "option",
+          "order": null
+        }
+      ],
+      "width": 350,
+      "type": "MULTISELECT",
+      "optionCount": 4
+    },
+    { "name": "description", "label": "Description", "type": "TEXT" },
+    { "name": "landing_page_url", "label": "Landing Page URL", "type": "TEXT" },
+    { "name": "link_text", "label": "Link Text", "width": 200, "type": "TEXT" },
+    { "name": "cover_image", "label": "Cover Image", "type": "IMAGE" }
+  ],
+  "rows": [
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 1,
+        "internal_name": "The Ultimate Guide to Inbound Marketing",
+        "name": "The Ultimate Guide to Inbound Marketing",
+        "description": "Learn all the steps to take to build a successful, optimized inbound marketing strategy. Do you need more leads?",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/The_Ultimate_Guide_to_Inbound_Marketing_Cover-sm.png",
+          "width": 300,
+          "height": 350,
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/inbound-marketing-guide",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 1,
+        "internal_name": "Inbound Marketing Cheat Sheet",
+        "name": "Inbound Marketing Cheat Sheet",
+        "description": "Whether you’re a novice or seasoned inbound marketer, we have developed a quick cheat sheet that will walk you through the different parts of your campaign. ",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/Inbound%20marketing%20cheat%20sheet.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "3",
+            "name": "Growth Acquisition",
+            "type": "option",
+            "order": 2
+          }
+        ],
+        "landing_page_url": "/inbound-marketing-cheat-sheet",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 1,
+        "internal_name": "HubSpot COS Cheat Sheet",
+        "name": "HubSpot COS Cheat Sheet",
+        "description": "A cheat sheet for selling the HubSpot COS ",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/hubspot%20COS%20cheat%20sheet.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/hubspot-cos-cheat-sheet",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 1,
+        "internal_name": "B2B Facebook Business Page Checklist",
+        "name": "B2B Facebook Business Page Checklist",
+        "description": "Social media is a powerful attraction tool that is an integral part of the inbound marketing playbook. With Facebook being the largest platform, with an active monthly user base of over a billion people, chances are pretty high that your target audience is there. But are you leveraging Facebook for your own marketing?",
+        "medium": {
+          "id": "5",
+          "name": "Checklist",
+          "type": "option",
+          "order": 4
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/alt-cover-sample.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/facebook-checklist",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 1,
+        "internal_name": "Landing Page Best Practices Checklist",
+        "name": "Landing Page Best Practices Checklist",
+        "description": "A checklist to ensure that your Landing Pages are Optimized",
+        "medium": {
+          "id": "5",
+          "name": "Checklist",
+          "type": "option",
+          "order": 4
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/LP%20best%20practices-600x300.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/landing-page-checklist",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 1,
+        "internal_name": "Email Best Practices Checklist",
+        "name": "Email Best Practices Checklist",
+        "description": "Email Best Practices Checklist",
+        "medium": {
+          "id": "5",
+          "name": "Checklist",
+          "type": "option",
+          "order": 4
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/email%20best%20practices%20checklist.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/email-checklist",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "SEO Checklist",
+        "name": "SEO Checklist",
+        "description": "One keyword per post, URL, Blog post title, meta description, bolded text, image alt tag, links, anchor tag",
+        "medium": {
+          "id": "5",
+          "name": "Checklist",
+          "type": "option",
+          "order": 4
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-seo%20checklist.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/seo-checklist",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "4 Tools to Measure Twitter Engagement",
+        "name": "4 Tools to Measure Twitter Engagement",
+        "description": "Engagement on Twitter is associated with metrics that are unique to this environment. With this ebook, we will show you the 4 tools that we use to measure engagement with our Twitter followers.",
+        "medium": { "id": "1", "name": "eBook", "type": "option", "order": 0 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/4%20tools%20to%20measure%20twitter%20engagement.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/measure-twitter-engagement",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "15 Best Practices for Business Blogging",
+        "name": "15 Best Practices for Business Blogging",
+        "description": "We’ve put together the 15 Best Practices for Business Blogging Guide to share tips you can leverage in your own strategy. By using these best practices you will have the tools to drive qualified traffic to your website, build a strong online presence and generate leads.",
+        "medium": { "id": "1", "name": "eBook", "type": "option", "order": 0 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/15%20brilliant%20pubhub%20blog%20designs.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/business-blogging-ebook",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "The 30 Greatest Lead Generation Tips, Tricks & Ideas",
+        "name": "The 30 Greatest Lead Generation Tips, Tricks & Ideas",
+        "description": "Generating leads — both high in quantity and quality — is a marketers most important objective. A successful lead generation engine is what keeps the funnel full of sales prospects while you sleep. Surprisingly, only 1 in 10 marketers feel their lead generation campaigns are effective. ",
+        "medium": { "id": "1", "name": "eBook", "type": "option", "order": 0 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/30%20lead%20gen%20tips%20tricks.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/lead-generation-tips-gb",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "10 Steps to Redesigning Your Website",
+        "name": "10 Steps to Redesigning Your Website",
+        "description": "This 10-step guide will give you the knowledge necessary to redesign a beautiful and optimized website.",
+        "medium": { "id": "1", "name": "eBook", "type": "option", "order": 0 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/10%20steps%20to%20redesigning%20your%20website.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/website-redesign-ebook",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "15 Brilliant PubHub Designs",
+        "name": "15 Brilliant PubHub Designs",
+        "description": "Did you know that blogging for your business can help you increase website traffic, generate more qualified leads and build a trusting relationship with your current and potential customers? \"PubHub\" is a term we use here at New Breed to refer to the next generation blog. Essentially, a PubHub transforms your current blogging platform into your very own publication hub.",
+        "medium": { "id": "1", "name": "eBook", "type": "option", "order": 0 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/15%20brilliant%20pubhub%20blog%20designs.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "3",
+            "name": "Growth Acquisition",
+            "type": "option",
+            "order": 2
+          }
+        ],
+        "landing_page_url": "/pubhub-blog-designs",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Guide to Switching from Marketo to HubSpot",
+        "name": "Guide to Switching from Marketo to HubSpot",
+        "description": "Our goal throughout this e-book is to help you find which platform is best for your business, and, if that means switching from Marketo to HubSpot, just how you should start that process.",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/marketo%20to%20HS%20switching%20guide.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/switching-from-marketo-to-hubspot-guide",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "SaaS Grader",
+        "name": "SaaS Grader",
+        "description": "Calculate the key metrics that founders, VCs and board members look for  when assessing a company's potential against industry benchmarks and the unicorns of the SaaS space.",
+        "medium": {
+          "id": "5",
+          "name": "Checklist",
+          "type": "option",
+          "order": 4
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-saas%20grader.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "http://saasgrader.com/",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Blog Editorial Calendar Template",
+        "name": "Blog Editorial Calendar Template",
+        "description": "We've designed this template to help you stay on track with your blogging and stay organized as you continue to produce awesome content that your prospects enjoy",
+        "medium": {
+          "id": "3",
+          "name": "Template",
+          "type": "option",
+          "order": 2
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/blog%20editorial%20calendar.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/blog-editorial-calendar-template",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Social Media Reporting Template",
+        "name": "Social Media Reporting Template",
+        "description": "We've designed this template to make reporting on your social media efforts easier and to help you stay organized as you continue to build your social presence. We know at the end of the day (or quarter) you need to be able to prove real ROI of social media. ",
+        "medium": {
+          "id": "3",
+          "name": "Template",
+          "type": "option",
+          "order": 2
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-social%20media%20reporting%20template.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/social-media-reporting-template",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Marketing Goals Calculator Template",
+        "name": "Marketing Goals Calculator Template",
+        "description": "Use this template as a tool to lay out the high level goals, and then work with your marketing and sales leaders to better define, understand and refine this model so you can see how these metrics compare by channel and persona. Make the most educated decisions possible on where you spend your budget and how you can generate the greatest return for your business. ",
+        "medium": {
+          "id": "3",
+          "name": "Template",
+          "type": "option",
+          "order": 2
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-marketing%20goals%20template.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/marketing-goals-template",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Free-Trial & Cohort Analysis Template",
+        "name": "Free-Trial & Cohort Analysis Template",
+        "description": "This template is designed to help you track the performance of your free-trial nurturing campaigns over time and analyze which of your buyer personas is the most profitable customer for your business. ",
+        "medium": {
+          "id": "3",
+          "name": "Template",
+          "type": "option",
+          "order": 2
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/free%20trial%20cohort%20analysis.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/saas-cohort-analysis-template",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Service Level Agreement (SLA) Template",
+        "name": "Service Level Agreement (SLA) Template",
+        "description": "This template is designed to help delve deeply into your pipeline numbers and create your own Service Level Agreement with your sales team. Using our four-step process you will: define your customer close rates, determine a dollar value for your leads, identify how many monthly leads both sales and marketing need to hit your monthly numbers, and tally your monthly productivity against these goals.",
+        "medium": {
+          "id": "3",
+          "name": "Template",
+          "type": "option",
+          "order": 2
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-SLA%20Template.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/sla-template",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Navigation Map Template",
+        "name": "Navigation Map Template",
+        "description": "A Navigation Map (Nav Map for short) is a document which dictates the allocation and organization of content areas, functionality and how users will move through your completed website.",
+        "medium": {
+          "id": "3",
+          "name": "Template",
+          "type": "option",
+          "order": 2
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-nav%20map%20template.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/navigation-map-template",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Content Strategy Guide",
+        "name": "Content Strategy Guide",
+        "description": "This guide will walk you through strategies that will build awareness and get your business visibility where most buyers’ journeys begin today — online. ",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/Content%20strategy%20guide.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/content-strategy-free-guide",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Unified Marketing + Sales Whitepaper",
+        "name": "Unified Marketing + Sales Whitepaper",
+        "description": "This guide seeks to show you how to break the barrier between your marketing and sales departments. Your team will be stronger as a result and your company will see the effects with a higher return on your marketing investment.",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-unify%20M&S.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/unifying-your-marketing-and-sales-whitepaper",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "The Definitive Guide to SaaS Marketing",
+        "name": "The Definitive Guide to SaaS Marketing",
+        "description": "In this guide, you will be guided through a number of comprehensive and actionable ways the most successful software companies grow their businesses. Together these elements will help you to create a highly effective marketing strategy, from goal setting through customer success.",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/guide%20to%20SaaS%20marketing.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "3",
+            "name": "Growth Acquisition",
+            "type": "option",
+            "order": 2
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/saas-marketing-guide",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Social Prospecting Workbook",
+        "name": "Social Prospecting Workbook",
+        "description": "This social prospecting workbook will teach you the fundamentals of how to listen to social media conversations in order to generate leads for your business. ",
+        "medium": {
+          "id": "3",
+          "name": "Template",
+          "type": "option",
+          "order": 2
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-social%20prospecting.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/social-prospecting",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Switching from Pardot to HubSpot",
+        "name": "Switching from Pardot to HubSpot",
+        "description": "If you’re currently using email-centric automation tools like Pardot and are in need of a platform that addresses the full funnel, from anonymous visitor to evangelist, you aren’t alone.",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-pardot%20to%20hubspot%20switch.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/switching-from-pardot-to-hubspot",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Reboot Your Website into a Lead Generation Machine",
+        "name": "Reboot Your Website into a Lead Generation Machine",
+        "description": "It’s not always advisable to start over again with the same plan for design, launch and measurement. If you, like so many marketers today, are sick of the “build a building, knock it down, build a new building” site redesign cycle, it may be time to consider taking a new approach.",
+        "medium": { "id": "1", "name": "eBook", "type": "option", "order": 0 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/lead%20generation%20machine.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/lead-generation-machine",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Trade Show Lead Strategy",
+        "name": "Trade Show Lead Strategy",
+        "description": "The most important job you have at a trade show is to capture quality information from each conversation.  Learn how to appropriately capture leads, import into HubSpot, segment and follow up.",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-tradeshow%20tips.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/trade-show-tips-for-success",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "The HubSpot Growth Stack Guide",
+        "name": "The HubSpot Growth Stack Guide",
+        "description": "Start focusing on generating leads and revenue and forget about managing a stack of scattered tools.",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/hubspot%20growth%20stack%20guide.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "3",
+            "name": "Growth Acquisition",
+            "type": "option",
+            "order": 2
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/hubspot-growth-stack",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "The Complete Guide to Inbound Sales",
+        "name": "The Complete Guide to Inbound Sales",
+        "description": "The time has come to transform the way you sell. Consumers' buying habits have shifted drastically. They no longer rely on sales representatives to educate them on product specifics and implementation. Rather, they consult the internet.",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/guide%20to%20inbound%20sales.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/inbound-sales-guide",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "How to use Linkedin for Social Prospecting",
+        "name": "How to use Linkedin for Social Prospecting",
+        "description": "This guide will provide useful information to develop a strategy and execution plan for your LinkedIn prospecting.",
+        "medium": {
+          "id": "3",
+          "name": "Template",
+          "type": "option",
+          "order": 2
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-linkedin%20for%20social%20prospecting.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/linkedin-prospecting-workbook",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "HubSpot COS Website Design & Development",
+        "name": "HubSpot COS Website Design & Development",
+        "description": "Using the robust HubSpot COS as our platform of choice, we were able to design and develop a website that would help us achieve our goals. Read our case study to see the results driven by a Sales Ready Website on the HubSpot COS.",
+        "medium": { "id": "1", "name": "eBook", "type": "option", "order": 0 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/Hubspot%20cos%20web%20design%20and%20development.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "3",
+            "name": "Growth Acquisition",
+            "type": "option",
+            "order": 2
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/hubspot-cos-nb-case-study",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "HubSpot COS Website Design & Development",
+        "name": "HubSpot COS Website Design & Development",
+        "description": "Maximize the time you spend on social media and stay organized while continuing to produce awesome content for your audience. ",
+        "medium": {
+          "id": "3",
+          "name": "Template",
+          "type": "option",
+          "order": 2
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-social%20editorial%20calendar%20template.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/social-media-editorial-calendar-template",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Inbound Marketing Agency Scorecard",
+        "name": "Inbound Marketing Agency Scorecard",
+        "description": "Clearly assess your agency shortlist on the most important questions and criteria to make the correct decision on finding the best agency for your business.",
+        "medium": {
+          "id": "5",
+          "name": "Checklist",
+          "type": "option",
+          "order": 4
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/inbound%20marketing%20agency%20scorecard.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "3",
+            "name": "Growth Acquisition",
+            "type": "option",
+            "order": 2
+          }
+        ],
+        "landing_page_url": "/inbound-marketing-agency-scorecard",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Top 5 Reports Marketing and Sales Need to Know",
+        "name": "Top 5 Reports Marketing and Sales Need to Know",
+        "description": "If you're not reporting at both the Executive Level and the Leading Indicator Level, or you're unsure of the difference between the two check out this free slide deck of reports you need to know.",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/Top%205%20reports%20M&S.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/top-5-marketing-and-sales-reports",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Marketing Automation and RFP Template",
+        "name": "Marketing Automation and RFP Template",
+        "description": "Download HubSpot's Marketing Automation RFP Template for a breakdown of all the important questions you need to ask in order to determine the solution that can best handle your lead generation, lead nurturing, and overall lead management needs.",
+        "medium": {
+          "id": "3",
+          "name": "Template",
+          "type": "option",
+          "order": 2
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/pco-cover-marketing%20automation%20rfp.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/marketing-automation-rfp-template",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "New Breed Services Booklet",
+        "name": "New Breed Services Booklet",
+        "description": "This booklet will help you understand the available solutions to solve your marketing and sales challenges and gear up your business for growth.",
+        "medium": { "id": "1", "name": "eBook", "type": "option", "order": 0 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/services%20booklet.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "3",
+            "name": "Growth Acquisition",
+            "type": "option",
+            "order": 2
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/new-breed-services-booklet",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "The Marketing & Sales Metrics You Need for Revenue Growth",
+        "name": "The Marketing & Sales Metrics You Need for Revenue Growth",
+        "description": "See if you and your company have the right tools and metrics in place to measure success and growth.",
+        "medium": {
+          "id": "4",
+          "name": "Webinar",
+          "type": "option",
+          "order": 3
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/Marketing%20and%20Sales%20Metrics%20for%20growth.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/webinar-recording-marketing-sales-metrics",
+        "link_text": "Watch Recording"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Leveraging SLAs for Marketing & Sales Unification",
+        "name": "Leveraging SLAs for Marketing & Sales Unification",
+        "description": "In this webinar, we’re going to narrow in on the benefits of leveraging an SLA to unify your Marketing and Sales teams. Tune in to discover the steps necessary to create an SLA and learn how the New Breed team operates within that process.",
+        "medium": {
+          "id": "4",
+          "name": "Webinar",
+          "type": "option",
+          "order": 3
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/Leveraging%20SLA%20webinar%20image.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/marketing-sales-service-level-agreements-webinar",
+        "link_text": "Watch Recording"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "The Benefits and Best Practices of Metrics-Driven Pipeline Management",
+        "name": "The Benefits and Best Practices of Metrics-Driven Pipeline Management",
+        "description": "In this webinar from New Breed and InsightSquared, The Benefits and Best Practices of Metrics-Driven Pipeline Management, Patrick Biddiscombe and Joe Caprio will bring insight into which metrics matter most and why when managing your sales pipeline.",
+        "medium": {
+          "id": "4",
+          "name": "Webinar",
+          "type": "option",
+          "order": 3
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/metrics%20driven%20pipeline%20management.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/pipeline-management-best-practices-webinar",
+        "link_text": "Watch Recording"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "HubSpot's New Features: Announced at INBOUND 2016",
+        "name": "HubSpot's New Features: Announced at INBOUND 2016",
+        "description": "This webinar will contain a full overview, demonstration and explanation of HubSpot's newest tools as announced at INBOUND 2016.",
+        "medium": {
+          "id": "4",
+          "name": "Webinar",
+          "type": "option",
+          "order": 3
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/10%20steps%20to%20redesigning%20your%20website.jpg",
+          "width": 600,
+          "height": 300,
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "3",
+            "name": "Growth Acquisition",
+            "type": "option",
+            "order": 2
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/access-webinar-recording-on-hubspots-new-features",
+        "link_text": "Watch Recording"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "How Marketing and Sales Operations Drive Growth  ",
+        "name": "How Marketing and Sales Operations Drive Growth  ",
+        "description": "Learn what the current landscape of marketing and sales operations looks like and why closed-loop operations are so important to support growth.",
+        "medium": {
+          "id": "4",
+          "name": "Webinar",
+          "type": "option",
+          "order": 3
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/How%20Marketing%20and%20Sales%20Operations%20Drive%20Growth-1.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "3",
+            "name": "Growth Acquisition",
+            "type": "option",
+            "order": 2
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/access-webinar-recording-marketing-sales",
+        "link_text": "Watch Recording"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Inbound Marketing Assessment",
+        "name": "Inbound Marketing Assessment",
+        "description": "Our strategists are on hand to talk through your business goals with you and help tie those goals back to actionable, measureable marketing plans.",
+        "medium": {
+          "id": "6",
+          "name": "Assessment",
+          "type": "option",
+          "order": 5
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/inbound%20marketing%20assessment%20image.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "3",
+            "name": "Growth Acquisition",
+            "type": "option",
+            "order": 2
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/free-consultation",
+        "link_text": "Request Assessment"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Website Assessment",
+        "name": "Website Assessment",
+        "description": "By assessing your current website and implementing industry-leading best practices where necessary, you can improve your user experience, convert more leads and turn your website into your most valuable asset.",
+        "medium": {
+          "id": "6",
+          "name": "Assessment",
+          "type": "option",
+          "order": 5
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/website%20assessment%20image.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/website-assessment-ba",
+        "link_text": "Request Assessment"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Lifecycle Marketing Assessment",
+        "name": "Lifecycle Marketing Assessment",
+        "description": "Get a data-driven evaluation of your email marketing efforts by one of our inbound advisors to identify gaps in your lifecycle marketing strategy.",
+        "medium": {
+          "id": "6",
+          "name": "Assessment",
+          "type": "option",
+          "order": 5
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/Lifecycle%20Marketing%20Assessment%20image.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          }
+        ],
+        "landing_page_url": "/lifecycle-email-marketing-assessment",
+        "link_text": "Request Assessment"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Inbound Readiness Assessment",
+        "name": "Inbound Readiness Assessment",
+        "description": "Are you struggling with HubSpot marketing operations, reporting and alignment?  Our Inbound Advisors are ready to set your team up for success with our free marketing operations assessment. ",
+        "medium": {
+          "id": "6",
+          "name": "Assessment",
+          "type": "option",
+          "order": 5
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/Inbound%20readiness%20Assessment%20image.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/marketing-operations-assessment",
+        "link_text": "Request Assessment"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Funnel Gap Analysis",
+        "name": "Funnel Gap Analysis",
+        "description": "Do you know if you're going to meet your revenue goal? A funnel gap analysis can provide visibility and insight into your funnel in order to provide predictability at every level. ",
+        "medium": {
+          "id": "6",
+          "name": "Assessment",
+          "type": "option",
+          "order": 5
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/funnel%20gap%20analysis%20image.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/funnel-gap-analysis-assessment",
+        "link_text": "Request Assessment"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "Conversion Optimization Assessment",
+        "name": "Conversion Optimization Assessment",
+        "description": "Our strategists are available to guide you through solving your online marketing challenges. By creating a data-driven design strategy and implementing growth tactics that demonstrate the ROI of your online marketing spend, we'll help you directly tie results back to your business goals and objectives.",
+        "medium": {
+          "id": "6",
+          "name": "Assessment",
+          "type": "option",
+          "order": 5
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/Conversion%20Optimization%20Assessment%20image.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/free-consultation-conversion-optimization",
+        "link_text": "Request Assessment"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "HubSpot Demo",
+        "name": "HubSpot Demo",
+        "description": "Not on HubSpot? Don't know what you're missing out on? Let us show you how HubSpot and inbound marketing can help you attract more visitors to your site, qualify more leads, and produce more revenue for your business!",
+        "medium": {
+          "id": "6",
+          "name": "Assessment",
+          "type": "option",
+          "order": 5
+        },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/hubspot%20demo%20image.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "2",
+            "name": "Sales Conversion",
+            "type": "option",
+            "order": 1
+          },
+          {
+            "id": "3",
+            "name": "Growth Acquisition",
+            "type": "option",
+            "order": 2
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/hubspot-demo-sign-up",
+        "link_text": "Request a Demo"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "CMO's Guide to B2B Marketing Attribution ",
+        "name": "CMO's Guide to B2B Marketing Attribution ",
+        "description": "B2B marketing attribution, at its simplest, is about connecting marketing and sales data. By connecting marketing to sales data — where deals close and revenue metrics are held — the marketing team no longer has to guess their revenue impact. Every deal can be tied back to specific marketing actions.",
+        "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
+        "cover_image": {
+          "url": "https://www.newbreedmarketing.com/hubfs/CMO%20guide%20to%20MArketing%20attribution%20bizible-co%20marketing.jpg",
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          },
+          {
+            "id": "4",
+            "name": "Insight Analytics",
+            "type": "option",
+            "order": 3
+          }
+        ],
+        "landing_page_url": "/b2b-marketing-attribution-guide",
+        "link_text": "Download Now"
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "featured_offer": 0,
+        "internal_name": "The Key Ingredients for Healthy Dinners",
+        "name": "The Top Twenty Key Ingredients Found in Most Healthy Dinners",
+        "description": "Find out which ingredients are great for you and also great tasting",
+        "medium": {
+          "id": "5",
+          "name": "Checklist",
+          "type": "option",
+          "order": 4
+        },
+        "cover_image": {
+          "url": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/featured-resource.png",
+          "width": 600,
+          "height": 341,
+          "type": "image"
+        },
+        "category": [
+          {
+            "id": "1",
+            "name": "Demand Generation",
+            "type": "option",
+            "order": 0
+          }
+        ],
+        "landing_page_url": "/request-seo-audit",
+        "link_text": "Download Now"
+      }
+    }
+  ]
+}

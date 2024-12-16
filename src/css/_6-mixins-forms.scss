@@ -1,0 +1,350 @@
+// *********************************************************************************************************************************************************************
+@mixin form {
+  background-color: rgba($gray1, 1);
+  padding: 20rem 30rem;
+  max-width: 765rem;
+  margin: 30rem auto 30rem auto;
+  float: none;
+  overflow: auto;
+
+  @include tablet {
+    padding: 20rem;
+  }
+
+  h3 {
+    @include h6;
+  }
+
+  div.legal-consent-container {
+
+    p,
+    .hs-form-booleancheckbox label {
+      @include b6;
+    }
+  }
+
+  &.hs-form,
+  &.mixitup-multifilter,
+  & {
+    fieldset {
+      max-width: none;
+    }
+
+    .hs_error_rollup {
+      flex: 0 0 100%;
+      margin: 0;
+
+      ul.hs-error-msgs {
+        animation: fadeIn2 .5s ease;
+        margin-bottom: 20rem;
+
+        li {
+          margin-bottom: 0;
+
+          label {
+            color: red;
+            font-size: 18rem;
+            text-align: center;
+            padding: 10rem 0 0;
+            margin: 20rem 0 0;
+            display: block;
+            flex: 0 0 100%;
+            font-weight: normal;
+            text-transform: none;
+          }
+        }
+      }
+    }
+
+    .hs-form-field {
+      >label {
+        font-size: 12rem;
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 1rem;
+        pointer-events: auto;
+      }
+    }
+
+    .input {
+
+      input[type="text"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="email"] {
+        border: 1rem solid transparent;
+        border-radius: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 20rem;
+        font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
+        background-color: $white;
+        padding: 16rem;
+        width: 100%;
+        appearance: none;
+
+        &.error,
+        &.invalid {
+          border: 1rem solid red;
+        }
+
+        &::placeholder {
+          color: rgba($gray3, 1);
+        }
+      }
+
+      input[type="checkbox"],
+      input[type="radio"] {
+        width: auto;
+      }
+
+      input select {
+        border: 0;
+        border-radius: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 20rem;
+        font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
+        background-color: $white;
+      }
+
+      input[type="file"] {
+        font-size: 16rem;
+        font-family: $font1;
+        background-color: transparent;
+        position: relative;
+        font-weight: bold;
+        margin-bottom: 23rem;
+      }
+
+      select {
+        appearance: none;
+        background: url('//cdn2.hubspot.net/hubfs/302335/select-arrow.png') no-repeat;
+        background-size: 13rem 8rem;
+        background-position: 97% 51%;
+        border: 0;
+        border-radius: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 20rem;
+        font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
+        background-color: $white;
+        padding: 16rem;
+        // Note anything below 16rem will trigger the zoom feature on iOS
+      }
+
+      &+.hs-error-msgs {
+        position: relative;
+        width: 100%;
+        padding-left: 0;
+        list-style: none;
+        text-align: center;
+        margin: 0rem 0 20rem;
+        padding: 0;
+        animation: fadeIn1 .3s ease;
+
+        @include phone {
+          position: relative;
+        }
+
+        li {
+          position: relative;
+          text-align: center;
+          background: red;
+          display: inline-block;
+          color: white;
+          border-radius: 5rem;
+          padding: 5rem 8rem;
+          line-height: 1.2;
+
+          &:before {
+            border-style: solid;
+            border-width: 0 8rem 8rem 8rem;
+            bottom: 100%;
+            border-color: transparent transparent red transparent;
+            position: absolute;
+            height: 8rem;
+            width: 0rem;
+            content: "";
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+
+          label {
+            font-size: 12rem;
+            font-family: $font1;
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+            display: inline-block;
+            font-weight: bold;
+            line-height: 1.4;
+            margin-bottom: 0;
+            margin-top: 1rem;
+
+            @include phone {
+              font-size: 12rem;
+            }
+          }
+        }
+      }
+    }
+
+    .hs_upload_resume {
+      margin-bottom: -3rem;
+    }
+
+    textarea {
+      border: 0;
+      border-radius: $border2;
+      margin-top: 3rem;
+      margin-bottom: 20rem;
+      min-height: 100rem;
+      font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
+      background-color: $white;
+      width: 100%;
+
+      &.invalid {
+        border: 1px solid red;
+      }
+    }
+
+    ul {
+      padding: 0;
+
+      &.inputs-list {
+        margin-bottom: 17rem;
+      }
+    }
+
+    li {
+      list-style-type: none;
+
+      &.hs-form-booleancheckbox {
+        margin-bottom: 0;
+      }
+    }
+
+    .hs-form-checkbox,
+    .hs-form-booleancheckbox,
+    .hs-form-checkbox,
+    .hs-form-booleancheckbox {
+      line-height: 1.2;
+
+      input {
+        width: auto;
+        margin: 0 10rem 15rem 0;
+        position: relative;
+        top: 8rem;
+        float: left;
+      }
+
+      label {
+        font-size: 16rem;
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+
+        span {
+          position: relative;
+          top: 2rem;
+          font-size: 14rem;
+        }
+      }
+    }
+
+    .hs-form-radio,
+    .form-columns-1 .hs-form-radio,
+    .form-columns-2 .hs-form-radio,
+    .form-columns-3 .hs-form-radio {
+      display: inline-block;
+      margin-right: 20rem;
+
+      input {
+        width: auto;
+        margin-right: 10rem;
+        margin-left: 2rem;
+        position: relative;
+        top: -2rem;
+      }
+
+      span {
+        font-size: 14rem;
+        font-weight: normal;
+      }
+
+      @include phone {
+        display: block;
+
+        input {
+          margin-bottom: 0;
+          position: relative;
+          top: 2rem;
+        }
+      }
+    }
+
+    .form-columns-3 {
+      .hs-form-field {
+        width: 33.05%;
+
+        @include tablet {
+          width: 100%;
+        }
+
+        @include phone {
+          width: 100%;
+        }
+      }
+
+      div:last-child div {
+        margin-right: 0;
+      }
+    }
+
+    .form-columns-2 {
+      .hs-form-field {
+        @include phone {
+          width: 100%;
+        }
+      }
+    }
+
+    .form-columns-1,
+    .form-columns-2,
+    .form-columns-3 {
+
+      .input,
+      select {
+        margin-right: 0;
+        width: 100%;
+      }
+
+      div div,
+      div:last-child div {
+        @include phone {
+          margin-right: 8rem;
+
+          .hs-input:not([type=checkbox]):not([type=radio]) {
+            width: 100%
+          }
+        }
+      }
+    }
+
+    .form-columns-2 {
+      &>div {
+        width: calc(50% - 10rem);
+
+        &:last-of-type {
+          margin-left: 20rem;
+
+          @include phone {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    .hs-button {
+      @include button;
+    }
+  }
+}

@@ -1,0 +1,845 @@
+[ {
+  "id" : "a1d92ec8-82da-b4e9-b909-a932ae3ec1e9",
+  "name" : "include_eyebrow",
+  "display_width" : null,
+  "label" : "Include Eyebrow",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "8517cea8-20b9-1097-f7f2-bde91141e298",
+  "name" : "eyebrow_text",
+  "display_width" : null,
+  "label" : "Eyebrow Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : "a1d92ec8-82da-b4e9-b909-a932ae3ec1e9",
+    "controlling_field_path" : null,
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Eyebrow Text"
+}, {
+  "id" : "ec449a25-72e9-8739-850f-8c1ccad3b281",
+  "name" : "include_heading",
+  "display_width" : null,
+  "label" : "Include Heading",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "8442e250-a556-a1f0-d44d-e0a88ce059a7",
+  "name" : "cards_heading",
+  "display_width" : null,
+  "label" : "Cards Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : "ec449a25-72e9-8739-850f-8c1ccad3b281",
+    "controlling_field_path" : null,
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Cards Side"
+}, {
+  "id" : "dc245f19-b856-1c28-d773-d347b1a634a0",
+  "name" : "include_subheading",
+  "display_width" : null,
+  "label" : "Include Subheading",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "4e080608-931a-46a1-0721-63d42f626ce7",
+  "name" : "cards_subheading",
+  "display_width" : null,
+  "label" : "Cards Subheading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : "dc245f19-b856-1c28-d773-d347b1a634a0",
+    "controlling_field_path" : null,
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lorem risus, dignissim et risus ullamcorper, consequat placerat elit. Proin tincidunt vitae est interdum lobortis."
+}, {
+  "id" : "7268d906-4664-7f9c-4599-9538d2a9e87f",
+  "name" : "cards_per_row",
+  "display_width" : null,
+  "label" : "Cards Per Row",
+  "required" : false,
+  "locked" : true,
+  "display" : "select",
+  "choices" : [ [ "two", "Two" ], [ "three", "Three" ], [ "four", "Four" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "two"
+}, {
+  "id" : "f4749832-c578-3c55-8bff-89f81874c04f",
+  "name" : "card",
+  "display_width" : null,
+  "label" : "Card",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 2,
+    "sorting_label_field" : "a9f65630-e8de-500e-25e5-0460ff3fe5ba",
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "a9f65630-e8de-500e-25e5-0460ff3fe5ba",
+    "name" : "dynamic_card",
+    "display_width" : null,
+    "label" : "Dynamic Card",
+    "inline_help_text" : "If selected manually entered card fields are ignored.",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "e2053a1b-cfc3-5f4f-3053-54dd7e9a5311",
+    "name" : "dynamic_page_field",
+    "display_width" : null,
+    "label" : "Dynamic Page",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "a9f65630-e8de-500e-25e5-0460ff3fe5ba",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "page"
+  }, {
+    "id" : "c1046718-5885-844c-5294-d476f6a7d2eb",
+    "name" : "dynamic_page_button_text",
+    "display_width" : null,
+    "label" : "Dynamic Page Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "a9f65630-e8de-500e-25e5-0460ff3fe5ba",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Learn More"
+  }, {
+    "id" : "b6683246-dc8b-6961-b1e9-7b698adcc2cd",
+    "name" : "resource_title",
+    "display_width" : null,
+    "label" : "Resource Title",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "a9f65630-e8de-500e-25e5-0460ff3fe5ba",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "NOT_EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "The Sales Impact  of Optimized Product Content "
+  }, {
+    "id" : "b397a43f-7202-3b18-cd05-d9df32a798e3",
+    "name" : "include_type",
+    "display_width" : null,
+    "label" : "Include Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "982478ff-db5c-6ca6-fb16-76afcc9488b7",
+    "name" : "type",
+    "display_width" : null,
+    "label" : "Type",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "b397a43f-7202-3b18-cd05-d9df32a798e3",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Blog Post"
+  }, {
+    "id" : "b90d447b-12d0-5d06-e9fc-a3b4fdcbfd4b",
+    "name" : "show_teaser_text",
+    "display_width" : null,
+    "label" : "Show Teaser Text",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "93fcf6cb-62f9-da85-384e-2f90099469a5",
+    "name" : "teaser_text",
+    "display_width" : null,
+    "label" : "Teaser Text",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "card.show_teaser_text",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "richtext",
+    "default" : "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dolor sit maecenas fringilla nunc eget ipsum dolor amet.</p>"
+  }, {
+    "id" : "6e22e3a5-082f-377d-8fd1-99bbe91eb3a2",
+    "name" : "include_card_image",
+    "display_width" : null,
+    "label" : "Include Card Image",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "c928eaa2-df52-71f4-bb5a-1611ca61328e",
+    "name" : "fill_image_area",
+    "display_width" : null,
+    "label" : "Fill Image Area",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "6e22e3a5-082f-377d-8fd1-99bbe91eb3a2",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "3baf5f76-87c5-01cd-64c9-e9967b41891f",
+    "name" : "image_on_left",
+    "display_width" : null,
+    "label" : "Image on Left",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "c928eaa2-df52-71f4-bb5a-1611ca61328e",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "NOT_EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "977c149b-3d10-8cd7-d49c-a8bfdf828e3d",
+    "name" : "card_image",
+    "display_width" : null,
+    "label" : "Card Image",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "6e22e3a5-082f-377d-8fd1-99bbe91eb3a2",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "responsive" : false,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "src" : "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/cover-temp-720x406.png",
+      "alt" : "cover-temp-720x406",
+      "width" : 720,
+      "height" : 406
+    }
+  }, {
+    "id" : "df7cbf64-265c-87a9-28de-15036061b392",
+    "name" : "link_type",
+    "display_width" : null,
+    "label" : "Link Type",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "a9f65630-e8de-500e-25e5-0460ff3fe5ba",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "NOT_EQUAL",
+      "access" : null
+    },
+    "display" : "radio",
+    "choices" : [ [ "none", "None" ], [ "cta", "CTA" ], [ "url", "URL" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "url"
+  }, {
+    "id" : "033fc659-22b9-6f16-98a1-fc39ded4e6b7",
+    "name" : "call_to_action",
+    "display_width" : null,
+    "label" : "Call-to-Action",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "df7cbf64-265c-87a9-28de-15036061b392",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cta",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "cta",
+    "default" : "55235afb-a542-4293-9c89-f96156461ee6"
+  }, {
+    "id" : "66253a04-77b7-628e-cb9a-cfc208aec619",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "df7cbf64-265c-87a9-28de-15036061b392",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "url",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "default" : {
+      "type" : "EXTERNAL",
+      "href" : "#",
+      "content_id" : null
+    }
+  }, {
+    "id" : "5d9f531f-9aa8-0835-3e02-ff0b301fe570",
+    "name" : "link_text",
+    "display_width" : null,
+    "label" : "Link Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "df7cbf64-265c-87a9-28de-15036061b392",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "url",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Learn More"
+  }, {
+    "id" : "c34a5789-15a6-395c-8285-86f68bca5d68",
+    "name" : "open_in_new_window",
+    "display_width" : null,
+    "label" : "Open In New Window",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "df7cbf64-265c-87a9-28de-15036061b392",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "url",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "dynamic_card" : false,
+    "dynamic_page_button_text" : "Learn More",
+    "resource_title" : "The Sales Impact  of Optimized Product Content ",
+    "include_type" : false,
+    "type" : "Blog Post",
+    "show_teaser_text" : true,
+    "teaser_text" : "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dolor sit maecenas fringilla nunc eget ipsum dolor amet.</p>",
+    "include_card_image" : true,
+    "fill_image_area" : true,
+    "image_on_left" : true,
+    "card_image" : {
+      "src" : "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/cover-temp-720x406.png",
+      "alt" : "cover-temp-720x406",
+      "width" : 720,
+      "height" : 406
+    },
+    "link_type" : "url",
+    "call_to_action" : "55235afb-a542-4293-9c89-f96156461ee6",
+    "link" : {
+      "type" : "EXTERNAL",
+      "href" : "#",
+      "content_id" : null
+    },
+    "link_text" : "Learn More",
+    "open_in_new_window" : false
+  }, {
+    "dynamic_card" : false,
+    "dynamic_page_button_text" : "Learn More",
+    "resource_title" : "The Sales Impact  of Optimized Product Content ",
+    "include_type" : false,
+    "type" : "Blog Post",
+    "show_teaser_text" : true,
+    "teaser_text" : "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit dolor sit maecenas fringilla nunc eget ipsum dolor amet.</p>",
+    "include_card_image" : true,
+    "fill_image_area" : true,
+    "image_on_left" : true,
+    "card_image" : {
+      "src" : "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/cover-temp-720x406.png",
+      "alt" : "cover-temp-720x406",
+      "width" : 720,
+      "height" : 406
+    },
+    "link_type" : "url",
+    "call_to_action" : "55235afb-a542-4293-9c89-f96156461ee6",
+    "link" : {
+      "type" : "EXTERNAL",
+      "href" : "#",
+      "content_id" : null
+    },
+    "link_text" : "Learn More",
+    "open_in_new_window" : false
+  } ]
+}, {
+  "id" : "module_overrides",
+  "name" : "module_overrides",
+  "display_width" : null,
+  "label" : "Module Overrides",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "enable_overrides",
+    "name" : "enable_overrides",
+    "display_width" : null,
+    "label" : "Enable Overrides",
+    "help_text" : "Toggle to override section ID and vertical margin. ",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "module_overrides.section_id",
+    "name" : "section_id",
+    "display_width" : null,
+    "label" : "Section ID",
+    "help_text" : "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "module_overrides.top_margin",
+    "name" : "top_margin",
+    "display_width" : null,
+    "label" : "Top Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "top-margin-default", "Default" ], [ "top-margin-none", "None" ], [ "top-margin-small", "Small" ], [ "top-margin-medium", "Medium" ], [ "top-margin-large", "Large" ], [ "top-margin-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "top-margin-default"
+  }, {
+    "id" : "custom_top_margin",
+    "name" : "custom_top_margin",
+    "display_width" : null,
+    "label" : "Custom Top Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_top_margin_mobile",
+    "name" : "custom_top_margin_mobile",
+    "display_width" : null,
+    "label" : "Custom Top Margin Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "module_overrides.bottom_margin",
+    "name" : "bottom_margin",
+    "display_width" : null,
+    "label" : "Bottom Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "bottom-margin-default", "Default" ], [ "bottom-margin-none", "None" ], [ "bottom-margin-small", "Small" ], [ "bottom-margin-medium", "Medium" ], [ "bottom-margin-large", "Large" ], [ "bottom-margin-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "bottom-margin-default"
+  }, {
+    "id" : "custom_bottom_margin",
+    "name" : "custom_bottom_margin",
+    "display_width" : null,
+    "label" : "Custom Bottom Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_bottom_margin_mobile",
+    "name" : "custom_bottom_margin_mobile",
+    "display_width" : null,
+    "label" : "Custom Bottom Margin Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "module_overrides.top_padding",
+    "name" : "top_padding",
+    "display_width" : null,
+    "label" : "Top Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "top-padding-default", "Default" ], [ "top-padding-none", "None" ], [ "top-padding-small", "Small" ], [ "top-padding-medium", "Medium" ], [ "top-padding-large", "Large" ], [ "top-padding-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "top-padding-default"
+  }, {
+    "id" : "custom_top_padding",
+    "name" : "custom_top_padding",
+    "display_width" : null,
+    "label" : "Custom Top Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_top_padding_mobile",
+    "name" : "custom_top_padding_mobile",
+    "display_width" : null,
+    "label" : "Custom Top Padding Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "module_overrides.bottom_padding",
+    "name" : "bottom_padding",
+    "display_width" : null,
+    "label" : "Bottom Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "bottom-padding-default", "Default" ], [ "bottom-padding-none", "None" ], [ "bottom-padding-small", "Small" ], [ "bottom-padding-medium", "Medium" ], [ "bottom-padding-large", "Large" ], [ "bottom-padding-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "bottom-padding-default"
+  }, {
+    "id" : "custom_bottom_padding",
+    "name" : "custom_bottom_padding",
+    "display_width" : null,
+    "label" : "Custom Bottom Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_bottom_padding_mobile",
+    "name" : "custom_bottom_padding_mobile",
+    "display_width" : null,
+    "label" : "Custom Bottom Padding Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "6c8bfd0e-1629-1268-e01c-17b4047ecfce",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "help_text" : "If a module has formal settings for a background color they will take priority over this value.",
+    "inline_help_text" : "",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : null,
+      "opacity" : null
+    }
+  }, {
+    "id" : "878364f4-31ac-6917-e76f-65307d7d36e5",
+    "name" : "background_image",
+    "display_width" : null,
+    "label" : "Background Image",
+    "help_text" : "If a module has formal settings for a background image they will take priority over this value.",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "disabled"
+    }
+  }, {
+    "id" : "3eccf45d-b0dc-4bac-42a0-f923e4405158",
+    "name" : "reverse_text",
+    "display_width" : null,
+    "label" : "Reverse Text",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "enable_overrides" : false,
+    "top_margin" : "top-margin-default",
+    "custom_top_margin" : 100,
+    "custom_top_margin_mobile" : 50,
+    "bottom_margin" : "bottom-margin-default",
+    "custom_bottom_margin" : 100,
+    "custom_bottom_margin_mobile" : 50,
+    "top_padding" : "top-padding-default",
+    "custom_top_padding" : 100,
+    "custom_top_padding_mobile" : 50,
+    "bottom_padding" : "bottom-padding-default",
+    "custom_bottom_padding" : 100,
+    "custom_bottom_padding_mobile" : 50,
+    "background_color" : {
+      "color" : null,
+      "opacity" : null
+    },
+    "background_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "disabled"
+    },
+    "reverse_text" : false
+  }
+} ]

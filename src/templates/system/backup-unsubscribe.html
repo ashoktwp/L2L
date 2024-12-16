@@ -1,0 +1,17 @@
+<!--
+  templateType: email_backup_unsubscribe_page
+  isAvailableForNewContent: true
+  label: Unified 4 - Email Backup Unsubscribe
+-->
+{% extends '../base.html' %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  <section class="u4m-backup-unsubscribe">
+    {% module 'backup_unsubscribe'
+      extra_classes='backup-unsubscribe',
+      path='@hubspot/email_simple_subscription'
+    %}
+  </section>
+</main>
+{% endblock body %}

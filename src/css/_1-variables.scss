@@ -1,0 +1,25 @@
+// Colors - For transparency use rgba($action1, 0.5) = 50% opaque
+$action1: #733BF7;
+$action2: #00a4bd;
+$black: #33475b;
+$white: #fff;
+$gray1: #edf0f2;
+$gray2: #cbd6e2;
+$gray3: #7C98B6;
+$gradient1: linear-gradient(-45deg, $black 0%, $action2 50%);
+$font1: 'Montserrat';
+$baseFontSize: 16rem;
+$baseLineHeight: 1.61803398875; // Golden ratio
+// Border Radius
+$border1: 4rem;
+$border2: 5rem;
+$border3: 10rem;
+// Shadow
+$shadow1: 0rem 1rem 12rem 0 rgba($black, 0.1);
+$shadow2: 0 5rem 25rem 0 rgba($black, 0.2);
+$shadow3: 0 10rem 50rem 0 rgba($black, 0.3);
+$textShadow1: 0 0 4rem rgba($black, 0.3);
+// Animation
+$animation1: .1s ease-in;
+$animation2: .25s ease-in;
+$animation3: 1s ease-in;

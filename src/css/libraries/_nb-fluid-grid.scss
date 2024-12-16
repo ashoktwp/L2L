@@ -1,0 +1,92 @@
+// *********************************************************************************************************************************************************************
+// Fluid Grid
+// *********************************************************************************************************************************************************************
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+/* Fill body BGs, remove outer margin/padding */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Padding and border included in total width and height */
+.row-fluid [class*="span"] {
+  margin-left: 0;
+  min-height: 1px;
+}
+
+/* No margins simple 12 column design grid, lowest min height to keep columns from collapsing */
+.row-fluid .span1 {
+  width: 8.333333333%;
+}
+
+/*  90px columns at 1080px container */
+.row-fluid .span2 {
+  width: 16.66666666%;
+}
+
+/* 180px columns at 1080px container */
+.row-fluid .span3 {
+  width: 25%;
+}
+
+/* 270px columns at 1080px container */
+.row-fluid .span4 {
+  width: 33.333333333%;
+}
+
+/* 360px columns at 1080px container */
+.row-fluid .span5 {
+  width: 41.666666666%;
+}
+
+/* 450px columns at 1080px container */
+.row-fluid .span6 {
+  width: 50%;
+}
+
+/* 540px columns at 1080px container */
+.row-fluid .span7 {
+  width: 58.333333333%;
+}
+
+/* 630px columns at 1080px container */
+.row-fluid .span8 {
+  width: 66.666666666%;
+}
+
+/* 720px columns at 1080px container */
+.row-fluid .span9 {
+  width: 75%;
+}
+
+/* 810px columns at 1080px container */
+.row-fluid .span10 {
+  width: 83.333333333%;
+}
+
+/* 900px columns at 1080px container */
+.row-fluid .span11 {
+  width: 91.6666666666%;
+}
+
+/* 990px columns at 1080px container */
+.row-fluid .span12 {
+  width: 100%;
+}
+
+/* 1080px column at 1080px container */
+@media (max-width: 767px) {
+  .row-fluid [class*="span"] {
+    width: 100%;
+  }
+}
+
+/* Full width columns for mobile */

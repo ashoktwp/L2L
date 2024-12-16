@@ -1,0 +1,102 @@
+@import "../../css/_module-imports";
+section.u4m-slider-simple {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: $gray1;
+  padding-bottom: 110rem;
+  &.reverse-text {
+    color: $white;
+  }
+  div.content {
+    @include center;
+    max-width: 1280rem;
+    .heading {
+      @include h2;
+      text-align: center;
+      padding-top: 100rem;
+      margin-bottom: 0;
+    }
+    .intro {
+      text-align: center;
+    }
+    div.items {
+      position: relative;
+      text-align: center;
+      max-width: 820rem;
+      margin: 0 auto;
+      float: none;
+      .slick-arrow {
+        @include slickArrows;
+      }
+      .slick-dots {
+        @include slickDots;
+        bottom: 0;
+      }
+      div.slide {
+        width: 100%;
+        transition: .3s ease;
+        z-index: 1;
+        margin: 50rem auto 50rem;
+        text-align: center;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .image {
+          height: 100rem;
+          width: 100rem;
+          background-size: cover;
+          background-position: 50% 50%;
+          border-radius: 50%;
+          margin: 0 auto 30rem auto;
+        }
+        img.large {
+          margin: 0 auto 30rem auto;
+        }
+        &>span {
+          text-align: left;
+        }
+        p {
+          &.quote {
+            @include h2;
+            font-weight: normal;
+            margin-bottom: 30rem;
+            margin-top: 0;
+            text-align: center;
+            span {
+              color: $action2;
+              font-weight: bold;
+            }
+          }
+          &.author {
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            @include b4;
+            margin-bottom: 20rem;
+            span {
+              text-transform: none;
+            }
+          }
+        }
+        a {
+          @include buttonSmall;
+          &:hover {
+            background-color: white;
+            color: $action1;
+          }
+        }
+        &.active {
+          opacity: 1;
+          z-index: 2;
+        }
+        &.exit {
+          z-index: 1;
+          transform: translateY(-10rem);
+          transition: $animation3;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

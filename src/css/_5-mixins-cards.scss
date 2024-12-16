@@ -1,0 +1,311 @@
+// *********************************************************************************************************************************************************************
+@mixin card {
+  margin: 20rem;
+  padding: 20rem;
+  box-shadow: $shadow1;
+  border: 1px solid $gray1;
+  background-color: $white;
+  flex-basis: calc(33.333% - 40rem);
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-basis: calc(50% - 40rem);
+  }
+  @include phone {
+    width: 100%;
+    margin-bottom: 50rem;
+  }
+  button {
+    @include buttonSmall;
+  }
+  .image {
+    min-height: 100rem;
+    display: flex;
+    align-items: center;
+    &.filled {
+      width: 100%;
+      min-height: 203rem;
+      border-bottom: 1rem solid $gray1;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        margin: 0;
+      }
+    }
+    a {
+      display: block;
+      margin: 0 auto;
+      background-color: transparent;
+      box-shadow: none;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    img {
+      display: block;
+      margin: 30rem auto 0 auto;
+      &.left {
+        margin: 30rem auto 0 30rem;
+      }
+    }
+  }
+  .content {
+    padding: 20rem 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    @include tabletvert {
+      padding: 20rem;
+    }
+    span.url {
+      display: flex;
+    }
+    span.eyebrow {
+      @include b5;
+      color: $gray3;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    span.title {
+      @include h6;
+      display: block;
+      color: $black;
+      margin-top: 5rem;
+      margin-bottom: 15rem;
+    }
+    span.teaser {
+      @include b5;
+      color: $black;
+      display: block;
+      margin-bottom: 0;
+    }
+    span.cta,
+    span.url {
+      margin-top: auto;
+    }
+    span.cta a,
+    span.url a {
+      @include buttonSmall;
+    }
+  }
+}
+// *********************************************************************************************************************************************************************
+@mixin featuredCard {
+  display: flex;
+  @include phone {
+    display: block;
+  }
+  .image-wrap {
+    flex: 0 0 50%;
+    a {
+      display: block;
+      height: 100%;
+      .image {
+        height: 100%;
+        background-size: cover;
+        @include phone {
+          height: 160rem;
+        }
+      }
+    }
+    .image {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .content {
+    text-align: left;
+    background-color: $gray1;
+    padding: 30rem 40rem;
+    @include phone {
+      padding: 20rem;
+    }
+    span.medium {
+      @include b4;
+    }
+    .heading {
+      @include h4;
+      margin: 0;
+      text-align: left;
+      a {
+        color: $black;
+      }
+    }
+    p {
+      @include b4;
+      margin-bottom: 4rem;
+    }
+    a.link {
+      @include button;
+    }
+  }
+}
+// *********************************************************************************************************************************************************************
+@mixin resourceCard {
+  @include card;
+  flex-basis: calc(25% - 40rem);
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 0;
+  background-color: $white;
+  position: relative;
+  top: 0;
+  transition: top $animation1;
+  &:hover {
+    top: -10rem;
+  }
+  @include tablet {
+    flex-basis: calc(33.333% - 40rem);
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  @include tabletvert {
+    flex-basis: calc(50% - 40rem);
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  @include phone {
+    margin: 20rem;
+    flex-basis: calc(100% - 40rem);
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  a.link-wrap {
+    height: 100%;
+    display: block;
+    .image {
+      width: 100%;
+      height: 152rem;
+      // background-size: cover;
+      // background-position: 50% 50%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        margin: 0;
+      }
+    }
+    .content {
+      padding: 20rem;
+      height: calc(100% - 152rem);
+      .heading {
+        @include b4;
+        color: $black;
+        font-weight: bold;
+        margin: 0;
+        text-align: left;
+      }
+      span.medium {
+        @include b6;
+        color: $black;
+        margin: 0 0 5rem 0;
+      }
+      p {
+        @include b6;
+        color: $black;
+        //margin-bottom: 50rem;
+      }
+      span.learn-more {
+        @include buttonText;
+        margin-top: auto;
+        margin-bottom: 10rem;
+      }
+    }
+  }
+}
+// *********************************************************************************************************************************************************************
+@mixin blogCard {
+  @include card;
+  background-color: $white;
+  flex-basis: calc(33.333% - 40rem);
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+  transition: $animation1;
+  top: 0;
+  &:hover {
+    top: -10rem;
+  }
+  .featured-image {
+    margin-bottom: 10rem;
+    background-size: cover;
+    background-color: $gray1;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 203rem;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .content {
+    height: calc(100% - 203rem);
+    color: $black;
+    .topics {
+      @include b5;
+      margin-bottom: 0;
+    }
+    .read-time {
+      display: inline;
+      text-transform: uppercase;
+      @include b5;
+      margin-bottom: 0;
+    }
+    .date {
+      display: inline;
+      text-transform: uppercase;
+      @include b5;
+      @include tabletvert {
+        @include b6;
+      }
+    }
+    h2.title {
+      @include h6;
+      display: block;
+      margin-bottom: 10rem;
+      color: $black;
+      @include tabletvert {
+        @include b3;
+        font-weight: bold;
+      }
+    }
+    span.teaser {
+      @include b5;
+      display: block;
+      @include tabletvert {
+        @include b6;
+        margin-bottom: 0;
+      }
+    }
+    span.read-more {
+      @include buttonText;
+      margin-top: auto;
+      color: $action1;
+      transition: $animation1;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  @include tablet {
+    flex-basis: calc(50% - 40rem);
+    margin: 0 20px 20px;
+  }
+  @include tabletvert {
+    flex: 0 0 calc(100% - 40rem);
+    margin: 0 20px 20px;
+  }
+  @include phone {
+    margin: 0 0 20px;
+  }
+}

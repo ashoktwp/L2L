@@ -1,0 +1,225 @@
+section.u4m-blog-post {
+
+  /*****************************************/
+  /* .hero                                 */
+  /*****************************************/
+  div.hero {
+    background-color: $gray1;
+    margin-bottom: 50rem;
+    position: relative;
+    padding-top: 105px;
+
+    div.share {
+      position: absolute;
+      max-width: 50rem;
+      left: 50rem;
+
+      a {
+        font-size: 26rem;
+        margin: 5rem;
+
+        &:hover {
+          color: $black;
+        }
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    div.content {
+      @include center;
+      max-width: 1000rem;
+      padding: 50rem 20rem 40rem 20rem;
+      max-width: 1000rem;
+
+      //margin: 50rem auto 50rem auto;
+      span.date {}
+
+      h1.title {
+        @include h1;
+        margin: 0;
+      }
+
+      div.author-wrap {
+        display: flex;
+        align-items: center;
+        margin-top: 10rem;
+
+        div.avatar {
+          height: 50rem;
+          width: 50rem;
+          border-radius: 50%;
+          background-size: cover;
+          background-position: 50%;
+          margin: 5rem 10rem 0 0;
+          background-image: url('https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/default-avatar.png');
+        }
+
+        div.author-link {
+          a {
+            font-weight: bold;
+
+            &:hover {
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*****************************************/
+  /* .body                                 */
+  /*****************************************/
+  div.body {
+    @include center;
+    max-width: 1000rem;
+
+    div.content {
+
+      p,
+      ul,
+      ol {
+        @include b3;
+      }
+
+      h1 {
+        @include h1;
+      }
+
+      h2 {
+        @include h2;
+      }
+
+      h3 {
+        @include h3;
+      }
+
+      h4 {
+        @include h4;
+      }
+
+      h5 {
+        @include h5;
+      }
+
+      h6 {
+        @include h6;
+      }
+
+      blockquote {
+        @include blockquote;
+
+        p {
+          @include blockquote;
+        }
+      }
+
+      a {
+        font-weight: bold;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+
+    div.topics {}
+  }
+
+  /*****************************************/
+  /* .author                               */
+  /*****************************************/
+  div.author {
+    @include center;
+    max-width: 1000rem;
+    margin-top: 50rem;
+    display: flex;
+    align-items: center;
+
+    @include phone {
+      display: block;
+    }
+
+    div.meta {
+      flex: 0 0 170rem;
+      text-align: center;
+
+      div.avatar {
+        width: 100rem;
+        height: 100rem;
+        background-image: url('https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/default-avatar.png');
+        background-size: cover;
+        background-position: 50%;
+        border-radius: 50%;
+        margin: 0 auto;
+
+        @include phone {
+          margin-bottom: 30rem;
+        }
+      }
+    }
+
+    div.bio {
+      .name {
+        @include h5;
+        margin: 0;
+      }
+
+      p {
+        @include b5;
+        margin-top: 20px;
+      }
+
+      .social {
+        .label {
+          @include b4;
+
+          @include phone {
+            @include b6;
+          }
+        }
+
+        a {
+          font-size: 20rem;
+          margin-left: 10rem;
+
+          @include phone {
+            font-size: 18rem;
+            margin-left: 8rem;
+          }
+        }
+      }
+    }
+  }
+
+  /*****************************************/
+  /* .comments                             */
+  /*****************************************/
+  div.comments {
+    margin-bottom: 100rem;
+
+    h2.heading {
+      @include h3;
+      @include center;
+      text-align: center;
+      margin: 100rem auto 0 auto;
+    }
+
+    div.content {
+      @include center;
+      max-width: 1000rem;
+      margin-top: 50rem;
+
+      form {
+        @include form;
+
+        .hs-button {
+          @include button;
+        }
+      }
+    }
+  }
+}

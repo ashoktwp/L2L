@@ -1,0 +1,12 @@
+{% set moduleName = 'u4m-000' %}
+{% set bgImageMax = 1920 %}
+{# sample bg lazy load with image resize <div class="lazy" data-bg="{{ resize_image_url(item.card_image.src, 0,0,bgImageMax) }}></div> #}
+
+{% include "../partials/u4-module-includes.html" %}
+    <div class="heading">
+    {% if module.include_heading %}
+        <h2>{{ module.heading }}</h2>
+    {% endif %}    
+    </div>
+    <img src="https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg" alt="Patrick" width="100" loading="lazy">
+</section>

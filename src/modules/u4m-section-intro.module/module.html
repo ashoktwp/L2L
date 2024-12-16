@@ -1,0 +1,29 @@
+{% set moduleName = 'u4m-section-intro' %}
+{% set bgImageMax = 1920 %}
+ 
+
+{% include "../partials/u4-module-includes.html" %}
+
+    <div class="inner">
+    {% if module.include_image %}
+        <img loading="lazy" class="image" src="{{ module.image.src }}" width="300" alt="{{ module.image.alt }}">
+    {% endif %}
+    {% if module.include_heading %}
+    <h2 class="heading">{{ module.heading }}</h2>
+    {% endif %}
+    {% if module.include_content %}
+    <p class="content">{{ module.content }}</p>
+    {% endif %}
+    {% unless module.link_type == "none" %}
+    <div class="link">
+        {% if module.link_type == "cta" %}
+            <span class="cta">{% cta guid="{{ module.call_to_action }}" %}</span>
+        {% elif module.link_type == "url" %}
+            <span class="url"><a href="{{ module.link.href }}" {% if module.open_in_new_window %}target="_blank" {% endif %}>{{ module.link_text }}</a></span>
+        {% else %}
+            {# No link #}
+        {% endif %}
+    </div>
+    {% endunless %}
+    </div>
+</section>

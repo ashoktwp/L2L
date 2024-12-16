@@ -1,0 +1,24 @@
+{% set moduleName = 'u4m-jump-grid' %}
+  {% set bgImageMax = 1920 %}
+   
+  
+  {% include "../partials/u4-module-includes.html" %}
+      
+    <div class="container">
+      {% if module.include_heading %}
+      <h2 class="heading">{{ module.jump_grid_heading }}</h2>
+      {% endif %}
+      {% if module.include_subheading %}
+      <h3 class="subheading">{{ module.jump_grid_subheading }}</h3>
+      {% endif %}
+      <div class="group">
+        {% for item in module.item_group %}
+        <a class="item {% unless item.include_link %}no-link{% endunless %}" {% if item.link_field.rel %}rel="{{ item.link_field.rel }}"{% endif %} {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %} {% if item.include_link %}href="{{ item.link_field.url.href }}"{% endif %}>
+          <img loading="lazy" class="image" src="{{ item.image_field.src }}" width="100" alt="{{ item.image_field.alt }}">
+          <span class="title ">{{ item.title }}</span>    
+          {% if item.include_caption %}<span class="caption ">{{ item.caption }}</span>{% endif %}
+        </a>
+        {% endfor %}
+      </div>  
+    </div>
+  </section>

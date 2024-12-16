@@ -1,0 +1,155 @@
+section.u4m-404-error,
+section.u4m-500-error {
+  @include center;
+  margin: 150rem auto;
+  text-align: center;
+
+  p {
+    @include b1;
+  }
+
+  @include phone {
+    margin: 50rem auto 70rem auto;
+  }
+}
+
+section.u4m-backup-unsubscribe {
+  @include center;
+  margin: 150rem auto;
+  text-align: center;
+
+  @include phone {
+    margin: 50rem auto 70rem auto;
+  }
+
+  p {
+    @include b1;
+  }
+
+  form {
+    @include form;
+
+    h3 {
+      font-size: 12rem;
+      font-weight: bold !important;
+      text-align: left;
+      margin-bottom: 4rem;
+    }
+
+    input {
+      border: 1rem solid transparent;
+      border-radius: 4rem;
+      margin-top: 2rem;
+      margin-bottom: 0;
+      font-size: 16rem !important;
+      padding: 16rem !important;
+      width: 100% !important;
+    }
+
+    padding-bottom: 50rem;
+  }
+}
+
+section.u4m-membership-login,
+section.u4m-membership-register,
+section.u4m-membership-reset-password-request,
+section.u4m-membership-reset-password,
+section.u4m-password-prompt {
+  @include center;
+  margin: 150rem auto;
+  text-align: center;
+
+  @include phone {
+    margin: 50rem auto 70rem auto;
+  }
+
+  ul.hs-error-msgs {
+    list-style: none;
+  }
+
+  form {
+    @include form;
+    text-align: left;
+
+    input {
+      border: 1rem solid transparent;
+      border-radius: 4rem;
+      margin-top: 2rem;
+      margin-bottom: 20rem;
+      font-size: 16rem !important;
+      padding: 16rem !important;
+      width: 100% !important;
+      background-color: $white;
+    }
+
+    input#hs-login-widget-remember {
+      width: auto !important;
+      margin-bottom: 0;
+    }
+
+    a {
+      display: block;
+      font-weight: bold;
+      font-size: 12rem;
+    }
+
+    padding-bottom: 50rem;
+  }
+
+  p a {
+    font-weight: bold;
+  }
+}
+
+section.u4m-password-prompt {
+  form {
+    padding-top: 30rem;
+  }
+}
+
+section.u4m-search-results {
+  @include center;
+  max-width: 1000rem;
+  margin: 100rem auto;
+
+  ul.hs-search-results__listing {
+    a {
+      font-size: 20rem;
+    }
+  }
+}
+
+section.u4m-subscription-preferences {
+  @include center;
+  margin: 100rem auto;
+
+  form {
+    @include form;
+    max-width: 1000rem;
+    padding-bottom: 50rem;
+
+    div.item {
+      border-bottom: 2rem solid $gray2;
+      margin-bottom: 25rem;
+
+      div.checkbox-row span span {
+        font-weight: bold;
+      }
+    }
+
+    div.subscribe-options p span {
+      font-weight: bold;
+    }
+  }
+}
+
+section.u4m-subscriptions-confirmation {
+  @include center;
+  max-width: 1000rem;
+  margin: 150rem auto;
+
+  div.success {
+    margin-top: 30rem;
+    font-weight: bold;
+  }
+}

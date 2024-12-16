@@ -1,0 +1,88 @@
+{% set moduleName = 'u4m-slider-gallery' %}
+{% set bgImageMax = 1920 %}
+{% set imageMax = 1000 %}
+
+
+{% include "/unified4/modules/partials/u4-module-includes.html" %}
+
+<div class="container">
+  <div class="intro">
+    {{ '<h2 class="optional-headline" >{{ module.optional_headline }}</h2>' if  module.optional_headline }}
+    {{ '<span class="optional-body" >{{ module.gallery_body_copy }}</span>' if module.include_body }}
+  </div>
+  <div class="splide {{name}}">
+    <div class="splide__track" >
+      <div class="splide__list">
+        {% for item in module.slider_repeater %}
+        <div class="splide__slide showing-{{ module.slides_to_show }}" 
+             data-bg="{{ resize_image_url(item.video_thumbnail.src, 0,0,imageMax) }}"
+             data-media-type="{{ item.media_type }}">
+          {% if item.media_type == 'video' %}
+
+          {{'<div class="play-button popout" href="{{ item.video_link.oembed_url }}">' if item.lightbox else '<a class="play-button" href="{{ item.video_link.oembed_url }}" target="_blank">' }}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 256L0 32V480L384 256z"/></svg>
+          {{'</div>' if item.lightbox else '</a>'}}
+          <img {{ 'class="popout video" ' if item.lightbox }} href="{{ item.video_link.oembed_url }}" src="{{ item.video_thumbnail.src }}" width="300" alt="{{ item.video_thumbnail.alt }}">
+
+          {% elif item.media_type == 'image' %}
+
+          {% if item.gallery_image.src %}
+          <img src="{{ item.gallery_image.src }}" 
+               width="{{ item.gallery_image.width }}"
+               height="{{ item.gallery_image.height }}"
+               {{ ' class="mfp-image popout" ' if item.lightbox }}
+               {{ ' href="{{ item.gallery_image.src }}" ' if item.lightbox }} 
+               alt="{{ item.gallery_image.alt }}">
+          {% endif %}
+
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+{% require_js %}
+<script> 
+  // Slider Extension In Use: https://splidejs.com/extensions/auto-scroll/
+  // Slider Options: https://splidejs.com/guides/options/
+  document.addEventListener( 'DOMContentLoaded', function() {
+    new Splide( '.splide.{{name}}', {
+               type: 'loop',
+               easing: 'ease-in-out',
+               pauseOnHover: true,
+               pagination: false,
+               arrows: true,
+               perPage: {{ module.slides_to_show }},
+               gap: "20rem",
+               autoScroll:{
+               autoStart: false,
+               speed: 1,
+               },
+                            breakpoints: {
+                            {% if module.slides_to_show > 6 %}
+                            1200: {
+                            perPage: 6,
+                            },
+    {% endif %}
+    {% if module.slides_to_show > 4 %}
+    1024: {
+      perPage: 4,
+    },
+      {% endif %}
+      768: {
+        perPage: 3,
+      },
+        576: {
+          perPage: 2,
+        },
+          320: {
+            perPage: 1,
+          },
+  },
+  }).mount( window.splide.Extensions );
+  });
+</script>
+{% end_require_js %}

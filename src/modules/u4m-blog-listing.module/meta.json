@@ -1,0 +1,7 @@
+{
+  "global": true,
+  "smart_type": "NOT_SMART",
+  "host_template_types": ["BLOG_POST", "BLOG_LISTING"],
+  "label": "Blog Listing",
+  "is_available_for_new_content": false
+}

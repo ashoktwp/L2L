@@ -1,0 +1,23 @@
+{% set moduleName = 'u4m-form' %}
+{% set imageMax = 1000 %}
+{% set bgImageMax = 1920 %}
+  
+
+{% include "../partials/u4-module-includes.html" %}
+
+  <div class="container">
+    {% if module.include_content %}
+    <div class="left">
+      {{ module.content }}      
+    </div>
+    {% endif %}
+    <div class="right {% unless module.include_content %}centered{% endunless %}">
+      <div class="form-wrap">
+        {% if module.form_group.include_heading %}<h2 class="heading">{{ module.form_group.heading }}</h2>{% endif %}
+        <div class="form">
+          {% include "/unified4/modules/partials/u4-form-fields.html" %}  
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

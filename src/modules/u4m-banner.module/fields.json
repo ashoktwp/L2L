@@ -1,0 +1,63 @@
+[ {
+  "id" : "eb948f2d-5037-cc11-0aef-8cb5e969fab1",
+  "name" : "include_image",
+  "label" : "Include Image",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "aa9f7d1e-3715-a997-a16d-bf3d9c66a30e",
+  "name" : "image",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "eb948f2d-5037-cc11-0aef-8cb5e969fab1",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "responsive" : false,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "src" : "https://cdn2.hubspot.net/hubfs/302335/hubspot-cms-logo-gray.svg",
+    "alt" : "hubspot-cms-logo-gray",
+    "width" : 116,
+    "height" : 41
+  }
+}, {
+  "id" : "9c3d98b9-e45c-d9fb-979e-91137889e5bb",
+  "name" : "content",
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : " Banner content goes in this area and should not be too long."
+}, {
+  "id" : "1634d152-77f9-3a05-9f47-dc2698b265f7",
+  "name" : "cta",
+  "label" : "CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "default" : "b622ba8e-25e8-4d09-8a05-fb41d97dc932"
+}, {
+  "id" : "dc3c605b-0a74-fcae-ed99-a1bb2ff4a7f8",
+  "name" : "cookie_expiration",
+  "label" : "Cookie Expiration",
+  "help_text" : "The number is days that the close banner cookie will remain active. After this point the user will be shown the banner again.",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "default" : 10
+} ]

@@ -1,0 +1,21 @@
+{
+  "label": "Unified 4",
+  "author": {
+    "name": "New Breed",
+    "email": "admin@newbreedrevenue.com",
+    "url": "https://www.newbreedrevenue.com/"
+  },
+  "example_url": "https://www.newbreedrevenue.com/",
+  "preview_path": "/templates/master.html",
+  "screenshot_path": "/templates/images/u4.jpg",
+  "enable_domain_stylesheets": false,
+  "responsive_breakpoints": [
+    {
+      "name": "mobile",
+      "mediaQuery": "@media (max-width: 580px)",
+      "previewWidth": {
+        "value": 360
+      }
+    }
+  ]
+}

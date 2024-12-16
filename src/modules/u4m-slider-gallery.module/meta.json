@@ -1,0 +1,27 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 40906237897,
+  "css_assets" : [ {
+    "url" : "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/splide.min.css",
+    "autoload" : true,
+    "name" : "splide.min.css"
+  } ],
+  "js_assets" : [ {
+    "url" : "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/unified-assets/jquery.magnific-popup.min.js",
+    "autoload" : true,
+    "name" : "jquery.magnific-popup.min.js"
+  }, {
+    "url" : "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/splide.min.js",
+    "autoload" : true,
+    "name" : "splide.min.js"
+  }, {
+    "url" : "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/splide-extension-auto-scroll.min.js",
+    "autoload" : true,
+    "name" : "splide-extension-auto-scroll.min.js"
+  } ],
+  "label" : "Slider Gallery",
+  "is_available_for_new_content" : true
+}

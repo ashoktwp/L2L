@@ -1,0 +1,80 @@
+{% set moduleName = 'u4m-cards' %}
+  {% set imageMax = 300 %}
+  {% set imageFillMax = 720 %}
+  {% set bgImageMax = 1920 %}
+    
+  {# sample lazy load bg <div class="lazy" data-bg="{{ resize_image_url(item.card_image.src, 0,0,imageMax) }}"></div> #}
+    
+    {% include "../partials/u4-module-includes.html" %}
+    
+      {% if module.include_heading %}
+        <h2 class="heading">{{ module.cards_heading }}</h2>
+      {% endif %}
+      
+      {% if module.include_subheading %}
+        <h3 class="subheading">{{ module.cards_subheading }}</h3>
+      {% endif %}
+
+      {% if module.include_link %}
+        <div class="link">
+        {% set href = module.link_field.url.href %}
+        {% if module.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}"
+          {% if module.link_field.open_in_new_tab %}target="_blank"{% endif %}
+          {% if module.link_field.rel %}rel="{{ module.link_field.rel }}"{% endif %}
+          >
+          {{ module.link_text }}
+        </a>
+        </div>
+      {% endif %}
+
+      <div class="wrapper {{ module.cards_per_row }} {% if module.landscape_cards %}landscape{% endif %}">
+        {% for item in module.card %}
+        <div class="card" >
+          
+          {% if item.dynamic_card %}
+            {# Dynamic Card #}
+            {% set pageSelector = content_by_id(item.dynamic_page_field) %}
+          
+            {% if item.include_card_image %}
+              <div class="image filled lazy" {% if pageSelector.featured_image %} data-bg="{{ resize_image_url(pageSelector.featured_image, 0,0,imageFillMax) }}" {% endif %}></div>
+            {% endif %}
+            <div class="content">
+              {% set pageTitle = pageSelector.html_title|split(' | ') %}
+              
+              <span class="title">{{ pageTitle[0] }}</span>
+              {% if pageSelector.meta_description %}<span class="teaser">{{ pageSelector.meta_description|truncate(200) }}</span>{% endif %}
+              <span class="url"><a href="{{ pageSelector.url }}">{{ item.dynamic_page_button_text }}</a></span>
+            </div>      
+          {% else %} 
+            {# Manual Card #}
+            {% if item.include_card_image %}
+              {% if item.fill_image_area %}
+                <div class="image filled">
+                  <img src="{{ resize_image_url(item.card_image.src, 0,0,imageFillMax) }}" alt="{{item.card_image.alt}}" lazy>
+                </div>
+              {% else %}
+                <div class="image">
+                  {% if item.card_image.src %} <img class="{% if item.image_on_left %}left{% endif %}" loading="lazy" src="{{ item.card_image.src }}" width="70" alt="{{ item.card_image.alt }}">{% endif %}
+                </div>
+              {% endif %}
+            {% endif %}
+            <div class="content">
+              {% if item.include_type %}<span class="type">{{ item.type }}</span>{% endif %}
+              <span class="title">{{ item.resource_title }}</span>
+              {% if item.show_teaser_text %}<span class="teaser">{{ item.teaser_text|truncate(200) }}</span>{% endif %}
+              {% if item.link_type == "cta" %}
+              <span class="cta">{% cta guid="{{ item.call_to_action }}" %}</span>
+              {% elif item.link_type == "url" %}
+              <span class="url"><a href="{{ item.link.href }}" {% if item.open_in_new_window %}target="_blank"{% endif %}>{{ item.link_text }}</a></span>
+              {% else %}
+              <!-- No link -->
+              {% endif %}   
+            </div>      
+          {% endif %}      
+        </div>
+        {% endfor %}
+      </div>
+    </section>

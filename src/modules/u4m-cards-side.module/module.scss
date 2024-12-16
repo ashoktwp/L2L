@@ -1,0 +1,81 @@
+@import "../../css/_module-imports";
+section.u4m-cards-side {
+  margin-top: 100rem;
+  margin-bottom: 100rem;
+  &.reverse-text {
+    h2.heading,
+    h3.subheading {
+      color: $white;
+    }
+  }
+  .outer-wrap {
+    display: flex;
+    @include center;
+    justify-content: center;
+    align-items: center;
+    .left {
+      padding-left: 20rem;
+      padding-right: 50rem;
+      flex: 0 0 40%;
+      .eyebrow {
+        @include eyebrow;
+      }
+      .heading {
+        @include h2;
+        margin-top: 0;
+      }
+      .subheading {
+        @include b2;
+        font-weight: normal;
+      }
+      .link {
+        text-align: center;
+        a {
+          @include button;
+        }
+      }
+      @include phone {
+        padding: 0;
+      }
+    }
+    .right {
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include phone {
+          display: block;
+        }
+        div.card {
+          @include card;
+          margin: 10rem;
+          flex: 1 0 100%;
+        }
+        &.two {
+          div.card {
+            flex-basis: calc(50% - 40rem);
+          }
+        }
+        &.three {
+          div.card {
+            flex-basis: calc(33.333% - 40rem);
+            @include tablet {
+              flex-basis: calc(50% - 40rem);
+            }
+          }
+        }
+        &.four {
+          div.card {
+            flex-basis: calc(25% - 40rem);
+            @include tablet {
+              flex-basis: calc(50% - 40rem);
+            }
+          }
+        }
+      }
+    }
+    @include tabletvert {
+      display: block;
+    }
+  }
+}

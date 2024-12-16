@@ -1,0 +1,534 @@
+[{
+  "default": true,
+  "display": "checkbox",
+  "display_width": null,
+  "id": "22ea157e-aa5a-06e3-df76-b78f4f1ce94e",
+  "label": "Include Heading",
+  "locked": false,
+  "name": "include_heading",
+  "required": false,
+  "type": "boolean"
+}, {
+  "allow_new_line": false,
+  "default": "Heading Text Here",
+  "display_width": null,
+  "id": "9905f5ff-7880-57de-f150-0508567addb3",
+  "label": "Heading",
+  "locked": false,
+  "name": "heading",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": "",
+  "visibility": {
+    "controlling_field": "22ea157e-aa5a-06e3-df76-b78f4f1ce94e",
+    "controlling_value_regex": "true",
+    "operator": "EQUAL"
+  }
+}, {
+  "default": true,
+  "display": "checkbox",
+  "display_width": null,
+  "id": "18a91992-6ec3-ed61-76e0-ac4b96fd83ba",
+  "label": "Include Sub Heading",
+  "locked": false,
+  "name": "include_sub_heading",
+  "required": false,
+  "type": "boolean"
+}, {
+  "allow_new_line": false,
+  "default": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.",
+  "display_width": null,
+  "id": "e324c31c-2b23-7e41-fb55-8a78d7b4fe4b",
+  "label": "Sub Heading",
+  "locked": false,
+  "name": "sub_heading",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": "",
+  "visibility": {
+    "controlling_field": "18a91992-6ec3-ed61-76e0-ac4b96fd83ba",
+    "controlling_value_regex": "true",
+    "operator": "EQUAL"
+  }
+}, {
+  "children": [{
+    "default": false,
+    "display": "checkbox",
+    "display_width": null,
+    "help_text": "Check this to hide this item from the current page. ",
+    "id": "5aad1e05-fe24-703e-7d00-b6cdc7796865",
+    "label": "Hide from Listing?",
+    "locked": false,
+    "name": "hide_from_listing_",
+    "required": false,
+    "type": "boolean"
+  }, {
+    "default": {
+      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
+      "alt": "Patrick"
+    },
+    "display_width": null,
+    "help_text": "",
+    "id": "7aef3045-fbf1-dae1-77b0-8f0b660f6eae",
+    "label": "Headshot",
+    "locked": false,
+    "name": "headshot",
+    "required": false,
+    "resizable": true,
+    "responsive": false,
+    "show_loading": false,
+    "type": "image"
+  }, {
+    "allow_new_line": false,
+    "default": "Firstname Lastname",
+    "display_width": null,
+    "id": "051db38d-f122-b792-cba2-5a80a230dbba",
+    "label": "Member Name",
+    "locked": false,
+    "name": "member_name",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+  }, {
+    "allow_new_line": false,
+    "default": "Director of Marketing, Title Division",
+    "display_width": null,
+    "id": "f0d3b5d3-e1d4-0190-b485-069861a4486f",
+    "label": "Member Position",
+    "locked": false,
+    "name": "member_position",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+  }, {
+    "default": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+    "display_width": null,
+    "id": "1be46cfa-d852-1f4e-7b55-2f7a7e0ac9df",
+    "label": "Pop Up Content",
+    "locked": false,
+    "name": "pop_up_content",
+    "required": false,
+    "type": "richtext"
+  }, {
+    "allow_new_line": false,
+    "default": "https://twitter.com/NewBreedRevenue",
+    "display_width": null,
+    "id": "76191295-e74a-675b-c62d-4ce88be4bb93",
+    "label": "Member Twitter Link",
+    "locked": false,
+    "name": "member_twitter_link",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+  }, {
+    "allow_new_line": false,
+    "default": "https://www.linkedin.com/company/new-breed-revenue/",
+    "display_width": null,
+    "id": "71b386fd-dbeb-6c95-fa08-d4bf08c6da6a",
+    "label": "Member Linkedin Link",
+    "locked": false,
+    "name": "member_linkedin_link",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+  }],
+  "default": [{
+    "hide_from_listing_": false,
+    "headshot": {
+      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
+      "alt": "Patrick"
+    },
+    "member_name": "Firstname Lastname",
+    "member_position": "Director of Marketing, Title Division",
+    "pop_up_content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+    "member_twitter_link": "https://twitter.com/NewBreedRevenue",
+    "member_linkedin_link": "https://www.linkedin.com/company/new-breed-revenue/",
+    "boolean_field": false
+  }, {
+    "hide_from_listing_": false,
+    "headshot": {
+      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
+      "alt": "Patrick"
+    },
+    "member_name": "Firstname Lastname",
+    "member_position": "Director of Marketing, Title Division",
+    "pop_up_content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+    "member_twitter_link": "https://twitter.com/NewBreedRevenue",
+    "member_linkedin_link": "https://www.linkedin.com/company/new-breed-revenue/",
+    "boolean_field": false
+  }, {
+    "hide_from_listing_": false,
+    "headshot": {
+      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
+      "alt": "Patrick"
+    },
+    "member_name": "Firstname Lastname",
+    "member_position": "Director of Marketing, Title Division",
+    "pop_up_content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+    "member_twitter_link": "https://twitter.com/NewBreedRevenue",
+    "member_linkedin_link": "https://www.linkedin.com/company/new-breed-revenue/",
+    "boolean_field": false
+  }],
+  "display_width": null,
+  "expanded": false,
+  "id": "4d0869ff-0acb-c3fd-cda8-06889f89f651",
+  "label": "Member Group",
+  "locked": false,
+  "name": "member_group",
+  "occurrence": {
+    "default": 3,
+    "min": 1,
+    "sorting_label_field": "051db38d-f122-b792-cba2-5a80a230dbba"
+  },
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+}, {
+  "children": [{
+    "default": false,
+    "display": "checkbox",
+    "display_width": null,
+    "help_text": "Toggle to override section ID and vertical margin. ",
+    "id": "enable_overrides",
+    "label": "Enable Overrides",
+    "locked": false,
+    "name": "enable_overrides",
+    "required": false,
+    "type": "boolean"
+  }, {
+    "allow_new_line": false,
+    "display_width": null,
+    "help_text": "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
+    "id": "module_overrides.section_id",
+    "label": "Section ID",
+    "locked": false,
+    "name": "section_id",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": "",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "choices": [
+      ["top-margin-default", "Default"],
+      ["top-margin-none", "None"],
+      ["top-margin-small", "Small"],
+      ["top-margin-medium", "Medium"],
+      ["top-margin-large", "Large"],
+      ["top-margin-custom", "Custom"]
+    ],
+    "default": "top-margin-default",
+    "display": "select",
+    "display_width": null,
+    "id": "module_overrides.top_margin",
+    "label": "Top Margin",
+    "locked": false,
+    "name": "top_margin",
+    "required": false,
+    "type": "choice",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 100,
+    "display": "text",
+    "display_width": null,
+    "id": "custom_top_margin",
+    "label": "Custom Top Margin",
+    "locked": false,
+    "name": "custom_top_margin",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.top_margin",
+      "controlling_value_regex": "top-margin-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 50,
+    "display": "text",
+    "display_width": null,
+    "id": "custom_top_margin_mobile",
+    "label": "Custom Top Margin Mobile",
+    "locked": false,
+    "name": "custom_top_margin_mobile",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.top_margin",
+      "controlling_value_regex": "top-margin-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "choices": [
+      ["bottom-margin-default", "Default"],
+      ["bottom-margin-none", "None"],
+      ["bottom-margin-small", "Small"],
+      ["bottom-margin-medium", "Medium"],
+      ["bottom-margin-large", "Large"],
+      ["bottom-margin-custom", "Custom"]
+    ],
+    "default": "bottom-margin-default",
+    "display": "select",
+    "display_width": null,
+    "id": "module_overrides.bottom_margin",
+    "label": "Bottom Margin",
+    "locked": false,
+    "name": "bottom_margin",
+    "required": false,
+    "type": "choice",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 100,
+    "display": "text",
+    "display_width": null,
+    "id": "custom_bottom_margin",
+    "label": "Custom Bottom Margin",
+    "locked": false,
+    "name": "custom_bottom_margin",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.bottom_margin",
+      "controlling_value_regex": "bottom-margin-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 50,
+    "display": "text",
+    "display_width": null,
+    "id": "custom_bottom_margin_mobile",
+    "label": "Custom Bottom Margin Mobile",
+    "locked": false,
+    "name": "custom_bottom_margin_mobile",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.bottom_margin",
+      "controlling_value_regex": "bottom-margin-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "choices": [
+      ["top-padding-default", "Default"],
+      ["top-padding-none", "None"],
+      ["top-padding-small", "Small"],
+      ["top-padding-medium", "Medium"],
+      ["top-padding-large", "Large"],
+      ["top-padding-custom", "Custom"]
+    ],
+    "default": "top-padding-default",
+    "display": "select",
+    "display_width": null,
+    "id": "module_overrides.top_padding",
+    "label": "Top Padding",
+    "locked": false,
+    "name": "top_padding",
+    "required": false,
+    "type": "choice",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 100,
+    "display": "text",
+    "display_width": null,
+    "id": "custom_top_padding",
+    "label": "Custom Top Padding",
+    "locked": false,
+    "name": "custom_top_padding",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.top_padding",
+      "controlling_value_regex": "top-padding-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 50,
+    "display": "text",
+    "display_width": null,
+    "id": "custom_top_padding_mobile",
+    "label": "Custom Top Padding Mobile",
+    "locked": false,
+    "name": "custom_top_padding_mobile",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.top_padding",
+      "controlling_value_regex": "top-padding-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "choices": [
+      ["bottom-padding-default", "Default"],
+      ["bottom-padding-none", "None"],
+      ["bottom-padding-small", "Small"],
+      ["bottom-padding-medium", "Medium"],
+      ["bottom-padding-large", "Large"],
+      ["bottom-padding-custom", "Custom"]
+    ],
+    "default": "bottom-padding-default",
+    "display": "select",
+    "display_width": null,
+    "id": "module_overrides.bottom_padding",
+    "label": "Bottom Padding",
+    "locked": false,
+    "name": "bottom_padding",
+    "required": false,
+    "type": "choice",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 100,
+    "display": "text",
+    "display_width": null,
+    "id": "custom_bottom_padding",
+    "label": "Custom Bottom Padding",
+    "locked": false,
+    "name": "custom_bottom_padding",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.bottom_padding",
+      "controlling_value_regex": "bottom-padding-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 50,
+    "display": "text",
+    "display_width": null,
+    "id": "custom_bottom_padding_mobile",
+    "label": "Custom Bottom Padding Mobile",
+    "locked": false,
+    "name": "custom_bottom_padding_mobile",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.bottom_padding",
+      "controlling_value_regex": "bottom-padding-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": {
+      "color": null,
+      "opacity": null
+    },
+    "display_width": null,
+    "help_text": "If a module has formal settings for a background color they will take priority over this value.",
+    "id": "6c8bfd0e-1629-1268-e01c-17b4047ecfce",
+    "inline_help_text": "",
+    "label": "Background Color",
+    "locked": false,
+    "name": "background_color",
+    "required": false,
+    "type": "color",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": {
+      "size_type": "auto",
+      "src": "",
+      "alt": null,
+      "loading": "disabled"
+    },
+    "display_width": null,
+    "help_text": "If a module has formal settings for a background image they will take priority over this value.",
+    "id": "878364f4-31ac-6917-e76f-65307d7d36e5",
+    "label": "Background Image",
+    "locked": false,
+    "name": "background_image",
+    "required": false,
+    "resizable": false,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": false,
+    "display": "checkbox",
+    "display_width": null,
+    "id": "3eccf45d-b0dc-4bac-42a0-f923e4405158",
+    "label": "Reverse Text",
+    "locked": false,
+    "name": "reverse_text",
+    "required": false,
+    "type": "boolean",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }],
+  "default": {
+    "enable_overrides": false,
+    "top_margin": "top-margin-default",
+    "custom_top_margin": 100,
+    "custom_top_margin_mobile": 50,
+    "bottom_margin": "bottom-margin-default",
+    "custom_bottom_margin": 100,
+    "custom_bottom_margin_mobile": 50,
+    "top_padding": "top-padding-default",
+    "custom_top_padding": 100,
+    "custom_top_padding_mobile": 50,
+    "bottom_padding": "bottom-padding-default",
+    "custom_bottom_padding": 100,
+    "custom_bottom_padding_mobile": 50,
+    "background_color": {
+      "color": null,
+      "opacity": null
+    },
+    "background_image": {
+      "size_type": "auto",
+      "src": "",
+      "alt": null,
+      "loading": "disabled"
+    },
+    "reverse_text": false
+  },
+  "display_width": null,
+  "expanded": false,
+  "id": "module_overrides",
+  "label": "Module Overrides",
+  "locked": false,
+  "name": "module_overrides",
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+}]

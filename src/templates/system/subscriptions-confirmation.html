@@ -1,0 +1,18 @@
+<!--
+  templateType: email_subscriptions_confirmation_page
+  isAvailableForNewContent: true
+  label: Unified 4 - Email Subscriptions Confirmation
+-->
+{% extends '../base.html' %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  <section class="u4m-subscriptions-confirmation">
+    <div class="systems-page">
+      {% module 'subscriptions_confirmation'
+        path='@hubspot/email_subscriptions_confirmation', header='Unsubscribed'
+      %}
+    </div>
+  </section>
+</main>
+{% endblock body %}

@@ -1,0 +1,15 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: false
+-->
+<div class="slide-inner left-navigation">
+  <div class="slide-column-1">
+    <h3 class="slide-title">{{ item.slide_headline }}</h3>
+    {% if item.include_navigation_accordion_content %}
+            <div class="accordion-content">      
+                {% inline_rich_text field="navigation_accordion_content" value="{{ item.navigation_accordion_content }}" %}
+            </div>
+         {% endif %}
+    <div class="slide-content">{{ item.slide_content }}</div>   
+  </div>
+</div>

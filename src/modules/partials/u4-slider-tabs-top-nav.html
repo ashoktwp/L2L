@@ -1,0 +1,15 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: false
+-->
+<div class="slide-inner top-navigation {% if item.smaller_image %}small-image{% endif %} {% if item.image_on_right %}image-right{% endif%} {% if item.include_image %}two-column{% else %}one-column{% endif %}">
+{% if item.include_image %}
+<div class="slide-column-1">
+  <img loading="lazy" src="{{ item.slide_image.src }}" width="614" alt="{{ item.slide_image.alt }}">
+</div>
+{% endif %}
+<div class="slide-column-2">
+    <h3 class="slide-title">{{ item.slide_headline }}</h3>
+    <span class="slide-content">{{ item.slide_content }}</span>   
+</div>
+</div>

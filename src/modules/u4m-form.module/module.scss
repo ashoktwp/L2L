@@ -1,0 +1,56 @@
+@import "../../css/_module-imports";
+section.u4m-form {
+  margin: 50rem 0;
+  &.reverse-text {
+    .left,
+    .right .form-wrap .heading {
+      color: $white;
+    }
+  }
+  div.container {
+    @include center;
+    display: flex;
+    @include tabletvert {
+      display: block;
+    }
+    div.left {
+      flex: 1 1 66.666666%;
+      margin-right: 100rem;
+      @include tabletvert {
+        margin-right: 0;
+      }
+      h1 {
+        @include h1;
+      }
+      h2 {
+        @include h2;
+      }
+      h3 {
+        @include h3;
+      }
+    }
+    div.right {
+      .heading {
+        @include h4;
+      }
+      &.centered {
+        flex: 1 1 100%;
+        .heading {
+          text-align: center;
+        }
+        div.form {
+          flex: 1 1 100%;
+        }
+      }
+      div.form {
+        flex: 1 1 33.333333%;
+        form {
+          @include form;
+          .hs-button {
+            @include button;
+          }
+        }
+      }
+    }
+  }
+}

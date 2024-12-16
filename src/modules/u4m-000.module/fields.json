@@ -1,0 +1,454 @@
+[{
+  "id": "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
+  "name": "include_heading",
+  "label": "Include Heading",
+  "required": false,
+  "locked": false,
+  "display": "checkbox",
+  "type": "boolean",
+  "default": true
+}, {
+  "id": "c7aa6b72-58e0-4caa-9b63-4da765e70069",
+  "name": "heading",
+  "label": "Heading",
+  "required": false,
+  "locked": false,
+  "validation_regex": "",
+  "visibility": {
+    "controlling_field": "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
+    "controlling_value_regex": "true",
+    "operator": "EQUAL",
+    "access": null,
+    "hidden_subfields": null
+  },
+  "allow_new_line": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "default": "u4m-000"
+}, {
+  "id": "module_overrides",
+  "name": "module_overrides",
+  "label": "Module Overrides",
+  "required": false,
+  "locked": false,
+  "children": [{
+      "id": "enable_overrides",
+      "name": "enable_overrides",
+      "label": "Enable Overrides",
+      "help_text": "Toggle to override section ID and vertical margin. ",
+      "required": false,
+      "locked": false,
+      "display": "checkbox",
+      "type": "boolean",
+      "default": false
+    }, {
+      "id": "module_overrides.section_id",
+      "name": "section_id",
+      "label": "Section ID",
+      "help_text": "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
+      "required": false,
+      "locked": false,
+      "validation_regex": "",
+      "visibility": {
+        "controlling_field": "enable_overrides",
+        "controlling_value_regex": "true",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "allow_new_line": false,
+      "show_emoji_picker": false,
+      "type": "text"
+    }, {
+      "id": "module_overrides.top_margin",
+      "name": "top_margin",
+      "label": "Top Margin",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "enable_overrides",
+        "controlling_value_regex": "true",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "select",
+      "choices": [
+        ["top-margin-default", "Default"],
+        ["top-margin-none", "None"],
+        ["top-margin-small", "Small"],
+        ["top-margin-medium", "Medium"],
+        ["top-margin-large", "Large"],
+        ["top-margin-custom", "Custom"]
+      ],
+      "type": "choice",
+      "default": "top-margin-default"
+    }, {
+      "id": "custom_top_margin",
+      "name": "custom_top_margin",
+      "label": "Custom Top Margin",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "module_overrides.top_margin",
+        "controlling_value_regex": "top-margin-custom",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "text",
+      "step": 1,
+      "type": "number",
+      "default": 100
+    }, {
+      "id": "custom_top_margin_mobile",
+      "name": "custom_top_margin_mobile",
+      "label": "Custom Top Margin Mobile",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "module_overrides.top_margin",
+        "controlling_value_regex": "top-margin-custom",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "text",
+      "step": 1,
+      "type": "number",
+      "default": 50
+    }, {
+      "id": "module_overrides.bottom_margin",
+      "name": "bottom_margin",
+      "label": "Bottom Margin",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "enable_overrides",
+        "controlling_value_regex": "true",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "select",
+      "choices": [
+        ["bottom-margin-default", "Default"],
+        ["bottom-margin-none", "None"],
+        ["bottom-margin-small", "Small"],
+        ["bottom-margin-medium", "Medium"],
+        ["bottom-margin-large", "Large"],
+        ["bottom-margin-custom", "Custom"]
+      ],
+      "type": "choice",
+      "default": "bottom-margin-default"
+    }, {
+      "id": "custom_bottom_margin",
+      "name": "custom_bottom_margin",
+      "label": "Custom Bottom Margin",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "module_overrides.bottom_margin",
+        "controlling_value_regex": "bottom-margin-custom",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "text",
+      "step": 1,
+      "type": "number",
+      "default": 100
+    }, {
+      "id": "custom_bottom_margin_mobile",
+      "name": "custom_bottom_margin_mobile",
+      "label": "Custom Bottom Margin Mobile",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "module_overrides.bottom_margin",
+        "controlling_value_regex": "bottom-margin-custom",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "text",
+      "step": 1,
+      "type": "number",
+      "default": 50
+    }, {
+      "id": "module_overrides.top_padding",
+      "name": "top_padding",
+      "label": "Top Padding",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "enable_overrides",
+        "controlling_value_regex": "true",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "select",
+      "choices": [
+        ["top-padding-default", "Default"],
+        ["top-padding-none", "None"],
+        ["top-padding-small", "Small"],
+        ["top-padding-medium", "Medium"],
+        ["top-padding-large", "Large"],
+        ["top-padding-custom", "Custom"]
+      ],
+      "type": "choice",
+      "default": "top-padding-default"
+    }, {
+      "id": "custom_top_padding",
+      "name": "custom_top_padding",
+      "label": "Custom Top Padding",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "module_overrides.top_padding",
+        "controlling_value_regex": "top-padding-custom",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "text",
+      "step": 1,
+      "type": "number",
+      "default": 100
+    }, {
+      "id": "custom_top_padding_mobile",
+      "name": "custom_top_padding_mobile",
+      "label": "Custom Top Padding Mobile",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "module_overrides.top_padding",
+        "controlling_value_regex": "top-padding-custom",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "text",
+      "step": 1,
+      "type": "number",
+      "default": 50
+    }, {
+      "id": "module_overrides.bottom_padding",
+      "name": "bottom_padding",
+      "label": "Bottom Padding",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "enable_overrides",
+        "controlling_value_regex": "true",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "select",
+      "choices": [
+        ["bottom-padding-default", "Default"],
+        ["bottom-padding-none", "None"],
+        ["bottom-padding-small", "Small"],
+        ["bottom-padding-medium", "Medium"],
+        ["bottom-padding-large", "Large"],
+        ["bottom-padding-custom", "Custom"]
+      ],
+      "type": "choice",
+      "default": "bottom-padding-default"
+    }, {
+      "id": "custom_bottom_padding",
+      "name": "custom_bottom_padding",
+      "label": "Custom Bottom Padding",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "module_overrides.bottom_padding",
+        "controlling_value_regex": "bottom-padding-custom",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "text",
+      "step": 1,
+      "type": "number",
+      "default": 100
+    }, {
+      "id": "custom_bottom_padding_mobile",
+      "name": "custom_bottom_padding_mobile",
+      "label": "Custom Bottom Padding Mobile",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "module_overrides.bottom_padding",
+        "controlling_value_regex": "bottom-padding-custom",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "text",
+      "step": 1,
+      "type": "number",
+      "default": 50
+    }, {
+      "id": "6c8bfd0e-1629-1268-e01c-17b4047ecfce",
+      "name": "background_color",
+      "label": "Background Color",
+      "help_text": "If a module has formal settings for a background color they will take priority over this value.",
+      "inline_help_text": "",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "enable_overrides",
+        "controlling_value_regex": "true",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "type": "color",
+      "default": {
+        "color": null,
+        "opacity": null
+      }
+    }, {
+      "id": "878364f4-31ac-6917-e76f-65307d7d36e5",
+      "name": "background_image",
+      "label": "Background Image",
+      "help_text": "If a module has formal settings for a background image they will take priority over this value.",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "enable_overrides",
+        "controlling_value_regex": "true",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "responsive": true,
+      "resizable": false,
+      "show_loading": false,
+      "type": "image",
+      "default": {
+        "size_type": "auto",
+        "src": "",
+        "alt": null,
+        "loading": "disabled"
+      }
+    }, {
+      "choices": [
+        [
+          "top left",
+          "Top Left"
+        ],
+        [
+          "top center",
+          "Top Center"
+        ],
+        [
+          "top right",
+          "Top Right"
+        ],
+        [
+          "center left",
+          "Center Left"
+        ],
+        [
+          "center center",
+          "Center"
+        ],
+        [
+          "center right",
+          "Center Right"
+        ],
+        [
+          "bottom left",
+          "Bottom Left"
+        ],
+        [
+          "bottom center",
+          "Bottom Center"
+        ],
+        [
+          "bottom right",
+          "Bottom Right"
+        ]
+      ],
+      "default": "center center",
+      "display": "select",
+      "display_width": null,
+      "id": "background-image-position",
+      "label": "Select Background Image Position",
+      "locked": false,
+      "name": "background_image_position",
+      "required": false,
+      "type": "choice",
+      "visibility": {
+        "controlling_field": "enable_overrides",
+        "controlling_value_regex": "true",
+        "operator": "EQUAL"
+      }
+    },
+    {
+      "default": true,
+      "display": "checkbox",
+      "id": "lazy-background",
+      "inline_help_text": "If enabled, the background image will be loaded only when the module is in view.",
+      "label": "Lazy Load Background Image?",
+      "locked": false,
+      "name": "background_lazy",
+      "required": false,
+      "type": "boolean",
+      "visibility": {
+        "controlling_field": "enable_overrides",
+        "controlling_value_regex": "true",
+        "operator": "EQUAL"
+      }
+    }, {
+      "id": "3eccf45d-b0dc-4bac-42a0-f923e4405158",
+      "name": "reverse_text",
+      "label": "Reverse Text",
+      "required": false,
+      "locked": false,
+      "visibility": {
+        "controlling_field": "enable_overrides",
+        "controlling_value_regex": "true",
+        "operator": "EQUAL",
+        "access": null,
+        "hidden_subfields": null
+      },
+      "display": "checkbox",
+      "type": "boolean",
+      "default": false
+    }
+  ],
+  "tab": "CONTENT",
+  "expanded": false,
+  "type": "group",
+  "default": {
+    "enable_overrides": false,
+    "top_margin": "top-margin-default",
+    "custom_top_margin": 100,
+    "custom_top_margin_mobile": 50,
+    "bottom_margin": "bottom-margin-default",
+    "custom_bottom_margin": 100,
+    "custom_bottom_margin_mobile": 50,
+    "top_padding": "top-padding-default",
+    "custom_top_padding": 100,
+    "custom_top_padding_mobile": 50,
+    "bottom_padding": "bottom-padding-default",
+    "custom_bottom_padding": 100,
+    "custom_bottom_padding_mobile": 50,
+    "background_color": {
+      "color": null,
+      "opacity": null
+    },
+    "background_image": {
+      "size_type": "auto",
+      "src": "",
+      "alt": null,
+      "loading": "disabled"
+    },
+    "reverse_text": false
+  }
+}]

@@ -1,0 +1,200 @@
+@import "../../css/_module-imports";
+
+section.u4m-rich-text {
+  background-size: cover;
+  background-position: 50% 50%;
+
+  &.reverse-text {
+    color: $white;
+  }
+
+  div.content {
+    @include center;
+    max-width: 1000rem;
+    margin-top: 50rem;
+    margin-bottom: 100rem;
+
+    .b1 {
+      @include b1;
+    }
+
+    .b2 {
+      @include b2;
+    }
+
+    p,
+    ul,
+    ol,
+    .b3 {
+      @include b3;
+    }
+
+    .b4 {
+      @include b4;
+    }
+
+    h1,
+    .h1 {
+      @include h1;
+    }
+
+    h2,
+    .h2 {
+      @include h2;
+    }
+
+    h3,
+    .h3 {
+      @include h3;
+    }
+
+    h4,
+    .h4 {
+      @include h4;
+    }
+
+    h5,
+    .h5 {
+      @include h5;
+    }
+
+    h6,
+    .h6 {
+      @include h6;
+    }
+
+    .swatches div {
+      width: 90rem;
+      height: 90rem;
+      padding: 5rem;
+      font-size: 10rem;
+      text-align: center;
+      display: inline-block;
+      margin: 8rem;
+      vertical-align: top;
+      line-height: normal;
+    }
+
+    .swatches div.secondary {
+      width: 50rem;
+      height: 50rem;
+    }
+
+    .action1 {
+      background-color: $action1;
+      color: $white;
+    }
+
+    .action2 {
+      background-color: $action2;
+      color: $white;
+    }
+
+    .black {
+      background-color: $black;
+      color: $white;
+    }
+
+    .gray1 {
+      background-color: $gray1;
+      color: $black;
+    }
+
+    .gray2 {
+      background-color: $gray2;
+    }
+
+    .gray3 {
+      background-color: $gray3;
+      color: $white;
+    }
+
+    .white {
+      background-color: $white;
+      color: $black;
+      border: 1rem solid $gray2;
+    }
+
+    .button {
+      @include button;
+    }
+
+    .button-small {
+      @include buttonSmall;
+    }
+
+    .button-stroked {
+      @include buttonStroked;
+    }
+
+    .button-text {
+      @include buttonText;
+    }
+
+    .hs-cta-wrapper a {
+      @include button;
+    }
+
+    .animation-sample-short,
+    .animation-sample-medium,
+    .animation-sample-long {
+      cursor: pointer;
+      background-color: $action1;
+      padding: 60rem 20rem;
+      color: $white;
+      margin: 10rem auto;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .animation-sample-short {
+      transition: $animation1;
+      width: 50%;
+    }
+
+    .animation-sample-medium {
+      transition: $animation2;
+      width: 50%;
+    }
+
+    .animation-sample-long {
+      transition: $animation3;
+      width: 50%;
+    }
+
+    .animation-sample-short:hover,
+    .animation-sample-medium:hover,
+    .animation-sample-long:hover {
+      width: 100%;
+    }
+
+    .anchor {
+      display: block;
+      position: relative;
+      top: -100rem;
+      visibility: hidden;
+    }
+
+    .anchor2 {
+      display: block;
+      position: relative;
+      top: -300rem;
+      visibility: hidden;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .hs_cos_wrapper_type_rich_text,
+    .hs_cos_wrapper_type_text,
+    .hs_cos_wrapper_type_header,
+    .hs_cos_wrapper_type_section_header,
+    .hs_cos_wrapper_type_raw_html,
+    .hs_cos_wrapper_type_raw_jinja,
+    .hs_cos_wrapper_type_page_footer {
+      word-wrap: break-word;
+    }
+  }
+}

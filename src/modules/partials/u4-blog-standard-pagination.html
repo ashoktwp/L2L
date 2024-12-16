@@ -1,0 +1,39 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: false
+-->
+
+<!-- Standard Pagination -->
+<div class="pagination-standard">
+  {% if not simple_list_page %}
+  {% set total_pages = contents.total_page_count %} <!-- sets variable for total pages -->
+  {% set more_pages = total_pages - current_page_num %} <!-- sets variable for how many more pages are past the current pages -->
+  {% if total_pages > 1 %}
+  <ul class="pages">
+    <li class="{% if current_page_num == 1 %}disabled{% endif %}"><a href="{% if last_page_num < 1 %} javascript:; {% else %}{{blog_page_link(last_page_num)}}{% endif %}">‹‹</a></li>
+    {% if more_pages == 0 %}
+    {% if current_page_num - 4 == 1 %}<li><a href="{{ group.absolute_url }}">{{ current_page_num - 4 }}</a></li>{% endif %}
+    {% if current_page_num - 4 > 1 %}<li><a href="{{ blog_page_link(current_page_num - 4) }}">{{ current_page_num - 4 }}</a></li>{% endif %}
+    {% endif %}
+    {% if more_pages <= 1 %}
+    {% if current_page_num - 3 == 1 %}<li><a href="{{ group.absolute_url }}">{{ current_page_num - 3 }}</a></li>{% endif %}
+    {% if current_page_num - 3 > 1 %}<li><a href="{{ blog_page_link(current_page_num - 3) }}">{{ current_page_num - 3 }}</a></li>{% endif %}
+    {% endif %}
+    {% if current_page_num - 2 == 1 %}<li><a href="{{ group.absolute_url }}">{{ current_page_num - 2 }}</a></li>{% endif %}
+    {% if current_page_num - 2 > 1 %}<li><a href="{{ blog_page_link(current_page_num - 2) }}">{{ current_page_num - 2 }}</a></li>{% endif %}
+    {% if current_page_num - 1 == 1 %}<li><a href="{{ group.absolute_url }}">{{ current_page_num - 1 }}</a></li>{% endif %}
+    {% if current_page_num - 1 > 1 %}<li><a href="{{ blog_page_link(current_page_num - 1) }}">{{ current_page_num - 1 }}</a></li>{% endif %}
+    <li class="active"><a href="{% if current_page_num==1 %}{{ group.absolute_url }}{% else %}{{ blog_page_link(current_page_num) }}{% endif %}">{{ current_page_num }}</a></li>
+    {% if current_page_num + 1 <= total_pages %}<li><a href="{{ blog_page_link(current_page_num + 1) }}">{{ current_page_num + 1 }}</a></li>{% endif %}
+    {% if current_page_num + 2 <= total_pages %}<li><a href="{{ blog_page_link(current_page_num + 2) }}">{{ current_page_num + 2 }}</a></li>{% endif %}
+    {% if current_page_num <= 2 %}
+    {% if current_page_num + 3 <= total_pages %}<li><a href="{{ blog_page_link(current_page_num + 3) }}">{{ current_page_num + 3 }}</a></li>{% endif %}
+    {% endif %}
+    {% if current_page_num == 1 %}
+    {% if current_page_num + 4 <= total_pages %}<li><a href="{{ blog_page_link(current_page_num + 4) }}">{{ current_page_num + 4 }}</a></li>{% endif %}
+    {% endif %}
+    <li class="{% if current_page_num == total_pages %}disabled{% endif %}"><a href="{% if current_page_num == total_pages %} javascript:; {% else %} {{blog_page_link(next_page_num)}} {% endif %}">››</a></li>
+  </ul>
+  {% endif %}
+  {% endif %}
+</div>

@@ -1,0 +1,252 @@
+{% set moduleName = 'u4m-filtered-content' %}
+{% set tableInfo = hubdb_table(module.table) %}
+{% set table = hubdb_table_rows(module.table, sortBy) %}
+{% set reverse = '' %}
+{% if module.reverse %}
+{% set reverse = '~' %}
+{% endif %}
+{% set sortBy = '&orderBy='+ reverse + module.sort %}
+
+{% set filterBy = 'all' %}
+{% if request.post_dict.filter %}
+{% set filterBy = '.' + request.post_dict.filter | lower | replace(' ','-') %}
+{% endif %}
+
+{% include "../partials/u4-module-includes.html" %}
+
+<h2 class="heading">{{ module.heading }}</h2>
+{# Featured Resource #}
+{% if module.include_featured_content and module.featured_resource %}
+<div class="featured">
+  <div class="card">          
+    <div class="image-wrap">
+      <a href="{{ module.featured_resource.columns.landing_page_url }}">
+        <div class="image lazy" 
+              data-bg="{{ resize_image_url(module.featured_resource.columns.cover_image.url, 0,0,featuredMax) }}"></div>
+      </a>
+    </div>
+    <div class="content">
+      <span class="medium {{ module.featured_resource.columns.medium.name|lower }}">{{ module.featured_resource.columns.medium.name }}</span>
+      <h3 class="heading">
+        <a href="{{ module.featured_resource.columns.landing_page_url }}">{{ module.featured_resource.columns.name }}</a>
+      </h3>    
+      <p>{{ module.featured_resource.columns.description|truncate(200) }}</p>
+      <a class="link" href="{{ module.featured_resource.columns.landing_page_url }}">
+        <span class="learn-more {{ module.featured_resource.columns.medium.name|lower }}">{{ module.featured_resource.columns.link_text }}</span>
+      </a>
+    </div>          
+  </div>      
+</div>
+{% endif %}
+{% if module.filters %}
+<div class="filters" id='filters'>
+  {# Dynamic Filters #}
+  <form class="multi-filter mixitup-multifilter">
+    {% for filter in module.filters %}
+    <fieldset class='{{ filter.type }}'
+              data-filter-group>
+      {# Buttons #}
+      {% if filter.type == 'buttons' %}
+      <button type="button" class="control filter-all-button" data-filter=".all">All</button>
+      {% for button in filter.buttons %}
+      <button type="button" class="control" data-filter=".{{ button|escape|lower|replace(' ','-') }}">{{ button }}</button>
+      {% endfor %}
+      {% elif filter.type == 'selects' %}
+      {# Selects #}
+      <select>
+        <option selected disabled value="">Select a Option</option>
+        {% for select in filter.selects %}
+        {% set value = select|lower|replace(' ', '-') %}
+        <option {{' selected ' if value == filterBy|cut('.') }} value=".{{ select|lower|replace(' ', '-') }}">{{ select }}</option>
+        {% endfor %}
+      </select>
+      <svg class='icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+
+      {% elif filter.type == 'checkboxes' %}
+      {# Checkboxes #}
+      {% for checkbox in filter.checkboxes %}
+      {% set value = checkbox|lower|replace(' ', '-') %}
+      <label>
+        <input type="checkbox"
+              {{' checked ' if value == filterBy|cut('.') }} 
+                value=".{{ checkbox|escape|lower|replace(' ', '-') }}"/><span>{{ checkbox }}</span></label>
+      {% endfor %}
+      {% elif filter.type == 'search' %}
+      <input type="text"
+              id="mix-search"
+              {{ "value='{{ searchValue }}'" if request.post_dict.filterSearch }}
+              data-search-attribute="data-search" 
+              placeholder="{{ filter.placeholder }}" />
+              <svg class='icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+      {% endif %}
+    </fieldset>
+    {% endfor %}
+  </form>
+  {# Static Filters - https://www.kunkalabs.com/tutorials/sorting-with-mixitup/ #}
+  {% if module.has_sort_filters %}
+    <form class='multi-filter mixitup-sorting'>
+      <fieldset class='sort selects'>
+        <select onchange="mixer.sort(this.value);">
+          <option selected disabled>Sort By</option>
+          <option value="default:asc">Ascending</option>
+          <option value="default:desc">Descending</option>
+          <option value="date:asc">Sort By Date ( New to Old )</option>
+          <option value="date:desc">Sort by Date ( Old to New )</option>
+          <option value="name:asc">Sort By Name ( First to Last )</option>
+          <option value="name:desc">Sort by Name ( Last to First )</option>
+        </select>
+        <svg class='icon' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+      </fieldset>
+      <fieldset class='sort buttons'>
+        <button type="button" name='container-layout' data-layout='row' role="radio">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/></svg>        </button>
+        <button type="button" name='container-layout' data-layout='card' role="radio" class='active'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 72C0 49.9 17.9 32 40 32H88c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H40c-22.1 0-40-17.9-40-40V72zM0 232c0-22.1 17.9-40 40-40H88c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H40c-22.1 0-40-17.9-40-40V232zM128 392v48c0 22.1-17.9 40-40 40H40c-22.1 0-40-17.9-40-40V392c0-22.1 17.9-40 40-40H88c22.1 0 40 17.9 40 40zM160 72c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H200c-22.1 0-40-17.9-40-40V72zM288 232v48c0 22.1-17.9 40-40 40H200c-22.1 0-40-17.9-40-40V232c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40zM160 392c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H200c-22.1 0-40-17.9-40-40V392zM448 72v48c0 22.1-17.9 40-40 40H360c-22.1 0-40-17.9-40-40V72c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40zM320 232c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H360c-22.1 0-40-17.9-40-40V232zM448 392v48c0 22.1-17.9 40-40 40H360c-22.1 0-40-17.9-40-40V392c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40z"/></svg>
+        </button>
+      </fieldset>
+    </form>
+  {% endif %}
+</div>
+{% endif %}
+<div id="container"
+      data-table-name='{{ tableInfo.name | replace('_', '-') }}' 
+      data-resource-count='{{ table | length }}'
+      data-filter-on-load-by='{{ filterBy | cut('.') }}'
+      data-reverse='{{ 'true' if reverse != '' else 'false' }}'
+      data-sort-by='{{ module.sort }}'>
+  {% for row in table %}
+  <div class="resource-card mix all {{ row.name|striptags|lower|replace(' ', '-') }} {{ row.medium.name|striptags|lower|replace(' ', '-') }} {% for category in row.category %} {{ category.name|striptags|lower|replace(' ', '-') }} {% endfor %}"
+        data-layout='card'
+        data-name='{{ row.name }}' {# For sorting by name #}
+        data-date='{{ row.hs_created_at }}' {# For sorting by date #}
+        data-search='{{ row.name | lower }} {{ row.description | lower | strip_html | safe }}'>
+    <a class="link-wrap" href="{{ row.landing_page_url }}">
+      <div class="image lazy" data-bg="{{ resize_image_url(row.cover_image.url, 0,0,cardImageMax) }}"></div>
+      <div class="content">
+        <span class="medium {{ row.medium.name|lower }}">{{ row.medium.name }}</span>
+        <h3 class="heading">{{ row.name }}</h3>    
+        <p>{{ row.description|truncate(80) }}</p>
+        <span class="learn-more {{ row.medium.name|lower }}">{{ row.link_text }}</span>
+        {% if request.post_dict.debug %}
+        <div class='tags' style='color: #ddd'>
+        {% for category in row.category %}<span><small>#{{ category.name|striptags|lower|replace(' ', '-') }}</small></span><br>{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{# No Results Container #}
+<div id='mix-no-results'>
+  <h5>No results found.</h5>
+</div>
+{# Pagination #}
+<div id='pagination'>
+{% if module.pagination == 'paginate' %}
+<div class="pagination paginate mixitup-page-list"></div>
+{% elif module.pagination == 'loadmore' %}
+<div class="pagination loadmore mix-load-more-container">
+  <button id="mix-load-more">Load More</button>
+</div>
+{% endif %}
+</div>
+</section>
+{% require_js %}
+<script>
+  const container = document.querySelector('#container'),
+        containerCards = document.querySelectorAll('#container .resource-card'),
+        pagination = document.querySelector('#pagination'),
+        noResults = document.querySelector('#mix-no-results'),
+        loadMoreButton = document.querySelector('#mix-load-more'),
+        search = document.querySelector('#mix-search')
+  //
+  let mixLimit = {{ module.limit }};
+  let loadMoreLimit = {{ module.loadMoreLimit}}
+  //
+  var mixer = mixitup(container, {
+    selectors: {
+      target: '.mix'
+    },
+    load: {
+      filter: '{{ filterBy }}'
+    },
+    animation: {
+      effects: 'fade translateZ(-20px)',
+      effectsIn: 'fade translateY(-20%)',
+      effectsOut: 'fade translateY(-20%)',
+      easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)'
+    },
+    pagination: {
+      limit: mixLimit,
+      maintainActivePage: true
+      
+    },
+    multifilter: {
+      enable: true,
+      minSearchLength: 2
+    },
+    callbacks: {
+      onMixStart:
+      function(state, futureState) {
+        // Check if Filter exists, currently not in use.
+        const url = window.location.origin + window.location.pathname
+        // Get Current Filter
+        let query = futureState.activeFilter.selector.replace('.', '');
+        //
+        if(!search.value) history.replaceState(null, document.title, url + '?filter=' + query);
+        if(search.value)  history.replaceState(null, document.title, url + '?filterSearch=' + search.value);
+        // Hide No Results
+        noResults.style.display = 'none';
+        //
+        {{ "if (mixLimit > futureState.totalShow ) loadMoreButton.classList.add('hidden')" if module.pagination == 'loadmore' }}
+        
+      },
+      onMixFail: 
+      function(state) {
+        // Display no Results
+        if (state.hasFailed) noResults.style.display = 'block';
+      },
+      onMixEnd: {
+      }
+    }
+  })
+  // Load More
+  {% if module.pagination == 'loadmore' %}
+  loadMoreButton.addEventListener('click', () =>{
+    mixLimit += loadMoreLimit;
+    mixer.paginate({
+      limit: mixLimit
+    });
+  });
+  {% endif %} 
+  // Layout Buttons
+  let layoutButtons = document.querySelectorAll('.sort button');
+  layoutButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      let activeLayout = this.getAttribute('data-layout');
+      layoutButtons.forEach(button => {
+        button.classList.remove('active')
+      })
+      containerCards.forEach(card => {
+        card.setAttribute('data-layout', activeLayout);
+      })
+      this.classList.add('active');
+    })
+  });
+
+  // Set All as active if no query paramters in the URL
+  (function() {
+  function checkForQueryParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      
+      if (!urlParams.toString()) {
+        document.querySelector('.filter-all-button').classList.add('mixitup-control-active');
+      } else {
+          // Do nothing
+      }
+  }
+  checkForQueryParams(); // Initial call to start the process
+})();
+</script>
+{% end_require_js %}

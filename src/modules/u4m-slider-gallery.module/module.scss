@@ -1,0 +1,167 @@
+@import "../../css/_module-imports";
+
+section.u4m-slider-gallery {
+  margin: 100rem auto;
+
+  &.reverse-text {
+    color: $white;
+  }
+
+  &.additional-content {
+    padding: 100rem 20rem;
+  }
+
+  &.black-bg-section {
+    background-color: $black;
+
+    div.inner-wrap .optional-headline {
+      color: $white;
+    }
+
+    div.inner-wrap div.container span p {
+      color: $white;
+    }
+  }
+
+  div.container {
+    @include center;
+
+    .intro {
+      @include centerSmall;
+      padding: 0;
+
+      .optional-headline {
+        @include h2;
+        text-align: center;
+      }
+
+      span {
+        display: block;
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+
+    .splide {
+      &:not(.is-overflow) {
+        .splide__list {
+          .splide__slide:last-child {
+            margin: 0 !important;
+          }
+        }
+      }
+
+      .splide__track {
+        padding: 40rem 20rem;
+
+        .splide__list {
+          .splide__slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: scale 0.3s ease-in-out;
+            transform: translate3d(0, 0, 0);
+
+            .popout {
+              transition: $animation1;
+              z-index: 1;
+
+              &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                box-shadow: $shadow1;
+
+                .play-button {
+                  background: rgba($white, 0.8);
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .play-button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 50rem;
+              height: 50rem;
+              border-radius: 50%;
+              border: 2px solid rgba($white, 0.5);
+              position: absolute;
+              background: rgba($white, 0.5);
+              z-index: 2;
+
+              svg {
+                width: 30rem;
+                height: 30rem;
+                padding-left: 6rem;
+                fill: $action2;
+              }
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              max-height: 200rem;
+              object-fit: cover;
+            }
+
+            &.showing-8,
+            &.showing-7,
+            &.showing-6 {
+              @include tabletMin {
+                .play-button {
+                  width: 35rem;
+                  height: 35rem;
+                  border: 1px solid rgba($white, 0.5);
+
+                  svg {
+                    width: 20rem;
+                    height: 20rem;
+                    padding-left: 3rem;
+                    fill: $action2;
+                  }
+                }
+              }
+            }
+
+            &.showing-4,
+            &.showing-3 {
+              .popout {
+                &:hover {
+                  transform: scale(1.06);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .splide__arrows {
+        .splide__arrow {
+          background: $white;
+          opacity: 1;
+
+          &:hover {
+            svg {
+              fill: $action2;
+            }
+          }
+
+          svg {
+            fill: $black;
+          }
+
+          &.splide__arrow--prev {
+            left: -20rem;
+          }
+
+          &.splide__arrow--next {
+            right: -20rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label: Unified 4 - Blog Listing
+-->
+{% extends './base.html' %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+
+{% module 'u4m-blog-listing' path='../modules/u4m-blog-listing' %}
+{% module 'u4m-subscribe' path='../modules/u4m-subscribe' %}
+  
+</main>
+{% endblock body %}

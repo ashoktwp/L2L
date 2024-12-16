@@ -1,0 +1,141 @@
+{% macro tabContent() %}
+  {% if tab.heading || tab.content %}
+  <div class='content'>
+    <h3>{{ tab.heading }}</h3>
+    {{ tab.content }}
+    {% if tab.link_type == "cta" %}
+      <span class="cta">{% cta guid="{{ tab.call_to_action }}" %}</span>
+      {% elif tab.link_type == "url" %}
+      <span class="url"><a href="{{ tab.link.url.href }}" {% if tab.link.open_in_new_tab %}target="_blank"{% endif %}>{{ tab.link_text }}</a></span>
+    {% endif %}
+  </div>
+  {% endif %}
+  {% if tab.image.src %}
+  <div class='image'>
+    <img width='{{ tab.image.width }}' 
+         height='{{ tab.image.height }}' 
+         src='{{ tab.image.src }}' 
+         alt='{{ tab.image.alt }}'>
+  </div>
+  {% endif %}
+{% endmacro %}
+{# Module #}
+{% set moduleName = 'u4m-simple-tabs' %}
+{% include "../partials/u4-module-includes.html" %}
+  <div class='tabs-module-wrap'>
+    <div class='intro'>
+      <div class='heading'>
+        {{ '<h2>{{ module.heading }}</h2>' if module.heading }}
+        {{ '<p>{{ module.copy }}</p>' if  module.copy }}    
+      </div>
+      {% if module.primary_link_type != 'none' ||  module.secondary_link_type != 'none' %}
+        <div class='primary-secondary-links'> 
+            {% if module.primary_link_type != 'none' %}
+            <div class='primary'>     
+            {% if module.primary_link_type == "cta" %}
+            <span class="cta">{% cta guid="{{ module.primary_call_to_action }}" %}</span>
+            {% elif module.primary_link_type == "url" %}
+            <span class="url">
+              <a class='button' href="{{ module.primary_link.href }}" {% if module.primary_link_open_in_new_window %}target="_blank"{% endif %}>{{ module.primary_link_text }}</a></span>
+            {% endif %}
+            </div>
+            {% endif %}
+            {% if module.secondary_link_type != 'none' %}
+            <div class='secondary'>     
+            {% if module.secondary_link_type == "cta" %}
+            <span class="cta">{% cta guid="{{ module.secondary_call_to_action }}" %}</span>
+            {% elif module.secondary_link_type == "url" %}
+            <span class="url"><a class='text-button' href="{{ module.secondary_link.href }}" {% if module.secondary_link_open_in_new_window %}target="_blank"{% endif %}>{{ module.secondary_link_text }}</a></span>
+            {% endif %}
+            </div>
+            {% endif %} 
+        </div>
+        {% endif %}
+    </div>
+    {# Tabs & Content #}
+    <div class='tabs-module'
+         data-navigation-position='{{ module.position }}'>
+      {# Tabs Navigation #}
+      <div class='tabs-navigation'>
+        <ul>
+          {% for tab in module.tabs %}
+          <li class='tab{{ ' active' if loop.first }}' 
+              tab-index='0'>
+            <div class='tab-click'>
+              <p class='tab-title'><strong>{{ tab.text }}</strong></p>
+              {{ '<div class="tab-subtext"><small>{{ tab.subtext }}</small></div>' if tab.subtext }}
+            </div>
+            {% if tab.tab_link && tab.tab_link == 'cta' %}
+            <div class='tab-link cta'>
+              <small>{% cta guid="{{ tab.cta }}" %}</small>
+            </div>
+            {% elif tab.tab_link && tab.tab_link == 'url' %}
+            <div class='tab-link url'>
+              <small><a href='{{ tab.link.href }}'>{{ tab.link_text }}</a></small>
+            </div>
+            {% endif %}
+            {# Mobile #}
+            <div class='tab-mobile-content'>
+            {{ tabContent() }}
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {# Tabs Content #}
+      <div class='tabs-content'>
+        {% for tab in module.tabs %}
+        <div class='tab-content{{ ' active' if loop.first }}'>
+          <div class='tab-content-inner'>
+          {{ tabContent() }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% require_js %}
+<script>
+
+{
+  const module = '{{ '.' + name }}',
+        tabsModule = document.querySelector( module + ' .tabs-module'),
+        tabs = tabsModule.querySelectorAll( module + '  .tab .tab-click'),
+        tabsContents = tabsModule.querySelectorAll( module + '  .tab-content'),
+        mediaQuery = window.matchMedia('(max-width: 767px)');
+  // 
+  tabs.forEach( (tab, index) => {
+    tab.addEventListener('click', () => {
+      if (mediaQuery.matches) {
+      // remove active class from tab and content if active otherwise add
+        tab.parentElement.classList.toggle('active');
+        tabsContents[index].classList.toggle('active');
+      }
+      else {
+      // Remove active from all tabs and content
+        tabs.forEach( 
+          tab => tab.parentElement.classList.remove('active')
+        );
+        tabsContents.forEach( 
+          tabContent => tabContent.classList.remove('active')
+        );
+        // Add class to the parent element, find corresponding content of same index
+        tab.parentElement.classList.add('active');
+        tabsContents[index].classList.add('active');
+      }
+    });
+  });
+  // If not active tab from mobile to desktop, toggle first tab.
+  window.addEventListener('resize', () => {
+    if (!mediaQuery.matches) {
+      if (!tabsModule.querySelector('.tab.active')) {
+        tabs[0].parentElement.classList.add('active');
+        tabsContents[0].classList.add('active');
+      }
+    }
+  });
+
+}
+</script>
+{% end_require_js %}

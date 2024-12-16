@@ -1,0 +1,240 @@
+@import "../../css/_module-imports";
+section.u4m-pricing-cards {
+  margin: 80rem auto;
+  position: relative;
+  @include phone {
+    margin: 50rem auto;
+  }
+  &.reverse-text {
+    h2.heading,
+    h3.subheading {
+      color: $white;
+    }
+  }
+  div.intro {
+    @include center;
+    max-width: 1280rem;
+    // padding: 0;
+    margin: 0 auto 50rem auto;
+    @include tabletvert {
+      margin: 0 auto 30rem auto;
+    }
+    .heading {
+      @include h2;
+      text-align: center;
+      max-width: 685rem;
+      margin: 0 auto 14rem;
+    }
+    .subheading {
+      @include b3;
+      font-weight: normal;
+      text-align: center;
+      max-width: 700rem;
+      line-height: 1.7;
+      margin: 0 auto;
+    }
+  }
+  .wrapper {
+    @include center;
+    max-width: 1280rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // @include phone {
+    //   display: block;
+    // }
+    div.card {
+      @include card;
+      flex-direction: column;
+      //flex-basis: 386rem;
+      padding: 0rem;
+      @include tablet {
+        flex-basis: calc(50% - 40rem);
+      }
+      @include tabletvert {
+        flex-basis: 100%;
+        width: unset;
+        margin: 20rem 0rem;
+      }
+      .title {
+        @include h2;
+        background-color: $gray2;
+        padding: 35rem;
+        margin-bottom: 0rem;
+        text-align: center;
+        font-size: 30rem;
+        font-family: $font1;
+        font-weight: normal;
+        @include phone {
+          margin-bottom: 0rem;
+          font-size: 28rem;
+        }
+        &.popular-label {
+          background-color: $action2;
+          color: $white;
+        }
+      }
+      div.content {
+        padding: 60rem 47rem 30rem 47rem;
+        .price-container {
+          display: flex;
+          flex-direction: column;
+          // set min-height of the tallest card's price-container to keep buttons aligned
+          min-height: 435rem;
+          @include tabletvert {
+            min-height: unset;
+          }
+          .price {
+            @include h1;
+            font-size: 50rem;
+            font-family: $font1;
+            font-weight: 700;
+            @include phone {
+              font-size: 50rem;
+            }
+            .price-frequency {
+              @include b3;
+              font-size: 20rem;
+              font-family: $font1;
+            }
+          }
+          .teaser {
+            @include b4;
+            margin-bottom: 20rem;
+          }
+          // First Button 
+          div.top-link {
+            width: 100%;
+            margin-top: auto;
+            span.top-link-url,
+            span.top-link-cta {
+              @include h6;
+              display: block;
+              font-size: 25rem;
+              font-family: $font1;
+              text-align: center;
+              font-weight: normal;
+              margin-bottom: 40rem;
+              background-color: $action1;
+              @include phone {
+                margin-bottom: 20rem;
+              }
+              &:hover {
+                background-color: $action2;
+                color: $white;
+              }
+              a {
+                text-transform: uppercase;
+                color: $white;
+                padding: 20rem;
+                display: block;
+              }
+            }
+          }
+        }
+        // Bulleted Lists 
+        .list-title {
+          @include h6;
+          font-size: 25rem;
+          font-weight: normal;
+          font-family: $font1;
+        }
+        ul {
+          list-style: none;
+          padding-left: 0;
+          margin-bottom: 10rem;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          li {
+            // display: inline-block;
+            display: flex;
+            @include b3;
+            span {
+              img {
+                position: relative;
+                top: -4rem;
+                width: 20rem;
+                height: 20rem;
+                margin: 5rem 10rem 0 0;
+                display: block;
+                min-width: 20rem;
+                @include phone {
+                  margin: 0rem 10rem 0 0;
+                }
+              }
+            }
+          }
+          .excluded-reports {
+            color: rgba($black, 0.5);
+            span {
+              svg {
+                fill: rgba($black, 0.5);
+              }
+            }
+          }
+        }
+        // Learn More Link text 
+        div.features-list-link {
+          margin-bottom: 30rem;
+          span.features-url,
+          span.features-cta {
+            a {
+              @include buttonText;
+              &:hover {
+                color: $action2;
+              }
+            }
+            // &:hover {
+            //   background-color: $action2;
+            //   color: $white;
+            // }
+            // @include h6;
+            // display: block;
+            // font-size: 25rem;
+            // font-family: $font1;
+            // text-align: center;
+            // font-weight: normal;
+            // margin-bottom: 0rem;
+            // padding: 20rem;
+            // background-color: $action1;
+            // @include phone {
+            //   margin-bottom: 0rem;
+            // }
+            // a {
+            //   text-transform: uppercase;
+            //   color: $white;
+            // }
+          }
+        }
+      }
+      // Bottom of Card Button
+      div.bottom-link {
+        span.url,
+        span.cta {
+          @include h6;
+          display: block;
+          font-size: 25rem;
+          font-family: $font1;
+          text-align: center;
+          font-weight: normal;
+          margin-bottom: 0rem;
+          background-color: $action1;
+          @include phone {
+            margin-bottom: 0rem;
+          }
+          &:hover {
+            background-color: $action2;
+            color: $white;
+          }
+          a {
+            text-transform: uppercase;
+            color: $white;
+            padding: 20rem;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

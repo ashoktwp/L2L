@@ -1,0 +1,49 @@
+{
+  "global": true,
+  "smart_type": "NOT_SMART",
+  "host_template_types": [
+    "PAGE",
+    "BLOG_POST",
+    "BLOG_LISTING"
+  ],
+  "icon": "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
+  "js_assets": [
+    {
+      "url": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/scripts/jquery-3.7.1.min.js",
+      "autoload": true,
+      "name": "jquery-3.7.1.min.js"
+    },
+    {
+      "url": "https://cdn2.hubspot.net/hubfs/302335/unified3/libraries/hubspot.search.min.js",
+      "autoload": true,
+      "name": "hubspot.search.min.js"
+    },
+    {
+      "url": "https://cdn2.hubspot.net/hubfs/302335/unified3/libraries/jquery.nb.offscreenMenuToggle.min.js",
+      "autoload": true,
+      "name": "jquery.nb.offscreenMenuToggle.min.js"
+    },
+    {
+      "url": "https://cdn2.hubspot.net/hubfs/302335/unified3/libraries/aos3.min.js",
+      "autoload": true,
+      "name": "aos3.min.js"
+    },
+    {
+      "url": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/unified-assets/lazyload.min.js",
+      "autoload": true,
+      "name": "lazyload.min.js"
+    },
+    {
+      "url": "https://cdn2.hubspot.net/hubfs/302335/unified3/libraries/js.cookie.min.js",
+      "autoload": true,
+      "name": "js.cookie.min.js"
+    },
+    {
+      "url": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/hc-sticky.js",
+      "autoload": true,
+      "name": "hc-sticky.js"
+    }
+  ],
+  "label": "Header",
+  "is_available_for_new_content": false
+}

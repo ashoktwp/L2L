@@ -1,0 +1,27 @@
+{% set moduleName = 'u4m-timeline' %}
+{% set imageMax = 1000 %}
+{% set bgImageMax = 1920 %}
+ 
+{% include "../partials/u4-module-includes.html" %}
+  <div  class='inner'>
+    <div class='timeline'>
+      {% if module.include_heading %}
+      <h2>{{ module.heading }}</h2>
+      {% endif %}
+      {% for item in module.timeline_entries %}
+      <div class='timeline-entry' data-aos="fade-up">
+        <div class='timeline-entry-info'>
+          <h3>{{ item.year }}</h3>
+          <p>{{ item.description }}</p>
+          {% if item.include_image %}
+          <div class='timeline-image'>
+            <img src="{{ item.image.src }}" width="467" alt="{{ item.image.alt }}" loading="lazy">
+          </div>
+          {% endif %}
+        </div>
+        <div></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

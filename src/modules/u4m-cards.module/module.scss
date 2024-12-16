@@ -1,0 +1,102 @@
+@import "../../css/_module-imports";
+
+section.u4m-cards {
+  margin-top: 100rem;
+  margin-bottom: 100rem;
+
+  &.reverse-text {
+
+    h2.heading,
+    h3.subheading {
+      color: $white;
+    }
+  }
+
+  .heading {
+    @include center;
+    @include h2;
+    text-align: center;
+  }
+
+  .subheading {
+    @include center;
+    max-width: 1000rem;
+    @include b2;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  .link {
+    text-align: center;
+
+    a {
+      @include button;
+    }
+  }
+
+  .wrapper {
+    @include center;
+    max-width: 1280rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include phone {
+      display: block;
+    }
+
+    &.landscape {
+      div.card {
+        flex-direction: row;
+
+        @include tabletvert {
+          flex-direction: column;
+        }
+
+        div.image.filled {
+          min-width: 200rem;
+        }
+
+        div.content {
+          @include phone {
+            margin-bottom: 0;
+
+            span.teaser {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    div.card {
+      @include card;
+    }
+
+    &.two {
+      div.card {
+        flex-basis: calc(50% - 40rem);
+      }
+    }
+
+    &.three {
+      div.card {
+        flex-basis: calc(33.333% - 40rem);
+
+        @include tablet {
+          flex-basis: calc(50% - 40rem);
+        }
+      }
+    }
+
+    &.four {
+      div.card {
+        flex-basis: calc(25% - 40rem);
+
+        @include tablet {
+          flex-basis: calc(50% - 40rem);
+        }
+      }
+    }
+  }
+}

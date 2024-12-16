@@ -1,0 +1,174 @@
+@import "../../css/_module-imports";
+
+footer.u4m-footer {
+  padding: 50px 0;
+  border-radius: $border1;
+  background: $gray1;
+
+  .inner {
+    @include center;
+    display: flex;
+    flex-direction: column;
+
+    .logo-and-menu {
+      display: flex;
+      padding: 20px 0;
+
+      body.lp-sign-up & {
+        display: none;
+      }
+
+      .logo {
+        flex: 1;
+      }
+
+      .menu {
+        flex: 1;
+
+        ul {
+          width: 100%;
+          margin: 0;
+          display: flex;
+          justify-content: flex-end;
+
+          li {
+            float: unset;
+            flex: 1;
+
+            a[role="menuitem"] {
+              width: unset;
+              max-width: unset;
+              padding: 0;
+              color: $black;
+
+              &:hover {
+                color: $action1;
+              }
+            }
+
+            // Child Items
+            &.hs-menu-depth-1 {
+              padding: 0 10px;
+
+              >a {
+                font-weight: bold;
+                font-size: 125%;
+              }
+
+              ul {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                li {
+                  margin: 0 0 10px;
+                }
+              }
+            }
+          }
+
+          @include tablet {
+            justify-content: unset;
+          }
+
+          @include tabletvert {
+            flex-direction: column;
+          }
+        }
+
+        @include tablet {
+          margin: 40px -10px 0;
+        }
+
+        .hs-landing-page & {
+          display: none;
+        }
+      }
+
+      @include tablet {
+        flex-direction: column;
+      }
+
+      @include tabletvert {
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    // Year, Contact, Legal, Privacy & Social Links
+    .colophon-and-social {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+
+      body.lp-sign-up & {
+        justify-content: center;
+      }
+
+      ul {
+        //display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin-left: 20rem;
+          margin-top: 5rem;
+
+          a {
+            color: $black;
+            font-size: 16rem;
+            padding: 0;
+
+            &:hover,
+            &:focus {
+              color: $action1;
+            }
+          }
+        }
+      }
+
+      .colophon {
+        .links {
+          display: flex;
+
+          .copyright {
+            margin: 5px;
+          }
+
+          @include tabletvert {
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+
+      .social {
+        ul {
+          display: flex;
+
+          li {
+            a {
+              font-size: 25px;
+              color: $black;
+
+              &:hover {
+                color: $action1;
+              }
+            }
+          }
+        }
+      }
+
+      @include tabletvert {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  .hs-landing-page & {
+    padding: 20px 0;
+  }
+}

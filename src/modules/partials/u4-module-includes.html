@@ -1,0 +1,41 @@
+<!--
+  templateType: "none"
+  isAvailableForNewContent: false
+-->
+<section 
+id='{% if module.module_overrides.enable_overrides and module.module_overrides.section_id %}{{ module.module_overrides.section_id }}{% else %}{{name}}{% endif %}' 
+class="{{ moduleName }} {{ name }}{{ ' lazy' if module.module_overrides.background_image.src && module.module_overrides.background_lazy  }}{% if module.module_overrides.enable_overrides %}{{ ' {{ module.module_overrides.top_margin }}' if (module.module_overrides.enable_overrides) and ((module.module_overrides.top_margin != 'top-margin-default') or (module.module_overrides.top_margin != 'top-margin-custom')) }}{{ ' {{ module.module_overrides.bottom_margin }}' if (module.module_overrides.enable_overrides) and ((module.module_overrides.bottom_margin != 'bottom-margin-default') or (module.module_overrides.bottom_margin != 'bottom-margin-custom'))  }}{{ ' {{ module.module_overrides.top_padding }}' if (module.module_overrides.enable_overrides) and ((module.module_overrides.top_padding != 'top-padding-default') or (module.module_overrides.top_padding != 'top-padding-custom')) }}{{ ' {{ module.module_overrides.bottom_padding }}' if (module.module_overrides.enable_overrides) and ((module.module_overrides.bottom_padding != 'bottom-padding-default') or (module.module_overrides.bottom_padding != 'bottom-padding-custom'))  }}{{ ' reverse-text' if (module.module_overrides.enable_overrides) and (module.module_overrides.reverse_text)  }}{% endif %}"
+{% if module.module_overrides.background_image.src && module.module_overrides.background_lazy %} 
+data-bg="{{ resize_image_url(module.module_overrides.background_image.src, 0,0,bgImageMax) }}" {% endif %} 
+style="{% if module.background_color.color %} background-color:rgba({{ module.background_color.color|convert_rgb }},{{ module.background_color.opacity }});{% endif %}{% if module.module_overrides.background_image.src && !module.module_overrides.background_lazy %} 
+background-image: url({{ resize_image_url(module.module_overrides.background_image.src, 0,0,bgImageMax) }}); {% endif %} 
+">
+{% if module.module_overrides.enable_overrides %}
+{% require_js %}
+<style>  
+{% if module.module_overrides.top_margin == 'top-margin-custom' %}
+section.{{ moduleName}}.{{ name }} {margin-top:{{ module.module_overrides.custom_top_margin }}rem; }
+@media (max-width: 767px) { section.{{ moduleName}}.{{ name }} { margin-top:{{ module.module_overrides.custom_top_margin_mobile }}rem; } }
+{% endif %}
+{% if module.module_overrides.bottom_margin == 'bottom-margin-custom' %}
+section.{{ moduleName}}.{{ name }} {margin-bottom:{{ module.module_overrides.custom_bottom_margin }}rem; }
+@media (max-width: 767px) { section.{{ moduleName}}.{{ name }} { margin-bottom:{{ module.module_overrides.custom_bottom_margin_mobile }}rem; } }
+{% endif %}
+{% if module.module_overrides.top_padding == 'top-padding-custom' %}
+section.{{ moduleName}}.{{ name }} {padding-top:{{ module.module_overrides.custom_top_padding }}rem; }
+@media (max-width: 767px) { section.{{ moduleName}}.{{ name }} { padding-top:{{ module.module_overrides.custom_top_padding_mobile }}rem; } }
+{% endif %}
+{% if module.module_overrides.bottom_padding == 'bottom-padding-custom' %}
+section.{{ moduleName}}.{{ name }} {padding-bottom:{{ module.module_overrides.custom_bottom_padding }}rem; }
+@media (max-width: 767px) { section.{{ moduleName}}.{{ name }} { padding-bottom:{{ module.module_overrides.custom_bottom_padding_mobile }}rem; } }
+{% endif %}  
+{# Background Color and Image #}
+{% if module.module_overrides.background_color.color %}
+section.{{ moduleName}}.{{ name }} { background-color:rgba({{ module.module_overrides.background_color.color|convert_rgb }},{{ module.module_overrides.background_color.opacity * .01 }}); }
+{% endif %}  
+{% if module.module_overrides.background_image.src %}
+section.{{ moduleName}}.{{ name }} {  background-size: cover; background-position: {{ module.module_overrides.background_image_position }}; }
+{% endif %}
+</style>
+{% end_require_js %}
+{% endif %}

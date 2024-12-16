@@ -1,0 +1,33 @@
+{% set moduleName = 'u4m-alternating-content' %}
+  {% set bgImageMax = 1920 %}
+  {% set backgroundImageMax = 1920 %}
+  {% set foregroundImageMax = 1000 %}
+  
+  {% include "../partials/u4-module-includes.html" %}
+  
+  <div class="inner {% if module.content_on_left %} left {% endif %}">           
+    <div class="additional-content">            
+      {% if module.additional_content == 'image' %}
+      <div class="image"><img loading="lazy" src="{{ module.image.src }}" width="600" alt="{{ module.image.alt }}"></div>
+      {% elif module.additional_content == 'video' %}
+      <div class="video">{{ module.video_embed }}</div>
+      {% endif %}
+    </div>      
+    <div class="content">
+      {% if module.include_eyebrow %}
+      <span class="eyebrow">{{ module.eyebrow_text }}</span>
+      {% endif %}
+      {% if module.include_headline %}
+      <h2>{{ module.headline }}</h2>
+      {% endif %}
+      <span>{{ module.content }}</span>       
+      {% if module.link_type == "cta" %}
+      <span class="cta">{% cta guid="{{ module.call_to_action }}" %}</span>
+      {% elif module.link_type == "url" %}
+      <span class="url"><a href="{{ module.link.href }}" {% if module.open_in_new_window %}target="_blank"{% endif %}>{{ module.link_text }}</a></span>
+      {% else %}
+      <!-- No link -->
+      {% endif %}
+    </div>
+  </div>
+  </section>

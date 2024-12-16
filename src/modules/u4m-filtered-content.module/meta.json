@@ -1,0 +1,22 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 40906237876,
+  "js_assets" : [ {
+    "url" : "https://cdn2.hubspot.net/hubfs/302335/TQ/mixitup.min.js",
+    "autoload" : true,
+    "name" : "mixitup.min.js"
+  }, {
+    "url" : "https://cdn2.hubspot.net/hubfs/302335/unified3/libraries/mixitup-pagination.min.js",
+    "autoload" : true,
+    "name" : "mixitup-pagination.min.js"
+  }, {
+    "url" : "https://cdn2.hubspot.net/hubfs/302335/unified3/libraries/mixitup-multifilter.min.js",
+    "autoload" : true,
+    "name" : "mixitup-multifilter.min.js"
+  } ],
+  "label" : "Filtered Content",
+  "is_available_for_new_content" : true
+}

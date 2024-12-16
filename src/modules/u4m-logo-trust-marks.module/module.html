@@ -1,0 +1,100 @@
+{% set moduleName = 'u4m-logo-trust-marks' %}
+{% include "/unified4/modules/partials/u4-module-includes.html" %}
+  {% set logoMax = 300 %}
+  {% set bgImageMax = 1920 %}
+  {% set dataSource = module.data_source %}
+  {% if dataSource == "manual" %}
+    {% set trustMarks = module.trust_marks %}
+  {% elif dataSource == "database" %}
+    {% set trustMarks = hubdb_table_rows(module.hubdbtable_field) %}
+    {% if !module.override_default_logos %}
+      {% set trustMarks = trustMarks|selectattr('show_by_default') %}
+    {% else %}
+      {% set trustMarks = module.logo_rows %}
+    {% endif %}
+  {% endif %}
+    {# Slider #}
+  <div class="container">
+    <div class="intro">
+      {{ '<h2 class="heading"> {{ module.logo_trust_marks_heading }} </h2>' if module.logo_trust_marks_heading }}
+      {{'<p class="subheading">{{ module.logo_trust_marks_intro }}</p>' if module.logo_trust_marks_intro }}
+    </div>
+  
+    {% if trustMarks %}
+      <div class="{{ module.layout_type }} {{name}}">
+        <div class="{{ 'splide__track' if module.layout_type == 'splide' else 'grid__wrapper' }}" >
+          <div class="{{ 'splide__list' if module.layout_type == 'splide' else 'grid__list' }}">
+            {% for trustMark in trustMarks %}
+              {% if dataSource == "manual" %}
+                {% set altText = trustMark.alt_text %}
+                {% set src = trustMark.logo_image.src %}
+                {% set link = trustMark.link %}
+                {% set target = (trustMark.new_tab) ? "target='_blank'" : "" %}
+              {% elif dataSource == "database" and module.override_default_logos %}
+                {% set altText = trustMark.columns.name %}
+                {% set src = trustMark.columns.logo.url %}
+              {% else %}
+                {% set altText = trustMark.internal_name %}
+                {% set src = trustMark.logo.url %}
+              {% endif %}
+                <div class="{{'splide__slide' if module.layout_type == 'splide' else 'grid__item' }}{{ ' with-link' if trustMark.link }}">
+                  {% if src %}
+                    {{ '<a href="{{trustMark.link}}" {{target}}>' if trustMark.link }}
+                      <img class="logo" 
+                      src="{{ resize_image_url(src, 0,0,logoMax) }}" 
+                      alt="{{altText}}" 
+                      width="{{ trustMark.logo_image.width }}"
+                      height="{{ trustMark.logo_image.height }}"
+                      loading="lazy" />
+                    {{ '</a>' if trustMark.link }}
+                  {% endif %}
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% if module.layout_type == "splide" %}
+  {#
+  // Slider Extension In Use: https://splidejs.com/extensions/auto-scroll/
+  // Slider Options: https://splidejs.com/guides/options/
+  #}
+  {% require_js %}
+    <script> 
+      document.addEventListener( 'DOMContentLoaded', function() {
+        new Splide( '.splide.{{name}}', {
+          type: 'loop',
+          easing: 'ease-in-out',
+          pagination: false,
+          pauseOnHover: true,
+          {{ 'arrows: false,' if module.autoPlay else 'arrows: true,'}}     
+          perPage: {{ module.number_of_logos }},
+          height: "80rem",
+          gap: "50rem",
+          autoScroll:{
+            {{ 'autoStart: true,' if module.autoPlay else 'autoStart: false,'}} 
+            speed: -1,
+          },
+          breakpoints: {
+            1024: {
+              perPage: 4,
+              height: "60rem",
+            },
+            768: {
+              perPage: 3,
+            },
+            640: {
+              perPage: 3,
+            },
+            480: {
+              perPage: 2,
+            },
+          },
+        }).mount( window.splide.Extensions );
+      });
+
+    </script>
+  {% end_require_js %}
+{% endif%}

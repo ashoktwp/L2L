@@ -1,0 +1,56 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: false
+-->
+<!--
+  templateType: "page"
+  isAvailableForNewContent: false
+-->
+{% set postImageMax = 360 %}
+
+<a class="blog-post-card" href="{{ post.absolute_url }}"
+   data-aos='fade'
+   data-aos-delay='{{ loop.index }}00'
+   data-aos-mirror='true'>
+
+  {# <div class="featured-image lazy" {% if post.featured_image %} data-bg="{{ resize_image_url(post.featured_image, 0,0,postImageMax) }}" {% endif %}>
+  </div> #}
+  <div class="featured-image">
+    <img src="{{ resize_image_url(post.featured_image, 0,0,postImageMax) }}" alt="{{post.featured_image_alt_text}}" lazy>
+  </div>
+  <div class="content">
+    <div class="topics">
+    {% if post.topic_list %}
+      {% for topic in post.topic_list %}
+        {# Need to update this once Developer Info is working again#}
+        {% set postID = post.widgets.module_48817646971.body.primary_blog_tag  %}
+          {% if topic.id ==  postID  %}
+                <span class="topic">{{ topic.name }}</span>
+            {% set counter = 1 %}
+          {% endif %}
+          {% if loop.last && counter != 1 %}
+            {% for topic in post.topic_list %}
+              {% if loop.first %}
+                <span class="topic">{{ topic.name }}</span>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+  <div class="read-time">
+    {% set finishedPostWords = (((post.post_body|wordcount/100) * 100)|divide(200)|round(2)) %}
+    {% if finishedPostWord < 0 %}
+      {% set finishedPostWord = 1 %}
+    {% endif %}
+    {% if finishedPostWords|round >= 1 %}
+      {{ finishedPostWords|round }} min read
+      <span class="date"> | {{ post.publish_date|datetimeformat('%B %e, %Y') }}</span>
+    {% endif %}
+  </div>
+  <h2 class="title">{{ post.name }}</h2>
+  {# <span class="teaser">{{ post.post_list_content|safe|truncatehtml(175)|striptags }}</span> #}
+  <span class="read-more">Read More</span>
+  </div>
+
+</a>

@@ -1,0 +1,63 @@
+[{
+    "id": "main_menu",
+    "name": "main_menu",
+    "label": "Main Menu",
+    "required": false,
+    "locked": true,
+    "type": "menu",
+    "default": 42948017489
+  },
+  {
+    "name": "language",
+    "label": "Include Language Switcher?",
+    "inline_help_text": "This will add a language switcher to the header",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "help_text": "",
+    "default": true
+  },
+  {
+    "id": "header_cta",
+    "name": "header_cta",
+    "label": "CTA field",
+    "required": false,
+    "locked": true,
+    "type": "cta",
+    "default": ""
+  }, {
+    "id": "header_logo",
+    "name": "header_logo",
+    "label": "Header Logo",
+    "required": false,
+    "locked": true,
+    "responsive": true,
+    "resizable": true,
+    "show_loading": false,
+    "type": "image",
+    "default": {
+      "size_type": "auto",
+      "src": "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/unified-logo.svg",
+      "alt": "unified4-logo",
+      "width": 117,
+      "height": 36,
+      "max_width": null,
+      "max_height": null
+    }
+  }, {
+    "id": "mobile_menu",
+    "name": "mobile_menu",
+    "label": "Mobile Menu",
+    "required": false,
+    "locked": true,
+    "type": "menu"
+  }, {
+    "id": "0d0c3af2-963a-89e0-056a-83ec4b527d00",
+    "name": "mobile_menu_cta",
+    "label": "Mobile Menu CTA",
+    "required": false,
+    "locked": true,
+    "type": "cta",
+    "default": ""
+  }
+]

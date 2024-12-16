@@ -1,0 +1,69 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: false
+-->
+<div class="pagination-infinite">
+    {% if not simple_list_page %}<a class="button">Load More Posts</a>{% endif %}  
+</div>
+
+{% require_js %}
+<script>
+  // We need to keep track of the last loaded page. We'll declare the variable to start at page 2, because the first load of posts will be of the second page
+  var currentPage = 2;
+  // We also need to make sure that we have a variable telling us if the last page we loaded was empty
+  var blogOutOfPosts = false;
+  // We need to know if we're already fetching so that we dont load duplicate content
+  var fetching = false;
+  // Using jQuery we'll save the containing element for future reference
+  var postContainer = $(".u4m-blog-listing__posts");
+
+  $( ".pagination-infinite a.button" ).click(function() {
+    
+    console.log('clicked');
+
+    // Set fetching to true to ensure that we pause the ajax
+    fetching = true;    
+
+    if (window.location.href.indexOf("/topic/") > -1) {
+      var ajaxUrl = "{{ group.absolute_url }}/topic/{{ topic }}/page/"+currentPage;
+    } else if (window.location.href.indexOf("/author/") > -1) {
+      var ajaxUrl = "{{ group.absolute_url }}/author/{{ author }}/page/"+currentPage;
+    } else {
+      var ajaxUrl = "{{ group.absolute_url }}/page/"+currentPage;
+      }
+
+    $.get(ajaxUrl, function(data)
+          {
+      // Create a jQuery element of the response
+      var page = $(data);
+
+      // Extract the blog posts
+      var posts = page.find('.blog-post-card');
+
+      // There were no posts
+      if(posts.length == 0)
+      {
+        blogOutOfPosts = true;
+        return;
+      }
+
+      posts.each(function()
+                 {
+        var blogPost = $(this);
+        setTimeout(function(){
+          postContainer.append(blogPost);
+        }, 100);
+      });
+
+      currentPage += 1;
+      console.log( 'total pages {{ contents.total_page_count }}' );
+
+                  if (currentPage == {{ contents.total_page_count }}+1) {
+        $('body').addClass('hide-next');
+      }
+      console.log(currentPage);
+
+    });
+  });
+</script>
+{% end_require_js %}

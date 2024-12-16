@@ -1,0 +1,126 @@
+{
+  "name": "u4_quotes",
+  "useForPages": false,
+  "label": "U4 Quotes",
+  "allowChildTables": false,
+  "allowPublicApiAccess": false,
+  "dynamicMetaTags": {},
+  "enableChildTablePages": false,
+  "columns": [
+    { "name": "internal_name", "label": "Internal Name", "type": "TEXT" },
+    { "name": "name", "label": "Name", "type": "TEXT" },
+    { "name": "company", "label": "Company", "type": "TEXT" },
+    { "name": "quote", "label": "Quote", "width": 671, "type": "TEXT" },
+    {
+      "name": "thumbnail",
+      "label": "Thumbnail",
+      "width": 135,
+      "type": "IMAGE"
+    },
+    { "name": "show_by_default", "label": "Show By Default", "type": "BOOLEAN" }
+  ],
+  "rows": [
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "thumbnail": {
+          "url": "https://cdn2.hubspot.net/hubfs/302335/thumb-brian-halligan.jpg",
+          "width": 220,
+          "height": 220,
+          "type": "image"
+        },
+        "quote": "People shop and learn in a whole new way compared to just a few years ago, so marketers need to adapt or risk extinction.",
+        "internal_name": "Brian Halligan",
+        "name": "Brian Halligan",
+        "company": "CEO | HubSpot",
+        "show_by_default": 0
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "thumbnail": {
+          "url": "https://cdn2.hubspot.net/hubfs/302335/thumb-katie-burke-1.jpg",
+          "width": 220,
+          "height": 220,
+          "type": "image"
+        },
+        "quote": "What you say about your culture will help you get candidates in the door, but what you do about culture is what defines your success.",
+        "internal_name": "Katie Burke",
+        "name": "Katie Burke",
+        "company": "CPO | HubSpot",
+        "show_by_default": 0
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "thumbnail": {
+          "url": "https://cdn2.hubspot.net/hubfs/302335/thumb-dharmesh-shah.jpg",
+          "width": 220,
+          "height": 220,
+          "type": "image"
+        },
+        "quote": "Knowing the right thing to do and doing it are two different things. There is no partial credit for the first.",
+        "internal_name": "Dharmesh Shah",
+        "name": "Dharmesh Shah",
+        "company": "CTO | HubSpot",
+        "show_by_default": 0
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "thumbnail": {
+          "url": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/thumb-tom.jpg",
+          "width": 200,
+          "height": 200,
+          "type": "image"
+        },
+        "quote": "Functional and intuitive- it allows us to quickly create great sites that are easy for clients to maintain. The CMS is easy to jump into with minimal direction, but robust enough to not limit a seasoned dev.",
+        "internal_name": "Tom Quinn",
+        "name": "Tom Quinn",
+        "company": "Sr. Developer | New Breed",
+        "show_by_default": 1
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "thumbnail": {
+          "url": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/thumb-kelly.jpg",
+          "width": 200,
+          "height": 200,
+          "type": "image"
+        },
+        "quote": "The beta page-editor tool is an exciting evolution for the CMS. The foundation our developers provide paired with the flexibility in the page editor tools makes it incredibly easy for non-technical marketers to make content changes, manage overall customer experience, and ensure that their websites always keep up with UX best practices and company growth.",
+        "internal_name": "Kelly Molloy",
+        "name": "Kelly Molloy",
+        "company": "UX Manager | New Breed",
+        "show_by_default": 1
+      }
+    },
+    {
+      "path": null,
+      "name": null,
+      "values": {
+        "thumbnail": {
+          "url": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/thumb-matt.jpg",
+          "width": 200,
+          "height": 200,
+          "type": "image"
+        },
+        "quote": "The HubSpot CMS gives a stellar out-of-the-box experience. Other CMS systems sometimes feel disjointed and it can be hard as a developer to get to what you need quickly. HubSpot CMS is easy to understand and gives the power and flexibility that modern web development expects.",
+        "internal_name": "Matt Fregoe",
+        "name": "Matt Fregoe",
+        "company": "Sr. Developer | New Breed",
+        "show_by_default": 1
+      }
+    }
+  ]
+}

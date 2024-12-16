@@ -1,0 +1,372 @@
+[{
+  "id": "5700bed6-0402-c4d4-ffbb-25af891ef47c",
+  "label": "Select Blog to Subscribe to",
+  "inline_help_text": "Select the blog you want to subscribe to. And make sure to setup a recipient email address in the <a href='https://app.hubspot.com/settings/{{ portal_id }}/website/blogs/{{ content_group_id }}/subscriptions'>Subscription Settings</a>.",
+  "locked": true,
+  "name": "select_blog",
+  "required": false,
+  "type": "blog"
+}, {
+  "type": "text",
+  "id": "a031a8e0-7719-9ca1-a15b-d2cd1b155c18",
+  "validation_regex": "",
+  "label": "Headline Text",
+  "name": "headline_text",
+  "default": "Subscribe to email updates"
+}, {
+  "type": "boolean",
+  "id": "480f59e1-5746-f3a1-457c-6c624892c628",
+  "default": true,
+  "display": "checkbox",
+  "label": "Include Subtext",
+  "name": "include_subtext"
+}, {
+  "allow_new_line": false,
+  "default": "Stay up-to-date on what's happening at this blog and get additional content about the benefits of subscribing.",
+  "label": "Subtext",
+  "locked": true,
+  "name": "subtext",
+  "required": false,
+  "show_emoji_picker": false,
+  "type": "text",
+  "validation_regex": "",
+  "oldId": "85f422cb-e1c5-2d02-8f8e-2d90c6321018",
+  "id": "d29b2659-4dd3-9eba-8ab0-fcad64f20e44",
+  "visibility": {
+    "operator": "EQUAL",
+    "controlling_field": "480f59e1-5746-f3a1-457c-6c624892c628",
+    "controlling_value_regex": "true"
+  }
+},{
+  "default": "<p>Thanks for subscribing!</p>",
+  "id": "534c9c6f-1c07-6f4b-7c64-fa991e01da34",
+  "label": "Rich text",
+  "locked": true,
+  "name": "response_message",
+  "required": false,
+  "type": "richtext"
+}, {
+  "children": [{
+    "default": false,
+    "display": "checkbox",
+    "help_text": "Toggle to override section ID and vertical margin. ",
+    "id": "enable_overrides",
+    "label": "Enable Overrides",
+    "locked": false,
+    "name": "enable_overrides",
+    "required": false,
+    "type": "boolean"
+  }, {
+    "allow_new_line": false,
+    "help_text": "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
+    "id": "module_overrides.section_id",
+    "label": "Section ID",
+    "locked": false,
+    "name": "section_id",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": "",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "choices": [
+      ["top-margin-default", "Default"],
+      ["top-margin-none", "None"],
+      ["top-margin-small", "Small"],
+      ["top-margin-medium", "Medium"],
+      ["top-margin-large", "Large"],
+      ["top-margin-custom", "Custom"]
+    ],
+    "default": "top-margin-default",
+    "display": "select",
+    "id": "module_overrides.top_margin",
+    "label": "Top Margin",
+    "locked": false,
+    "name": "top_margin",
+    "required": false,
+    "type": "choice",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 100,
+    "display": "text",
+    "id": "custom_top_margin",
+    "label": "Custom Top Margin",
+    "locked": false,
+    "name": "custom_top_margin",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.top_margin",
+      "controlling_value_regex": "top-margin-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 50,
+    "display": "text",
+    "id": "custom_top_margin_mobile",
+    "label": "Custom Top Margin Mobile",
+    "locked": false,
+    "name": "custom_top_margin_mobile",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.top_margin",
+      "controlling_value_regex": "top-margin-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "choices": [
+      ["bottom-margin-default", "Default"],
+      ["bottom-margin-none", "None"],
+      ["bottom-margin-small", "Small"],
+      ["bottom-margin-medium", "Medium"],
+      ["bottom-margin-large", "Large"],
+      ["bottom-margin-custom", "Custom"]
+    ],
+    "default": "bottom-margin-default",
+    "display": "select",
+    "id": "module_overrides.bottom_margin",
+    "label": "Bottom Margin",
+    "locked": false,
+    "name": "bottom_margin",
+    "required": false,
+    "type": "choice",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 100,
+    "display": "text",
+    "id": "custom_bottom_margin",
+    "label": "Custom Bottom Margin",
+    "locked": false,
+    "name": "custom_bottom_margin",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.bottom_margin",
+      "controlling_value_regex": "bottom-margin-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 50,
+    "display": "text",
+    "id": "custom_bottom_margin_mobile",
+    "label": "Custom Bottom Margin Mobile",
+    "locked": false,
+    "name": "custom_bottom_margin_mobile",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.bottom_margin",
+      "controlling_value_regex": "bottom-margin-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "choices": [
+      ["top-padding-default", "Default"],
+      ["top-padding-none", "None"],
+      ["top-padding-small", "Small"],
+      ["top-padding-medium", "Medium"],
+      ["top-padding-large", "Large"],
+      ["top-padding-custom", "Custom"]
+    ],
+    "default": "top-padding-default",
+    "display": "select",
+    "id": "module_overrides.top_padding",
+    "label": "Top Padding",
+    "locked": false,
+    "name": "top_padding",
+    "required": false,
+    "type": "choice",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 100,
+    "display": "text",
+    "id": "custom_top_padding",
+    "label": "Custom Top Padding",
+    "locked": false,
+    "name": "custom_top_padding",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.top_padding",
+      "controlling_value_regex": "top-padding-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 50,
+    "display": "text",
+    "id": "custom_top_padding_mobile",
+    "label": "Custom Top Padding Mobile",
+    "locked": false,
+    "name": "custom_top_padding_mobile",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.top_padding",
+      "controlling_value_regex": "top-padding-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "choices": [
+      ["bottom-padding-default", "Default"],
+      ["bottom-padding-none", "None"],
+      ["bottom-padding-small", "Small"],
+      ["bottom-padding-medium", "Medium"],
+      ["bottom-padding-large", "Large"],
+      ["bottom-padding-custom", "Custom"]
+    ],
+    "default": "bottom-padding-default",
+    "display": "select",
+    "id": "module_overrides.bottom_padding",
+    "label": "Bottom Padding",
+    "locked": false,
+    "name": "bottom_padding",
+    "required": false,
+    "type": "choice",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 100,
+    "display": "text",
+    "id": "custom_bottom_padding",
+    "label": "Custom Bottom Padding",
+    "locked": false,
+    "name": "custom_bottom_padding",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.bottom_padding",
+      "controlling_value_regex": "bottom-padding-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": 50,
+    "display": "text",
+    "id": "custom_bottom_padding_mobile",
+    "label": "Custom Bottom Padding Mobile",
+    "locked": false,
+    "name": "custom_bottom_padding_mobile",
+    "required": false,
+    "step": 1,
+    "type": "number",
+    "visibility": {
+      "controlling_field": "module_overrides.bottom_padding",
+      "controlling_value_regex": "bottom-padding-custom",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": {
+      "color": null,
+      "opacity": null
+    },
+    "help_text": "If a module has formal settings for a background color they will take priority over this value.",
+    "id": "6c8bfd0e-1629-1268-e01c-17b4047ecfce",
+    "inline_help_text": "",
+    "label": "Background Color",
+    "locked": false,
+    "name": "background_color",
+    "required": false,
+    "type": "color",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": {
+      "size_type": "auto",
+      "src": "",
+      "alt": null,
+      "loading": "disabled"
+    },
+    "help_text": "If a module has formal settings for a background image they will take priority over this value.",
+    "id": "878364f4-31ac-6917-e76f-65307d7d36e5",
+    "label": "Background Image",
+    "locked": false,
+    "name": "background_image",
+    "required": false,
+    "resizable": false,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }, {
+    "default": false,
+    "display": "checkbox",
+    "id": "3eccf45d-b0dc-4bac-42a0-f923e4405158",
+    "label": "Reverse Text",
+    "locked": false,
+    "name": "reverse_text",
+    "required": false,
+    "type": "boolean",
+    "visibility": {
+      "controlling_field": "enable_overrides",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  }],
+  "default": {
+    "enable_overrides": false,
+    "top_margin": "top-margin-default",
+    "custom_top_margin": 100,
+    "custom_top_margin_mobile": 50,
+    "bottom_margin": "bottom-margin-default",
+    "custom_bottom_margin": 100,
+    "custom_bottom_margin_mobile": 50,
+    "top_padding": "top-padding-default",
+    "custom_top_padding": 100,
+    "custom_top_padding_mobile": 50,
+    "bottom_padding": "bottom-padding-default",
+    "custom_bottom_padding": 100,
+    "custom_bottom_padding_mobile": 50,
+    "background_color": {
+      "color": null,
+      "opacity": null
+    },
+    "background_image": {
+      "size_type": "auto",
+      "src": "",
+      "alt": null,
+      "loading": "disabled"
+    },
+    "reverse_text": false
+  },
+  "expanded": false,
+  "id": "module_overrides",
+  "label": "Module Overrides",
+  "locked": true,
+  "name": "module_overrides",
+  "required": false,
+  "tab": "CONTENT",
+  "type": "group"
+}]

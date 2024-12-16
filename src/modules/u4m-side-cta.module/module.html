@@ -1,0 +1,27 @@
+{% set moduleName = 'u4m-side-cta' %}
+{% set imageMax = 1000 %}
+{% set bgImageMax = 1920 %}
+ 
+{% if module.include_side_ctas %}
+    <section class="{{ moduleName }} {{ name }} {% if module.have_slide_in_cta_s_on_the_left_ %} left-side{% endif %}">
+      {% set table = hubdb_table_rows(1041641) %}
+      {% for row in table %}
+      {% if row.active == 1 %}
+      <div class="link">
+        <div class="cta" >
+          <div class="inner" style="background-color:{{ row.tab_background_color }}">	
+            <div class="image">	{{ row.svg_icon }}</div>
+            <span class="title" style="color:{{ row.text_color }}">{{ row.side_tab_title }}</span>
+          </div>
+          <div class="outer" >	
+            <p>{{ row.description }}</p>
+            <div class="wrapper">
+              {{ row.cta_embed}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %} 
+    </section>  
+{% endif %}

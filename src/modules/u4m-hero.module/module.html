@@ -1,0 +1,44 @@
+{% set moduleName = 'u4m-hero' %}
+  {% set bgImageMax = 1920 %}
+    
+    {% include "../partials/u4-module-includes.html" %}
+
+    <div class="inner">
+      <div class="content-wrap {{ 'has-{{ module.right_content }}' if module.right_content }} {% if module.left_align_text %}text-left{% endif %}" style="{% if module.minimum_height %} min-height: {{ module.minimum_height }}px; {% endif %}">
+        
+      {% if module.right_content == 'image' %}
+        <div class="image">
+          {% if module.hero_image.src %}
+          <img class="hero-image" 
+          src="{{ module.hero_image.src }}" 
+          width="{{ module.hero_image.width}}"
+          height="{{ module.hero_image.height}}"
+          alt="{{ module.hero_image.alt }}">{% endif %}
+        </div>
+        {% elif module.right_content == 'video' %}    
+          <div class="video">{{ module.video_embed }}</div>    
+        {% endif %}
+        
+      <div class="copy">
+          {% if module.include_eyebrow %}<span class="eyebrow">{{ module.eyebrow_text }}</span>{% endif %}
+          <h1 class="heading {% if module.smaller_headline %}small{% endif %}">{{ module.heading }}</h1>
+          {% if module.include_subheading %}<p class="subtext">{{ module.subtext }}</p>{% endif %}
+          {% if module.link_type == "cta" %}
+          <span class="cta">{% cta guid="{{ module.call_to_action }}" %}</span>
+          {% elif module.link_type == "url" %}
+          <span class="url"><a href="{{ module.link.url.href }}" {% if module.link_id %}id="{{ module.link_id }}" {% endif %} {% if module.link.open_in_new_tab %}target="_blank"{% endif %} {% if module.link.rel %}rel="{{ module.link.rel }}"{% endif %}>{{ module.link_text }}</a></span>
+          {% endif %}
+          {% if module.link_2_type == "cta" %}
+          <span class="cta link2">{% cta guid="{{ module.call_to_action_2 }}" %}</span>
+          {% elif module.link_2_type == "url" %}
+          <span class="url link2"><a href="{{ module.link_2.url.href }}" {% if module.link_2_id %}id="{{ module.link_2_id }}" {% endif %} {% if module.link_2.open_in_new_tab %}target="_blank"{% endif %} {% if module.link.rel %}rel="{{ module.link.rel }}"{% endif %}>{{ module.link_2_text }}</a></span>
+          {% endif %}
+        </div> 
+
+      </div>
+    </div>
+    {% if module.overlay_color.color %}
+<div class='hero-overlay'  
+style="{% if module.overlay_color.color %} background-color:rgba({{ module.overlay_color.color|convert_rgb }},{{ module.overlay_color.opacity * .01 }}); {% endif %}"></div>
+  {% endif %}
+  </section>

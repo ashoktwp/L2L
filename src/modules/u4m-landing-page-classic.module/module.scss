@@ -1,0 +1,126 @@
+@import "../../css/_module-imports";
+
+section.u4m-landing-page-classic {
+  .lp-body {
+    @include center;
+    margin-bottom: 100rem;
+    display: flex;
+    position: relative;
+    z-index: 3;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  .left-column {
+    flex: 0 1 650rem;
+    margin-right: auto;
+    margin-top: 30rem;
+
+    @include tablet {
+      flex: 0 0 100%;
+      margin-top: 50rem;
+    }
+
+    h1 {
+      @include h3;
+    }
+
+    h2 {
+      @include h5;
+    }
+
+    .quote {
+      margin-top: 50rem;
+      text-align: center;
+
+      .author-image {
+        max-width: 150rem;
+        margin: 0 auto 20rem;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      .quotation-mark {
+        color: $action1;
+        @include b1;
+        font-weight: bold;
+      }
+
+      .quote-text {
+        @include h6;
+      }
+
+      .quote-author {
+        @include b1;
+
+        span.author-name {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .right-column {
+    flex: 0 0 450rem;
+    padding-top: 35rem;
+
+    @include tablet {
+      flex: 0 0 350rem;
+    }
+
+    @include tablet {
+      flex: 0 0 100%;
+      margin-bottom: 0;
+      margin-top: 0;
+      transform: translateY(0);
+    }
+
+    .custom-share {
+      @include tablet {
+        display: none;
+      }
+
+      div {
+        text-align: right;
+
+        span.label {
+          position: relative;
+          top: -4rem;
+        }
+
+        a {
+          font-size: 24rem;
+          line-height: 1;
+          margin-left: 5rem;
+
+          svg {
+            fill: $black;
+          }
+
+          &:hover {
+            color: $black;
+
+            svg {
+              fill: $action1;
+            }
+          }
+        }
+      }
+    }
+
+    .form-wrap {
+      @include form;
+      margin-top: 10rem;
+
+      h2.heading {
+        @include h5;
+      }
+
+      form {}
+    }
+  }
+}

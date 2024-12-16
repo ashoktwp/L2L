@@ -1,0 +1,145 @@
+@import "../../css/_module-imports";
+
+section.u4m-logo-trust-marks {
+  margin: 100rem 0;
+
+  &.reverse-text {
+    color: $white;
+  }
+
+  .container {
+    @include center;
+
+    .intro {
+      @include centerSmall;
+      margin-bottom: 50rem;
+      padding: 0;
+
+      .heading {
+        @include h2;
+        text-align: center;
+      }
+
+      .subheading {
+        text-align: center;
+        @include b2;
+      }
+    }
+
+    .splide {
+      &:not(.is-overflow) {
+        .splide__list {
+          .splide__slide:last-child {
+            margin: 0 !important;
+          }
+        }
+      }
+
+      .splide__track {
+        .splide__list {
+          transform: ease-in-out;
+
+          .splide__slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+
+            img.logo {
+              width: auto;
+              height: 100%;
+              max-height: 80rem;
+              object-fit: contain;
+              object-position: center;
+
+              @include tablet {
+                max-height: 60rem;
+              }
+            }
+          }
+        }
+      }
+
+      .splide__arrows {
+        .splide__arrow {
+          background: $white;
+          opacity: 1;
+
+          &:hover {
+            svg {
+              fill: $action2;
+            }
+          }
+
+          svg {
+            fill: $black;
+          }
+
+          &.splide__arrow--prev {
+            left: -20rem;
+          }
+
+          &.splide__arrow--next {
+            right: -20rem;
+          }
+        }
+      }
+    }
+
+    .grid {
+      @include centerSmall;
+      padding: 0rem;
+
+      .grid__wrapper {
+        .grid__list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          margin: 0rem -10rem;
+
+          .grid__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $white;
+            box-shadow: $shadow2;
+            padding: 20rem;
+            margin: 10rem;
+            transition: scale 0.3s ease-in-out;
+
+            @include tabletvert {
+              flex: 0 0 calc(50% - 20rem);
+            }
+
+            @include phone {
+              flex: 0 0 calc(100% - 20rem);
+              max-width: 300rem;
+            }
+
+            &.with-link {
+              transition: $animation1;
+
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+
+            img.logo {
+              width: 100%;
+              height: 100%;
+              max-height: 60rem;
+              object-fit: contain;
+              object-position: center;
+
+              @include tabletvert {
+                max-height: 50rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

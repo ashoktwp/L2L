@@ -1,0 +1,465 @@
+[
+  {
+    "default": {
+      "size_type": "auto",
+      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/unified-logo.svg",
+      "alt": "unified-logo",
+      "loading": "lazy",
+      "width": 116,
+      "height": 22,
+      "max_width": 116,
+      "max_height": 22
+    },
+    "display_width": null,
+    "id": "69a9526a-6ff8-22e5-eeac-8c20875a1e84",
+    "label": "Logo",
+    "locked": true,
+    "name": "logo_image",
+    "required": false,
+    "resizable": true,
+    "responsive": true,
+    "show_loading": false,
+    "type": "image"
+  },
+  {
+    "default": {
+      "url": {
+        "type": "EXTERNAL",
+        "href": "#",
+        "content_id": null
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    },
+    "display_width": null,
+    "id": "24b4a8d1-3e7e-bf77-1975-62550671d67c",
+    "label": "Logo link",
+    "locked": true,
+    "name": "logo_link",
+    "required": false,
+    "show_advanced_rel_options": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG"
+    ],
+    "type": "link"
+  },
+  {
+    "default": false,
+    "display": "checkbox",
+    "display_width": null,
+    "id": "3eccf45d-b0dc-4bac-42a0-f923e4405158",
+    "label": "Reverse Text",
+    "locked": false,
+    "name": "reverse_text",
+    "required": false,
+    "type": "boolean"
+  },
+  {
+    "allow_new_line": false,
+    "default": "Large Headline That Includes The Value Proposition",
+    "display_width": null,
+    "id": "c9afbb8a-7f60-8231-8a99-6aeb4bf826ba",
+    "label": "Headline",
+    "locked": false,
+    "name": "headline",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": ""
+  },
+  {
+    "default": false,
+    "display": "checkbox",
+    "display_width": null,
+    "id": "74d0e62f-80c9-514c-9226-9cc9c6252060",
+    "label": "Include Subhead",
+    "locked": false,
+    "name": "include_subhead",
+    "required": false,
+    "type": "boolean"
+  },
+  {
+    "allow_new_line": false,
+    "default": "Lorem ipsum dolor sit amet consectetur adipiscing elit aenean ante velit pretium sagittis nulla sit amet.",
+    "display_width": null,
+    "id": "7597f336-2ddc-e534-40f1-fa0ab450ec3d",
+    "label": "Subhead",
+    "locked": false,
+    "name": "subhead",
+    "required": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "validation_regex": "",
+    "visibility": {
+      "controlling_field": "74d0e62f-80c9-514c-9226-9cc9c6252060",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "default": true,
+    "display": "checkbox",
+    "display_width": null,
+    "id": "5024829c-4380-97fc-a663-6252cabba061",
+    "label": "Include Share Links",
+    "locked": false,
+    "name": "include_share_links",
+    "required": false,
+    "type": "boolean"
+  },
+  {
+    "children": [
+      {
+        "default": {
+          "form_id": "2045a548-0512-4812-b365-f02169c0d4aa",
+          "response_type": "inline",
+          "message": "Thanks for submitting the form.",
+          "gotowebinar_webinar_key": null,
+          "form_type": "HUBSPOT"
+        },
+        "display_width": null,
+        "id": "4cf328f3-2b66-f1e4-d52d-1d4db575fa4d",
+        "label": "Form",
+        "locked": false,
+        "name": "form",
+        "required": false,
+        "type": "form"
+      },
+      {
+        "default": false,
+        "display": "checkbox",
+        "display_width": null,
+        "id": "12288bf0-56c5-42b6-3e15-721f44b0fefe",
+        "label": "Send a follow-up email",
+        "locked": false,
+        "name": "send_a_follow_up_email",
+        "required": false,
+        "type": "boolean"
+      },
+      {
+        "display_width": null,
+        "id": "f9ce3470-ab2d-638b-7f72-2981f92a8b0b",
+        "label": "Followup email field",
+        "locked": false,
+        "name": "followupemail_field",
+        "required": false,
+        "type": "followupemail",
+        "visibility": {
+          "controlling_field": "12288bf0-56c5-42b6-3e15-721f44b0fefe",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL"
+        }
+      },
+      {
+        "default": false,
+        "display": "checkbox",
+        "display_width": null,
+        "help_text": "Send form notifications to specified email addresses instead of the form defaults",
+        "id": "bfc77ed2-abd1-cec8-4923-1b0fafd12f0f",
+        "label": "Send form notifications",
+        "locked": false,
+        "name": "send_form_notifications",
+        "required": false,
+        "type": "boolean"
+      },
+      {
+        "allow_custom_email_addresses": true,
+        "display_width": null,
+        "id": "1f9b12da-fc4f-6d5e-0435-f8588cd38d13",
+        "label": "Email address field",
+        "locked": false,
+        "name": "email_field",
+        "placeholder": "Email Address",
+        "required": false,
+        "type": "email",
+        "visibility": {
+          "controlling_field": "bfc77ed2-abd1-cec8-4923-1b0fafd12f0f",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL"
+        }
+      }
+    ],
+    "default": {
+      "form": {
+        "form_id": "2045a548-0512-4812-b365-f02169c0d4aa",
+        "response_type": "inline",
+        "message": "Thanks for submitting the form.",
+        "gotowebinar_webinar_key": null,
+        "form_type": "HUBSPOT"
+      },
+      "send_a_follow_up_email": false,
+      "send_form_notifications": false
+    },
+    "display_width": null,
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "id": "e3244011-61c4-52c8-0e5d-6dd84b938951",
+    "label": "Form Group",
+    "locked": false,
+    "name": "form_group",
+    "required": false,
+    "tab": "CONTENT",
+    "type": "group"
+  },
+  {
+    "default": false,
+    "display": "checkbox",
+    "display_width": null,
+    "id": "9ac167fd-9013-ecfa-ac6e-3ccd3b60eb86",
+    "label": "Include Quote",
+    "locked": false,
+    "name": "include_quote",
+    "required": false,
+    "type": "boolean"
+  },
+  {
+    "children": [
+      {
+        "choices": [
+          [
+            "database",
+            "Database"
+          ],
+          [
+            "manually",
+            "Manually"
+          ]
+        ],
+        "default": "database",
+        "display": "radio",
+        "display_width": null,
+        "id": "4ba0bc73-8f97-9fa0-3826-5ab1100c6c44",
+        "label": "Input Quote Manually or from Database",
+        "locked": false,
+        "multiple": false,
+        "name": "input_quote_manually_or_from_hubdb",
+        "preset": null,
+        "reordering_enabled": true,
+        "required": false,
+        "type": "choice"
+      },
+      {
+        "default": {
+          "src": "",
+          "alt": null,
+          "size_type": "auto"
+        },
+        "display_width": null,
+        "id": "ca35fa54-9969-b471-4aa2-6f5492d6670c",
+        "label": "Quote Author Image",
+        "locked": false,
+        "name": "quote_author_image",
+        "required": false,
+        "resizable": false,
+        "responsive": true,
+        "show_loading": false,
+        "type": "image",
+        "visibility": {
+          "controlling_field": "4ba0bc73-8f97-9fa0-3826-5ab1100c6c44",
+          "controlling_value_regex": "manually",
+          "operator": "EQUAL"
+        }
+      },
+      {
+        "allow_new_line": false,
+        "default": "First Last",
+        "display_width": null,
+        "id": "debb9bc7-df2f-9075-854d-a06c6847f93c",
+        "label": "Quote Author First and Last name ",
+        "locked": false,
+        "name": "quote_author_first_and_last_name",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": "",
+        "visibility": {
+          "controlling_field": "4ba0bc73-8f97-9fa0-3826-5ab1100c6c44",
+          "controlling_value_regex": "manually",
+          "operator": "EQUAL"
+        }
+      },
+      {
+        "allow_new_line": false,
+        "default": "Title Here",
+        "display_width": null,
+        "id": "654b7363-0b25-7cb0-f839-2be8693045d1",
+        "label": "Quote Author Title",
+        "locked": false,
+        "name": "quote_author_title",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": "",
+        "visibility": {
+          "controlling_field": "4ba0bc73-8f97-9fa0-3826-5ab1100c6c44",
+          "controlling_value_regex": "manually",
+          "operator": "EQUAL"
+        }
+      },
+      {
+        "allow_new_line": false,
+        "default": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Aenean ante velit pretium sagittis nulla sit amet condimentum viverra diam fusce nisl odio.",
+        "display_width": null,
+        "id": "cbbaac97-1a91-e33b-deb9-f7d9c8b3a188",
+        "label": "Quote",
+        "locked": false,
+        "name": "quote",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": "",
+        "visibility": {
+          "controlling_field": "4ba0bc73-8f97-9fa0-3826-5ab1100c6c44",
+          "controlling_value_regex": "manually",
+          "operator": "EQUAL"
+        }
+      },
+      {
+        "default": {
+          "id": null
+        },
+        "display_columns": [
+          "name"
+        ],
+        "display_width": null,
+        "id": "9759f130-e483-86c8-89e8-bb6acac1fe3c",
+        "label": "Quote from DB",
+        "locked": false,
+        "name": "quote_from_db",
+        "required": false,
+        "table_name_or_id": "u4_quotes",
+        "type": "hubdbrow",
+        "visibility": {
+          "controlling_field": "4ba0bc73-8f97-9fa0-3826-5ab1100c6c44",
+          "controlling_value_regex": "database",
+          "operator": "EQUAL"
+        }
+      }
+    ],
+    "default": [],
+    "display_width": null,
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "id": "53512b9d-1d64-d33c-d8a4-3c4f4a3e4d1f",
+    "label": "Quotes",
+    "locked": false,
+    "name": "quote",
+    "occurrence": {
+      "max": 2
+    },
+    "required": false,
+    "tab": "CONTENT",
+    "type": "group",
+    "visibility": {
+      "controlling_field": "9ac167fd-9013-ecfa-ac6e-3ccd3b60eb86",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    }
+  },
+  {
+    "children": [
+      {
+        "choices": [
+          [
+            "bg-image",
+            "Background Image"
+          ],
+          [
+            "bg-overlay",
+            "Background Image with Color Overlay"
+          ],
+          [
+            "bg-solid",
+            "Solid Color"
+          ]
+        ],
+        "default": "bg-overlay",
+        "display": "select",
+        "display_width": null,
+        "id": "548d5ba9-d139-4ac6-59f1-1e7c5cd5bc67",
+        "label": "Background Type",
+        "locked": false,
+        "multiple": false,
+        "name": "background_type",
+        "preset": null,
+        "reordering_enabled": true,
+        "required": false,
+        "type": "choice"
+      },
+      {
+        "default": {
+          "size_type": "auto",
+          "src": "https://cdn2.hubspot.net/hubfs/302335/split-lp-bg.jpg",
+          "alt": "split-lp-bg",
+          "width": 1067,
+          "height": 1067,
+          "max_width": 1067,
+          "max_height": 1067
+        },
+        "display_width": null,
+        "id": "e5a16df7-215e-ea0d-fa2d-ebeaef1267a4",
+        "label": "Background Image",
+        "locked": false,
+        "name": "background_image",
+        "required": false,
+        "resizable": false,
+        "responsive": true,
+        "show_loading": false,
+        "type": "image",
+        "visibility": {
+          "controlling_field": "548d5ba9-d139-4ac6-59f1-1e7c5cd5bc67",
+          "controlling_value_regex": "bg-solid",
+          "operator": "NOT_EQUAL"
+        }
+      },
+      {
+        "default": {
+          "color": "#fff",
+          "opacity": 85
+        },
+        "display_width": null,
+        "id": "7c178944-a970-43e7-4b11-6b436a94a55f",
+        "label": "Background Color",
+        "locked": false,
+        "name": "background_color",
+        "required": false,
+        "type": "color",
+        "visibility": {
+          "controlling_field": "548d5ba9-d139-4ac6-59f1-1e7c5cd5bc67",
+          "controlling_value_regex": "bg-image",
+          "operator": "NOT_EQUAL"
+        }
+      }
+    ],
+    "default": {
+      "background_type": "bg-overlay",
+      "background_image": {
+        "size_type": "auto",
+        "src": "https://cdn2.hubspot.net/hubfs/302335/split-lp-bg.jpg",
+        "alt": "split-lp-bg",
+        "width": 1067,
+        "height": 1067,
+        "max_width": 1067,
+        "max_height": 1067
+      },
+      "background_color": {
+        "color": "#fff",
+        "opacity": 85
+      }
+    },
+    "display_width": null,
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "id": "7dd16430-4bec-24dc-8480-05ff6ecffa75",
+    "label": "Background",
+    "locked": false,
+    "name": "background",
+    "required": false,
+    "tab": "CONTENT",
+    "type": "group"
+  }
+]

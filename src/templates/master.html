@@ -1,0 +1,24 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Unified 4 - Master
+screenshotPath: images/u4.jpg
+-->
+{% extends "./base.html" %}
+
+{% block body %}
+
+<main id="main-content">
+  {% dnd_area "unified4_dnd_area" %}
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/u4m-hero', label='Hero' width="12" %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}  
+</main>
+
+{% endblock body %}

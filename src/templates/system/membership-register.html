@@ -1,0 +1,28 @@
+<!--
+  templateType: membership_register_page
+  isAvailableForNewContent: true
+  label: Unified 4 - Membership Registration
+-->
+{% extends '../base.html' %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  <section class="u4m-membership-register">
+    <div class="systems-page">
+      <h1>Welcome!</h1>
+      <p class="introduction">Set up your password to sign in and see the content you now have access to.</p>
+      <div class="form-container">
+        {% member_register 'my_register'
+          email_label='Email',
+          password_confirm_label='Confirm Password',
+          password_label='Password',
+          submit_button_text='Save Password'
+        %}
+      </div>
+      <div>
+        <p>Having trouble? <a href="{{'mailto:' ~ site_settings.membershipWebsiteAdmin}}">Contact the admin</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

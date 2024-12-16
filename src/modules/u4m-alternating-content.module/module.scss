@@ -1,0 +1,101 @@
+@import "../../css/_module-imports";
+section.u4m-alternating-content {
+  margin-top: 100rem;
+  margin-bottom: 100rem;
+  &.reverse-text {
+    .inner .content {
+      color: $white;
+    }
+  }
+  div.inner {
+    @include center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    @include tablet {
+      display: block;
+    }
+    div.additional-content {
+      flex-direction: column;
+      flex: 1 1 50%;
+      @include tablet {
+        float: none;
+        width: 100%;
+      }
+      div.image {
+        //text-align: center;
+        img {
+          max-width: 600rem;
+          @include tablet {
+            max-width: 100%;
+            width: 100%;
+          }
+        }
+      }
+      div.video {
+        flex: 1 1 50%;
+        h3 {
+          @include h6;
+        }
+        h4 {
+          @include b2;
+          font-weight: bold;
+        }
+      }
+    }
+    div.content {
+      flex: 1 1 50%;
+      padding-left: 50rem;
+      @include tablet {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 0;
+        padding: 30rem 0;
+      }
+      .eyebrow {
+        @include eyebrow;
+      }
+      h2 {
+        margin-top: 0;
+        @include h5;
+        @include phone {
+          margin-bottom: 0;
+        }
+      }
+      h3 {
+        @include h6;
+      }
+      h4 {
+        @include b2;
+        font-weight: bold;
+      }
+      p {
+        @include b2;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        @include phone {
+          @include b4;
+        }
+      }
+      a {
+        margin-bottom: 0;
+      }
+      span.url,
+      span.cta {
+        a {
+          @include buttonSmall;
+          margin-top: 35rem;
+        }
+      }
+    }
+    &.left {
+      flex-direction: row-reverse;
+      div.content {
+        padding-left: 0;
+        padding-right: 30rem;
+      }
+    }
+  }
+}

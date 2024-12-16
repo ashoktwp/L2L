@@ -1,0 +1,41 @@
+{% set moduleName = 'u4m-banner' %}
+{% set bgImageMax = 1920 %}
+ 
+<section class="{{ moduleName }}">
+  <div class="content">
+    {% if module.include_image %}
+    <div class="image">
+      <img loading="lazy" src="{{ module.image.src }}" 
+           width="{{ module.image.width }}"
+           height="{{ module.image.height }}" 
+           alt="{{ module.image.alt }}">
+    </div>
+    {% endif %}
+    <div class="text">
+      <span>{% if module.include_image %}<span class="bar">|</span>{% endif %}{{ module.content }}</span>
+    </div>
+    <div class="cta">
+      {% cta guid="{{ module.cta }}" %}
+    </div>
+    <div class="close">
+      <span class="closebanner" aria-label="close">✖</span>
+    </div>
+  </div>
+</section>
+
+{% require_js %}
+<script>  
+// global banner with expiration
+$( document ).ready(function() {
+  $( "section.u4m-banner .closebanner" ).click(function() {
+    Cookies.set('closebanner', 'true', { expires: {{ module.cookie_expiration }} });
+    $( "section.u4m-banner" ).addClass( "offscreen" );
+    $(window).trigger('resize');
+  });    
+  $checker = Cookies.get('closebanner');    
+  if ($checker == 'true') {
+    $( "section.{{ moduleName }}" ).remove();
+  }
+});
+</script>  
+{% end_require_js %}

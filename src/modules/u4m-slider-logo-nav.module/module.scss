@@ -1,0 +1,112 @@
+@import "../../css/_module-imports";
+section.u4m-slider-logo-nav {
+  margin: 100rem 0;
+  position: relative;
+  &.reverse-text {
+    color: $white;
+    div.content div.quotes div.slide p.quote,
+    div.content div.quotes div.slide p.title {
+      color: $white;
+    }
+  }
+  .heading {
+    @include h2;
+    text-align: center;
+  }
+  div.content {
+    max-width: 1060rem;
+    margin: 0 auto;
+    float: none;
+    div.logos {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 4;
+      padding: 0;
+      a.slider-nav-item {
+        .box {
+          margin: 10rem;
+          img.slider-nav-image {
+            opacity: .1;
+            transition: .3s ease;
+            max-width: 100rem;
+            height: auto;
+            cursor: pointer;
+            @include phone {
+              max-width: 40rem;
+              max-height: 80rem;
+            }
+          }
+          &:hover {
+            img.slider-nav-image {
+              opacity: .5;
+            }
+          }
+        }
+        &.active {
+          .box {
+            img.slider-nav-image {
+              opacity: 1;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    div.quotes {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      div.slide {
+        width: 100%;
+        transition: .3s ease;
+        opacity: 0;
+        z-index: 1;
+        margin: 10rem auto 30rem;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        p {
+          &.quote {
+            @include b1;
+            color: $gray3;
+            margin: 0 auto 30rem;
+            width: 100%;
+          }
+          &.author {
+            text-transform: uppercase;
+            color: $action2;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 5rem;
+            letter-spacing: .075em
+          }
+          &.title {
+            color: $gray2;
+            margin: 0 auto 20rem auto;
+          }
+        }
+        &.active {
+          opacity: 1;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        &.exit {
+          z-index: 1;
+          transform: translateY(-10rem);
+          transition: .3s ease;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

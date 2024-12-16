@@ -1,0 +1,125 @@
+// Viewports & Browsers
+@mixin phone {
+  @media (max-width: 580px) {
+    @content;
+  }
+}
+
+@mixin tabletvert {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tabletMin {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin navbreak {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 2560px) {
+    @content;
+  }
+}
+
+@mixin ie {
+
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin safari {
+  @media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      @content;
+    }
+  }
+}
+
+@mixin firefox {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+
+@mixin nonmobile {
+  @media (min-width: 1040px) {
+    @content;
+  }
+}
+
+// Set base rem font (1rem = 1px) sizes & antialiasing
+@mixin remScalling {
+  html {
+    font-size: 1px;
+  }
+
+  /* auto scale down elements on mobile */
+  html {
+    @include phone {
+      font-size: 1px;
+    }
+  }
+
+  /* auto scale up elements on large displays */
+  html {
+    @include large {
+      font-size: 1px;
+    }
+  }
+}
+
+// Centering
+@mixin center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1240rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+@mixin centerSmall {
+  @include center;
+  max-width: 900rem;
+}
+
+// Links
+@mixin link {
+  text-decoration: none;
+  /* Remove default underline */
+  color: $action1;
+  transition: $animation1;
+  display: inline-block;
+
+  &:hover {
+    color: $action1;
+  }
+}

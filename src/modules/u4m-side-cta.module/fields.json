@@ -1,0 +1,19 @@
+[ {
+  "id" : "8fbe53e0-265c-7ff7-2c06-53d4ee8644e4",
+  "name" : "have_slide_in_cta_s_on_the_left_",
+  "label" : "Have Slide in Ctas on the left?",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "7bd88289-92d2-875f-4953-aafbae0f437b",
+  "name" : "include_side_ctas",
+  "label" : "Include Side CTAs",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+} ]

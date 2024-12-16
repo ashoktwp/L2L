@@ -1,0 +1,265 @@
+@import "../../css/_module-imports";
+
+section.u4m-filtered-content {
+  padding: 100rem 0;
+
+  .heading {
+    @include h2;
+    text-align: center;
+  }
+
+  .featured {
+    @include center;
+    margin-bottom: 50rem;
+
+    .card {
+      @include featuredCard;
+    }
+  }
+
+  .filters {
+    @include center;
+
+    form.multi-filter {
+      @include form;
+      max-width: 1240rem;
+
+      fieldset {
+        max-width: none;
+        border: 0;
+        padding: 0;
+        margin: 0 0 20rem;
+        position: relative;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        .icon {
+          width: 15rem;
+          position: absolute;
+          top: 50%;
+          right: 20rem;
+          transform: translateY(-50%);
+        }
+
+        &.buttons {
+          button {
+            @include buttonSmall;
+            margin-right: 20rem;
+            margin-bottom: 0;
+          }
+
+          button.mixitup-control-active {
+            background-color: $black;
+          }
+        }
+
+        &.selects {
+          select {
+            border: 1rem solid rgba(0, 0, 0, 0);
+            border-radius: $border1;
+            margin-top: 2rem;
+            font-size: $baseFontSize;
+            background-color: $white;
+            padding: 10rem 15rem;
+            width: 100%;
+            -moz-appearance: none;
+            appearance: none;
+          }
+        }
+
+        &.checkboxes {
+          label {
+            display: inline-block;
+            margin: 0 10px;
+
+            input {
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+
+        &.search {
+          margin: 20rem 0;
+
+          input {
+            border: 1rem solid rgba(0, 0, 0, 0);
+            border-radius: $border1;
+            margin-top: 2rem;
+            font-size: $baseFontSize;
+            background-color: $white;
+            padding: 10rem 15rem;
+            width: 100%;
+            appearance: none;
+          }
+        }
+      }
+
+      &.mixitup-sorting {
+        display: flex;
+
+        fieldset {
+          flex: auto;
+          margin: 0;
+          display: flex;
+        }
+
+        fieldset.selects {
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+
+          label {
+            white-space: nowrap;
+            margin: 0 10rem 0 0;
+          }
+        }
+
+        fieldset.buttons {
+          display: flex;
+          justify-content: center;
+          flex: 0 0 auto;
+
+          button {
+            margin: 0 0 0 10rem;
+            background-color: $action1;
+
+            svg {
+              filter: invert(1);
+            }
+
+            svg {
+              width: 20rem;
+              height: 20rem;
+            }
+
+            &:hover {
+              &:not(.active) {
+                background-color: $black;
+              }
+            }
+          }
+
+          button.active {
+            background-color: $black;
+            box-shadow: unset;
+          }
+        }
+      }
+    }
+  }
+
+  #container {
+    @include center;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+
+    .resource-card {
+      @include resourceCard;
+      position: relative;
+      top: 0;
+      transition: top .1s ease-in;
+    }
+
+    .resource-card[data-layout=row] {
+      display: flex;
+      flex: 0 0 calc(100% - 40rem);
+      flex-direction: row;
+      transition: unset;
+
+      .link-wrap {
+        display: flex;
+        flex: 1;
+        height: unset;
+        transition: unset;
+
+        .image {
+          height: unset;
+          min-height: unset;
+          flex: 1 1 auto;
+          max-width: 30%;
+        }
+
+        .content {
+          flex: auto;
+        }
+      }
+    }
+  }
+
+
+  #mix-no-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50rem;
+    /* Adjust the margin-top value */
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 0;
+      background-color: $gray1;
+      color: $black;
+      min-height: 55rem;
+      min-width: 55rem;
+      padding: 0;
+      margin: 0 5rem;
+      font-weight: bold;
+      transition: .1s ease-in;
+      text-transform: uppercase;
+      font-size: 14rem;
+      line-height: 1.2;
+      letter-spacing: .25rem;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, .1);
+
+      @include phone {
+        min-height: 30rem;
+        min-width: 30rem;
+        font-size: 13rem;
+      }
+
+      &:hover {
+        background-color: $action1;
+        color: $white;
+      }
+
+      &.mixitup-control-active {
+        background-color: $action1;
+        color: $white;
+      }
+    }
+  }
+
+  .pagination.paginate.mixitup-page-list-disabled {
+    display: none;
+  }
+
+  .pagination.loadmore {
+    text-align: center;
+
+    button {
+      @include button;
+    }
+
+    button.hidden {
+      display: none;
+    }
+  }
+}

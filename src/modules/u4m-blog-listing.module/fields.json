@@ -1,0 +1,16 @@
+[{
+  "id": "665e3202-ab27-e914-a6ec-953790f8fe95",
+  "name": "blog_menu",
+  "label": "Blog Menu",
+  "required": false,
+  "locked": true,
+  "type": "menu",
+  "default": 37302690329
+}, {
+  "id": "13a57d0f-fe03-f733-b11b-ff2c630e8ce8",
+  "name": "blog_resources_by_topic",
+  "label": "Blog Resources by Topic",
+  "required": false,
+  "locked": true,
+  "type": "hubdbtable"
+}]

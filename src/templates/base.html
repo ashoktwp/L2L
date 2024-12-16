@@ -1,0 +1,35 @@
+<!--
+templateType: "none"
+isAvailableForNewContent: false
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page_meta.html_title }}</title>
+    <link rel="shortcut icon" href='{{ "{{ site_settings.favicon_src }}" if site_settings.favicon_src }}'/>
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    {{ require_css(get_asset_url('../css/styles.css')) }}
+    {{ standard_header_includes }}
+    {# {% unless content.featured_image %}<meta property="og:image" content="https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/placeholder-image.jpg" />{% endunless %} #}
+    {% if template_meta.label == "thank-you-page.html" %}<meta name="robots" content="noindex">{% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body class="{{ builtin_body_classes }} {% if request.full_url is string_containing "/author/" %} author-listing {% endif %}">
+    {% block header %}
+        {% module 'u4m-header' path='../modules/u4m-header', label='U4M Header' %}
+    {% endblock header %}
+
+    {% block body %}
+    {% endblock body %}
+    
+    {% block footer %}
+        {% module 'u4m-footer' path='../modules/u4m-footer', label='U4M Footer' %}
+    {% endblock footer %}
+{{ require_js(get_asset_url('../js/main.js')) }}
+{{ standard_footer_includes }}
+</body>
+</html>

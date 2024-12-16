@@ -1,0 +1,25 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: false
+-->
+{# To add the Salesforce Campaign field you must add the create the field 
+which available only in portals with the Salesforce Integration and make sure it's
+named "salesforcecampaign_field" which is the default. #}
+
+
+{# The following assumes all form fields are in a group with the slug of "form_group" #}
+{% form 
+form_to_use="{{ module.form_group.form.form_id }}",
+title="{{ module.form_group.heading }}",
+no_title=True,
+response_response_type="{{ module.form_group.form.response_type }}",
+response_message="{{ module.form_group.form.message }}",
+response_redirect_id="{{ module.form_group.form.redirect_id }}",
+response_redirect_url="{{ module.form_group.form.redirect_url }}",
+gotowebinar_webinar_key="{{ module.form_group.form.gotowebinar_webinar_key }}",        
+follow_up_type_simple="{{ module.form_group.send_a_follow_up_email }}",
+simple_email_for_live_id="{{ module.form_group.followupemail_field }}", 
+notifications_are_overridden="{{ module.form_group.send_form_notifications }}",
+notifications_override_email_addresses="{{ module.form_group.email_field }}",  
+sfdc_campaign="{{ module.form_group.salesforcecampaign_field }}"
+%}

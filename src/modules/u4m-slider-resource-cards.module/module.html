@@ -1,0 +1,57 @@
+{% set moduleName = 'u4m-slider-resource-cards' %}
+{% set cardImageMax = 374 %}
+{% set bgImageMax = 1920 %}
+{% include "../partials/u4-module-includes.html" %}
+{% macro resourceCard () %}
+<div class="resource-card {{ name | striptags|lower|replace(' ', '-') }} {{ medium }}">
+  <a class="link-wrap" href="{{ url }}"
+     data-aos='fade'
+     data-aos-delay='{{ loop.index }}00'
+     data-aos-mirror='true'>
+    <div class="image lazy" 
+         data-bg="{{ image }}"></div>
+    <div class="content">
+      <span class="medium {{ medium }}">{{ medium }}</span>
+      <h3 class="heading">{{ name }}</h3>    
+      <p>{{ description }}</p>
+      <span class="learn-more {{ medium }}">{{ link_text }}</span>
+    </div>
+  </a>
+</div>
+{% endmacro %}
+  <div class="top-wrapper">
+    <h2 class="heading">{{ module.heading }}</h2>
+    {% if module.include_view_all %}
+      <a class="view-all" href="{{ module.view_all_link.url.href }}" class="button">
+      {{ module.view_all_text }}</a>
+    {% endif %}
+  </div>
+  <div class="container">    
+    {% unless module.override %}
+      {% set table = hubdb_table_rows(module.table) %}
+      {% for row in table %}
+        {% if row.featured_offer %}
+          {% set image = resize_image_url(row.cover_image.url, 0,0, 768) %}
+          {% set name = row.name %}
+          {% set medium = row.medium.name|striptags|lower|replace(' ', '-') %}
+          {% set description = row.description|truncate(95) %}
+          {% set link = row.landing_page_url %}
+          {% set link_text = row.link_text %}
+          {% set categories = row.category %}
+            {{ resourceCard() }}
+        {% endif %}
+      {% endfor %} 
+    {% else %} 
+      {% for resource in module.resource_name_row %}
+        {% set image = resize_image_url(resource.columns.cover_image.url, 0,0, 768) %}
+        {% set name = resource.columns.name %}
+        {% set medium = resource.columns.medium.name|striptags|lower|replace(' ', '-') %}
+        {% set description = resource.columns.description|truncate(95) %}
+        {% set link = resource.columns.landing_page_url %}
+        {% set link_text = resource.columns.link_text %}
+        {% set categories = resource.columns.category %}
+        {{ resourceCard() }}
+      {% endfor %}    
+    {% endunless %}    
+  </div>
+</section>

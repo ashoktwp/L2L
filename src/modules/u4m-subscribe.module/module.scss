@@ -1,0 +1,73 @@
+@import "../../css/_module-imports";
+section.u4m-subscribe {
+  background-color: $black;
+  color: $white;
+  padding: 50px 0;
+  margin: 0 20px 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  div.inner {
+    @include center;
+    display: flex;
+    align-items: center;
+    .left,
+    .right {
+      flex: 1;
+      form {
+        @include form;
+        margin: 0;
+        padding: 0;
+        max-width: unset;
+        overflow: unset;
+        background: transparent;
+        display: flex;
+        margin-left: 50px;
+        // Email Input
+        .hs-email {
+          flex: 1;
+          position: relative;
+          >label {
+            position: absolute;
+            z-index: 2;
+            top: -20px;
+          }
+          input[type='email'].hs-input {
+            margin-bottom: 0;
+            margin-top: 0;
+            line-height: 1;
+          }
+        }
+        // Submit Button
+        input[type='submit'].hs-button {
+          flex: auto;
+          margin: 0 0 0 5px;
+          line-height: 1.65;
+          &:hover {
+            opacity: .95;
+            background-color: $action1;
+          }
+          @include tablet {
+            width: 100%;
+            margin: 10px 0 0;
+          }
+        }
+        @include tablet {
+          flex-direction: column;
+        }
+        @include tabletvert {
+          margin: 50px 0 0;
+          padding: 0;
+        }
+      }
+      @include tabletvert {
+        width: 100%;
+      }
+    }
+    @include tabletvert {
+      flex-direction: column;
+    }
+  }
+  @include tabletvert {
+    padding: 20px 0;
+  }
+}

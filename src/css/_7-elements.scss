@@ -1,0 +1,478 @@
+@include remScalling;
+
+// * {
+//   border: 1px solid red;
+// }
+
+/* Keep background from scrolling when menu is open */
+html.menu-open {
+  overflow-y: hidden;
+}
+
+/* Keep background from scrolling when menu is open */
+html {
+  display: block;
+  opacity: 1;
+}
+
+/* make html visible after Firefox flash in hack */
+body {
+  font-family: $font1;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $black;
+  font-weight: normal;
+  margin-top: 78rem;
+
+  &.hide-header {
+    margin-top: 0;
+  }
+}
+
+body.lp-sign-up {
+  margin-top: 0;
+}
+
+/* Set default text size */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}
+
+h5 {
+  @include h5;
+}
+
+h6 {
+  @include h6;
+}
+
+//Set in Typography Mixins
+p:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+/* 0 top margin on 1st header */
+// default anchor link offset
+div.hs_cos_wrapper_widget section.top-margin-none {
+  margin-top: 0;
+}
+
+div.hs_cos_wrapper_widget section.top-margin-small {
+  margin-top: 50rem;
+
+  @include tabletvert {
+    margin-top: 35rem;
+  }
+
+  @include phone {
+    margin-top: 25rem;
+  }
+}
+
+div.hs_cos_wrapper_widget section.top-margin-medium {
+  margin-top: 100rem;
+
+  @include tabletvert {
+    margin-top: 75rem;
+  }
+
+  @include phone {
+    margin-top: 50rem;
+  }
+}
+
+div.hs_cos_wrapper_widget section.top-margin-large {
+  margin-top: 150rem;
+
+  @include tabletvert {
+    margin-top: 115rem;
+  }
+
+  @include phone {
+    margin-top: 75rem;
+  }
+}
+
+div.hs_cos_wrapper_widget section.bottom-margin-none {
+  margin-bottom: 0;
+}
+
+div.hs_cos_wrapper_widget section.bottom-margin-small {
+  margin-bottom: 50rem;
+
+  @include tabletvert {
+    margin-bottom: 35rem;
+  }
+
+  @include phone {
+    margin-bottom: 25rem;
+  }
+}
+
+div.hs_cos_wrapper_widget section.bottom-margin-medium {
+  margin-bottom: 100rem;
+
+  @include tabletvert {
+    margin-bottom: 75rem
+  }
+
+  @include phone {
+    margin-bottom: 50rem
+  }
+}
+
+div.hs_cos_wrapper_widget section.bottom-margin-large {
+  margin-bottom: 150rem;
+
+  @include tabletvert {
+    margin-bottom: 115rem;
+  }
+
+  @include phone {
+    margin-bottom: 75rem;
+  }
+}
+
+div.hs_cos_wrapper_widget section.top-padding-none {
+  padding-top: 0;
+}
+
+div.hs_cos_wrapper_widget section.top-padding-small {
+  padding-top: 50rem;
+
+  @include tabletvert {
+    padding-top: 35rem;
+  }
+
+  @include phone {
+    padding-top: 25rem;
+  }
+}
+
+div.hs_cos_wrapper_widget section.top-padding-medium {
+  padding-top: 100rem;
+
+  @include tabletvert {
+    padding-top: 75rem;
+  }
+
+  @include phone {
+    padding-top: 50rem;
+  }
+}
+
+div.hs_cos_wrapper_widget section.top-padding-large {
+  padding-top: 150rem;
+
+  @include tabletvert {
+    padding-top: 115rem;
+  }
+
+  @include phone {
+    padding-top: 75rem;
+  }
+}
+
+div.hs_cos_wrapper_widget section.bottom-padding-none {
+  padding-bottom: 0;
+}
+
+div.hs_cos_wrapper_widget section.bottom-padding-small {
+  padding-bottom: 50rem;
+
+  @include tabletvert {
+    padding-bottom: 35rem;
+  }
+
+  @include phone {
+    padding-bottom: 25rem;
+  }
+}
+
+div.hs_cos_wrapper_widget section.bottom-padding-medium {
+  padding-bottom: 100rem;
+
+  @include tabletvert {
+    padding-bottom: 75rem
+  }
+
+  @include phone {
+    padding-bottom: 50rem
+  }
+}
+
+div.hs_cos_wrapper_widget section.bottom-padding-large {
+  padding-bottom: 150rem;
+
+  @include tabletvert {
+    padding-bottom: 115rem;
+  }
+
+  @include phone {
+    padding-bottom: 75rem;
+  }
+}
+
+// default anchor link offset
+.anchor {
+  display: block;
+  position: relative;
+  top: -160rem;
+  visibility: hidden;
+}
+
+// video popup for Magnific modal
+div.video-popup {
+  position: relative;
+  background: transparent;
+  padding: 50rem;
+  width: auto;
+  max-width: 960rem;
+  margin: 0 auto;
+
+  button.mfp-close {
+    color: $white;
+    font-size: 40rem;
+  }
+}
+
+// HubSpot Cookie Notification
+div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gradients {
+  box-shadow: 2rem -1rem 5rem 0rem rgba(0, 0, 0, 0.05);
+  border: 0;
+  background-color: rgba($white, .9);
+
+  div#hs-eu-cookie-confirmation-inner {
+    background-color: rgba($white, 0);
+    padding: 15rem 20rem 10rem 20rem;
+    max-width: 1240rem;
+
+    p {
+      @include b4;
+      margin-bottom: 0;
+    }
+
+    div#hs-en-cookie-confirmation-buttons-area {
+      text-align: left !important;
+      margin: 0 !important;
+
+      a#hs-eu-confirmation-button {
+        @include buttonSmall;
+        font-weight: bold !important;
+        margin: 10rem 0;
+
+        &:hover {
+          background-color: $black !important;
+        }
+      }
+    }
+  }
+}
+
+// default p size
+p {
+  @include b3;
+}
+
+a {
+  @include link
+}
+
+blockquote,
+blockquote p {
+  @include blockquote;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ul {
+  @include b3;
+  list-style: disc;
+  padding-left: 40rem;
+  margin-top: 0;
+  margin-bottom: 30rem;
+}
+
+ol {
+  @include b3;
+  list-style: decimal;
+  padding-left: 40rem;
+  margin-top: 0;
+  margin-bottom: 30rem;
+}
+
+li {
+  margin-bottom: 5rem;
+  letter-spacing: .5rem;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 20rem 0 20rem 20rem;
+}
+
+input {
+  font-family: $font1;
+}
+
+button {
+  font-family: $font1;
+  cursor: pointer;
+}
+
+/* Forms */
+form {
+  margin-bottom: 30rem
+}
+
+::-webkit-input-placeholder {
+  color: $gray3;
+  opacity: 1;
+  font-weight: normal;
+}
+
+/* Webkit input placeholders */
+::-moz-placeholder {
+  color: $gray3;
+  opacity: 1;
+  font-weight: normal;
+}
+
+/* Firefox input placeholders */
+:-ms-input-placeholder {
+  color: $gray3;
+  opacity: 1;
+  font-weight: normal;
+}
+
+/* IE  input placeholders */
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: bottom;
+}
+
+/* Make responsive, clear border, fix IE scaling, suppress the space beneath the baseline, fix Webkit blurring on scaled down files */
+svg {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* Horizontal Rule */
+hr {
+  margin-top: 30rem;
+  margin-bottom: 35rem;
+  border-width: 0;
+  border-top: 1rem solid $gray1;
+}
+
+/* Abbreviations */
+abbr[title] {
+  border: 0;
+}
+
+/* Code */
+code {
+  padding: 1rem;
+  margin: 0 10rem;
+  white-space: nowrap;
+  background: $gray1;
+  border: 1rem solid $gray1;
+  border-radius: 0;
+}
+
+pre>code {
+  display: block;
+  padding: 1rem 15rem;
+  white-space: pre;
+  margin-bottom: 30rem
+}
+
+pre {
+  overflow-x: auto;
+}
+
+/* responsive pre elements */
+table pre {
+  white-space: pre-wrap;
+}
+
+/* responsive pre tables */
+/* Tables */
+th,
+td {
+  padding: 10rem 20rem;
+  text-align: left;
+  border-bottom: 1rem solid $gray1;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+table {
+  margin-bottom: 30rem
+}
+
+table th {
+  text-transform: uppercase;
+}
+
+table td {
+  border-bottom: 1rem solid $gray2;
+  font-size: 14rem;
+}
+
+a[href='javascript:;'] {
+  cursor: default;
+}
+
+//
+section[class*='u4m-'] {
+  scroll-margin-top: 150px;
+}

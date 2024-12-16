@@ -1,0 +1,10 @@
+[{
+  "id": "bfa8d351-2ca4-b045-ff80-c044bcbcd727",
+  "name": "primary_blog_tag",
+  "label": "Primary Blog Tag",
+  "help_text": "Select the primary tag to be displayed on blog listing pages. Note this tag must also be applied in the settings tab to function.\n",
+  "required": false,
+  "locked": false,
+  "tag_value": "ID",
+  "type": "tag"
+}]
