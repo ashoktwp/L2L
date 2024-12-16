@@ -1,0 +1,342 @@
+html {
+  font-size: 1px;
+}
+
+/* auto scale down elements on mobile */
+@media (max-width: 580px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* auto scale up elements on large displays */
+@media (min-width: 2560px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+section.u4m-cards {
+  margin-top: 100rem;
+  margin-bottom: 100rem;
+}
+section.u4m-cards.reverse-text h2.heading,
+section.u4m-cards.reverse-text h3.subheading {
+  color: #fff;
+}
+section.u4m-cards .heading {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  font-family: "Montserrat";
+  font-size: 44rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  section.u4m-cards .heading {
+    font-size: 38rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-cards .heading {
+    font-size: 32rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-cards .subheading {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 1000rem;
+  font-family: "Montserrat";
+  font-size: 18rem;
+  line-height: 1.6;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20rem;
+  font-weight: normal;
+  text-align: center;
+}
+@media (max-width: 580px) {
+  section.u4m-cards .subheading {
+    font-size: 16rem;
+  }
+}
+section.u4m-cards .link {
+  text-align: center;
+}
+section.u4m-cards .link a {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+}
+section.u4m-cards .link a:hover, section.u4m-cards .link a:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+section.u4m-cards .wrapper {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 1280rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 580px) {
+  section.u4m-cards .wrapper {
+    display: block;
+  }
+}
+section.u4m-cards .wrapper.landscape div.card {
+  flex-direction: row;
+}
+@media (max-width: 767px) {
+  section.u4m-cards .wrapper.landscape div.card {
+    flex-direction: column;
+  }
+}
+section.u4m-cards .wrapper.landscape div.card div.image.filled {
+  min-width: 200rem;
+}
+@media (max-width: 580px) {
+  section.u4m-cards .wrapper.landscape div.card div.content {
+    margin-bottom: 0;
+  }
+  section.u4m-cards .wrapper.landscape div.card div.content span.teaser {
+    margin-bottom: 0;
+  }
+}
+section.u4m-cards .wrapper div.card {
+  margin: 20rem;
+  padding: 20rem;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  border: 1px solid #edf0f2;
+  background-color: #fff;
+  flex-basis: calc(33.333% - 40rem);
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  section.u4m-cards .wrapper div.card {
+    flex-basis: calc(50% - 40rem);
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-cards .wrapper div.card {
+    width: 100%;
+    margin-bottom: 50rem;
+  }
+}
+section.u4m-cards .wrapper div.card button {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  padding: 8rem 20rem 7rem 20rem;
+  font-size: 12rem;
+  line-height: 1.2;
+}
+section.u4m-cards .wrapper div.card button:hover, section.u4m-cards .wrapper div.card button:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+section.u4m-cards .wrapper div.card .image {
+  min-height: 100rem;
+  display: flex;
+  align-items: center;
+}
+section.u4m-cards .wrapper div.card .image.filled {
+  width: 100%;
+  min-height: 203rem;
+  border-bottom: 1rem solid #edf0f2;
+}
+section.u4m-cards .wrapper div.card .image.filled img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+}
+section.u4m-cards .wrapper div.card .image a {
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  box-shadow: none;
+}
+section.u4m-cards .wrapper div.card .image a:hover {
+  background-color: transparent;
+}
+section.u4m-cards .wrapper div.card .image img {
+  display: block;
+  margin: 30rem auto 0 auto;
+}
+section.u4m-cards .wrapper div.card .image img.left {
+  margin: 30rem auto 0 30rem;
+}
+section.u4m-cards .wrapper div.card .content {
+  padding: 20rem 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  section.u4m-cards .wrapper div.card .content {
+    padding: 20rem;
+  }
+}
+section.u4m-cards .wrapper div.card .content span.url {
+  display: flex;
+}
+section.u4m-cards .wrapper div.card .content span.eyebrow {
+  font-family: "Montserrat";
+  font-size: 13rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  color: #7c98b6;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+@media (max-width: 580px) {
+  section.u4m-cards .wrapper div.card .content span.eyebrow {
+    font-size: 13rem;
+  }
+}
+section.u4m-cards .wrapper div.card .content span.title {
+  font-family: "Montserrat";
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  display: block;
+  color: #33475b;
+  margin-top: 5rem;
+  margin-bottom: 15rem;
+}
+@media (max-width: 1024px) {
+  section.u4m-cards .wrapper div.card .content span.title {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-cards .wrapper div.card .content span.title {
+    font-size: 18rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-cards .wrapper div.card .content span.teaser {
+  font-family: "Montserrat";
+  font-size: 13rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  color: #33475b;
+  display: block;
+  margin-bottom: 0;
+}
+@media (max-width: 580px) {
+  section.u4m-cards .wrapper div.card .content span.teaser {
+    font-size: 13rem;
+  }
+}
+section.u4m-cards .wrapper div.card .content span.cta,
+section.u4m-cards .wrapper div.card .content span.url {
+  margin-top: auto;
+}
+section.u4m-cards .wrapper div.card .content span.cta a,
+section.u4m-cards .wrapper div.card .content span.url a {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  padding: 8rem 20rem 7rem 20rem;
+  font-size: 12rem;
+  line-height: 1.2;
+}
+section.u4m-cards .wrapper div.card .content span.cta a:hover, section.u4m-cards .wrapper div.card .content span.cta a:focus,
+section.u4m-cards .wrapper div.card .content span.url a:hover,
+section.u4m-cards .wrapper div.card .content span.url a:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+section.u4m-cards .wrapper.two div.card {
+  flex-basis: calc(50% - 40rem);
+}
+section.u4m-cards .wrapper.three div.card {
+  flex-basis: calc(33.333% - 40rem);
+}
+@media (max-width: 1024px) {
+  section.u4m-cards .wrapper.three div.card {
+    flex-basis: calc(50% - 40rem);
+  }
+}
+section.u4m-cards .wrapper.four div.card {
+  flex-basis: calc(25% - 40rem);
+}
+@media (max-width: 1024px) {
+  section.u4m-cards .wrapper.four div.card {
+    flex-basis: calc(50% - 40rem);
+  }
+}

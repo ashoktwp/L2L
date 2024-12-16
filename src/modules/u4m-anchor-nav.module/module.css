@@ -1,0 +1,81 @@
+html {
+  font-size: 1px;
+}
+
+/* auto scale down elements on mobile */
+@media (max-width: 580px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* auto scale up elements on large displays */
+@media (min-width: 2560px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+.u4m-anchor-nav {
+  position: relative;
+  z-index: 100;
+  background-color: #33475b;
+}
+.u4m-anchor-nav .wrapper {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 900rem;
+  padding: 25rem 0;
+  border: 0;
+  position: relative;
+}
+.u4m-anchor-nav .wrapper .anchor-nav {
+  position: absolute;
+  transition: opacity 0.1s ease-in;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: none;
+  letter-spacing: 1rem;
+}
+.u4m-anchor-nav .wrapper .anchor-nav a {
+  color: #fff;
+  padding: 0 25rem;
+  height: 100%;
+  font-weight: bold;
+  font-size: 14rem;
+  display: flex;
+  align-items: center;
+  top: -100rem;
+}
+@media (max-width: 580px) {
+  .u4m-anchor-nav .wrapper .anchor-nav a {
+    padding: 0 8rem;
+    font-size: 12rem;
+  }
+}
+.u4m-anchor-nav.sticky .wrapper .anchor-nav {
+  background-color: #33475b;
+  position: fixed;
+}
+.u4m-anchor-nav.sticky .wrapper .anchor-nav a.active-anchor {
+  color: #fff;
+  background-color: #733bf7;
+}
+.u4m-anchor-nav.bottom .wrapper .anchor-nav {
+  opacity: 0;
+  transition: 0.1s ease-in;
+  pointer-events: none;
+}
+.u4m-anchor-nav.non-sticky .wrapper .anchor-nav a {
+  color: #fff;
+}

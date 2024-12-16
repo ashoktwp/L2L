@@ -1,0 +1,163 @@
+html {
+  font-size: 1px;
+}
+
+/* auto scale down elements on mobile */
+@media (max-width: 580px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* auto scale up elements on large displays */
+@media (min-width: 2560px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+section.u4m-slider-gallery {
+  margin: 100rem auto;
+}
+section.u4m-slider-gallery.reverse-text {
+  color: #fff;
+}
+section.u4m-slider-gallery.additional-content {
+  padding: 100rem 20rem;
+}
+section.u4m-slider-gallery.black-bg-section {
+  background-color: #33475b;
+}
+section.u4m-slider-gallery.black-bg-section div.inner-wrap .optional-headline {
+  color: #fff;
+}
+section.u4m-slider-gallery.black-bg-section div.inner-wrap div.container span p {
+  color: #fff;
+}
+section.u4m-slider-gallery div.container {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+section.u4m-slider-gallery div.container .intro {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 900rem;
+  padding: 0;
+}
+section.u4m-slider-gallery div.container .intro .optional-headline {
+  font-family: "Montserrat";
+  font-size: 44rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  section.u4m-slider-gallery div.container .intro .optional-headline {
+    font-size: 38rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-slider-gallery div.container .intro .optional-headline {
+    font-size: 32rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-slider-gallery div.container .intro span {
+  display: block;
+}
+section.u4m-slider-gallery div.container .intro span p {
+  text-align: center;
+}
+section.u4m-slider-gallery div.container .splide:not(.is-overflow) .splide__list .splide__slide:last-child {
+  margin: 0 !important;
+}
+section.u4m-slider-gallery div.container .splide .splide__track {
+  padding: 40rem 20rem;
+}
+section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: scale 0.3s ease-in-out;
+  transform: translate3d(0, 0, 0);
+}
+section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide .popout {
+  transition: 0.1s ease-in;
+  z-index: 1;
+}
+section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide .popout:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+}
+section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide .popout:hover .play-button {
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide .play-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+}
+section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide .play-button svg {
+  width: 30rem;
+  height: 30rem;
+  padding-left: 6rem;
+  fill: #00a4bd;
+}
+section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide img {
+  width: 100%;
+  height: 100%;
+  max-height: 200rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 1025px) {
+  section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide.showing-8 .play-button, section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide.showing-7 .play-button, section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide.showing-6 .play-button {
+    width: 35rem;
+    height: 35rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide.showing-8 .play-button svg, section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide.showing-7 .play-button svg, section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide.showing-6 .play-button svg {
+    width: 20rem;
+    height: 20rem;
+    padding-left: 3rem;
+    fill: #00a4bd;
+  }
+}
+section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide.showing-4 .popout:hover, section.u4m-slider-gallery div.container .splide .splide__track .splide__list .splide__slide.showing-3 .popout:hover {
+  transform: scale(1.06);
+}
+section.u4m-slider-gallery div.container .splide .splide__arrows .splide__arrow {
+  background: #fff;
+  opacity: 1;
+}
+section.u4m-slider-gallery div.container .splide .splide__arrows .splide__arrow:hover svg {
+  fill: #00a4bd;
+}
+section.u4m-slider-gallery div.container .splide .splide__arrows .splide__arrow svg {
+  fill: #33475b;
+}
+section.u4m-slider-gallery div.container .splide .splide__arrows .splide__arrow.splide__arrow--prev {
+  left: -20rem;
+}
+section.u4m-slider-gallery div.container .splide .splide__arrows .splide__arrow.splide__arrow--next {
+  right: -20rem;
+}

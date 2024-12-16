@@ -1,0 +1,104 @@
+html {
+  font-size: 1px;
+}
+
+/* auto scale down elements on mobile */
+@media (max-width: 580px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* auto scale up elements on large displays */
+@media (min-width: 2560px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+section.u4m-video-background {
+  position: relative;
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: 50%;
+}
+section.u4m-video-background video.video {
+  position: absolute;
+  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.u4m-video-background video.video::-webkit-media-controls {
+  display: none !important;
+}
+@media (max-width: 1024px) {
+  section.u4m-video-background video.video {
+    display: none;
+  }
+}
+section.u4m-video-background div.content-wrap {
+  z-index: 1;
+}
+section.u4m-video-background div.content-wrap div.content-inner {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 800rem;
+  padding: 20rem;
+  background: rgba(51, 71, 91, 0.5);
+  color: #fff;
+}
+section.u4m-video-background div.content-wrap div.content-inner h2 {
+  font-family: "Montserrat";
+  font-size: 34rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+}
+@media (max-width: 1024px) {
+  section.u4m-video-background div.content-wrap div.content-inner h2 {
+    font-size: 28rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-video-background div.content-wrap div.content-inner h2 {
+    font-size: 24rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-video-background div.content-wrap div.content-inner button {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+}
+section.u4m-video-background div.content-wrap div.content-inner button:hover, section.u4m-video-background div.content-wrap div.content-inner button:focus {
+  background-color: #33475b;
+  color: #fff;
+}

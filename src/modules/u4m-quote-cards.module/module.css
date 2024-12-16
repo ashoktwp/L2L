@@ -1,0 +1,179 @@
+html {
+  font-size: 1px;
+}
+
+/* auto scale down elements on mobile */
+@media (max-width: 580px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* auto scale up elements on large displays */
+@media (min-width: 2560px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+section.u4m-quote-cards {
+  padding-top: 100rem;
+  background-color: #edf0f2;
+}
+section.u4m-quote-cards.reverse-text .heading {
+  color: #fff;
+}
+section.u4m-quote-cards .heading {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 1280rem;
+  font-family: "Montserrat";
+  font-size: 44rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  margin-top: 0;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  section.u4m-quote-cards .heading {
+    font-size: 38rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-quote-cards .heading {
+    font-size: 32rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-quote-cards div.dialog-bubbles {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 1280rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 580px) {
+  section.u4m-quote-cards div.dialog-bubbles {
+    display: block;
+  }
+}
+section.u4m-quote-cards div.dialog-bubbles div.item {
+  margin: 20rem 20rem 160rem 20rem;
+  padding: 30rem;
+  flex-grow: 1;
+  flex-basis: 0;
+  position: relative;
+  background: #fff;
+  text-align: center;
+  position: relative;
+}
+@media (max-width: 580px) {
+  section.u4m-quote-cards div.dialog-bubbles div.item {
+    margin-bottom: 180rem;
+  }
+}
+section.u4m-quote-cards div.dialog-bubbles div.item p.quote {
+  font-family: "Montserrat";
+  font-size: 14rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+}
+@media (max-width: 580px) {
+  section.u4m-quote-cards div.dialog-bubbles div.item p.quote {
+    font-size: 14rem;
+  }
+}
+section.u4m-quote-cards div.dialog-bubbles div.item p.author {
+  font-family: "Montserrat";
+  font-size: 14rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+}
+@media (max-width: 580px) {
+  section.u4m-quote-cards div.dialog-bubbles div.item p.author {
+    font-size: 14rem;
+  }
+}
+section.u4m-quote-cards div.dialog-bubbles div.item span {
+  color: #733bf7;
+  font-weight: bold;
+}
+section.u4m-quote-cards div.dialog-bubbles div.item:before {
+  content: "";
+  position: absolute;
+  bottom: -14rem;
+  left: calc(50% - 13rem);
+  border-width: 14rem 14rem 0;
+  border-style: solid;
+  border-color: rgba(203, 214, 226, 0.11) transparent;
+  display: block;
+  width: 0;
+}
+section.u4m-quote-cards div.dialog-bubbles div.item:after {
+  content: "";
+  position: absolute;
+  bottom: -13rem;
+  left: calc(50% - 12rem);
+  border-width: 13rem 13rem 0;
+  border-style: solid;
+  border-color: #fff transparent;
+  display: block;
+  width: 0;
+}
+section.u4m-quote-cards div.dialog-bubbles div.item div.thumbnail {
+  position: absolute;
+  bottom: -130rem;
+  width: 100rem;
+  height: 100rem;
+  background-size: cover;
+  background-position: 50%;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section.u4m-quote-cards div.centered-button {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  text-align: center;
+  padding: 30rem 0 50rem 0;
+}
+section.u4m-quote-cards div.centered-button a {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+}
+section.u4m-quote-cards div.centered-button a:hover, section.u4m-quote-cards div.centered-button a:focus {
+  background-color: #33475b;
+  color: #fff;
+}

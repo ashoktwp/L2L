@@ -115,7 +115,7 @@
 <!-- Main Post Listing -->
 <div class="posts">
     {% for post in contents %}
-    {% include "/unified4/modules/partials/u4-blog-cards.html" %}
+    {% include "/L2L/modules/partials/u4-blog-cards.html" %}
     {% if loop.index==6 && current_page_num==1  %}
     {% set blogResourceTable = hubdb_table_rows( module.blog_resources_by_topic , "&orderBy=name") %}
     {% for row in blogResourceTable %}
@@ -161,8 +161,8 @@
     {% endfor %}
 </div>
 
-{# include "/unified4/modules/partials/u4-blog-infinite-pagination.html" #}
-{% include "/unified4/modules/partials/u4-blog-standard-pagination.html" %}
+{# include "/L2L/modules/partials/u4-blog-infinite-pagination.html" #}
+{% include "/L2L/modules/partials/u4-blog-standard-pagination.html" %}
 
 </section>
 

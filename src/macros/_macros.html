@@ -1,0 +1,118 @@
+<!--
+ templateType: page
+ isAvailableForNewContent: false
+-->  
+
+
+{% macro buttonGroup(items)%}
+{% if items %}
+<div class="intro_btn_wrap">
+  {% for item in items %}
+  <div class="btn_item">
+    {% if item.button_type == "std" %}
+    {% set href = item.link.url.href %}
+    {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+    {% set href = "mailto:" + href %}
+    {% endif %}
+    <a class="{{ item.button_style ? item.button_style : "hs-button" }} {{item.button_theme}}"
+       {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+       href="{{ href }}" 
+       {% else %}
+       href="{{ href }}"
+       {% endif %}
+       {% if item.link.open_in_new_tab %}
+       target="_blank"
+       {% endif %}
+       {% if item.link.rel %}
+       rel="{{ item.link.rel }}"
+       {% endif %}>
+      <span>{{ item.button_text }}</span>{% if item.button_style == "arrow-link"%}>{% endif %}
+    </a>
+    {% endif %}
+    {% if item.button_type == "cta" %}
+    {% cta guid="{{ item.cta }}" %}
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endmacro%}
+
+<!-- single button -->
+{% macro singleButtonGroup(item)%}
+<div class="intro_btn_wrap">
+  <div class="btn_item">
+    {% if item.button_type == "std" %}
+    {% set href = item.link.url.href %}
+    {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+    {% set href = "mailto:" + href %}
+    {% endif %}
+    <a class="{{ item.button_style ? item.button_style : "hs-button" }} {{item.button_theme}}"
+       {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+       href="{{ href }}" 
+       {% else %}
+       href="{{ href }}"
+       {% endif %}
+       {% if item.link.open_in_new_tab %}
+       target="_blank"
+       {% endif %}
+       {% if item.link.rel %}
+       rel="{{ item.link.rel }}"
+       {% endif %}>
+      <span>{{ item.button_text }}</span>{% if item.button_style == "arrow-link"%}>{% endif %}
+    </a>
+    {% endif %}
+    {% if item.button_type == "cta" %}
+    {% cta guid="{{ item.cta }}" %}
+    {% endif %}
+  </div>
+
+</div>
+
+{% endmacro%}
+
+
+{% macro introGroup(group)%}
+{% if group.include_eyebrow_text or group.include_heading or group.include_content or  group.include_button%}
+<div class="intro_content">
+
+  <div class="intro__inner">
+    {% if group.include_eyebrow_text %}
+    <div class="eyebrow_text">
+      {{ group.eyebrow_text }}
+    </div>
+    {% endif %}
+
+
+
+    {% if group.include_heading %}
+    <{{group.heading_size}} class="intro_title">{{ group.heading }}</{{group.heading_size}}>
+      {% endif %}
+
+
+
+
+      {% if group.include_content %}
+      <div class="intro_desc {{ group.content_style }}">
+    {{ group.content }}
+  </div>
+  {% endif %}
+
+  {#===#}
+
+  {% if group.include_button %}
+  {{buttonGroup(group.button_group)}}
+  {% endif %}
+
+  {#===#}
+
+</div>
+</div>
+{% endif %}
+{% endmacro%}
+
+
+
+
+
+

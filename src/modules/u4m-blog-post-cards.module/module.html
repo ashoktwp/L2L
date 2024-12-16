@@ -16,7 +16,7 @@
     <div class="wrapper">
       {% if module.post_feed_type == "related" %}
       {% macro related_blog_post_formatter(post, index, count) %}
-      {% include "/unified4/modules/partials/u4-blog-cards.html" %}
+      {% include "/L2L/modules/partials/u4-blog-cards.html" %}
       {% endmacro %}
       {% related_blog_posts blog_ids="{{ module.blog_field }}", limit=3, post_formatter="related_blog_post_formatter",  no_wrapper=true %}
       {% endif %}

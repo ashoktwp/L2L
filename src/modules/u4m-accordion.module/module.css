@@ -1,0 +1,113 @@
+html {
+  font-size: 1px;
+}
+
+/* auto scale down elements on mobile */
+@media (max-width: 580px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* auto scale up elements on large displays */
+@media (min-width: 2560px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+section.u4m-accordion .intro {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 768rem;
+  text-align: center;
+}
+section.u4m-accordion .intro h2 {
+  font-family: "Montserrat";
+  font-size: 44rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+}
+@media (max-width: 1024px) {
+  section.u4m-accordion .intro h2 {
+    font-size: 38rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-accordion .intro h2 {
+    font-size: 32rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-accordion .intro p {
+  font-family: "Montserrat";
+  font-size: 18rem;
+  line-height: 1.6;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20rem;
+}
+@media (max-width: 580px) {
+  section.u4m-accordion .intro p {
+    font-size: 16rem;
+  }
+}
+section.u4m-accordion .accordions {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  margin: 50rem auto;
+}
+section.u4m-accordion .accordions details {
+  border-top: 1rem solid #cbd6e2;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+section.u4m-accordion .accordions details summary {
+  font-family: "Montserrat";
+  font-size: 18rem;
+  line-height: 1.6;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 20rem 40rem 20rem 20rem;
+  position: relative;
+  list-style: none;
+}
+@media (max-width: 580px) {
+  section.u4m-accordion .accordions details summary {
+    font-size: 16rem;
+  }
+}
+section.u4m-accordion .accordions details summary:after {
+  content: "+";
+  font-size: 30rem;
+  font-weight: normal;
+  line-height: 1;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-in-out;
+}
+section.u4m-accordion .accordions details[open] summary:after {
+  transform: translateY(-50%) rotate(45deg);
+}
+section.u4m-accordion .accordions details:hover {
+  background-color: #edf0f2;
+}
+section.u4m-accordion .accordions details:last-child {
+  border-bottom: 1rem solid #cbd6e2;
+}
+section.u4m-accordion .accordions details div {
+  padding: 20rem;
+}

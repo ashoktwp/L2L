@@ -1,16 +1,13 @@
 <!--
   templateType: email_subscription_preferences_page
   isAvailableForNewContent: true
-  label: Unified 4 - Email Subscription Preferences
+  label: L2L - Email Subscription Preferences
 -->
-{% extends '../base.html' %}
-
-{% block body %}
+{% extends '../base.html' %} {% block body %}
 <main id="main-content" class="body-container-wrapper">
   <section class="u4m-subscription-preferences">
     <div class="systems-page">
-      {% module 'subscription_preferences'
-        path='@hubspot/email_subscriptions'
+      {% module 'subscription_preferences' path='@hubspot/email_subscriptions'
       %}
     </div>
   </section>

@@ -1,0 +1,149 @@
+html {
+  font-size: 1px;
+}
+
+/* auto scale down elements on mobile */
+@media (max-width: 580px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* auto scale up elements on large displays */
+@media (min-width: 2560px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+section.u4m-jump-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100rem 0;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+section.u4m-jump-grid.reverse-text {
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  section.u4m-jump-grid {
+    min-height: 0;
+    height: auto;
+  }
+}
+section.u4m-jump-grid div.container {
+  max-width: 1060rem;
+}
+section.u4m-jump-grid div.container .heading {
+  font-family: "Montserrat";
+  font-size: 44rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  text-align: center;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  section.u4m-jump-grid div.container .heading {
+    font-size: 38rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-jump-grid div.container .heading {
+    font-size: 32rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-jump-grid div.container .heading.white-text {
+  color: #fff;
+}
+section.u4m-jump-grid div.container .heading:before {
+  background-color: #733bf7;
+}
+section.u4m-jump-grid div.container .subheading {
+  font-family: "Montserrat";
+  font-size: 30rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  section.u4m-jump-grid div.container .subheading {
+    font-size: 24rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-jump-grid div.container .subheading {
+    font-size: 20rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-jump-grid div.container .subheading.white-text {
+  color: #fff;
+}
+section.u4m-jump-grid div.container div.group {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1020rem;
+  text-align: center;
+}
+section.u4m-jump-grid div.container div.group a.item {
+  text-align: center;
+  margin: 10rem;
+  border-radius: 4rem;
+  padding: 25rem;
+  flex-basis: calc(25% - 20rem);
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+@media (max-width: 1024px) {
+  section.u4m-jump-grid div.container div.group a.item {
+    flex-basis: calc(33.333% - 20rem);
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 10rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-jump-grid div.container div.group a.item {
+    flex-basis: calc(50% - 20rem);
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+section.u4m-jump-grid div.container div.group a.item img.image {
+  max-width: 100rem;
+  margin-bottom: 30rem;
+}
+section.u4m-jump-grid div.container div.group a.item .title {
+  display: block;
+  color: #733bf7;
+  font-weight: bold;
+}
+section.u4m-jump-grid div.container div.group a.item .caption {
+  font-family: "Montserrat";
+  font-size: 14rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  display: block;
+  color: #33475b;
+}
+@media (max-width: 580px) {
+  section.u4m-jump-grid div.container div.group a.item .caption {
+    font-size: 14rem;
+  }
+}
+section.u4m-jump-grid div.container div.group a.item:not(.no-link):hover {
+  transition: 0.1s ease-in;
+  background-color: #733bf7;
+}
+section.u4m-jump-grid div.container div.group a.item:not(.no-link):hover .caption,
+section.u4m-jump-grid div.container div.group a.item:not(.no-link):hover .title {
+  color: #fff;
+}

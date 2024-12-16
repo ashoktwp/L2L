@@ -5,12 +5,22 @@
   }
 }
 
-@mixin tabletvert {
-  @media (max-width: 768px) {
+@mixin phoneMin {
+  @media (min-width: 581px) {
     @content;
   }
 }
 
+@mixin tabletvertmin {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin tabletvert {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
 @mixin tablet {
   @media (max-width: 1024px) {
     @content;
@@ -18,7 +28,31 @@
 }
 
 @mixin tabletMin {
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin tabletMinlarge {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin tabletMinlargeTotabletMin {
+  @media (max-width: 1280px) and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin navbreakMin {
+  @media (max-width: 1070px) {
+    @content;
+  }
+}
+
+@mixin midlaptop {
+  @media (max-width: 1199px) {
     @content;
   }
 }
@@ -34,7 +68,27 @@
     @content;
   }
 }
+@mixin tabletmidmin {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin tabletmid {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
 
+@mixin laptop {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+@mixin laptopvert {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
 @mixin desktop {
   @media (max-width: 1920px) {
     @content;
@@ -47,16 +101,20 @@
   }
 }
 
-@mixin ie {
+@mixin tabbreakpoint($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
 
-  @media all and (-ms-high-contrast: none),
-  (-ms-high-contrast: active) {
+@mixin ie {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     @content;
   }
 }
 
 @mixin safari {
-  @media not all and (min-resolution:.001dpcm) {
+  @media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) {
       @content;
     }
@@ -101,7 +159,7 @@
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1240rem;
+  max-width: $containerSize;
   padding-left: 20rem;
   padding-right: 20rem;
 }
@@ -111,15 +169,16 @@
   max-width: 900rem;
 }
 
+@mixin centerMiddle {
+  @include center;
+  max-width: 1188rem;
+}
+
 // Links
 @mixin link {
   text-decoration: none;
   /* Remove default underline */
-  color: $action1;
+
   transition: $animation1;
   display: inline-block;
-
-  &:hover {
-    color: $action1;
-  }
 }

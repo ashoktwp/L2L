@@ -1,18 +1,14 @@
 <!--
   templateType: search_results_page
   isAvailableForNewContent: true
-  label: Unified 4 - Search Results
+  label: L2L - Search Results
 -->
-{% extends '../base.html' %}
-
-{% block body %}
+{% extends '../base.html' %} {% block body %}
 <main id="main-content" class="body-container-wrapper">
   <section class="u4m-search-results">
     <div class="systems-page">
       <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
-      {% module 'search_results'
-        path='@hubspot/search_results'
-      %}
+      {% module 'search_results' path='@hubspot/search_results' %}
     </div>
   </section>
 </main>

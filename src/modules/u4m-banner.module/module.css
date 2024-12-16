@@ -1,0 +1,104 @@
+html {
+  font-size: 1px;
+}
+
+/* auto scale down elements on mobile */
+@media (max-width: 580px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* auto scale up elements on large displays */
+@media (min-width: 2560px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+section.u4m-banner {
+  background-color: #33475b;
+  padding: 8rem 0 7rem 0;
+}
+section.u4m-banner.offscreen {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+section.u4m-banner div.content {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 1200rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.u4m-banner div.content div.image img {
+  max-width: 134rem;
+  position: relative;
+  top: -3rem;
+}
+@media (max-width: 767px) {
+  section.u4m-banner div.content div.image img {
+    max-width: 67rem;
+  }
+}
+section.u4m-banner div.content div.text {
+  font-size: 16rem;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: 1rem;
+}
+section.u4m-banner div.content div.text span.bar {
+  margin: 0 12rem;
+}
+@media (max-width: 767px) {
+  section.u4m-banner div.content div.text span.bar {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  section.u4m-banner div.content div.text {
+    font-size: 12rem;
+    margin-left: 10rem;
+    text-align: center;
+  }
+}
+section.u4m-banner div.content div.cta {
+  margin-left: 15rem;
+  color: #733bf7;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 1rem;
+}
+section.u4m-banner div.content div.cta a {
+  color: #fff;
+}
+section.u4m-banner div.content div.cta a:hover {
+  color: #00a4bd;
+}
+@media (max-width: 767px) {
+  section.u4m-banner div.content div.cta a {
+    font-size: 12rem;
+  }
+}
+@media (max-width: 767px) {
+  section.u4m-banner div.content div.cta {
+    margin-left: 10rem;
+  }
+}
+section.u4m-banner div.content div.close span {
+  color: #fff;
+  cursor: pointer;
+  margin-left: 15rem;
+}
+section.u4m-banner div.content div.close span:hover {
+  color: #00a4bd;
+}

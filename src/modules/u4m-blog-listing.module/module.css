@@ -1,0 +1,1129 @@
+@charset "UTF-8";
+html {
+  font-size: 1px;
+}
+
+/* auto scale down elements on mobile */
+@media (max-width: 580px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* auto scale up elements on large displays */
+@media (min-width: 2560px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+section.u4m-blog-listing {
+  /*****************************************/
+  /* div.filter                            */
+  /*****************************************/
+  /*****************************************/
+  /* display: .author;                     */
+  /*****************************************/
+  /*****************************************/
+  /* div.posts             */
+  /*****************************************/
+  /********************************************/
+  /* .pagination-standard */
+  /********************************************/
+  /********************************************/
+  /* .pagination-infinite */
+  /********************************************/
+}
+section.u4m-blog-listing div.hero {
+  padding-top: 150rem;
+}
+section.u4m-blog-listing div.hero h1.heading {
+  font-family: "Montserrat";
+  font-size: 60rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  margin-top: 0;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  section.u4m-blog-listing div.hero h1.heading {
+    font-size: 48rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.hero h1.heading {
+    font-size: 38rem;
+    margin-bottom: 20rem;
+  }
+}
+body.author-listing section.u4m-blog-listing div.hero h1.heading {
+  padding-bottom: 50rem;
+}
+body.author-listing section.u4m-blog-listing div.hero h1.heading .blog-title {
+  font-family: "Montserrat";
+  font-size: 34rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  margin-bottom: 0;
+  display: block;
+}
+@media (max-width: 1024px) {
+  body.author-listing section.u4m-blog-listing div.hero h1.heading .blog-title {
+    font-size: 28rem;
+  }
+}
+@media (max-width: 580px) {
+  body.author-listing section.u4m-blog-listing div.hero h1.heading .blog-title {
+    font-size: 24rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-blog-listing div.hero div.wrapper {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 1200rem;
+  margin: 0 auto;
+  margin-bottom: 50rem;
+}
+section.u4m-blog-listing div.hero div.wrapper.none {
+  display: none;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.hero div.wrapper {
+    display: block;
+  }
+}
+body.author-listing section.u4m-blog-listing div.hero div.wrapper, body.archive section.u4m-blog-listing div.hero div.wrapper {
+  display: none;
+}
+section.u4m-blog-listing div.hero div.wrapper div.card {
+  display: flex;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.hero div.wrapper div.card {
+    display: block;
+  }
+}
+section.u4m-blog-listing div.hero div.wrapper div.card .image-wrap {
+  flex: 0 0 50%;
+}
+section.u4m-blog-listing div.hero div.wrapper div.card .image-wrap a {
+  display: block;
+  height: 100%;
+}
+section.u4m-blog-listing div.hero div.wrapper div.card .image-wrap a .image {
+  height: 100%;
+  background-size: cover;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.hero div.wrapper div.card .image-wrap a .image {
+    height: 160rem;
+  }
+}
+section.u4m-blog-listing div.hero div.wrapper div.card .image-wrap .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.u4m-blog-listing div.hero div.wrapper div.card .content {
+  text-align: left;
+  background-color: #edf0f2;
+  padding: 30rem 40rem;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.hero div.wrapper div.card .content {
+    padding: 20rem;
+  }
+}
+section.u4m-blog-listing div.hero div.wrapper div.card .content span.medium {
+  font-family: "Montserrat";
+  font-size: 14rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.hero div.wrapper div.card .content span.medium {
+    font-size: 14rem;
+  }
+}
+section.u4m-blog-listing div.hero div.wrapper div.card .content .heading {
+  font-family: "Montserrat";
+  font-size: 34rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+@media (max-width: 1024px) {
+  section.u4m-blog-listing div.hero div.wrapper div.card .content .heading {
+    font-size: 28rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.hero div.wrapper div.card .content .heading {
+    font-size: 24rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-blog-listing div.hero div.wrapper div.card .content .heading a {
+  color: #33475b;
+}
+section.u4m-blog-listing div.hero div.wrapper div.card .content p {
+  font-family: "Montserrat";
+  font-size: 14rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  margin-bottom: 4rem;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.hero div.wrapper div.card .content p {
+    font-size: 14rem;
+  }
+}
+section.u4m-blog-listing div.hero div.wrapper div.card .content a.link {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+}
+section.u4m-blog-listing div.hero div.wrapper div.card .content a.link:hover, section.u4m-blog-listing div.hero div.wrapper div.card .content a.link:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+section.u4m-blog-listing div.hero div.wrapper div.card div.content .heading {
+  margin-bottom: 10rem;
+}
+section.u4m-blog-listing div.hero div.wrapper div.card div.content div.read-time,
+section.u4m-blog-listing div.hero div.wrapper div.card div.content span.date {
+  font-family: "Montserrat";
+  font-size: 13rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  text-transform: uppercase;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.hero div.wrapper div.card div.content div.read-time,
+  section.u4m-blog-listing div.hero div.wrapper div.card div.content span.date {
+    font-size: 13rem;
+  }
+}
+section.u4m-blog-listing div.filter {
+  margin: 30rem 0;
+}
+body.author-listing section.u4m-blog-listing div.filter {
+  display: none;
+}
+section.u4m-blog-listing div.filter div.mobile-menu {
+  display: none;
+  padding: 0 20rem;
+}
+@media (max-width: 767px) {
+  section.u4m-blog-listing div.filter div.mobile-menu {
+    display: block;
+  }
+  section.u4m-blog-listing div.filter div.mobile-menu select.menu-wrap {
+    border: 0;
+    border: 0;
+    border-radius: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 20rem;
+    font-size: 16rem;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
+    background-size: 13rem 8rem;
+    background-position: 97% 51%;
+    border: 0;
+    border-radius: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-size: 16rem;
+    background-color: #edf0f2;
+    padding: 10rem;
+  }
+}
+section.u4m-blog-listing div.filter div.menu {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  text-align: center;
+  padding-top: 2rem;
+  /* Carret after Menu items with dropdown */
+}
+@media (max-width: 767px) {
+  section.u4m-blog-listing div.filter div.menu:not(.dynamic) {
+    display: none;
+  }
+}
+section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul li a {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  padding: 8rem 20rem 7rem 20rem;
+  font-size: 12rem;
+  line-height: 1.2;
+  overflow: visible;
+  max-width: none;
+  background-color: #7c98b6;
+  margin-right: 21rem;
+  margin-bottom: 0;
+}
+section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul li a:hover, section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul li a:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul li a {
+    margin-right: 10rem;
+    padding: 10rem 10rem 9rem 10rem;
+    font-size: 14rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul li a {
+    width: calc(50% - 13rem);
+    display: inline-block;
+    margin: 5rem;
+  }
+  section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul li a:last-child {
+    width: calc(100% - 13rem);
+  }
+}
+section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul li a:hover {
+  background-color: #33475b;
+}
+section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul li.active a {
+  background-color: #33475b;
+}
+section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul li:first-child.active a {
+  background-color: #7c98b6;
+  color: #fff;
+}
+body:not(.topic) section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul li.active a {
+  background-color: #33475b;
+  color: #fff;
+}
+section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul {
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+}
+section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal li {
+  margin: 0;
+}
+section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul ul li {
+  text-align: left;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul ul li {
+    text-align: center;
+  }
+}
+section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul ul li a {
+  font-family: "Montserrat";
+  font-size: 14rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  margin: 0 15rem 20rem 15rem;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul ul li a {
+    font-size: 14rem;
+  }
+}
+section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal ul.hs-menu-children-wrapper {
+  padding-top: 20rem;
+  background-color: #fff;
+}
+section.u4m-blog-listing div.filter div.menu div.hs-menu-wrapper.hs-menu-flow-horizontal li.hs-menu-depth-2 .hs-menu-children-wrapper {
+  padding-top: 0;
+}
+section.u4m-blog-listing div.filter div.menu li.hs-menu-depth-1.hs-item-has-children > a:after {
+  position: relative;
+  top: -2rem;
+  content: "▼";
+  display: inline-block;
+  margin-left: 7rem;
+  font-size: 15rem;
+  font-weight: bold;
+}
+section.u4m-blog-listing div.filter div.menu li.hs-menu-depth-2.hs-item-has-children > a:after {
+  position: relative;
+  top: 0;
+  content: ">";
+  margin-left: 7rem;
+  font-size: 15rem;
+}
+section.u4m-blog-listing div.filter div.menu.dynamic ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+section.u4m-blog-listing div.filter div.menu.dynamic ul li {
+  margin: 0 10px 10px;
+}
+section.u4m-blog-listing div.filter div.menu.dynamic ul li a {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  padding: 8rem 20rem 7rem 20rem;
+  font-size: 12rem;
+  line-height: 1.2;
+  margin: 0;
+}
+section.u4m-blog-listing div.filter div.menu.dynamic ul li a:hover, section.u4m-blog-listing div.filter div.menu.dynamic ul li a:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+section.u4m-blog-listing div.author {
+  background-color: #edf0f2;
+  padding: 50rem 0;
+  margin-bottom: 80rem;
+}
+section.u4m-blog-listing div.author div.inner {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 1160rem;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.author div.inner {
+    display: block;
+  }
+}
+section.u4m-blog-listing div.author div.inner div.avatar {
+  background-size: cover;
+  width: 300rem;
+  height: 300rem;
+  background-position: 50% 50%;
+  border-radius: 50%;
+  flex: 0 0 300rem;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.author div.inner div.avatar {
+    width: 200rem;
+    height: 200rem;
+    margin: 0 auto 30rem auto;
+  }
+}
+section.u4m-blog-listing div.author div.inner .blog-author-text {
+  margin-left: 85rem;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.author div.inner .blog-author-text {
+    margin: 0;
+  }
+}
+section.u4m-blog-listing div.author div.inner .header {
+  font-family: "Montserrat";
+  font-size: 30rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+}
+@media (max-width: 1024px) {
+  section.u4m-blog-listing div.author div.inner .header {
+    font-size: 24rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.author div.inner .header {
+    font-size: 20rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-blog-listing div.author div.inner p.bio {
+  font-family: "Montserrat";
+  font-size: 14rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.author div.inner p.bio {
+    font-size: 14rem;
+  }
+}
+section.u4m-blog-listing div.author div.inner div.social a {
+  font-size: 24rem;
+  margin-right: 10rem;
+}
+section.u4m-blog-listing div.author div.inner div.social a svg {
+  fill: #33475b;
+}
+section.u4m-blog-listing div.author div.inner div.social a:hover svg {
+  fill: #733bf7;
+}
+section.u4m-blog-listing div.posts {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 1200rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts {
+    display: block;
+    padding: 0 20rem;
+  }
+}
+section.u4m-blog-listing div.posts a.blog-post-card {
+  margin: 20rem;
+  padding: 20rem;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  border: 1px solid #edf0f2;
+  background-color: #fff;
+  flex-basis: calc(33.333% - 40rem);
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  flex-basis: calc(33.333% - 40rem);
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+  transition: 0.1s ease-in;
+  top: 0;
+}
+@media (max-width: 1024px) {
+  section.u4m-blog-listing div.posts a.blog-post-card {
+    flex-basis: calc(50% - 40rem);
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card {
+    width: 100%;
+    margin-bottom: 50rem;
+  }
+}
+section.u4m-blog-listing div.posts a.blog-post-card button {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  padding: 8rem 20rem 7rem 20rem;
+  font-size: 12rem;
+  line-height: 1.2;
+}
+section.u4m-blog-listing div.posts a.blog-post-card button:hover, section.u4m-blog-listing div.posts a.blog-post-card button:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .image {
+  min-height: 100rem;
+  display: flex;
+  align-items: center;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .image.filled {
+  width: 100%;
+  min-height: 203rem;
+  border-bottom: 1rem solid #edf0f2;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .image.filled img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .image a {
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  box-shadow: none;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .image a:hover {
+  background-color: transparent;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .image img {
+  display: block;
+  margin: 30rem auto 0 auto;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .image img.left {
+  margin: 30rem auto 0 30rem;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content {
+  padding: 20rem 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content {
+    padding: 20rem;
+  }
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.url {
+  display: flex;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.eyebrow {
+  font-family: "Montserrat";
+  font-size: 13rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  color: #7c98b6;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content span.eyebrow {
+    font-size: 13rem;
+  }
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.title {
+  font-family: "Montserrat";
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  display: block;
+  color: #33475b;
+  margin-top: 5rem;
+  margin-bottom: 15rem;
+}
+@media (max-width: 1024px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content span.title {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content span.title {
+    font-size: 18rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.teaser {
+  font-family: "Montserrat";
+  font-size: 13rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  color: #33475b;
+  display: block;
+  margin-bottom: 0;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content span.teaser {
+    font-size: 13rem;
+  }
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.cta,
+section.u4m-blog-listing div.posts a.blog-post-card .content span.url {
+  margin-top: auto;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.cta a,
+section.u4m-blog-listing div.posts a.blog-post-card .content span.url a {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  padding: 8rem 20rem 7rem 20rem;
+  font-size: 12rem;
+  line-height: 1.2;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.cta a:hover, section.u4m-blog-listing div.posts a.blog-post-card .content span.cta a:focus,
+section.u4m-blog-listing div.posts a.blog-post-card .content span.url a:hover,
+section.u4m-blog-listing div.posts a.blog-post-card .content span.url a:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+section.u4m-blog-listing div.posts a.blog-post-card:hover {
+  top: -10rem;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .featured-image {
+  margin-bottom: 10rem;
+  background-size: cover;
+  background-color: #edf0f2;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 203rem;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .featured-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content {
+  height: calc(100% - 203rem);
+  color: #33475b;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content .topics {
+  font-family: "Montserrat";
+  font-size: 13rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  margin-bottom: 0;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content .topics {
+    font-size: 13rem;
+  }
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content .read-time {
+  display: inline;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 13rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  margin-bottom: 0;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content .read-time {
+    font-size: 13rem;
+  }
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content .date {
+  display: inline;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 13rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content .date {
+    font-size: 13rem;
+  }
+}
+@media (max-width: 767px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content .date {
+    font-family: "Montserrat";
+    font-size: 12rem;
+    line-height: 1.6;
+    letter-spacing: 0.35rem;
+    margin-bottom: 10rem;
+  }
+}
+@media (max-width: 767px) and (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content .date {
+    font-size: 12rem;
+  }
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content h2.title {
+  font-family: "Montserrat";
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 10rem;
+  color: #33475b;
+}
+@media (max-width: 1024px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content h2.title {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content h2.title {
+    font-size: 18rem;
+    margin-bottom: 20rem;
+  }
+}
+@media (max-width: 767px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content h2.title {
+    font-family: "Montserrat";
+    font-size: 16rem;
+    line-height: 1.6;
+    letter-spacing: 0.25rem;
+    margin-bottom: 20rem;
+    font-weight: bold;
+  }
+}
+@media (max-width: 767px) and (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content h2.title {
+    font-size: 15rem;
+  }
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.teaser {
+  font-family: "Montserrat";
+  font-size: 13rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  display: block;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content span.teaser {
+    font-size: 13rem;
+  }
+}
+@media (max-width: 767px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content span.teaser {
+    font-family: "Montserrat";
+    font-size: 12rem;
+    line-height: 1.6;
+    letter-spacing: 0.35rem;
+    margin-bottom: 10rem;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 767px) and (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card .content span.teaser {
+    font-size: 12rem;
+  }
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.read-more {
+  font-weight: bold;
+  margin: 20rem 0;
+  cursor: pointer;
+  margin-top: auto;
+  color: #733bf7;
+  transition: 0.1s ease-in;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.read-more:after {
+  display: inline-block;
+  margin-left: 5rem;
+  width: 9rem;
+  height: 7rem;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.read-more:hover, section.u4m-blog-listing div.posts a.blog-post-card .content span.read-more:focus {
+  color: #33475b;
+}
+section.u4m-blog-listing div.posts a.blog-post-card .content span.read-more:hover {
+  color: #33475b;
+}
+@media (max-width: 1024px) {
+  section.u4m-blog-listing div.posts a.blog-post-card {
+    flex-basis: calc(50% - 40rem);
+    margin: 0 20px 20px;
+  }
+}
+@media (max-width: 767px) {
+  section.u4m-blog-listing div.posts a.blog-post-card {
+    flex: 0 0 calc(100% - 40rem);
+    margin: 0 20px 20px;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts a.blog-post-card {
+    margin: 0 0 20px;
+  }
+}
+section.u4m-blog-listing div.posts .resource-card {
+  flex: 0 0 100%;
+  margin: 100rem 0;
+  padding: 50rem 20rem;
+  position: relative;
+  overflow: visible;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts .resource-card {
+    padding: 30rem 0;
+  }
+}
+section.u4m-blog-listing div.posts .resource-card:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1920rem;
+  z-index: 0;
+  top: 0;
+  background-color: #edf0f2;
+  right: 50%;
+  transform: translateX(50%);
+}
+section.u4m-blog-listing div.posts .resource-card a {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  align-items: center;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts .resource-card a {
+    display: block;
+  }
+}
+section.u4m-blog-listing div.posts .resource-card a .image {
+  flex: 0 0 300rem;
+  height: 100%;
+  margin-right: 50rem;
+  background-size: cover;
+  background-position: 50%;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts .resource-card a .image {
+    height: 300rem;
+    margin: 0 auto 30rem auto;
+  }
+}
+section.u4m-blog-listing div.posts .resource-card a .content h2,
+section.u4m-blog-listing div.posts .resource-card a .content span,
+section.u4m-blog-listing div.posts .resource-card a .content p {
+  color: #33475b;
+}
+section.u4m-blog-listing div.posts .resource-card a .content span.type {
+  display: block;
+  font-family: "Montserrat";
+  font-size: 16rem;
+  line-height: 1.6;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts .resource-card a .content span.type {
+    font-size: 15rem;
+  }
+}
+section.u4m-blog-listing div.posts .resource-card a .content h2.title {
+  font-family: "Montserrat";
+  font-size: 44rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  margin-top: 0;
+}
+@media (max-width: 1024px) {
+  section.u4m-blog-listing div.posts .resource-card a .content h2.title {
+    font-size: 38rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts .resource-card a .content h2.title {
+    font-size: 32rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-blog-listing div.posts .resource-card a .content p {
+  font-family: "Montserrat";
+  font-size: 18rem;
+  line-height: 1.6;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20rem;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.posts .resource-card a .content p {
+    font-size: 16rem;
+  }
+}
+section.u4m-blog-listing div.posts .resource-card a .content span.link {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  padding: 8rem 20rem 7rem 20rem;
+  font-size: 12rem;
+  line-height: 1.2;
+}
+section.u4m-blog-listing div.posts .resource-card a .content span.link:hover, section.u4m-blog-listing div.posts .resource-card a .content span.link:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+section.u4m-blog-listing div.pagination-standard {
+  text-align: center;
+  margin-top: 50rem;
+  margin-bottom: 100rem;
+}
+section.u4m-blog-listing div.pagination-standard ul.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.u4m-blog-listing div.pagination-standard ul.pages li {
+  background: none;
+  display: inline-block;
+  list-style: none;
+  background-image: none;
+}
+section.u4m-blog-listing div.pagination-standard ul.pages li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 5rem;
+  color: #33475b;
+  min-height: 55rem;
+  min-width: 55rem;
+  padding: 0;
+  background-color: #edf0f2;
+  font-weight: bold;
+}
+@media (max-width: 580px) {
+  section.u4m-blog-listing div.pagination-standard ul.pages li a {
+    min-height: 35rem;
+    min-width: 35rem;
+  }
+}
+section.u4m-blog-listing div.pagination-standard ul.pages li a:hover {
+  color: #fff;
+  background-color: #733bf7;
+}
+section.u4m-blog-listing div.pagination-standard ul.pages li.disabled a {
+  display: none;
+}
+section.u4m-blog-listing div.pagination-standard ul.pages li.active a {
+  color: #fff;
+  background-color: #733bf7;
+}
+section.u4m-blog-listing div.pagination-infinite {
+  text-align: center;
+}
+section.u4m-blog-listing div.pagination-infinite a.pagination-infinite_button {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+}
+section.u4m-blog-listing div.pagination-infinite a.pagination-infinite_button:hover, section.u4m-blog-listing div.pagination-infinite a.pagination-infinite_button:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+.hide-next section.u4m-blog-listing div.pagination-infinite a.pagination-infinite_button {
+  display: none;
+}

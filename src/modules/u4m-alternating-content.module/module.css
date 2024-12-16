@@ -1,0 +1,244 @@
+html {
+  font-size: 1px;
+}
+
+/* auto scale down elements on mobile */
+@media (max-width: 580px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* auto scale up elements on large displays */
+@media (min-width: 2560px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+section.u4m-alternating-content {
+  margin-top: 100rem;
+  margin-bottom: 100rem;
+}
+section.u4m-alternating-content.reverse-text .inner .content {
+  color: #fff;
+}
+section.u4m-alternating-content div.inner {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+}
+@media (max-width: 1024px) {
+  section.u4m-alternating-content div.inner {
+    display: block;
+  }
+}
+section.u4m-alternating-content div.inner div.additional-content {
+  flex-direction: column;
+  flex: 1 1 50%;
+}
+@media (max-width: 1024px) {
+  section.u4m-alternating-content div.inner div.additional-content {
+    float: none;
+    width: 100%;
+  }
+}
+section.u4m-alternating-content div.inner div.additional-content div.image img {
+  max-width: 600rem;
+}
+@media (max-width: 1024px) {
+  section.u4m-alternating-content div.inner div.additional-content div.image img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+section.u4m-alternating-content div.inner div.additional-content div.video {
+  flex: 1 1 50%;
+}
+section.u4m-alternating-content div.inner div.additional-content div.video h3 {
+  font-family: "Montserrat";
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+}
+@media (max-width: 1024px) {
+  section.u4m-alternating-content div.inner div.additional-content div.video h3 {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-alternating-content div.inner div.additional-content div.video h3 {
+    font-size: 18rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-alternating-content div.inner div.additional-content div.video h4 {
+  font-family: "Montserrat";
+  font-size: 18rem;
+  line-height: 1.6;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20rem;
+  font-weight: bold;
+}
+@media (max-width: 580px) {
+  section.u4m-alternating-content div.inner div.additional-content div.video h4 {
+    font-size: 16rem;
+  }
+}
+section.u4m-alternating-content div.inner div.content {
+  flex: 1 1 50%;
+  padding-left: 50rem;
+}
+@media (max-width: 1024px) {
+  section.u4m-alternating-content div.inner div.content {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 0;
+    padding: 30rem 0;
+  }
+}
+section.u4m-alternating-content div.inner div.content .eyebrow {
+  font-family: "Montserrat";
+  font-size: 16rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10rem;
+}
+section.u4m-alternating-content div.inner div.content h2 {
+  margin-top: 0;
+  font-family: "Montserrat";
+  font-size: 30rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+}
+@media (max-width: 1024px) {
+  section.u4m-alternating-content div.inner div.content h2 {
+    font-size: 24rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-alternating-content div.inner div.content h2 {
+    font-size: 20rem;
+    margin-bottom: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-alternating-content div.inner div.content h2 {
+    margin-bottom: 0;
+  }
+}
+section.u4m-alternating-content div.inner div.content h3 {
+  font-family: "Montserrat";
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+}
+@media (max-width: 1024px) {
+  section.u4m-alternating-content div.inner div.content h3 {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-alternating-content div.inner div.content h3 {
+    font-size: 18rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-alternating-content div.inner div.content h4 {
+  font-family: "Montserrat";
+  font-size: 18rem;
+  line-height: 1.6;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20rem;
+  font-weight: bold;
+}
+@media (max-width: 580px) {
+  section.u4m-alternating-content div.inner div.content h4 {
+    font-size: 16rem;
+  }
+}
+section.u4m-alternating-content div.inner div.content p {
+  font-family: "Montserrat";
+  font-size: 18rem;
+  line-height: 1.6;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20rem;
+}
+@media (max-width: 580px) {
+  section.u4m-alternating-content div.inner div.content p {
+    font-size: 16rem;
+  }
+}
+section.u4m-alternating-content div.inner div.content p:last-of-type {
+  margin-bottom: 0;
+}
+@media (max-width: 580px) {
+  section.u4m-alternating-content div.inner div.content p {
+    font-family: "Montserrat";
+    font-size: 14rem;
+    line-height: 1.6;
+    letter-spacing: 0.35rem;
+    margin-bottom: 20rem;
+  }
+}
+@media (max-width: 580px) and (max-width: 580px) {
+  section.u4m-alternating-content div.inner div.content p {
+    font-size: 14rem;
+  }
+}
+section.u4m-alternating-content div.inner div.content a {
+  margin-bottom: 0;
+}
+section.u4m-alternating-content div.inner div.content span.url a,
+section.u4m-alternating-content div.inner div.content span.cta a {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  padding: 8rem 20rem 7rem 20rem;
+  font-size: 12rem;
+  line-height: 1.2;
+  margin-top: 35rem;
+}
+section.u4m-alternating-content div.inner div.content span.url a:hover, section.u4m-alternating-content div.inner div.content span.url a:focus,
+section.u4m-alternating-content div.inner div.content span.cta a:hover,
+section.u4m-alternating-content div.inner div.content span.cta a:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+section.u4m-alternating-content div.inner.left {
+  flex-direction: row-reverse;
+}
+section.u4m-alternating-content div.inner.left div.content {
+  padding-left: 0;
+  padding-right: 30rem;
+}

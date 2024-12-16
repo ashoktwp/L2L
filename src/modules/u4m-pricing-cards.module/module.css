@@ -1,0 +1,588 @@
+html {
+  font-size: 1px;
+}
+
+/* auto scale down elements on mobile */
+@media (max-width: 580px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* auto scale up elements on large displays */
+@media (min-width: 2560px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+section.u4m-pricing-cards {
+  margin: 80rem auto;
+  position: relative;
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards {
+    margin: 50rem auto;
+  }
+}
+section.u4m-pricing-cards.reverse-text h2.heading,
+section.u4m-pricing-cards.reverse-text h3.subheading {
+  color: #fff;
+}
+section.u4m-pricing-cards div.intro {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 1280rem;
+  margin: 0 auto 50rem auto;
+}
+@media (max-width: 767px) {
+  section.u4m-pricing-cards div.intro {
+    margin: 0 auto 30rem auto;
+  }
+}
+section.u4m-pricing-cards div.intro .heading {
+  font-family: "Montserrat";
+  font-size: 44rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 685rem;
+  margin: 0 auto 14rem;
+}
+@media (max-width: 1024px) {
+  section.u4m-pricing-cards div.intro .heading {
+    font-size: 38rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards div.intro .heading {
+    font-size: 32rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-pricing-cards div.intro .subheading {
+  font-family: "Montserrat";
+  font-size: 16rem;
+  line-height: 1.6;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20rem;
+  font-weight: normal;
+  text-align: center;
+  max-width: 700rem;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards div.intro .subheading {
+    font-size: 15rem;
+  }
+}
+section.u4m-pricing-cards .wrapper {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1340rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  max-width: 1280rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section.u4m-pricing-cards .wrapper div.card {
+  margin: 20rem;
+  padding: 20rem;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  border: 1px solid #edf0f2;
+  background-color: #fff;
+  flex-basis: calc(33.333% - 40rem);
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  padding: 0rem;
+}
+@media (max-width: 1024px) {
+  section.u4m-pricing-cards .wrapper div.card {
+    flex-basis: calc(50% - 40rem);
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card {
+    width: 100%;
+    margin-bottom: 50rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card button {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  padding: 8rem 20rem 7rem 20rem;
+  font-size: 12rem;
+  line-height: 1.2;
+}
+section.u4m-pricing-cards .wrapper div.card button:hover, section.u4m-pricing-cards .wrapper div.card button:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+section.u4m-pricing-cards .wrapper div.card .image {
+  min-height: 100rem;
+  display: flex;
+  align-items: center;
+}
+section.u4m-pricing-cards .wrapper div.card .image.filled {
+  width: 100%;
+  min-height: 203rem;
+  border-bottom: 1rem solid #edf0f2;
+}
+section.u4m-pricing-cards .wrapper div.card .image.filled img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+}
+section.u4m-pricing-cards .wrapper div.card .image a {
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  box-shadow: none;
+}
+section.u4m-pricing-cards .wrapper div.card .image a:hover {
+  background-color: transparent;
+}
+section.u4m-pricing-cards .wrapper div.card .image img {
+  display: block;
+  margin: 30rem auto 0 auto;
+}
+section.u4m-pricing-cards .wrapper div.card .image img.left {
+  margin: 30rem auto 0 30rem;
+}
+section.u4m-pricing-cards .wrapper div.card .content {
+  padding: 20rem 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  section.u4m-pricing-cards .wrapper div.card .content {
+    padding: 20rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card .content span.url {
+  display: flex;
+}
+section.u4m-pricing-cards .wrapper div.card .content span.eyebrow {
+  font-family: "Montserrat";
+  font-size: 13rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  color: #7c98b6;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card .content span.eyebrow {
+    font-size: 13rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card .content span.title {
+  font-family: "Montserrat";
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  display: block;
+  color: #33475b;
+  margin-top: 5rem;
+  margin-bottom: 15rem;
+}
+@media (max-width: 1024px) {
+  section.u4m-pricing-cards .wrapper div.card .content span.title {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card .content span.title {
+    font-size: 18rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card .content span.teaser {
+  font-family: "Montserrat";
+  font-size: 13rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  color: #33475b;
+  display: block;
+  margin-bottom: 0;
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card .content span.teaser {
+    font-size: 13rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card .content span.cta,
+section.u4m-pricing-cards .wrapper div.card .content span.url {
+  margin-top: auto;
+}
+section.u4m-pricing-cards .wrapper div.card .content span.cta a,
+section.u4m-pricing-cards .wrapper div.card .content span.url a {
+  display: inline-block;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #733bf7;
+  border: 0;
+  border-radius: 4rem;
+  padding: 15rem 40rem 15rem 40rem;
+  margin: 20rem 0;
+  transition: 0.1s ease-in;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
+  padding: 8rem 20rem 7rem 20rem;
+  font-size: 12rem;
+  line-height: 1.2;
+}
+section.u4m-pricing-cards .wrapper div.card .content span.cta a:hover, section.u4m-pricing-cards .wrapper div.card .content span.cta a:focus,
+section.u4m-pricing-cards .wrapper div.card .content span.url a:hover,
+section.u4m-pricing-cards .wrapper div.card .content span.url a:focus {
+  background-color: #33475b;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  section.u4m-pricing-cards .wrapper div.card {
+    flex-basis: calc(50% - 40rem);
+  }
+}
+@media (max-width: 767px) {
+  section.u4m-pricing-cards .wrapper div.card {
+    flex-basis: 100%;
+    width: unset;
+    margin: 20rem 0rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card .title {
+  font-family: "Montserrat";
+  font-size: 44rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  background-color: #cbd6e2;
+  padding: 35rem;
+  margin-bottom: 0rem;
+  text-align: center;
+  font-size: 30rem;
+  font-family: "Montserrat";
+  font-weight: normal;
+}
+@media (max-width: 1024px) {
+  section.u4m-pricing-cards .wrapper div.card .title {
+    font-size: 38rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card .title {
+    font-size: 32rem;
+    margin-bottom: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card .title {
+    margin-bottom: 0rem;
+    font-size: 28rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card .title.popular-label {
+  background-color: #00a4bd;
+  color: #fff;
+}
+section.u4m-pricing-cards .wrapper div.card div.content {
+  padding: 60rem 47rem 30rem 47rem;
+}
+section.u4m-pricing-cards .wrapper div.card div.content .price-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 435rem;
+}
+@media (max-width: 767px) {
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container {
+    min-height: unset;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card div.content .price-container .price {
+  font-family: "Montserrat";
+  font-size: 60rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  margin-top: 0;
+  font-size: 50rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+@media (max-width: 1024px) {
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container .price {
+    font-size: 48rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container .price {
+    font-size: 38rem;
+    margin-bottom: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container .price {
+    font-size: 50rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card div.content .price-container .price .price-frequency {
+  font-family: "Montserrat";
+  font-size: 16rem;
+  line-height: 1.6;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20rem;
+  font-size: 20rem;
+  font-family: "Montserrat";
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container .price .price-frequency {
+    font-size: 15rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card div.content .price-container .teaser {
+  font-family: "Montserrat";
+  font-size: 14rem;
+  line-height: 1.6;
+  letter-spacing: 0.35rem;
+  margin-bottom: 20rem;
+  margin-bottom: 20rem;
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container .teaser {
+    font-size: 14rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link {
+  width: 100%;
+  margin-top: auto;
+}
+section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-url,
+section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-cta {
+  font-family: "Montserrat";
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  display: block;
+  font-size: 25rem;
+  font-family: "Montserrat";
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 40rem;
+  background-color: #733bf7;
+}
+@media (max-width: 1024px) {
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-url,
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-cta {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-url,
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-cta {
+    font-size: 18rem;
+    margin-bottom: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-url,
+  section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-cta {
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-url:hover,
+section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-cta:hover {
+  background-color: #00a4bd;
+  color: #fff;
+}
+section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-url a,
+section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-cta a {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 20rem;
+  display: block;
+}
+section.u4m-pricing-cards .wrapper div.card div.content .list-title {
+  font-family: "Montserrat";
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  font-size: 25rem;
+  font-weight: normal;
+  font-family: "Montserrat";
+}
+@media (max-width: 1024px) {
+  section.u4m-pricing-cards .wrapper div.card div.content .list-title {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card div.content .list-title {
+    font-size: 18rem;
+    margin-bottom: 20rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card div.content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+section.u4m-pricing-cards .wrapper div.card div.content ul li {
+  display: flex;
+  font-family: "Montserrat";
+  font-size: 16rem;
+  line-height: 1.6;
+  letter-spacing: 0.25rem;
+  margin-bottom: 20rem;
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card div.content ul li {
+    font-size: 15rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card div.content ul li span img {
+  position: relative;
+  top: -4rem;
+  width: 20rem;
+  height: 20rem;
+  margin: 5rem 10rem 0 0;
+  display: block;
+  min-width: 20rem;
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card div.content ul li span img {
+    margin: 0rem 10rem 0 0;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card div.content ul .excluded-reports {
+  color: rgba(51, 71, 91, 0.5);
+}
+section.u4m-pricing-cards .wrapper div.card div.content ul .excluded-reports span svg {
+  fill: rgba(51, 71, 91, 0.5);
+}
+section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link {
+  margin-bottom: 30rem;
+}
+section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link span.features-url a,
+section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link span.features-cta a {
+  font-weight: bold;
+  margin: 20rem 0;
+  cursor: pointer;
+}
+section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link span.features-url a:after,
+section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link span.features-cta a:after {
+  display: inline-block;
+  margin-left: 5rem;
+  width: 9rem;
+  height: 7rem;
+}
+section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link span.features-url a:hover, section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link span.features-url a:focus,
+section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link span.features-cta a:hover,
+section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link span.features-cta a:focus {
+  color: #33475b;
+}
+section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link span.features-url a:hover,
+section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link span.features-cta a:hover {
+  color: #00a4bd;
+}
+section.u4m-pricing-cards .wrapper div.card div.bottom-link span.url,
+section.u4m-pricing-cards .wrapper div.card div.bottom-link span.cta {
+  font-family: "Montserrat";
+  font-size: 24rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  margin-bottom: 30rem;
+  line-height: 1.2;
+  display: block;
+  font-size: 25rem;
+  font-family: "Montserrat";
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 0rem;
+  background-color: #733bf7;
+}
+@media (max-width: 1024px) {
+  section.u4m-pricing-cards .wrapper div.card div.bottom-link span.url,
+  section.u4m-pricing-cards .wrapper div.card div.bottom-link span.cta {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card div.bottom-link span.url,
+  section.u4m-pricing-cards .wrapper div.card div.bottom-link span.cta {
+    font-size: 18rem;
+    margin-bottom: 20rem;
+  }
+}
+@media (max-width: 580px) {
+  section.u4m-pricing-cards .wrapper div.card div.bottom-link span.url,
+  section.u4m-pricing-cards .wrapper div.card div.bottom-link span.cta {
+    margin-bottom: 0rem;
+  }
+}
+section.u4m-pricing-cards .wrapper div.card div.bottom-link span.url:hover,
+section.u4m-pricing-cards .wrapper div.card div.bottom-link span.cta:hover {
+  background-color: #00a4bd;
+  color: #fff;
+}
+section.u4m-pricing-cards .wrapper div.card div.bottom-link span.url a,
+section.u4m-pricing-cards .wrapper div.card div.bottom-link span.cta a {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 20rem;
+  display: block;
+}
