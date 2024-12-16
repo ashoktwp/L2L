@@ -1,0 +1,34 @@
+
+{
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.watchOnLaunch": true,
+    "liveSassCompile.settings.useNewCompiler": true,
+    "liveSassCompile.settings.includeItems": [
+        "/src/css/*.scss",
+        "/src/modules/*/module.scss"
+    ],
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": null
+        }
+    ],
+    "explorer.confirmDelete": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "editor.formatOnSave": true,
+    "scss.implicitlyLabel": "",
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "files.associations": {
+        "**/*.html": "html-hubl",
+        "**/templates/**/*.html": "html-hubl",
+        "*.html": "html-hubl",
+        "*.css": "css-hubl"
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html-hubl"
+    }
+}
