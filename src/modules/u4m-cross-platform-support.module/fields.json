@@ -1,0 +1,125 @@
+[ {
+  "id" : "a900b889-d3e8-7d06-f84f-d62c7bb6d954",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Available on:"
+}, {
+  "id" : "b847e496-507e-3cba-9bea-71db4fc3b6c7",
+  "name" : "items_group",
+  "display_width" : null,
+  "label" : "Items Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "7466e733-9ca9-878d-c5f6-74cff268e08d",
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "7466e733-9ca9-878d-c5f6-74cff268e08d",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade-1.png",
+      "alt" : "Browser",
+      "loading" : "lazy",
+      "width" : 24,
+      "height" : 24,
+      "max_width" : 24,
+      "max_height" : 24
+    }
+  }, {
+    "id" : "67c492a9-aa1c-68c4-9818-40776886d1ba",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Browser"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade-1.png",
+      "alt" : "Browser",
+      "loading" : "lazy",
+      "width" : 24,
+      "height" : 24,
+      "max_width" : 24,
+      "max_height" : 24
+    },
+    "title" : "Browser"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade-1.png",
+      "alt" : "Browser",
+      "loading" : "lazy",
+      "width" : 24,
+      "height" : 24,
+      "max_width" : 24,
+      "max_height" : 24
+    },
+    "title" : "Browser"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade-1.png",
+      "alt" : "Browser",
+      "loading" : "lazy",
+      "width" : 24,
+      "height" : 24,
+      "max_width" : 24,
+      "max_height" : 24
+    },
+    "title" : "Browser"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade-1.png",
+      "alt" : "Browser",
+      "loading" : "lazy",
+      "width" : 24,
+      "height" : 24,
+      "max_width" : 24,
+      "max_height" : 24
+    },
+    "title" : "Browser"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade-1.png",
+      "alt" : "Browser",
+      "loading" : "lazy",
+      "width" : 24,
+      "height" : 24,
+      "max_width" : 24,
+      "max_height" : 24
+    },
+    "title" : "Browser"
+  } ]
+} ]
