@@ -1,7 +1,7 @@
 footer.ftr_wrpp {
     padding-top: 71px;
     padding-bottom: 42px;
-    background: #0E2514;
+    background: #0e2514;
     color: $white;
 
     .top_wrp {
@@ -16,7 +16,7 @@ footer.ftr_wrpp {
             width: 100%;
 
             .hs-menu-wrapper {
-                >ul {
+                > ul {
                     display: flex;
                     flex-wrap: wrap;
                     margin: 0;
@@ -27,7 +27,7 @@ footer.ftr_wrpp {
                     width: auto;
                     row-gap: 50px;
 
-                    >li {
+                    > li {
                         margin: 0;
                         float: unset;
                         max-width: 20%;
@@ -35,7 +35,7 @@ footer.ftr_wrpp {
                         padding: 0 15px;
                         letter-spacing: normal;
 
-                        >a {
+                        > a {
                             margin: 0;
                             padding: 0;
                             margin-bottom: 17px;
@@ -83,7 +83,6 @@ footer.ftr_wrpp {
                     @include navbreak {
                         justify-content: flex-start;
                     }
-
                 }
 
                 ul {
@@ -124,9 +123,6 @@ footer.ftr_wrpp {
             @include tabletvert {
                 flex: none;
             }
-
-
-
         }
 
         .right_wrpp {
@@ -135,24 +131,10 @@ footer.ftr_wrpp {
 
             .btn {
                 a {
-                    margin: 0;
-                    border: 1px solid #409650;
-                    border-radius: 8px;
+                    @include buttonThree;
                     width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     padding: 18px 54px;
-                    font-family: $secondaryFont;
-                    font-style: normal;
-                    font-weight: 700;
-                    @include b4;
                     line-height: 17px;
-                    letter-spacing: 0.5px;
-                    text-transform: uppercase;
-                    color: $white;
-                    background-color: transparent;
-                    margin-bottom: 0;
                 }
             }
 
@@ -301,7 +283,6 @@ footer.ftr_wrpp {
                         gap: 31px;
                         flex-wrap: wrap;
 
-
                         li {
                             margin: 0;
 
@@ -445,8 +426,9 @@ footer.ftr_wrpp {
         }
 
         .rhtCnt {
-            a {
+            .hs-button {
                 margin: 0;
+                @include buttonTwo;
             }
         }
     }

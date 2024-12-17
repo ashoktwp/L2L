@@ -62,7 +62,7 @@
 @mixin buttonThree {
   @include button;
   background-color: rgba($Sea_Green, 0.08);
-  color: $Sea_Green;
+  color: $white;
   border-color: $Sea_Green;
   &:hover {
     background-color: rgba($Menthol, 0.08);

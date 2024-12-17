@@ -31,7 +31,9 @@ isAvailableForNewContent: false
     {% block footer %}
         {% module 'u4m-footer' path='../modules/u4m-footer', label='U4M Footer' %}
     {% endblock footer %}
-{{ require_js(get_asset_url('../js/main.js')) }}
+    {{ require_js(get_asset_url('../js/jquery.js')) }} 
+    {{ require_js(get_asset_url('../js/aos.js')) }} 
+    {{ require_js(get_asset_url('../js/main.js')) }} 
 {{ standard_footer_includes }}
 </body>
 </html>
