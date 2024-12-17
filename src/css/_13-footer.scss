@@ -2,7 +2,7 @@ footer.ftr_wrpp {
     padding-top: 71px;
     padding-bottom: 42px;
     background: #0E2514;
-    color: #ffffff;
+    color: $white;
 
     .top_wrp {
         display: flex;
@@ -36,13 +36,15 @@ footer.ftr_wrpp {
                         letter-spacing: normal;
 
                         >a {
+                            margin: 0;
                             padding: 0;
                             margin-bottom: 17px;
                             font-family: $secondaryFont;
                             font-style: normal;
                             font-weight: 600;
-                            font-size: 14px;
-                            line-height: 27px;
+                            @include b4;
+                            margin-bottom: 0;
+                            line-height: 1.92857143;
                             letter-spacing: 0.5px;
                             text-transform: uppercase;
                             color: $white;
@@ -94,11 +96,13 @@ footer.ftr_wrpp {
                             letter-spacing: normal;
 
                             a {
+                                margin: 0;
                                 padding: 0;
                                 font-family: $secondaryFont;
                                 font-style: normal;
                                 font-weight: 400;
-                                font-size: 14px;
+                                @include b4;
+                                margin-bottom: 0;
                                 line-height: 36px;
                                 color: $white;
                                 width: auto;
@@ -131,6 +135,7 @@ footer.ftr_wrpp {
 
             .btn {
                 a {
+                    margin: 0;
                     border: 1px solid #409650;
                     border-radius: 8px;
                     width: 100%;
@@ -141,12 +146,13 @@ footer.ftr_wrpp {
                     font-family: $secondaryFont;
                     font-style: normal;
                     font-weight: 700;
-                    font-size: 14px;
+                    @include b4;
                     line-height: 17px;
                     letter-spacing: 0.5px;
                     text-transform: uppercase;
                     color: $white;
                     background-color: transparent;
+                    margin-bottom: 0;
                 }
             }
 
@@ -183,15 +189,17 @@ footer.ftr_wrpp {
                                 margin-bottom: 18px;
 
                                 p {
+                                    margin: 0;
                                     padding: 0;
                                     margin: 0;
                                     max-width: 100%;
                                     font-family: $secondaryFont;
                                     font-style: normal;
                                     font-weight: 400;
-                                    font-size: 14px;
-                                    line-height: 24px;
+                                    @include b4;
+                                    line-height: 1.5;
                                     color: $white;
+                                    margin-bottom: 0;
                                 }
 
                                 &:last-child {
@@ -269,14 +277,16 @@ footer.ftr_wrpp {
 
                     p {
                         margin: 0;
+                        margin: 0;
                         font-family: $secondaryFont;
                         font-style: normal;
                         font-weight: 400;
-                        font-size: 14px;
-                        line-height: 27px;
+                        @include b4;
+                        line-height: 1.92857143;
                         color: $white;
                         mix-blend-mode: normal;
                         opacity: 0.66;
+                        margin-bottom: 0;
 
                         @include navbreak {
                             width: 100%;
@@ -296,12 +306,14 @@ footer.ftr_wrpp {
                             margin: 0;
 
                             a {
+                                margin: 0;
                                 font-family: $secondaryFont;
                                 font-style: normal;
                                 font-weight: 400;
-                                font-size: 14px;
-                                line-height: 27px;
+                                @include b4;
+                                line-height: 1.92857143;
                                 color: $white;
+                                margin-bottom: 0;
                             }
                         }
 
@@ -325,14 +337,16 @@ footer.ftr_wrpp {
 
                     p.left {
                         margin: 0;
+                        margin: 0;
                         font-family: $secondaryFont;
                         font-style: normal;
                         font-weight: 400;
-                        font-size: 14px;
-                        line-height: 27px;
+                        @include b4;
+                        line-height: 1.92857143;
                         color: $white;
                         mix-blend-mode: normal;
                         opacity: 0.66;
+                        margin-bottom: 0;
 
                         @include navbreak {
                             width: 100%;
@@ -363,9 +377,10 @@ footer.ftr_wrpp {
                                 font-family: $secondaryFont;
                                 font-style: normal;
                                 font-weight: 400;
-                                font-size: 14px;
-                                line-height: 24px;
+                                @include b4;
+                                line-height: 1.5;
                                 color: $white;
+                                margin-bottom: 0;
                             }
 
                             .img {
@@ -421,8 +436,9 @@ footer.ftr_wrpp {
                 font-family: $secondaryFont;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 14px;
-                line-height: 24px;
+                @include b4;
+                margin-bottom: 0;
+                line-height: 1.5;
                 color: $white;
                 opacity: 0.66;
             }
