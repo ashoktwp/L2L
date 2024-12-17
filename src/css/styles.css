@@ -3394,16 +3394,20 @@ div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gra
   font-size: 14rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  border-radius: 8px;
-  margin-bottom: 30rem;
   font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 15rem 30rem;
+  padding: 13rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
+  border-color: #409650;
   cursor: pointer;
   padding: 8rem 20rem 7rem 20rem;
   font-size: 12rem;
@@ -3415,16 +3419,19 @@ div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gra
   border-radius: 21px;
   color: #c0fc95;
   background-color: #2c6938;
+  border-color: #2c6938;
 }
 div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gradients div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area a#hs-eu-confirmation-button:active {
   border-radius: 21px;
   color: #9bf75f;
   background-color: #275430;
+  border-color: #275430;
 }
 div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gradients div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area a#hs-eu-confirmation-button:disabled {
   border-radius: 8px;
   color: #fff;
   background-color: #969696;
+  border-color: #969696;
 }
 div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gradients div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area a#hs-eu-confirmation-button:hover {
   background-color: #33475b !important;
@@ -3692,6 +3699,215 @@ section[class*=u4m-] {
   margin: 0;
 }
 
+.intro_btn_wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 36px;
+  align-items: center;
+}
+
+.hs-button {
+  line-height: 1.71;
+  font-size: 14rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid;
+  text-decoration: none;
+  padding: 13rem 30rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #409650;
+  border-color: #409650;
+  cursor: pointer;
+}
+.hs-button:hover {
+  border-radius: 21px;
+  color: #c0fc95;
+  background-color: #2c6938;
+  border-color: #2c6938;
+}
+.hs-button:active {
+  border-radius: 21px;
+  color: #9bf75f;
+  background-color: #275430;
+  border-color: #275430;
+}
+.hs-button:disabled {
+  border-radius: 8px;
+  color: #fff;
+  background-color: #969696;
+  border-color: #969696;
+}
+.hs-button.theme2 {
+  line-height: 1.71;
+  font-size: 14rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid;
+  text-decoration: none;
+  padding: 13rem 30rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #409650;
+  border-color: #409650;
+  cursor: pointer;
+  border: none;
+  padding: 14rem 30rem;
+  background: linear-gradient(308.96deg, #b8ffd2 -8.65%, #d0f76e 81.32%);
+  color: #2e2e2e;
+}
+.hs-button.theme2:hover {
+  border-radius: 21px;
+  color: #c0fc95;
+  background-color: #2c6938;
+  border-color: #2c6938;
+}
+.hs-button.theme2:active {
+  border-radius: 21px;
+  color: #9bf75f;
+  background-color: #275430;
+  border-color: #275430;
+}
+.hs-button.theme2:disabled {
+  border-radius: 8px;
+  color: #fff;
+  background-color: #969696;
+  border-color: #969696;
+}
+.hs-button.theme2:hover {
+  background-color: #c0fc95;
+  color: #2e2e2e;
+}
+.hs-button.theme2:active {
+  background-color: #9bf75f;
+  color: #2e2e2e;
+}
+.hs-button.theme3 {
+  line-height: 1.71;
+  font-size: 14rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid;
+  text-decoration: none;
+  padding: 13rem 30rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #409650;
+  border-color: #409650;
+  cursor: pointer;
+  background-color: rgba(64, 150, 80, 0.08);
+  color: #409650;
+  border-color: #409650;
+}
+.hs-button.theme3:hover {
+  border-radius: 21px;
+  color: #c0fc95;
+  background-color: #2c6938;
+  border-color: #2c6938;
+}
+.hs-button.theme3:active {
+  border-radius: 21px;
+  color: #9bf75f;
+  background-color: #275430;
+  border-color: #275430;
+}
+.hs-button.theme3:disabled {
+  border-radius: 8px;
+  color: #fff;
+  background-color: #969696;
+  border-color: #969696;
+}
+.hs-button.theme3:hover {
+  background-color: rgba(192, 252, 149, 0.08);
+  color: #c0fc95;
+  border-color: #c0fc95;
+}
+.hs-button.theme3:active {
+  background-color: rgba(155, 247, 95, 0.13);
+  color: #9bf75f;
+  border-color: #9bf75f;
+}
+
+.arrow-link {
+  line-height: 1.71;
+  font-size: 14rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  display: inline-flex;
+  color: #0e2514;
+}
+.arrow-link:hover {
+  color: #6abe7a;
+}
+.arrow-link.theme2 {
+  color: #0e2514;
+}
+.arrow-link.theme2:hover {
+  color: #c0fc95;
+}
+.arrow-link.theme3 {
+  color: #0e2514;
+}
+.arrow-link.theme3:hover {
+  color: #f7c36e;
+}
+
+.intro_content {
+  text-align: center;
+  margin-bottom: 36rem;
+  max-width: 810rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.intro_content .eyebrow_text {
+  font-family: "Sofia Sans";
+  font-size: 14rem;
+  font-weight: bold;
+  line-height: 1.5em;
+  letter-spacing: 1.5rem;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10rem;
+  margin-bottom: 11rem;
+}
+.intro_content .intro_title {
+  margin-bottom: 16rem;
+}
+.intro_content .intro_desc {
+  margin-bottom: 36px;
+}
+.intro_content .intro_desc p:last-child {
+  margin: 0;
+}
+
 .reverse-text {
   color: #fff;
 }
@@ -3700,8 +3916,132 @@ section[class*=u4m-] {
 .reverse-text .intro_title {
   color: #fff;
 }
-.reverse-text:not(.arrownotStyle) .arrow-link {
+.reverse-text .arrow-link:not(:hover) {
   color: #fff;
+}
+
+.Nori_Green_bg {
+  background-color: #0e2514;
+}
+
+.Dark_Green_bg {
+  background-color: #22452a;
+}
+
+.Forest_Green_bg {
+  background-color: #275430;
+}
+
+.Olive_Green_bg {
+  background-color: #2c6938;
+}
+
+.Medium_Sea_Green_bg {
+  background-color: #348543;
+}
+
+.Sea_Green_bg {
+  background-color: #409650;
+}
+
+.Medium_Aquamarine_bg {
+  background-color: #6abe7a;
+}
+
+.Pale_Green_bg {
+  background-color: #9dd8a7;
+}
+
+.Very_Pale_Green_bg {
+  background-color: #c8eace;
+}
+
+.Pale_Mint_bg {
+  background-color: #e3f5e6;
+}
+
+.Off-White_bg {
+  background-color: #f3faf4;
+}
+
+.light_grey_bg {
+  background-color: #969696;
+}
+
+.Pale_Yellow_Green_bg {
+  background-color: #d0f76e;
+}
+
+.prismic_mango_bg {
+  background-color: #f7c36e;
+}
+
+.prismic_mint_bg {
+  background-color: #b8ffd2;
+}
+
+.frostee_bg {
+  background-color: #e3f5e6;
+}
+
+.mint_cream_bg {
+  background-color: #f3faf4;
+}
+
+.white_bg {
+  background-color: #ffffff;
+}
+
+.menthol_bg {
+  background-color: #c0fc95;
+}
+
+.l2l_green_bg {
+  background-color: #409650;
+}
+
+.fern_green_bg {
+  background-color: #2c6938;
+}
+
+.dark_jungle_bg {
+  background-color: #0e2514;
+}
+
+.mystic_green_bg {
+  background-color: #d0f76f;
+}
+
+.lime_green_bg {
+  background-color: #9bf75f;
+}
+
+.gradient1 {
+  background-image: linear-gradient(129.51deg, #fff -3.8%, #e3f5e6 107.08%);
+}
+
+.gradient2 {
+  background-image: linear-gradient(260.94deg, #d0f76e 3.36%, #b8ffd2 98.11%);
+}
+
+.gradient3 {
+  background-image: radial-gradient(circle at 50% 0%, #2c6938 0%, #0e2514 78%);
+}
+
+.material-icons-outlined {
+  font-family: "Material Icons Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
 }
 
 section.u4m-404-error,
@@ -4275,32 +4615,39 @@ section.u4m-backup-unsubscribe form.hs-form .hs-button, section.u4m-backup-unsub
   font-size: 14rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  border-radius: 8px;
-  margin-bottom: 30rem;
   font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 15rem 30rem;
+  padding: 13rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
+  border-color: #409650;
   cursor: pointer;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-button:hover, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-button:hover, section.u4m-backup-unsubscribe form .hs-button:hover {
   border-radius: 21px;
   color: #c0fc95;
   background-color: #2c6938;
+  border-color: #2c6938;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-button:active, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-button:active, section.u4m-backup-unsubscribe form .hs-button:active {
   border-radius: 21px;
   color: #9bf75f;
   background-color: #275430;
+  border-color: #275430;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-button:disabled, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-button:disabled, section.u4m-backup-unsubscribe form .hs-button:disabled {
   border-radius: 8px;
   color: #fff;
   background-color: #969696;
+  border-color: #969696;
 }
 section.u4m-backup-unsubscribe form h3 {
   font-size: 12rem;
@@ -6193,16 +6540,20 @@ section.u4m-password-prompt form .hs-button {
   font-size: 14rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  border-radius: 8px;
-  margin-bottom: 30rem;
   font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 15rem 30rem;
+  padding: 13rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
+  border-color: #409650;
   cursor: pointer;
 }
 section.u4m-membership-login form.hs-form .hs-button:hover, section.u4m-membership-login form.mixitup-multifilter .hs-button:hover, section.u4m-membership-login form .hs-button:hover,
@@ -6221,6 +6572,7 @@ section.u4m-password-prompt form .hs-button:hover {
   border-radius: 21px;
   color: #c0fc95;
   background-color: #2c6938;
+  border-color: #2c6938;
 }
 section.u4m-membership-login form.hs-form .hs-button:active, section.u4m-membership-login form.mixitup-multifilter .hs-button:active, section.u4m-membership-login form .hs-button:active,
 section.u4m-membership-register form.hs-form .hs-button:active,
@@ -6238,6 +6590,7 @@ section.u4m-password-prompt form .hs-button:active {
   border-radius: 21px;
   color: #9bf75f;
   background-color: #275430;
+  border-color: #275430;
 }
 section.u4m-membership-login form.hs-form .hs-button:disabled, section.u4m-membership-login form.mixitup-multifilter .hs-button:disabled, section.u4m-membership-login form .hs-button:disabled,
 section.u4m-membership-register form.hs-form .hs-button:disabled,
@@ -6255,6 +6608,7 @@ section.u4m-password-prompt form .hs-button:disabled {
   border-radius: 8px;
   color: #fff;
   background-color: #969696;
+  border-color: #969696;
 }
 section.u4m-membership-login form input,
 section.u4m-membership-register form input,
@@ -6835,32 +7189,39 @@ section.u4m-subscription-preferences form.hs-form .hs-button, section.u4m-subscr
   font-size: 14rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  border-radius: 8px;
-  margin-bottom: 30rem;
   font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 15rem 30rem;
+  padding: 13rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
+  border-color: #409650;
   cursor: pointer;
 }
 section.u4m-subscription-preferences form.hs-form .hs-button:hover, section.u4m-subscription-preferences form.mixitup-multifilter .hs-button:hover, section.u4m-subscription-preferences form .hs-button:hover {
   border-radius: 21px;
   color: #c0fc95;
   background-color: #2c6938;
+  border-color: #2c6938;
 }
 section.u4m-subscription-preferences form.hs-form .hs-button:active, section.u4m-subscription-preferences form.mixitup-multifilter .hs-button:active, section.u4m-subscription-preferences form .hs-button:active {
   border-radius: 21px;
   color: #9bf75f;
   background-color: #275430;
+  border-color: #275430;
 }
 section.u4m-subscription-preferences form.hs-form .hs-button:disabled, section.u4m-subscription-preferences form.mixitup-multifilter .hs-button:disabled, section.u4m-subscription-preferences form .hs-button:disabled {
   border-radius: 8px;
   color: #fff;
   background-color: #969696;
+  border-color: #969696;
 }
 section.u4m-subscription-preferences form div.item {
   border-bottom: 2rem solid #cbd6e2;
@@ -7408,32 +7769,39 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button, section.u4m-drag-and-dro
   font-size: 14rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  border-radius: 8px;
-  margin-bottom: 30rem;
   font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 15rem 30rem;
+  padding: 13rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
+  border-color: #409650;
   cursor: pointer;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-button:hover, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-button:hover, section.u4m-drag-and-drop-area form .hs-button:hover {
   border-radius: 21px;
   color: #c0fc95;
   background-color: #2c6938;
+  border-color: #2c6938;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-button:active, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-button:active, section.u4m-drag-and-drop-area form .hs-button:active {
   border-radius: 21px;
   color: #9bf75f;
   background-color: #275430;
+  border-color: #275430;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-button:disabled, section.u4m-drag-and-drop-area form .hs-button:disabled {
   border-radius: 8px;
   color: #fff;
   background-color: #969696;
+  border-color: #969696;
 }
 
 .dnd_padd,
@@ -7503,8 +7871,8 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
 @media (min-width: 768px) {
   .dnd-section .row-fluid > .dnd-column,
   .col {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 .visually-hidden,
@@ -8434,64 +8802,78 @@ section.u4m-blog-post div.comments div.content form.hs-form .hs-button, section.
   font-size: 14rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  border-radius: 8px;
-  margin-bottom: 30rem;
   font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 15rem 30rem;
+  padding: 13rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
+  border-color: #409650;
   cursor: pointer;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-button:hover, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-button:hover, section.u4m-blog-post div.comments div.content form .hs-button:hover {
   border-radius: 21px;
   color: #c0fc95;
   background-color: #2c6938;
+  border-color: #2c6938;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-button:active, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-button:active, section.u4m-blog-post div.comments div.content form .hs-button:active {
   border-radius: 21px;
   color: #9bf75f;
   background-color: #275430;
+  border-color: #275430;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-button:disabled, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-button:disabled, section.u4m-blog-post div.comments div.content form .hs-button:disabled {
   border-radius: 8px;
   color: #fff;
   background-color: #969696;
+  border-color: #969696;
 }
 section.u4m-blog-post div.comments div.content form .hs-button {
   line-height: 1.71;
   font-size: 14rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-  border-radius: 8px;
-  margin-bottom: 30rem;
   font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 15rem 30rem;
+  padding: 13rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
+  border-color: #409650;
   cursor: pointer;
 }
 section.u4m-blog-post div.comments div.content form .hs-button:hover {
   border-radius: 21px;
   color: #c0fc95;
   background-color: #2c6938;
+  border-color: #2c6938;
 }
 section.u4m-blog-post div.comments div.content form .hs-button:active {
   border-radius: 21px;
   color: #9bf75f;
   background-color: #275430;
+  border-color: #275430;
 }
 section.u4m-blog-post div.comments div.content form .hs-button:disabled {
   border-radius: 8px;
   color: #fff;
   background-color: #969696;
+  border-color: #969696;
 }
 
 @keyframes fadeIn1 {

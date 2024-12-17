@@ -20,19 +20,20 @@ section.u4m-accordion .intro {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
   max-width: 768rem;
   text-align: center;
 }
 section.u4m-accordion .intro h2 {
-  font-family: "Montserrat";
-  font-size: 44rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 48rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.125;
+  color: #0e2514;
+  font-family: "Inter";
+  font-weight: bold;
+  letter-spacing: -0.5px;
 }
 @media (max-width: 1024px) {
   section.u4m-accordion .intro h2 {
@@ -46,7 +47,7 @@ section.u4m-accordion .intro h2 {
   }
 }
 section.u4m-accordion .intro p {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 18rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
@@ -61,7 +62,7 @@ section.u4m-accordion .accordions {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
   margin: 50rem auto;
@@ -72,7 +73,7 @@ section.u4m-accordion .accordions details {
   cursor: pointer;
 }
 section.u4m-accordion .accordions details summary {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 18rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;

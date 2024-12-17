@@ -33,7 +33,7 @@ section.u4m-pricing-cards div.intro {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
   max-width: 1280rem;
@@ -45,12 +45,13 @@ section.u4m-pricing-cards div.intro {
   }
 }
 section.u4m-pricing-cards div.intro .heading {
-  font-family: "Montserrat";
-  font-size: 44rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 48rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.125;
+  color: #0e2514;
+  font-family: "Inter";
+  font-weight: bold;
+  letter-spacing: -0.5px;
   text-align: center;
   max-width: 685rem;
   margin: 0 auto 14rem;
@@ -67,7 +68,7 @@ section.u4m-pricing-cards div.intro .heading {
   }
 }
 section.u4m-pricing-cards div.intro .subheading {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 16rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
@@ -87,7 +88,7 @@ section.u4m-pricing-cards .wrapper {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
   max-width: 1280rem;
@@ -122,31 +123,46 @@ section.u4m-pricing-cards .wrapper div.card {
   }
 }
 section.u4m-pricing-cards .wrapper div.card button {
-  display: inline-block;
-  font-family: "Montserrat";
-  color: #fff;
-  background-color: #733bf7;
-  border: 0;
-  border-radius: 4rem;
-  padding: 15rem 40rem 15rem 40rem;
-  margin: 20rem 0;
-  transition: 0.1s ease-in;
-  text-transform: uppercase;
-  font-weight: bold;
+  line-height: 1.71;
   font-size: 14rem;
-  line-height: 1.2;
-  letter-spacing: 0.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid;
   text-decoration: none;
+  padding: 13rem 30rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #409650;
+  border-color: #409650;
   cursor: pointer;
-  text-align: center;
-  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
   padding: 8rem 20rem 7rem 20rem;
   font-size: 12rem;
   line-height: 1.2;
 }
-section.u4m-pricing-cards .wrapper div.card button:hover, section.u4m-pricing-cards .wrapper div.card button:focus {
-  background-color: #33475b;
+section.u4m-pricing-cards .wrapper div.card button:hover {
+  border-radius: 21px;
+  color: #c0fc95;
+  background-color: #2c6938;
+  border-color: #2c6938;
+}
+section.u4m-pricing-cards .wrapper div.card button:active {
+  border-radius: 21px;
+  color: #9bf75f;
+  background-color: #275430;
+  border-color: #275430;
+}
+section.u4m-pricing-cards .wrapper div.card button:disabled {
+  border-radius: 8px;
   color: #fff;
+  background-color: #969696;
+  border-color: #969696;
 }
 section.u4m-pricing-cards .wrapper div.card .image {
   min-height: 100rem;
@@ -197,7 +213,7 @@ section.u4m-pricing-cards .wrapper div.card .content span.url {
   display: flex;
 }
 section.u4m-pricing-cards .wrapper div.card .content span.eyebrow {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 13rem;
   line-height: 1.6;
   letter-spacing: 0.35rem;
@@ -213,30 +229,20 @@ section.u4m-pricing-cards .wrapper div.card .content span.eyebrow {
   }
 }
 section.u4m-pricing-cards .wrapper div.card .content span.title {
-  font-family: "Montserrat";
-  font-size: 24rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.71;
+  color: #2e2e2e;
+  font-family: "Sofia Sans";
+  font-weight: bold;
+  letter-spacing: 0px;
   display: block;
   color: #33475b;
   margin-top: 5rem;
   margin-bottom: 15rem;
 }
-@media (max-width: 1024px) {
-  section.u4m-pricing-cards .wrapper div.card .content span.title {
-    font-size: 20rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-pricing-cards .wrapper div.card .content span.title {
-    font-size: 18rem;
-    margin-bottom: 20rem;
-  }
-}
 section.u4m-pricing-cards .wrapper div.card .content span.teaser {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 13rem;
   line-height: 1.6;
   letter-spacing: 0.35rem;
@@ -256,33 +262,49 @@ section.u4m-pricing-cards .wrapper div.card .content span.url {
 }
 section.u4m-pricing-cards .wrapper div.card .content span.cta a,
 section.u4m-pricing-cards .wrapper div.card .content span.url a {
-  display: inline-block;
-  font-family: "Montserrat";
-  color: #fff;
-  background-color: #733bf7;
-  border: 0;
-  border-radius: 4rem;
-  padding: 15rem 40rem 15rem 40rem;
-  margin: 20rem 0;
-  transition: 0.1s ease-in;
-  text-transform: uppercase;
-  font-weight: bold;
+  line-height: 1.71;
   font-size: 14rem;
-  line-height: 1.2;
-  letter-spacing: 0.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid;
   text-decoration: none;
+  padding: 13rem 30rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #409650;
+  border-color: #409650;
   cursor: pointer;
-  text-align: center;
-  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
   padding: 8rem 20rem 7rem 20rem;
   font-size: 12rem;
   line-height: 1.2;
 }
-section.u4m-pricing-cards .wrapper div.card .content span.cta a:hover, section.u4m-pricing-cards .wrapper div.card .content span.cta a:focus,
-section.u4m-pricing-cards .wrapper div.card .content span.url a:hover,
-section.u4m-pricing-cards .wrapper div.card .content span.url a:focus {
-  background-color: #33475b;
+section.u4m-pricing-cards .wrapper div.card .content span.cta a:hover,
+section.u4m-pricing-cards .wrapper div.card .content span.url a:hover {
+  border-radius: 21px;
+  color: #c0fc95;
+  background-color: #2c6938;
+  border-color: #2c6938;
+}
+section.u4m-pricing-cards .wrapper div.card .content span.cta a:active,
+section.u4m-pricing-cards .wrapper div.card .content span.url a:active {
+  border-radius: 21px;
+  color: #9bf75f;
+  background-color: #275430;
+  border-color: #275430;
+}
+section.u4m-pricing-cards .wrapper div.card .content span.cta a:disabled,
+section.u4m-pricing-cards .wrapper div.card .content span.url a:disabled {
+  border-radius: 8px;
   color: #fff;
+  background-color: #969696;
+  border-color: #969696;
 }
 @media (max-width: 1024px) {
   section.u4m-pricing-cards .wrapper div.card {
@@ -297,18 +319,19 @@ section.u4m-pricing-cards .wrapper div.card .content span.url a:focus {
   }
 }
 section.u4m-pricing-cards .wrapper div.card .title {
-  font-family: "Montserrat";
-  font-size: 44rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 48rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.125;
+  color: #0e2514;
+  font-family: "Inter";
+  font-weight: bold;
+  letter-spacing: -0.5px;
   background-color: #cbd6e2;
   padding: 35rem;
   margin-bottom: 0rem;
   text-align: center;
   font-size: 30rem;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-weight: normal;
 }
 @media (max-width: 1024px) {
@@ -346,15 +369,16 @@ section.u4m-pricing-cards .wrapper div.card div.content .price-container {
   }
 }
 section.u4m-pricing-cards .wrapper div.card div.content .price-container .price {
-  font-family: "Montserrat";
-  font-size: 60rem;
+  font-size: 72rem;
+  font-family: "Inter";
   font-weight: bold;
-  letter-spacing: 0.25rem;
+  letter-spacing: -0.5px;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.0833;
   margin-top: 0;
+  color: #0e2514;
   font-size: 50rem;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-weight: 700;
 }
 @media (max-width: 1024px) {
@@ -374,13 +398,13 @@ section.u4m-pricing-cards .wrapper div.card div.content .price-container .price 
   }
 }
 section.u4m-pricing-cards .wrapper div.card div.content .price-container .price .price-frequency {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 16rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
   margin-bottom: 20rem;
   font-size: 20rem;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
 }
 @media (max-width: 580px) {
   section.u4m-pricing-cards .wrapper div.card div.content .price-container .price .price-frequency {
@@ -388,7 +412,7 @@ section.u4m-pricing-cards .wrapper div.card div.content .price-container .price 
   }
 }
 section.u4m-pricing-cards .wrapper div.card div.content .price-container .teaser {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 14rem;
   line-height: 1.6;
   letter-spacing: 0.35rem;
@@ -406,32 +430,20 @@ section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top
 }
 section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-url,
 section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-cta {
-  font-family: "Montserrat";
-  font-size: 24rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.71;
+  color: #2e2e2e;
+  font-family: "Sofia Sans";
+  font-weight: bold;
+  letter-spacing: 0px;
   display: block;
   font-size: 25rem;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   text-align: center;
   font-weight: normal;
   margin-bottom: 40rem;
   background-color: #733bf7;
-}
-@media (max-width: 1024px) {
-  section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-url,
-  section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-cta {
-    font-size: 20rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-url,
-  section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-cta {
-    font-size: 18rem;
-    margin-bottom: 20rem;
-  }
 }
 @media (max-width: 580px) {
   section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top-link span.top-link-url,
@@ -452,26 +464,16 @@ section.u4m-pricing-cards .wrapper div.card div.content .price-container div.top
   display: block;
 }
 section.u4m-pricing-cards .wrapper div.card div.content .list-title {
-  font-family: "Montserrat";
-  font-size: 24rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.71;
+  color: #2e2e2e;
+  font-family: "Sofia Sans";
+  font-weight: bold;
+  letter-spacing: 0px;
   font-size: 25rem;
   font-weight: normal;
-  font-family: "Montserrat";
-}
-@media (max-width: 1024px) {
-  section.u4m-pricing-cards .wrapper div.card div.content .list-title {
-    font-size: 20rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-pricing-cards .wrapper div.card div.content .list-title {
-    font-size: 18rem;
-    margin-bottom: 20rem;
-  }
+  font-family: "Sofia Sans";
 }
 section.u4m-pricing-cards .wrapper div.card div.content ul {
   list-style: none;
@@ -483,7 +485,7 @@ section.u4m-pricing-cards .wrapper div.card div.content ul {
 }
 section.u4m-pricing-cards .wrapper div.card div.content ul li {
   display: flex;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 16rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
@@ -541,32 +543,20 @@ section.u4m-pricing-cards .wrapper div.card div.content div.features-list-link s
 }
 section.u4m-pricing-cards .wrapper div.card div.bottom-link span.url,
 section.u4m-pricing-cards .wrapper div.card div.bottom-link span.cta {
-  font-family: "Montserrat";
-  font-size: 24rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.71;
+  color: #2e2e2e;
+  font-family: "Sofia Sans";
+  font-weight: bold;
+  letter-spacing: 0px;
   display: block;
   font-size: 25rem;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   text-align: center;
   font-weight: normal;
   margin-bottom: 0rem;
   background-color: #733bf7;
-}
-@media (max-width: 1024px) {
-  section.u4m-pricing-cards .wrapper div.card div.bottom-link span.url,
-  section.u4m-pricing-cards .wrapper div.card div.bottom-link span.cta {
-    font-size: 20rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-pricing-cards .wrapper div.card div.bottom-link span.url,
-  section.u4m-pricing-cards .wrapper div.card div.bottom-link span.cta {
-    font-size: 18rem;
-    margin-bottom: 20rem;
-  }
 }
 @media (max-width: 580px) {
   section.u4m-pricing-cards .wrapper div.card div.bottom-link span.url,

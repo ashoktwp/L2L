@@ -48,10 +48,11 @@ section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .colum
   }
 }
 section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text .eyebrow {
-  font-family: "Montserrat";
-  font-size: 16rem;
+  font-family: "Sofia Sans";
+  font-size: 14rem;
   font-weight: bold;
-  letter-spacing: 1rem;
+  line-height: 1.5em;
+  letter-spacing: 1.5rem;
   text-transform: uppercase;
   display: block;
   margin-bottom: 10rem;
@@ -60,21 +61,22 @@ section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .colum
   color: #33475b;
 }
 section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text h1 {
-  font-family: "Montserrat";
-  font-size: 38rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 32rem;
   margin-bottom: 30rem;
   line-height: 1.2;
+  color: #2e2e2e;
+  font-family: "Inter";
+  font-weight: bold;
+  letter-spacing: -0.5px;
 }
 @media (max-width: 1024px) {
   section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text h1 {
-    font-size: 32rem;
+    font-size: 28rem;
   }
 }
 @media (max-width: 580px) {
   section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text h1 {
-    font-size: 28rem;
+    font-size: 22rem;
     margin-bottom: 20rem;
   }
 }
@@ -82,7 +84,7 @@ section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .colum
   color: #33475b;
 }
 section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text h2 {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 22rem;
   line-height: 1.4;
   letter-spacing: 0.25rem;
@@ -102,29 +104,44 @@ section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .colum
   color: #fff;
 }
 section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text .anchor-link-button {
-  display: inline-block;
-  font-family: "Montserrat";
-  color: #fff;
-  background-color: #733bf7;
-  border: 0;
-  border-radius: 4rem;
-  padding: 15rem 40rem 15rem 40rem;
-  margin: 20rem 0;
-  transition: 0.1s ease-in;
-  text-transform: uppercase;
-  font-weight: bold;
+  line-height: 1.71;
   font-size: 14rem;
-  line-height: 1.2;
-  letter-spacing: 0.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid;
   text-decoration: none;
+  padding: 13rem 30rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #409650;
+  border-color: #409650;
   cursor: pointer;
-  text-align: center;
-  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
   display: none;
 }
-section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text .anchor-link-button:hover, section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text .anchor-link-button:focus {
-  background-color: #33475b;
+section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text .anchor-link-button:hover {
+  border-radius: 21px;
+  color: #c0fc95;
+  background-color: #2c6938;
+  border-color: #2c6938;
+}
+section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text .anchor-link-button:active {
+  border-radius: 21px;
+  color: #9bf75f;
+  background-color: #275430;
+  border-color: #275430;
+}
+section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text .anchor-link-button:disabled {
+  border-radius: 8px;
   color: #fff;
+  background-color: #969696;
+  border-color: #969696;
 }
 @media (max-width: 1024px) {
   section.u4m-landing-page-overlap .landing-page-columns .left-column .hero .column-inner .text .anchor-link-button {
@@ -169,7 +186,7 @@ section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-
   margin: 0 0 0 auto;
 }
 section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-copy .column-inner p {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 16rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
@@ -181,7 +198,7 @@ section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-
   }
 }
 section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-copy .column-inner p:first-of-type {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 18rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
@@ -193,43 +210,29 @@ section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-
   }
 }
 section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-copy .column-inner h2 {
-  font-family: "Montserrat";
-  font-size: 34rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 21rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
-}
-@media (max-width: 1024px) {
-  section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-copy .column-inner h2 {
-    font-size: 28rem;
-  }
+  line-height: 1.57;
+  color: #2e2e2e;
+  font-family: "Sofia Sans";
+  font-weight: 400;
+  letter-spacing: 0px;
 }
 @media (max-width: 580px) {
   section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-copy .column-inner h2 {
-    font-size: 24rem;
+    font-size: 16rem;
     margin-bottom: 20rem;
   }
 }
 section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-copy .column-inner h3 {
-  font-family: "Montserrat";
-  font-size: 30rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.71;
+  color: #2e2e2e;
+  font-family: "Sofia Sans";
+  font-weight: 400;
+  letter-spacing: 0px;
   font-weight: 700;
-}
-@media (max-width: 1024px) {
-  section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-copy .column-inner h3 {
-    font-size: 24rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-copy .column-inner h3 {
-    font-size: 20rem;
-    margin-bottom: 20rem;
-  }
 }
 @media (max-width: 1280px) {
   section.u4m-landing-page-overlap .landing-page-columns .left-column .additional-copy .column-inner {
@@ -330,23 +333,13 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
   }
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap h3 {
-  font-family: "Montserrat";
-  font-size: 24rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
-}
-@media (max-width: 1024px) {
-  section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap h3 {
-    font-size: 20rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap h3 {
-    font-size: 18rem;
-    margin-bottom: 20rem;
-  }
+  line-height: 1.71;
+  color: #2e2e2e;
+  font-family: "Sofia Sans";
+  font-weight: bold;
+  letter-spacing: 0px;
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap div.legal-consent-container {
   font-size: 14rem;
@@ -355,7 +348,7 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap div.legal-consent-container p,
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap div.legal-consent-container .hs-form-booleancheckbox label {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 12rem;
   line-height: 1.6;
   letter-spacing: 0.35rem;
@@ -403,10 +396,11 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
   line-height: 1.2;
   letter-spacing: 1rem;
   pointer-events: auto;
-  font-family: "Montserrat";
-  font-size: 16rem;
+  font-family: "Sofia Sans";
+  font-size: 14rem;
   font-weight: bold;
-  letter-spacing: 1rem;
+  line-height: 1.5em;
+  letter-spacing: 1.5rem;
   text-transform: uppercase;
   display: block;
   margin-bottom: 10rem;
@@ -433,7 +427,7 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 18rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
@@ -506,7 +500,7 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.hs-form .input input[type=file], section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.mixitup-multifilter .input input[type=file], section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap .input input[type=file] {
   font-size: 16rem;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   background-color: transparent;
   position: relative;
   font-weight: bold;
@@ -568,7 +562,7 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.hs-form .input + .hs-error-msgs li label, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.mixitup-multifilter .input + .hs-error-msgs li label, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap .input + .hs-error-msgs li label {
   font-size: 12rem;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   text-transform: uppercase;
   letter-spacing: 1rem;
   display: inline-block;
@@ -826,28 +820,43 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
   }
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.hs-form .hs-button, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.mixitup-multifilter .hs-button, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap .hs-button {
-  display: inline-block;
-  font-family: "Montserrat";
-  color: #fff;
-  background-color: #733bf7;
-  border: 0;
-  border-radius: 4rem;
-  padding: 15rem 40rem 15rem 40rem;
-  margin: 20rem 0;
-  transition: 0.1s ease-in;
-  text-transform: uppercase;
-  font-weight: bold;
+  line-height: 1.71;
   font-size: 14rem;
-  line-height: 1.2;
-  letter-spacing: 0.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid;
   text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
-}
-section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.hs-form .hs-button:hover, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.hs-form .hs-button:focus, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.mixitup-multifilter .hs-button:hover, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.mixitup-multifilter .hs-button:focus, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap .hs-button:hover, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap .hs-button:focus {
-  background-color: #33475b;
+  padding: 13rem 30rem;
+  text-transform: uppercase;
   color: #fff;
+  background-color: #409650;
+  border-color: #409650;
+  cursor: pointer;
+}
+section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.hs-form .hs-button:hover, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.mixitup-multifilter .hs-button:hover, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap .hs-button:hover {
+  border-radius: 21px;
+  color: #c0fc95;
+  background-color: #2c6938;
+  border-color: #2c6938;
+}
+section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.hs-form .hs-button:active, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.mixitup-multifilter .hs-button:active, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap .hs-button:active {
+  border-radius: 21px;
+  color: #9bf75f;
+  background-color: #275430;
+  border-color: #275430;
+}
+section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.hs-form .hs-button:disabled, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.mixitup-multifilter .hs-button:disabled, section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap .hs-button:disabled {
+  border-radius: 8px;
+  color: #fff;
+  background-color: #969696;
+  border-color: #969696;
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap form {
   margin: 0;
@@ -870,7 +879,7 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
   display: none;
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap.has-thankyou .submitted-message {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 22rem;
   line-height: 1.4;
   letter-spacing: 0.25rem;
@@ -882,23 +891,13 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
   }
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap h2.heading {
-  font-family: "Montserrat";
-  font-size: 24rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
-}
-@media (max-width: 1024px) {
-  section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap h2.heading {
-    font-size: 20rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .form-wrap h2.heading {
-    font-size: 18rem;
-    margin-bottom: 20rem;
-  }
+  line-height: 1.71;
+  color: #2e2e2e;
+  font-family: "Sofia Sans";
+  font-weight: bold;
+  letter-spacing: 0px;
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .disclaimer {
   color: #7c98b6;
@@ -924,33 +923,23 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
   background-size: cover;
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .quote .quotation-mark {
-  font-family: "Montserrat";
-  font-size: 24rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.71;
+  color: #2e2e2e;
+  font-family: "Sofia Sans";
+  font-weight: bold;
+  letter-spacing: 0px;
   color: #00a4bd;
   font-weight: bold;
 }
-@media (max-width: 1024px) {
-  section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .quote .quotation-mark {
-    font-size: 20rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .quote .quotation-mark {
-    font-size: 18rem;
-    margin-bottom: 20rem;
-  }
-}
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .quote .quote-text {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 22rem;
   line-height: 1.4;
   letter-spacing: 0.25rem;
   margin-bottom: 20rem;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   color: #7c98b6;
 }
 @media (max-width: 580px) {
@@ -959,7 +948,7 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
   }
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .quote .quote-author {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 16rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
@@ -971,7 +960,7 @@ section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inn
   }
 }
 section.u4m-landing-page-overlap .landing-page-columns .right-column .column-inner .quote .quote-author span.author-name {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-weight: bold;
   display: block;
   text-transform: uppercase;

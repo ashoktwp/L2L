@@ -26,7 +26,7 @@ section.u4m-logo-trust-marks .container {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
 }
@@ -34,7 +34,7 @@ section.u4m-logo-trust-marks .container .intro {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
   max-width: 900rem;
@@ -42,12 +42,13 @@ section.u4m-logo-trust-marks .container .intro {
   padding: 0;
 }
 section.u4m-logo-trust-marks .container .intro .heading {
-  font-family: "Montserrat";
-  font-size: 44rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 48rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.125;
+  color: #0e2514;
+  font-family: "Inter";
+  font-weight: bold;
+  letter-spacing: -0.5px;
   text-align: center;
 }
 @media (max-width: 1024px) {
@@ -63,7 +64,7 @@ section.u4m-logo-trust-marks .container .intro .heading {
 }
 section.u4m-logo-trust-marks .container .intro .subheading {
   text-align: center;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 18rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
@@ -121,7 +122,7 @@ section.u4m-logo-trust-marks .container .grid {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
   max-width: 900rem;

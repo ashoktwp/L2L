@@ -29,7 +29,7 @@ section.u4m-hero .inner .content-wrap {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
   padding: 20rem;
@@ -54,22 +54,24 @@ body.hs-landing-page section.u4m-hero .inner .content-wrap .copy {
   flex: 0 0 100%;
 }
 section.u4m-hero .inner .content-wrap .copy .eyebrow {
-  font-family: "Montserrat";
-  font-size: 16rem;
+  font-family: "Sofia Sans";
+  font-size: 14rem;
   font-weight: bold;
-  letter-spacing: 1rem;
+  line-height: 1.5em;
+  letter-spacing: 1.5rem;
   text-transform: uppercase;
   display: block;
   margin-bottom: 10rem;
 }
 section.u4m-hero .inner .content-wrap .copy .heading {
-  font-family: "Montserrat";
-  font-size: 60rem;
+  font-size: 72rem;
+  font-family: "Inter";
   font-weight: bold;
-  letter-spacing: 0.25rem;
+  letter-spacing: -0.5px;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.0833;
   margin-top: 0;
+  color: #0e2514;
 }
 @media (max-width: 1024px) {
   section.u4m-hero .inner .content-wrap .copy .heading {
@@ -83,12 +85,13 @@ section.u4m-hero .inner .content-wrap .copy .heading {
   }
 }
 section.u4m-hero .inner .content-wrap .copy .heading.small {
-  font-family: "Montserrat";
-  font-size: 44rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 48rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.125;
+  color: #0e2514;
+  font-family: "Inter";
+  font-weight: bold;
+  letter-spacing: -0.5px;
 }
 @media (max-width: 1024px) {
   section.u4m-hero .inner .content-wrap .copy .heading.small {
@@ -103,33 +106,35 @@ section.u4m-hero .inner .content-wrap .copy .heading.small {
 }
 @media (max-width: 1024px) {
   section.u4m-hero .inner .content-wrap .copy .heading.small {
-    font-family: "Montserrat";
-    font-size: 38rem;
-    font-weight: bold;
-    letter-spacing: 0.25rem;
+    font-size: 32rem;
     margin-bottom: 30rem;
     line-height: 1.2;
+    color: #2e2e2e;
+    font-family: "Inter";
+    font-weight: bold;
+    letter-spacing: -0.5px;
   }
 }
 @media (max-width: 1024px) and (max-width: 1024px) {
   section.u4m-hero .inner .content-wrap .copy .heading.small {
-    font-size: 32rem;
+    font-size: 28rem;
   }
 }
 @media (max-width: 1024px) and (max-width: 580px) {
   section.u4m-hero .inner .content-wrap .copy .heading.small {
-    font-size: 28rem;
+    font-size: 22rem;
     margin-bottom: 20rem;
   }
 }
 @media (max-width: 1024px) {
   section.u4m-hero .inner .content-wrap .copy .heading {
-    font-family: "Montserrat";
-    font-size: 44rem;
-    font-weight: bold;
-    letter-spacing: 0.25rem;
+    font-size: 48rem;
     margin-bottom: 30rem;
-    line-height: 1.2;
+    line-height: 1.125;
+    color: #0e2514;
+    font-family: "Inter";
+    font-weight: bold;
+    letter-spacing: -0.5px;
   }
 }
 @media (max-width: 1024px) and (max-width: 1024px) {
@@ -144,7 +149,7 @@ section.u4m-hero .inner .content-wrap .copy .heading.small {
   }
 }
 section.u4m-hero .inner .content-wrap .copy .subtext {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 18rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
@@ -156,28 +161,43 @@ section.u4m-hero .inner .content-wrap .copy .subtext {
   }
 }
 section.u4m-hero .inner .content-wrap .copy a {
-  display: inline-block;
-  font-family: "Montserrat";
-  color: #fff;
-  background-color: #733bf7;
-  border: 0;
-  border-radius: 4rem;
-  padding: 15rem 40rem 15rem 40rem;
-  margin: 20rem 0;
-  transition: 0.1s ease-in;
-  text-transform: uppercase;
-  font-weight: bold;
+  line-height: 1.71;
   font-size: 14rem;
-  line-height: 1.2;
-  letter-spacing: 0.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid;
   text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
-}
-section.u4m-hero .inner .content-wrap .copy a:hover, section.u4m-hero .inner .content-wrap .copy a:focus {
-  background-color: #33475b;
+  padding: 13rem 30rem;
+  text-transform: uppercase;
   color: #fff;
+  background-color: #409650;
+  border-color: #409650;
+  cursor: pointer;
+}
+section.u4m-hero .inner .content-wrap .copy a:hover {
+  border-radius: 21px;
+  color: #c0fc95;
+  background-color: #2c6938;
+  border-color: #2c6938;
+}
+section.u4m-hero .inner .content-wrap .copy a:active {
+  border-radius: 21px;
+  color: #9bf75f;
+  background-color: #275430;
+  border-color: #275430;
+}
+section.u4m-hero .inner .content-wrap .copy a:disabled {
+  border-radius: 8px;
+  color: #fff;
+  background-color: #969696;
+  border-color: #969696;
 }
 section.u4m-hero .inner .content-wrap .copy svg {
   max-width: 100rem;

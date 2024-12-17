@@ -38,7 +38,7 @@ section.u4m-slider-gallery div.container {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
 }
@@ -46,19 +46,20 @@ section.u4m-slider-gallery div.container .intro {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
   max-width: 900rem;
   padding: 0;
 }
 section.u4m-slider-gallery div.container .intro .optional-headline {
-  font-family: "Montserrat";
-  font-size: 44rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 48rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.125;
+  color: #0e2514;
+  font-family: "Inter";
+  font-weight: bold;
+  letter-spacing: -0.5px;
   text-align: center;
 }
 @media (max-width: 1024px) {

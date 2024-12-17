@@ -28,7 +28,7 @@ section.u4m-features-table.narrow div.section {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
   max-width: 900rem;
@@ -37,7 +37,7 @@ section.u4m-features-table div.header {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
   display: flex;
@@ -48,12 +48,13 @@ section.u4m-features-table div.header .intro {
   flex: 0 0 50%;
 }
 section.u4m-features-table div.header .intro .title {
-  font-family: "Montserrat";
-  font-size: 44rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 48rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.125;
+  color: #0e2514;
+  font-family: "Inter";
+  font-weight: bold;
+  letter-spacing: -0.5px;
   margin-bottom: 20rem;
 }
 @media (max-width: 1024px) {
@@ -69,23 +70,13 @@ section.u4m-features-table div.header .intro .title {
 }
 @media (max-width: 580px) {
   section.u4m-features-table div.header .intro .title {
-    font-family: "Montserrat";
-    font-size: 24rem;
-    font-weight: bold;
-    letter-spacing: 0.25rem;
+    font-size: 14rem;
     margin-bottom: 30rem;
-    line-height: 1.2;
-  }
-}
-@media (max-width: 580px) and (max-width: 1024px) {
-  section.u4m-features-table div.header .intro .title {
-    font-size: 20rem;
-  }
-}
-@media (max-width: 580px) and (max-width: 580px) {
-  section.u4m-features-table div.header .intro .title {
-    font-size: 18rem;
-    margin-bottom: 20rem;
+    line-height: 1.71;
+    color: #2e2e2e;
+    font-family: "Sofia Sans";
+    font-weight: bold;
+    letter-spacing: 0px;
   }
 }
 section.u4m-features-table div.header .intro p {
@@ -99,7 +90,7 @@ section.u4m-features-table div.header span.version {
 }
 @media (max-width: 580px) {
   section.u4m-features-table div.header span.version {
-    font-family: "Montserrat";
+    font-family: "Sofia Sans";
     font-size: 12rem;
     line-height: 1.6;
     letter-spacing: 0.35rem;
@@ -115,12 +106,12 @@ section.u4m-features-table div.section {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
 }
 section.u4m-features-table div.section .title {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 16rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
@@ -139,7 +130,7 @@ section.u4m-features-table div.section .title {
 }
 @media (max-width: 580px) {
   section.u4m-features-table div.section .title {
-    font-family: "Montserrat";
+    font-family: "Sofia Sans";
     font-size: 12rem;
     line-height: 1.6;
     letter-spacing: 0.35rem;
@@ -164,7 +155,7 @@ section.u4m-features-table div.section div.item div.item-name {
 }
 @media (max-width: 580px) {
   section.u4m-features-table div.section div.item div.item-name {
-    font-family: "Montserrat";
+    font-family: "Sofia Sans";
     font-size: 12rem;
     line-height: 1.6;
     letter-spacing: 0.35rem;
@@ -189,7 +180,7 @@ section.u4m-features-table div.section div.item div.third-box {
 @media (max-width: 580px) {
   section.u4m-features-table div.section div.item div.second-box,
   section.u4m-features-table div.section div.item div.third-box {
-    font-family: "Montserrat";
+    font-family: "Sofia Sans";
     font-size: 12rem;
     line-height: 1.6;
     letter-spacing: 0.35rem;

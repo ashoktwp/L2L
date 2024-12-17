@@ -37,12 +37,13 @@ section.u4m-jump-grid div.container {
   max-width: 1060rem;
 }
 section.u4m-jump-grid div.container .heading {
-  font-family: "Montserrat";
-  font-size: 44rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 48rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.125;
+  color: #0e2514;
+  font-family: "Inter";
+  font-weight: bold;
+  letter-spacing: -0.5px;
   text-align: center;
   position: relative;
 }
@@ -64,24 +65,14 @@ section.u4m-jump-grid div.container .heading:before {
   background-color: #733bf7;
 }
 section.u4m-jump-grid div.container .subheading {
-  font-family: "Montserrat";
-  font-size: 30rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.71;
+  color: #2e2e2e;
+  font-family: "Sofia Sans";
+  font-weight: 400;
+  letter-spacing: 0px;
   text-align: center;
-}
-@media (max-width: 1024px) {
-  section.u4m-jump-grid div.container .subheading {
-    font-size: 24rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-jump-grid div.container .subheading {
-    font-size: 20rem;
-    margin-bottom: 20rem;
-  }
 }
 section.u4m-jump-grid div.container .subheading.white-text {
   color: #fff;
@@ -126,7 +117,7 @@ section.u4m-jump-grid div.container div.group a.item .title {
   font-weight: bold;
 }
 section.u4m-jump-grid div.container div.group a.item .caption {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 14rem;
   line-height: 1.6;
   letter-spacing: 0.35rem;

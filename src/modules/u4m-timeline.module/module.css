@@ -23,7 +23,7 @@ section.u4m-timeline .inner {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
 }
@@ -33,12 +33,13 @@ section.u4m-timeline .inner .timeline {
   margin: 0 auto;
 }
 section.u4m-timeline .inner .timeline h2 {
-  font-family: "Montserrat";
-  font-size: 44rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 48rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
+  line-height: 1.125;
+  color: #0e2514;
+  font-family: "Inter";
+  font-weight: bold;
+  letter-spacing: -0.5px;
   text-align: center;
 }
 @media (max-width: 1024px) {
@@ -78,21 +79,22 @@ section.u4m-timeline .inner .timeline .timeline-entry div.timeline-entry-info {
   }
 }
 section.u4m-timeline .inner .timeline .timeline-entry div.timeline-entry-info h3 {
-  font-family: "Montserrat";
-  font-size: 38rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 32rem;
   margin-bottom: 30rem;
   line-height: 1.2;
+  color: #2e2e2e;
+  font-family: "Inter";
+  font-weight: bold;
+  letter-spacing: -0.5px;
 }
 @media (max-width: 1024px) {
   section.u4m-timeline .inner .timeline .timeline-entry div.timeline-entry-info h3 {
-    font-size: 32rem;
+    font-size: 28rem;
   }
 }
 @media (max-width: 580px) {
   section.u4m-timeline .inner .timeline .timeline-entry div.timeline-entry-info h3 {
-    font-size: 28rem;
+    font-size: 22rem;
     margin-bottom: 20rem;
   }
 }
