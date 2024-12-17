@@ -1,0 +1,31 @@
+@import "../../css/_module-imports";
+
+section.u4m-blog-subscription {
+  padding-top: 92;
+  padding-bottom: 86px;
+  .page-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    .intro_wrapp {
+      width: calc(50% - 15px);
+      @include tabletvert {
+        width: 100%;
+      }
+    }
+    .subscribe-form {
+      width: calc(50% - 15px);
+      @include tabletvert {
+        width: 100%;
+      }
+      form {
+        position: relative;
+        margin: 0;
+        .hs-input {
+        }
+      }
+    }
+  }
+}

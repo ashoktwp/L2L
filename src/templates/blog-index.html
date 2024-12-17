@@ -1,11 +1,62 @@
 <!--
-  templateType: blog_listing
-  isAvailableForNewContent: true
-  label: L2L - Blog Listing
+	templateType: blog_listing
+	isAvailableForNewContent: true
+	label: L2L - Blog Listing
 -->
 {% extends './base.html' %} {% block body %}
-<main id="main-content" class="body-container-wrapper">
-  {% module 'u4m-blog-listing' path='../modules/u4m-blog-listing' %} {% module
-  'u4m-subscribe' path='../modules/u4m-subscribe' %}
-</main>
-{% endblock body %}
+  <main id="main-content" class="body-container-wrapper">
+  
+  
+  
+    {% dnd_area 'dnd__area_blog'
+              label='Main Content'
+                  class="main-dnd-area"
+            %} 
+  
+    {% dnd_section
+              padding={
+              "default":{
+                "bottom":"0"
+              }
+              }
+            %}
+    {% dnd_column
+                            padding={
+              "default":{
+                "left":"0",
+                "right":"0"
+              }
+              }
+                %}
+    {% dnd_row %}
+    {% dnd_module path='../modules/u4m-blog-listing' %}
+    {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% end_dnd_section %}
+      {% dnd_section
+              padding={
+              "default":{
+                "bottom":"0"
+              }
+              }
+            %}
+    {% dnd_column
+                            padding={
+              "default":{
+                "left":"0",
+                "right":"0"
+              }
+              }
+                %}
+    {% dnd_row %}
+    {% dnd_module path='../modules/u4m-blog-subscription' %}
+    {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% end_dnd_column %}
+    {% end_dnd_section %}
+    {% end_dnd_area %}
+  
+  </main>
+  {% endblock body %}
+  
