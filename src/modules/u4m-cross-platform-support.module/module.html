@@ -1,0 +1,31 @@
+<div class="cross-platform-support">
+	<div class="inner_wrpp">
+		<p class="left">
+			{{ module.title }}
+		</p>
+		<ul>
+			{% for item in module.items_group %}
+			<li>
+				<div class="img">
+					{% if item.image_field.src %}
+					{% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+					{% if item.image_field.size_type == 'auto' %}
+					{% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+					{% elif item.image_field.size_type == 'auto_custom_max' %}
+					{% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+					{% endif %}
+					{% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+					<img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+					{% endif %}
+				</div>
+				<div class="cnt"> 
+					<p>
+						{{ item.title }}
+					</p>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+

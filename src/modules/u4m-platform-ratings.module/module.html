@@ -1,0 +1,51 @@
+<div class="plateform_rate">
+	<div class="ratings">
+		{% set itemCount = [1,2,3,4,5] %}
+		{% for item1 in itemCount %}
+		{% if loop.index <= module.ratings.Select_rating  %}
+		{% if module.ratings.full_star_image.src %}
+		{% set sizeAttrs = 'width="{{ module.ratings.full_star_image.width|escape_attr }}" height="{{ module.ratings.full_star_image.height|escape_attr }}"' %}
+		{% if module.ratings.full_star_image.size_type == 'auto' %}
+		{% set sizeAttrs = 'width="{{ module.ratings.full_star_image.width|escape_attr }}" height="{{ module.ratings.full_star_image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+		{% elif module.ratings.full_star_image.size_type == 'auto_custom_max' %}
+		{% set sizeAttrs = 'width="{{ module.ratings.full_star_image.max_width|escape_attr }}" height="{{ module.ratings.full_star_image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+		{% endif %}
+		{% set loadingAttr = module.ratings.full_star_image.loading != 'disabled' ? 'loading="{{ module.ratings.full_star_image.loading|escape_attr }}"' : '' %}
+		<img src="{{ module.ratings.full_star_image.src|escape_url }}" alt="{{ module.ratings.full_star_image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+		{% endif %}
+		{% endif %}
+		{% endfor %}  
+		{% if module.ratings.include_half_rating and module.ratings.Select_rating !=5 %}
+		{% if module.ratings.half_star_image_copy.src %}
+		{% set sizeAttrs = 'width="{{ module.ratings.half_star_image_copy.width|escape_attr }}" height="{{ module.ratings.half_star_image_copy.height|escape_attr }}"' %}
+		{% if module.ratings.half_star_image_copy.size_type == 'auto' %}
+		{% set sizeAttrs = 'width="{{ module.ratings.half_star_image_copy.width|escape_attr }}" height="{{ module.ratings.half_star_image_copy.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+		{% elif module.ratings.half_star_image_copy.size_type == 'auto_custom_max' %}
+		{% set sizeAttrs = 'width="{{ module.ratings.half_star_image_copy.max_width|escape_attr }}" height="{{ module.ratings.half_star_image_copy.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+		{% endif %}
+		{% set loadingAttr = module.ratings.half_star_image_copy.loading != 'disabled' ? 'loading="{{ module.ratings.half_star_image_copy.loading|escape_attr }}"' : '' %}
+		<img src="{{ module.ratings.half_star_image_copy.src|escape_url }}" alt="{{ module.ratings.half_star_image_copy.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+		{% endif %}
+		{% endif %}
+	</div>
+
+	<ul>
+		{% for item in module.items_group %}
+		<li>
+			<div class="img">
+				{% if item.image_field.src %}
+				{% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+				{% if item.image_field.size_type == 'auto' %}
+				{% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+				{% elif item.image_field.size_type == 'auto_custom_max' %}
+				{% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+				{% endif %}
+				{% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+				<img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+				{% endif %}
+			</div>
+			<p>{{ item.title }}</p>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
