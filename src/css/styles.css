@@ -4028,6 +4028,18 @@ section[class*=u4m-] {
   background-image: radial-gradient(circle at 50% 0%, #2c6938 0%, #0e2514 78%);
 }
 
+.gradient4 {
+  background-image: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.27) 100%), linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.27) 100%), linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.27) 100%), linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.27) 100%);
+}
+
+.gradient5 {
+  background-image: radial-gradient(circle at 110% -9.2%, #fff 0%, rgba(255, 255, 255, 0) 52%);
+}
+
+.gradient6 {
+  background-image: radial-gradient(circle at 110% -9.2%, #22452a 0%, #0e2514 52%);
+}
+
 .material-icons-outlined {
   font-family: "Material Icons Outlined";
   font-weight: normal;
