@@ -115,6 +115,51 @@
     "type" : "richtext",
     "default" : "<p>The Connected Workforce platform that helps people collaborate. Continuously improve processes, and manufacture better quality products.</p>"
   }, {
+    "id" : "26e672a0-f4c5-26f1-8824-262ec3b72103",
+    "name" : "list_items",
+    "display_width" : null,
+    "label" : "List Items",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "acd008cd-a455-c066-de87-f8b889bfc4f4",
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "acd008cd-a455-c066-de87-f8b889bfc4f4",
+      "name" : "list_item",
+      "display_width" : null,
+      "label" : "List Item",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : ""
+    }, {
+      "id" : "62c54eb2-2ed2-f33a-edb7-372fbb909258",
+      "name" : "icon",
+      "display_width" : null,
+      "label" : "Icon",
+      "required" : false,
+      "locked" : false,
+      "icon_set" : "fontawesome-6.4.2",
+      "type" : "icon",
+      "default" : {
+        "name" : "500px",
+        "unicode" : "f26e",
+        "type" : "REGULAR"
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : [ ]
+  }, {
     "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
     "name" : "include_button",
     "display_width" : null,
@@ -318,6 +363,7 @@
     "heading" : "Prevent disruptions from happening",
     "include_content" : true,
     "content" : "<p>The Connected Workforce platform that helps people collaborate. Continuously improve processes, and manufacture better quality products.</p>",
+    "list_items" : [ ],
     "include_button" : true,
     "button_group" : [ {
       "button_type" : "std",
@@ -336,6 +382,95 @@
       "enable_arrow" : false
     } ]
   }
+}, {
+  "id" : "b5bb7554-023e-54e9-bb61-8bc8c6112743",
+  "name" : "media_column",
+  "display_width" : null,
+  "label" : "Media Column",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "2c519f7e-7d20-f063-19fa-dc52b02d1ee7",
+    "name" : "media_type",
+    "display_width" : null,
+    "label" : "Media Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "img", "Image" ], [ "video", "Video" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice"
+  }, {
+    "id" : "0fd860ec-de46-88ff-6f64-8510ca79dfc1",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "media_column.media_type",
+      "controlling_value_regex" : "img",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "picker" : "video",
+    "id" : "9dc72ca6-55a1-27e7-3ee1-d4f4fc4bcc88",
+    "name" : "video",
+    "display_width" : null,
+    "label" : "Video",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "media_column.media_type",
+      "controlling_value_regex" : "video",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "file"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+}, {
+  "id" : "9c41da14-d6da-c5de-53d7-875a04d29fc9",
+  "name" : "content_alignment",
+  "display_width" : null,
+  "label" : "Content Alignment",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "left", "Left" ], [ "center", "Center" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "left"
 }, {
   "id" : "module_overrides",
   "name" : "module_overrides",

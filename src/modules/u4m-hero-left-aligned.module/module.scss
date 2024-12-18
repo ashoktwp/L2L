@@ -4,7 +4,29 @@ section.u4m-hero-left-aligned {
   padding-top: 94px;
   padding-bottom: 94px;
   min-height: 864px;
-  video.video {
+  @include tabletvert {
+    padding: 50px 0;
+    min-height: auto;
+  }
+  .center {
+    .intro_wrapp {
+      flex-direction: column-reverse;
+    }
+    .intro_content {
+      text-align: center;
+      margin-left: auto;
+      max-width: 100%;
+      width: 100%;
+      .intro_btn_wrap {
+        justify-content: center;
+      }
+    }
+
+    .media-column {
+      width: 100%;
+    }
+  }
+  video.video-bg {
     position: absolute;
     z-index: 0;
     -o-object-fit: cover;
@@ -15,14 +37,50 @@ section.u4m-hero-left-aligned {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .overlay-color {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
   .page-center {
     position: relative;
+  }
+  .media-column {
+    width: calc(100% - 612px);
+    @include tablet {
+      width: calc(50% - 15px);
+    }
+    @include tabletvert {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+  .intro_wrapp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
   }
   .intro_content {
     margin-left: 0;
     text-align: left;
-    max-width: 582px;
     margin-bottom: 0;
+    max-width: 582px;
+    @include tablet {
+      max-width: 100%;
+      width: calc(50% - 15px);
+    }
+    @include tabletvert {
+      width: 100%;
+    }
     h1 {
       margin-bottom: 20px;
     }
@@ -31,6 +89,24 @@ section.u4m-hero-left-aligned {
     }
     .intro_btn_wrap {
       justify-content: flex-start;
+    }
+    .list-item {
+      margin-bottom: 34px;
+    }
+    .list-item ul {
+      margin: 0;
+      padding: 0;
+      padding-left: 20px;
+    }
+
+    .list-item ul .icon svg {
+      width: 20px;
+      margin-right: 15px;
+      vertical-align: middle;
+    }
+
+    .list-item ul .icon svg path {
+      fill: currentColor;
     }
   }
 }

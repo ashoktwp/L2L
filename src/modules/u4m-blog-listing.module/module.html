@@ -118,8 +118,8 @@
 					</div>
 				</div>
 				<div class="tag-col">
-					{% set my_topics = blog_topics('default', 50) %}
-					<select id="tinynav1" class="tinynav tinynav1" style="background-image: url(https://www.l2l.com/hubfs/L2L-u4m/images/dropdownArrow.png);">
+					{% set my_topics = blog_topics(group.id, 50) %}
+					<select id="tinynav1" class="tinynav tinynav1" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
 						<option value="{{ group.absolute_url }}">Filter by Topic</option>
 						{% for item in my_topics %}
 						{% if item=="Featured"%}

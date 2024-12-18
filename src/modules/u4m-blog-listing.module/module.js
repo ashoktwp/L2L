@@ -1,27 +1,31 @@
 var hsSearch = function (_instance) {
   var TYPEAHEAD_LIMIT = 3;
   var KEYS = {
-    TAB: 'Tab',
-    ESC: 'Esc', // IE11 & Edge 16 value for Escape
-    ESCAPE: 'Escape',
-    UP: 'Up', // IE11 & Edge 16 value for Arrow Up
-    ARROW_UP: 'ArrowUp',
-    DOWN: 'Down', // IE11 & Edge 16 value for Arrow Down
-    ARROW_DOWN: 'ArrowDown',
+    TAB: "Tab",
+    ESC: "Esc", // IE11 & Edge 16 value for Escape
+    ESCAPE: "Escape",
+    UP: "Up", // IE11 & Edge 16 value for Arrow Up
+    ARROW_UP: "ArrowUp",
+    DOWN: "Down", // IE11 & Edge 16 value for Arrow Down
+    ARROW_DOWN: "ArrowDown",
   };
-  var searchTerm = '';
+  var searchTerm = "";
   var searchForm = _instance;
-  var searchField = _instance.querySelector('.hs-search-field__input');
-  var searchResults = _instance.querySelector('.hs-search-field__suggestions');
+  var searchField = _instance.querySelector(".hs-search-field__input");
+  var searchResults = _instance.querySelector(".hs-search-field__suggestions");
 
   const addTypeParamsFromUrl = function (formParams) {
-    const validContentTypesElement = document.getElementById('hs-search-input__valid-content-types');
+    const validContentTypesElement = document.getElementById(
+      "hs-search-input__valid-content-types"
+    );
 
     if (validContentTypesElement) {
       try {
-        const validContentTypes = Object.freeze(JSON.parse(validContentTypesElement.textContent));
+        const validContentTypes = Object.freeze(
+          JSON.parse(validContentTypesElement.textContent)
+        );
         const urlParams = new URLSearchParams(window.location.search);
-        const typeParams = urlParams.getAll('type');
+        const typeParams = urlParams.getAll("type");
         let newParams = [];
 
         typeParams.forEach(function (typeValue) {
@@ -31,13 +35,13 @@ var hsSearch = function (_instance) {
           }
 
           // Add the type param if it's not already in the form params
-          const typeParam = 'type=' + encodeURIComponent(typeValue);
+          const typeParam = "type=" + encodeURIComponent(typeValue);
           newParams.push(typeParam);
         });
 
         return newParams.length > 0 ? newParams : formParams;
       } catch (e) {
-        console.warn('Error parsing valid content types:', e); // eslint-disable-line no-
+        console.warn("Error parsing valid content types:", e); // eslint-disable-line no-
       }
     }
 
@@ -51,17 +55,23 @@ var hsSearch = function (_instance) {
 
   const searchOptions = function () {
     let formParams = [];
-    const form = _instance.querySelector('form');
-    for (let i = 0; i < form.querySelectorAll('input[type=hidden]').length; i++) {
-      const e = form.querySelectorAll('input[type=hidden]')[i];
-      if (e.name !== 'limit') {
-        formParams.push(encodeURIComponent(e.name) + '=' + encodeURIComponent(e.value));
+    const form = _instance.querySelector("form");
+    for (
+      let i = 0;
+      i < form.querySelectorAll("input[type=hidden]").length;
+      i++
+    ) {
+      const e = form.querySelectorAll("input[type=hidden]")[i];
+      if (e.name !== "limit") {
+        formParams.push(
+          encodeURIComponent(e.name) + "=" + encodeURIComponent(e.value)
+        );
       }
     }
 
     const newParams = addTypeParamsFromUrl(formParams);
 
-    return newParams.join('&');
+    return newParams.join("&");
   };
 
   var debounce = function (func, wait, immediate) {
@@ -84,32 +94,42 @@ var hsSearch = function (_instance) {
     };
   };
   var emptySearchResults = function () {
-    searchResults.innerHTML = '';
+    searchResults.innerHTML = "";
     searchField.focus();
-    searchForm.classList.remove('hs-search-field--open');
+    searchForm.classList.remove("hs-search-field--open");
   };
   var fillSearchResults = function (response) {
     var items = [];
-    items.push("<li id='results-for'>Results for \"" + response.searchTerm + '"</li>');
+    items.push(
+      "<li id='results-for'>Results for \"" + response.searchTerm + '"</li>'
+    );
     response.results.forEach(function (val, index) {
-      items.push("<li id='result" + index + "'><a href='" + val.url + "'>" + val.title + '</a></li>');
+      items.push(
+        "<li id='result" +
+          index +
+          "'><a href='" +
+          val.url +
+          "'>" +
+          val.title +
+          "</a></li>"
+      );
     });
 
     emptySearchResults();
-    searchResults.innerHTML = items.join('');
-    searchForm.classList.add('hs-search-field--open');
+    searchResults.innerHTML = items.join("");
+    searchForm.classList.add("hs-search-field--open");
   };
   var getSearchResults = function () {
     var request = new XMLHttpRequest();
     var requestUrl =
-      '/_hcms/search?&term=' +
+      "/_hcms/search?&term=" +
       encodeURIComponent(searchTerm) +
-      '&limit=' +
+      "&limit=" +
       encodeURIComponent(TYPEAHEAD_LIMIT) +
-      '&autocomplete=true&analytics=true&' +
+      "&autocomplete=true&analytics=true&" +
       searchOptions();
 
-    request.open('GET', requestUrl, true);
+    request.open("GET", requestUrl, true);
     request.onload = function () {
       if (request.status >= 200 && request.status < 400) {
         var data = JSON.parse(request.responseText);
@@ -120,18 +140,18 @@ var hsSearch = function (_instance) {
           emptySearchResults();
         }
       } else {
-        console.error('Server reached, error retrieving results.');
+        console.error("Server reached, error retrieving results.");
       }
     };
     request.onerror = function () {
-      console.error('Could not reach the server.');
+      console.error("Could not reach the server.");
     };
     request.send();
   };
   var trapFocus = function () {
     var tabbable = [];
     tabbable.push(searchField);
-    var tabbables = searchResults.getElementsByTagName('A');
+    var tabbables = searchResults.getElementsByTagName("A");
     for (var i = 0; i < tabbables.length; i++) {
       tabbable.push(tabbables[i]);
     }
@@ -171,7 +191,7 @@ var hsSearch = function (_instance) {
       }
     };
 
-    searchForm.addEventListener('keydown', function (e) {
+    searchForm.addEventListener("keydown", function (e) {
       switch (e.key) {
         case KEYS.TAB:
           tabResult(e);
@@ -200,30 +220,31 @@ var hsSearch = function (_instance) {
     }
   }, 250);
   var init = (function () {
-    searchField.addEventListener('input', function (e) {
+    searchField.addEventListener("input", function (e) {
       if (searchTerm != searchField.value) {
         isSearchTermPresent();
       }
     });
 
-    searchForm.addEventListener('submit', function (e) {
+    searchForm.addEventListener("submit", function (e) {
       e.preventDefault();
       const form = e.target;
-      const searchInput = form.querySelector('.hs-search-field__input');
+      const searchInput = form.querySelector(".hs-search-field__input");
       const searchTerm = encodeURIComponent(searchInput.value);
 
       // Get the action URL from the form
-      let redirectUrl = form.getAttribute('action');
+      let redirectUrl = form.getAttribute("action");
 
       // Append the search term to the URL
-      redirectUrl += (redirectUrl.includes('?') ? '&' : '?') + 'term=' + searchTerm;
+      redirectUrl +=
+        (redirectUrl.includes("?") ? "&" : "?") + "term=" + searchTerm;
 
       // Get the current form parameters
       const currentParams = searchOptions();
 
       // Append the current parameters to the redirect URL
       if (currentParams) {
-        redirectUrl += '&' + currentParams;
+        redirectUrl += "&" + currentParams;
       }
 
       // Redirect to the search results page
@@ -232,14 +253,18 @@ var hsSearch = function (_instance) {
   })();
 };
 
-if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading') {
-  var searchResults = document.querySelectorAll('.hs-search-field');
+if (
+  document.attachEvent
+    ? document.readyState === "complete"
+    : document.readyState !== "loading"
+) {
+  var searchResults = document.querySelectorAll(".hs-search-field");
   Array.prototype.forEach.call(searchResults, function (el) {
     var hsSearchModule = hsSearch(el);
   });
 } else {
-  document.addEventListener('DOMContentLoaded', function () {
-    var searchResults = document.querySelectorAll('.hs-search-field');
+  document.addEventListener("DOMContentLoaded", function () {
+    var searchResults = document.querySelectorAll(".hs-search-field");
     Array.prototype.forEach.call(searchResults, function (el) {
       var hsSearchModule = hsSearch(el);
     });
@@ -247,3 +272,7 @@ if (document.attachEvent ? document.readyState === 'complete' : document.readySt
 
   // Watch for event listeners on the search form
 }
+
+$("#tinynav1").change(function () {
+  window.location.href = $(this).val();
+});
