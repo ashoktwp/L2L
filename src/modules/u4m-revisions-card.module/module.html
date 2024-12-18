@@ -1,0 +1,46 @@
+{% set moduleName = 'u4m-revisions-card' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="revisions-card-wrp">
+    <div class="revisions-accord active-card">
+      {% if module.card.heading %}
+      <h4 class="accor-title">
+        {{ module.card.heading }}
+        <span class="accord-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
+        </span>
+      </h4>
+      {% endif %}
+      {% if module.card.content %}
+      <div class="revisions-content" style="display:block">
+        {{ module.card.content }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+</section>
+
+{% require_js %}
+
+<script>
+document.querySelectorAll('.accor-title').forEach(function(title) {
+  title.addEventListener('click', function() {
+    var nextElement = title.nextElementSibling;
+    nextElement.style.display = (nextElement.style.display === 'none' || nextElement.style.display === '') ? 'block' : 'none';
+    var parent = title.parentElement;
+    parent.classList.toggle('active-card');
+  });
+});
+</script>
+
+{% end_require_js %}
+
+
+
+
+
+
+
+
