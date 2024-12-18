@@ -1,4 +1,6 @@
 footer.ftr_wrpp {
+    position: relative;
+    z-index: 11;
     padding-top: 71px;
     padding-bottom: 42px;
     background: #0e2514;
@@ -57,6 +59,7 @@ footer.ftr_wrpp {
                             display: block;
                             width: 100%;
                             cursor: pointer;
+                            margin-bottom: 23px;
                         }
 
                         @include navbreak {
@@ -93,6 +96,11 @@ footer.ftr_wrpp {
                         li {
                             margin: 0;
                             letter-spacing: normal;
+                            margin-bottom: 12px;
+
+                            &:last-child {
+                                margin: 0;
+                            }
 
                             a {
                                 margin: 0;
@@ -102,13 +110,14 @@ footer.ftr_wrpp {
                                 @include b4;
                                 font-family: $secondaryFont;
                                 margin-bottom: 0;
-                                line-height: 36px;
                                 color: $white;
                                 width: auto;
                                 max-width: 100%;
                                 text-overflow: unset;
                                 white-space: normal;
                                 cursor: pointer;
+                                line-height: 1.71428571;
+                                letter-spacing: normal;
                             }
                         }
                     }
@@ -169,6 +178,10 @@ footer.ftr_wrpp {
 
                                 margin-bottom: 18px;
 
+                                &:last-child {
+                                    margin-bottom: 0px;
+                                }
+
                                 a {
                                     display: flex;
                                     align-items: center;
@@ -180,7 +193,6 @@ footer.ftr_wrpp {
                                         padding: 0;
                                         margin: 0;
                                         max-width: 100%;
-
                                         font-style: normal;
                                         font-weight: 400;
                                         @include b4;
@@ -188,6 +200,8 @@ footer.ftr_wrpp {
                                         line-height: 1.5;
                                         color: $white;
                                         margin-bottom: 0;
+                                        line-height: 1.71428571;
+                                        letter-spacing: normal;
                                     }
 
                                     &:last-child {
@@ -268,18 +282,20 @@ footer.ftr_wrpp {
                     p {
                         margin: 0;
                         margin: 0;
-                        font-family: $secondaryFont;
                         font-style: normal;
                         font-weight: 400;
                         @include b4;
+                        font-family: $secondaryFont;
                         line-height: 1.92857143;
                         color: $white;
                         mix-blend-mode: normal;
                         opacity: 0.66;
                         margin-bottom: 0;
+                        letter-spacing: normal;
 
                         @include navbreak {
                             width: 100%;
+
                         }
                     }
 
@@ -303,11 +319,14 @@ footer.ftr_wrpp {
                                 line-height: 1.92857143;
                                 color: $white;
                                 margin-bottom: 0;
+                                font-family: $secondaryFont;
+                                letter-spacing: normal;
                             }
                         }
 
                         @include navbreak {
                             width: 100%;
+                            row-gap: 20px;
                         }
                     }
                 }
@@ -327,7 +346,6 @@ footer.ftr_wrpp {
                     p.left {
                         margin: 0;
                         margin: 0;
-                        font-family: $secondaryFont;
                         font-style: normal;
                         font-weight: 400;
                         @include b4;
@@ -336,6 +354,8 @@ footer.ftr_wrpp {
                         mix-blend-mode: normal;
                         opacity: 0.66;
                         margin-bottom: 0;
+                        letter-spacing: normal;
+                        font-family: $secondaryFont;
 
                         @include navbreak {
                             width: 100%;
@@ -377,6 +397,8 @@ footer.ftr_wrpp {
                                     line-height: 1.5;
                                     color: $white;
                                     margin-bottom: 0;
+                                    line-height: 1.71428571;
+                                    letter-spacing: normal;
                                 }
 
                                 .img {
@@ -422,15 +444,14 @@ footer.ftr_wrpp {
             width: 100%;
 
             h4 {
-                line-height: 1.19047619;
-                letter-spacing: -0.145833px;
+                line-height: normal;
+                letter-spacing: -0.15px;
                 color: $white;
                 margin-bottom: 7px;
             }
 
             p {
                 margin: 0;
-
                 font-style: normal;
                 font-weight: 400;
                 @include b4;
@@ -439,6 +460,7 @@ footer.ftr_wrpp {
                 line-height: 1.71428571;
                 color: $white;
                 opacity: 0.66;
+                letter-spacing: normal;
             }
         }
 
@@ -446,6 +468,7 @@ footer.ftr_wrpp {
             .hs-button {
                 margin: 0;
                 @include buttonTwo;
+                font-family: $secondaryFont;
             }
         }
     }

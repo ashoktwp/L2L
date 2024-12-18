@@ -2,60 +2,178 @@
  templateType: global_partial
  label: Footer no navigation
  -->
-
 <footer class="ftr_wrpp lp_hdr">
-	<div class="inner_wrpp">
-		<div class="page-center">
-			<div class="middle_wrp">
-				<div class="leftCnt">
-					<div class="custom_logo">
-						{% module "header_logo" path="@hubspot/logo", label="Header Logo",  img={src= "{{ get_asset_url('../../templates/images/L2L.png') }}", width=52, override_inherited_src= true, alt="Logo alt" } , link="/" %}
-					</div>
-				</div>
-				<div class="centerCnt">
-					{% module_block module "normalCnt" path="@hubspot/rich_text" label="Content" %}
-					{% module_attribute "html" %}
-					<h4>
-						Prevent disruptions from happening
-					</h4>
-					<p>
-						The Connected Workforce platform enhances collaboration, streamlines processes, and boosts product quality.
-					</p>
-					{% end_module_attribute %}
-					{% end_module_block %}
-				</div>
-				<div class="rhtCnt">
-					{% module "demo_button" ,  path="@hubspot/button" , label="Book A Demo Button" ,button_text="Book a demo", link={ "url": { "type": "EXTERNAL", "href": "/" }, "open_in_new_tab": true, "no_follow": false } ,%}
-				</div>
-			</div>
-			<div class="btm_wrp">
-				{% module "cross-platform-support" path="../../modules/u4m-cross-platform-support", label="Cross Platform Support" %}
-			</div>
-			<div class="copyright">
-				<div class="topCntt">
-					{% module_block module "normalCnt" path="@hubspot/rich_text" label="Copyright" %}
-					{% module_attribute "html" %}
-					<p>
-						L2L © {{year}}
-					</p>
-					<ul>
-						<li>
-							<a href="#">Privacy Policy</a>
-						</li>
-						<li>
-							<a href="#">Terms and Conditions</a>
-						</li>
-						<li>
-							<a href="#">support@l2l.com</a>
-						</li>
-					</ul>
-					{% end_module_attribute %}
-					{% end_module_block %}
-				</div>
-				<div class="social_wrpp">
-					{% module "footer_social_share" path="../../modules/u4m-footer-social-share", label="Footer Social Share" %}
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="inner_wrpp">
+    <div class="page-center">
+      <div class="middle_wrp">
+        <div class="leftCnt">
+          <div class="custom_logo">
+            {% module "ftr_logo" path="@hubspot/logo", label="Logo",  img={src= "{{ get_asset_url('../../templates/images/Footer - L2L.png') }}", width=52, override_inherited_src= true, alt="Logo alt" } , link="/" %}
+          </div>
+        </div>
+        <div class="centerCnt">
+          {% module_block module "normalCnt" path="@hubspot/rich_text" label="Content" %}
+          {% module_attribute "html" %}
+          <h4>
+            Prevent disruptions from happening
+          </h4>
+          <p>
+            The Connected Workforce platform enhances collaboration, streamlines processes, and boosts product quality.
+          </p>
+          {% end_module_attribute %}
+          {% end_module_block %}
+        </div>
+        <div class="rhtCnt">
+          {% module "demo_button" ,  path="@hubspot/button" , label="Book A Demo Button" ,button_text="Book a demo", link={ "url": { "type": "EXTERNAL", "href": "/" }, "open_in_new_tab": true, "no_follow": false } ,%}
+        </div>
+      </div>
+      <div class="btm_wrp">
+        {% module "cross-platform-support" path="../../modules/u4m-cross-platform-support", label="Cross Platform Support",
+          items_group=[ {
+          "image_field" : {
+            "alt" : "Browser",
+            "height" : 24,
+            "loading" : "lazy",
+            "max_height" : 24,
+            "max_width" : 24,
+            "size_type" : "auto",
+            "src" : get_asset_url('../../templates/images/Browser.png'),
+            "width" : 24
+          },
+          "title" : "Browser"
+        }, {
+          "image_field" : {
+            "alt" : "Windows",
+            "height" : 27,
+            "loading" : "lazy",
+            "max_height" : 27,
+            "max_width" : 27,
+            "size_type" : "auto",
+            "src" : get_asset_url('../../templates/images/Windows.png'),
+            "width" : 27
+          },
+          "title" : "Windows"
+        }, {
+          "image_field" : {
+            "alt" : "Mac",
+            "height" : 27,
+            "loading" : "lazy",
+            "max_height" : 27,
+            "max_width" : 27,
+            "size_type" : "auto",
+            "src" : get_asset_url('../../templates/images/Mac.png'),
+            "width" : 27
+          },
+          "title" : "Mac"
+        }, {
+          "image_field" : {
+            "alt" : "Android",
+            "height" : 27,
+            "loading" : "lazy",
+            "max_height" : 27,
+            "max_width" : 27,
+            "size_type" : "auto",
+            "src" : get_asset_url('../../templates/images/Android.png'),
+            "width" : 27
+          },
+          "title" : "Android"
+        }, {
+          "image_field" : {
+            "alt" : "iOS",
+            "height" : 27,
+            "loading" : "lazy",
+            "max_height" : 27,
+            "max_width" : 27,
+            "size_type" : "auto",
+            "src" : get_asset_url('../../templates/images/iOS.png'),
+            "width" : 27
+          },
+          "title" : "iOS"
+        } ]%}
+      </div>
+      <div class="copyright">
+        <div class="topCntt">
+          {% module_block module "normalCnt" path="@hubspot/rich_text" label="Copyright" %}
+          {% module_attribute "html" %}
+          <p>
+            L2L © {{year}}
+          </p>
+          <ul>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms and Conditions</a>
+            </li>
+            <li>
+              <a href="#">support@l2l.com</a>
+            </li>
+          </ul>
+          {% end_module_attribute %}
+          {% end_module_block %}
+        </div>
+        <div class="social_wrpp">
+          {% module "footer_social_share" path="../../modules/u4m-footer-social-share", label="Social Share",
+           items_group=[ {
+          "image_field" : {
+            "alt" : "Android",
+            "height" : 27,
+            "loading" : "lazy",
+            "max_height" : 27,
+            "max_width" : 27,
+            "size_type" : "auto",
+            "src" : get_asset_url('../../templates/images/Linkedin.png'),
+            "width" : 27
+          },
+          "link_field" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "image_field" : {
+            "alt" : "Group",
+            "height" : 27,
+            "loading" : "lazy",
+            "max_height" : 27,
+            "max_width" : 27,
+            "size_type" : "auto",
+            "src" : get_asset_url('../../templates/images/Youtube.png'),
+            "width" : 27
+          },
+          "link_field" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          }
+        }, {
+          "image_field" : {
+            "alt" : "iOS",
+            "height" : 27,
+            "loading" : "lazy",
+            "max_height" : 27,
+            "max_width" : 27,
+            "size_type" : "auto",
+            "src" : get_asset_url('../../templates/images/Twitter.png'),
+            "width" : 27
+          },
+          "link_field" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          }
+        } ]%}
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
