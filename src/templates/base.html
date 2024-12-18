@@ -29,7 +29,7 @@ isAvailableForNewContent: false
     {% endblock body %}
     
     {% block footer %}
-        {% module 'u4m-footer' path='../modules/u4m-footer', label='U4M Footer' %}
+        {% global_partial path='././partials/u4m-footer.html' %}
     {% endblock footer %}
     {{ require_js(get_asset_url('../js/jquery.js')) }} 
     {{ require_js(get_asset_url('../js/aos.js')) }} 
