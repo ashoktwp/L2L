@@ -1,120 +1,138 @@
-[ {
-  "id" : "b847e496-507e-3cba-9bea-71db4fc3b6c7",
-  "name" : "items_group",
-  "display_width" : null,
-  "label" : "Items Group",
-  "required" : false,
-  "locked" : false,
-  "occurrence" : {
-    "min" : null,
-    "max" : null,
-    "sorting_label_field" : "7466e733-9ca9-878d-c5f6-74cff268e08d",
-    "default" : 3
-  },
-  "children" : [ {
-    "id" : "7466e733-9ca9-878d-c5f6-74cff268e08d",
-    "name" : "image_field",
-    "display_width" : null,
-    "label" : "Image",
-    "required" : false,
-    "locked" : false,
-    "responsive" : true,
-    "resizable" : false,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade.png",
-      "alt" : "Barricade",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
-    }
-  }, {
-    "id" : "f3ddf195-ada1-d38d-0c9b-c521b1b2db8f",
-    "name" : "link_field",
-    "display_width" : null,
-    "label" : "Link",
-    "required" : false,
-    "locked" : false,
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
-    "show_advanced_rel_options" : false,
-    "type" : "link",
-    "default" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "default" : [ {
-    "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade.png",
-      "alt" : "Barricade",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
+[
+  {
+    "id": "b847e496-507e-3cba-9bea-71db4fc3b6c7",
+    "name": "items_group",
+    "display_width": null,
+    "label": "Items Group",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "sorting_label_field": "7466e733-9ca9-878d-c5f6-74cff268e08d",
+      "default": 3
     },
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
+    "children": [
+      {
+        "id": "7466e733-9ca9-878d-c5f6-74cff268e08d",
+        "name": "image_field",
+        "display_width": null,
+        "label": "Image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": false,
+        "show_loading": false,
+        "type": "image",
+        "default": {
+          "size_type": "auto",
+          "src": "https://www.l2l.com/hubfs/1766640/L2L-u4m/images/barricade.png",
+          "alt": "Barricade",
+          "loading": "lazy",
+          "width": 27,
+          "height": 27,
+          "max_width": 27,
+          "max_height": 27
+        }
       },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }, {
-    "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade.png",
-      "alt" : "Barricade",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
-    },
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
+      {
+        "id": "f3ddf195-ada1-d38d-0c9b-c521b1b2db8f",
+        "name": "link_field",
+        "display_width": null,
+        "label": "Link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "FILE",
+          "EMAIL_ADDRESS",
+          "BLOG",
+          "CALL_TO_ACTION",
+          "PHONE_NUMBER",
+          "PAYMENT"
+        ],
+        "show_advanced_rel_options": false,
+        "type": "link",
+        "default": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "expanded": false,
+    "group_occurrence_meta": null,
+    "type": "group",
+    "default": [
+      {
+        "image_field": {
+          "size_type": "auto",
+          "src": "https://www.l2l.com/hubfs/1766640/L2L-u4m/images/barricade.png",
+          "alt": "Barricade",
+          "loading": "lazy",
+          "width": 27,
+          "height": 27,
+          "max_width": 27,
+          "max_height": 27
+        },
+        "link_field": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
       },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }, {
-    "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade.png",
-      "alt" : "Barricade",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
-    },
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
+      {
+        "image_field": {
+          "size_type": "auto",
+          "src": "https://www.l2l.com/hubfs/1766640/L2L-u4m/images/barricade.png",
+          "alt": "Barricade",
+          "loading": "lazy",
+          "width": 27,
+          "height": 27,
+          "max_width": 27,
+          "max_height": 27
+        },
+        "link_field": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
       },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  } ]
-} ]
+      {
+        "image_field": {
+          "size_type": "auto",
+          "src": "https://www.l2l.com/hubfs/1766640/L2L-u4m/images/barricade.png",
+          "alt": "Barricade",
+          "loading": "lazy",
+          "width": 27,
+          "height": 27,
+          "max_width": 27,
+          "max_height": 27
+        },
+        "link_field": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ]
+  }
+]
