@@ -4,6 +4,10 @@
   &.dnd_padd {
     padding: 30rem 29rem 46rem 36rem;
   }
+  .page-center {
+    padding-left: 0;
+    padding-right: 0;
+  }
   &.reverse-text * {
     color: $White;
   }

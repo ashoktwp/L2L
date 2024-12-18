@@ -1,3 +1,4 @@
+{% set moduleName = 'u4m-blog-post-banner' %}
 <div class="u4m-blog-post-banner">
   <div class="page-center">
     <div class="post-banner-wrp flex_row">
@@ -15,14 +16,18 @@
           </div>
           <div class="post_authors">
             <div class="author-wrap">
+              {% if content.blog_post_author.avatar or content.blog_post_author.display_name %}
               <div class="avatar">
+                {% if content.blog_post_author.avatar %}
                 <span class="author_avatar"
                   ><img
                     src="{{ resize_image_url(content.blog_post_author.avatar, 0,0,imageMax) }}"
                     alt="{{ content.blog_post_author.display_name }}"
                 /></span>
+                {% endif %}
                 {{ content.blog_post_author.display_name }}
               </div>
+              {% endif %}
               {% if module.enable_second_author %}
               <div class="avatar custom_avatar">
                 <span class="author_avatar"

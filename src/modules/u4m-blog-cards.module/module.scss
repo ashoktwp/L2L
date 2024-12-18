@@ -11,11 +11,16 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: space-between;
     padding: 0 15px;
     .blog_posts_item {
-      max-width: 378px;
-      width: 100%;
+      width: calc(33.333% - 20px);
+      @include tabletmid {
+        width: calc(50% - 15px);
+      }
+      @include tabletvert {
+        width: 100%;
+      }
+
       &.border_gradient {
         .blog_item_inn {
           position: relative;
