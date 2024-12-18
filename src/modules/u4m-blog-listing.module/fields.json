@@ -278,16 +278,6 @@
     "type" : "boolean",
     "default" : true
   }, {
-    "id" : "14c773d2-c6b0-2f98-7f2d-fedbc2f5728c",
-    "name" : "description",
-    "display_width" : null,
-    "label" : "Description",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "default" : true
-  }, {
     "id" : "88479a7f-5164-d3f2-7c46-b8ec566410e3",
     "name" : "read_more_text",
     "display_width" : null,

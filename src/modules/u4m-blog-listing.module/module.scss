@@ -5,6 +5,9 @@ section.u4m-blog-listing {
     position: relative;
     padding-top: 94px;
     padding-bottom: 94px;
+    @include tabletvert {
+      padding: 50px 0;
+    }
     .page-title {
       text-align: center;
       h1 {
@@ -20,11 +23,14 @@ section.u4m-blog-listing {
       column-gap: 70px;
     }
     .featured-img-col {
-      width: calc(50% - 35px);
+      max-width: 722px;
       position: relative;
       border-radius: 13px;
       padding: 18px;
       overflow: hidden;
+      @include laptop {
+        width: calc(50% - 35px);
+      }
       @include tabletvert {
         width: 100%;
         margin-bottom: 30px;
@@ -81,10 +87,21 @@ section.u4m-blog-listing {
       img {
         width: 100%;
         border-radius: 8px;
+        min-height: 397px;
+        object-fit: cover;
+        @include tabletvert {
+          min-height: auto;
+        }
       }
     }
     .featured-content-col {
-      width: calc(50% - 35px);
+      width: calc(100% - 792px);
+      font-family: $secondaryFont;
+      @include size16;
+      line-height: 1.75;
+      @include laptop {
+        width: calc(50% - 35px);
+      }
       @include tabletvert {
         width: 100%;
       }
@@ -98,27 +115,47 @@ section.u4m-blog-listing {
         margin: 0;
         margin-bottom: 11px;
         color: $white;
+        font-family: $primaryFont;
         a {
           color: inherit;
         }
       }
       p {
         color: $white;
+        margin-top: 0;
       }
       .read-more {
         margin-top: 30px;
         a {
           text-transform: uppercase;
+          @include size14;
+          letter-spacing: 0.47px;
+          font-weight: bold;
+          color: $Menthol;
+          line-height: 1.2;
+          svg {
+            margin-left: 15px;
+            width: 14px;
+            path {
+              fill: currentColor;
+            }
+          }
         }
       }
     }
   }
   .main-listing {
-    background-color: #f3faf4;
+    background-color: $Mint_cream;
     padding-top: 78px;
     padding-bottom: 100px;
+    @include tabletvert {
+      padding: 50px 0;
+    }
     .site-search-wrap {
       margin-bottom: 85px;
+      @include tabletvert {
+        margin-bottom: 50px;
+      }
       .page-center {
         display: flex;
         flex-wrap: wrap;
@@ -143,10 +180,14 @@ section.u4m-blog-listing {
             position: relative;
             .hs-search-field__input {
               border-radius: 8px;
-              border: 1px solid;
-              padding: 10px 60px 10px 20px;
+              border: 1px solid $border_color;
+              padding: 20px 60px 20px 20px;
+              font-family: $secondaryFont;
+              @include size18;
+              line-height: 1.56;
+              outline: none;
               &::placeholder {
-                color: #2e2e2e;
+                color: $baseColor;
               }
             }
             button {
@@ -156,19 +197,42 @@ section.u4m-blog-listing {
               background: transparent;
               border: 0;
               width: 50px;
-              height: 50px;
+              height: 70px;
             }
+          }
+          .hs-search-field {
+            position: relative;
           }
           .hs-search-field__suggestions {
             margin: 0;
+            background: $white;
+            left: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 100%;
+          }
+          .hs-search-field--open .hs-search-field__suggestions {
+            padding: 15px;
+            border: 1px solid $border_color;
+            border-radius: 8px;
           }
         }
         .tag-col {
           select {
             border-radius: 8px;
-            border: 1px solid;
-            padding: 10px 20px;
-            color: #2e2e2e;
+            border: 1px solid $border_color;
+            padding: 20px 60px 20px 20px;
+            font-family: $secondaryFont;
+            @include size18;
+            line-height: 1.56;
+            color: $baseColor;
+            outline: none;
+            background-position: calc(100% - 16px);
+            background-repeat: no-repeat;
+            background-size: 12px;
+            appearance: none;
           }
         }
       }
@@ -190,26 +254,86 @@ section.u4m-blog-listing {
       }
 
       .post-item-inner {
-        border: 1px solid #e5e5e5;
         border-radius: 8px;
         padding: 18px;
+        position: relative;
+        overflow: hidden;
+        &::before,
+        &:after {
+          content: "";
+          height: calc(100% + 4px);
+          left: 0px;
+          position: absolute;
+          top: 0px;
+          width: calc(100% + 4px);
+          z-index: 2;
+        }
+        &::before {
+          background: linear-gradient(
+            180deg,
+            $Medium_Aquamarine 0%,
+            rgba($Medium_Aquamarine, 0.0001) 100%
+          );
+          border: 1px solid transparent;
+          -o-border-image: linear-gradient(
+            180deg,
+            $Medium_Aquamarine 0%,
+            rgba($Medium_Aquamarine, 0.0001) 100%
+          );
+          border-image: linear-gradient(
+            180deg,
+            $Medium_Aquamarine 0%,
+            rgba($Medium_Aquamarine, 0.0001) 100%
+          );
+          border-image-slice: 1;
+          border-radius: 13px;
+          bottom: 0;
+          -webkit-mask: linear-gradient($White 0 0) content-box,
+            linear-gradient($Medium_Aquamarine 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          overflow: hidden;
+          transition: none;
+          width: 100%;
+        }
+        &::after {
+          border: 2px solid $Medium_Aquamarine;
+          border-radius: 100px;
+          height: 100%;
+          left: 0;
+          opacity: 0;
+          top: 0;
+          transition: all 0.2s ease;
+          transition: none;
+          width: 100%;
+        }
         .featured-img {
           margin-bottom: 15px;
+          position: relative;
+          z-index: 3;
           img {
             width: 100%;
             border-radius: 8px;
+            min-height: 200px;
+            object-fit: cover;
           }
         }
         .post-content {
+          position: relative;
+          z-index: 3;
           .post-item-topic {
             margin-bottom: 6px;
             a {
-              text-decoration: underline;
+              @include eyebrow2;
+              color: $Forest_Green;
             }
           }
           h4 {
             margin: 0;
             margin-bottom: 11px;
+            font-family: $secondaryFont;
+            line-height: 1.29;
+            font-weight: 500;
             a {
               color: inherit;
             }
@@ -221,6 +345,18 @@ section.u4m-blog-listing {
             margin-top: 40px;
             a {
               text-transform: uppercase;
+              @include size14;
+              letter-spacing: 0.47px;
+              font-weight: bold;
+              color: $Fern_green;
+              line-height: 1.2;
+              svg {
+                margin-left: 15px;
+                width: 14px;
+                path {
+                  fill: currentColor;
+                }
+              }
             }
           }
         }
@@ -233,9 +369,9 @@ section.u4m-blog-listing {
       text-align: center;
       a {
         align-items: center;
-        background-color: rgba(217, 232, 237, 0.5);
+        background-color: rgba($Nori_Green, 0.1);
         border-radius: 100%;
-        color: #00161d;
+        color: $Dark_jungle;
         display: flex;
         font-size: 16rem;
         font-weight: 500;
@@ -244,10 +380,16 @@ section.u4m-blog-listing {
         margin: 0 10px;
         width: 36px;
         justify-content: center;
+        &.prev-link svg {
+          transform: rotate(180deg);
+        }
+        svg path {
+          fill: currentColor;
+        }
         &.active,
         &:hover {
-          background-color: #409650;
-          color: #ffffff;
+          background-color: $Dark_jungle;
+          color: $white;
         }
       }
     }
