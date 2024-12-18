@@ -38,7 +38,7 @@
 						<div class='featured-content-col'>
 						{% if tag_post.topic_list %}
 							<div class='featured-topic'>
-								{% set included_topics = tag_post.topic_list | rejectattr("slug", "equalto", "featured") | list %}
+								{% set included_topics = tag_post.topic_list | rejectattr("slug", "equalto", "Featured") | list %}
 								{% for topic in included_topics %}
 									{% if loop.first %}
 									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
@@ -122,7 +122,7 @@
 					<select id="tinynav1" class="tinynav tinynav1" style="background-image: url(https://www.l2l.com/hubfs/L2L-u4m/images/dropdownArrow.png);">
 						<option value="{{ group.absolute_url }}">Filter by Topic</option>
 						{% for item in my_topics %}
-						{% if item=="featured"%}
+						{% if item=="Featured"%}
 						{% else %}
 						<option value="{{ blog_tag_url(group.id, item.slug) }}" {% if content.absolute_url == blog_tag_url(group.id, item.slug) %} selected{% endif %}>{{ item|capitalize}}</option>
 						{% endif %}
