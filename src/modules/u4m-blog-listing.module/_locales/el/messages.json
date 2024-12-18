@@ -54,31 +54,6 @@
     "description" : null,
     "placeholders" : null
   },
-  "background_settings.opacity.default" : {
-    "message" : "",
-    "description" : null,
-    "placeholders" : null
-  },
-  "background_settings.opacity.help_text" : {
-    "message" : "",
-    "description" : null,
-    "placeholders" : null
-  },
-  "background_settings.opacity.inline_help_text" : {
-    "message" : "",
-    "description" : null,
-    "placeholders" : null
-  },
-  "background_settings.opacity.label" : {
-    "message" : "Opacity",
-    "description" : null,
-    "placeholders" : null
-  },
-  "background_settings.opacity.placeholder" : {
-    "message" : "",
-    "description" : null,
-    "placeholders" : null
-  },
   "background_settings.placeholder" : {
     "message" : "",
     "description" : null,

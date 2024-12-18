@@ -227,8 +227,8 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "placeholder" : "Search",
-    "include_search_button" : false,
+    "placeholder" : "Search...",
+    "include_search_button" : true,
     "results" : {
       "use_custom_search_results_template" : false
     },
@@ -340,24 +340,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "value 1", "Label 1" ], [ "value 2", "Label 2" ] ],
+    "choices" : [ [ "prismic_mango_bg", "Prismic Mango" ], [ "prismic_mint_bg", "Prismic Mint" ], [ "frostee_bg", "Frostee" ], [ "mint_cream_bg", "Mint Cream" ], [ "menthol_bg", "Menthol" ], [ "l2l_green_bg", "L2L Green" ], [ "fern_green_bg", "Fern Green" ], [ "dark_jungle_bg", "Dark Jungle" ], [ "mystic_green_bg", "Mystic Green" ], [ "lime_green_bg", "Lime Green" ], [ "white_bg", "White" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
-    "type" : "choice"
-  }, {
-    "id" : "08f73fd2-154c-3bf9-d4e0-93424aac4f48",
-    "name" : "opacity",
-    "display_width" : null,
-    "label" : "Opacity",
-    "required" : false,
-    "locked" : false,
-    "display" : "text",
-    "max" : 100,
-    "step" : 10,
-    "suffix" : "%",
-    "type" : "number",
-    "default" : 40
+    "type" : "choice",
+    "default" : "prismic_mango_bg"
   }, {
     "id" : "01b40358-d981-e8f3-019e-fa6f5248e60e",
     "name" : "select_gradient",
@@ -366,12 +354,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ] ],
+    "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ], [ "gradient3", "Gradient 3" ], [ "gradient4", "Gradient 4" ], [ "gradient5", "Gradient 5" ], [ "gradient6", "Gradient 6" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "gradient1"
+    "default" : "gradient3"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -379,7 +367,7 @@
   "type" : "group",
   "default" : {
     "background_type" : "gradient",
-    "opacity" : 40,
-    "select_gradient" : "gradient1"
+    "select_color" : "prismic_mango_bg",
+    "select_gradient" : "gradient3"
   }
 } ]

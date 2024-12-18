@@ -10,6 +10,7 @@ section.u4m-blog-listing {
       h1 {
         margin-bottom: 60px;
         color: $white;
+        font-family: $primaryFont;
       }
     }
     .featured-post {
@@ -23,6 +24,7 @@ section.u4m-blog-listing {
       position: relative;
       border-radius: 13px;
       padding: 18px;
+      overflow: hidden;
       @include tabletvert {
         width: 100%;
         margin-bottom: 30px;
@@ -40,25 +42,25 @@ section.u4m-blog-listing {
       &::before {
         background: linear-gradient(
           180deg,
-          #6abe7a 0%,
-          rgba(106, 190, 122, 0.0001) 100%
+          $Medium_Aquamarine 0%,
+          rgba($Medium_Aquamarine, 0.0001) 100%
         );
         border: 1px solid transparent;
         -o-border-image: linear-gradient(
           180deg,
-          #6abe7a 0%,
-          rgba(106, 190, 122, 0.0001) 100%
+          $Medium_Aquamarine 0%,
+          rgba($Medium_Aquamarine, 0.0001) 100%
         );
         border-image: linear-gradient(
           180deg,
-          #6abe7a 0%,
-          rgba(106, 190, 122, 0.0001) 100%
+          $Medium_Aquamarine 0%,
+          rgba($Medium_Aquamarine, 0.0001) 100%
         );
         border-image-slice: 1;
         border-radius: 13px;
         bottom: 0;
-        -webkit-mask: linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#6abe7a 0 0);
+        -webkit-mask: linear-gradient($White 0 0) content-box,
+          linear-gradient($Medium_Aquamarine 0 0);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
         overflow: hidden;
@@ -66,7 +68,7 @@ section.u4m-blog-listing {
         width: 100%;
       }
       &::after {
-        border: 2px solid #6abe7a;
+        border: 2px solid $Medium_Aquamarine;
         border-radius: 100px;
         height: 100%;
         left: 0;
@@ -89,7 +91,7 @@ section.u4m-blog-listing {
       .featured-topic {
         padding-bottom: 13px;
         a {
-          text-decoration: underline;
+          @include eyebrow2;
         }
       }
       h3 {

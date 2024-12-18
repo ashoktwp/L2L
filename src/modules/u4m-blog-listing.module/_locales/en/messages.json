@@ -54,31 +54,6 @@
     "description" : null,
     "placeholders" : null
   },
-  "background_settings.opacity.default" : {
-    "message" : "",
-    "description" : null,
-    "placeholders" : null
-  },
-  "background_settings.opacity.help_text" : {
-    "message" : "",
-    "description" : null,
-    "placeholders" : null
-  },
-  "background_settings.opacity.inline_help_text" : {
-    "message" : "",
-    "description" : null,
-    "placeholders" : null
-  },
-  "background_settings.opacity.label" : {
-    "message" : "Opacity",
-    "description" : null,
-    "placeholders" : null
-  },
-  "background_settings.opacity.placeholder" : {
-    "message" : "",
-    "description" : null,
-    "placeholders" : null
-  },
   "background_settings.placeholder" : {
     "message" : "",
     "description" : null,
@@ -95,7 +70,7 @@
     "placeholders" : null
   },
   "background_settings.select_color.default" : {
-    "message" : "",
+    "message" : "prismic_mango_bg",
     "description" : null,
     "placeholders" : null
   },
@@ -110,7 +85,7 @@
     "placeholders" : null
   },
   "background_settings.select_color.label" : {
-    "message" : "Select Color",
+    "message" : "",
     "description" : null,
     "placeholders" : null
   },
@@ -130,7 +105,7 @@
     "placeholders" : null
   },
   "background_settings.select_gradient.default" : {
-    "message" : "gradient1",
+    "message" : "gradient3",
     "description" : null,
     "placeholders" : null
   },
@@ -145,7 +120,7 @@
     "placeholders" : null
   },
   "background_settings.select_gradient.label" : {
-    "message" : "Select Gradient",
+    "message" : "",
     "description" : null,
     "placeholders" : null
   },

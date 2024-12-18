@@ -178,3 +178,27 @@
   display: block;
   margin-bottom: 10rem;
 }
+
+@mixin eyebrow2 {
+  font-family: $secondaryFont;
+  font-size: 14rem;
+  font-weight: 600;
+  line-height: 2.37;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  display: block;
+  color: $Prismic_mint;
+  text-decoration: underline;
+}
+
+@mixin size14 {
+  font-size: 14rem;
+}
+
+@mixin size18 {
+  font-size: 18rem;
+}
+
+@mixin size21 {
+  font-size: 21rem;
+}
