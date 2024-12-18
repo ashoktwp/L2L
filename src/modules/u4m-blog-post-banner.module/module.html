@@ -1,0 +1,58 @@
+<div class="u4m-blog-post-banner">
+  <div class="page-center">
+    <div class="post-banner-wrp flex_row">
+      <div class="col5 blog_post_content">
+        <div class="blog_post_content_inn">
+          <div class="post_tags">
+            {% for topic in content.topic_list %}
+            <a class="link" href="{{ blog_tag_url(group.id, topic.slug) }}"
+              >{{ topic.name }}</a
+            >
+            {% if not loop.last %}, {% endif %} {% endfor %}
+          </div>
+          <div class="post_title">
+            <h2>{{ content.name }}</h2>
+          </div>
+          <div class="post_authors">
+            <div class="author-wrap">
+              <div class="avatar">
+                <span class="author_avatar"
+                  ><img
+                    src="{{ resize_image_url(content.blog_post_author.avatar, 0,0,imageMax) }}"
+                    alt="{{ content.blog_post_author.display_name }}"
+                /></span>
+                {{ content.blog_post_author.display_name }}
+              </div>
+              {% if module.enable_second_author %}
+              <div class="avatar custom_avatar">
+                <span class="author_avatar"
+                  ><img
+                    src="{{ module.author_avatar.src }}"
+                    alt="{{ module.author_name|striptags }}"
+                /></span>
+                {{ module.author_name }}
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col7 post_feature_img">
+        <div class="post_feature_img_inn">
+          <img
+            src="{{ resize_image_url(content.featured_image, 0,0,imageMax) }}"
+            alt="{{ module.author_name }}"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .u4m-blog-post-banner {
+    background-image: url({{ module.background_image.src|escape_url }});
+  }
+</style>
+{% end_require_css %}

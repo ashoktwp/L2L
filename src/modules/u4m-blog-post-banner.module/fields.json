@@ -1,0 +1,79 @@
+[ {
+  "id" : "96098d54-90e4-3572-b15e-78b2bda2187b",
+  "name" : "background_image",
+  "display_width" : null,
+  "label" : "Background Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto_custom_max",
+    "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/images/7fe16b400a7c225d6cf27ca6d938cee5.png",
+    "alt" : "7fe16b400a7c225d6cf27ca6d938cee5",
+    "loading" : "lazy",
+    "width" : 2556,
+    "height" : 1764,
+    "max_width" : 2000,
+    "max_height" : 1380.281690140845
+  }
+}, {
+  "id" : "7ce0281b-87c7-aa19-e5ce-9237875a4fb4",
+  "name" : "enable_second_author",
+  "display_width" : null,
+  "label" : "Enable Second Author",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "91a8241c-3585-714b-54e9-bb2746344b57",
+  "name" : "author_avatar",
+  "display_width" : null,
+  "label" : "Author Avatar",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "enable_second_author",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "responsive" : false,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "exact",
+    "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/images/f22d13b36eb8c966dee0ec572286a5d6.png",
+    "alt" : "f22d13b36eb8c966dee0ec572286a5d6",
+    "loading" : "lazy",
+    "width" : 800,
+    "height" : 1200
+  }
+}, {
+  "id" : "79d85704-0503-38b8-a683-9be713c5f79a",
+  "name" : "author_name",
+  "display_width" : null,
+  "label" : "Author Name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "enable_second_author",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Daan Assen"
+} ]
