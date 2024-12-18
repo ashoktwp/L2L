@@ -1,7 +1,7 @@
 //heading styles
 @mixin h1 {
   font-size: 72rem;
-  font-family: $secondaryFont;
+  font-family: $primaryFont;
   font-weight: bold;
   letter-spacing: -0.5px;
   margin-bottom: 30rem;
@@ -22,7 +22,7 @@
   margin-bottom: 30rem;
   line-height: 1.125;
   color: $headingColor;
-  font-family: $secondaryFont;
+  font-family: $primaryFont;
   font-weight: bold;
   letter-spacing: -0.5px;
   @include tablet {
@@ -38,7 +38,7 @@
   margin-bottom: 30rem;
   line-height: 1.2;
   color: $baseColor;
-  font-family: $secondaryFont;
+  font-family: $primaryFont;
   font-weight: bold;
   letter-spacing: -0.5px;
   @include tablet {

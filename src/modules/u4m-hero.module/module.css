@@ -65,7 +65,7 @@ section.u4m-hero .inner .content-wrap .copy .eyebrow {
 }
 section.u4m-hero .inner .content-wrap .copy .heading {
   font-size: 72rem;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
   margin-bottom: 30rem;
@@ -89,7 +89,7 @@ section.u4m-hero .inner .content-wrap .copy .heading.small {
   margin-bottom: 30rem;
   line-height: 1.125;
   color: #0e2514;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
 }
@@ -110,7 +110,7 @@ section.u4m-hero .inner .content-wrap .copy .heading.small {
     margin-bottom: 30rem;
     line-height: 1.2;
     color: #2e2e2e;
-    font-family: "Inter";
+    font-family: "Sofia Sans";
     font-weight: bold;
     letter-spacing: -0.5px;
   }
@@ -132,7 +132,7 @@ section.u4m-hero .inner .content-wrap .copy .heading.small {
     margin-bottom: 30rem;
     line-height: 1.125;
     color: #0e2514;
-    font-family: "Inter";
+    font-family: "Sofia Sans";
     font-weight: bold;
     letter-spacing: -0.5px;
   }

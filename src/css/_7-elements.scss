@@ -730,3 +730,8 @@ section[class*="u4m-"] {
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
+.bg_image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}

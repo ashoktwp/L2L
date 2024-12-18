@@ -37,7 +37,7 @@ section.u4m-timeline .inner .timeline h2 {
   margin-bottom: 30rem;
   line-height: 1.125;
   color: #0e2514;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
   text-align: center;
@@ -83,7 +83,7 @@ section.u4m-timeline .inner .timeline .timeline-entry div.timeline-entry-info h3
   margin-bottom: 30rem;
   line-height: 1.2;
   color: #2e2e2e;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
 }

@@ -49,7 +49,7 @@ section.u4m-pricing-cards div.intro .heading {
   margin-bottom: 30rem;
   line-height: 1.125;
   color: #0e2514;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
   text-align: center;
@@ -323,7 +323,7 @@ section.u4m-pricing-cards .wrapper div.card .title {
   margin-bottom: 30rem;
   line-height: 1.125;
   color: #0e2514;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
   background-color: #cbd6e2;
@@ -370,7 +370,7 @@ section.u4m-pricing-cards .wrapper div.card div.content .price-container {
 }
 section.u4m-pricing-cards .wrapper div.card div.content .price-container .price {
   font-size: 72rem;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
   margin-bottom: 30rem;

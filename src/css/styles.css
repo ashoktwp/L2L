@@ -3049,7 +3049,7 @@ h6 {
 
 h1 {
   font-size: 72rem;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
   margin-bottom: 30rem;
@@ -3074,7 +3074,7 @@ h2 {
   margin-bottom: 30rem;
   line-height: 1.125;
   color: #0e2514;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
 }
@@ -3095,7 +3095,7 @@ h3 {
   margin-bottom: 30rem;
   line-height: 1.2;
   color: #2e2e2e;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
 }
@@ -4054,6 +4054,12 @@ section[class*=u4m-] {
   direction: ltr;
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
+}
+
+.bg_image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 section.u4m-404-error,
@@ -7971,7 +7977,7 @@ section.u4m-blog-post div.hero div.content {
 }
 section.u4m-blog-post div.hero div.content h1.title {
   font-size: 72rem;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
   margin-bottom: 30rem;
@@ -8038,7 +8044,7 @@ section.u4m-blog-post div.body div.content ol {
 }
 section.u4m-blog-post div.body div.content h1 {
   font-size: 72rem;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
   margin-bottom: 30rem;
@@ -8062,7 +8068,7 @@ section.u4m-blog-post div.body div.content h2 {
   margin-bottom: 30rem;
   line-height: 1.125;
   color: #0e2514;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
 }
@@ -8082,7 +8088,7 @@ section.u4m-blog-post div.body div.content h3 {
   margin-bottom: 30rem;
   line-height: 1.2;
   color: #2e2e2e;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
 }
@@ -8270,7 +8276,7 @@ section.u4m-blog-post div.comments h2.heading {
   margin-bottom: 30rem;
   line-height: 1.2;
   color: #2e2e2e;
-  font-family: "Inter";
+  font-family: "Sofia Sans";
   font-weight: bold;
   letter-spacing: -0.5px;
   float: none;

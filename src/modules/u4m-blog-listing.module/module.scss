@@ -1,6 +1,12 @@
 @import "../../css/_module-imports";
 
 section.u4m-blog-listing {
+  &.topic-page {
+    .blog-banner {
+      .page-title h1{
+        margin-bottom: 0;
+      }
+  }
   .blog-banner {
     position: relative;
     padding-top: 94px;
