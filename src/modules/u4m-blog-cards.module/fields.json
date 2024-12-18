@@ -356,7 +356,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "recent"
+    "default" : "tag"
   }, {
     "id" : "92298ae2-91b1-f2fe-954f-b52ea76a3f98",
     "name" : "select_blog",
@@ -557,7 +557,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "blog_post_type" : "recent",
+    "blog_post_type" : "tag",
     "select_blog" : 184027427604,
     "number_of_posts" : 3,
     "enable_manually_select_tag" : false,
