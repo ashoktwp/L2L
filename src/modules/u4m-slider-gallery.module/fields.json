@@ -1,74 +1,389 @@
 [ {
-  "id" : "b37ea81a-6a4c-2a9f-8df7-a33e5fe6a4f4",
-  "name" : "optional_headline",
+  "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
+  "name" : "intro_content",
   "display_width" : null,
-  "label" : "Headline",
+  "label" : "Intro Content",
   "required" : false,
   "locked" : false,
-  "validation_regex" : "",
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
-  "type" : "text",
-  "default" : "Slider Gallery"
+  "children" : [ {
+    "id" : "c5ccdda8-6960-e255-a51f-c61077a633ca",
+    "name" : "include_eyebrow_text",
+    "display_width" : null,
+    "label" : "Include Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "5baff6ad-02e1-6b84-3429-260a0ded7ef6",
+    "name" : "eyebrow_text",
+    "display_width" : null,
+    "label" : "Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_eyebrow_text",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Eyebrow Text"
+  }, {
+    "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
+    "name" : "include_heading",
+    "display_width" : null,
+    "label" : "Include Heading",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "aef5e961-e297-2654-68e0-6128687770bf",
+    "name" : "heading_size",
+    "display_width" : null,
+    "label" : "Heading Size",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_heading",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "h1", "Heading 1" ], [ "h2", "Heading 2" ], [ "h3", "Heading 3" ], [ "h4", "Heading 4" ], [ "h5", "Heading 5" ], [ "h6", "Heading 6" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "h2"
+  }, {
+    "id" : "c7aa6b72-58e0-4caa-9b63-4da765e70069",
+    "name" : "heading",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Company culture and people"
+  }, {
+    "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
+    "name" : "include_content",
+    "display_width" : null,
+    "label" : "Include Content",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "richtext",
+    "default" : "<p>Commodo sint nulla mollit in culpa esse voluptate commodo mollit nulla elit consectetur qui culpa eu.</p>"
+  }, {
+    "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
+    "name" : "include_button",
+    "display_width" : null,
+    "label" : "Include Button",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
+    "name" : "button_group",
+    "display_width" : null,
+    "label" : "Button Group",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : 2,
+      "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+      "default" : 2
+    },
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_button",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+      "name" : "button_type",
+      "display_width" : null,
+      "label" : "Button Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "std"
+    }, {
+      "id" : "9d5fe057-d461-68d1-9845-607ec6d892ff",
+      "name" : "button_style",
+      "display_width" : null,
+      "label" : "Button Style",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "hs-button", "Primary" ], [ "arrow-link", "Arrow Link" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "hs-button"
+    }, {
+      "id" : "819d4b45-006f-1b23-11ba-72b2c39b6f6e",
+      "name" : "button_theme",
+      "display_width" : null,
+      "label" : "Button Theme",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "theme1", "Theme 1" ], [ "theme2", "Theme 2" ], [ "theme3", "Theme 3" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "theme1"
+    }, {
+      "id" : "105bbd69-dccc-fd6b-3d3d-3f4063128744",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Button Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Button"
+    }, {
+      "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "d2f74da7-e18a-7c36-926e-f71b30005ccb",
+      "name" : "enable_arrow",
+      "display_width" : null,
+      "label" : "Enable Arrow",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "ef46548d-bcc7-841c-4635-d4d035ae7022",
+      "name" : "cta",
+      "display_width" : null,
+      "label" : "CTA",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "cta",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "cta"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : [ {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_theme" : "theme1",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "boolean_field" : false
+    }, {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_theme" : "theme1",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "boolean_field" : false
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "include_eyebrow_text" : false,
+    "eyebrow_text" : "Eyebrow Text",
+    "include_heading" : true,
+    "heading_size" : "h2",
+    "heading" : "Company culture and people",
+    "include_content" : true,
+    "content" : "<p>Commodo sint nulla mollit in culpa esse voluptate commodo mollit nulla elit consectetur qui culpa eu.</p>",
+    "include_button" : false,
+    "button_group" : [ {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_theme" : "theme1",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "boolean_field" : false
+    }, {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_theme" : "theme1",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "boolean_field" : false
+    } ]
+  }
 }, {
-  "id" : "083abf5e-8475-d4bc-ced9-e19d06380d7d",
-  "name" : "include_body",
+  "id" : "c466e11c-fbbe-6bce-c41e-e7dcd0728177",
+  "name" : "items_group",
   "display_width" : null,
-  "label" : "Include body",
-  "required" : false,
-  "locked" : false,
-  "display" : "checkbox",
-  "type" : "boolean",
-  "default" : true
-}, {
-  "id" : "f8283c3c-d979-3dd2-3b0c-74f97032aa1f",
-  "name" : "gallery_body_copy",
-  "display_width" : null,
-  "label" : "Gallery Body Copy",
-  "required" : false,
-  "locked" : false,
-  "visibility" : {
-    "controlling_field" : "083abf5e-8475-d4bc-ced9-e19d06380d7d",
-    "controlling_field_path" : null,
-    "controlling_value_regex" : "true",
-    "property" : null,
-    "operator" : "EQUAL",
-    "access" : null
-  },
-  "type" : "richtext",
-  "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
-}, {
-  "id" : "5ce2f61b-8c20-b644-d58d-8866860d0ae4",
-  "name" : "slides_to_show",
-  "display_width" : null,
-  "label" : "Slides To Show",
-  "help_text" : "This number will determine how many slides show on the screen at one time. ",
-  "required" : true,
-  "locked" : false,
-  "display" : "slider",
-  "min" : 3,
-  "max" : 8,
-  "step" : 1,
-  "type" : "number",
-  "default" : 4
-}, {
-  "id" : "f2c319a7-11df-8d73-69c5-115a7cf1d2fc",
-  "name" : "slider_repeater",
-  "display_width" : null,
-  "label" : "Slider Repeater",
+  "label" : "Items Group",
   "required" : false,
   "locked" : false,
   "occurrence" : {
-    "min" : 3,
+    "min" : null,
     "max" : null,
-    "sorting_label_field" : null,
-    "default" : 5
+    "sorting_label_field" : "65e6b25f-2333-2fca-f79e-2789f3e8b23c",
+    "default" : 4
   },
   "children" : [ {
-    "id" : "df4f6573-affe-7911-b80b-175c3ead4cc7",
-    "name" : "media_type",
+    "id" : "65e6b25f-2333-2fca-f79e-2789f3e8b23c",
+    "name" : "type",
     "display_width" : null,
-    "label" : "Media Type",
+    "label" : "Type",
     "required" : false,
     "locked" : false,
     "display" : "select",
@@ -79,186 +394,255 @@
     "type" : "choice",
     "default" : "image"
   }, {
-    "id" : "0a021702-1151-9921-b3a6-4847d56eb3f0",
-    "name" : "gallery_image",
+    "id" : "6829f12c-1406-7b50-0b7b-387ac7821673",
+    "name" : "image_field",
     "display_width" : null,
-    "label" : "Gallery Image",
-    "help_text" : "",
+    "label" : "Image",
     "required" : false,
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "slider_repeater.media_type",
+      "controlling_field_path" : "items_group.type",
       "controlling_value_regex" : "image",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
     },
-    "responsive" : false,
+    "responsive" : true,
     "resizable" : false,
     "show_loading" : false,
     "type" : "image",
     "default" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+      "alt" : "Rectangle",
+      "loading" : "lazy",
+      "width" : 513,
+      "height" : 297,
+      "max_width" : 513,
+      "max_height" : 297
     }
   }, {
-    "id" : "c684362e-2538-8907-f1c5-289826a1c35a",
-    "name" : "video_thumbnail",
+    "id" : "af01494a-0d9f-026c-3031-fb02db8a1fe2",
+    "name" : "video_group",
     "display_width" : null,
-    "label" : "Video Thumbnail",
-    "help_text" : "",
+    "label" : "Video Group",
     "required" : false,
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "slider_repeater.media_type",
+      "controlling_field_path" : "items_group.type",
       "controlling_value_regex" : "video",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
     },
-    "responsive" : false,
-    "resizable" : false,
-    "show_loading" : false,
-    "type" : "image",
+    "children" : [ {
+      "id" : "c53e540d-f217-6f12-dbf9-b2af9cb819b7",
+      "name" : "poster_image",
+      "display_width" : null,
+      "label" : "Poster Image",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+        "alt" : "Rectangle",
+        "loading" : "lazy",
+        "width" : 513,
+        "height" : 297,
+        "max_width" : 513,
+        "max_height" : 297
+      }
+    }, {
+      "id" : "13b69ecc-9b55-3186-4dfb-293aed6c23ef",
+      "name" : "video_type",
+      "display_width" : null,
+      "label" : "Video Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "file", "File" ], [ "embed", "Embed" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "file"
+    }, {
+      "picker" : "video",
+      "id" : "c18bd1db-9c61-b2cf-9e75-09d6f181b4d3",
+      "name" : "video",
+      "display_width" : null,
+      "label" : "Video",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "items_group.video_group.video_type",
+        "controlling_value_regex" : "file",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "file",
+      "default" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4"
+    }, {
+      "id" : "4220912f-7bd5-78b3-a829-a97bc3cf366f",
+      "name" : "embedded_path",
+      "display_width" : null,
+      "label" : "Embedded Path",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "items_group.video_group.video_type",
+        "controlling_value_regex" : "embed",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "https://www.youtube.com/embed/ScMzIvxBSi4"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
     "default" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
+      "poster_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+        "alt" : "Rectangle",
+        "loading" : "lazy",
+        "width" : 513,
+        "height" : 297,
+        "max_width" : 513,
+        "max_height" : 297
+      },
+      "video_type" : "file",
+      "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+      "embedded_path" : "https://www.youtube.com/embed/ScMzIvxBSi4"
     }
-  }, {
-    "id" : "56fd5634-6ae2-82c3-7d7c-61cd3f4b4b35",
-    "name" : "video_link",
-    "display_width" : null,
-    "label" : "Video",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "slider_repeater.media_type",
-      "controlling_value_regex" : "video",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "supported_source_types" : [ "oembed" ],
-    "supported_oembed_types" : [ "video" ],
-    "resizable" : false,
-    "show_preview" : true,
-    "supported_media_bridge_providers" : [ ],
-    "type" : "embed",
-    "default" : {
-      "source_type" : "oembed"
-    }
-  }, {
-    "id" : "36af75a1-f1d5-b854-fd2c-c7e738d6598b",
-    "name" : "lightbox",
-    "display_width" : null,
-    "label" : "Lightbox",
-    "required" : false,
-    "locked" : false,
-    "display" : "toggle",
-    "type" : "boolean",
-    "default" : true
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
-    "media_type" : "image",
-    "gallery_image" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
+    "type" : "image",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+      "alt" : "Rectangle",
+      "loading" : "lazy",
+      "width" : 513,
+      "height" : 297,
+      "max_width" : 513,
+      "max_height" : 297
     },
-    "video_thumbnail" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
-    },
-    "video_link" : {
-      "source_type" : "oembed"
-    },
-    "lightbox" : true
+    "video_group" : {
+      "poster_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+        "alt" : "Rectangle",
+        "loading" : "lazy",
+        "width" : 513,
+        "height" : 297,
+        "max_width" : 513,
+        "max_height" : 297
+      },
+      "video_type" : "file",
+      "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+      "embedded_path" : "https://www.youtube.com/embed/ScMzIvxBSi4"
+    }
   }, {
-    "media_type" : "image",
-    "gallery_image" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
+    "type" : "image",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+      "alt" : "Rectangle",
+      "loading" : "lazy",
+      "width" : 513,
+      "height" : 297,
+      "max_width" : 513,
+      "max_height" : 297
     },
-    "video_thumbnail" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
-    },
-    "video_link" : {
-      "source_type" : "oembed"
-    },
-    "lightbox" : true
+    "video_group" : {
+      "poster_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+        "alt" : "Rectangle",
+        "loading" : "lazy",
+        "width" : 513,
+        "height" : 297,
+        "max_width" : 513,
+        "max_height" : 297
+      },
+      "video_type" : "file",
+      "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+      "embedded_path" : "https://www.youtube.com/embed/ScMzIvxBSi4"
+    }
   }, {
-    "media_type" : "image",
-    "gallery_image" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
+    "type" : "image",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+      "alt" : "Rectangle",
+      "loading" : "lazy",
+      "width" : 513,
+      "height" : 297,
+      "max_width" : 513,
+      "max_height" : 297
     },
-    "video_thumbnail" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
-    },
-    "video_link" : {
-      "source_type" : "oembed"
-    },
-    "lightbox" : true
+    "video_group" : {
+      "poster_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+        "alt" : "Rectangle",
+        "loading" : "lazy",
+        "width" : 513,
+        "height" : 297,
+        "max_width" : 513,
+        "max_height" : 297
+      },
+      "video_type" : "file",
+      "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+      "embedded_path" : "https://www.youtube.com/embed/ScMzIvxBSi4"
+    }
   }, {
-    "media_type" : "image",
-    "gallery_image" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
+    "type" : "image",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+      "alt" : "Rectangle",
+      "loading" : "lazy",
+      "width" : 513,
+      "height" : 297,
+      "max_width" : 513,
+      "max_height" : 297
     },
-    "video_thumbnail" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
-    },
-    "video_link" : {
-      "source_type" : "oembed"
-    },
-    "lightbox" : true
-  }, {
-    "media_type" : "image",
-    "gallery_image" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
-    },
-    "video_thumbnail" : {
-      "src" : "https://cdn2.hubspot.net/hubfs/4533819/Imported_Blog_Media/post22.jpg",
-      "alt" : "post22",
-      "width" : 1280,
-      "height" : 720
-    },
-    "video_link" : {
-      "source_type" : "oembed"
-    },
-    "lightbox" : true
+    "video_group" : {
+      "poster_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+        "alt" : "Rectangle",
+        "loading" : "lazy",
+        "width" : 513,
+        "height" : 297,
+        "max_width" : 513,
+        "max_height" : 297
+      },
+      "video_type" : "file",
+      "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+      "embedded_path" : "https://www.youtube.com/embed/ScMzIvxBSi4"
+    }
   } ]
 }, {
   "id" : "module_overrides",
@@ -277,7 +661,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
@@ -539,58 +923,10 @@
     "type" : "number",
     "default" : 50
   }, {
-    "id" : "6c8bfd0e-1629-1268-e01c-17b4047ecfce",
-    "name" : "background_color",
-    "display_width" : null,
-    "label" : "Background Color",
-    "help_text" : "If a module has formal settings for a background color they will take priority over this value.",
-    "inline_help_text" : "",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : "enable_overrides",
-      "controlling_field_path" : null,
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "type" : "color",
-    "default" : {
-      "color" : null,
-      "opacity" : null
-    }
-  }, {
-    "id" : "878364f4-31ac-6917-e76f-65307d7d36e5",
-    "name" : "background_image",
-    "display_width" : null,
-    "label" : "Background Image",
-    "help_text" : "If a module has formal settings for a background image they will take priority over this value.",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : "enable_overrides",
-      "controlling_field_path" : null,
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "responsive" : true,
-    "resizable" : false,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "disabled"
-    }
-  }, {
     "id" : "3eccf45d-b0dc-4bac-42a0-f923e4405158",
     "name" : "reverse_text",
     "display_width" : null,
-    "label" : "Reverse Text",
+    "label" : "Dark Theme",
     "required" : false,
     "locked" : false,
     "visibility" : {
@@ -603,14 +939,196 @@
     },
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
+  }, {
+    "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
+    "name" : "background_settings",
+    "display_width" : null,
+    "label" : "Background Settings",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "3c812905-0c66-421d-6e7e-7a7109acdd49",
+      "name" : "background_type",
+      "display_width" : null,
+      "label" : "Background Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "color", "Color" ], [ "image", "Image" ], [ "gradient", "Gradient" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "image"
+    }, {
+      "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
+      "name" : "background_image",
+      "display_width" : null,
+      "label" : "Background Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "image",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto_custom_max",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG.png",
+        "alt" : "BG",
+        "loading" : "lazy",
+        "width" : 2400,
+        "height" : 1055,
+        "max_width" : 2000,
+        "max_height" : 879.1666666666666
+      }
+    }, {
+      "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
+      "name" : "select_color",
+      "display_width" : null,
+      "label" : "Select Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "prismic_mango_bg", "Prismic Mango" ], [ "prismic_mint_bg", "Prismic Mint" ], [ "frostee_bg", "Frostee" ], [ "mint_cream_bg", "Mint Cream" ], [ "menthol_bg", "Menthol" ], [ "l2l_green_bg", "L2L Green" ], [ "fern_green_bg", "Fern Green" ], [ "dark_jungle_bg", "Dark Jungle" ], [ "mystic_green_bg", "Mystic Green" ], [ "lime_green_bg", "Lime Green" ], [ "white_bg", "White" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "prismic_mango_bg"
+    }, {
+      "id" : "2659085b-598d-e346-643e-6a9ebb3bae70",
+      "name" : "select_gradient",
+      "display_width" : null,
+      "label" : "Select Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ], [ "gradient3", "Gradient 3" ], [ "gradient4", "Gradient 4" ], [ "gradient5", "Gradient 5" ], [ "gradient6", "Gradient 6" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : ""
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : true,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "background_type" : "image",
+      "background_image" : {
+        "size_type" : "auto_custom_max",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG.png",
+        "alt" : "BG",
+        "loading" : "lazy",
+        "width" : 2400,
+        "height" : 1055,
+        "max_width" : 2000,
+        "max_height" : 879.1666666666666
+      },
+      "select_color" : "prismic_mango_bg",
+      "select_gradient" : ""
+    }
+  }, {
+    "id" : "c813f3af-99b7-d54e-7ce2-b074f008a27c",
+    "name" : "container",
+    "display_width" : null,
+    "label" : "Container",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "87361475-d2b5-329d-45b2-227103ad95d9",
+      "name" : "size",
+      "display_width" : null,
+      "label" : "Size",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "theme", "Theme" ], [ "full-width", "Full Width" ], [ "custom", "Custom" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "custom"
+    }, {
+      "id" : "b9865f26-0901-d5ad-66a2-7c6ecacec658",
+      "name" : "custom_size",
+      "display_width" : null,
+      "label" : "Custom Size",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.container.size",
+        "controlling_value_regex" : "custom",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "slider",
+      "min" : 500,
+      "max" : 1920,
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 1090
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "size" : "custom",
+      "custom_size" : 1090
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_overrides" : false,
+    "enable_overrides" : true,
     "top_margin" : "top-margin-default",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
@@ -623,16 +1141,25 @@
     "bottom_padding" : "bottom-padding-default",
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
-    "background_color" : {
-      "color" : null,
-      "opacity" : null
+    "reverse_text" : true,
+    "background_settings" : {
+      "background_type" : "image",
+      "background_image" : {
+        "size_type" : "auto_custom_max",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG.png",
+        "alt" : "BG",
+        "loading" : "lazy",
+        "width" : 2400,
+        "height" : 1055,
+        "max_width" : 2000,
+        "max_height" : 879.1666666666666
+      },
+      "select_color" : "prismic_mango_bg",
+      "select_gradient" : ""
     },
-    "background_image" : {
-      "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "disabled"
-    },
-    "reverse_text" : false
+    "container" : {
+      "size" : "custom",
+      "custom_size" : 1090
+    }
   }
 } ]
