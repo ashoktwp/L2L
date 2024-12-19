@@ -69,6 +69,9 @@ $border-color_1: #287734;
         .tab-prev-arrow {
           position: absolute;
           top: 36%;
+          @include phone {
+            top: 50%;
+          }
           z-index: 9;
           transform: translateY(-50%);
           left: -10px;
@@ -93,6 +96,9 @@ $border-color_1: #287734;
         .tab-next-arrow {
           position: absolute;
           top: 36%;
+          @include phone {
+            top: 50%;
+          }
           z-index: 9;
           transform: translateY(-50%);
           left: -10px;
@@ -230,15 +236,27 @@ $border-color_1: #287734;
       display: block;
     }
     min-width: 582px;
+    @include navbreakMin {
+      min-width: 350px;
+    }
+    @include phone {
+      min-width: 295px;
+    }
     width: 100%;
     .ctvb-tabtn {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       padding-bottom: 0;
+      @include navbreakMin {
+        padding-top: 10px;
+      }
       a {
         color: $White;
         font-size: 14px;
+        @include phone {
+          font-size: 12px;
+        }
         &:hover {
           svg.ctvb-tablink-hover {
             transform: translate(0, 0);
@@ -284,6 +302,10 @@ $border-color_1: #287734;
     ul {
       display: flex;
       gap: 36px;
+      @include midlaptop {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
       li {
         margin: 0;
         a {
@@ -293,6 +315,9 @@ $border-color_1: #287734;
           font-size: 14px;
           position: relative;
           color: $baseColor;
+          @include midlaptop {
+            padding-bottom: 0;
+          }
         }
       }
       li.active {
@@ -437,11 +462,19 @@ $border-color_1: #287734;
     font-size: 30px;
     line-height: 42px;
     font-weight: 400;
+    @include phone {
+      font-size: 20px;
+      line-height: 32px;
+    }
     p {
       font-family: $secondaryFont;
       font-size: 30px;
       line-height: 42px;
       font-weight: 400;
+      @include phone {
+        font-size: 20px;
+        line-height: 32px;
+      }
     }
   }
   .ctvb-tabcompany {
