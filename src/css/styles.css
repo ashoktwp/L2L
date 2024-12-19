@@ -3862,8 +3862,6 @@ section[class*=u4m-] {
   text-transform: uppercase;
   display: inline-flex;
   color: #0e2514;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
 }
 .arrow-link .arrowbtn {
   display: inline-block;
@@ -3871,8 +3869,6 @@ section[class*=u4m-] {
   margin-left: 5px;
   overflow: hidden;
   position: relative;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
   vertical-align: middle;
   width: 24px;
 }
@@ -3882,8 +3878,8 @@ section[class*=u4m-] {
   position: absolute;
   right: 0;
   top: 0;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
+  transition: 0.3s transform;
+  -webkit-transition: 0.3s transform;
   width: 24px;
 }
 .arrow-link .arrowbtn svg.btnArrow2 {
