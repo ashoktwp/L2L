@@ -192,4 +192,32 @@
       }
     }
   }
+  &.reverse-text {
+    .blog_posts_items {
+      .blog_posts_item {
+        .blog_item_inn {
+          .post_body {
+            .post_title {
+              h4 {
+                color: $White;
+              }
+            }
+            .post_meta {
+              color: $White;
+              a {
+                color: $White;
+              }
+            }
+            .post-read-more {
+              .arrow-link {
+                &:not(:hover) {
+                  color: $White;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
