@@ -44,30 +44,23 @@ $border_color: #d8d8d8;
 $gradient1: linear-gradient(-45deg, $black 0%, $action2 50%);
 
 $gradient1: linear-gradient(129.51deg, $white -3.8%, $Frostee 107.08%);
-$gradient2: linear-gradient(260.94deg,
-    $Pale_Yellow_Green 3.36%,
-    $Prismic_mint 98.11%);
+$gradient2: linear-gradient(260.94deg, $Pale_Yellow_Green 3.36%, $Prismic_mint 98.11%);
 
-$gradient3: radial-gradient(circle at 50% -1.3e-14%,
-    $Fern_green 0%,
-    $Dark_jungle 78%);
+$gradient3: radial-gradient(circle at 50% -1.3e-14%, $Fern_green 0%, $Dark_jungle 78%);
 
 $gradient4: linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
-  linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
-  linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
-  linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%);
-$gradient5: radial-gradient(circle at 1.1e2% -9.2%,
-    $white 0%,
-    rgba($white, 0) 52%);
-$gradient6: radial-gradient(circle at 1.1e2% -9.2%,
-    $Dark_Green 0%,
-    $Dark_jungle 52%);
+    linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
+    linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
+    linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%);
+$gradient5: radial-gradient(circle at 1.1e2% -9.2%, $white 0%, rgba($white, 0) 52%);
+$gradient6: radial-gradient(circle at 1.1e2% -9.2%, $Dark_Green 0%, $Dark_jungle 52%);
 
 // ==============
 
 //============
 $primaryFont: "Sofia Sans";
 $secondaryFont: "Inter";
+$tertiaryFont: "Cairo";
 
 $font1: $primaryFont;
 $baseFontSize: 21rem;
@@ -91,4 +84,4 @@ $animation3: 1s ease-in;
 $borderRadius: 25rem;
 $containerSize: 1224rem;
 $introContainer: 810rem;
-$videoOverlay: rgb(51 71 91 / 60%);
+$videoOverlay: rgba($black, 0.6);
