@@ -9,37 +9,43 @@ label: header
       <div class="page-center">
         <div class="hd_inr">
           <div class="hd_logo">
-            {% module "header_logo" path="@hubspot/logo", label="Header Logo", img={src= "{{
-            get_asset_url('../..//templates/images/L2L.svg')}}", width=52, override_inherited_src= true, alt="L2L" } ,
-            link="/" %}
+            {% module "header_logo" path="@hubspot/logo", label="Header Logo",
+            img={src= "{{ get_asset_url('../..//templates/images/L2L.svg')}}",
+            width=52, override_inherited_src= true, alt="L2L" } , link="/" %}
           </div>
           <div class="hd_menu dsk">
-            {% module "mega_menu" path="../../modules/u4m-mega-menu", label="Mega Menu" %}
+            {% module "mega_menu" path="../../modules/u4m-mega-menu",
+            label="Mega Menu" %}
           </div>
           <div class="hd_right dsk">
             <div class="hd_links">
-              {% menu path="@hubspot/menu" label="Header Links" id="184036635918" %}
+              {% menu path="@hubspot/menu" label="Header Links"
+              id="184036635918" %}
             </div>
             <div class="hd_btn">
-              {% module "button" , path="@hubspot/button" , label="Book a demo" , button_text="Book a demo", link={
-              "url": { "type": "EXTERNAL", "href": "" }, "open_in_new_tab": true, "no_follow": false } ,%}
+              {% module "button" , path="@hubspot/button" , label="Book a demo"
+              , button_text="Book a demo", link={ "url": { "type": "EXTERNAL",
+              "href": "" }, "open_in_new_tab": true, "no_follow": false } ,%}
             </div>
           </div>
           <div class="mobile_menu">
-            <div class="trigger"></div>
+            <div class="trigger"><i></i></div>
             <div class="hd_menu">
-              {% module "mega_menu" path="../../modules/u4m-mega-menu", label="Mega Menu" %}
+              {% module "mega_menu" path="../../modules/u4m-mega-menu",
+              label="Mega Menu" %}
             </div>
             <div class="hd_right">
               <div class="hd_links">
-                {% menu path="@hubspot/menu" label="Header Links" id="184036635918" %}
+                {% menu path="@hubspot/menu" label="Header Links"
+                id="184036635918" %}
               </div>
               <div class="hd_btn">
-                {% module "button" , path="@hubspot/button" , label="Book a demo" , button_text="Book a demo", link={
-                "url": { "type": "EXTERNAL", "href": "" }, "open_in_new_tab": true, "no_follow": false } ,%}
+                {% module "button" , path="@hubspot/button" , label="Book a
+                demo" , button_text="Book a demo", link={ "url": { "type":
+                "EXTERNAL", "href": "" }, "open_in_new_tab": true, "no_follow":
+                false } ,%}
               </div>
             </div>
-
           </div>
         </div>
       </div>
