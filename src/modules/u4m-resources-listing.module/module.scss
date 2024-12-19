@@ -11,6 +11,9 @@
     .blog-banner {
         position: relative;
         z-index: 2;
+        .page-center {
+            max-width: 1341px;
+        }
         .page-title {
             text-align: center;
             h1 {
@@ -84,6 +87,34 @@
                     min-height: auto;
                 }
             }
+
+            .featured-tag {
+                @include size14;
+                font-family: $secondaryFont;
+                margin: 0;
+                position: absolute;
+                font-weight: 600;
+                background: $headingColor;
+                color: $white;
+                letter-spacing: 0.47px;
+                display: flex;
+                gap: 11px;
+                align-items: center;
+                line-height: 17px;
+                padding: 4px 6px 5px 10px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                left: 29px;
+                top: 29px;
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    width: 7px;
+                    height: 7px;
+                    background: $arrowDots;
+                    border-radius: 100%;
+                }
+            }
         }
         .featured-content-col {
             width: calc(100% - 792px);
@@ -103,6 +134,8 @@
                 margin: 0;
                 margin-bottom: 11px;
                 color: $white;
+                letter-spacing: 0.25px;
+                line-height: 1.28125;
                 a {
                     color: inherit;
                 }
@@ -110,12 +143,13 @@
             p {
                 color: $white;
                 margin-top: 0;
+                mix-blend-mode: plus-lighter;
+                opacity: 0.66;
             }
             .read-more {
                 margin-top: 30px;
                 a {
                     letter-spacing: 0.47px;
-                    color: $Menthol;
                     line-height: 1.2;
                     gap: 15px;
                     .arrowbtn {
@@ -130,19 +164,26 @@
                             fill: currentColor;
                         }
                     }
+                    &:not(:hover) {
+                        svg {
+                            path {
+                                fill: $Prismic_mango;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
     .main-listing {
         background-color: $Mint_cream;
-        padding-top: 78px;
-        padding-bottom: 100px;
+        padding-top: 80px;
+        padding-bottom: 110px;
         @include tabletvert {
             padding: 50px 0;
         }
         .site-search-wrap {
-            margin-bottom: 85px;
+            margin-bottom: 51px;
             @include tabletvert {
                 margin-bottom: 50px;
             }
@@ -212,6 +253,40 @@
     }
     .listing-wrap {
         @include CardItems;
+        .post-item {
+            .post-item-inner {
+                .featured-img {
+                    .featured-tag {
+                        @include size14;
+                        font-family: $secondaryFont;
+                        margin: 0;
+                        position: absolute;
+                        font-weight: 600;
+                        background: $headingColor;
+                        color: $white;
+                        letter-spacing: 0.47px;
+                        display: flex;
+                        gap: 11px;
+                        align-items: center;
+                        line-height: 17px;
+                        padding: 4px 6px 5px 10px;
+                        border-radius: 3px;
+                        text-transform: uppercase;
+                        left: 11px;
+                        top: 11px;
+                        &:before {
+                            content: "";
+                            display: inline-block;
+                            width: 7px;
+                            height: 7px;
+                            background: $arrowDots;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
         .pagination {
             @include blogPagination;
             nav {
