@@ -1,33 +1,54 @@
 {% set moduleName = 'u4m-alternating-content' %}
-  {% set bgImageMax = 1920 %}
-  {% set backgroundImageMax = 1920 %}
-  {% set foregroundImageMax = 1000 %}
-  
-  {% include "../partials/u4-module-includes.html" %}
-  
-  <div class="inner {% if module.content_on_left %} left {% endif %}">           
-    <div class="additional-content">            
-      {% if module.additional_content == 'image' %}
-      <div class="image"><img loading="lazy" src="{{ module.image.src }}" width="600" alt="{{ module.image.alt }}"></div>
-      {% elif module.additional_content == 'video' %}
-      <div class="video">{{ module.video_embed }}</div>
-      {% endif %}
-    </div>      
-    <div class="content">
-      {% if module.include_eyebrow %}
-      <span class="eyebrow">{{ module.eyebrow_text }}</span>
-      {% endif %}
-      {% if module.include_headline %}
-      <h2>{{ module.headline }}</h2>
-      {% endif %}
-      <span>{{ module.content }}</span>       
-      {% if module.link_type == "cta" %}
-      <span class="cta">{% cta guid="{{ module.call_to_action }}" %}</span>
-      {% elif module.link_type == "url" %}
-      <span class="url"><a href="{{ module.link.href }}" {% if module.open_in_new_window %}target="_blank"{% endif %}>{{ module.link_text }}</a></span>
-      {% else %}
-      <!-- No link -->
-      {% endif %}
-    </div>
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="intro_wrapp">
+    {{macros.introGroup(module.intro_content)}}
   </div>
-  </section>
+
+  <div class='two-col-content'>
+    {% for item in module.content %}
+    <div class='two-col-content-item {{item.content_alignment}}'>
+      <div class="content-col">
+        {% if item.content.heading %}
+        <h2>
+          {{ item.content.heading }}
+        </h2>
+        {% endif %}
+        {{ item.content.content }}
+
+        {{macros.buttonGroup(item.content.button_group)}}
+
+      </div>
+      <div class="media-col">
+        {% if item.media_column.media_type == 'img' %}
+        {% if item.media_column.image.src %}
+        <div class="img-col">
+          <img src="{{ item.media_column.image.src|escape_url }}" alt="{{ item.media_column.image.alt|escape_attr }}" style="border-radius:{{ module.module_settings.image_border_radious }}px;">
+        </div>
+        {% endif %}
+        {% endif %}
+        {% if item.media_column.media_type == 'video' %}
+        <video class="video-media" controls style="border-radius:{{ module.module_settings.image_border_radious }}px;">
+          <source src="{{ item.media_column.video }}" type="video/mp4">
+        </video>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+

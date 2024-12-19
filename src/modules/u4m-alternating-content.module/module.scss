@@ -1,100 +1,96 @@
 @import "../../css/_module-imports";
+
 section.u4m-alternating-content {
-  margin-top: 100rem;
-  margin-bottom: 100rem;
+  padding-top: 90px;
+  padding-bottom: 90px;
   &.reverse-text {
-    .inner .content {
+    .content-col * {
       color: $white;
     }
   }
-  div.inner {
-    @include center;
+  @include tabletvert {
+    padding: 50px 0;
+  }
+  .two-col-content {
+    row-gap: 108px;
     display: flex;
+    flex-wrap: wrap;
+    @include tabletvert {
+      row-gap: 50px;
+    }
+  }
+  .two-col-content-item {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
-    @include tablet {
-      display: block;
-    }
-    div.additional-content {
-      flex-direction: column;
-      flex: 1 1 50%;
-      @include tablet {
-        float: none;
-        width: 100%;
+    .media-col {
+      max-width: 582px;
+      width: 100%;
+      @include laptop {
+        max-width: 100%;
+        width: 50%;
       }
-      div.image {
-        //text-align: center;
-        img {
-          max-width: 600rem;
-          @include tablet {
-            max-width: 100%;
-            width: 100%;
-          }
-        }
-      }
-      div.video {
-        flex: 1 1 50%;
-        h3 {
-          @include h6;
-        }
-        h4 {
-          @include b2;
-          font-weight: bold;
-        }
-      }
-    }
-    div.content {
-      flex: 1 1 50%;
-      padding-left: 50rem;
-      @include tablet {
+      @include tabletvert {
         max-width: 100%;
         width: 100%;
-        margin-top: 0;
-        padding: 30rem 0;
+        margin-bottom: 20px;
       }
-      .eyebrow {
-        @include eyebrow;
+      img {
+        width: 100%;
+        max-height: 396px;
+        object-fit: cover;
+        min-height: 396px;
+        @include tabletvert {
+          min-height: 300px;
+          max-height: 300px;
+        }
+      }
+      .video-media {
+        width: 100%;
+      }
+    }
+    .content-col {
+      width: calc(100% - 582px);
+      padding-right: 130px;
+      font-family: $secondaryFont;
+      @include laptop {
+        width: 50%;
+        padding-right: 100px;
+      }
+      @include tabletmid {
+        padding-right: 50px;
+      }
+      @include tabletvert {
+        width: 100%;
+        padding-right: 0;
       }
       h2 {
-        margin-top: 0;
-        @include h5;
-        @include phone {
-          margin-bottom: 0;
+        margin-bottom: 14px;
+        font-weight: 500;
+        letter-spacing: 0.25px;
+        line-height: 1.188;
+      }
+    }
+    &.right {
+      flex-direction: row-reverse;
+      .content-col {
+        padding-right: 0;
+        padding-left: 130px;
+        @include laptop {
+          padding-left: 100px;
         }
-      }
-      h3 {
-        @include h6;
-      }
-      h4 {
-        @include b2;
-        font-weight: bold;
-      }
-      p {
-        @include b2;
-        &:last-of-type {
-          margin-bottom: 0;
+        @include tabletmid {
+          padding-left: 50px;
         }
-        @include phone {
-          @include b4;
-        }
-      }
-      a {
-        margin-bottom: 0;
-      }
-      span.url,
-      span.cta {
-        a {
-          @include buttonSmall;
-          margin-top: 35rem;
+        @include tabletvert {
+          padding-left: 0;
         }
       }
     }
-    &.left {
-      flex-direction: row-reverse;
-      div.content {
-        padding-left: 0;
-        padding-right: 30rem;
+    @include tabletvert {
+      flex-direction: column-reverse;
+      &.right {
+        flex-direction: column-reverse;
       }
     }
   }
