@@ -29,6 +29,9 @@ section.u4m-blog-listing .blog-banner {
     padding: 50px 0;
   }
 }
+section.u4m-blog-listing .blog-banner .page-center {
+  max-width: 1340px;
+}
 section.u4m-blog-listing .blog-banner .page-title {
   text-align: center;
 }
@@ -396,7 +399,7 @@ section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner .po
   fill: currentColor;
 }
 section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner .post-content .read-more a:hover {
-  color: #f08c1f;
+  color: #F08C1F;
 }
 section.u4m-blog-listing .listing-wrap .blog-pagination {
   align-items: center;

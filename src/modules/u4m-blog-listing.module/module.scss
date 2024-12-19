@@ -15,6 +15,9 @@ section.u4m-blog-listing {
     @include tabletvert {
       padding: 50px 0;
     }
+    .page-center {
+      max-width: 1340px;
+    }
     .page-title {
       text-align: center;
       h1 {

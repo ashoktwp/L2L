@@ -1,6 +1,7 @@
 @import "../../css/_module-imports";
 
 .u4m-split-form-wrapper {
+  background-color: $Off-White;
   .u4m-split-landing-page {
     padding-top: 20px;
     padding-bottom: 102px;
@@ -92,6 +93,7 @@
       }
       form {
         background-color: transparent;
+        margin: 0;
       }
 
       form {
@@ -274,7 +276,6 @@
   }
   .splitFormbotom {
     padding-top: 80px;
-    background-color: $Off-White;
     .bottom_content {
       @include size16;
       color: $Dark_Green2;
