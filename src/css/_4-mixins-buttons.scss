@@ -11,6 +11,7 @@
   align-items: center;
   text-transform: uppercase;
 }
+
 @mixin button {
   @include buttonBase;
   border-radius: 8px;
@@ -23,18 +24,21 @@
   background-color: $L2L_green;
   border-color: $L2L_green;
   cursor: pointer;
+
   &:hover {
     border-radius: 21px;
     color: $Menthol;
     background-color: $Fern_green;
     border-color: $Fern_green;
   }
+
   &:active {
     border-radius: 21px;
     color: $Lime_Green;
     background-color: $Forest_Green;
     border-color: $Forest_Green;
   }
+
   &:disabled {
     border-radius: 8px;
     color: $white;
@@ -49,10 +53,12 @@
   padding: 14rem 30rem;
   background: linear-gradient(308.96deg, $Prismic_mint -8.65%, $Pale_Yellow_Green 81.32%);
   color: $baseColor;
+
   &:hover {
     background-color: $Menthol;
     color: $baseColor;
   }
+
   &:active {
     background-color: $Lime_Green;
     color: $baseColor;
@@ -64,11 +70,13 @@
   background-color: rgba($Sea_Green, 0.08);
   color: $white;
   border-color: $Sea_Green;
+
   &:hover {
     background-color: rgba($Menthol, 0.08);
     color: $Menthol;
     border-color: $Menthol;
   }
+
   &:active {
     background-color: rgba($Lime_Green, 0.13);
     color: $Lime_Green;
@@ -82,6 +90,7 @@
   color: $Nori_Green;
   transition: 0.3s;
   -webkit-transition: 0.3s;
+
   .arrowbtn {
     display: inline-block;
     height: 24px;
@@ -92,6 +101,7 @@
     -webkit-transition: 0.3s;
     vertical-align: middle;
     width: 24px;
+
     svg {
       height: 24px;
       overflow: hidden;
@@ -101,17 +111,21 @@
       transition: 0.3s;
       -webkit-transition: 0.3s;
       width: 24px;
+
       &.btnArrow2 {
         transform: translate(-30px, 30px);
       }
     }
   }
+
   &:hover {
     color: $Medium_Aquamarine;
+
     svg {
       &.btnArrow1 {
         transform: translate(30px, -30px);
       }
+
       &.btnArrow2 {
         transform: translate(0, 0);
       }
@@ -121,6 +135,7 @@
 
 @mixin buttonWithIconTwo {
   color: $Nori_Green;
+
   &:hover {
     color: $Menthol;
   }
@@ -128,6 +143,7 @@
 
 @mixin buttonWithIconThree {
   color: $Nori_Green;
+
   &:hover {
     color: $Prismic_mango;
   }
@@ -238,13 +254,14 @@
     }
   }
 
-  > li:only-child {
+  >li:only-child {
     display: none;
   }
 }
 
 // Arrow navigation for slick.js
 @mixin slickArrows {
+
   &.slick-next,
   &.slick-prev {
     &:before {
