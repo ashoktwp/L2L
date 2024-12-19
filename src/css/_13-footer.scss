@@ -118,6 +118,10 @@ footer.ftr_wrpp {
                                 cursor: pointer;
                                 line-height: 1.71428571;
                                 letter-spacing: normal;
+
+                                &:hover {
+                                    color: $Menthol;
+                                }
                             }
                         }
                     }
@@ -218,6 +222,13 @@ footer.ftr_wrpp {
                                         }
                                     }
 
+                                    &:hover {
+                                        color: $Menthol;
+
+                                        p {
+                                            color: $Menthol;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -262,9 +273,21 @@ footer.ftr_wrpp {
                             display: block;
                             width: 18px;
                             height: 18px;
+                            opacity: 0.45;
 
                             img {
                                 vertical-align: baseline;
+                            }
+
+                            svg {
+                                color: $white;
+                                fill: $white;
+                                vertical-align: super;
+                            }
+
+                            &:hover {
+                                opacity: 1;
+                                transform: scale(1.1);
                             }
                         }
                     }
@@ -321,6 +344,10 @@ footer.ftr_wrpp {
                                 margin-bottom: 0;
                                 font-family: $secondaryFont;
                                 letter-spacing: normal;
+
+                                &:hover {
+                                    color: $Menthol;
+                                }
                             }
                         }
 
@@ -408,6 +435,14 @@ footer.ftr_wrpp {
                                     img {
                                         vertical-align: super;
                                         object-fit: cover;
+                                    }
+                                }
+
+                                &:hover {
+                                    color: $Menthol;
+
+                                    p {
+                                        color: $Menthol;
                                     }
                                 }
                             }

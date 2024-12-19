@@ -9081,6 +9081,9 @@ footer.ftr_wrpp .top_wrp .left_wrpp .hs-menu-wrapper ul ul li a {
     font-size: 14rem;
   }
 }
+footer.ftr_wrpp .top_wrp .left_wrpp .hs-menu-wrapper ul ul li a:hover {
+  color: #c0fc95;
+}
 @media (max-width: 1280px) {
   footer.ftr_wrpp .top_wrp .left_wrpp {
     width: 100%;
@@ -9223,6 +9226,12 @@ footer.ftr_wrpp .top_wrp .right_wrpp .inner_wrp .cm_ratings .plateform_rate ul l
      object-fit: cover;
   vertical-align: baseline;
 }
+footer.ftr_wrpp .top_wrp .right_wrpp .inner_wrp .cm_ratings .plateform_rate ul li a:hover {
+  color: #c0fc95;
+}
+footer.ftr_wrpp .top_wrp .right_wrpp .inner_wrp .cm_ratings .plateform_rate ul li a:hover p {
+  color: #c0fc95;
+}
 @media (max-width: 1280px) {
   footer.ftr_wrpp .top_wrp .right_wrpp {
     max-width: 100%;
@@ -9259,9 +9268,19 @@ footer.ftr_wrpp .page-center .copyright .social_wrpp ul li a {
   display: block;
   width: 18px;
   height: 18px;
+  opacity: 0.45;
 }
 footer.ftr_wrpp .page-center .copyright .social_wrpp ul li a img {
   vertical-align: baseline;
+}
+footer.ftr_wrpp .page-center .copyright .social_wrpp ul li a svg {
+  color: #fff;
+  fill: #fff;
+  vertical-align: super;
+}
+footer.ftr_wrpp .page-center .copyright .social_wrpp ul li a:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 footer.ftr_wrpp .page-center .copyright .topCntt span {
   display: flex;
@@ -9329,6 +9348,9 @@ footer.ftr_wrpp .page-center .copyright .topCntt span ul li a {
   footer.ftr_wrpp .page-center .copyright .topCntt span ul li a {
     font-size: 14rem;
   }
+}
+footer.ftr_wrpp .page-center .copyright .topCntt span ul li a:hover {
+  color: #c0fc95;
 }
 @media (max-width: 1280px) {
   footer.ftr_wrpp .page-center .copyright .topCntt span ul {
@@ -9428,6 +9450,12 @@ footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li 
   vertical-align: super;
   -o-object-fit: cover;
      object-fit: cover;
+}
+footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a:hover {
+  color: #c0fc95;
+}
+footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a:hover p {
+  color: #c0fc95;
 }
 @media (max-width: 1280px) {
   footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul {

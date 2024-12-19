@@ -259,8 +259,8 @@
       "locked" : false,
       "visibility" : {
         "controlling_field" : null,
-        "controlling_field_path" : "intro_content.button_group.button_type",
-        "controlling_value_regex" : "std",
+        "controlling_field_path" : "intro_content.button_group.button_style",
+        "controlling_value_regex" : "hs-button",
         "property" : null,
         "operator" : "EQUAL",
         "access" : null

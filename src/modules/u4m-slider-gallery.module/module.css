@@ -57,9 +57,10 @@ html {
   align-items: center;
   justify-content: center;
   transition: 0.3s all ease;
-  width: 50rem;
-  height: 50rem;
-  background: #0e2514;
+  width: 60rem;
+  height: 60rem;
+  border: 2px solid #ffffff;
+  background: #409650;
 }
 .u4m-slider-gallery .cardVideoPoster .playIcon svg {
   fill: #fff;
@@ -147,7 +148,7 @@ html {
   top: -10px;
   width: 40px;
   z-index: 99;
-  background: #0e2514;
+  background: #409650;
 }
 .u4m-slider-gallery .cardVideoPopup .cardpopVideo .close svg {
   width: 20px;
