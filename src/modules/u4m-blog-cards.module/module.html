@@ -63,23 +63,31 @@
                     </h4>
                   </div>
                   <div class="post-read-more">
-                    <a class="more-link {{ module.blog_feed.button_style }} {{ module.blog_feed.button_theme }}" href="{{ postURL }}">
+                    <a class="more-link arrow-link {{ module.blog_feed.button_style }} {{ module.blog_feed.button_theme }}" href="{{ postURL }}">
                       <span>{{ module.blog_feed.read_more_text }}</span>
-                      {% if module.blog_feed.enable_arrow %}
                       {% if module.blog_feed.button_style == "arrow-link" %}
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"></path>
-                        <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
+                  
+                      <span class="arrowbtn">
+                      <svg class="btnArrow1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
+                      <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                      <svg class="btnArrow2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
+                      <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </span>
                       {% elif module.blog_feed.button_style == "hs-button" %}
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 12H20.25Z" fill="currentcolor"></path>
-                        <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      {% if module.blog_feed.enable_arrow %}
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 12H20.25Z" fill="currentcolor"/>
+                        <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
-                      {% else %}
                       {% endif %}
+                      {% else %}
                       {% endif %}
                     </a>
                   </div>
@@ -127,22 +135,30 @@
              <div class="post-read-more">
                 <a class="more-link {{ module.blog_feed.button_style }} {{ module.blog_feed.button_theme }}" href="{{ postURL }}">
                   <span>{{ module.blog_feed.read_more_text }}</span>
-                  {% if module.blog_feed.enable_arrow %}
                   {% if module.blog_feed.button_style == "arrow-link" %}
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"></path>
-                    <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                  {% elif module.blog_feed.button_style == "hs-button" %}
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 12H20.25Z" fill="currentcolor"></path>
-                    <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                  {% else %}
-                  {% endif %}
-                  {% endif %}
+                  
+                      <span class="arrowbtn">
+                      <svg class="btnArrow1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
+                      <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                      <svg class="btnArrow2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
+                      <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </span>
+                      {% elif module.blog_feed.button_style == "hs-button" %}
+                      {% if module.blog_feed.enable_arrow %}
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 12H20.25Z" fill="currentcolor"/>
+                        <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      {% endif %}
+                      {% else %}
+                      {% endif %}
                 </a>
               </div>
             </div>

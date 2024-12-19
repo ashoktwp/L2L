@@ -327,7 +327,7 @@
           background: radial-gradient(50% 50% at 99.2% 3.2%, $white 0%, rgba($white, 0) 100%);
           border-radius: 34px;
           .featured-img {
-            img {
+            a {
               border-radius: 21px;
             }
           }
@@ -349,26 +349,43 @@
         padding: 18px;
         position: relative;
         border: 1px solid $Pale_Green;
+        height: 100%;
         .featured-img {
           margin-bottom: 15px;
           position: relative;
           z-index: 3;
-          img {
+          a {
             width: 100%;
             border-radius: 8px;
-            min-height: 200px;
-            object-fit: cover;
-            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+            position: relative;
+            display: block;
+            padding-bottom: 56.66%;
+            @include tabletvertmin {
+              padding-bottom: 200px;
+            }
+
+            img {
+              width: 100%;
+              -o-object-fit: cover;
+              object-fit: cover;
+              transition: all 0.3s ease-in-out;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
           }
         }
         .post-content {
           position: relative;
           z-index: 3;
           .post-item-topic {
+            @include eyebrow2;
+            color: $Forest_Green;
             margin-bottom: 6px;
             a {
-              @include eyebrow2;
-              color: $Forest_Green;
+              color: inherit;
             }
           }
           h4 {
@@ -463,15 +480,22 @@
       margin: 0 10px;
       width: 36px;
       justify-content: center;
+      padding: 0;
+      border: none;
+      &.cursor-not-allowed {
+        display: none;
+      }
       > * {
         pointer-events: none;
       }
       &.prev-link {
         svg {
           transform: rotate(180deg);
-          path {
-            fill: currentColor;
-          }
+        }
+      }
+      svg {
+        path {
+          fill: currentColor;
         }
       }
       &.active,

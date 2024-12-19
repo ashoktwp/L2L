@@ -1,0 +1,146 @@
+<div class="resourcesListingWrap">
+  {% set moduleName = 'u4m-resources-listing' %}
+  {% include "../partials/u4-module-includes.html" %}
+
+  {% set table =  module.filtered_content.select_hubdb_table  %}
+  {% set query = '-hs_created_at' %}
+  {% set resouces = hubdb_table_rows(table,query) %}
+
+  {% set ft_query = '-hs_created_at&limit=10000' %}
+  {% set ft_resouces = hubdb_table_rows(table,ft_query) %}
+
+  <div class='blog-banner'>
+    <div class='page-center'>
+      <div class='page-title'>
+        <div class="intro_wrapp">
+          {{macros.introGroup(module.intro_content)}}
+        </div>
+      </div>
+      {% if ft_resouces|length > 0 %}
+      <div class='featured-post-wrap'>
+        {% for row in ft_resouces %} 
+
+        {% if row.featured %}
+        <div class='featured-post {% if not row.image.url %}no-img {% endif %}'>
+          {% if row.image.url %}
+          <div class='featured-img-col'>
+            <a href="{{ row.link }}">
+              <img src="{{ row.image.url }}" alt="{{ row.name | striptags }}">
+            </a>
+            <div class='featured-tag'>{{ row.topic.name }}</div>
+          </div> 
+          {% endif %}
+          <div class='featured-content-col'>
+            <div class='featured-topic'>{{ row.type.name }}</div>
+            <h3>
+              <a href="{{ row.link }}">{{ row.name }}</a>
+            </h3>
+            <p> {{ row.description|safe|truncatehtml(160, '.' , false)|striptags}}
+            </p>
+            {% if row.link_text %}
+            <div class='read-more'>
+              <a class="more-link arrow-link" href="{{ row.link }}">{{ row.link_text }}
+                <span class="arrowbtn">
+                  <svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+                  </svg>
+                  <svg class="btnArrow2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  </section>
+<div class="main-listing {{ module.filtered_content.select_bg_color }}">
+  <div class='site-search-wrap'>
+    <div class='page-center'>
+      <div class=" SearchBtn search-col">
+        <div class="srchSection">
+          <input type="text" id="filterTitle{{ name|replace('widget_','')|replace('module_','') }}" placeholder="Search..." class="resourceInput">
+          <div class="Searchbtn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.29922C0 2.82065 2.82065 0 6.29923 0C9.7778 0 12.5985 2.82065 12.5985 6.29922C12.5985 7.78304 12.0805 9.15487 11.2196 10.2327L13.7953 12.8084C14.0682 13.0814 14.0682 13.5223 13.7953 13.7953C13.5223 14.0683 13.0814 14.0683 12.8084 13.7953L10.2327 11.2196C9.15487 12.0805 7.79004 12.5984 6.29923 12.5984C2.82065 12.5984 0 9.7778 0 6.29922ZM6.29923 1.39983C3.59056 1.39983 1.39983 3.59056 1.39983 6.29922C1.39983 9.00789 3.59056 11.1986 6.29923 11.1986C7.65006 11.1986 8.87487 10.6527 9.76377 9.76381C10.6527 8.87492 11.1986 7.65006 11.1986 6.29922C11.1986 3.59056 9.00789 1.39983 6.29923 1.39983Z" fill="#00161D"></path>
+							</svg></div>
+        </div>
+      </div> 
+      <div class=" selctArrow tag-col">   
+        <select name="type" id="type" class="resourceSelect" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
+          <option value="" selected>Filter by Topic</option> 
+          {% for topic in hubdb_table_column(table, 'topic').options %}
+          <option value="{{ topic.name|lower|replace(' ','-') }}">{{ topic.name }}</option>
+          {% endfor %}
+        </select> 
+      </div>   
+      <div class=" selctArrow tag-col">  
+        <select name="topic" id="topic" class="topicSelect resourceSelect" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
+          <option value="" selected>Filter by Type</option> 
+          {% for type in hubdb_table_column(table, 'type').options %}
+          <option value="{{ type.name|lower|replace(' ','-') }}">{{ type.name }}</option>
+          {% endfor %}
+        </select> 
+      </div>  
+    </div>
+  </div>
+  <div class='listing-wrap'>
+    <div class='page-center cardSctn'>
+      <div class='flex-row resourceList'>
+        {% for row in resouces %}
+        <div class='resourceCard post-item {{ row.topic.name|lower|replace(' ','-') }} {{ row.type.name|lower|replace(' ','-') }}'>
+          <div class='post-item-inner'>
+            {% if row.image.url %}
+            <div class="featured-img">
+              <a href="{{row.link}}">
+                <img src="{{ row.image.url }}" alt="{{ row.name | striptags }}">
+              </a>
+              <div class='featured-tag'>{{ row.topic.name }}</div>
+            </div>
+            {% endif %}
+            <div class="post-content">
+              <div class='post-item-topic'>{{ row.type.name }}</div>
+              <h4 class="restitle">
+                <a href="{{ row.link }}">{{ row.name }}</a>
+              </h4>
+              <div class='read-more'>
+                <a class="more-link arrow-link" href="{{ row.link }}">{{ row.link_text }}
+                  <span class="arrowbtn">
+                    <svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+                    </svg>
+                    <svg class="btnArrow2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <ul id="pagination{{ name|replace('widget_','')|replace('module_','') }}" class="pagination"></ul> 
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

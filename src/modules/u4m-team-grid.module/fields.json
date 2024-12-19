@@ -1,534 +1,1552 @@
-[{
-  "default": true,
-  "display": "checkbox",
-  "display_width": null,
-  "id": "22ea157e-aa5a-06e3-df76-b78f4f1ce94e",
-  "label": "Include Heading",
-  "locked": false,
-  "name": "include_heading",
-  "required": false,
-  "type": "boolean"
-}, {
-  "allow_new_line": false,
-  "default": "Heading Text Here",
-  "display_width": null,
-  "id": "9905f5ff-7880-57de-f150-0508567addb3",
-  "label": "Heading",
-  "locked": false,
-  "name": "heading",
-  "required": false,
-  "show_emoji_picker": false,
-  "type": "text",
-  "validation_regex": "",
-  "visibility": {
-    "controlling_field": "22ea157e-aa5a-06e3-df76-b78f4f1ce94e",
-    "controlling_value_regex": "true",
-    "operator": "EQUAL"
+[ {
+  "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
+  "name" : "intro_content",
+  "display_width" : null,
+  "label" : "Intro Content",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c5ccdda8-6960-e255-a51f-c61077a633ca",
+    "name" : "include_eyebrow_text",
+    "display_width" : null,
+    "label" : "Include Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "5baff6ad-02e1-6b84-3429-260a0ded7ef6",
+    "name" : "eyebrow_text",
+    "display_width" : null,
+    "label" : "Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_eyebrow_text",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Eyebrow Text"
+  }, {
+    "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
+    "name" : "include_heading",
+    "display_width" : null,
+    "label" : "Include Heading",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "aef5e961-e297-2654-68e0-6128687770bf",
+    "name" : "heading_size",
+    "display_width" : null,
+    "label" : "Heading Size",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_heading",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "h1", "Heading 1" ], [ "h2", "Heading 2" ], [ "h3", "Heading 3" ], [ "h4", "Heading 4" ], [ "h5", "Heading 5" ], [ "h6", "Heading 6" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "h2"
+  }, {
+    "id" : "c7aa6b72-58e0-4caa-9b63-4da765e70069",
+    "name" : "heading",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Team Cards"
+  }, {
+    "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
+    "name" : "include_content",
+    "display_width" : null,
+    "label" : "Include Content",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "richtext",
+    "default" : "<p>Commodo sint nulla mollit in culpa esse voluptate commodo mollit nulla elit consectetur qui culpa eu.</p>"
+  }, {
+    "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
+    "name" : "include_button",
+    "display_width" : null,
+    "label" : "Include Button",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
+    "name" : "button_group",
+    "display_width" : null,
+    "label" : "Button Group",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : 2,
+      "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+      "default" : 2
+    },
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_button",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+      "name" : "button_type",
+      "display_width" : null,
+      "label" : "Button Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "std"
+    }, {
+      "id" : "9d5fe057-d461-68d1-9845-607ec6d892ff",
+      "name" : "button_style",
+      "display_width" : null,
+      "label" : "Button Style",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "hs-button", "Primary" ], [ "arrow-link", "Arrow Link" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "hs-button"
+    }, {
+      "id" : "819d4b45-006f-1b23-11ba-72b2c39b6f6e",
+      "name" : "button_theme",
+      "display_width" : null,
+      "label" : "Button Theme",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "theme1", "Theme 1" ], [ "theme2", "Theme 2" ], [ "theme3", "Theme 3" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "theme1"
+    }, {
+      "id" : "105bbd69-dccc-fd6b-3d3d-3f4063128744",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Button Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Button"
+    }, {
+      "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "d2f74da7-e18a-7c36-926e-f71b30005ccb",
+      "name" : "enable_arrow",
+      "display_width" : null,
+      "label" : "Enable Arrow",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_style",
+        "controlling_value_regex" : "hs-button",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "ef46548d-bcc7-841c-4635-d4d035ae7022",
+      "name" : "cta",
+      "display_width" : null,
+      "label" : "CTA",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "cta",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "cta"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : [ {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_theme" : "theme1",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "boolean_field" : false
+    }, {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_theme" : "theme1",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "boolean_field" : false
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "include_eyebrow_text" : false,
+    "eyebrow_text" : "Eyebrow Text",
+    "include_heading" : true,
+    "heading_size" : "h2",
+    "heading" : "Team Cards",
+    "include_content" : true,
+    "content" : "<p>Commodo sint nulla mollit in culpa esse voluptate commodo mollit nulla elit consectetur qui culpa eu.</p>",
+    "include_button" : false,
+    "button_group" : [ {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_theme" : "theme1",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "boolean_field" : false
+    }, {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_theme" : "theme1",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "boolean_field" : false
+    } ]
   }
 }, {
-  "default": true,
-  "display": "checkbox",
-  "display_width": null,
-  "id": "18a91992-6ec3-ed61-76e0-ac4b96fd83ba",
-  "label": "Include Sub Heading",
-  "locked": false,
-  "name": "include_sub_heading",
-  "required": false,
-  "type": "boolean"
+  "id" : "9024be1c-1f72-ed26-09b7-89512f46aaf4",
+  "name" : "member_group",
+  "display_width" : null,
+  "label" : "Member Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "811b20a9-2fb2-620d-4531-4cdc36c44e1c",
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "15ed59ed-e8cb-2166-5278-24883447aee7",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/1516566897678%201.png",
+      "alt" : "1516566897678 1",
+      "loading" : "lazy",
+      "width" : 342,
+      "height" : 342,
+      "max_width" : 342,
+      "max_height" : 342
+    }
+  }, {
+    "id" : "ad04b541-3987-7ba1-0e26-ddac5d13cadd",
+    "name" : "member_position",
+    "display_width" : null,
+    "label" : "Member Position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "CHIEF FINANCIAL OFFICER"
+  }, {
+    "id" : "811b20a9-2fb2-620d-4531-4cdc36c44e1c",
+    "name" : "member_name",
+    "display_width" : null,
+    "label" : "Member Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Megan Amarante"
+  }, {
+    "id" : "088734ca-f5ff-891d-0b90-b6ce0f293d16",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Phasellus fringilla a nisi at consectetur. Nullam ac convallis est. Duis vitae justo et nisl sagittis pellentesque id at risus. Maecenas ultricies massa ut diam cursus sagittis. Etiam a sollicitudin arcu, vitae rutrum risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\n<p>Phasellus non odio purus. Nulla viverra auctor turpis eget varius. Donec est ipsum, imperdiet ut tincidunt pretium, lobortis vitae leo.</p>"
+  }, {
+    "id" : "fe51b65a-2d00-522e-e813-f5b698d5bede",
+    "name" : "social_icon",
+    "display_width" : null,
+    "label" : "Social Icon",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "ae97981e-6d1a-56dc-1519-409b247614fc",
+      "default" : 2
+    },
+    "children" : [ {
+      "id" : "ae97981e-6d1a-56dc-1519-409b247614fc",
+      "name" : "select_icon_type",
+      "display_width" : null,
+      "label" : "Select Icon Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "image", "Image" ], [ "fontawesome", "Icon" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "image"
+    }, {
+      "id" : "96dd1888-c58d-885f-905c-6816c36451f8",
+      "name" : "link_field",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "f7ece253-ebf0-8f20-8391-dd2418803254",
+      "name" : "image_field_1",
+      "display_width" : null,
+      "label" : "Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "member_group.social_icon.select_icon_type",
+        "controlling_value_regex" : "image",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      }
+    }, {
+      "id" : "ceb32fde-b33e-a986-59df-d3e3685e9034",
+      "name" : "icon",
+      "display_width" : null,
+      "label" : "Custom Icon",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "member_group.social_icon.select_icon_type",
+        "controlling_value_regex" : "icon",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "placeholder" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "<span class=\"material-icons-outlined\"> account_circle </span>"
+    }, {
+      "id" : "2f393d02-6b1d-194b-d8a3-1e36df12e354",
+      "name" : "icon_field",
+      "display_width" : null,
+      "label" : "Icon",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "member_group.social_icon.select_icon_type",
+        "controlling_value_regex" : "fontawesome",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "icon_set" : "fontawesome-5.14.0",
+      "type" : "icon",
+      "default" : { }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : [ {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    }, {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    } ]
+  }, {
+    "id" : "3366c6fb-da17-4a11-bd96-901e6e759ddd",
+    "name" : "popup_button_text",
+    "display_width" : null,
+    "label" : "Popup Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Read Bio"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/1516566897678%201.png",
+      "alt" : "1516566897678 1",
+      "loading" : "lazy",
+      "width" : 342,
+      "height" : 342,
+      "max_width" : 342,
+      "max_height" : 342
+    },
+    "member_position" : "CHIEF FINANCIAL OFFICER",
+    "member_name" : "Megan Amarante",
+    "description" : "<p>Phasellus fringilla a nisi at consectetur. Nullam ac convallis est. Duis vitae justo et nisl sagittis pellentesque id at risus. Maecenas ultricies massa ut diam cursus sagittis. Etiam a sollicitudin arcu, vitae rutrum risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\n<p>Phasellus non odio purus. Nulla viverra auctor turpis eget varius. Donec est ipsum, imperdiet ut tincidunt pretium, lobortis vitae leo.</p>",
+    "social_icon" : [ {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    }, {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    } ],
+    "popup_button_text" : "Read Bio"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/1516566897678%201.png",
+      "alt" : "1516566897678 1",
+      "loading" : "lazy",
+      "width" : 342,
+      "height" : 342,
+      "max_width" : 342,
+      "max_height" : 342
+    },
+    "member_position" : "CHIEF FINANCIAL OFFICER",
+    "member_name" : "Megan Amarante",
+    "description" : "<p>Phasellus fringilla a nisi at consectetur. Nullam ac convallis est. Duis vitae justo et nisl sagittis pellentesque id at risus. Maecenas ultricies massa ut diam cursus sagittis. Etiam a sollicitudin arcu, vitae rutrum risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\n<p>Phasellus non odio purus. Nulla viverra auctor turpis eget varius. Donec est ipsum, imperdiet ut tincidunt pretium, lobortis vitae leo.</p>",
+    "social_icon" : [ {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    }, {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    } ],
+    "popup_button_text" : "Read Bio"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/1516566897678%201.png",
+      "alt" : "1516566897678 1",
+      "loading" : "lazy",
+      "width" : 342,
+      "height" : 342,
+      "max_width" : 342,
+      "max_height" : 342
+    },
+    "member_position" : "CHIEF FINANCIAL OFFICER",
+    "member_name" : "Megan Amarante",
+    "description" : "<p>Phasellus fringilla a nisi at consectetur. Nullam ac convallis est. Duis vitae justo et nisl sagittis pellentesque id at risus. Maecenas ultricies massa ut diam cursus sagittis. Etiam a sollicitudin arcu, vitae rutrum risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\n<p>Phasellus non odio purus. Nulla viverra auctor turpis eget varius. Donec est ipsum, imperdiet ut tincidunt pretium, lobortis vitae leo.</p>",
+    "social_icon" : [ {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    }, {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    } ],
+    "popup_button_text" : "Read Bio"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/1516566897678%201.png",
+      "alt" : "1516566897678 1",
+      "loading" : "lazy",
+      "width" : 342,
+      "height" : 342,
+      "max_width" : 342,
+      "max_height" : 342
+    },
+    "member_position" : "CHIEF FINANCIAL OFFICER",
+    "member_name" : "Megan Amarante",
+    "description" : "<p>Phasellus fringilla a nisi at consectetur. Nullam ac convallis est. Duis vitae justo et nisl sagittis pellentesque id at risus. Maecenas ultricies massa ut diam cursus sagittis. Etiam a sollicitudin arcu, vitae rutrum risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\n<p>Phasellus non odio purus. Nulla viverra auctor turpis eget varius. Donec est ipsum, imperdiet ut tincidunt pretium, lobortis vitae leo.</p>",
+    "social_icon" : [ {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    }, {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    } ],
+    "popup_button_text" : "Read Bio"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/1516566897678%201.png",
+      "alt" : "1516566897678 1",
+      "loading" : "lazy",
+      "width" : 342,
+      "height" : 342,
+      "max_width" : 342,
+      "max_height" : 342
+    },
+    "member_position" : "CHIEF FINANCIAL OFFICER",
+    "member_name" : "Megan Amarante",
+    "description" : "<p>Phasellus fringilla a nisi at consectetur. Nullam ac convallis est. Duis vitae justo et nisl sagittis pellentesque id at risus. Maecenas ultricies massa ut diam cursus sagittis. Etiam a sollicitudin arcu, vitae rutrum risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\n<p>Phasellus non odio purus. Nulla viverra auctor turpis eget varius. Donec est ipsum, imperdiet ut tincidunt pretium, lobortis vitae leo.</p>",
+    "social_icon" : [ {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    }, {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    } ],
+    "popup_button_text" : "Read Bio"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/1516566897678%201.png",
+      "alt" : "1516566897678 1",
+      "loading" : "lazy",
+      "width" : 342,
+      "height" : 342,
+      "max_width" : 342,
+      "max_height" : 342
+    },
+    "member_position" : "CHIEF FINANCIAL OFFICER",
+    "member_name" : "Megan Amarante",
+    "description" : "<p>Phasellus fringilla a nisi at consectetur. Nullam ac convallis est. Duis vitae justo et nisl sagittis pellentesque id at risus. Maecenas ultricies massa ut diam cursus sagittis. Etiam a sollicitudin arcu, vitae rutrum risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\n<p>Phasellus non odio purus. Nulla viverra auctor turpis eget varius. Donec est ipsum, imperdiet ut tincidunt pretium, lobortis vitae leo.</p>",
+    "social_icon" : [ {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    }, {
+      "select_icon_type" : "image",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "#",
+          "type" : "EXTERNAL"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Vector%20(2).png",
+        "alt" : "Vector (2)",
+        "loading" : "lazy",
+        "width" : 24,
+        "height" : 21,
+        "max_width" : 24,
+        "max_height" : 21
+      },
+      "icon" : "<span class=\"material-icons-outlined\"> account_circle </span>",
+      "icon_field" : { }
+    } ],
+    "popup_button_text" : "Read Bio"
+  } ]
 }, {
-  "allow_new_line": false,
-  "default": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.",
-  "display_width": null,
-  "id": "e324c31c-2b23-7e41-fb55-8a78d7b4fe4b",
-  "label": "Sub Heading",
-  "locked": false,
-  "name": "sub_heading",
-  "required": false,
-  "show_emoji_picker": false,
-  "type": "text",
-  "validation_regex": "",
-  "visibility": {
-    "controlling_field": "18a91992-6ec3-ed61-76e0-ac4b96fd83ba",
-    "controlling_value_regex": "true",
-    "operator": "EQUAL"
+  "id" : "3ba7c052-8c95-7514-6526-d71068d84e32",
+  "name" : "module_settings",
+  "display_width" : null,
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "4ccd0d27-57fb-7ae4-594f-68088608da2b",
+    "name" : "card_group",
+    "display_width" : null,
+    "label" : "Card Group",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "fe96742b-814f-0fc2-0d60-02e2b185ef13",
+      "name" : "dark_theme",
+      "display_width" : null,
+      "label" : "Dark Theme",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "dark_theme" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "card_group" : {
+      "dark_theme" : false
+    }
   }
 }, {
-  "children": [{
-    "default": false,
-    "display": "checkbox",
-    "display_width": null,
-    "help_text": "Check this to hide this item from the current page. ",
-    "id": "5aad1e05-fe24-703e-7d00-b6cdc7796865",
-    "label": "Hide from Listing?",
-    "locked": false,
-    "name": "hide_from_listing_",
-    "required": false,
-    "type": "boolean"
+  "id" : "module_overrides",
+  "name" : "module_overrides",
+  "display_width" : null,
+  "label" : "Module Overrides",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "enable_overrides",
+    "name" : "enable_overrides",
+    "display_width" : null,
+    "label" : "Enable Overrides",
+    "help_text" : "Toggle to override section ID and vertical margin. ",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
   }, {
-    "default": {
-      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
-      "alt": "Patrick"
+    "id" : "module_overrides.section_id",
+    "name" : "section_id",
+    "display_width" : null,
+    "label" : "Section ID",
+    "help_text" : "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
     },
-    "display_width": null,
-    "help_text": "",
-    "id": "7aef3045-fbf1-dae1-77b0-8f0b660f6eae",
-    "label": "Headshot",
-    "locked": false,
-    "name": "headshot",
-    "required": false,
-    "resizable": true,
-    "responsive": false,
-    "show_loading": false,
-    "type": "image"
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
   }, {
-    "allow_new_line": false,
-    "default": "Firstname Lastname",
-    "display_width": null,
-    "id": "051db38d-f122-b792-cba2-5a80a230dbba",
-    "label": "Member Name",
-    "locked": false,
-    "name": "member_name",
-    "required": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "validation_regex": ""
-  }, {
-    "allow_new_line": false,
-    "default": "Director of Marketing, Title Division",
-    "display_width": null,
-    "id": "f0d3b5d3-e1d4-0190-b485-069861a4486f",
-    "label": "Member Position",
-    "locked": false,
-    "name": "member_position",
-    "required": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "validation_regex": ""
-  }, {
-    "default": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "display_width": null,
-    "id": "1be46cfa-d852-1f4e-7b55-2f7a7e0ac9df",
-    "label": "Pop Up Content",
-    "locked": false,
-    "name": "pop_up_content",
-    "required": false,
-    "type": "richtext"
-  }, {
-    "allow_new_line": false,
-    "default": "https://twitter.com/NewBreedRevenue",
-    "display_width": null,
-    "id": "76191295-e74a-675b-c62d-4ce88be4bb93",
-    "label": "Member Twitter Link",
-    "locked": false,
-    "name": "member_twitter_link",
-    "required": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "validation_regex": ""
-  }, {
-    "allow_new_line": false,
-    "default": "https://www.linkedin.com/company/new-breed-revenue/",
-    "display_width": null,
-    "id": "71b386fd-dbeb-6c95-fa08-d4bf08c6da6a",
-    "label": "Member Linkedin Link",
-    "locked": false,
-    "name": "member_linkedin_link",
-    "required": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "validation_regex": ""
-  }],
-  "default": [{
-    "hide_from_listing_": false,
-    "headshot": {
-      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
-      "alt": "Patrick"
+    "id" : "module_overrides.top_margin",
+    "name" : "top_margin",
+    "display_width" : null,
+    "label" : "Top Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
     },
-    "member_name": "Firstname Lastname",
-    "member_position": "Director of Marketing, Title Division",
-    "pop_up_content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "member_twitter_link": "https://twitter.com/NewBreedRevenue",
-    "member_linkedin_link": "https://www.linkedin.com/company/new-breed-revenue/",
-    "boolean_field": false
+    "display" : "select",
+    "choices" : [ [ "top-margin-default", "Default" ], [ "top-margin-none", "None" ], [ "top-margin-small", "Small" ], [ "top-margin-medium", "Medium" ], [ "top-margin-large", "Large" ], [ "top-margin-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "top-margin-default"
   }, {
-    "hide_from_listing_": false,
-    "headshot": {
-      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
-      "alt": "Patrick"
+    "id" : "custom_top_margin",
+    "name" : "custom_top_margin",
+    "display_width" : null,
+    "label" : "Custom Top Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
     },
-    "member_name": "Firstname Lastname",
-    "member_position": "Director of Marketing, Title Division",
-    "pop_up_content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "member_twitter_link": "https://twitter.com/NewBreedRevenue",
-    "member_linkedin_link": "https://www.linkedin.com/company/new-breed-revenue/",
-    "boolean_field": false
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
   }, {
-    "hide_from_listing_": false,
-    "headshot": {
-      "src": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/patrick-headshot.jpg",
-      "alt": "Patrick"
+    "id" : "custom_top_margin_mobile",
+    "name" : "custom_top_margin_mobile",
+    "display_width" : null,
+    "label" : "Custom Top Margin Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
     },
-    "member_name": "Firstname Lastname",
-    "member_position": "Director of Marketing, Title Division",
-    "pop_up_content": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "member_twitter_link": "https://twitter.com/NewBreedRevenue",
-    "member_linkedin_link": "https://www.linkedin.com/company/new-breed-revenue/",
-    "boolean_field": false
-  }],
-  "display_width": null,
-  "expanded": false,
-  "id": "4d0869ff-0acb-c3fd-cda8-06889f89f651",
-  "label": "Member Group",
-  "locked": false,
-  "name": "member_group",
-  "occurrence": {
-    "default": 3,
-    "min": 1,
-    "sorting_label_field": "051db38d-f122-b792-cba2-5a80a230dbba"
-  },
-  "required": false,
-  "tab": "CONTENT",
-  "type": "group"
-}, {
-  "children": [{
-    "default": false,
-    "display": "checkbox",
-    "display_width": null,
-    "help_text": "Toggle to override section ID and vertical margin. ",
-    "id": "enable_overrides",
-    "label": "Enable Overrides",
-    "locked": false,
-    "name": "enable_overrides",
-    "required": false,
-    "type": "boolean"
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
   }, {
-    "allow_new_line": false,
-    "display_width": null,
-    "help_text": "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
-    "id": "module_overrides.section_id",
-    "label": "Section ID",
-    "locked": false,
-    "name": "section_id",
-    "required": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "validation_regex": "",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "choices": [
-      ["top-margin-default", "Default"],
-      ["top-margin-none", "None"],
-      ["top-margin-small", "Small"],
-      ["top-margin-medium", "Medium"],
-      ["top-margin-large", "Large"],
-      ["top-margin-custom", "Custom"]
-    ],
-    "default": "top-margin-default",
-    "display": "select",
-    "display_width": null,
-    "id": "module_overrides.top_margin",
-    "label": "Top Margin",
-    "locked": false,
-    "name": "top_margin",
-    "required": false,
-    "type": "choice",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 100,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_top_margin",
-    "label": "Custom Top Margin",
-    "locked": false,
-    "name": "custom_top_margin",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.top_margin",
-      "controlling_value_regex": "top-margin-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 50,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_top_margin_mobile",
-    "label": "Custom Top Margin Mobile",
-    "locked": false,
-    "name": "custom_top_margin_mobile",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.top_margin",
-      "controlling_value_regex": "top-margin-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "choices": [
-      ["bottom-margin-default", "Default"],
-      ["bottom-margin-none", "None"],
-      ["bottom-margin-small", "Small"],
-      ["bottom-margin-medium", "Medium"],
-      ["bottom-margin-large", "Large"],
-      ["bottom-margin-custom", "Custom"]
-    ],
-    "default": "bottom-margin-default",
-    "display": "select",
-    "display_width": null,
-    "id": "module_overrides.bottom_margin",
-    "label": "Bottom Margin",
-    "locked": false,
-    "name": "bottom_margin",
-    "required": false,
-    "type": "choice",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 100,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_bottom_margin",
-    "label": "Custom Bottom Margin",
-    "locked": false,
-    "name": "custom_bottom_margin",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.bottom_margin",
-      "controlling_value_regex": "bottom-margin-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 50,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_bottom_margin_mobile",
-    "label": "Custom Bottom Margin Mobile",
-    "locked": false,
-    "name": "custom_bottom_margin_mobile",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.bottom_margin",
-      "controlling_value_regex": "bottom-margin-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "choices": [
-      ["top-padding-default", "Default"],
-      ["top-padding-none", "None"],
-      ["top-padding-small", "Small"],
-      ["top-padding-medium", "Medium"],
-      ["top-padding-large", "Large"],
-      ["top-padding-custom", "Custom"]
-    ],
-    "default": "top-padding-default",
-    "display": "select",
-    "display_width": null,
-    "id": "module_overrides.top_padding",
-    "label": "Top Padding",
-    "locked": false,
-    "name": "top_padding",
-    "required": false,
-    "type": "choice",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 100,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_top_padding",
-    "label": "Custom Top Padding",
-    "locked": false,
-    "name": "custom_top_padding",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.top_padding",
-      "controlling_value_regex": "top-padding-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 50,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_top_padding_mobile",
-    "label": "Custom Top Padding Mobile",
-    "locked": false,
-    "name": "custom_top_padding_mobile",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.top_padding",
-      "controlling_value_regex": "top-padding-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "choices": [
-      ["bottom-padding-default", "Default"],
-      ["bottom-padding-none", "None"],
-      ["bottom-padding-small", "Small"],
-      ["bottom-padding-medium", "Medium"],
-      ["bottom-padding-large", "Large"],
-      ["bottom-padding-custom", "Custom"]
-    ],
-    "default": "bottom-padding-default",
-    "display": "select",
-    "display_width": null,
-    "id": "module_overrides.bottom_padding",
-    "label": "Bottom Padding",
-    "locked": false,
-    "name": "bottom_padding",
-    "required": false,
-    "type": "choice",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 100,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_bottom_padding",
-    "label": "Custom Bottom Padding",
-    "locked": false,
-    "name": "custom_bottom_padding",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.bottom_padding",
-      "controlling_value_regex": "bottom-padding-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": 50,
-    "display": "text",
-    "display_width": null,
-    "id": "custom_bottom_padding_mobile",
-    "label": "Custom Bottom Padding Mobile",
-    "locked": false,
-    "name": "custom_bottom_padding_mobile",
-    "required": false,
-    "step": 1,
-    "type": "number",
-    "visibility": {
-      "controlling_field": "module_overrides.bottom_padding",
-      "controlling_value_regex": "bottom-padding-custom",
-      "operator": "EQUAL"
-    }
-  }, {
-    "default": {
-      "color": null,
-      "opacity": null
+    "id" : "module_overrides.bottom_margin",
+    "name" : "bottom_margin",
+    "display_width" : null,
+    "label" : "Bottom Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
     },
-    "display_width": null,
-    "help_text": "If a module has formal settings for a background color they will take priority over this value.",
-    "id": "6c8bfd0e-1629-1268-e01c-17b4047ecfce",
-    "inline_help_text": "",
-    "label": "Background Color",
-    "locked": false,
-    "name": "background_color",
-    "required": false,
-    "type": "color",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
+    "display" : "select",
+    "choices" : [ [ "bottom-margin-default", "Default" ], [ "bottom-margin-none", "None" ], [ "bottom-margin-small", "Small" ], [ "bottom-margin-medium", "Medium" ], [ "bottom-margin-large", "Large" ], [ "bottom-margin-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "bottom-margin-default"
+  }, {
+    "id" : "custom_bottom_margin",
+    "name" : "custom_bottom_margin",
+    "display_width" : null,
+    "label" : "Custom Bottom Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_bottom_margin_mobile",
+    "name" : "custom_bottom_margin_mobile",
+    "display_width" : null,
+    "label" : "Custom Bottom Margin Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "module_overrides.top_padding",
+    "name" : "top_padding",
+    "display_width" : null,
+    "label" : "Top Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "top-padding-default", "Default" ], [ "top-padding-none", "None" ], [ "top-padding-small", "Small" ], [ "top-padding-medium", "Medium" ], [ "top-padding-large", "Large" ], [ "top-padding-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "top-padding-default"
+  }, {
+    "id" : "custom_top_padding",
+    "name" : "custom_top_padding",
+    "display_width" : null,
+    "label" : "Custom Top Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_top_padding_mobile",
+    "name" : "custom_top_padding_mobile",
+    "display_width" : null,
+    "label" : "Custom Top Padding Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "module_overrides.bottom_padding",
+    "name" : "bottom_padding",
+    "display_width" : null,
+    "label" : "Bottom Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "bottom-padding-default", "Default" ], [ "bottom-padding-none", "None" ], [ "bottom-padding-small", "Small" ], [ "bottom-padding-medium", "Medium" ], [ "bottom-padding-large", "Large" ], [ "bottom-padding-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "bottom-padding-default"
+  }, {
+    "id" : "custom_bottom_padding",
+    "name" : "custom_bottom_padding",
+    "display_width" : null,
+    "label" : "Custom Bottom Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_bottom_padding_mobile",
+    "name" : "custom_bottom_padding_mobile",
+    "display_width" : null,
+    "label" : "Custom Bottom Padding Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "3eccf45d-b0dc-4bac-42a0-f923e4405158",
+    "name" : "reverse_text",
+    "display_width" : null,
+    "label" : "Dark Theme",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
+    "name" : "background_settings",
+    "display_width" : null,
+    "label" : "Background Settings",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "3c812905-0c66-421d-6e7e-7a7109acdd49",
+      "name" : "background_type",
+      "display_width" : null,
+      "label" : "Background Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "color", "Color" ], [ "image", "Image" ], [ "gradient", "Gradient" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "image"
+    }, {
+      "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
+      "name" : "background_image",
+      "display_width" : null,
+      "label" : "Background Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "image",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto_custom_max",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
+        "alt" : "Background Image",
+        "loading" : "lazy",
+        "width" : 2400,
+        "height" : 2258,
+        "max_width" : 2000,
+        "max_height" : 1881.6666666666667
+      }
+    }, {
+      "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
+      "name" : "select_color",
+      "display_width" : null,
+      "label" : "Select Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "prismic_mango_bg", "Prismic Mango" ], [ "prismic_mint_bg", "Prismic Mint" ], [ "frostee_bg", "Frostee" ], [ "mint_cream_bg", "Mint Cream" ], [ "menthol_bg", "Menthol" ], [ "l2l_green_bg", "L2L Green" ], [ "fern_green_bg", "Fern Green" ], [ "dark_jungle_bg", "Dark Jungle" ], [ "mystic_green_bg", "Mystic Green" ], [ "lime_green_bg", "Lime Green" ], [ "white_bg", "White" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "prismic_mango_bg"
+    }, {
+      "id" : "2659085b-598d-e346-643e-6a9ebb3bae70",
+      "name" : "select_gradient",
+      "display_width" : null,
+      "label" : "Select Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ], [ "gradient3", "Gradient 3" ], [ "gradient4", "Gradient 4" ], [ "gradient5", "Gradient 5" ], [ "gradient6", "Gradient 6" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : ""
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : true,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "background_type" : "image",
+      "background_image" : {
+        "size_type" : "auto_custom_max",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
+        "alt" : "Background Image",
+        "loading" : "lazy",
+        "width" : 2400,
+        "height" : 2258,
+        "max_width" : 2000,
+        "max_height" : 1881.6666666666667
+      },
+      "select_color" : "prismic_mango_bg",
+      "select_gradient" : ""
     }
   }, {
-    "default": {
-      "size_type": "auto",
-      "src": "",
-      "alt": null,
-      "loading": "disabled"
+    "id" : "c813f3af-99b7-d54e-7ce2-b074f008a27c",
+    "name" : "container",
+    "display_width" : null,
+    "label" : "Container",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
     },
-    "display_width": null,
-    "help_text": "If a module has formal settings for a background image they will take priority over this value.",
-    "id": "878364f4-31ac-6917-e76f-65307d7d36e5",
-    "label": "Background Image",
-    "locked": false,
-    "name": "background_image",
-    "required": false,
-    "resizable": false,
-    "responsive": true,
-    "show_loading": false,
-    "type": "image",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
+    "children" : [ {
+      "id" : "87361475-d2b5-329d-45b2-227103ad95d9",
+      "name" : "size",
+      "display_width" : null,
+      "label" : "Size",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "theme", "Theme" ], [ "full-width", "Full Width" ], [ "custom", "Custom" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "custom"
+    }, {
+      "id" : "b9865f26-0901-d5ad-66a2-7c6ecacec658",
+      "name" : "custom_size",
+      "display_width" : null,
+      "label" : "Custom Size",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.container.size",
+        "controlling_value_regex" : "custom",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "slider",
+      "min" : 500,
+      "max" : 1920,
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 1234
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "size" : "custom",
+      "custom_size" : 1234
     }
-  }, {
-    "default": false,
-    "display": "checkbox",
-    "display_width": null,
-    "id": "3eccf45d-b0dc-4bac-42a0-f923e4405158",
-    "label": "Reverse Text",
-    "locked": false,
-    "name": "reverse_text",
-    "required": false,
-    "type": "boolean",
-    "visibility": {
-      "controlling_field": "enable_overrides",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "enable_overrides" : true,
+    "top_margin" : "top-margin-default",
+    "custom_top_margin" : 100,
+    "custom_top_margin_mobile" : 50,
+    "bottom_margin" : "bottom-margin-default",
+    "custom_bottom_margin" : 100,
+    "custom_bottom_margin_mobile" : 50,
+    "top_padding" : "top-padding-default",
+    "custom_top_padding" : 100,
+    "custom_top_padding_mobile" : 50,
+    "bottom_padding" : "bottom-padding-default",
+    "custom_bottom_padding" : 100,
+    "custom_bottom_padding_mobile" : 50,
+    "reverse_text" : true,
+    "background_settings" : {
+      "background_type" : "image",
+      "background_image" : {
+        "size_type" : "auto_custom_max",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
+        "alt" : "Background Image",
+        "loading" : "lazy",
+        "width" : 2400,
+        "height" : 2258,
+        "max_width" : 2000,
+        "max_height" : 1881.6666666666667
+      },
+      "select_color" : "prismic_mango_bg",
+      "select_gradient" : ""
+    },
+    "container" : {
+      "size" : "custom",
+      "custom_size" : 1234
     }
-  }],
-  "default": {
-    "enable_overrides": false,
-    "top_margin": "top-margin-default",
-    "custom_top_margin": 100,
-    "custom_top_margin_mobile": 50,
-    "bottom_margin": "bottom-margin-default",
-    "custom_bottom_margin": 100,
-    "custom_bottom_margin_mobile": 50,
-    "top_padding": "top-padding-default",
-    "custom_top_padding": 100,
-    "custom_top_padding_mobile": 50,
-    "bottom_padding": "bottom-padding-default",
-    "custom_bottom_padding": 100,
-    "custom_bottom_padding_mobile": 50,
-    "background_color": {
-      "color": null,
-      "opacity": null
-    },
-    "background_image": {
-      "size_type": "auto",
-      "src": "",
-      "alt": null,
-      "loading": "disabled"
-    },
-    "reverse_text": false
-  },
-  "display_width": null,
-  "expanded": false,
-  "id": "module_overrides",
-  "label": "Module Overrides",
-  "locked": false,
-  "name": "module_overrides",
-  "required": false,
-  "tab": "CONTENT",
-  "type": "group"
-}]
+  }
+} ]

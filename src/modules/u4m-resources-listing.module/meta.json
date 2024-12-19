@@ -3,7 +3,7 @@
   "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
   "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
   "host_template_types" : [ "PAGE" ],
-  "module_id" : 184075058558,
-  "label" : "Team Grid",
+  "module_id" : 184074505001,
+  "label" : "Resources Listing",
   "is_available_for_new_content" : true
 }

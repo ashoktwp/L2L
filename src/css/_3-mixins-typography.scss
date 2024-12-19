@@ -90,7 +90,7 @@
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   color: $baseColor;
-  font-family: $primaryFont;
+  font-family: $secondaryFont;
   font-weight: $baseFontWeight;
 }
 
@@ -190,7 +190,9 @@
   color: $Prismic_mint;
   text-decoration: underline;
 }
-
+@mixin size10 {
+  font-size: 10rem;
+}
 @mixin size14 {
   font-size: 14rem;
 }

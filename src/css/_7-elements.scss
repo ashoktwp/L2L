@@ -609,7 +609,9 @@ section[class*="u4m-"] {
   .intro_title {
     color: $white;
   }
-
+  :is(h1,h2,h3,h4,h5,h6){
+    color: $white;
+  }
   .arrow-link:not(:hover) {
     color: $white;
   }
@@ -691,6 +693,10 @@ section[class*="u4m-"] {
 }
 .lime_green_bg {
   background-color: $Lime_Green;
+}
+
+.very_pale_green_bg {
+  background-color: $Very_Pale_Green;
 }
 
 // gradient Color

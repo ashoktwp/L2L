@@ -3,8 +3,17 @@
 
 header {
     .hd_hgh {
+        min-height: 96px;
+
+
         .hd_wrap {
             background-color: rgba($Nori_Green, 1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
 
             .hd_inr {
                 display: flex;
@@ -12,6 +21,12 @@ header {
                 justify-content: space-between;
                 min-height: 96px;
                 font-family: $secondaryFont;
+
+                @include tabletMin {
+                    .mobile_menu {
+                        display: none;
+                    }
+                }
 
                 .hd_menu {
                     flex: 1;
@@ -35,6 +50,12 @@ header {
                                 display: block;
                                 visibility: visible;
                                 opacity: 1;
+                            }
+
+                            @include tabletMin {
+                                .childTrigger {
+                                    display: none;
+                                }
                             }
 
                             &>a {
@@ -76,7 +97,7 @@ header {
                         background-color: rgba($Nori_Green, 0.66);
                         border-radius: 0 0 13px 13px;
                         top: 100%;
-                        z-index: 9;
+                        z-index: 999;
                         transition: all 0.3s linear;
                         width: 300px;
                         margin: 38px auto 0;
@@ -89,6 +110,10 @@ header {
 
                         &.menuitem3 {
                             width: 948px;
+
+                            @include tabletMinlargeTotabletMin {
+                                width: 900px;
+                            }
                         }
 
                         &::before {
@@ -99,6 +124,36 @@ header {
                             height: 40px;
                             top: -39px;
 
+                        }
+
+                        .bt_row {
+                            padding-top: 20px;
+                            border-top: 1px solid rgba($Nori_Green, 0.66);
+                            margin-top: 30px;
+
+                            .bt_btn {
+                                display: flex;
+
+                                a {
+                                    @include size14;
+                                    color: $white;
+                                    letter-spacing: 0;
+                                    line-height: 1.7;
+                                    font-weight: 600;
+                                    display: flex;
+                                    gap: 9px;
+
+                                    .arrow {
+                                        display: inline;
+                                        height: 24px;
+                                        width: 24px;
+
+                                        svg line {
+                                            fill: $white !important;
+                                        }
+                                    }
+                                }
+                            }
                         }
 
                         .child_flex {
@@ -140,6 +195,29 @@ header {
                                     letter-spacing: 0;
                                     line-height: 1.7;
                                     font-weight: 600;
+
+                                    &>div {
+                                        display: flex;
+                                        gap: 10px;
+
+                                        .new {
+                                            background: $Forest_Green;
+                                            @include size10;
+                                            color: $Menthol;
+                                            letter-spacing: 0;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            line-height: normal;
+                                            text-transform: uppercase;
+                                            padding: 5px;
+                                            border-radius: 5px;
+                                        }
+                                    }
+
+                                    strong {
+                                        font-weight: normal;
+                                    }
 
                                     p {
                                         color: $Pale_Mint;
@@ -236,6 +314,158 @@ header {
                             @include buttonTwo
                         }
                     }
+                }
+
+                @include tablet {
+
+                    .dsk {
+                        display: none !important;
+                    }
+
+                    .mobile_menu {
+
+                        .trigger {
+                            cursor: pointer;
+                            display: inline-block;
+                            height: auto;
+                            width: auto;
+
+                            i {
+                                background-color: $white;
+                                border-radius: 1px;
+                                display: inline;
+                                display: inline-block;
+                                height: 3.5px;
+                                position: relative;
+                                top: -5px;
+                                width: 33px;
+
+                                &:before {
+                                    background-color: $white;
+                                    border-radius: 1px;
+                                    content: "";
+                                    display: inline-block;
+                                    height: 3.5px;
+                                    position: absolute;
+                                    top: -9px;
+                                    width: 33px
+                                }
+
+                                &:after {
+                                    background-color: $white;
+                                    border-radius: 1px;
+                                    content: "";
+                                    display: inline-block;
+                                    height: 3.5px;
+                                    position: absolute;
+                                    top: 9px;
+                                    width: 33px
+                                }
+                            }
+                        }
+
+                        .mb_menu_wrap {
+                            position: absolute;
+                            width: 100%;
+                            left: 0;
+                            right: 0;
+                            top: 100%;
+                            z-index: 999;
+                            background-color: rgba($Nori_Green, 1);
+                            display: none;
+
+                            .mb_menu_inr {
+                                padding: 30px;
+                                overflow: auto;
+                                max-height: 87vh;
+                            }
+
+                            .hd_right {
+                                display: block;
+
+                                .hd_links ul {
+                                    display: block;
+
+                                    &>li {
+                                        margin-bottom: 20px;
+                                        float: none;
+                                        margin-bottom: 20px;
+                                        @include size14;
+
+
+                                    }
+                                }
+                            }
+
+                            .hd_menu .megamenu_inr>ul {
+                                display: block;
+
+                                &>li {
+                                    margin-bottom: 20px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    flex-wrap: wrap;
+                                    position: relative;
+
+                                    &>a {
+                                        display: block;
+                                        width: 100%;
+                                        font-weight: 600;
+                                        line-height: 1.7;
+
+                                        .icon {
+                                            display: none;
+                                        }
+                                    }
+
+                                    .childTrigger {
+                                        display: block;
+                                        height: 25px;
+                                        width: 25px;
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        z-index: 99;
+                                        transition: none !important;
+                                        cursor: pointer;
+
+                                        svg {
+                                            height: 20px !important;
+                                            width: 20px !important;
+                                        }
+                                    }
+
+                                    .child_wrapper {
+                                        width: 100% !important;
+                                        position: static;
+                                        opacity: 1;
+                                        visibility: visible;
+                                        margin-top: 0;
+                                        display: none;
+                                        padding: 0 10px;
+                                        transition: none;
+
+                                        &::before {
+                                            display: none;
+                                        }
+
+                                        .child_flex {
+                                            display: flex;
+                                            gap: 25px;
+                                            flex-wrap: wrap;
+                                            flex-direction: column;
+                                            margin-top: 15px;
+
+                                            .child_col {
+                                                width: 100% !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
         }

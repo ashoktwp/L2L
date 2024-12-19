@@ -1,62 +1,207 @@
 {% set moduleName = 'u4m-team-grid' %}
-{% set imageMax = 150 %}
-{% set bgImageMax = 1920 %}
-
-
 {% include "../partials/u4-module-includes.html" %}
 
-<div class="top-section">
-{% if module.include_heading %}
-<h2 class="heading">{{ module.heading }}</h2>
-{% endif %}  
-{% if module.include_sub_heading %}
-<h3 class="sub-heading">{{ module.sub_heading }}</h3>
-{% endif %}       
-</div>
+<div class="page-center  {{ module.module_settings.theme }}">
+	<div class="intro_wrapp">
+		{{macros.introGroup(module.intro_content)}}
+	</div>
 
+  <div class="team_grid_row flex_row intro_content">
+    {% for item in module.member_group %}
+    <div class="team_item {{ module.module_settings.select_number_of_column }} {% if module.module_settings.card_group.dark_theme %} card_reverse_text {% else %} theme_text{% endif %}">
+      <div class="team_item_inn {{ module.module_settings.card.select_background_color }}">
+    
 
-<div class="member-wrap">
-{% for item in module.member_group %}
-{% unless item.hide_from_listing_ %}
-<div class="member {% if !item.pop_up_content %}no-bio{% endif %}">
-  <div class="inner">
-    {% if item.headshot.src %}<div class="headshot lazy" data-bg="{{ resize_image_url(item.headshot.src, 0,0,imageMax) }}"></div>{% endif %}
+        <div class="team_content">
+          <div class="team_content_inn">
+          {% if item.image_field.src %}
+            <div class="team_img">
+              <div class="team_img_inn">
+                {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+                <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }}>
+              </div>
+            </div>
+            {% endif %}
+             {% if item.member_position %}
+            <div class="member_position eyebrow_text">
+              {{ item.member_position }}
+            </div>
+            {% endif %}    
 
-    <div class="inner__inner">
-      <h4>{{ item.member_name }}</h4>
-      <p>{{ item.member_position }}</p>
-      <button class="view-bio">
-        View Biography
-      </button>
-      <div class="social-links">
-        {% if item.member_twitter_link %}<a href="{{ item.member_twitter_link }}" target="_blank" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M10.053,7.988l5.631,8.024h-1.497L8.566,7.988H10.053z M21,6v12	c0,1.657-1.343,3-3,3H6c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h12C19.657,3,21,4.343,21,6z M17.538,17l-4.186-5.99L16.774,7	h-1.311l-2.704,3.16L10.552,7H6.702l3.941,5.633L6.906,17h1.333l3.001-3.516L13.698,17H17.538z"></path></svg></a>{% endif %}
-        {% if item.member_linkedin_link %}<a href="{{ item.member_linkedin_link }}" target="_blank" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"></path></svg></a>{% endif %}
-      </div>
-    </div>
-  </div>
-  <div class='full-screen'>
-    <div class='circle'>
-      <div class="circle-inner">
-        <div class="inner">
-          <h3>{{ item.member_name }}</h3>
-          <h4>{{ item.member_position }}</h4>
-          <div class="social-links">
-        {% if item.member_twitter_link %}<a href="{{ item.member_twitter_link }}" target="_blank" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M10.053,7.988l5.631,8.024h-1.497L8.566,7.988H10.053z M21,6v12	c0,1.657-1.343,3-3,3H6c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h12C19.657,3,21,4.343,21,6z M17.538,17l-4.186-5.99L16.774,7	h-1.311l-2.704,3.16L10.552,7H6.702l3.941,5.633L6.906,17h1.333l3.001-3.516L13.698,17H17.538z"></path></svg></a>{% endif %}
-        {% if item.member_linkedin_link %}<a href="{{ item.member_linkedin_link }}" target="_blank" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"></path></svg></a>{% endif %}
+            {% if item.member_name %}
+            <h4 class="member_name">
+              {{ item.member_name }}
+            </h4>
+            {% endif %}    
+           
+            <div class="member_btm">
+              {% if item.popup_button_text %}
+              <div class="bio_popup_text">
+                <a class=" bio_popup more-link arrow-link" href="javascript:void(0);" data_index="data{{loop.index}}" >            {{ item.popup_button_text }}
+                  <span class="arrowbtn">
+                    <svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+                    </svg>
+                    <svg class="btnArrow2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+                    </svg>
+                  </span>
+                </a>
+            
+                
+              </div>
+              {% endif %}   
+            </div>
+
           </div>
-          {{ item.pop_up_content }}
         </div>
-
       </div>
+
+
     </div>
-    <div class="exit-wrap">
-      <div class="exit simple-exit">
-        ✖
+    {% endfor %}
+
+  </div>
+  
+</div>
+
+{% for item in module.member_group %}
+  <div class="team_popup {% if module.module_settings.card.reverse_text %} card_reverse_text {% else %} theme_text {% endif %}" id="data{{loop.index}}">
+  <div class="team_popup_overlay"></div>
+  <div class="team_popup_container">
+    <div class="team_popup_row {{ module.module_settings.card.select_background_color }}">
+      <img src="{{ get_asset_url('../../templates/images/PopUp-Close.png') }}" alt="Close" class="popup_close" width="33" height="33" >
+      <div class=" flex_row team_popup_inn">
+        <div class="popup_img_col">
+          <div class="popup_img">
+            {% if item.image_field.src %}
+            <div class="popup_team_img">
+              <div class="popup_img_inn">
+                {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+                <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }}>
+              </div>
+            </div>
+            {% endif %}
+           
+          </div>
+        </div>
+        {% if item.description %}
+        <div class="popup_cnt">
+          
+          <div class="popup_cnt_inn">
+             {% if item.member_name %}
+            <h2 class="member_name">
+              {{ item.member_name }}
+            </h2>
+            {% endif %}    
+            {% if item.member_position %}
+            <div class="member_position eyebrow_text">
+              {{ item.member_position }}
+            </div>
+            {% endif %} 
+            
+            {{ item.description }}
+            <div class="member_share">
+              <ul>
+                {% for item2 in item.social_icon %}
+                <li>
+                  {% set href = item2.link_field.url.href %}
+                  {% if item2.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                  {% endif %}
+                  <a
+                     {% if item2.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+                     href="{{ href }}" 
+                     {% else %}
+                     href="{{ href|escape_url }}"
+                     {% endif %}
+                     {% if item2.link_field.open_in_new_tab %}
+                     target="_blank"
+                     {% endif %}
+                     {% if item2.link_field.rel %}
+                     rel="{{ item2.link_field.rel|escape_attr }}"
+                     {% endif %}
+                     >
+                    {% if item2.select_icon_type == "image" %}
+                    {% if item2.image_field_1.src %}
+                    {% set sizeAttrs = 'width="{{ item2.image_field_1.width|escape_attr }}" height="{{ item2.image_field_1.height|escape_attr }}"' %}
+                    {% if item2.image_field_1.size_type == 'auto' %}
+                    {% set sizeAttrs = 'width="{{ item2.image_field_1.width|escape_attr }}" height="{{ item2.image_field_1.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                    {% elif item2.image_field_1.size_type == 'auto_custom_max' %}
+                    {% set sizeAttrs = 'width="{{ item2.image_field_1.max_width|escape_attr }}" height="{{ item2.image_field_1.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                    {% endif %}
+                    {% set loadingAttr = item2.image_field_1.loading != 'disabled' ? 'loading="{{ item2.image_field_1.loading|escape_attr }}"' : '' %}
+                    <img src="{{ item2.image_field_1.src|escape_url }}" alt="{{ item2.image_field_1.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                    {% endif %}
+                    {% endif %}
+                    {% if item2.select_icon_type == "fontawesome" %}
+                      {% icon
+        name="{{ item2.icon_field.name }}"
+        style="{{ item2.icon_field.type }}"
+        unicode="{{ item2.icon_field.unicode }}"
+        icon_set="{{ item2.icon_field.icon_set }}"
+      %}
+                    {% endif %}
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% endif %}
       </div>
     </div>
   </div>
 </div>
-{% endunless%}
-{% endfor %}
-</div>
+{% endfor  %}
+
+
 </section>
+
+
+
+
+{% require_js %}
+<script>
+
+  $('.{{name}} .popup_close').click(function(){
+    $('.team_popup').removeClass('team_open')
+    $('body').removeClass('overflow-hidden');
+  });
+
+  $('.{{name}} .team_popup_overlay').click(function(){
+    $('.team_popup').removeClass('team_open')
+    $('body').removeClass('overflow-hidden');
+  });
+
+  $(document).ready(function() {
+    $('.{{name}} a.bio_popup').on('click', function(event) {
+      event.preventDefault();
+      var index = $(this).attr('data_index');
+      $('.{{name}} .team_popup').each(function(){
+          var popup = $(this).attr('id');
+          if (index === popup){
+          $(this).addClass('team_open');
+          $('body').addClass('overflow-hidden');
+        }
+      })
+    });
+  });
+
+</script>
+{% end_require_js %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
