@@ -86,7 +86,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Intro Heading Add Here"
+    "default" : "Adipisicing labore deserunt."
   }, {
     "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
     "name" : "include_content",
@@ -113,7 +113,7 @@
       "access" : null
     },
     "type" : "richtext",
-    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>"
+    "default" : "<p>Commodo sint nulla mollit in culpa esse voluptate commodo mollit nulla elit consectetur qui culpa eu.</p>"
   }, {
     "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
     "name" : "include_button",
@@ -330,9 +330,9 @@
     "eyebrow_text" : "Eyebrow Text",
     "include_heading" : false,
     "heading_size" : "h2",
-    "heading" : "Intro Heading Add Here",
+    "heading" : "Adipisicing labore deserunt.",
     "include_content" : false,
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
+    "content" : "<p>Commodo sint nulla mollit in culpa esse voluptate commodo mollit nulla elit consectetur qui culpa eu.</p>",
     "include_button" : false,
     "button_group" : [ {
       "button_type" : "std",
@@ -367,32 +367,20 @@
     } ]
   }
 }, {
-  "id" : "9b636f75-80a8-295f-d803-a513b6626e83",
-  "name" : "tabber_items",
+  "id" : "0ca5a646-56f2-00da-d39f-524c782b23e5",
+  "name" : "accordion_items",
   "display_width" : null,
-  "label" : "Tabber Items",
+  "label" : "Accordion Items",
   "required" : false,
   "locked" : false,
   "occurrence" : {
     "min" : null,
     "max" : null,
-    "sorting_label_field" : null,
+    "sorting_label_field" : "e9d976c5-c725-9ea3-59b2-7ebd15820a43",
     "default" : 6
   },
   "children" : [ {
-    "id" : "3891b69d-3940-779c-231b-922ca2f4fe49",
-    "name" : "tab_title",
-    "display_width" : null,
-    "label" : "Tab Title",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Industry 1"
-  }, {
-    "id" : "271b3a2c-598c-2ab8-5f4d-bc405c77b592",
+    "id" : "2cfa8680-2dc2-978d-1ddd-0a39ee3dec39",
     "name" : "image_field",
     "display_width" : null,
     "label" : "Image",
@@ -403,397 +391,119 @@
     "show_loading" : false,
     "type" : "image",
     "default" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
-      "alt" : "Rectangle",
+      "size_type" : "auto_custom_max",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
+      "alt" : "BG",
       "loading" : "lazy",
-      "width" : 513,
-      "height" : 297,
-      "max_width" : 513,
-      "max_height" : 297
+      "width" : 2400,
+      "height" : 2258,
+      "max_width" : 2000,
+      "max_height" : 1881.6666666666667
     }
   }, {
-    "id" : "c20936c6-d297-5bbd-5d3c-966cae35bc4e",
-    "name" : "select_video_type",
+    "id" : "e9d976c5-c725-9ea3-59b2-7ebd15820a43",
+    "name" : "title",
     "display_width" : null,
-    "label" : "Select Video Type",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "hubspot", "Hubspot" ], [ "youtube", "Youtube" ], [ "vimeo", "Vimeo" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "default" : "vimeo"
-  }, {
-    "picker" : "video",
-    "id" : "ab574725-e602-9e8b-ddf1-fe522c84ba6a",
-    "name" : "select_video",
-    "display_width" : null,
-    "label" : "Select Video",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "tabber_items.select_video_type",
-      "controlling_value_regex" : "hubspot",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "type" : "file"
-  }, {
-    "id" : "b15628f7-b899-a610-7d3b-9b7df76dc3b5",
-    "name" : "embedded_id",
-    "display_width" : null,
-    "label" : "Embedded Id",
+    "label" : "Title",
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "tabber_items.select_video_type",
-      "controlling_value_regex" : "youtube",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text"
-  }, {
-    "id" : "32aae181-63a4-aef7-8ea3-146f08a787ac",
-    "name" : "vimeo_id",
-    "display_width" : null,
-    "label" : "Vimeo Id",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "tabber_items.select_video_type",
-      "controlling_value_regex" : "vimeo",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "706460799"
+    "default" : "Work Instructions."
   }, {
-    "id" : "9ee4e87d-737f-dec9-1649-db2edf8ec8f4",
-    "name" : "logo_image",
+    "id" : "3cee263a-6739-5775-3520-8770bc291166",
+    "name" : "content",
     "display_width" : null,
-    "label" : "Logo Image",
-    "required" : false,
-    "locked" : false,
-    "responsive" : true,
-    "resizable" : false,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
-    }
-  }, {
-    "id" : "b7ac2525-fb10-ea10-8424-53885ee324d5",
-    "name" : "quote",
-    "display_width" : null,
-    "label" : "Quote",
+    "label" : "Content",
     "required" : false,
     "locked" : false,
     "type" : "richtext",
-    "default" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>"
-  }, {
-    "id" : "5da8a594-aedd-535b-8129-1be8bb5b758f",
-    "name" : "author_name",
-    "display_width" : null,
-    "label" : "Author Name",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "- JORIS STOLK"
-  }, {
-    "id" : "3854fd36-c343-d2f4-3b24-f442a944ab7b",
-    "name" : "designation",
-    "display_width" : null,
-    "label" : "Designation",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Brewery Manager at Lagunitas in Chicago"
-  }, {
-    "id" : "ae8840c5-7fc6-ec18-a2d0-93bd5fd377d2",
-    "name" : "read_button_text",
-    "display_width" : null,
-    "label" : "Read Button Text",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "READ THE CUSTOMER STORY"
-  }, {
-    "id" : "c00d8843-ff65-a42f-0256-16f22fd88496",
-    "name" : "link_field",
-    "display_width" : null,
-    "label" : "Link",
-    "required" : false,
-    "locked" : false,
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
-    "show_advanced_rel_options" : false,
-    "type" : "link",
-    "default" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
+    "default" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
-    "tab_title" : "Industry 1",
     "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
-      "alt" : "Rectangle",
+      "size_type" : "auto_custom_max",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
+      "alt" : "BG",
       "loading" : "lazy",
-      "width" : 513,
-      "height" : 297,
-      "max_width" : 513,
-      "max_height" : 297
+      "width" : 2400,
+      "height" : 2258,
+      "max_width" : 2000,
+      "max_height" : 1881.6666666666667
     },
-    "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
-    "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
-    "designation" : "Brewery Manager at Lagunitas in Chicago",
-    "read_button_text" : "READ THE CUSTOMER STORY",
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
-    }
+    "title" : "Work Instructions.",
+    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
   }, {
-    "tab_title" : "Industry 1",
     "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
-      "alt" : "Rectangle",
+      "size_type" : "auto_custom_max",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
+      "alt" : "BG",
       "loading" : "lazy",
-      "width" : 513,
-      "height" : 297,
-      "max_width" : 513,
-      "max_height" : 297
+      "width" : 2400,
+      "height" : 2258,
+      "max_width" : 2000,
+      "max_height" : 1881.6666666666667
     },
-    "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
-    "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
-    "designation" : "Brewery Manager at Lagunitas in Chicago",
-    "read_button_text" : "READ THE CUSTOMER STORY",
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
-    }
+    "title" : "Work Instructions.",
+    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
   }, {
-    "tab_title" : "Industry 1",
     "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
-      "alt" : "Rectangle",
+      "size_type" : "auto_custom_max",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
+      "alt" : "BG",
       "loading" : "lazy",
-      "width" : 513,
-      "height" : 297,
-      "max_width" : 513,
-      "max_height" : 297
+      "width" : 2400,
+      "height" : 2258,
+      "max_width" : 2000,
+      "max_height" : 1881.6666666666667
     },
-    "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
-    "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
-    "designation" : "Brewery Manager at Lagunitas in Chicago",
-    "read_button_text" : "READ THE CUSTOMER STORY",
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
-    }
+    "title" : "Work Instructions.",
+    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
   }, {
-    "tab_title" : "Industry 1",
     "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
-      "alt" : "Rectangle",
+      "size_type" : "auto_custom_max",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
+      "alt" : "BG",
       "loading" : "lazy",
-      "width" : 513,
-      "height" : 297,
-      "max_width" : 513,
-      "max_height" : 297
+      "width" : 2400,
+      "height" : 2258,
+      "max_width" : 2000,
+      "max_height" : 1881.6666666666667
     },
-    "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
-    "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
-    "designation" : "Brewery Manager at Lagunitas in Chicago",
-    "read_button_text" : "READ THE CUSTOMER STORY",
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
-    }
+    "title" : "Work Instructions.",
+    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
   }, {
-    "tab_title" : "Industry 1",
     "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
-      "alt" : "Rectangle",
+      "size_type" : "auto_custom_max",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
+      "alt" : "BG",
       "loading" : "lazy",
-      "width" : 513,
-      "height" : 297,
-      "max_width" : 513,
-      "max_height" : 297
+      "width" : 2400,
+      "height" : 2258,
+      "max_width" : 2000,
+      "max_height" : 1881.6666666666667
     },
-    "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
-    "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
-    "designation" : "Brewery Manager at Lagunitas in Chicago",
-    "read_button_text" : "READ THE CUSTOMER STORY",
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
-    }
+    "title" : "Work Instructions.",
+    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
   }, {
-    "tab_title" : "Industry 1",
     "image_field" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
-      "alt" : "Rectangle",
+      "size_type" : "auto_custom_max",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
+      "alt" : "BG",
       "loading" : "lazy",
-      "width" : 513,
-      "height" : 297,
-      "max_width" : 513,
-      "max_height" : 297
+      "width" : 2400,
+      "height" : 2258,
+      "max_width" : 2000,
+      "max_height" : 1881.6666666666667
     },
-    "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
-    "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
-    "designation" : "Brewery Manager at Lagunitas in Chicago",
-    "read_button_text" : "READ THE CUSTOMER STORY",
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
-    }
+    "title" : "Work Instructions.",
+    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
   } ]
 }, {
   "id" : "module_overrides",
@@ -1119,7 +829,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : "gradient"
     }, {
       "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
       "name" : "background_image",
@@ -1166,7 +876,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "prismic_mango_bg"
+      "default" : "white_bg"
     }, {
       "id" : "2659085b-598d-e346-643e-6a9ebb3bae70",
       "name" : "select_gradient",
@@ -1188,22 +898,22 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : ""
+      "default" : "gradient3"
     } ],
     "tab" : "CONTENT",
     "expanded" : true,
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "prismic_mango_bg",
-      "select_gradient" : ""
+      "select_color" : "white_bg",
+      "select_gradient" : "gradient3"
     }
   }, {
     "id" : "c813f3af-99b7-d54e-7ce2-b074f008a27c",
@@ -1286,15 +996,15 @@
     "custom_bottom_padding_mobile" : 50,
     "reverse_text" : false,
     "background_settings" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "prismic_mango_bg",
-      "select_gradient" : ""
+      "select_color" : "white_bg",
+      "select_gradient" : "gradient3"
     },
     "container" : {
       "size" : "theme",
