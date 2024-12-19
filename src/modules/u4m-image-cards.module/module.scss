@@ -1,0 +1,60 @@
+@import "../../css/_module-imports";
+
+.u4m-image-card {
+    .card_wrap {
+        padding-top: 30px;
+
+        .card_flex {
+            gap: 30px;
+            justify-content: center;
+
+            .card_item {
+                width: calc(33.3% - 20px);
+                @include size14;
+                line-height: 1.7;
+
+                @include tablet {
+                    width: calc(50% - 15px);
+                }
+
+                @include phone {
+                    width: 100%;
+                }
+
+                .item_inr {
+                    background-image: $gradient6;
+                    padding: 36px;
+                    border-radius: $borderRadius13;
+                    box-shadow: $shadow4;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .card_img {
+                        margin-bottom: 25px;
+                    }
+
+                    .card_cnt {
+                        h4 {
+                            margin: 0;
+                            line-height: 2;
+                        }
+
+                        p {
+                            color: $Frostee;
+                        }
+                    }
+
+                    .card_btn {
+                        margin-top: auto;
+
+                        .intro_btn_wrap {
+                            margin-top: 25px;
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
