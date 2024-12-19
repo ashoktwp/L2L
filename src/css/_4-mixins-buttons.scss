@@ -80,8 +80,41 @@
   @include buttonBase;
   display: inline-flex;
   color: $Nori_Green;
+  position: relative;
+  .arrowbtn {
+    display: inline-block;
+    height: 24px;
+    margin-left: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    vertical-align: middle;
+    width: 24px;
+    svg {
+      height: 24px;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: 0.3s;
+      -webkit-transition: 0.3s;
+      width: 24px;
+      &.btnArrow2 {
+        transform: translate(-30px, 30px);
+      }
+    }
+  }
   &:hover {
     color: $Medium_Aquamarine;
+    svg {
+      &.btnArrow1 {
+        transform: translate(30px, -30px);
+      }
+      &.btnArrow2 {
+        transform: translate(0, 0);
+      }
+    }
   }
 }
 
