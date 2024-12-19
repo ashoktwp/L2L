@@ -47,20 +47,18 @@
         </div>
       </div>
 
-      </div>
+    </div>
 
-      <div class="arrow-section mobile-hide">
+    <div class="arrow-section mobile-hide">
       <div class="tab-prev-arrow prev-btn">
         <div class="tab-arrow">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
         </div>   
       </div>
       <div class="tab-next-arrow next-btn">
-        <div class="progress-bar">
-          <svg class="progress-svg" width="50" height="50">
-            <g transform="translate(20,20)">
-              <circle class="circle-go" r="22" cx="0" cy="0"></circle>
-            </g>
+        <div class="progress-round__wrap">
+          <svg class="progress">
+            <circle r="22" cx="26" cy="26"/>
           </svg>
         </div>
         <div class="tab-arrow">
@@ -69,65 +67,147 @@
       </div>
     </div>
 
-{# Mobile Sturture #}
-<div class="slider-tabs-items  mobile-visible">
-<div class="slider-tabs-content">
-<div class="tabs-content-items">
-{% for item in module.tab_items %}
-<div class="tabs-content-item">
-  <div class="tabs-content">
-    {% if item.tab_title %}
-    <div class="tabs-subheading">
-      {{ item.tab_title }}
+    {# Mobile Sturture #}
+    <div class="slider-tabs-items  mobile-visible">
+      <div class="slider-tabs-content">
+        <div class="tabs-content-items">
+          {% for item in module.tab_items %}
+          <div class="tabs-content-item">
+            <div class="tabs-content">
+              {% if item.tab_title %}
+              <div class="tabs-subheading">
+                {{ item.tab_title }}
+              </div>
+              {% endif %}
+              {% if item.tab_content.title %}
+              <div class="tabs-heading">
+                {{ item.tab_content.title }}
+              </div>
+              {% endif %}
+              {% if item.tab_content.content %}
+              {{ item.tab_content.content }}
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
-    {% endif %}
-    {% if item.tab_content.title %}
-    <div class="tabs-heading">
-      {{ item.tab_content.title }}
-    </div>
-    {% endif %}
-    {% if item.tab_content.content %}
-    {{ item.tab_content.content }}
-    {% endif %}
   </div>
-</div>
-{% endfor %}
-</div>
-</div>
-</div>
-
-    </div>
-
-
-
 </div>
 </section>
 
 
 {% require_js %}
 <script>
-  $('.{{name}} .slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: true,
-    asNavFor: '.slider-nav'
-  });
-  $('.{{name}} .slider-nav').slick({
-    slidesToShow: 6,
-    slidesToScroll: 6,
-    asNavFor: '.slider-for',
-    dots: false,
-    focusOnSelect: true
+  $(document).ready(function () {
+    let isInitialized = false;
+
+    // Initialize Slick Slider
+    const $sliderFor = $('.slider-for'); // Cache the selector
+    const $sliderNav = $('.slider-nav');
+
+    if ($sliderFor.length) {
+      $sliderFor
+        .on('init', function () {
+        isInitialized = true; // Mark slider as initialized
+        setTimeout(startProgressAnimation, 50); // Delay slightly to ensure the slider is ready
+      })
+        .slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        asNavFor: '.slider-nav',
+        autoplay: true,
+        autoplaySpeed: 5000, // Match SVG animation duration
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        infinite: true,
+      });
+    } else {
+      console.error('No element found with class .slider-for');
+      return; // Exit script if slider-for does not exist
+    }
+
+    if ($sliderNav.length) {
+      $sliderNav.slick({
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        asNavFor: '.slider-for',
+        dots: false,
+        focusOnSelect: true,
+        infinite: true,
+      });
+    }
+
+    // Function to start progress animation
+    function startProgressAnimation() {
+      if (!isInitialized) return; // Ensure slider is fully initialized
+      const circle = document.querySelector('.progress circle');
+      if (!circle) {
+        console.error('No SVG circle element found for progress animation');
+        return;
+      }
+
+      const radius = circle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+
+      circle.style.strokeDasharray = `${circumference} ${circumference}`;
+      circle.style.strokeDashoffset = `${circumference}`;
+
+      // Start animation: stroke-dashoffset to 0 over 10 seconds
+      circle.style.transition = 'stroke-dashoffset 5s linear';
+      circle.style.strokeDashoffset = '0';
+    }
+
+    // Function to reset progress animation
+    function resetProgressAnimation() {
+      const circle = document.querySelector('.progress circle');
+      if (!circle) {
+        console.error('No SVG circle element found for progress reset');
+        return;
+      }
+
+      const radius = circle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+
+      circle.style.transition = 'none'; // Stop ongoing animation
+      circle.style.strokeDashoffset = `${circumference}`; // Reset offset
+      setTimeout(startProgressAnimation, 50); // Restart animation after a small delay
+    }
+
+    // Reset and restart progress animation during slide transitions
+    $sliderFor.on('beforeChange', function () {
+      resetProgressAnimation(); // Reset before slide transition starts
+    });
+
+    $sliderFor.on('afterChange', function () {
+      startProgressAnimation(); // Ensure progress starts fresh
+    });
+
+    // Reset progress on manual navigation
+    $(".prev-btn").click(function () {
+      $sliderFor.slick("slickPrev");
+      resetProgressAnimation();
+    });
+
+    $(".next-btn").click(function () {
+      $sliderFor.slick("slickNext");
+      resetProgressAnimation();
+    });
+
+    // Ensure animation starts immediately on page load
+    $sliderFor.slick('slickGoTo', 0); // Force the slider to the first slide
+    setTimeout(startProgressAnimation, 100); // Slight delay to ensure slider is fully rendered
+
+    resetProgressAnimation();
   });
 
-$(".{{name}} .prev-btn").click(function () {
-$(".{{name}} .tabs-content-items").slick("slickPrev");
-});
-
-$(".{{name}} .next-btn").click(function () {
-$(".{{name}} .tabs-content-items").slick("slickNext");
-});
+  $('.u4m-slider-tabs-top-variation-c').addClass('hide');
+  setTimeout(function(){
+    $('.u4m-slider-tabs-top-variation-c').removeClass('hide');
+  },1500)
 
 </script>
 {% end_require_js %}
