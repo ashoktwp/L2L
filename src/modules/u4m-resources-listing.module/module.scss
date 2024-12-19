@@ -253,34 +253,52 @@
     }
     .listing-wrap {
         @include CardItems;
-        .post-item {
-            .post-item-inner {
-                .featured-img {
-                    .featured-tag {
-                        @include size14;
-                        font-family: $secondaryFont;
-                        margin: 0;
-                        position: absolute;
-                        font-weight: 600;
-                        background: $headingColor;
-                        color: $white;
-                        letter-spacing: 0.47px;
-                        display: flex;
-                        gap: 11px;
-                        align-items: center;
-                        line-height: 17px;
-                        padding: 4px 6px 5px 10px;
-                        border-radius: 3px;
-                        text-transform: uppercase;
-                        left: 11px;
-                        top: 11px;
-                        &:before {
-                            content: "";
-                            display: inline-block;
-                            width: 7px;
-                            height: 7px;
-                            background: $arrowDots;
-                            border-radius: 100%;
+        .flex-row {
+            .post-item {
+                .post-item-inner {
+                    .featured-img {
+                        .featured-tag {
+                            @include size14;
+                            font-family: $secondaryFont;
+                            margin: 0;
+                            position: absolute;
+                            font-weight: 600;
+                            background: $headingColor;
+                            color: $white;
+                            letter-spacing: 0.47px;
+                            display: flex;
+                            gap: 11px;
+                            align-items: center;
+                            line-height: 17px;
+                            padding: 4px 6px 5px 10px;
+                            border-radius: 3px;
+                            text-transform: uppercase;
+                            left: 11px;
+                            top: 11px;
+                            &:before {
+                                content: "";
+                                display: inline-block;
+                                width: 7px;
+                                height: 7px;
+                                background: $arrowDots;
+                                border-radius: 100%;
+                            }
+                        }
+                        margin-bottom: 15px;
+                    }
+                    .post-content {
+                        @include tabletvertmin {
+                            display: flex;
+                            flex-direction: column;
+                            height: calc(100% - 215px);
+                        }
+
+                        .post-item-topic {
+                            line-height: 1.2142857142857142;
+                            margin-bottom: 15px;
+                        }
+                        .read-more {
+                            margin-top: auto;
                         }
                     }
                 }
