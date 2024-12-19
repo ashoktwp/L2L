@@ -314,6 +314,7 @@ section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner {
   padding: 18px;
   position: relative;
   border: 1px solid #9dd8a7;
+  height: 100%;
 }
 section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner .featured-img {
   margin-bottom: 15px;

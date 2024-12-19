@@ -3026,7 +3026,7 @@ body {
   font-size: 21rem;
   line-height: 1.57;
   color: #2e2e2e;
-  font-family: "Sofia Sans";
+  font-family: "Inter";
   font-weight: 400;
 }
 body.hide-header {
@@ -4042,6 +4042,10 @@ section[class*=u4m-] {
 
 .lime_green_bg {
   background-color: #9bf75f;
+}
+
+.very_pale_green_bg {
+  background-color: #c8eace;
 }
 
 .gradient1 {
