@@ -17,13 +17,11 @@ section.u4m-blog-subscription {
       }
       .intro_content {
         text-align: left;
-        font-family: $secondaryFont;
         @include size16;
         line-height: 1.75;
         color: $Dark_jungle;
       }
       .intro_title {
-        font-family: $primaryFont;
         font-weight: 600;
         line-height: 1.188;
         margin-bottom: 12px;

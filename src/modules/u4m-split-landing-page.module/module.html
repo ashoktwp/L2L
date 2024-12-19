@@ -1,0 +1,185 @@
+{% set moduleName = 'u4m-split-landing-page' %}
+<div class="u4m-split-form-wrapper splitOuter{{name}} {% if module.include_form and  module.form_group.select_form.form_id %}formAdded{% endif %}">
+  <div class="splitform_topwrap">
+    {% include "../partials/u4-module-includes.html" %}
+    <div class="page-center">
+      <div class="flex_row">
+        <div class="left_column top_content_colmn  {% if not module.include_form %}no-form-column {% endif %}">
+          {% if module.intro_content.include_logo %}
+          <div class="logo_wrap">
+            {% if module.intro_content.logo.src %}
+            {% set loadingAttr = module.intro_content.logo.loading != 'disabled' ? 'loading="{{ module.intro_content.logo.loading|escape_attr }}"' : '' %}
+            <img src="{{ module.intro_content.logo.src|escape_url }}" alt="{{ module.intro_content.logo.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+          </div>
+          {% endif %}
+          <div class="top_content_column_inner">
+            {% if module.intro_content.include_eyebrow_text %}
+            <div class="eyebrow_text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M16.3125 14.625C16.3125 14.7742 16.2532 14.9173 16.1477 15.0227C16.0423 15.1282 15.8992 15.1875 15.75 15.1875H2.25C2.10082 15.1875 1.95774 15.1282 1.85225 15.0227C1.74676 14.9173 1.6875 14.7742 1.6875 14.625V3.375C1.6875 3.22582 1.74676 3.08274 1.85225 2.97725C1.95774 2.87176 2.10082 2.8125 2.25 2.8125C2.39918 2.8125 2.54226 2.87176 2.64775 2.97725C2.75324 3.08274 2.8125 3.22582 2.8125 3.375V11.0173L6.35203 7.47703C6.40427 7.42473 6.46631 7.38324 6.5346 7.35494C6.60288 7.32663 6.67608 7.31206 6.75 7.31206C6.82392 7.31206 6.89712 7.32663 6.9654 7.35494C7.03369 7.38324 7.09573 7.42473 7.14797 7.47703L9 9.32977L12.7048 5.625H11.25C11.1008 5.625 10.9577 5.56574 10.8523 5.46025C10.7468 5.35476 10.6875 5.21168 10.6875 5.0625C10.6875 4.91332 10.7468 4.77024 10.8523 4.66475C10.9577 4.55926 11.1008 4.5 11.25 4.5H14.0625C14.2117 4.5 14.3548 4.55926 14.4602 4.66475C14.5657 4.77024 14.625 4.91332 14.625 5.0625V7.875C14.625 8.02418 14.5657 8.16726 14.4602 8.27275C14.3548 8.37824 14.2117 8.4375 14.0625 8.4375C13.9133 8.4375 13.7702 8.37824 13.6648 8.27275C13.5593 8.16726 13.5 8.02418 13.5 7.875V6.42023L9.39797 10.523C9.34573 10.5753 9.28369 10.6168 9.2154 10.6451C9.14712 10.6734 9.07392 10.6879 9 10.6879C8.92608 10.6879 8.85288 10.6734 8.7846 10.6451C8.71631 10.6168 8.65427 10.5753 8.60203 10.523L6.75 8.67023L2.8125 12.6077V14.0625H15.75C15.8992 14.0625 16.0423 14.1218 16.1477 14.2273C16.2532 14.3327 16.3125 14.4758 16.3125 14.625Z" fill="#C0FC95"/>
+              </svg> {{ module.intro_content.eyebrow_text }}
+            </div>
+            {% endif %}
+            {% if module.intro_content.include_heading %}
+            <{{module.intro_content.heading_size}} class="intro_title">{{ module.intro_content.heading }}</{{module.intro_content.heading_size}}>
+              {% endif %}
+              {% if module.intro_content.include_content %}
+              <div class="intro_desc {{ module.intro_content.content_style }}">
+            {{ module.intro_content.content }}
+          </div>
+          {% endif %}
+
+          {% if module.intro_content.include_button %}
+          <div class="intro_btn_wrap">
+
+            {% for item in module.intro_content.button_group %}
+            <div class="btn_item">
+              {% if item.button_type == "std" %}
+              {% set href = item.link.url.href %}
+              {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              <a class="{{ item.button_style ? item.button_style : "hs-button" }} {{item.button_theme}}"
+                 {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+                 href="{{ href }}" 
+                 {% else %}
+                 href="{{ href }}"
+                 {% endif %}
+                 {% if item.link.open_in_new_tab %}
+                 target="_blank"
+                 {% endif %}
+                 {% if item.link.rel %}
+                 rel="{{ item.link.rel }}"
+                 {% endif %}>
+                <span>{{ item.button_text }}</span>
+                {% if item.enable_arrow %}
+                {% if item.button_style=="hs-button" %}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 12H20.25Z" fill="white"/>
+                  <path d="M3.75 12H20.25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {% elif item.button_style=="arrow-link" %}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
+                  <path d="M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.25 6H18V15.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {% endif %}{% endif %}
+              </a>
+              {% endif %}
+              {% if item.button_type == "cta" %}
+              {% cta guid="{{ item.cta }}" %}
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+
+
+      {% if module.include_form %}
+      {% if module.form_group.select_form.form_id%}
+      <div class="form_column">
+        <div class="form_column_inner">
+
+          {% if module.form_group.select_form.form_id %}              
+          <div class="form_box">
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+            <script>
+              hbspt.forms.create({
+                region: "na1",
+                portalId: "{{ hub_id }}",
+                css: "",
+                target: ".form_column_inner",
+                formId: "{{ module.form_group.select_form.form_id }}",
+                onFormReady: function($form) {
+                $('.form_column .hs-button').click(function(){
+                  setTimeout(function(){
+                    var formHeight = $('.form_column_inner').outerHeight();
+                    var calcHeight = formHeight + 200;
+                    $('.u4m-split-form-wrapper.formAdded').css('min-height', calcHeight);
+                  }, 200);
+                  console.log('form_column call')
+                });    }
+
+
+              }); 
+            </script>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+      {% endif %}
+    </div>
+  </div>
+  </section>
+</div>
+
+<div class=" splitFormbotom Bnrr dnd_padd bott{{name}}"> 
+  <div class="bottom_content_inner">
+    <div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
+      <div class="flex_row">
+        <div class="bottom_content left_column {% if not  module.include_form %}no-form-column {% endif %} ">
+          {{ module.bottom_group.content }}
+        </div>
+      </div>
+    </div> 
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+{% require_js %}
+<script>
+  $(document).ready(function(){
+    function checkHeight(){
+      var formHeight = $('.form_column_inner').outerHeight();
+      var calcHeight = formHeight + 200;
+      $('.u4m-split-form-wrapper.formAdded').css('min-height',calcHeight);
+      console.log('checkHeight call')
+    }
+
+    {# $(document).ready(function(){
+			$('.form_column .hs-button').click(function(){
+				setTimeout(function(){
+					var formHeight = $('.form_column_inner').outerHeight();
+					var calcHeight = formHeight + 200;
+					$('.u4m-split-form-wrapper.formAdded').css('min-height', calcHeight);
+				}, 200);
+				console.log('form_column call')
+			});
+		}); #}
+
+
+    $(window).on("load resize", function() {
+      setTimeout(function(){
+        checkHeight();
+      }, 200)
+    });
+    $('.u4m-split-form-wrapper.formAdded').parents('body').addClass('formsec');
+  });
+</script>
+{% end_require_js %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

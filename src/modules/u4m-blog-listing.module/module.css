@@ -35,7 +35,6 @@ section.u4m-blog-listing .blog-banner .page-title {
 section.u4m-blog-listing .blog-banner .page-title h1 {
   margin-bottom: 60px;
   color: #fff;
-  font-family: "Sofia Sans";
 }
 section.u4m-blog-listing .blog-banner .featured-post {
   display: flex;
@@ -111,7 +110,6 @@ section.u4m-blog-listing .blog-banner .featured-img-col img {
 }
 section.u4m-blog-listing .blog-banner .featured-content-col {
   width: calc(100% - 792px);
-  font-family: "Inter";
   font-size: 16rem;
   line-height: 1.75;
 }
@@ -143,7 +141,6 @@ section.u4m-blog-listing .blog-banner .featured-content-col h3 {
   margin: 0;
   margin-bottom: 11px;
   color: #fff;
-  font-family: "Sofia Sans";
 }
 section.u4m-blog-listing .blog-banner .featured-content-col h3 a {
   color: inherit;

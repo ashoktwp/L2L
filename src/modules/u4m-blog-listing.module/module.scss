@@ -20,7 +20,6 @@ section.u4m-blog-listing {
       h1 {
         margin-bottom: 60px;
         color: $white;
-        font-family: $primaryFont;
       }
     }
     .featured-post {
@@ -103,7 +102,6 @@ section.u4m-blog-listing {
     }
     .featured-content-col {
       width: calc(100% - 792px);
-      font-family: $secondaryFont;
       @include size16;
       line-height: 1.75;
       @include laptop {
@@ -122,7 +120,6 @@ section.u4m-blog-listing {
         margin: 0;
         margin-bottom: 11px;
         color: $white;
-        font-family: $primaryFont;
         a {
           color: inherit;
         }
