@@ -68,4 +68,19 @@
       line-height: 3;
     }
   }
+  &.reverse-text {
+    .statistics {
+      .statistics__item {
+        .statistics_count {
+          color: $White;
+          .prefix {
+            color: $White;
+          }
+        }
+        .statistics_caption {
+          color: $White;
+        }
+      }
+    }
+  }
 }

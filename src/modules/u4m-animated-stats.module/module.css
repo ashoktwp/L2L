@@ -112,3 +112,12 @@ html {
   padding-bottom: 5px;
   line-height: 3;
 }
+.u4m-animated-stats.reverse-text .statistics .statistics__item .statistics_count {
+  color: #ffffff;
+}
+.u4m-animated-stats.reverse-text .statistics .statistics__item .statistics_count .prefix {
+  color: #ffffff;
+}
+.u4m-animated-stats.reverse-text .statistics .statistics__item .statistics_caption {
+  color: #ffffff;
+}
