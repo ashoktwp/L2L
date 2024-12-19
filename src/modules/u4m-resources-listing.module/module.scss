@@ -10,6 +10,7 @@
     }
     .blog-banner {
         position: relative;
+        z-index: 2;
         .page-title {
             text-align: center;
             h1 {
@@ -96,15 +97,12 @@
             }
             .featured-topic {
                 padding-bottom: 13px;
-                a {
-                    @include eyebrow2;
-                }
+                @include eyebrow2;
             }
             h3 {
                 margin: 0;
                 margin-bottom: 11px;
                 color: $white;
-                font-family: $primaryFont;
                 a {
                     color: inherit;
                 }
@@ -153,14 +151,14 @@
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
-                column-gap: 30px;
-                @include tabletvert {
-                    row-gap: 30px;
-                }
+                gap: 30px;
                 .search-col,
                 .tag-col {
                     max-width: 300px;
                     width: 100%;
+                    @include tabletvert {
+                        max-width: 100%;
+                    }
                 }
                 .search-col {
                     .srchSection {
@@ -216,6 +214,15 @@
         @include CardItems;
         .pagination {
             @include blogPagination;
+            nav {
+                button {
+                    padding: 0;
+                }
+            }
+        }
+        .statusCnt {
+            width: 100%;
+            text-align: center;
         }
     }
 }

@@ -609,7 +609,9 @@ section[class*="u4m-"] {
   .intro_title {
     color: $white;
   }
-
+  :is(h1,h2,h3,h4,h5,h6){
+    color: $white;
+  }
   .arrow-link:not(:hover) {
     color: $white;
   }

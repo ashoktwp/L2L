@@ -3944,6 +3944,9 @@ section[class*=u4m-] {
 .reverse-text .intro_title {
   color: #fff;
 }
+.reverse-text :is(h1, h2, h3, h4, h5, h6) {
+  color: #fff;
+}
 .reverse-text .arrow-link:not(:hover) {
   color: #fff;
 }

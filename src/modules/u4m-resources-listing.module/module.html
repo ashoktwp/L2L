@@ -6,7 +6,7 @@
   {% set query = '-hs_created_at' %}
   {% set resouces = hubdb_table_rows(table,query) %}
 
-  {% set ft_query = '-hs_created_at&limit=1' %}
+  {% set ft_query = '-hs_created_at&limit=10000' %}
   {% set ft_resouces = hubdb_table_rows(table,ft_query) %}
 
   <div class='blog-banner'>
@@ -19,6 +19,7 @@
       {% if ft_resouces|length > 0 %}
       <div class='featured-post-wrap'>
         {% for row in ft_resouces %} 
+
         {% if row.featured %}
         <div class='featured-post {% if not row.image.url %}no-img {% endif %}'>
           {% if row.image.url %}
@@ -30,7 +31,7 @@
           </div> 
           {% endif %}
           <div class='featured-content-col'>
-            <div class='featured-topic'>{{ row.type }}</div>
+            <div class='featured-topic'>{{ row.type.name }}</div>
             <h3>
               <a href="{{ row.link }}">{{ row.name }}</a>
             </h3>
@@ -62,16 +63,16 @@
 <div class="main-listing {{ module.filtered_content.select_bg_color }}">
   <div class='site-search-wrap'>
     <div class='page-center'>
-      <div class="col SearchBtn search-col">
+      <div class=" SearchBtn search-col">
         <div class="srchSection">
-          <input type="text" id="filterTitle{{ name|replace('widget_','')|replace('module_','') }}" placeholder="Search by presenter, title, etc." class="resourceInput">
+          <input type="text" id="filterTitle{{ name|replace('widget_','')|replace('module_','') }}" placeholder="Search..." class="resourceInput">
           <div class="Searchbtn">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.29922C0 2.82065 2.82065 0 6.29923 0C9.7778 0 12.5985 2.82065 12.5985 6.29922C12.5985 7.78304 12.0805 9.15487 11.2196 10.2327L13.7953 12.8084C14.0682 13.0814 14.0682 13.5223 13.7953 13.7953C13.5223 14.0683 13.0814 14.0683 12.8084 13.7953L10.2327 11.2196C9.15487 12.0805 7.79004 12.5984 6.29923 12.5984C2.82065 12.5984 0 9.7778 0 6.29922ZM6.29923 1.39983C3.59056 1.39983 1.39983 3.59056 1.39983 6.29922C1.39983 9.00789 3.59056 11.1986 6.29923 11.1986C7.65006 11.1986 8.87487 10.6527 9.76377 9.76381C10.6527 8.87492 11.1986 7.65006 11.1986 6.29922C11.1986 3.59056 9.00789 1.39983 6.29923 1.39983Z" fill="#00161D"></path>
 							</svg></div>
         </div>
       </div> 
-      <div class="col selctArrow tag-col">   
+      <div class=" selctArrow tag-col">   
         <select name="type" id="type" class="resourceSelect" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
           <option value="" selected>Filter by Topic</option> 
           {% for topic in hubdb_table_column(table, 'topic').options %}
@@ -79,7 +80,7 @@
           {% endfor %}
         </select> 
       </div>   
-      <div class="col selctArrow tag-col">  
+      <div class=" selctArrow tag-col">  
         <select name="topic" id="topic" class="topicSelect resourceSelect" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
           <option value="" selected>Filter by Type</option> 
           {% for type in hubdb_table_column(table, 'type').options %}
@@ -104,7 +105,7 @@
             {% endif %}
             <div class="post-content">
               <div class='post-item-topic'>{{ row.type.name }}</div>
-              <h4>
+              <h4 class="restitle">
                 <a href="{{ row.link }}">{{ row.name }}</a>
               </h4>
               <div class='read-more'>
