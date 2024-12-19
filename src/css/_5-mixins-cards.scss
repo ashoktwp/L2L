@@ -309,3 +309,187 @@
     margin: 0 0 20px;
   }
 }
+
+// post card
+
+@mixin CardItems {
+  .flex-row {
+    margin: 0 -15px 64px;
+    row-gap: 30px;
+    .post-item {
+      padding: 0 15px;
+      width: 33.3333%;
+      @include tabletmid {
+        width: 50%;
+      }
+      @include tabletvert {
+        width: 100%;
+      }
+      .post-item-inner {
+        border-radius: 8px;
+        padding: 18px;
+        position: relative;
+        overflow: hidden;
+        &::before,
+        &:after {
+          content: "";
+          height: calc(100% + 4px);
+          left: 0px;
+          position: absolute;
+          top: 0px;
+          width: calc(100% + 4px);
+          z-index: 2;
+        }
+        &::before {
+          background: linear-gradient(180deg, $Medium_Aquamarine 0%, rgba($Medium_Aquamarine, 0.0001) 100%);
+          border: 1px solid transparent;
+          -o-border-image: linear-gradient(180deg, $Medium_Aquamarine 0%, rgba($Medium_Aquamarine, 0.0001) 100%);
+          border-image: linear-gradient(180deg, $Medium_Aquamarine 0%, rgba($Medium_Aquamarine, 0.0001) 100%);
+          border-image-slice: 1;
+          border-radius: 13px;
+          bottom: 0;
+          -webkit-mask:
+            linear-gradient($White 0 0) content-box,
+            linear-gradient($Medium_Aquamarine 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          overflow: hidden;
+          transition: none;
+          width: 100%;
+        }
+        &::after {
+          border: 2px solid $Medium_Aquamarine;
+          border-radius: 100px;
+          height: 100%;
+          left: 0;
+          opacity: 0;
+          top: 0;
+          transition: all 0.2s ease;
+          transition: none;
+          width: 100%;
+        }
+        .featured-img {
+          margin-bottom: 15px;
+          position: relative;
+          z-index: 3;
+          img {
+            width: 100%;
+            border-radius: 8px;
+            min-height: 200px;
+            object-fit: cover;
+          }
+        }
+        .post-content {
+          position: relative;
+          z-index: 3;
+          .post-item-topic {
+            margin-bottom: 6px;
+            a {
+              @include eyebrow2;
+              color: $Forest_Green;
+            }
+          }
+          h4 {
+            margin: 0;
+            margin-bottom: 11px;
+            font-family: $secondaryFont;
+            line-height: 1.29;
+            font-weight: 500;
+            a {
+              color: inherit;
+            }
+          }
+          p {
+            margin: 0;
+          }
+          .read-more {
+            margin-top: 40px;
+            a {
+              text-transform: uppercase;
+              @include size14;
+              letter-spacing: 0.47px;
+              font-weight: bold;
+              color: $Fern_green;
+              line-height: 1.2;
+              svg {
+                margin-left: 15px;
+                width: 14px;
+                path {
+                  fill: currentColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin blogPagination {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  a {
+    align-items: center;
+    background-color: rgba($Nori_Green, 0.1);
+    border-radius: 100%;
+    color: $Dark_jungle;
+    display: flex;
+    @include size16;
+    font-weight: 500;
+    height: 36px;
+    line-height: 1.2;
+    margin: 0 10px;
+    width: 36px;
+    justify-content: center;
+    &.prev-link svg {
+      transform: rotate(180deg);
+    }
+    svg path {
+      fill: currentColor;
+    }
+    &.active,
+    &:hover {
+      background-color: $Dark_jungle;
+      color: $white;
+    }
+  }
+  nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    button {
+      align-items: center;
+      background-color: rgba($Nori_Green, 0.1);
+      border-radius: 100%;
+      color: $Dark_jungle;
+      display: flex;
+      @include size16;
+      font-weight: 500;
+      height: 36px;
+      line-height: 1.2;
+      margin: 0 10px;
+      width: 36px;
+      justify-content: center;
+      > * {
+        pointer-events: none;
+      }
+      &.prev-link {
+        svg {
+          transform: rotate(180deg);
+          path {
+            fill: currentColor;
+          }
+        }
+      }
+      &.active,
+      &:hover {
+        background-color: $Dark_jungle;
+        color: $white;
+      }
+    }
+  }
+}
