@@ -349,9 +349,6 @@ section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner .po
   z-index: 3;
 }
 section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner .post-content .post-item-topic {
-  margin-bottom: 6px;
-}
-section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner .post-content .post-item-topic a {
   font-family: "Inter";
   font-size: 14rem;
   font-weight: 600;
@@ -362,6 +359,10 @@ section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner .po
   color: #b8ffd2;
   text-decoration: underline;
   color: #275430;
+  margin-bottom: 6px;
+}
+section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner .post-content .post-item-topic a {
+  color: inherit;
 }
 section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner .post-content h4 {
   margin: 0;

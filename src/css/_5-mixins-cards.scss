@@ -381,10 +381,11 @@
           position: relative;
           z-index: 3;
           .post-item-topic {
+            @include eyebrow2;
+            color: $Forest_Green;
             margin-bottom: 6px;
             a {
-              @include eyebrow2;
-              color: $Forest_Green;
+              color: inherit;
             }
           }
           h4 {
