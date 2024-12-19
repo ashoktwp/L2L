@@ -30,21 +30,26 @@ label: header
           </div>
           <div class="mobile_menu">
             <div class="trigger"><i></i></div>
+            <div class="mb_menu_wrap">
+            <div class="mb_menu_inr">
             <div class="hd_menu">
               {% module "mega_menu" path="../../modules/u4m-mega-menu",
               label="Mega Menu" %}
             </div>
-            <div class="hd_right">
-              <div class="hd_links">
-                {% menu path="@hubspot/menu" label="Header Links"
-                id="184036635918" %}
+            
+              <div class="hd_right">
+                <div class="hd_links">
+                  {% menu path="@hubspot/menu" label="Header Links"
+                  id="184036635918" %}
+                </div>
+                <div class="hd_btn">
+                  {% module "button" , path="@hubspot/button" , label="Book a
+                  demo" , button_text="Book a demo", link={ "url": { "type":
+                  "EXTERNAL", "href": "" }, "open_in_new_tab": true,
+                  "no_follow": false } ,%}
+                </div>
               </div>
-              <div class="hd_btn">
-                {% module "button" , path="@hubspot/button" , label="Book a
-                demo" , button_text="Book a demo", link={ "url": { "type":
-                "EXTERNAL", "href": "" }, "open_in_new_tab": true, "no_follow":
-                false } ,%}
-              </div>
+            </div>
             </div>
           </div>
         </div>
