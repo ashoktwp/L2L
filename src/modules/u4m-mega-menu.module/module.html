@@ -1,7 +1,8 @@
 <div class="megamenu_mdl">
 	<div  class="megamenu_inr">
-		{% for item in module.add_menus %}
+		
 		<ul class="main_menu">
+			{% for item in module.add_menus %}
 			<li>
 				{% set href = item.menu_link.url.href %}
 				{% if item.menu_link.url.type is equalto "EMAIL_ADDRESS" %}
@@ -147,8 +148,9 @@
 				</div>
 
 			</li>
+			{% endfor %}
 		</ul>
-		{% endfor %}
+		 
 	</div>
 </div>
 

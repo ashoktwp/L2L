@@ -1,3 +1,33 @@
 @import "../../css/_module-imports";
 
 
+header{
+    .hd_hgh{
+        .hd_wrap{
+            background-color: rgba($Nori_Green, 1);
+            .hd_inr {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            .hd_menu{
+                .megamenu_inr> ul {
+                    display: flex;
+                    list-style: none;
+                    align-items: center;
+                    margin: 0;
+                    padding: 0;
+                    &>li a{
+                        color: $white;
+                        @include size14;
+                        letter-spacing: 0.15px;
+                    }
+                }
+                .child_wrapper {
+                    display: none;
+                }
+            }
+        }
+        }
+    } 
+}
