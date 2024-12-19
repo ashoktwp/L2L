@@ -1,77 +1,71 @@
 @import "../../css/_module-imports";
-section.u4m-animated-stats {
-  margin-top: 100rem;
-  margin-bottom: 100rem;
-  &.reverse-text {
-    color: $white;
+
+.u4m-animated-stats {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  .page-center {
+    padding-right: 15px;
+    padding-left: 15px;
   }
-  .heading {
-    @include center;
-    @include h2;
-    text-align: center;
+  .intro_content {
+    margin-bottom: 36px;
+    .intro_title {
+      font-weight: 600;
+      line-height: 1.1875;
+      letter-spacing: -0.5px;
+      margin-bottom: 0;
+    }
   }
-  .intro {
-    @include center;
-  }
-  div.statistics {
-    @include center;
+  .statistics {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    &.items-four {
-      div.statistics__item {
-        flex-basis: calc(25% - 40rem);
-        @include tablet {
-          flex-basis: calc(50% - 40rem);
+    margin: 0 -15px;
+    row-gap: 20px;
+    .statistics__item {
+      width: 25%;
+      padding: 0 15px;
+      text-align: center;
+      @include tabletmid {
+        width: 50%;
+      }
+      @include tabletvert {
+        width: 100%;
+      }
+      .statistics_count {
+        @include h1;
+        font-family: $tertiaryFont;
+        font-weight: 600;
+        line-height: 1.87402778;
+        letter-spacing: 0.25px;
+        text-align: center;
+        margin-bottom: 0;
+        color: $baseColor;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 2px;
+        .prefix {
+          color: $L2L_green;
         }
-        @include phone {
-          flex: 0 0 100%;
-        }
+      }
+      .statistics_caption {
+        @include bodyStyle;
+        text-align: center;
+        font-family: $secondaryFont;
       }
     }
-    div.statistics__item {
-      text-align: center;
-      margin: 20rem;
-      flex-basis: calc(33.333% - 40rem);
-      flex-grow: 0;
-      flex-shrink: 0;
-      @include tablet {
-        flex-basis: calc(50% - 40rem);
-      }
-      @include phone {
-        flex: 0 0 100%;
-      }
-      .image {
-        min-height: 70rem;
-        img {
-          max-width: 80rem;
-          text-align: center;
-          margin: 0 auto;
-          display: block;
-        }
-      }
-      .count,
-      .number {
-        font-size: 50rem;
-        font-weight: bold;
-      }
-      .currency {
-        padding-right: 5rem;
-        //vertical-align: text-bottom;
-        font-size: 50rem;
-        font-weight: bold;
-      }
-      .unit {
-        padding-left: 5rem;
-        //vertical-align: text-bottom;
-        font-size: 50rem;
-        font-weight: bold;
-      }
-      .caption {
-        display: block;
-        font-weight: bold;
-      }
+  }
+  .statistics_btn_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 62px;
+    gap: 20px;
+    a {
+      font-family: $secondaryFont;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      line-height: 3;
     }
   }
 }
