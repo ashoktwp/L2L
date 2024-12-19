@@ -259,8 +259,8 @@
       "locked" : false,
       "visibility" : {
         "controlling_field" : null,
-        "controlling_field_path" : "intro_content.button_group.button_type",
-        "controlling_value_regex" : "std",
+        "controlling_field_path" : "intro_content.button_group.button_style",
+        "controlling_value_regex" : "hs-button",
         "property" : null,
         "operator" : "EQUAL",
         "access" : null
@@ -386,7 +386,7 @@
       "controlling_field_path" : "blog_feed.blog_post_type",
       "controlling_value_regex" : "recent|tag",
       "property" : null,
-      "operator" : "EQUAL",
+      "operator" : "MATCHES_REGEX",
       "access" : null
     },
     "display" : "text",
@@ -528,8 +528,8 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "intro_content.button_group.button_type",
-      "controlling_value_regex" : "std",
+      "controlling_field_path" : "blog_feed.button_style",
+      "controlling_value_regex" : "hs-button",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
@@ -892,7 +892,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : "image"
     }, {
       "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
       "name" : "background_image",
@@ -913,10 +913,14 @@
       "show_loading" : false,
       "type" : "image",
       "default" : {
-        "size_type" : "auto",
-        "src" : "",
-        "alt" : null,
-        "loading" : "lazy"
+        "size_type" : "auto_custom_max",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Combined%20Shape.png",
+        "alt" : "Combined Shape",
+        "loading" : "lazy",
+        "width" : 3200,
+        "height" : 1840,
+        "max_width" : 2000,
+        "max_height" : 1150
       }
     }, {
       "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
@@ -968,12 +972,16 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "color",
+      "background_type" : "image",
       "background_image" : {
-        "size_type" : "auto",
-        "src" : "",
-        "alt" : null,
-        "loading" : "lazy"
+        "size_type" : "auto_custom_max",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Combined%20Shape.png",
+        "alt" : "Combined Shape",
+        "loading" : "lazy",
+        "width" : 3200,
+        "height" : 1840,
+        "max_width" : 2000,
+        "max_height" : 1150
       },
       "select_color" : "white_bg",
       "select_gradient" : ""
@@ -1059,12 +1067,16 @@
     "custom_bottom_padding_mobile" : 50,
     "reverse_text" : false,
     "background_settings" : {
-      "background_type" : "color",
+      "background_type" : "image",
       "background_image" : {
-        "size_type" : "auto",
-        "src" : "",
-        "alt" : null,
-        "loading" : "lazy"
+        "size_type" : "auto_custom_max",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Combined%20Shape.png",
+        "alt" : "Combined Shape",
+        "loading" : "lazy",
+        "width" : 3200,
+        "height" : 1840,
+        "max_width" : 2000,
+        "max_height" : 1150
       },
       "select_color" : "white_bg",
       "select_gradient" : ""
