@@ -115,7 +115,7 @@
     {% endif %}
     {% if module.media_column.media_type == 'video' %}
     {% if module.media_column.video %}
-    <video class="video">
+    <video class="video" controls>
       <source src="{{ module.media_column.video }}" type="video/mp4">
     </video>
     {% endif %}

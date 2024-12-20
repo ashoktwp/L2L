@@ -1,7 +1,7 @@
 {% set moduleName = 'u4m-quote-cards-slider' %}
 {% include "../partials/u4-module-includes.html" %}
 
-<div class="page-center  {{ module.module_settings.theme }}">
+<div class="page-center  {{ module.module_settings.theme }} {{ module.module_settings.background_settings.select_color }}">
   <div class="intro_wrapp">
     {{macros.introGroup(module.intro_content)}}
   </div>
@@ -63,7 +63,8 @@
     arrows: true,
     centerPadding: '204px',
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 2000,
+    pauseOnHover:true,
          responsive: [
          {
           breakpoint: 1200,

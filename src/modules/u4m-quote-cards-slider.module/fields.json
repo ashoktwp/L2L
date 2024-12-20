@@ -508,7 +508,7 @@
       "unicode" : "f1a0",
       "type" : "REGULAR"
     },
-    "content" : "<p>Dolore proident aliqua officia esse minim ut ut irure enim dolore consequat sunt cupidatat labore. Incididunt ipsum culpa fugiat ex. Commodo sint nulla mollit in culpa esse voluptate commodo. Sit reprehenderit ullamco duis irure labore veniam voluptate fugiat veniam pariatur.</p>",
+    "content" : "<p>Magna nisi sunt ea dolor commodo dolore dolor. Duis magna labore reprehenderit incididunt amet in reprehenderit aute ad duis nulla. Sint qui fugiat enim. Occaecat proident cupidatat eu ea magna labore enim velit sint id magna tempor eu. Dolore consectetur ea proident labore.</p>",
     "author_image" : {
       "size_type" : "auto",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Torsten%20Paulsson.png",
@@ -537,7 +537,7 @@
       "unicode" : "f1a0",
       "type" : "REGULAR"
     },
-    "content" : "<p>Dolore proident aliqua officia esse minim ut ut irure enim dolore consequat sunt cupidatat labore. Incididunt ipsum culpa fugiat ex. Commodo sint nulla mollit in culpa esse voluptate commodo. Sit reprehenderit ullamco duis irure labore veniam voluptate fugiat veniam pariatur.</p>",
+    "content" : "<p>Quis nostrud sunt commodo ipsum nostrud ad proident laborum dolor ex. Sunt excepteur pariatur magna amet incididunt sunt aliqua laborum incididunt nostrud laborum ad commodo occaecat tempor.</p>",
     "author_image" : {
       "size_type" : "auto",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Torsten%20Paulsson.png",
@@ -608,6 +608,68 @@
     },
     "author_name" : "Torsten Paulsson"
   } ]
+}, {
+  "id" : "617aa8bf-fc52-a6c3-940d-90300cdd31d6",
+  "name" : "module_settings",
+  "display_width" : null,
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "7ddeef95-10ae-a89a-47a1-5f5a40f07148",
+    "name" : "background_settings",
+    "display_width" : null,
+    "label" : "Background Settings",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "256ce538-4d19-9335-68c2-b1540c9f3e4f",
+      "name" : "select_color",
+      "display_width" : null,
+      "label" : "Select Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "prismic_mango_bg", "Prismic Mango" ], [ "prismic_mint_bg", "Prismic Mint" ], [ "frostee_bg", "Frostee" ], [ "mint_cream_bg", "Mint Cream" ], [ "menthol_bg", "Menthol" ], [ "l2l_green_bg", "L2L Green" ], [ "fern_green_bg", "Fern Green" ], [ "dark_jungle_bg", "Dark Jungle" ], [ "mystic_green_bg", "Mystic Green" ], [ "lime_green_bg", "Lime Green" ], [ "white_bg", "White" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "frostee_bg"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : true,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "select_color" : "frostee_bg"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "background_settings" : {
+      "select_color" : "frostee_bg"
+    }
+  }
 }, {
   "id" : "module_overrides",
   "name" : "module_overrides",
@@ -979,7 +1041,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "frostee_bg"
+      "default" : "white_bg"
     }, {
       "id" : "2659085b-598d-e346-643e-6a9ebb3bae70",
       "name" : "select_gradient",
@@ -1015,7 +1077,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "frostee_bg",
+      "select_color" : "white_bg",
       "select_gradient" : ""
     }
   }, {
@@ -1068,7 +1130,7 @@
       "step" : 1,
       "suffix" : "px",
       "type" : "number",
-      "default" : 1296
+      "default" : 1194
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -1076,7 +1138,7 @@
     "type" : "group",
     "default" : {
       "size" : "theme",
-      "custom_size" : 1296
+      "custom_size" : 1194
     }
   } ],
   "tab" : "CONTENT",
@@ -1106,12 +1168,12 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "frostee_bg",
+      "select_color" : "white_bg",
       "select_gradient" : ""
     },
     "container" : {
       "size" : "theme",
-      "custom_size" : 1296
+      "custom_size" : 1194
     }
   }
 } ]

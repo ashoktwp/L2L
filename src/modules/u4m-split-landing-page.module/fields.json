@@ -45,6 +45,33 @@
       "max_height" : 86
     }
   }, {
+    "id" : "1d3ae6c9-2062-51bb-0331-a656cee055e4",
+    "name" : "logo_link",
+    "display_width" : null,
+    "label" : "Logo Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_logo",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
     "id" : "c5ccdda8-6960-e255-a51f-c61077a633ca",
     "name" : "include_eyebrow_text",
     "display_width" : null,
@@ -342,7 +369,7 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       },
-      "boolean_field" : false
+      "enable_arrow" : false
     }, {
       "button_type" : "std",
       "button_style" : "hs-button",
@@ -357,7 +384,7 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       },
-      "boolean_field" : false
+      "enable_arrow" : false
     } ]
   } ],
   "tab" : "CONTENT",
@@ -375,6 +402,15 @@
       "height" : 86,
       "max_width" : 78,
       "max_height" : 86
+    },
+    "logo_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
     },
     "include_eyebrow_text" : true,
     "eyebrow_text" : "CASE STUDY",
@@ -398,7 +434,7 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       },
-      "boolean_field" : false
+      "enable_arrow" : false
     }, {
       "button_type" : "std",
       "button_style" : "hs-button",
@@ -413,7 +449,7 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       },
-      "boolean_field" : false
+      "enable_arrow" : false
     } ]
   }
 }, {
@@ -450,9 +486,9 @@
     "locked" : false,
     "type" : "form",
     "default" : {
-      "form_id" : "00475ea3-f894-43e1-90d5-b0e1624e995b",
+      "form_id" : "ab04cf87-8a9f-4543-bb22-6341614fbef4",
       "response_type" : "inline",
-      "message" : "<p>Thanks for requesting a&#xa0;Leading2Lean demo! We look forward to answering your questions and showing you all our tools.</p>\n<p>&#xa0;</p>\n<p>An L2L representative will be in contact shortly to schedule your demo.</p>",
+      "message" : "Thanks for submitting the form.",
       "gotowebinar_webinar_key" : null,
       "webinar_id" : null,
       "webinar_source" : null,
@@ -465,9 +501,9 @@
   "type" : "group",
   "default" : {
     "select_form" : {
-      "form_id" : "00475ea3-f894-43e1-90d5-b0e1624e995b",
+      "form_id" : "ab04cf87-8a9f-4543-bb22-6341614fbef4",
       "response_type" : "inline",
-      "message" : "<p>Thanks for requesting a&#xa0;Leading2Lean demo! We look forward to answering your questions and showing you all our tools.</p>\n<p>&#xa0;</p>\n<p>An L2L representative will be in contact shortly to schedule your demo.</p>",
+      "message" : "Thanks for submitting the form.",
       "gotowebinar_webinar_key" : null,
       "webinar_id" : null,
       "webinar_source" : null,
@@ -497,6 +533,52 @@
   "type" : "group",
   "default" : {
     "content" : "<h3>Tempor esse elit aliquip minim</h3>\n<p>Sunt sunt aute esse aliquip occaecat labore enim. Ipsum veniam aliquip commodo amet et incididunt labore reprehenderit ad sint. Exercitation pariatur adipisicing eiusmod. Id laboris ullamco nisi nostrud duis fugiat eiusmod ea mollit officia. Ad officia cillum ad incididunt. Minim proident amet incididunt elit exercitation eu culpa labore.</p>\n<ul>\n<li>Sunt sunt aute esse aliquip occaecat</li>\n<li>Eveniam aliquip commodo amet et incididunt labore</li>\n<li>Areprehenderit ad sint. Exercitation pariatur adipisicing</li>\n</ul>"
+  }
+}, {
+  "id" : "b1ad819f-ba8f-5c63-262f-a7eeeef4283c",
+  "name" : "form_settings",
+  "display_width" : null,
+  "label" : "Form Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "ce8117f1-4150-676e-aa32-7b43c9f4ca56",
+    "name" : "background_settings",
+    "display_width" : null,
+    "label" : "Background Settings",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "7abaddf5-b935-3dc3-392d-fb0bbe88cdb6",
+      "name" : "select_color",
+      "display_width" : null,
+      "label" : "Select Color",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "prismic_mango_bg", "Prismic Mango" ], [ "prismic_mint_bg", "Prismic Mint" ], [ "frostee_bg", "Frostee" ], [ "mint_cream_bg", "Mint Cream" ], [ "menthol_bg", "Menthol" ], [ "l2l_green_bg", "L2L Green" ], [ "fern_green_bg", "Fern Green" ], [ "dark_jungle_bg", "Dark Jungle" ], [ "mystic_green_bg", "Mystic Green" ], [ "lime_green_bg", "Lime Green" ], [ "white_bg", "White" ], [ "very_pale_green_bg", "Very Pale Green" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "very_pale_green_bg"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : true,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "select_color" : "very_pale_green_bg"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "background_settings" : {
+      "select_color" : "very_pale_green_bg"
+    }
   }
 }, {
   "id" : "module_overrides",
@@ -793,7 +875,7 @@
     },
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
     "name" : "background_settings",
@@ -822,7 +904,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : "gradient"
     }, {
       "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
       "name" : "background_image",
@@ -891,14 +973,14 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : ""
+      "default" : "gradient3"
     } ],
     "tab" : "CONTENT",
     "expanded" : true,
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",
@@ -906,7 +988,7 @@
         "loading" : "lazy"
       },
       "select_color" : "prismic_mango_bg",
-      "select_gradient" : ""
+      "select_gradient" : "gradient3"
     }
   }, {
     "id" : "c813f3af-99b7-d54e-7ce2-b074f008a27c",
@@ -987,9 +1069,9 @@
     "bottom_padding" : "bottom-padding-default",
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
-    "reverse_text" : false,
+    "reverse_text" : true,
     "background_settings" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",
@@ -997,7 +1079,7 @@
         "loading" : "lazy"
       },
       "select_color" : "prismic_mango_bg",
-      "select_gradient" : ""
+      "select_gradient" : "gradient3"
     },
     "container" : {
       "size" : "theme",

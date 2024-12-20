@@ -1,11 +1,17 @@
 @import "../../css/_module-imports";
 
 section.u4m-quote-cards-slider {
-  padding-left: 53px;
-  padding-right: 54px;
+  padding-top: 100px;
+  padding-bottom: 72px;
+  padding-left: 20px;
+  padding-right: 20px;
   @include tabletvert {
-    padding-left: 0;
-    padding-right: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .page-center {
+    border-radius: 13px;
+    padding: 54px 0;
   }
   .quote-cards-inner {
     position: relative;
@@ -18,6 +24,10 @@ section.u4m-quote-cards-slider {
       border-radius: 8px;
       padding: 42px 72px;
       text-align: center;
+      min-height: 343px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
       .top-img {
         padding-bottom: 36px;
         img {
@@ -55,16 +65,23 @@ section.u4m-quote-cards-slider {
         background-clip: text;
         color: transparent;
         line-height: 1.43;
+        p:last-child {
+          margin-bottom: 0;
+        }
       }
       .author-col {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: auto;
         .author-img {
           margin-right: 10px;
           img {
             border-radius: 50%;
-            max-width: 25px;
+            width: 25px;
+            height: 25px;
+            object-fit: cover;
+            vertical-align: middle;
           }
         }
         .author-name {

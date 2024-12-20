@@ -394,6 +394,20 @@
     "type" : "choice",
     "default" : "left"
   }, {
+    "id" : "01cc8263-035a-5207-b040-2e7c4a57d9fc",
+    "name" : "text_alignment",
+    "display_width" : null,
+    "label" : "Text Alignment",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "left"
+  }, {
     "id" : "302949cd-d87b-8da9-47f8-a6c40db34d1e",
     "name" : "content",
     "display_width" : null,
@@ -557,7 +571,7 @@
         "visibility" : {
           "controlling_field" : null,
           "controlling_field_path" : "content.content.button_group.button_style",
-          "controlling_value_regex" : "button_style",
+          "controlling_value_regex" : "hs-button",
           "property" : null,
           "operator" : "EQUAL",
           "access" : null
@@ -648,11 +662,10 @@
         "max_height" : 396
       }
     }, {
-      "picker" : "file",
-      "id" : "14c42ee0-b721-ba68-ff56-50b7cef082ab",
-      "name" : "video",
+      "id" : "d4fed55c-05b0-c157-95b7-a82efc372dd9",
+      "name" : "video_section",
       "display_width" : null,
-      "label" : "Video",
+      "label" : "Video Section",
       "required" : false,
       "locked" : false,
       "visibility" : {
@@ -663,7 +676,76 @@
         "operator" : "EQUAL",
         "access" : null
       },
-      "type" : "file"
+      "children" : [ {
+        "id" : "b4dea6e5-13bf-f748-e291-b9520690478c",
+        "name" : "video_type",
+        "display_width" : null,
+        "label" : "Video Type",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "content.media_column.media_type",
+          "controlling_value_regex" : "video",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "file", "File" ], [ "embed", "Embed" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "file"
+      }, {
+        "picker" : "video",
+        "id" : "14c42ee0-b721-ba68-ff56-50b7cef082ab",
+        "name" : "video",
+        "display_width" : null,
+        "label" : "Video",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "content.media_column.video_section.video_type",
+          "controlling_value_regex" : "file",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "type" : "file",
+        "default" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4"
+      }, {
+        "id" : "b26340cb-6174-f37b-30f2-a195d3ab1d80",
+        "name" : "embed_path",
+        "display_width" : null,
+        "label" : "Embed Url",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "content.media_column.video_section.video_type",
+          "controlling_value_regex" : "embed",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "https://www.youtube.com/embed/9xwazD5SyVg"
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "default" : {
+        "video_type" : "file",
+        "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+        "embed_path" : "https://www.youtube.com/embed/9xwazD5SyVg"
+      }
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -680,6 +762,11 @@
         "height" : 396,
         "max_width" : 552,
         "max_height" : 396
+      },
+      "video_section" : {
+        "video_type" : "file",
+        "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+        "embed_path" : "https://www.youtube.com/embed/9xwazD5SyVg"
       }
     }
   } ],
@@ -689,6 +776,7 @@
   "type" : "group",
   "default" : [ {
     "content_alignment" : "left",
+    "text_alignment" : "left",
     "content" : {
       "heading" : "Real-time visibility,real-time action",
       "content" : "<p>L2L empowers frontline teams with instant access to critical information and guided workflows and learning pathways, enabling them to proactively ad dress issues and optimize operations.</p>",
@@ -705,10 +793,42 @@
         "height" : 396,
         "max_width" : 552,
         "max_height" : 396
+      },
+      "video_section" : {
+        "video_type" : "file",
+        "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+        "embed_path" : "https://www.youtube.com/embed/9xwazD5SyVg"
+      }
+    }
+  }, {
+    "content_alignment" : "right",
+    "text_alignment" : "left",
+    "content" : {
+      "heading" : "Real-time visibility,real-time action",
+      "content" : "<p>L2L empowers frontline teams with instant access to critical information and guided workflows and learning pathways, enabling them to proactively ad dress issues and optimize operations.</p>",
+      "button_group" : [ ]
+    },
+    "media_column" : {
+      "media_type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/menu_card.png",
+        "alt" : "menu_card",
+        "loading" : "lazy",
+        "width" : 552,
+        "height" : 396,
+        "max_width" : 552,
+        "max_height" : 396
+      },
+      "video_section" : {
+        "video_type" : "file",
+        "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+        "embed_path" : "https://www.youtube.com/embed/9xwazD5SyVg"
       }
     }
   }, {
     "content_alignment" : "left",
+    "text_alignment" : "left",
     "content" : {
       "heading" : "Real-time visibility,real-time action",
       "content" : "<p>L2L empowers frontline teams with instant access to critical information and guided workflows and learning pathways, enabling them to proactively ad dress issues and optimize operations.</p>",
@@ -725,26 +845,11 @@
         "height" : 396,
         "max_width" : 552,
         "max_height" : 396
-      }
-    }
-  }, {
-    "content_alignment" : "left",
-    "content" : {
-      "heading" : "Real-time visibility,real-time action",
-      "content" : "<p>L2L empowers frontline teams with instant access to critical information and guided workflows and learning pathways, enabling them to proactively ad dress issues and optimize operations.</p>",
-      "button_group" : [ ]
-    },
-    "media_column" : {
-      "media_type" : "img",
-      "image" : {
-        "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/menu_card.png",
-        "alt" : "menu_card",
-        "loading" : "lazy",
-        "width" : 552,
-        "height" : 396,
-        "max_width" : 552,
-        "max_height" : 396
+      },
+      "video_section" : {
+        "video_type" : "file",
+        "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+        "embed_path" : "https://www.youtube.com/embed/9xwazD5SyVg"
       }
     }
   } ]
@@ -756,20 +861,6 @@
   "required" : false,
   "locked" : false,
   "children" : [ {
-    "id" : "01cc8263-035a-5207-b040-2e7c4a57d9fc",
-    "name" : "text_alignment",
-    "display_width" : null,
-    "label" : "Text Alignment",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "default" : "left"
-  }, {
     "id" : "22e68023-39c0-bb96-e537-c24b8122eed5",
     "name" : "image_border_radious",
     "display_width" : null,
@@ -783,14 +874,52 @@
     "suffix" : "px",
     "type" : "number",
     "default" : 10
+  }, {
+    "id" : "29972fec-14e5-8750-9fbf-39e4a5ee3f08",
+    "name" : "select_text_color",
+    "display_width" : null,
+    "label" : "Select Text Color",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "baseColor", "Base Color" ], [ "prismic_mango_color", "Prismic Mango" ], [ "menthol_color", "Menthol" ], [ "l2l_green_color", "L2L Green" ], [ "fern_green_color", "Fern Green" ], [ "dark_jungle_color", "Dark Jungle" ], [ "mystic_green_color", "Mystic Green" ], [ "lime_green_color", "Lime Green" ], [ "white_color", "White" ], [ "custom_color", "Custom Color" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "white_color"
+  }, {
+    "id" : "d4f26078-4bec-f0e3-f9db-2e9d36b69b37",
+    "name" : "color",
+    "display_width" : null,
+    "label" : "Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_settings.select_text_color",
+      "controlling_value_regex" : "custom_color",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : null,
+      "opacity" : null
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "text_alignment" : "left",
-    "image_border_radious" : 10
+    "image_border_radious" : 10,
+    "select_text_color" : "white_color",
+    "color" : {
+      "color" : null,
+      "opacity" : null
+    }
   }
 }, {
   "id" : "module_overrides",
@@ -851,7 +980,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "top-margin-default"
+    "default" : "top-margin-none"
   }, {
     "id" : "custom_top_margin",
     "name" : "custom_top_margin",
@@ -911,7 +1040,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "bottom-margin-default"
+    "default" : "bottom-margin-none"
   }, {
     "id" : "custom_bottom_margin",
     "name" : "custom_bottom_margin",
@@ -1070,24 +1199,6 @@
     "step" : 1,
     "type" : "number",
     "default" : 50
-  }, {
-    "id" : "3eccf45d-b0dc-4bac-42a0-f923e4405158",
-    "name" : "reverse_text",
-    "display_width" : null,
-    "label" : "Dark Theme",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : "enable_overrides",
-      "controlling_field_path" : null,
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "display" : "checkbox",
-    "type" : "boolean",
-    "default" : true
   }, {
     "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
     "name" : "background_settings",
@@ -1269,10 +1380,10 @@
   "type" : "group",
   "default" : {
     "enable_overrides" : true,
-    "top_margin" : "top-margin-default",
+    "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
-    "bottom_margin" : "bottom-margin-default",
+    "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
     "top_padding" : "top-padding-default",
@@ -1281,7 +1392,6 @@
     "bottom_padding" : "bottom-padding-default",
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
-    "reverse_text" : true,
     "background_settings" : {
       "background_type" : "gradient",
       "background_image" : {

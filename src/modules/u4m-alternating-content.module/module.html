@@ -1,7 +1,7 @@
 {% set moduleName = 'u4m-alternating-content' %}
 {% include "../partials/u4-module-includes.html" %}
 
-<div class="page-center  {{ module.module_settings.theme }}">
+<div class="page-center  {{ module.module_settings.theme }} {{ module.module_settings.select_text_color }}">
   <div class="intro_wrapp">
     {{macros.introGroup(module.intro_content)}}
   </div>
@@ -9,7 +9,7 @@
   <div class='two-col-content'>
     {% for item in module.content %}
     <div class='two-col-content-item {{item.content_alignment}}'>
-      <div class="content-col">
+      <div class="content-col {{ item.text_alignment }}-align">
         {% if item.content.heading %}
         <h2>
           {{ item.content.heading }}
@@ -29,9 +29,16 @@
         {% endif %}
         {% endif %}
         {% if item.media_column.media_type == 'video' %}
+        {% if item.media_column.video_section.video_type == 'file' %}
+        {% if item.media_column.video_section.video %}
         <video class="video-media" controls style="border-radius:{{ module.module_settings.image_border_radious }}px;">
-          <source src="{{ item.media_column.video }}" type="video/mp4">
+          <source src="{{ item.media_column.video_section.video }}" type="video/mp4">
         </video>
+        {% endif %}
+        {% endif %}
+        {% if item.media_column.video_section.video_type == 'embed' %}
+        <iframe src="{{ item.media_column.video_section.embed_path }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1"  frameborder="0" allowfullscreen="" class="iframe_video"></iframe>
+        {% endif %}
         {% endif %}
       </div>
     </div>
@@ -41,8 +48,16 @@
 </section>
 
 
-
-
+{% require_css %}
+<style>
+  {% if module.module_settings.select_text_color == 'custom_color' %}
+  .{{name}} .custom_color .content-col > *,
+  .{{name}} .custom_color .intro__inner > * {
+    color: rgba({{ module.module_settings.color.color|convert_rgb }},{{ module.module_settings.color.opacity*0.01 }});
+  }
+  {% endif %}
+</style>
+{% end_require_css %}
 
 
 

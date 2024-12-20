@@ -60,13 +60,13 @@ section.u4m-hero-left-aligned {
     }
     video {
       width: 100%;
-      height: 100%;
       vertical-align: middle;
     }
   }
   .intro_wrapp {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 30px;
   }
   .intro_content {

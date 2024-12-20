@@ -3,10 +3,42 @@
 section.u4m-alternating-content {
   padding-top: 90px;
   padding-bottom: 90px;
-  &.reverse-text {
-    .content-col * {
-      color: $white;
-    }
+
+  .baseColor .content-col > *,
+  .baseColor .intro__inner > * {
+    color: $baseColor;
+  }
+  .prismic_mango_color .content-col > *,
+  .prismic_mango_color .intro__inner > * {
+    color: $Prismic_mango;
+  }
+  .menthol_color .content-col > *,
+  .menthol_color .intro__inner > * {
+    color: $Menthol;
+  }
+  .l2l_green_color .content-col > *,
+  .l2l_green_color .intro__inner > * {
+    color: $L2L_green;
+  }
+  .fern_green_color .content-col > *,
+  .fern_green_color .intro__inner > * {
+    color: $Fern_green;
+  }
+  .dark_jungle_color .content-col > *,
+  .dark_jungle_color .intro__inner > * {
+    color: $Dark_jungle;
+  }
+  .mystic_green_color .content-col > *,
+  .mystic_green_color .intro__inner > * {
+    color: $Mystic_green;
+  }
+  .lime_green_color .content-col > *,
+  .lime_green_color .intro__inner > * {
+    color: $Lime_Green;
+  }
+  .white_color .content-col > *,
+  .white_color .intro__inner > * {
+    color: $White;
   }
   @include tabletvert {
     padding: 50px 0;
@@ -15,7 +47,7 @@ section.u4m-alternating-content {
     row-gap: 108px;
     display: flex;
     flex-wrap: wrap;
-    @include tabletvert {
+    @include tabletmid {
       row-gap: 50px;
     }
   }
@@ -31,10 +63,19 @@ section.u4m-alternating-content {
         max-width: 100%;
         width: 50%;
       }
-      @include tabletvert {
+      @include tabletmid {
         max-width: 100%;
         width: 100%;
         margin-bottom: 20px;
+      }
+      iframe.iframe_video {
+        width: 100%;
+        min-height: 396px;
+        max-height: 396px;
+        @include tabletvert {
+          min-height: 300px;
+          max-height: 300px;
+        }
       }
       img {
         width: 100%;
@@ -53,15 +94,26 @@ section.u4m-alternating-content {
     .content-col {
       width: calc(100% - 582px);
       padding-right: 130px;
-      font-family: $secondaryFont;
+      &.center-align {
+        text-align: center;
+        .intro_btn_wrap {
+          justify-content: center;
+        }
+      }
+      &.right-align {
+        text-align: right;
+        .intro_btn_wrap {
+          justify-content: flex-end;
+        }
+      }
+      .intro_btn_wrap {
+        justify-content: flex-start;
+      }
       @include laptop {
         width: 50%;
         padding-right: 100px;
       }
       @include tabletmid {
-        padding-right: 50px;
-      }
-      @include tabletvert {
         width: 100%;
         padding-right: 0;
       }
@@ -70,9 +122,14 @@ section.u4m-alternating-content {
         font-weight: 500;
         letter-spacing: 0.25px;
         line-height: 1.188;
-        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+      }
+      p {
+        margin-top: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
     &.right {
@@ -84,14 +141,11 @@ section.u4m-alternating-content {
           padding-left: 100px;
         }
         @include tabletmid {
-          padding-left: 50px;
-        }
-        @include tabletvert {
           padding-left: 0;
         }
       }
     }
-    @include tabletvert {
+    @include tabletmid {
       flex-direction: column-reverse;
       &.right {
         flex-direction: column-reverse;
