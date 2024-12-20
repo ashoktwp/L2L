@@ -132,28 +132,29 @@ $(document).ready(function () {
   startAutoplay();
 });
 
-$(document).on("click", ".ctvb-tabcol.activetab .ctvb-playbtn", function () {
-  $(".ctvb-tabcol.activetab .ctvb-vdo").css({ "z-index": 1, opacity: 1 });
-  var atpl = $(this).next(".ctvb-vdo").find("iframe").attr("data-src");
-  atpl = $(this).next(".ctvb-vdo").find("iframe").attr("data-src");
-  $(this).next(".ctvb-vdo").find("iframe").attr("src", atpl);
-  $(
-    ".ctvb-tabcol.activetab .ctvb-tabplaceholder , .ctvb-tabcol.activetab .ctvb-btnicon , .ctvb-tabcol.activetab .ctvb-tabottom"
-  ).addClass("hidetabdetail");
-});
-const iframes = document.querySelectorAll("iframe[data-src]");
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const iframe = entry.target;
-      iframe.src = iframe.dataset.src;
-      observer.disconnect();
-    }
-  });
-});
-iframes.forEach((iframe) => {
-  observer.observe(iframe);
-});
-$(".ctvb-tabcol:last-child , .ctvb-tabs ul li:last-child").click(function () {
-  $(".ctvb-tabbingrow").addClass("activetablast");
-});
+
+// $(document).on("click", ".ctvb-tabcol.activetab .ctvb-playbtn", function () {
+//   $(".ctvb-tabcol.activetab .ctvb-vdo").css({ "z-index": 1, opacity: 1 });
+//   var atpl = $(this).next(".ctvb-vdo").find("iframe").attr("data-src");
+//   atpl = $(this).next(".ctvb-vdo").find("iframe").attr("data-src");
+//   $(this).next(".ctvb-vdo").find("iframe").attr("src", atpl);
+//   $(
+//     ".ctvb-tabcol.activetab .ctvb-tabplaceholder , .ctvb-tabcol.activetab .ctvb-btnicon , .ctvb-tabcol.activetab .ctvb-tabottom"
+//   ).addClass("hidetabdetail");
+// });
+// const iframes = document.querySelectorAll("iframe[data-src]");
+// const observer = new IntersectionObserver((entries, observer) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       const iframe = entry.target;
+//       iframe.src = iframe.dataset.src;
+//       observer.disconnect();
+//     }
+//   });
+// });
+// iframes.forEach((iframe) => {
+//   observer.observe(iframe);
+// });
+// $(".ctvb-tabcol:last-child , .ctvb-tabs ul li:last-child").click(function () {
+//   $(".ctvb-tabbingrow").addClass("activetablast");
+// });

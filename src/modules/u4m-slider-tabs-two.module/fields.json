@@ -420,7 +420,7 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "hubspot", "Hubspot" ], [ "youtube", "Youtube" ], [ "vimeo", "Vimeo" ] ],
+    "choices" : [ [ "hubspot", "Hubspot" ], [ "vimeo", "Vimeo" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
@@ -443,25 +443,6 @@
       "access" : null
     },
     "type" : "file"
-  }, {
-    "id" : "b15628f7-b899-a610-7d3b-9b7df76dc3b5",
-    "name" : "embedded_id",
-    "display_width" : null,
-    "label" : "Embedded Id",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "tabber_items.select_video_type",
-      "controlling_value_regex" : "youtube",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text"
   }, {
     "id" : "32aae181-63a4-aef7-8ea3-146f08a787ac",
     "name" : "vimeo_id",
@@ -586,6 +567,16 @@
     },
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
+      "alt" : "iOS",
+      "loading" : "lazy",
+      "width" : 27,
+      "height" : 27,
+      "max_width" : 27,
+      "max_height" : 27
+    },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
@@ -598,16 +589,6 @@
       },
       "open_in_new_tab" : false,
       "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
     }
   }, {
     "tab_title" : "Industry 1",
@@ -623,6 +604,16 @@
     },
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
+      "alt" : "iOS",
+      "loading" : "lazy",
+      "width" : 27,
+      "height" : 27,
+      "max_width" : 27,
+      "max_height" : 27
+    },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
@@ -635,16 +626,6 @@
       },
       "open_in_new_tab" : false,
       "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
     }
   }, {
     "tab_title" : "Industry 1",
@@ -660,6 +641,16 @@
     },
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
+      "alt" : "iOS",
+      "loading" : "lazy",
+      "width" : 27,
+      "height" : 27,
+      "max_width" : 27,
+      "max_height" : 27
+    },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
@@ -672,16 +663,6 @@
       },
       "open_in_new_tab" : false,
       "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
     }
   }, {
     "tab_title" : "Industry 1",
@@ -697,6 +678,16 @@
     },
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
+      "alt" : "iOS",
+      "loading" : "lazy",
+      "width" : 27,
+      "height" : 27,
+      "max_width" : 27,
+      "max_height" : 27
+    },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
@@ -709,16 +700,6 @@
       },
       "open_in_new_tab" : false,
       "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
     }
   }, {
     "tab_title" : "Industry 1",
@@ -734,6 +715,16 @@
     },
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
+      "alt" : "iOS",
+      "loading" : "lazy",
+      "width" : 27,
+      "height" : 27,
+      "max_width" : 27,
+      "max_height" : 27
+    },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
@@ -746,16 +737,6 @@
       },
       "open_in_new_tab" : false,
       "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
     }
   }, {
     "tab_title" : "Industry 1",
@@ -771,6 +752,16 @@
     },
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
+      "alt" : "iOS",
+      "loading" : "lazy",
+      "width" : 27,
+      "height" : 27,
+      "max_width" : 27,
+      "max_height" : 27
+    },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
@@ -783,16 +774,6 @@
       },
       "open_in_new_tab" : false,
       "no_follow" : false
-    },
-    "logo_image" : {
-      "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
-      "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
     }
   } ]
 }, {
