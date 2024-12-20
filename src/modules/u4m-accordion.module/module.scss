@@ -1,70 +1,83 @@
 @import "../../css/_module-imports";
 
-section.u4m-accordion {
+.u4m-accordion {
+  .acc_item {
+    margin-bottom: 12px;
 
-  .intro {
-    @include center;
-    max-width: 768rem;
-    text-align: center;
-
-    h2 {
-      @include h2;
-    }
-
-    p {
-      @include b2;
-    }
-  }
-
-  .accordions {
-    @include center;
-    margin: 50rem auto;
-
-    details {
-      border-top: 1rem solid $gray2;
-      transition: background-color .2s;
+    .acc_ttl {
+      padding: 30px 60px 30px 36px;
+      position: relative;
       cursor: pointer;
 
-      summary {
-        @include b2;
-        font-weight: bold;
-        margin: 0;
-        padding: 20rem 40rem 20rem 20rem;
-        position: relative;
-        list-style: none; // detail uses list style for summary, like ul > li
+      @include tabletvert {
+        padding: 10px 50px 10px 20px;
+      }
 
-        &:after {
-          content: '+';
-          font-size: 30rem;
-          font-weight: normal;
-          line-height: 1;
-          position: absolute;
-          right: 5%;
-          top: 50%;
-          transform: translateY(-50%);
-          transition: transform .2s ease-in-out;
+      @include phone {
+        padding: 10px 50px 10px 10px;
+      }
+
+      h4 {
+        margin: 0;
+        font-weight: bold;
+        font-family: inherit;
+      }
+
+      &:hover .plus,
+      &:active .plus {
+        transform: rotate(45deg);
+        background-color: $Medium_Sea_Green;
+
+        svg line {
+          stroke: $white !important;
         }
       }
 
-      // open = 'active' state
-      &[open] {
-        summary {
-          &:after {
-            transform: translateY(-50%) rotate(45deg);
+      .plus {
+        width: 36px;
+        height: 36px;
+        background: $Nori_Green;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 29px;
+        right: 20px;
+        transition: all 0.3s linear;
+
+        @include tabletvert {
+          width: 25px;
+          height: 25px;
+
+          svg {
+            width: 15px !important;
+            height: 15px !important;
           }
         }
       }
+    }
 
-      &:hover {
-        background-color: $gray1;
-      }
+    .acc_cnt {
+      display: none;
 
-      &:last-child {
-        border-bottom: 1rem solid $gray2;
-      }
+      .acc_cnt_inr {
+        padding: 0 36px 45px;
+        color: $Nori_Green;
+        opacity: 0.66;
 
-      div {
-        padding: 20rem;
+        @include tabletvert {
+          padding: 10px 20px;
+        }
+
+        @include phone {
+          padding: 10px;
+          @include size14;
+        }
+
+        p {
+          margin: 0;
+        }
       }
     }
   }

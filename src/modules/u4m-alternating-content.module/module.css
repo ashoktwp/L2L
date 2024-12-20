@@ -64,8 +64,7 @@ section.u4m-alternating-content .two-col-content-item .media-col {
 section.u4m-alternating-content .two-col-content-item .media-col img {
   width: 100%;
   max-height: 396px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   min-height: 396px;
 }
 @media (max-width: 767px) {

@@ -108,8 +108,7 @@ body.overflow-hidden {
   margin-right: auto;
 }
 .u4m-team-grid .team_grid_row .team_item .team_item_inn .team_img img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
 }
 @media (max-width: 767px) {
@@ -177,8 +176,7 @@ body.overflow-hidden {
   opacity: 0.9;
   width: 100%;
   height: 100%;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .u4m-team-grid .team_popup .team_popup_container {
   max-width: 1236px;
@@ -256,8 +254,7 @@ body.overflow-hidden {
   width: 100%;
 }
 .u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_img_col .popup_img_inn img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 342px;
   height: 342px;
 }
@@ -323,8 +320,7 @@ body.overflow-hidden {
 .u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_cnt .member_share ul li img {
   width: 21px;
   height: 21px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_cnt .member_share ul li svg {
   fill: #fff;
