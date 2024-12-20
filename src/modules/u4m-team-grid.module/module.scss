@@ -13,6 +13,7 @@ body {
     h2.intro_title {
       font-weight: 500;
       margin-bottom: 8rem;
+      line-height: 1.1875;
     }
   }
 
@@ -55,6 +56,20 @@ body {
         height: 100%;
         padding: 18px;
         text-align: center;
+        transition: all .3s ease-in-out;
+        border-radius: 13px;
+
+        &:hover {
+          transform: translateY(-12px);
+
+          &:before {
+            opacity: 0;
+          }
+
+          &::after {
+            opacity: 0;
+          }
+        }
 
         &:after {
           content: "";
@@ -223,6 +238,19 @@ body {
               height: 100%;
               padding: 18px;
               text-align: center;
+              transition: all .3s ease-in-out;
+
+              &:hover {
+                transform: translateY(-12px);
+
+                &:before {
+                  opacity: 0;
+                }
+
+                &::after {
+                  opacity: 0;
+                }
+              }
 
               &:after {
                 content: "";
@@ -272,6 +300,7 @@ body {
                 object-fit: cover;
                 width: 342px;
                 height: 342px;
+                border-radius: 8px;
 
                 @include tabletvert {
                   height: 100%;
@@ -309,7 +338,7 @@ body {
               font-weight: 600;
               margin-bottom: 27px;
               font-family: $secondaryFont;
-              color: $white;
+              color: $Menthol;
             }
 
             p {
