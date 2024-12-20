@@ -23,6 +23,7 @@ section.u4m-alternating-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
     .media-col {
       max-width: 582px;
       width: 100%;
@@ -69,6 +70,9 @@ section.u4m-alternating-content {
         font-weight: 500;
         letter-spacing: 0.25px;
         line-height: 1.188;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
     &.right {

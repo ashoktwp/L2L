@@ -14,7 +14,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "5baff6ad-02e1-6b84-3429-260a0ded7ef6",
     "name" : "eyebrow_text",
@@ -44,7 +44,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "aef5e961-e297-2654-68e0-6128687770bf",
     "name" : "heading_size",
@@ -96,7 +96,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
     "name" : "content",
@@ -123,7 +123,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
     "name" : "button_group",
@@ -326,14 +326,14 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "include_eyebrow_text" : true,
+    "include_eyebrow_text" : false,
     "eyebrow_text" : "Eyebrow Text",
-    "include_heading" : true,
+    "include_heading" : false,
     "heading_size" : "h2",
     "heading" : "Intro Heading Add Here",
-    "include_content" : true,
+    "include_content" : false,
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
-    "include_button" : true,
+    "include_button" : false,
     "button_group" : [ {
       "button_type" : "std",
       "button_style" : "hs-button",
@@ -377,7 +377,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "8337542b-385f-75ec-cf3e-1eea8db84307",
-    "default" : 3
+    "default" : 4
   },
   "children" : [ {
     "id" : "408a6923-49e7-2adb-20c7-9486a4f9873b",
@@ -403,7 +403,7 @@
     "visibility" : {
       "controlling_field" : null,
       "controlling_field_path" : "slide_item.image_type",
-      "controlling_value_regex" : "true",
+      "controlling_value_regex" : "img",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
@@ -492,6 +492,35 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
+    "image_type" : "img",
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/G%20shape.png",
+      "alt" : "G shape",
+      "loading" : "lazy",
+      "width" : 24,
+      "height" : 24,
+      "max_width" : 24,
+      "max_height" : 24
+    },
+    "icon" : {
+      "name" : "Google Logo",
+      "unicode" : "f1a0",
+      "type" : "REGULAR"
+    },
+    "content" : "<p>Dolore proident aliqua officia esse minim ut ut irure enim dolore consequat sunt cupidatat labore. Incididunt ipsum culpa fugiat ex. Commodo sint nulla mollit in culpa esse voluptate commodo. Sit reprehenderit ullamco duis irure labore veniam voluptate fugiat veniam pariatur.</p>",
+    "author_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Torsten%20Paulsson.png",
+      "alt" : "Torsten Paulsson",
+      "loading" : "lazy",
+      "width" : 256,
+      "height" : 256,
+      "max_width" : 256,
+      "max_height" : 256
+    },
+    "author_name" : "Torsten Paulsson"
+  }, {
     "image_type" : "img",
     "image" : {
       "size_type" : "auto",
