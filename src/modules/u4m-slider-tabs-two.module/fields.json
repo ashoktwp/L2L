@@ -523,7 +523,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "- JORIS STOLK"
+    "default" : "JORIS STOLK"
   }, {
     "id" : "3854fd36-c343-d2f4-3b24-f442a944ab7b",
     "name" : "designation",
@@ -587,7 +587,7 @@
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
+    "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
     "read_button_text" : "READ THE CUSTOMER STORY",
     "link_field" : {
@@ -624,7 +624,7 @@
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
+    "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
     "read_button_text" : "READ THE CUSTOMER STORY",
     "link_field" : {
@@ -661,7 +661,7 @@
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
+    "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
     "read_button_text" : "READ THE CUSTOMER STORY",
     "link_field" : {
@@ -698,7 +698,7 @@
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
+    "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
     "read_button_text" : "READ THE CUSTOMER STORY",
     "link_field" : {
@@ -735,7 +735,7 @@
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
+    "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
     "read_button_text" : "READ THE CUSTOMER STORY",
     "link_field" : {
@@ -772,7 +772,7 @@
     "select_video_type" : "vimeo",
     "vimeo_id" : "706460799",
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
-    "author_name" : "- JORIS STOLK",
+    "author_name" : "JORIS STOLK",
     "designation" : "Brewery Manager at Lagunitas in Chicago",
     "read_button_text" : "READ THE CUSTOMER STORY",
     "link_field" : {
