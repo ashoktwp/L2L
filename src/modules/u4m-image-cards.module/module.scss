@@ -2,6 +2,33 @@
 
 .u4m-image-card {
     .card_wrap {
+        .arrow-link {
+            color: $white;
+
+            &:hover {
+                color: $Medium_Aquamarine;
+            }
+
+            &.theme2 {
+                color: $white;
+            }
+
+            &.theme2:hover {
+                color: $Menthol;
+            }
+
+            &.theme3 {
+                color: $white;
+
+            }
+
+            &.theme3:hover {
+                color: $Prismic_mango;
+            }
+        }
+    }
+
+    .card_wrap {
         padding-top: 30px;
 
         .card_flex {
@@ -17,14 +44,14 @@
                     width: calc(50% - 15px);
                 }
 
-                @include phone {
+                @include tabletvert {
                     width: 100%;
                 }
 
                 .item_inr {
                     background-image: $gradient6;
                     padding: 36px;
-                    border-radius: $borderRadius13;
+                    border-radius: 13px;
                     box-shadow: $shadow4;
                     height: 100%;
                     display: flex;
@@ -32,12 +59,25 @@
 
                     .card_img {
                         margin-bottom: 25px;
+                        border-radius: 8px;
+                        overflow: hidden;
+
+                        @include tabletvertmin {
+                            height: 198px;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
                     }
 
                     .card_cnt {
                         h4 {
                             margin: 0;
                             line-height: 2;
+                            color: $white;
                         }
 
                         p {
@@ -47,6 +87,7 @@
 
                     .card_btn {
                         margin-top: auto;
+
 
                         .intro_btn_wrap {
                             margin-top: 25px;
