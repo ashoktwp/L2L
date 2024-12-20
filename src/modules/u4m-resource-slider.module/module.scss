@@ -3,6 +3,21 @@
 .u4m-resources-slider {
   padding-top: 112px;
   padding-bottom: 105px;
+  .intro_content {
+    .intro_title {
+      margin-bottom: 15px;
+      line-height: 1.1875;
+    }
+    .intro_btn_wrap {
+      line-height: 1.21142857;
+      font-size: 14px;
+      .arrow-link {
+        line-height: inherit;
+        align-items: center;
+      }
+    }
+  }
+
   .resources-slider {
     position: relative;
     z-index: 3;
