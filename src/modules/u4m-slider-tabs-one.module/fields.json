@@ -514,12 +514,34 @@
     "required" : false,
     "locked" : false,
     "children" : [ {
+      "id" : "711ef705-472f-2947-842d-c19168555e6c",
+      "name" : "select_media_type",
+      "display_width" : null,
+      "label" : "Select Media Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "image", "Image" ], [ "video", "Video" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "image"
+    }, {
       "id" : "5d916fa7-5d9e-d709-3029-8133a356cba8",
       "name" : "image_field",
       "display_width" : null,
       "label" : "Image",
       "required" : false,
       "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tab_items.tab_content.select_media_type",
+        "controlling_value_regex" : "image",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
       "responsive" : true,
       "resizable" : false,
       "show_loading" : false,
@@ -535,6 +557,66 @@
         "max_height" : 684
       }
     }, {
+      "id" : "cd38eb59-935f-8880-e2b0-c2c948a9dcec",
+      "name" : "select_video_type",
+      "display_width" : null,
+      "label" : "Select Video Type",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tab_items.tab_content.select_media_type",
+        "controlling_value_regex" : "video",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "hubspot", "Hubspot" ], [ "vimeo", "Vimeo" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "vimeo"
+    }, {
+      "picker" : "video",
+      "id" : "e45e8269-6293-91b9-b46a-eb640f2cca31",
+      "name" : "select_video",
+      "display_width" : null,
+      "label" : "Select Video",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tab_items.tab_content.select_video_type",
+        "controlling_value_regex" : "hubspot",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "file",
+      "default" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4"
+    }, {
+      "id" : "bb788172-9a3d-a47e-8bab-891dfeb11de1",
+      "name" : "vimeo_id",
+      "display_width" : null,
+      "label" : "Vimeo Id",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tab_items.tab_content.select_video_type",
+        "controlling_value_regex" : "vimeo",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "706460799"
+    }, {
       "id" : "33cb5cf9-d2ed-2875-216f-19597a4af13f",
       "name" : "content",
       "display_width" : null,
@@ -549,6 +631,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
+      "select_media_type" : "image",
       "image_field" : {
         "size_type" : "auto",
         "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/image.png",
@@ -559,6 +642,9 @@
         "max_width" : 1194,
         "max_height" : 684
       },
+      "select_video_type" : "vimeo",
+      "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+      "vimeo_id" : "706460799",
       "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>"
     }
   } ],
@@ -581,6 +667,7 @@
       "caption" : "Adipisicing deserunt anim amet non deserunt "
     },
     "tab_content" : {
+      "select_media_type" : "image",
       "image_field" : {
         "size_type" : "auto",
         "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/image.png",
@@ -591,6 +678,9 @@
         "max_width" : 1194,
         "max_height" : 684
       },
+      "select_video_type" : "vimeo",
+      "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+      "vimeo_id" : "706460799",
       "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>"
     }
   }, {
@@ -608,6 +698,7 @@
       "caption" : "Adipisicing deserunt anim amet non deserunt "
     },
     "tab_content" : {
+      "select_media_type" : "image",
       "image_field" : {
         "size_type" : "auto",
         "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/image.png",
@@ -618,6 +709,9 @@
         "max_width" : 1194,
         "max_height" : 684
       },
+      "select_video_type" : "vimeo",
+      "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+      "vimeo_id" : "706460799",
       "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>"
     }
   }, {
@@ -635,6 +729,7 @@
       "caption" : "Adipisicing deserunt anim amet non deserunt "
     },
     "tab_content" : {
+      "select_media_type" : "image",
       "image_field" : {
         "size_type" : "auto",
         "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/image.png",
@@ -645,6 +740,9 @@
         "max_width" : 1194,
         "max_height" : 684
       },
+      "select_video_type" : "vimeo",
+      "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+      "vimeo_id" : "706460799",
       "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>"
     }
   }, {
@@ -662,6 +760,7 @@
       "caption" : "Adipisicing deserunt anim amet non deserunt "
     },
     "tab_content" : {
+      "select_media_type" : "image",
       "image_field" : {
         "size_type" : "auto",
         "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/image.png",
@@ -672,6 +771,9 @@
         "max_width" : 1194,
         "max_height" : 684
       },
+      "select_video_type" : "vimeo",
+      "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
+      "vimeo_id" : "706460799",
       "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>"
     }
   } ]
@@ -1113,7 +1215,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "theme"
+      "default" : "custom"
     }, {
       "id" : "b9865f26-0901-d5ad-66a2-7c6ecacec658",
       "name" : "custom_size",
@@ -1135,15 +1237,15 @@
       "step" : 1,
       "suffix" : "px",
       "type" : "number",
-      "default" : 1296
+      "default" : 1237
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "size" : "theme",
-      "custom_size" : 1296
+      "size" : "custom",
+      "custom_size" : 1237
     }
   } ],
   "tab" : "CONTENT",
@@ -1177,8 +1279,8 @@
       "select_gradient" : "gradient1"
     },
     "container" : {
-      "size" : "theme",
-      "custom_size" : 1296
+      "size" : "custom",
+      "custom_size" : 1237
     }
   }
 } ]
