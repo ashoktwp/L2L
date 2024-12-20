@@ -1,0 +1,75 @@
+@import "../../css/_module-imports";
+
+section.u4m-quote-cards-slider {
+  padding-left: 53px;
+  padding-right: 54px;
+  .quote-cards-inner {
+    position: relative;
+    z-index: 2;
+  }
+  .quote-cards-slide {
+    padding: 0 12px;
+    .quote-cards-slide-inner {
+      background-color: $white;
+      border-radius: 8px;
+      padding: 42px 72px;
+      text-align: center;
+      .top-img {
+        padding-bottom: 36px;
+        img {
+          margin: 0 auto;
+        }
+      }
+      .icon {
+        padding-bottom: 36px;
+        .icon-inner {
+          margin: 0 auto;
+          width: 24px;
+          height: 24px;
+          background-color: $Orange;
+          border-radius: 100%;
+          padding: 4px;
+          vertical-align: middle;
+          svg {
+            width: 16px;
+            height: 16px;
+            fill: $white;
+            vertical-align: super;
+          }
+        }
+      }
+      .slide-content {
+        margin-bottom: 24px;
+        background: linear-gradient(
+          to bottom,
+          $Forest_Green 0%,
+          rgba($Forest_Green, 0.66) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        line-height: 1.43;
+      }
+      .author-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .author-img {
+          margin-right: 10px;
+          img {
+            border-radius: 50%;
+            max-width: 25px;
+          }
+        }
+        .author-name {
+          font-family: $secondaryFont;
+          @include size14;
+          font-weight: 600;
+          color: $Dark_jungle;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
