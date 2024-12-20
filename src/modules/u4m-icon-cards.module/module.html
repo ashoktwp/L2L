@@ -13,8 +13,8 @@
         <div class="item_inr">
           <div class="item_inr_top">
             <div class="item_top_flex">
-              <div class="item_iconwrap">
-                <div class="item_iconbg {{ item.icon_background }}">
+              <div class="item_iconwrap {{ item.icon_background }}">
+              
                   {% if item.select_icon_type %}
                   <span class="title-icon">
                     {% if item.select_icon_type == "image" %}
@@ -34,7 +34,7 @@
                     {% endif %}
                   </span>
                   {% endif %}
-                </div>
+                
 
               </div>
               <div class="item_ttl">
