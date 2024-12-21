@@ -1,0 +1,118 @@
+{% set moduleName = 'u4m-cta-row-1' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="cta-content-row flex_row bg_{{ module.container_background_settings.background_type }} bg_pos_{{ module.container_background_settings.select_background_position }}">
+    {% if module.container_background_settings.background_type == "color" %}
+    <div
+         class="bg_overlay bg_color {{ module.container_background_settings.select_color }}"></div>
+    {% endif %}
+    {% if module.container_background_settings.background_type == "gradient" %}
+    <div
+         class="bg_overlay bg_color {{ module.container_background_settings.select_gradient }}"></div>
+    {% endif %}
+    {% if module.container_background_settings.background_type == "image" %}
+    <div class="bg_overlay bg_image"></div>
+    {% endif %}
+
+    <div class="cta-content-flex flex_row col12">
+      <div class="intro_wrapp {% if module.media_content.select_media_type %} col6 {% else %}col12{% endif %}">
+        <div class="intro_wrapp_inn">
+          {{macros.introGroup(module.intro_content)}}
+          {% if module.intro_content.include_form %}
+          <div class="cta-form">
+            {% form
+	form_to_use="{{ module.intro_content.select_form.form_id }}"
+	response_response_type="{{ module.intro_content.select_form.response_type }}"
+	response_message="{{ module.intro_content.select_form.message }}"
+	response_redirect_id="{{ module.intro_content.select_form.redirect_id }}"
+	response_redirect_url="{{module.intro_content.select_form.redirect_url}}"
+	gotowebinar_webinar_key="{{ module.intro_content.select_form.gotowebinar_webinar_key }}"
+%}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% if module.media_content.select_media_type %}
+      <div class="right_col col6 media_col">
+        <div class="media_col_inn">
+          {% if module.media_content.select_media_type == "image" %}
+
+          {% if module.media_content.image_field.src %}
+          {% set loadingAttr = module.media_content.image_field.loading != 'disabled' ? 'loading="{{ module.media_content.image_field.loading|escape_attr }}"' : '' %}
+          <img src="{{ module.media_content.image_field.src|escape_url }}" alt="{{ module.media_content.image_field.alt|escape_attr }}" {{ loadingAttr }}>
+          {% endif %}
+          {% endif %}
+          {% if module.media_content.select_media_type == "gif" %}
+
+          {% if module.media_content.image_field.src %}
+          {% set loadingAttr = module.media_content.image_field.loading != 'disabled' ? 'loading="{{ module.media_content.image_field.loading|escape_attr }}"' : '' %}
+          <img src="{{ module.media_content.image_field.src|escape_url }}" alt="{{ module.media_content.image_field.alt|escape_attr }}" {{ loadingAttr }}>
+          {% endif %}
+          {% endif %}
+          {% if module.media_content.select_media_type == "video" %}
+          {% if module.media_content.select_video_type == "hubspot" %}
+          <video controls autoplay muted>
+            <source src="{{ module.media_content.select_video }}" type="video/mp4">
+          </video>
+          {% endif %}
+          {% if module.media_content.select_video_type == "vimeo" %}
+          <iframe title="video-Frame" id="iframe1" src="https://player.vimeo.com/video/{{ module.media_content.vimeo_id }}" frameborder="0" loading="lazy" allowfullscreen></iframe>
+          {% endif %}
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+{% require_css %}
+<style>
+
+  {% if module.container_background_settings.background_type == "color"%}
+
+  {% if module.container_background_settings.include_overlay_image %}
+  .{{ moduleName}}.{{ name }} .cta-content-row .bg_overlay_image{
+    background-image: url({{ module.container_background_settings.overlay_image.overlay_image.src }});
+    background-size: {{ module.container_background_settings.overlay_image.overlay_image_size }};
+    background-position: 	{{ module.container_background_settings.overlay_image.overlay_image_position }};
+  }
+  {% endif %}
+  {% endif %}
+
+
+  {% if module.container_background_settings.background_type == "image"  %}
+  .{{ moduleName}}.{{ name }} .cta-content-row .bg_image{
+    background-image: url({{ module.container_background_settings.background_image.src }})
+  }
+  {% endif %}
+
+  .cta-content-flex{
+    position:relative;
+    z-index:3;
+  }
+
+
+</style>        
+{% end_require_css %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+@import "../../css/_module-imports";
+section.u4m-cta-row-2 {
+    .page-center {
+        .intro_wrapp {
+            .intro_content {
+                text-align: left;
+                max-width: 100%;
+                margin-bottom: 61rem;
+                @include tabletvert {
+                    margin-bottom: 30rem;
+                }
+                .intro__inner {
+                    h1.intro_title {
+                        font-weight: 500;
+                    }
+                    .intro_btn_wrap {
+                        justify-content: flex-start;
+                    }
+                }
+            }
+        }
+        .cta-row-wrap {
+            .cta-row-inn {
+                gap: 30px;
+                    .cta-row-col {
+                        .cta-title {
+                            h3 {
+                                margin-bottom: 13rem;
+                            }
+                        }
+                    }
+                    .cta-row-col.col4 {
+                        width: auto;
+                        flex: 0 0 calc((100% - 60px) / 3);
+                        @include tablet {
+                            width: auto;
+                            flex: 0 0 calc((100% - 30px) / 2);
+                        }
+                        @include tabletvert {
+                            width: 100%;
+                            flex: 0 0 100%;
+                        }
+                    }
+                    .cta-row-col.col6 {
+                        width: auto;
+                        flex: 0 0 calc((100% - 30px) / 2);
+                        @include tabletvert {
+                            width: 100%;
+                            flex: 0 0 100%;
+                        }
+                    }
+                    .cta-row-col.col12 {
+                        width: 100%;
+                    }
+            }
+
+            .cta-button-row {
+                margin-top: 75rem;
+                @include tabletvert {
+                    margin-top: 40rem;
+                }
+                .cta-button-inn {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px 36px;
+                }
+            }
+        }
+    }
+}
