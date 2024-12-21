@@ -1,0 +1,64 @@
+@import "../../css/_module-imports";
+
+.u4m-logo-trustmarks {
+    .intro_content {
+        margin-bottom: 57px;
+
+        .intro_title {
+            font-weight: 600;
+        }
+    }
+
+    .items.grayscale {
+        filter: grayscale(100%);
+    }
+
+    .btm {
+        z-index: 11;
+        padding: 14px 0;
+        overflow: hidden;
+        mask-image: linear-gradient(
+            to right,
+            rgba($darkBack, 0) 0%,
+            $darkBack 12.5%,
+            $darkBack 87.5%,
+            rgba($darkBack, 0) 100%
+        );
+
+        .img {
+            width: 174px;
+            height: 67px;
+            display: flex;
+            align-items: center;
+
+            img {
+                -o-object-fit: contain;
+                object-fit: contain;
+                height: auto;
+                height: 67px !important;
+                width: auto !important;
+            }
+        }
+
+        .slick-slide {
+            width: 174px !important;
+            margin-right: 30px;
+            box-sizing: border-box;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .slick-list {
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .slick-track {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

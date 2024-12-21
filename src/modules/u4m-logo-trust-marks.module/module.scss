@@ -17,14 +17,26 @@
     z-index: 11;
     padding: 14px 0;
     overflow: hidden;
-    mask-image: linear-gradient(to right, rgba($darkBack , 0) 0%, $darkBack 12.5%, $darkBack 87.5%, rgba($darkBack, 0) 100%);
+    mask-image: linear-gradient(
+      to right,
+      rgba($darkBack, 0) 0%,
+      $darkBack 12.5%,
+      $darkBack 87.5%,
+      rgba($darkBack, 0) 100%
+    );
 
     .img {
       width: 174px;
       height: 67px;
+      display: flex;
+      align-items: center;
 
       img {
-        object-fit: cover;
+        -o-object-fit: contain;
+        object-fit: contain;
+        height: auto;
+        height: 67px !important;
+        width: auto !important;
       }
     }
 

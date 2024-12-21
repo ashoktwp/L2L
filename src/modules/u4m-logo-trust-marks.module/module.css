@@ -29,14 +29,21 @@ html {
   z-index: 11;
   padding: 14px 0;
   overflow: hidden;
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 12.5%, #000000 87.5%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 12.5%, #000000 87.5%, rgba(0, 0, 0, 0) 100%);
+          mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 12.5%, #000000 87.5%, rgba(0, 0, 0, 0) 100%);
 }
 .u4m-logo-trustmarks .btm .img {
   width: 174px;
   height: 67px;
+  display: flex;
+  align-items: center;
 }
 .u4m-logo-trustmarks .btm .img img {
-  object-fit: cover;
+  -o-object-fit: contain;
+  object-fit: contain;
+  height: auto;
+  height: 67px !important;
+  width: auto !important;
 }
 .u4m-logo-trustmarks .btm .slick-slide {
   width: 174px !important;
