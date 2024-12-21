@@ -2,7 +2,7 @@
   "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
   "name" : "intro_content",
   "display_width" : null,
-  "label" : "Intro Content",
+  "label" : "Content",
   "required" : false,
   "locked" : false,
   "children" : [ {
@@ -56,7 +56,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Intro Heading Add Here"
+    "default" : "Subscribe to our newsletter"
   }, {
     "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
     "name" : "include_content",
@@ -83,7 +83,7 @@
       "access" : null
     },
     "type" : "richtext",
-    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>"
+    "default" : "<p>Be the first to know! Subscribe to our weekly newsletter for the latest news, updates, and exclusive offers straight to your inbox.</p>"
   }, {
     "id" : "84789c73-0bf7-863f-2d02-740fbcae14c1",
     "name" : "include_form",
@@ -111,6 +111,7 @@
     },
     "type" : "form",
     "default" : {
+      "form_id" : "dc199d68-fae9-4ccd-b18b-a03e4cf92ca3",
       "response_type" : "inline",
       "message" : "Thanks for submitting the form."
     }
@@ -313,9 +314,9 @@
   "default" : {
     "include_heading" : true,
     "heading_size" : "h2",
-    "heading" : "Intro Heading Add Here",
+    "heading" : "Subscribe to our newsletter",
     "include_content" : true,
-    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
+    "content" : "<p>Be the first to know! Subscribe to our weekly newsletter for the latest news, updates, and exclusive offers straight to your inbox.</p>",
     "include_form" : true,
     "select_form" : {
       "response_type" : "inline",
@@ -367,7 +368,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "color"
+    "default" : "image"
   }, {
     "id" : "b98e3f65-4aec-7d35-aeab-b1f67a1fc5c0",
     "name" : "background_image",
@@ -388,7 +389,7 @@
     "show_loading" : false,
     "type" : "image",
     "default" : {
-      "src" : ""
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/cta_form_background.png"
     }
   }, {
     "id" : "fa4b9da6-db22-b8cc-982f-4a1f065c5a28",
@@ -433,7 +434,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "gradient1"
+    "default" : "gradient3"
   } ],
   "tab" : "CONTENT",
   "expanded" : true,
@@ -771,7 +772,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "image"
+      "default" : "gradient"
     }, {
       "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
       "name" : "background_image",
@@ -844,7 +845,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "gradient1"
+      "default" : "gradient3"
     } ],
     "tab" : "CONTENT",
     "expanded" : true,

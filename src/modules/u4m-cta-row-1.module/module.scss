@@ -1,0 +1,102 @@
+@import "../../css/_module-imports";
+section.u4m-cta-row-1 {
+    .page-center {
+        padding-left: 15rem;
+        padding-right: 15rem;
+        .cta-content-row {
+            border-radius: 34px;
+            overflow: hidden;
+            position: relative;
+           
+            &.bg_image {
+                .bg_overlay.bg_image {
+                    
+                }
+                .bg_overlay.bg_color {
+                    background-image: linear-gradient(250deg, rgba(23,32,27,0.00) 2%, #101813 42%);
+                    width: 100%;
+                    max-width: 50%;
+                    height: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                }
+            }
+            .cta-content-flex {
+                @include tablet {
+                    flex-direction: column-reverse;
+                }
+                .intro_wrapp {
+                    
+                    padding: 65px 10px 77px 72px;
+                    background: #101813;
+                    max-width: 565px;
+                    @include tablet {
+                        padding: 65px 20px 77px;
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                    .intro_wrapp_inn {
+                        .intro_content {
+                            max-width: 504rem;
+                            text-align: left;
+                            margin: 0;
+                            .intro__inner {
+                                .intro_title {
+                                    font-weight: 500;
+                                }
+                                .intro_btn_wrap {
+                                    justify-content: flex-start;
+                                }
+                            }
+                        }
+                    }
+                    &.col12 {
+                        padding: 65px 72px 77px;
+                        background: transparent;
+                        max-width: 100%;
+                        @include tablet {
+                            padding: 65px 20px 77px;
+                        }
+                        .intro_content {
+                            max-width: 100%;
+                            text-align: center;
+                            .intro__inner {
+                                .intro_btn_wrap {
+                                    justify-content: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right_col {
+                    @include tablet {
+                        width: 100%;
+                        min-height: 350px;
+                    }
+                    @include phone {
+                        min-height: 50vw;
+                    }
+                    .media_col_inn {
+                        position: relative;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                        .videoWrap {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            > * {
+                                width: 100%;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+}

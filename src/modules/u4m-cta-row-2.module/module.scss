@@ -23,9 +23,13 @@ section.u4m-cta-row-2 {
             .cta-row-inn {
                 gap: 30px;
                     .cta-row-col {
+                        color: $Nori_Green;
                         .cta-title {
+                            border-top: 3px solid $Sea_Green;
+                            padding-top: 25rem;
                             h3 {
                                 margin-bottom: 13rem;
+                                color: $Nori_Green;
                             }
                         }
                     }
@@ -63,6 +67,22 @@ section.u4m-cta-row-2 {
                     display: flex;
                     flex-wrap: wrap;
                     gap: 10px 36px;
+                }
+            }
+        }
+    }
+    &.reverse-text {
+        .page-center {
+            .cta-row-wrap {
+                .cta-row-inn  {
+                    .cta-row-col {
+                        color:$white;
+                        .cta-title {
+                            h3 {
+                                color:$white;
+                            }
+                        }
+                    }
                 }
             }
         }

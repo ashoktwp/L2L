@@ -2,7 +2,7 @@
   "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
   "name" : "intro_content",
   "display_width" : null,
-  "label" : "Intro Content",
+  "label" : "Content",
   "required" : false,
   "locked" : false,
   "children" : [ {
@@ -202,7 +202,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "theme1"
+      "default" : "theme2"
     }, {
       "id" : "105bbd69-dccc-fd6b-3d3d-3f4063128744",
       "name" : "button_text",
@@ -222,7 +222,7 @@
       "allow_new_line" : false,
       "show_emoji_picker" : false,
       "type" : "text",
-      "default" : "Button"
+      "default" : "Book a demo"
     }, {
       "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
       "name" : "link",
@@ -292,8 +292,8 @@
     "default" : [ {
       "button_type" : "std",
       "button_style" : "hs-button",
-      "button_theme" : "theme1",
-      "button_text" : "Button",
+      "button_theme" : "theme2",
+      "button_text" : "Book a demo",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -325,8 +325,8 @@
     "button_group" : [ {
       "button_type" : "std",
       "button_style" : "hs-button",
-      "button_theme" : "theme1",
-      "button_text" : "Button",
+      "button_theme" : "theme2",
+      "button_text" : "Book a demo",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -354,7 +354,7 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "image", "Image" ], [ "video", "Video" ], [ "gif", "GIF" ] ],
+    "choices" : [ [ "image", "Image" ], [ "video", "Video" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
@@ -370,20 +370,24 @@
     "visibility" : {
       "controlling_field" : null,
       "controlling_field_path" : "media_content.select_media_type",
-      "controlling_value_regex" : "image|gif",
+      "controlling_value_regex" : "image",
       "property" : null,
       "operator" : "MATCHES_REGEX",
       "access" : null
     },
     "responsive" : true,
-    "resizable" : false,
+    "resizable" : true,
     "show_loading" : false,
     "type" : "image",
     "default" : {
-      "size_type" : "auto",
-      "src" : "",
+      "size_type" : "exact",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/cta1_media.png",
       "alt" : null,
-      "loading" : "lazy"
+      "loading": "lazy",
+      "width": 450,
+      "height": 213,
+      "max_width": 476,
+      "max_height": 225
     }
   }, {
     "id" : "efdce3fc-9d52-2b1c-d15f-6b49f4e3dafb",
@@ -401,7 +405,7 @@
       "access" : null
     },
     "display" : "select",
-    "choices" : [ [ "hubspot", "Hubspot" ], [ "vimeo", "Vimeo" ] ],
+    "choices" : [ [ "hubspot", "Hubspot" ], [ "vimeo", "External" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
@@ -417,7 +421,7 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "media_content.select_media_type",
+      "controlling_field_path" : "media_content.select_video_type",
       "controlling_value_regex" : "hubspot",
       "property" : null,
       "operator" : "EQUAL",
@@ -428,7 +432,7 @@
     "id" : "8739c903-de09-edb2-9727-7705ee612893",
     "name" : "vimeo_id",
     "display_width" : null,
-    "label" : "Vimeo Id",
+    "label" : "Embed Source",
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
@@ -443,7 +447,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "706460799"
+    "default" : ""
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -488,7 +492,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "color"
+    "default" : "image"
   }, {
     "id" : "b98e3f65-4aec-7d35-aeab-b1f67a1fc5c0",
     "name" : "background_image",
@@ -509,7 +513,7 @@
     "show_loading" : false,
     "type" : "image",
     "default" : {
-      "src" : ""
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/cta1_background.png"
     }
   }, {
     "id" : "fa4b9da6-db22-b8cc-982f-4a1f065c5a28",
@@ -892,7 +896,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "image"
+      "default" : "gradient"
     }, {
       "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
       "name" : "background_image",
@@ -965,7 +969,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "gradient1"
+      "default" : "gradient3"
     } ],
     "tab" : "CONTENT",
     "expanded" : true,

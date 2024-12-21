@@ -1,0 +1,51 @@
+@import "../../css/_module-imports";
+section.u4m-cta-row-3 {
+    .page-center {
+        padding-left: 15rem;
+        padding-right: 15rem;
+        .cta-content-row {
+            border-radius: 34px;
+            overflow: hidden;
+            position: relative;
+            padding: 65px 72px 77px;
+            @include tablet {
+                padding: 65px 30px 77px;
+            }
+            &.bg_image {
+                .bg_overlay.bg_image {
+                    width: 832px;
+                    left: 33%;
+                    right: 0;
+                    opacity: 0.34;
+                }
+                .bg_overlay.bg_color {
+                    background-image: linear-gradient(269deg, rgba(14,37,20,0.00) 33%, $Dark_jungle 100%);
+                }
+            }
+            .cta-content-flex {
+                max-width: 642px;
+                .intro_content {
+                    max-width: 100%;
+                    text-align: left;
+                    margin-bottom: 33rem;
+                    .intro__inner {
+                        .intro_title {
+                            color: $white;
+                        }
+                        .intro_desc {
+                            color: $Frostee;
+                        }
+                        .intro_btn_wrap {
+                            justify-content: flex-start;
+                            .arrow-link {
+                                &:not(:hover) {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

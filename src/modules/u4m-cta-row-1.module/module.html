@@ -13,6 +13,7 @@
     {% endif %}
     {% if module.container_background_settings.background_type == "image" %}
     <div class="bg_overlay bg_image"></div>
+    <div class="bg_overlay bg_color"></div>
     {% endif %}
 
     <div class="cta-content-flex flex_row col12">
@@ -35,30 +36,32 @@
       </div>
       {% if module.media_content.select_media_type %}
       <div class="right_col col6 media_col">
-        <div class="media_col_inn">
+      <div class="media_col_inn {% if module.media_content.select_media_type == "image" %}imageType{% else %}videoType{% endif %}">
           {% if module.media_content.select_media_type == "image" %}
 
           {% if module.media_content.image_field.src %}
-          {% set loadingAttr = module.media_content.image_field.loading != 'disabled' ? 'loading="{{ module.media_content.image_field.loading|escape_attr }}"' : '' %}
-          <img src="{{ module.media_content.image_field.src|escape_url }}" alt="{{ module.media_content.image_field.alt|escape_attr }}" {{ loadingAttr }}>
-          {% endif %}
-          {% endif %}
-          {% if module.media_content.select_media_type == "gif" %}
-
-          {% if module.media_content.image_field.src %}
-          {% set loadingAttr = module.media_content.image_field.loading != 'disabled' ? 'loading="{{ module.media_content.image_field.loading|escape_attr }}"' : '' %}
-          <img src="{{ module.media_content.image_field.src|escape_url }}" alt="{{ module.media_content.image_field.alt|escape_attr }}" {{ loadingAttr }}>
+            {% set sizeAttrs = 'width="{{ module.media_content.image_field.width|escape_attr }}" height="{{ module.media_content.image_field.height|escape_attr }}"' %}
+              {% if module.media_content.image_field.size_type == 'auto' %}
+                  {% set sizeAttrs = 'width="{{ module.media_content.image_field.width|escape_attr }}" height="{{ module.media_content.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+              {% elif module.media_content.image_field.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.media_content.image_field.max_width|escape_attr }}" height="{{ module.media_content.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+               {% set loadingAttr = module.media_content.image_field.loading != 'disabled' ? 'loading="{{ module.media_content.image_field.loading|escape_attr }}"' : '' %}
+          <img src="{{ module.media_content.image_field.src|escape_url }}" alt="{{ module.media_content.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
           {% endif %}
           {% endif %}
           {% if module.media_content.select_media_type == "video" %}
-          {% if module.media_content.select_video_type == "hubspot" %}
-          <video controls autoplay muted>
-            <source src="{{ module.media_content.select_video }}" type="video/mp4">
-          </video>
-          {% endif %}
-          {% if module.media_content.select_video_type == "vimeo" %}
-          <iframe title="video-Frame" id="iframe1" src="https://player.vimeo.com/video/{{ module.media_content.vimeo_id }}" frameborder="0" loading="lazy" allowfullscreen></iframe>
-          {% endif %}
+
+            <div class="videoWrap">
+                {% if module.media_content.select_video_type == "hubspot" %}
+                  <video controls>
+                    <source src="{{ module.media_content.select_video }}" type="video/mp4">
+                  </video>
+                  {% endif %}
+                  {% if module.media_content.select_video_type == "vimeo" %}
+                    {{ module.media_content.vimeo_id }}
+                  {% endif %}
+            </div>
           {% endif %}
         </div>
       </div>
