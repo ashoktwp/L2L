@@ -97,6 +97,11 @@
             </div>
             {% if item.content %}
             <div class="toggle_section">
+              <div class="img-wrpp">
+                     {% if item.image_field.src %}
+          <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}">
+          {% endif %}
+              </div>
               {{ item.content }}
             </div>
             {% endif %}

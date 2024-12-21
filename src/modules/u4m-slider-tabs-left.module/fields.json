@@ -392,13 +392,13 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto_custom_max",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
-      "alt" : "BG",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
+      "alt" : "Instructions",
       "loading" : "lazy",
-      "width" : 2400,
-      "height" : 2258,
-      "max_width" : 2000,
-      "max_height" : 1881.6666666666667
+      "width" : 582,
+      "height" : 720,
+      "max_width" : 582,
+      "max_height" : 720
     }
   }, {
     "id" : "e9d976c5-c725-9ea3-59b2-7ebd15820a43",
@@ -420,7 +420,7 @@
     "required" : false,
     "locked" : false,
     "type" : "richtext",
-    "default" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    "default" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -429,81 +429,81 @@
   "default" : [ {
     "image_field" : {
       "size_type" : "auto_custom_max",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
-      "alt" : "BG",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
+      "alt" : "Instructions",
       "loading" : "lazy",
-      "width" : 2400,
-      "height" : 2258,
-      "max_width" : 2000,
-      "max_height" : 1881.6666666666667
+      "width" : 582,
+      "height" : 720,
+      "max_width" : 582,
+      "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
   }, {
     "image_field" : {
       "size_type" : "auto_custom_max",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
-      "alt" : "BG",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
+      "alt" : "Instructions",
       "loading" : "lazy",
-      "width" : 2400,
-      "height" : 2258,
-      "max_width" : 2000,
-      "max_height" : 1881.6666666666667
+      "width" : 582,
+      "height" : 720,
+      "max_width" : 582,
+      "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
   }, {
     "image_field" : {
       "size_type" : "auto_custom_max",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
-      "alt" : "BG",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
+      "alt" : "Instructions",
       "loading" : "lazy",
-      "width" : 2400,
-      "height" : 2258,
-      "max_width" : 2000,
-      "max_height" : 1881.6666666666667
+      "width" : 582,
+      "height" : 720,
+      "max_width" : 582,
+      "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
   }, {
     "image_field" : {
       "size_type" : "auto_custom_max",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
-      "alt" : "BG",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
+      "alt" : "Instructions",
       "loading" : "lazy",
-      "width" : 2400,
-      "height" : 2258,
-      "max_width" : 2000,
-      "max_height" : 1881.6666666666667
+      "width" : 582,
+      "height" : 720,
+      "max_width" : 582,
+      "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
   }, {
     "image_field" : {
       "size_type" : "auto_custom_max",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
-      "alt" : "BG",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
+      "alt" : "Instructions",
       "loading" : "lazy",
-      "width" : 2400,
-      "height" : 2258,
-      "max_width" : 2000,
-      "max_height" : 1881.6666666666667
+      "width" : 582,
+      "height" : 720,
+      "max_width" : 582,
+      "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
   }, {
     "image_field" : {
       "size_type" : "auto_custom_max",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG%20(1).png",
-      "alt" : "BG",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
+      "alt" : "Instructions",
       "loading" : "lazy",
-      "width" : 2400,
-      "height" : 2258,
-      "max_width" : 2000,
-      "max_height" : 1881.6666666666667
+      "width" : 582,
+      "height" : 720,
+      "max_width" : 582,
+      "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
   } ]
 }, {
   "id" : "module_overrides",
@@ -800,7 +800,7 @@
     },
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
     "name" : "background_settings",
@@ -943,7 +943,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "theme"
+      "default" : "custom"
     }, {
       "id" : "b9865f26-0901-d5ad-66a2-7c6ecacec658",
       "name" : "custom_size",
@@ -965,15 +965,15 @@
       "step" : 1,
       "suffix" : "px",
       "type" : "number",
-      "default" : 1296
+      "default" : 1237
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "size" : "theme",
-      "custom_size" : 1296
+      "size" : "custom",
+      "custom_size" : 1237
     }
   } ],
   "tab" : "CONTENT",
@@ -994,7 +994,7 @@
     "bottom_padding" : "bottom-padding-default",
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
-    "reverse_text" : false,
+    "reverse_text" : true,
     "background_settings" : {
       "background_type" : "gradient",
       "background_image" : {
@@ -1007,8 +1007,8 @@
       "select_gradient" : "gradient3"
     },
     "container" : {
-      "size" : "theme",
-      "custom_size" : 1296
+      "size" : "custom",
+      "custom_size" : 1237
     }
   }
 } ]
