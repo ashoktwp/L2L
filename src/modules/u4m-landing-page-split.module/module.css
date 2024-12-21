@@ -221,26 +221,17 @@ section.u4m-landing-page-split .right-column div.overlay .inner .custom-share di
   fill: #733bf7;
 }
 section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap {
-  padding: 50rem 38rem;
-  max-width: 765rem;
-  margin: 0 auto;
-  float: none;
-  overflow: auto;
-  background-color: transparent;
-  border-radius: 25rem;
+  border-radius: 8px;
+  padding: 60px 50px;
+  background-color: #c8eace;
   margin-top: 10rem;
   background: transparent;
   padding-left: 0;
   padding-right: 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap {
-    padding: 30rem;
-  }
-}
-@media (max-width: 1024px) {
-  section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap {
-    padding: 30rem;
+    padding: 30px 20px;
   }
 }
 section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap h3 {
@@ -335,7 +326,9 @@ section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap .inpu
   background-color: #fff;
   padding: 5.5rem 16rem;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   font-family: "Sofia Sans";
   font-size: 18rem;
   line-height: 1.6;
@@ -378,6 +371,9 @@ section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap .inpu
 section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap .input input[type=email].invalid {
   border: 1rem solid red;
 }
+section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.hs-form .input input[type=text]::-moz-placeholder, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.hs-form .input input[type=number]::-moz-placeholder, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.hs-form .input input[type=tel]::-moz-placeholder, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.hs-form .input input[type=email]::-moz-placeholder, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.mixitup-multifilter .input input[type=text]::-moz-placeholder, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.mixitup-multifilter .input input[type=number]::-moz-placeholder, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.mixitup-multifilter .input input[type=tel]::-moz-placeholder, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.mixitup-multifilter .input input[type=email]::-moz-placeholder, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap .input input[type=text]::-moz-placeholder, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap .input input[type=number]::-moz-placeholder, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap .input input[type=tel]::-moz-placeholder, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap .input input[type=email]::-moz-placeholder {
+  color: black;
+}
 section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.hs-form .input input[type=text]::placeholder,
 section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.hs-form .input input[type=number]::placeholder,
 section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.hs-form .input input[type=tel]::placeholder,
@@ -413,7 +409,9 @@ section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.hs-fo
   margin-bottom: 23rem;
 }
 section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.hs-form .input select, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap.mixitup-multifilter .input select, section.u4m-landing-page-split .right-column div.overlay .inner .form-wrap .input select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
   background-size: 13rem 8rem;
   background-position: 97% 51%;

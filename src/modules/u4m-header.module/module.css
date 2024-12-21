@@ -363,7 +363,9 @@ header.u4m-header .inner button.hamburger-toggle {
   padding: 0;
   transition: 0.3s;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   margin: 0;
   background: transparent;
   border: 0;

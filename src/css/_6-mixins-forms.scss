@@ -1,25 +1,16 @@
 // *********************************************************************************************************************************************************************
 
 @mixin formWraperStyle {
-  padding: 50rem 38rem;
-  max-width: 765rem;
-  margin: 0 auto;
-  float: none;
-  overflow: auto;
-  background-color: transparent;
-  border-radius: $borderRadius;
-
-  @include tablet {
-    padding: 30rem;
+  border-radius: 8px;
+  padding: 60px 50px;
+  background-color: $Very_Pale_Green;
+  @include tabletvert {
+    padding: 30px 20px;
   }
 }
 
 @mixin form {
   @include formWraperStyle;
-
-  @include tablet {
-    padding: 30rem;
-  }
 
   h3 {
     @include h6;
@@ -135,8 +126,7 @@
 
       select {
         appearance: none;
-        background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png")
-          no-repeat;
+        background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
         background-size: 13rem 8rem;
         background-position: 97% 51%;
         border: 1px solid rgba(#000, 0.15);
