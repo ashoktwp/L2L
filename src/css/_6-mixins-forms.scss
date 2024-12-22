@@ -360,22 +360,23 @@
 }
 
 // subscribe form style
-@mixin subscribe-form {
+@mixin subscribeForm {
   .form-title {
     margin: 0;
   }
   form {
     position: relative;
     margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
     .hs-form-field > label {
       display: none;
     }
     .hs-input {
       border-radius: 5px;
       border: 1px solid $border_color;
-      padding: 21px;
-      padding-left: 30px;
-      padding-right: 144px;
+      padding: 21px 144px 21px 30px !important;
       width: 100%;
       font-family: $secondaryFont;
       @include size16;
@@ -384,12 +385,14 @@
       outline: none;
       &::placeholder {
         color: $Dark_jungle;
+        opacity: 1 !important;
       }
     }
     .hs_submit.hs-submit {
       position: absolute;
       right: 10px;
       top: 0;
+      margin: 0;
     }
     .hs-button {
       background-color: $Prismic_mango;
@@ -471,7 +474,7 @@
       }
 
       label {
-        @include size12;
+        @include size14;
         text-transform: uppercase;
         letter-spacing: 1rem;
         display: inline-block;

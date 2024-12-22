@@ -45,6 +45,9 @@ section.u4m-cta-row-3 {
                         }
                     }
                 }
+                .cta-form {
+                    @include subscribeForm;
+                }
             }
         }
     }
