@@ -16,22 +16,21 @@ html {
   }
 }
 
-.u4m-animated-stats {
+.u4m-animated-stats.dnd_padd {
   padding-top: 84px;
-  padding-bottom: 84px;
+  padding-bottom: 75px;
 }
 .u4m-animated-stats .page-center {
   padding-right: 15px;
   padding-left: 15px;
 }
 .u4m-animated-stats .intro_content {
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 .u4m-animated-stats .intro_content .intro_title {
   font-weight: 600;
   line-height: 1.1875;
   letter-spacing: -0.5px;
-  margin-bottom: 0;
 }
 .u4m-animated-stats .statistics {
   display: flex;

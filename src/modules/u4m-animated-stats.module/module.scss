@@ -1,19 +1,20 @@
 @import "../../css/_module-imports";
 
 .u4m-animated-stats {
-  padding-top: 84px;
-  padding-bottom: 84px;
+  &.dnd_padd {
+    padding-top: 84px;
+    padding-bottom: 75px;
+  }
   .page-center {
     padding-right: 15px;
     padding-left: 15px;
   }
   .intro_content {
-    margin-bottom: 36px;
+    margin-bottom: 20px;
     .intro_title {
       font-weight: 600;
       line-height: 1.1875;
       letter-spacing: -0.5px;
-      margin-bottom: 0;
     }
   }
   .statistics {

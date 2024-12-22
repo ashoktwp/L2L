@@ -506,7 +506,7 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "intro_content.button_group.button_type",
+      "controlling_field_path" : "button_group.button_type",
       "controlling_value_regex" : "std",
       "property" : null,
       "operator" : "EQUAL",
@@ -528,7 +528,7 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "intro_content.button_group.button_type",
+      "controlling_field_path" : "button_group.button_type",
       "controlling_value_regex" : "std",
       "property" : null,
       "operator" : "EQUAL",
@@ -551,7 +551,7 @@
     "validation_regex" : "",
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "intro_content.button_group.button_type",
+      "controlling_field_path" : "button_group.button_type",
       "controlling_value_regex" : "std",
       "property" : null,
       "operator" : "EQUAL",
@@ -560,7 +560,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Button"
+    "default" : "View customer stories"
   }, {
     "id" : "53046c72-7d4d-6cd4-1ec8-f4dbf299cdc1",
     "name" : "link",
@@ -570,7 +570,7 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "intro_content.button_group.button_type",
+      "controlling_field_path" : "button_group.button_type",
       "controlling_value_regex" : "std",
       "property" : null,
       "operator" : "EQUAL",
@@ -597,8 +597,8 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "intro_content.button_group.button_type",
-      "controlling_value_regex" : "std",
+      "controlling_field_path" : "button_group.button_style",
+      "controlling_value_regex" : "hs-button",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
@@ -615,7 +615,7 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "intro_content.button_group.button_type",
+      "controlling_field_path" : "button_group.button_type",
       "controlling_value_regex" : "cta",
       "property" : null,
       "operator" : "EQUAL",
@@ -631,7 +631,7 @@
     "button_type" : "std",
     "button_style" : "hs-button",
     "button_theme" : "theme1",
-    "button_text" : "Button",
+    "button_text" : "View customer stories",
     "link" : {
       "url" : {
         "content_id" : null,
@@ -641,7 +641,7 @@
       "open_in_new_tab" : false,
       "no_follow" : false
     },
-    "boolean_field" : false
+    "enable_arrow" : false
   } ]
 }, {
   "id" : "module_overrides",
@@ -702,7 +702,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "top-margin-default"
+    "default" : "top-margin-none"
   }, {
     "id" : "custom_top_margin",
     "name" : "custom_top_margin",
@@ -762,7 +762,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "bottom-margin-default"
+    "default" : "bottom-margin-none"
   }, {
     "id" : "custom_bottom_margin",
     "name" : "custom_bottom_margin",
@@ -1040,7 +1040,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : ""
+      "default" : "gradient1"
     } ],
     "tab" : "CONTENT",
     "expanded" : true,
@@ -1059,7 +1059,7 @@
         "max_height" : 1150
       },
       "select_color" : "white_bg",
-      "select_gradient" : ""
+      "select_gradient" : "gradient1"
     }
   }, {
     "id" : "c813f3af-99b7-d54e-7ce2-b074f008a27c",
@@ -1128,10 +1128,10 @@
   "type" : "group",
   "default" : {
     "enable_overrides" : true,
-    "top_margin" : "top-margin-default",
+    "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
-    "bottom_margin" : "bottom-margin-default",
+    "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
     "top_padding" : "top-padding-default",
@@ -1154,7 +1154,7 @@
         "max_height" : 1150
       },
       "select_color" : "white_bg",
-      "select_gradient" : ""
+      "select_gradient" : "gradient1"
     },
     "container" : {
       "size" : "theme",
