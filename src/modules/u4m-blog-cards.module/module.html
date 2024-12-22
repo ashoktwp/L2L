@@ -53,8 +53,10 @@
                 <div class="post_body">
                   <div class="post_meta eyebrow_text">
                     {% for tag in post.tag_list %}
+                    {% if loop.first %}
                     <a href="{{ blog_tag_url(module.blog_feed.select_blog, tag.slug) }}">
-                      {{tag.name}}</a>{% if not loop.last %},&nbsp;{% endif %}
+                      {{tag.name}}</a>
+                    {% endif %}
                     {% endfor %}
                   </div>
                   <div class="post_title">
@@ -63,7 +65,7 @@
                     </h4>
                   </div>
                   <div class="post-read-more">
-                    <a class="more-link arrow-link {{ module.blog_feed.button_style }} {{ module.blog_feed.button_theme }}" href="{{ postURL }}">
+                    <a class="more-link {{ module.blog_feed.button_style }} {{ module.blog_feed.button_theme }}" href="{{ postURL }}">
                       <span>{{ module.blog_feed.read_more_text }}</span>
                       {% if module.blog_feed.button_style == "arrow-link" %}
                   
@@ -120,8 +122,10 @@
               {% if post.tag_list %}
               <div class="post_meta eyebrow_text">
                 {% for tag in post.tag_list %}
+                {% if loop.first %}
                  <a href="{{ blog_tag_url(post.content_group_id, tag.slug) }}">
-                  {{tag.name}}</a>{% if not loop.last %},&nbsp;{% endif %}
+                  {{tag.name}}</a>
+                {% endif %}
                 {% endfor %}
               </div>
               {% endif %}

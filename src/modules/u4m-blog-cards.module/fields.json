@@ -456,13 +456,20 @@
       "label" : "Select Post",
       "required" : false,
       "locked" : false,
-      "type" : "page"
+      "type" : "page",
+      "default" : 184029184681
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
-    "default" : [ { }, { }, { } ]
+    "default" : [ {
+      "select_post" : 184029184681
+    }, {
+      "select_post" : 184029184681
+    }, {
+      "select_post" : 184029184681
+    } ]
   }, {
     "id" : "1ee6a1f1-6487-7484-35c1-c11f037de1e6",
     "name" : "read_more_text",
@@ -482,14 +489,6 @@
     "label" : "Button Style",
     "required" : false,
     "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "intro_content.button_group.button_type",
-      "controlling_value_regex" : "std",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
     "display" : "select",
     "choices" : [ [ "hs-button", "Primary" ], [ "arrow-link", "Arrow Link" ] ],
     "multiple" : false,
@@ -504,14 +503,6 @@
     "label" : "Button Theme",
     "required" : false,
     "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "intro_content.button_group.button_type",
-      "controlling_value_regex" : "std",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
     "display" : "select",
     "choices" : [ [ "theme1", "Theme 1" ], [ "theme2", "Theme 2" ], [ "theme3", "Theme 3" ] ],
     "multiple" : false,
@@ -561,7 +552,13 @@
     "select_blog" : 184027427604,
     "number_of_posts" : 3,
     "enable_manually_select_tag" : false,
-    "post_items" : [ { }, { }, { } ],
+    "post_items" : [ {
+      "select_post" : 184029184681
+    }, {
+      "select_post" : 184029184681
+    }, {
+      "select_post" : 184029184681
+    } ],
     "read_more_text" : "Read More",
     "button_style" : "arrow-link",
     "button_theme" : "theme1",
@@ -627,7 +624,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "top-margin-default"
+    "default" : "top-margin-none"
   }, {
     "id" : "custom_top_margin",
     "name" : "custom_top_margin",
@@ -687,7 +684,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "bottom-margin-default"
+    "default" : "bottom-margin-none"
   }, {
     "id" : "custom_bottom_margin",
     "name" : "custom_bottom_margin",
@@ -965,7 +962,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : ""
+      "default" : "gradient1"
     } ],
     "tab" : "CONTENT",
     "expanded" : true,
@@ -984,7 +981,7 @@
         "max_height" : 1150
       },
       "select_color" : "white_bg",
-      "select_gradient" : ""
+      "select_gradient" : "gradient1"
     }
   }, {
     "id" : "c813f3af-99b7-d54e-7ce2-b074f008a27c",
@@ -1053,10 +1050,10 @@
   "type" : "group",
   "default" : {
     "enable_overrides" : true,
-    "top_margin" : "top-margin-default",
+    "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
-    "bottom_margin" : "bottom-margin-default",
+    "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
     "top_padding" : "top-padding-default",
@@ -1079,7 +1076,7 @@
         "max_height" : 1150
       },
       "select_color" : "white_bg",
-      "select_gradient" : ""
+      "select_gradient" : "gradient1"
     },
     "container" : {
       "size" : "theme",

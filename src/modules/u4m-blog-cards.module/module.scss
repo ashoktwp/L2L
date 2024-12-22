@@ -3,6 +3,9 @@
 .u4m-blog-cards {
   padding-top: 73px;
   padding-bottom: 127px;
+  .intro_content {
+    margin-bottom: 54px;
+  }
   .page-center {
     padding-left: 0;
     padding-right: 0;
@@ -173,7 +176,7 @@
               font-family: $secondaryFont;
               line-height: 1.28571429;
               color: $baseColor;
-              margin-bottom: 13px;
+              margin-bottom: 16px;
               a {
                 color: inherit;
               }
@@ -184,8 +187,14 @@
             font-size: 14px;
             line-height: 1.21;
             margin-top: auto;
-            .arrow-link:not(:hover) {
-              color: $Fern_green;
+            .more-link {
+              display: inline-flex;
+              line-height: 1.21428571;
+            }
+            .arrow-link {
+              &:not(:hover) {
+                color: $Fern_green;
+              }
             }
           }
         }
