@@ -10,6 +10,11 @@
     {% for item in module.content %}
     <div class='two-col-content-item {{item.content_alignment}}'>
       <div class="content-col {{ item.text_alignment }}-align">
+        {% if item.content.include_eyebrow_text %}
+        <div class="eyebrow_text">
+          {{ item.content.eyebrow_text }}
+        </div>
+        {% endif %}
         {% if item.content.heading %}
         <h2>
           {{ item.content.heading }}
@@ -37,7 +42,7 @@
         {% endif %}
         {% endif %}
         {% if item.media_column.video_section.video_type == 'embed' %}
-        <iframe src="{{ item.media_column.video_section.embed_path }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1"  frameborder="0" allowfullscreen="" class="iframe_video"></iframe>
+        <iframe src="{{ item.media_column.video_section.embed_path }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1"  frameborder="0" allowfullscreen="" class="iframe_video" style="border-radius:{{ module.module_settings.image_border_radious }}px;"></iframe>
         {% endif %}
         {% endif %}
       </div>
@@ -52,7 +57,8 @@
 <style>
   {% if module.module_settings.select_text_color == 'custom_color' %}
   .{{name}} .custom_color .content-col > *,
-  .{{name}} .custom_color .intro__inner > * {
+  .{{name}} .custom_color .intro__inner > *,
+  .{{name}} .custom_color .arrow-link:not(:hover) {
     color: rgba({{ module.module_settings.color.color|convert_rgb }},{{ module.module_settings.color.opacity*0.01 }});
   }
   {% endif %}

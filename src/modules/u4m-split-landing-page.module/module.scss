@@ -183,7 +183,7 @@ form {
     .hs-form-radio input {
       margin-right: 10px;
       position: relative;
-      top: 2px;
+      top: 3px;
     }
     &.hs-fieldtype-select,
     &.hs-fieldtype-radio,
@@ -279,9 +279,9 @@ form {
       label {
         span {
           font-family: $secondaryFont;
-          @include size14;
+          @include size12;
           line-height: 1.72;
-          color: $baseColor;
+          color: $Fern_green;
         }
       }
     }
@@ -289,7 +289,7 @@ form {
   .hs-richtext {
     color: $Fern_green;
     font-family: $secondaryFont;
-    @include size14;
+    @include size12;
     line-height: 1.5;
   }
   .hs_submit {

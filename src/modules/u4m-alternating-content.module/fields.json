@@ -415,6 +415,36 @@
     "required" : false,
     "locked" : false,
     "children" : [ {
+      "id" : "b5e248ca-a2da-f91b-e045-c38b7c953195",
+      "name" : "include_eyebrow_text",
+      "display_width" : null,
+      "label" : "Include Eyebrow Text",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "b5e41fae-f3e8-4b69-1b25-0fe5d6311198",
+      "name" : "eyebrow_text",
+      "display_width" : null,
+      "label" : "Eyebrow Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "content.content.include_eyebrow_text",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Eyebrow Text"
+    }, {
       "id" : "328e7082-b4b6-6db2-f42b-d3f5af718312",
       "name" : "heading",
       "display_width" : null,
@@ -607,6 +637,8 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
+      "include_eyebrow_text" : false,
+      "eyebrow_text" : "Eyebrow Text",
       "heading" : "Real-time visibility,real-time action",
       "content" : "<p>L2L empowers frontline teams with instant access to critical information and guided workflows and learning pathways, enabling them to proactively ad dress issues and optimize operations.</p>",
       "button_group" : [ ]
@@ -778,6 +810,7 @@
     "content_alignment" : "left",
     "text_alignment" : "left",
     "content" : {
+      "eyebrow_text_copy" : "Eyebrow Text",
       "heading" : "Real-time visibility,real-time action",
       "content" : "<p>L2L empowers frontline teams with instant access to critical information and guided workflows and learning pathways, enabling them to proactively ad dress issues and optimize operations.</p>",
       "button_group" : [ ]
@@ -804,6 +837,7 @@
     "content_alignment" : "right",
     "text_alignment" : "left",
     "content" : {
+      "eyebrow_text_copy" : "Eyebrow Text",
       "heading" : "Real-time visibility,real-time action",
       "content" : "<p>L2L empowers frontline teams with instant access to critical information and guided workflows and learning pathways, enabling them to proactively ad dress issues and optimize operations.</p>",
       "button_group" : [ ]
@@ -830,6 +864,7 @@
     "content_alignment" : "left",
     "text_alignment" : "left",
     "content" : {
+      "eyebrow_text_copy" : "Eyebrow Text",
       "heading" : "Real-time visibility,real-time action",
       "content" : "<p>L2L empowers frontline teams with instant access to critical information and guided workflows and learning pathways, enabling them to proactively ad dress issues and optimize operations.</p>",
       "button_group" : [ ]
@@ -873,7 +908,7 @@
     "step" : 1,
     "suffix" : "px",
     "type" : "number",
-    "default" : 10
+    "default" : 21
   }, {
     "id" : "29972fec-14e5-8750-9fbf-39e4a5ee3f08",
     "name" : "select_text_color",
@@ -914,7 +949,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "image_border_radious" : 10,
+    "image_border_radious" : 21,
     "select_text_color" : "white_color",
     "color" : {
       "color" : null,
