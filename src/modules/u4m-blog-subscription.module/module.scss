@@ -32,7 +32,7 @@ section.u4m-blog-subscription {
       @include tabletvert {
         width: 100%;
       }
-      @include subscribe-form;
+      @include subscribeForm;
     }
   }
 }
