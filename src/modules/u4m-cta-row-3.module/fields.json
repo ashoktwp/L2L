@@ -85,37 +85,6 @@
     "type" : "richtext",
     "default" : "<p>Be the first to know! Subscribe to our weekly newsletter for the latest news, updates, and exclusive offers straight to your inbox.</p>"
   }, {
-    "id" : "84789c73-0bf7-863f-2d02-740fbcae14c1",
-    "name" : "include_form",
-    "display_width" : null,
-    "label" : "Include Form",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "default" : true
-  }, {
-    "id" : "ba761a22-064a-4363-1fda-cd67bd37d3fd",
-    "name" : "select_form",
-    "display_width" : null,
-    "label" : "Select Form",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "intro_content.include_form",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "type" : "form",
-    "default" : {
-      "form_id" : "dc199d68-fae9-4ccd-b18b-a03e4cf92ca3",
-      "response_type" : "inline",
-      "message" : "Thanks for submitting the form."
-    }
-  }, {
     "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
     "name" : "include_button",
     "display_width" : null,
@@ -306,6 +275,37 @@
       },
       "boolean_field" : false
     } ]
+  }, {
+    "id" : "84789c73-0bf7-863f-2d02-740fbcae14c1",
+    "name" : "include_form",
+    "display_width" : null,
+    "label" : "Include Form",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "ba761a22-064a-4363-1fda-cd67bd37d3fd",
+    "name" : "select_form",
+    "display_width" : null,
+    "label" : "Select Form",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_form",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "form",
+    "default" : {
+      "form_id" : "3a09d8c4-7d8f-4050-84c7-edc5b68c8ac6",
+      "response_type" : "inline",
+      "message" : "Thanks for submitting the form."
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -317,11 +317,6 @@
     "heading" : "Subscribe to our newsletter",
     "include_content" : true,
     "content" : "<p>Be the first to know! Subscribe to our weekly newsletter for the latest news, updates, and exclusive offers straight to your inbox.</p>",
-    "include_form" : true,
-    "select_form" : {
-      "response_type" : "inline",
-      "message" : "Thanks for submitting the form."
-    },
     "include_button" : false,
     "button_group" : [ {
       "button_type" : "std",
@@ -338,7 +333,13 @@
         "no_follow" : false
       },
       "boolean_field" : false
-    } ]
+    } ],
+    "include_form" : true,
+    "select_form" : {
+      "form_id" : "dc199d68-fae9-4ccd-b18b-a03e4cf92ca3",
+      "response_type" : "inline",
+      "message" : "Thanks for submitting the form."
+    }
   }
 }, {
   "id" : "9c45ee1b-055c-6b8c-79b0-75ec4a7ea206",
@@ -441,12 +442,12 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "background_type" : "color",
+    "background_type" : "image",
     "background_image" : {
-      "src" : ""
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/cta_form_background.png"
     },
     "select_color" : "dark_jungle_bg",
-    "select_gradient" : "gradient1"
+    "select_gradient" : "gradient3"
   }
 }, {
   "id" : "module_overrides",
@@ -852,7 +853,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "image",
+      "background_type" : "gradient",
       "background_image" : {
         "size_type" : "auto_custom_max",
         "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG.png",
@@ -864,7 +865,7 @@
         "max_height" : 879.1666666666666
       },
       "select_color" : "prismic_mango_bg",
-      "select_gradient" : "gradient1"
+      "select_gradient" : "gradient3"
     }
   }, {
     "id" : "c813f3af-99b7-d54e-7ce2-b074f008a27c",
@@ -947,7 +948,7 @@
     "custom_bottom_padding_mobile" : 50,
     "reverse_text" : true,
     "background_settings" : {
-      "background_type" : "image",
+      "background_type" : "gradient",
       "background_image" : {
         "size_type" : "auto_custom_max",
         "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG.png",
@@ -959,7 +960,7 @@
         "max_height" : 879.1666666666666
       },
       "select_color" : "prismic_mango_bg",
-      "select_gradient" : "gradient1"
+      "select_gradient" : "gradient3"
     },
     "container" : {
       "size" : "theme",
