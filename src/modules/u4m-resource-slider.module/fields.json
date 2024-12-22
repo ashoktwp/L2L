@@ -363,7 +363,7 @@
     "display_width" : null,
     "label" : "Resource Table",
     "required" : false,
-    "locked" : false,
+    "locked" : true,
     "visibility" : {
       "controlling_field" : null,
       "controlling_field_path" : "resources.resource_type",
@@ -524,7 +524,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "top-margin-default"
+    "default" : "top-margin-none"
   }, {
     "id" : "custom_top_margin",
     "name" : "custom_top_margin",
@@ -584,7 +584,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "bottom-margin-default"
+    "default" : "bottom-margin-none"
   }, {
     "id" : "custom_bottom_margin",
     "name" : "custom_bottom_margin",
@@ -903,7 +903,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "theme"
+      "default" : "custom"
     }, {
       "id" : "b9865f26-0901-d5ad-66a2-7c6ecacec658",
       "name" : "custom_size",
@@ -925,15 +925,15 @@
       "step" : 1,
       "suffix" : "px",
       "type" : "number",
-      "default" : 1296
+      "default" : 1341
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "size" : "theme",
-      "custom_size" : 1296
+      "size" : "custom",
+      "custom_size" : 1341
     }
   } ],
   "tab" : "CONTENT",
@@ -942,10 +942,10 @@
   "type" : "group",
   "default" : {
     "enable_overrides" : true,
-    "top_margin" : "top-margin-default",
+    "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
-    "bottom_margin" : "bottom-margin-default",
+    "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
     "top_padding" : "top-padding-default",
@@ -967,8 +967,8 @@
       "select_gradient" : "gradient3"
     },
     "container" : {
-      "size" : "theme",
-      "custom_size" : 1296
+      "size" : "custom",
+      "custom_size" : 1341
     }
   }
 } ]

@@ -1,8 +1,10 @@
 @import "../../css/_module-imports";
 
 .u4m-resources-slider {
-  padding-top: 112px;
-  padding-bottom: 105px;
+  &.dnd_padd {
+    padding-top: 112px;
+    padding-bottom: 105px;
+  }
   .intro_content {
     .intro_title {
       margin-bottom: 15px;
@@ -21,9 +23,6 @@
   .resources-slider {
     position: relative;
     z-index: 3;
-    .page-center {
-      max-width: 1341px;
-    }
     .page-title {
       text-align: center;
       h1 {
@@ -271,7 +270,7 @@
     @include CardItems;
     .flex-row {
       margin-bottom: 0;
-      row-gap: 62px;
+      row-gap: 35px;
       .post-item {
         .post-item-inner {
           .featured-img {
@@ -350,6 +349,14 @@
 
     &.slick-prev {
       left: -50px;
+      @include laptop {
+        left: -24px;
+      }
+
+      @include navbreak {
+        left: 0;
+        z-index: 99;
+      }
 
       @include midlaptop {
         left: -10px;
@@ -359,11 +366,16 @@
 
     &.slick-next {
       right: -50px;
-
+      @include laptop {
+        right: -24px;
+      }
       &::before {
         transform: rotate(180deg);
       }
-
+      @include navbreak {
+        right: 0;
+        z-index: 99;
+      }
       @include midlaptop {
         right: -10px;
         z-index: 99;
