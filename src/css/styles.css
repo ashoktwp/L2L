@@ -3162,6 +3162,20 @@ div.hs_cos_wrapper_widget section.top-margin-none {
   margin-top: 0;
 }
 
+div.hs_cos_wrapper_widget section.top-margin-default {
+  margin-top: 100rem;
+}
+@media (max-width: 767px) {
+  div.hs_cos_wrapper_widget section.top-margin-default {
+    margin-top: 50rem;
+  }
+}
+@media (max-width: 580px) {
+  div.hs_cos_wrapper_widget section.top-margin-default {
+    margin-top: 25rem;
+  }
+}
+
 div.hs_cos_wrapper_widget section.top-margin-small {
   margin-top: 50rem;
 }
@@ -3206,6 +3220,20 @@ div.hs_cos_wrapper_widget section.top-margin-large {
 
 div.hs_cos_wrapper_widget section.bottom-margin-none {
   margin-bottom: 0;
+}
+
+div.hs_cos_wrapper_widget section.bottom-margin-default {
+  margin-bottom: 100rem;
+}
+@media (max-width: 767px) {
+  div.hs_cos_wrapper_widget section.bottom-margin-default {
+    margin-bottom: 50rem;
+  }
+}
+@media (max-width: 580px) {
+  div.hs_cos_wrapper_widget section.bottom-margin-default {
+    margin-bottom: 25rem;
+  }
 }
 
 div.hs_cos_wrapper_widget section.bottom-margin-small {
@@ -3403,7 +3431,7 @@ div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gra
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
@@ -3721,7 +3749,7 @@ section[class*=u4m-] {
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
@@ -3760,14 +3788,14 @@ section[class*=u4m-] {
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
   border-color: #409650;
   cursor: pointer;
   border: none;
-  padding: 14rem 30rem;
+  padding: 15rem 30rem;
   background: linear-gradient(308.96deg, #b8ffd2 -8.65%, #d0f76e 81.32%);
   color: #2e2e2e;
 }
@@ -3790,11 +3818,11 @@ section[class*=u4m-] {
   border-color: #969696;
 }
 .hs-button.theme2:hover {
-  background-color: #c0fc95;
+  background: #c0fc95;
   color: #2e2e2e;
 }
 .hs-button.theme2:active {
-  background-color: #9bf75f;
+  background: #9bf75f;
   color: #2e2e2e;
 }
 .hs-button.theme3 {
@@ -3811,7 +3839,7 @@ section[class*=u4m-] {
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
@@ -4668,7 +4696,7 @@ section.u4m-backup-unsubscribe form.hs-form .hs-button, section.u4m-backup-unsub
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
@@ -6580,7 +6608,7 @@ section.u4m-password-prompt form .hs-button {
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
@@ -7220,7 +7248,7 @@ section.u4m-subscription-preferences form.hs-form .hs-button, section.u4m-subscr
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
@@ -7791,7 +7819,7 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button, section.u4m-drag-and-dro
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
@@ -8815,7 +8843,7 @@ section.u4m-blog-post div.comments div.content form.hs-form .hs-button, section.
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
@@ -8854,7 +8882,7 @@ section.u4m-blog-post div.comments div.content form .hs-button {
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
@@ -9071,7 +9099,7 @@ footer.ftr_wrpp .top_wrp .right_wrpp .btn a {
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
@@ -9481,14 +9509,14 @@ footer.ftr_wrpp .middle_wrp .rhtCnt .hs-button {
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
   border-color: #409650;
   cursor: pointer;
   border: none;
-  padding: 14rem 30rem;
+  padding: 15rem 30rem;
   background: linear-gradient(308.96deg, #b8ffd2 -8.65%, #d0f76e 81.32%);
   color: #2e2e2e;
   font-family: "Inter";
@@ -9512,11 +9540,11 @@ footer.ftr_wrpp .middle_wrp .rhtCnt .hs-button:disabled {
   border-color: #969696;
 }
 footer.ftr_wrpp .middle_wrp .rhtCnt .hs-button:hover {
-  background-color: #c0fc95;
+  background: #c0fc95;
   color: #2e2e2e;
 }
 footer.ftr_wrpp .middle_wrp .rhtCnt .hs-button:active {
-  background-color: #9bf75f;
+  background: #9bf75f;
   color: #2e2e2e;
 }
 
@@ -9746,7 +9774,7 @@ header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_btn a
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
@@ -9839,14 +9867,14 @@ header .hd_hgh .hd_wrap .hd_inr .hd_right .hd_btn .hs-button {
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #409650;
   border-color: #409650;
   cursor: pointer;
   border: none;
-  padding: 14rem 30rem;
+  padding: 15rem 30rem;
   background: linear-gradient(308.96deg, #b8ffd2 -8.65%, #d0f76e 81.32%);
   color: #2e2e2e;
 }
@@ -9869,11 +9897,11 @@ header .hd_hgh .hd_wrap .hd_inr .hd_right .hd_btn .hs-button:disabled {
   border-color: #969696;
 }
 header .hd_hgh .hd_wrap .hd_inr .hd_right .hd_btn .hs-button:hover {
-  background-color: #c0fc95;
+  background: #c0fc95;
   color: #2e2e2e;
 }
 header .hd_hgh .hd_wrap .hd_inr .hd_right .hd_btn .hs-button:active {
-  background-color: #9bf75f;
+  background: #9bf75f;
   color: #2e2e2e;
 }
 @media (max-width: 1024px) {

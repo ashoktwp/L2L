@@ -18,7 +18,7 @@
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 13rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: $white;
   background-color: $L2L_green;
@@ -50,17 +50,17 @@
 @mixin buttonTwo {
   @include button;
   border: none;
-  padding: 14rem 30rem;
+  padding: 15rem 30rem;
   background: linear-gradient(308.96deg, $Prismic_mint -8.65%, $Pale_Yellow_Green 81.32%);
   color: $baseColor;
 
   &:hover {
-    background-color: $Menthol;
+    background: $Menthol;
     color: $baseColor;
   }
 
   &:active {
-    background-color: $Lime_Green;
+    background: $Lime_Green;
     color: $baseColor;
   }
 }

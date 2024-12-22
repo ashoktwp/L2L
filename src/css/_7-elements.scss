@@ -79,6 +79,18 @@ div.hs_cos_wrapper_widget section.top-margin-none {
   margin-top: 0;
 }
 
+div.hs_cos_wrapper_widget section.top-margin-default {
+  margin-top: 100rem;
+
+  @include tabletvert {
+    margin-top: 50rem;
+  }
+
+  @include phone {
+    margin-top: 25rem;
+  }
+}
+
 div.hs_cos_wrapper_widget section.top-margin-small {
   margin-top: 50rem;
 
@@ -118,7 +130,17 @@ div.hs_cos_wrapper_widget section.top-margin-large {
 div.hs_cos_wrapper_widget section.bottom-margin-none {
   margin-bottom: 0;
 }
+div.hs_cos_wrapper_widget section.bottom-margin-default {
+  margin-bottom: 100rem;
 
+  @include tabletvert {
+    margin-bottom: 50rem;
+  }
+
+  @include phone {
+    margin-bottom: 25rem;
+  }
+}
 div.hs_cos_wrapper_widget section.bottom-margin-small {
   margin-bottom: 50rem;
 
