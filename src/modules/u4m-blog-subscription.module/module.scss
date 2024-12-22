@@ -32,54 +32,7 @@ section.u4m-blog-subscription {
       @include tabletvert {
         width: 100%;
       }
-      .form-title {
-        margin: 0;
-      }
-      form {
-        position: relative;
-        margin: 0;
-        .hs-form-field > label {
-          display: none;
-        }
-        .hs-input {
-          border-radius: 5px;
-          border: 1px solid $border_color;
-          padding: 21px;
-          padding-left: 30px;
-          padding-right: 144px;
-          width: 100%;
-          font-family: $secondaryFont;
-          @include size16;
-          line-height: 1.75;
-          color: $Dark_jungle;
-          outline: none;
-          &::placeholder {
-            color: $Dark_jungle;
-          }
-        }
-        .hs_submit.hs-submit {
-          position: absolute;
-          right: 10px;
-          top: 0;
-        }
-        .hs-button {
-          background-color: $Prismic_mango;
-          border-radius: 8px;
-          margin: 9px 0;
-          border: 0;
-          font-family: $secondaryFont;
-          color: $baseColor;
-          padding: 6px 30px;
-          @include size14;
-          letter-spacing: 0.5px;
-          line-height: 3;
-        }
-      }
-      ul.no-list.hs-error-msgs {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
+      @include subscribe-form;
     }
   }
 }

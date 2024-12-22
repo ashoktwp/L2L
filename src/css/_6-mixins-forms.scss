@@ -126,7 +126,8 @@
 
       select {
         appearance: none;
-        background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
+        background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png")
+          no-repeat;
         background-size: 13rem 8rem;
         background-position: 97% 51%;
         border: 1px solid rgba(#000, 0.15);
@@ -359,3 +360,127 @@
 }
 
 // subscribe form style
+@mixin subscribe-form {
+  .form-title {
+    margin: 0;
+  }
+  form {
+    position: relative;
+    margin: 0;
+    .hs-form-field > label {
+      display: none;
+    }
+    .hs-input {
+      border-radius: 5px;
+      border: 1px solid $border_color;
+      padding: 21px;
+      padding-left: 30px;
+      padding-right: 144px;
+      width: 100%;
+      font-family: $secondaryFont;
+      @include size16;
+      line-height: 1.75;
+      color: $Dark_jungle;
+      outline: none;
+      &::placeholder {
+        color: $Dark_jungle;
+      }
+    }
+    .hs_submit.hs-submit {
+      position: absolute;
+      right: 10px;
+      top: 0;
+    }
+    .hs-button {
+      background-color: $Prismic_mango;
+      border-radius: 8px;
+      margin: 9px 0;
+      border: 0;
+      font-family: $secondaryFont;
+      color: $baseColor;
+      padding: 6px 30px;
+      @include size14;
+      letter-spacing: 0.5px;
+      line-height: 3;
+    }
+  }
+  ul.hs-error-msgs {
+    animation: fadeIn2 0.5s ease;
+    margin-bottom: 20rem;
+
+    li {
+      margin-bottom: 0;
+
+      label {
+        color: red;
+        @include size16;
+        text-align: center;
+        padding: 10rem 0 0;
+        margin: 20rem 0 0;
+        display: block;
+        flex: 0 0 100%;
+        font-weight: normal;
+        text-transform: none;
+      }
+    }
+  }
+
+  ul.hs-error-msgs {
+    position: relative;
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0rem 0 20rem;
+    padding: 0;
+    animation: fadeIn1 0.3s ease;
+
+    @include phone {
+      position: relative;
+    }
+
+    li {
+      background: red;
+      border-radius: 5rem;
+      color: $white;
+      display: inline-block;
+      line-height: 1.2;
+      padding: 5rem 8rem;
+      position: relative;
+      text-align: center;
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 50%;
+      display: block;
+      transform: translateX(-50%);
+      z-index: 3;
+      width: 90%;
+
+      &:before {
+        border-style: solid;
+        border-width: 0 8rem 8rem 8rem;
+        bottom: 100%;
+        border-color: transparent transparent red transparent;
+        position: absolute;
+        height: 8rem;
+        width: 0rem;
+        content: "";
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      label {
+        @include size12;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 1.4;
+        margin-bottom: 0;
+        margin-top: 1rem;
+        color: $white;
+      }
+    }
+  }
+}
