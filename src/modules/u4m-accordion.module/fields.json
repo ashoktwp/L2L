@@ -432,7 +432,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
@@ -891,7 +891,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_overrides" : true,
+    "enable_overrides" : false,
     "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
