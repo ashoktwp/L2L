@@ -16,9 +16,11 @@
     @include navbreak {
       column-gap: 20px;
     }
-    @include tabletvert {
+    @include tabletmid {
       column-gap: 0;
       row-gap: 40px;
+      max-width: 768px;
+      margin: 0 auto;
     }
     .blog_post_content {
       max-width: 509px;
@@ -26,7 +28,7 @@
       @include navbreak {
         max-width: calc(50% - 10px);
       }
-      @include tabletvert {
+      @include tabletmid {
         max-width: 100%;
       }
     }
@@ -43,6 +45,7 @@
         h2 {
           color: $White;
           margin-bottom: 23px;
+          font-weight: 500;
         }
       }
       .author-wrap {
@@ -82,7 +85,7 @@
       @include navbreak {
         max-width: calc(50% - 10px);
       }
-      @include tabletvert {
+      @include tabletmid {
         max-width: 100%;
       }
     }
@@ -139,6 +142,11 @@
         transition: none;
         width: 100%;
       }
+      img {
+        min-height: 401px;
+        object-fit: cover;
+        border-radius: 13px;
+      }
     }
   }
 }
@@ -147,6 +155,7 @@
   .post_content {
     padding-top: 96px;
     padding-bottom: 70px;
+    background-color: $Mint_cream;
     @include tabletvert {
       padding-top: 50px;
       padding-bottom: 50px;
@@ -157,6 +166,9 @@
       .content {
         p {
           @include bodyStyle;
+          color: $Dark_Green2;
+          margin-top: 0;
+          margin-bottom: 41px;
         }
         blockquote {
           border-left: $L2L_green solid 2px;
@@ -164,8 +176,13 @@
           padding-left: 29px;
           margin-top: 31px;
           margin-bottom: 47px;
+          color: $Dark_Green2;
+          font-weight: 500;
+          font-family: $secondaryFont;
           p {
             margin: 0;
+            color: $Dark_Green2;
+            font-weight: 500;
           }
         }
         img {
@@ -175,6 +192,8 @@
       .topics {
         margin-top: 56px;
         margin-bottom: 66px;
+        font-size: 14px;
+        line-height: 1;
         .link {
           font-family: $secondaryFont;
           font-style: normal;
@@ -247,7 +266,7 @@
 
 .author-section {
   background-color: $Fern_green;
-  padding-top: 112px;
+  padding-top: 107px;
   padding-bottom: 84px;
   @include tabletvert {
     padding-top: 50px;
