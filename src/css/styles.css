@@ -3981,6 +3981,7 @@ section[class*=u4m-] {
 }
 .intro_content .intro_desc {
   margin-bottom: 36px;
+  color: #0e2514;
 }
 .intro_content .intro_desc p:last-child {
   margin: 0;

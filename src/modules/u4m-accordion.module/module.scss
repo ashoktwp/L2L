@@ -1,11 +1,25 @@
 @import "../../css/_module-imports";
 
 .u4m-accordion {
+  @include tabletMin {
+    padding: 83px 148px;
+  }
+
+  &.reverse-text {
+    .acc_item .acc_cnt .acc_cnt_inr {
+      color: inherit;
+    }
+  }
+
+  .intro_content {
+    margin-bottom: 50px;
+  }
+
   .acc_item {
     margin-bottom: 12px;
 
     .acc_ttl {
-      padding: 30px 60px 30px 36px;
+      padding: 30px 60px 27px 36px;
       position: relative;
       cursor: pointer;
 
@@ -24,7 +38,7 @@
       }
 
       &:hover .plus,
-      &:active .plus {
+      &.active .plus {
         transform: rotate(45deg);
         background-color: $Medium_Sea_Green;
 
