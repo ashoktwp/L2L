@@ -16,430 +16,151 @@ html {
   }
 }
 
-section.u4m-rich-text {
-  background-size: cover;
-  background-position: 50% 50%;
+.u4m-rich-text h2 {
+  margin-bottom: 23px;
 }
-section.u4m-rich-text.reverse-text {
-  color: #fff;
+.u4m-rich-text p {
+  color: #102F04;
 }
-section.u4m-rich-text div.content {
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1224rem;
-  padding-left: 20rem;
-  padding-right: 20rem;
-  max-width: 1000rem;
-  margin-top: 50rem;
-  margin-bottom: 100rem;
+.u4m-rich-text p + h2 {
+  margin-top: 59px;
+  margin-bottom: 34px;
 }
-section.u4m-rich-text div.content .b1 {
-  font-family: "Sofia Sans";
-  font-size: 22rem;
-  line-height: 1.4;
-  letter-spacing: 0.25rem;
-  margin-bottom: 20rem;
+.u4m-rich-text p + h3 {
+  margin-top: 41px;
+  margin-bottom: 19px;
 }
-@media (max-width: 580px) {
-  section.u4m-rich-text div.content .b1 {
-    font-size: 17rem;
-  }
+.u4m-rich-text p:last-child {
+  margin: 0;
 }
-section.u4m-rich-text div.content .b2 {
-  font-family: "Sofia Sans";
-  font-size: 18rem;
-  line-height: 1.6;
-  letter-spacing: 0.25rem;
-  margin-bottom: 20rem;
+.u4m-rich-text p a {
+  color: #409650;
+  text-decoration: underline;
 }
-@media (max-width: 580px) {
-  section.u4m-rich-text div.content .b2 {
-    font-size: 16rem;
-  }
-}
-section.u4m-rich-text div.content p,
-section.u4m-rich-text div.content ul,
-section.u4m-rich-text div.content ol,
-section.u4m-rich-text div.content .b3 {
-  font-family: "Sofia Sans";
-  font-size: 16rem;
-  line-height: 1.6;
-  letter-spacing: 0.25rem;
-  margin-bottom: 20rem;
-}
-@media (max-width: 580px) {
-  section.u4m-rich-text div.content p,
-  section.u4m-rich-text div.content ul,
-  section.u4m-rich-text div.content ol,
-  section.u4m-rich-text div.content .b3 {
-    font-size: 15rem;
-  }
-}
-section.u4m-rich-text div.content .b4 {
-  font-family: "Sofia Sans";
-  font-size: 14rem;
-  line-height: 1.6;
-  letter-spacing: 0.35rem;
-  margin-bottom: 20rem;
-}
-@media (max-width: 580px) {
-  section.u4m-rich-text div.content .b4 {
-    font-size: 14rem;
-  }
-}
-section.u4m-rich-text div.content h1,
-section.u4m-rich-text div.content .h1 {
-  font-size: 72rem;
-  font-family: "Sofia Sans";
-  font-weight: bold;
-  letter-spacing: -0.5px;
-  margin-bottom: 30rem;
-  line-height: 1.0833;
-  margin-top: 0;
-  color: #0e2514;
-}
-@media (max-width: 1024px) {
-  section.u4m-rich-text div.content h1,
-  section.u4m-rich-text div.content .h1 {
-    font-size: 48rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-rich-text div.content h1,
-  section.u4m-rich-text div.content .h1 {
-    font-size: 38rem;
-    margin-bottom: 20rem;
-  }
-}
-section.u4m-rich-text div.content h2,
-section.u4m-rich-text div.content .h2 {
-  font-size: 48rem;
-  margin-bottom: 30rem;
-  line-height: 1.125;
-  color: #0e2514;
-  font-family: "Sofia Sans";
-  font-weight: bold;
-  letter-spacing: -0.5px;
-}
-@media (max-width: 1024px) {
-  section.u4m-rich-text div.content h2,
-  section.u4m-rich-text div.content .h2 {
-    font-size: 38rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-rich-text div.content h2,
-  section.u4m-rich-text div.content .h2 {
-    font-size: 32rem;
-    margin-bottom: 20rem;
-  }
-}
-section.u4m-rich-text div.content h3,
-section.u4m-rich-text div.content .h3 {
-  font-size: 32rem;
-  margin-bottom: 30rem;
-  line-height: 1.2;
-  color: #2e2e2e;
-  font-family: "Sofia Sans";
-  font-weight: bold;
-  letter-spacing: -0.5px;
-}
-@media (max-width: 1024px) {
-  section.u4m-rich-text div.content h3,
-  section.u4m-rich-text div.content .h3 {
-    font-size: 28rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-rich-text div.content h3,
-  section.u4m-rich-text div.content .h3 {
-    font-size: 22rem;
-    margin-bottom: 20rem;
-  }
-}
-section.u4m-rich-text div.content h4,
-section.u4m-rich-text div.content .h4 {
-  font-size: 21rem;
-  margin-bottom: 30rem;
-  line-height: 1.57;
-  color: #2e2e2e;
-  font-family: "Sofia Sans";
-  font-weight: 400;
-  letter-spacing: 0px;
-}
-@media (max-width: 580px) {
-  section.u4m-rich-text div.content h4,
-  section.u4m-rich-text div.content .h4 {
-    font-size: 16rem;
-    margin-bottom: 20rem;
-  }
-}
-section.u4m-rich-text div.content h5,
-section.u4m-rich-text div.content .h5 {
-  font-size: 14rem;
-  margin-bottom: 30rem;
-  line-height: 1.71;
-  color: #2e2e2e;
-  font-family: "Sofia Sans";
-  font-weight: 400;
-  letter-spacing: 0px;
-}
-section.u4m-rich-text div.content h6,
-section.u4m-rich-text div.content .h6 {
-  font-size: 14rem;
-  margin-bottom: 30rem;
-  line-height: 1.71;
-  color: #2e2e2e;
-  font-family: "Sofia Sans";
-  font-weight: bold;
-  letter-spacing: 0px;
-}
-section.u4m-rich-text div.content .swatches div {
-  width: 90rem;
-  height: 90rem;
-  padding: 5rem;
-  font-size: 10rem;
-  text-align: center;
-  display: inline-block;
-  margin: 8rem;
-  vertical-align: top;
-  line-height: normal;
-}
-section.u4m-rich-text div.content .swatches div.secondary {
-  width: 50rem;
-  height: 50rem;
-}
-section.u4m-rich-text div.content .action1 {
-  background-color: #733bf7;
-  color: #fff;
-}
-section.u4m-rich-text div.content .action2 {
-  background-color: #00a4bd;
-  color: #fff;
-}
-section.u4m-rich-text div.content .black {
-  background-color: #33475b;
-  color: #fff;
-}
-section.u4m-rich-text div.content .gray1 {
-  background-color: #edf0f2;
-  color: #33475b;
-}
-section.u4m-rich-text div.content .gray2 {
-  background-color: #cbd6e2;
-}
-section.u4m-rich-text div.content .gray3 {
-  background-color: #7c98b6;
-  color: #fff;
-}
-section.u4m-rich-text div.content .white {
-  background-color: #fff;
-  color: #33475b;
-  border: 1rem solid #cbd6e2;
-}
-section.u4m-rich-text div.content .button {
-  line-height: 1.71;
-  font-size: 14rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-family: "Sofia Sans";
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  text-transform: uppercase;
-  border-radius: 8px;
-  transition: 0.3s ease;
-  border: 1px solid;
+.u4m-rich-text p a:hover {
   text-decoration: none;
-  padding: 14rem 30rem;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #409650;
-  border-color: #409650;
-  cursor: pointer;
 }
-section.u4m-rich-text div.content .button:hover {
-  border-radius: 21px;
-  color: #c0fc95;
-  background-color: #2c6938;
-  border-color: #2c6938;
+.u4m-rich-text hr {
+  border: 2px solid #409650;
+  margin-top: 45px;
+  margin-bottom: 30px;
 }
-section.u4m-rich-text div.content .button:active {
-  border-radius: 21px;
-  color: #9bf75f;
-  background-color: #275430;
-  border-color: #275430;
+.u4m-rich-text h3 {
+  color: #102F04;
 }
-section.u4m-rich-text div.content .button:disabled {
-  border-radius: 8px;
-  color: #fff;
-  background-color: #969696;
-  border-color: #969696;
+.u4m-rich-text h3 span {
+  color: #409650;
 }
-section.u4m-rich-text div.content .button-small {
-  line-height: 1.71;
-  font-size: 14rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-family: "Sofia Sans";
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  text-transform: uppercase;
-  border-radius: 8px;
-  transition: 0.3s ease;
-  border: 1px solid;
-  text-decoration: none;
-  padding: 14rem 30rem;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #409650;
-  border-color: #409650;
-  cursor: pointer;
-  padding: 8rem 20rem 7rem 20rem;
-  font-size: 12rem;
-  line-height: 1.2;
+.u4m-rich-text ul {
+  padding: 0;
+  padding-left: 36px;
+  padding-left: 36px;
+  margin-bottom: 33px;
 }
-section.u4m-rich-text div.content .button-small:hover {
-  border-radius: 21px;
-  color: #c0fc95;
-  background-color: #2c6938;
-  border-color: #2c6938;
+.u4m-rich-text ul li {
+  margin-bottom: 12px;
+  padding-left: 18px;
+  letter-spacing: normal;
 }
-section.u4m-rich-text div.content .button-small:active {
-  border-radius: 21px;
-  color: #9bf75f;
-  background-color: #275430;
-  border-color: #275430;
+.u4m-rich-text ul li:last-child {
+  margin: 0;
 }
-section.u4m-rich-text div.content .button-small:disabled {
-  border-radius: 8px;
-  color: #fff;
-  background-color: #969696;
-  border-color: #969696;
+.u4m-rich-text ul + .hs-embed-wrapper {
+  margin-top: 60px !important;
+  margin-bottom: 40px !important;
 }
-section.u4m-rich-text div.content .button-stroked {
-  display: inline-block;
-  font-family: "Sofia Sans";
-  color: #33475b;
-  background-color: transparent;
-  border: solid 1rem #33475b;
-  padding: 13rem 30rem;
-  margin: 20rem 0;
-  transition: 0.1s ease-in;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
-  text-decoration: none;
-  cursor: pointer;
+.u4m-rich-text ol {
+  padding: 0;
+  padding-left: 36px;
+  padding-left: 36px;
+  margin-bottom: 33px;
 }
-section.u4m-rich-text div.content .button-stroked:hover, section.u4m-rich-text div.content .button-stroked:focus {
-  background-color: #33475b;
-  color: #fff;
+.u4m-rich-text ol li {
+  margin-bottom: 12px;
+  padding-left: 18px;
+  letter-spacing: normal;
 }
-section.u4m-rich-text div.content .button-text {
-  font-weight: bold;
-  margin: 20rem 0;
-  cursor: pointer;
+.u4m-rich-text ol li:last-child {
+  margin: 0;
 }
-section.u4m-rich-text div.content .button-text:after {
-  display: inline-block;
-  margin-left: 5rem;
-  width: 9rem;
-  height: 7rem;
+.u4m-rich-text ol li::marker {
+  font-weight: 600;
 }
-section.u4m-rich-text div.content .button-text:hover, section.u4m-rich-text div.content .button-text:focus {
-  color: #33475b;
+.u4m-rich-text iframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
-section.u4m-rich-text div.content .hs-cta-wrapper a {
-  line-height: 1.71;
-  font-size: 14rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-family: "Sofia Sans";
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  text-transform: uppercase;
-  border-radius: 8px;
-  transition: 0.3s ease;
-  border: 1px solid;
-  text-decoration: none;
-  padding: 14rem 30rem;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #409650;
-  border-color: #409650;
-  cursor: pointer;
+.u4m-rich-text figure {
+  margin: 0;
+  margin-top: 54px;
+  margin-bottom: 50px;
 }
-section.u4m-rich-text div.content .hs-cta-wrapper a:hover {
-  border-radius: 21px;
-  color: #c0fc95;
-  background-color: #2c6938;
-  border-color: #2c6938;
-}
-section.u4m-rich-text div.content .hs-cta-wrapper a:active {
-  border-radius: 21px;
-  color: #9bf75f;
-  background-color: #275430;
-  border-color: #275430;
-}
-section.u4m-rich-text div.content .hs-cta-wrapper a:disabled {
-  border-radius: 8px;
-  color: #fff;
-  background-color: #969696;
-  border-color: #969696;
-}
-section.u4m-rich-text div.content .animation-sample-short,
-section.u4m-rich-text div.content .animation-sample-medium,
-section.u4m-rich-text div.content .animation-sample-long {
-  cursor: pointer;
-  background-color: #733bf7;
-  padding: 60rem 20rem;
-  color: #fff;
-  margin: 10rem auto;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-section.u4m-rich-text div.content .animation-sample-short {
-  transition: 0.1s ease-in;
-  width: 50%;
-}
-section.u4m-rich-text div.content .animation-sample-medium {
-  transition: 0.25s ease-in;
-  width: 50%;
-}
-section.u4m-rich-text div.content .animation-sample-long {
-  transition: 1s ease-in;
-  width: 50%;
-}
-section.u4m-rich-text div.content .animation-sample-short:hover,
-section.u4m-rich-text div.content .animation-sample-medium:hover,
-section.u4m-rich-text div.content .animation-sample-long:hover {
+.u4m-rich-text figure img {
+  border-radius: 21px !important;
+  overflow: hidden;
   width: 100%;
 }
-section.u4m-rich-text div.content .anchor {
-  display: block;
-  position: relative;
-  top: -100rem;
-  visibility: hidden;
+.u4m-rich-text figure figcaption {
+  text-align: center;
+  margin-top: 21px;
+  font-size: 14rem;
+  line-height: 1.42857143;
+  color: #0e2514;
 }
-section.u4m-rich-text div.content .anchor2 {
-  display: block;
-  position: relative;
-  top: -300rem;
-  visibility: hidden;
+
+blockquote {
+  line-height: 33px;
+  margin: 0;
+  font-size: 21rem;
+  font-family: "Inter";
+  color: #102F04;
+  font-weight: 500;
+  margin-right: 0;
+  margin-top: 33px;
+  margin-bottom: 45px;
+  border-left: 2px solid #409650;
+  padding-left: 28px;
 }
-section.u4m-rich-text div.content .clear {
-  clear: both;
+
+table {
+  border: 2px solid #6abe7a;
+  border-collapse: collapse;
+  margin: 0;
+  margin-top: 44px;
 }
-section.u4m-rich-text div.content .hs_cos_wrapper_type_rich_text,
-section.u4m-rich-text div.content .hs_cos_wrapper_type_text,
-section.u4m-rich-text div.content .hs_cos_wrapper_type_header,
-section.u4m-rich-text div.content .hs_cos_wrapper_type_section_header,
-section.u4m-rich-text div.content .hs_cos_wrapper_type_raw_html,
-section.u4m-rich-text div.content .hs_cos_wrapper_type_raw_jinja,
-section.u4m-rich-text div.content .hs_cos_wrapper_type_page_footer {
-  word-wrap: break-word;
+table th {
+  border: 2px solid #6abe7a;
+  text-align: center;
+  line-height: 1.28571429;
+  font-size: 21rem;
+  padding: 24px 24px 27px 24px !important;
+  font-weight: 600;
+  color: #0e2514;
+}
+table td {
+  border: 2px solid #6abe7a;
+  text-align: center;
+  line-height: 1.28571429;
+  font-size: 21rem;
+  padding: 22px 24px 26px 24px !important;
+  color: #102F04;
+}
+table + p {
+  margin-top: 57px;
+}
+
+@media (max-width: 991px) {
+  table {
+    display: block;
+    border: 0;
+    white-space: nowrap;
+    overflow-y: auto;
+    width: 100%;
+  }
+  table thead {
+    width: 100%;
+  }
 }

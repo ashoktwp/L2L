@@ -1,10 +1,28 @@
 {% set moduleName = 'u4m-rich-text' %}
-{% set imageMax = 1000 %}
-{% set bgImageMax = 1920 %}
- 
-
-{% include "../partials/u4-module-includes.html" %}
-  <div class="content">
-    {% inline_rich_text field="richtext_field" value="{{ module.richtext_field }}" %}
+  {% include "../partials/u4-module-includes.html" %}
+  
+  <div class="page-center  {{ module.module_settings.theme }}">
+    <div class="richCntt"> 
+      <div class=inner_wrpp>
+        {{ module.content }}
+      </div>
+    </div>
   </div>
-</section>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

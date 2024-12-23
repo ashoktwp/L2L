@@ -1,4 +1,4 @@
-const $gallery = $('#gallery');
+const $gallery = $('.MainsliderCnnt');
 
 $gallery .slick({
   autoplay: true,

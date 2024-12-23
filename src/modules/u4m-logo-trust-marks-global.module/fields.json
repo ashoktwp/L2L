@@ -4,7 +4,7 @@
   "display_width" : null,
   "label" : "Intro Content",
   "required" : false,
-  "locked" : false,
+  "locked" : true,
   "children" : [ {
     "id" : "c5ccdda8-6960-e255-a51f-c61077a633ca",
     "name" : "include_eyebrow_text",
@@ -372,7 +372,7 @@
   "display_width" : null,
   "label" : "Items Group",
   "required" : false,
-  "locked" : false,
+  "locked" : true,
   "occurrence" : {
     "min" : null,
     "max" : null,
@@ -511,7 +511,7 @@
   "display_width" : null,
   "label" : "Module Settings",
   "required" : false,
-  "locked" : false,
+  "locked" : true,
   "children" : [ {
     "id" : "11a4da11-8c84-8292-920d-0ed9d7352239",
     "name" : "logo_theme",
@@ -540,7 +540,7 @@
   "display_width" : null,
   "label" : "Module Overrides",
   "required" : false,
-  "locked" : false,
+  "locked" : true,
   "children" : [ {
     "id" : "enable_overrides",
     "name" : "enable_overrides",
@@ -713,7 +713,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "top-padding-default"
+    "default" : "top-padding-custom"
   }, {
     "id" : "custom_top_padding",
     "name" : "custom_top_padding",
@@ -732,7 +732,7 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
-    "default" : 100
+    "default" : 60
   }, {
     "id" : "custom_top_padding_mobile",
     "name" : "custom_top_padding_mobile",
@@ -751,7 +751,7 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
-    "default" : 50
+    "default" : 60
   }, {
     "id" : "module_overrides.bottom_padding",
     "name" : "bottom_padding",
@@ -773,7 +773,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "bottom-padding-default"
+    "default" : "bottom-padding-custom"
   }, {
     "id" : "custom_bottom_padding",
     "name" : "custom_bottom_padding",
@@ -792,7 +792,7 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
-    "default" : 100
+    "default" : 60
   }, {
     "id" : "custom_bottom_padding_mobile",
     "name" : "custom_bottom_padding_mobile",
@@ -811,7 +811,7 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
-    "default" : 50
+    "default" : 60
   }, {
     "id" : "3eccf45d-b0dc-4bac-42a0-f923e4405158",
     "name" : "reverse_text",
@@ -1017,12 +1017,12 @@
     "bottom_margin" : "bottom-margin-default",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
-    "top_padding" : "top-padding-default",
-    "custom_top_padding" : 100,
-    "custom_top_padding_mobile" : 50,
-    "bottom_padding" : "bottom-padding-default",
-    "custom_bottom_padding" : 100,
-    "custom_bottom_padding_mobile" : 50,
+    "top_padding" : "top-padding-custom",
+    "custom_top_padding" : 60,
+    "custom_top_padding_mobile" : 60,
+    "bottom_padding" : "bottom-padding-custom",
+    "custom_bottom_padding" : 60,
+    "custom_bottom_padding_mobile" : 60,
     "reverse_text" : false,
     "background_settings" : {
       "background_type" : "color",

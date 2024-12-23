@@ -1,26 +1,19 @@
 {
-  "global": true,
-  "content_types": [
-    "LANDING_PAGE",
-    "SITE_PAGE"
-  ],
-  "icon": "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
-  "host_template_types": [
-    "PAGE"
-  ],
-  "module_id": 184073995327,
-  "js_assets": [
-    {
-      "autoload": true,
-      "path": "../../js/jquery.js",
-      "name": "jquery.js"
-    },
-    {
-      "autoload": true,
-      "path": "../../js/slick.js",
-      "name": "slick.js"
-    }
-  ],
-  "label": "Logo Trust Marks  Global ",
-  "is_available_for_new_content": true
+  "global" : true,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "smart_type" : "NOT_SMART",
+  "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 184073995327,
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../js/jquery.js",
+    "name" : "jquery.js"
+  }, {
+    "autoload" : true,
+    "path" : "../../js/slick.js",
+    "name" : "slick.js"
+  } ],
+  "label" : "Logo Trust Marks  Global ",
+  "is_available_for_new_content" : true
 }
