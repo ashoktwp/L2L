@@ -1,16 +1,15 @@
 header {
+
     .hd_hgh {
-        min-height: 96px;
-
-
         .hd_wrap {
-            background-color: rgba($Nori_Green, 1);
+            background-color: rgba($Nori_Green, 0.79);
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             right: 0;
             z-index: 99;
+            backdrop-filter: blur(10px);
 
             .hd_inr {
                 display: flex;
@@ -140,10 +139,27 @@ header {
                                     display: flex;
                                     gap: 9px;
 
+                                    &:hover {
+                                        color: $Menthol;
+
+                                        .arrow {
+                                            margin-left: 5px;
+
+                                            svg line {
+                                                STROKE: $Menthol !important;
+                                            }
+
+                                            svg polyline {
+                                                STROKE: $Menthol !important;
+                                            }
+                                        }
+                                    }
+
                                     .arrow {
                                         display: inline;
                                         height: 24px;
                                         width: 24px;
+                                        transition: all 0.2s linear;
 
                                         svg line {
                                             fill: $white !important;
@@ -251,11 +267,12 @@ header {
                                     @include buttonThree;
                                     display: flex;
                                     align-items: center;
+                                    font-family: $secondaryFont;
 
                                     span {
                                         display: block;
-                                        width: 22px;
-                                        height: 22px;
+                                        width: 14px;
+                                        height: 14px;
 
                                         svg {
                                             width: 100%;
@@ -308,7 +325,12 @@ header {
 
                     .hd_btn {
                         .hs-button {
-                            @include buttonTwo
+                            @include buttonTwo;
+                            font-family: $secondaryFont;
+
+                            @include tablet {
+                                display: inline-block;
+                            }
                         }
                     }
                 }
@@ -465,6 +487,17 @@ header {
 
                 }
             }
+        }
+    }
+}
+
+
+.withouthd header {
+    .hd_hgh {
+        min-height: 96px;
+
+        .hd_wrap {
+            background-color: rgba($Nori_Green, 1);
         }
     }
 }

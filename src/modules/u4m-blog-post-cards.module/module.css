@@ -196,8 +196,7 @@ section.u4m-blog-post-cards div.wrapper a.blog-post-card .image.filled {
 section.u4m-blog-post-cards div.wrapper a.blog-post-card .image.filled img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin: 0;
 }
 section.u4m-blog-post-cards div.wrapper a.blog-post-card .image a {
@@ -339,8 +338,7 @@ section.u4m-blog-post-cards div.wrapper a.blog-post-card .featured-image {
 section.u4m-blog-post-cards div.wrapper a.blog-post-card .featured-image img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 section.u4m-blog-post-cards div.wrapper a.blog-post-card .content {
   height: calc(100% - 203rem);

@@ -55,7 +55,7 @@
   color: $baseColor;
 
   &:hover {
-    background: $Menthol;
+    background: linear-gradient(308.96deg, $Menthol 0%, $Menthol 100%);
     color: $baseColor;
   }
 
@@ -88,6 +88,7 @@
   @include buttonBase;
   display: inline-flex;
   color: $Nori_Green;
+
   .arrowbtn {
     display: inline-block;
     height: 24px;
@@ -106,6 +107,7 @@
       transition: 0.3s transform;
       -webkit-transition: 0.3s transform;
       width: 24px;
+
       &.btnArrow2 {
         transform: translate(-30px, 30px);
       }
@@ -248,13 +250,14 @@
     }
   }
 
-  > li:only-child {
+  >li:only-child {
     display: none;
   }
 }
 
 // Arrow navigation for slick.js
 @mixin slickArrows {
+
   &.slick-next,
   &.slick-prev {
     &:before {
