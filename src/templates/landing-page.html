@@ -4,14 +4,18 @@
   label: L2L - Landing Page
   screenshotPath: images/u4-landing-page.jpg
 -->
-{% extends './base.html' %} {% block body %}
+{% extends './base.html' %} {% block header %} {% global_partial
+path='./partials/u4m-header-no-navigation.html' %} {% endblock header %} {%
+block body %}
 <main id="main-content">
-  {% dnd_area "L2L_dnd_area" %} {% dnd_section %} {% dnd_column %} {% dnd_row %}
-  {% dnd_module path='../modules/u4m-landing-page-overlap', label='Landing Page
-  Overlap' width="12" %} {% end_dnd_module %} {% end_dnd_row %} {%
+  {% dnd_area "L2L_dnd_area" %} {% dnd_section full_width=true %} {% dnd_column
+  %} {% dnd_row %} {% dnd_module path='../modules/u4m-split-landing-page',
+  label='Landing Page Overlap' width="12" %} {% end_dnd_module %} {% end_dnd_row
+  %} {% end_dnd_column %} {% end_dnd_section %} {% end_dnd_area %} {% dnd_area
+  "L2L_dnd_areaQquote" %} {% dnd_section full_width=true %} {% dnd_column %} {%
+  dnd_row %} {% dnd_module path='../modules/u4m-quote-cards-slider',
+  label='Quote' width="12" %} {% end_dnd_module %} {% end_dnd_row %} {%
   end_dnd_column %} {% end_dnd_section %} {% end_dnd_area %}
 </main>
-{% endblock body %}
-{% block footer %}
-{% global_partial path='./partials/u4m-footer-no-navigation.html' %}
-{% endblock footer %}
+{% endblock body %} {% block footer %} {% global_partial
+path='./partials/u4m-footer-no-navigation.html' %} {% endblock footer %}

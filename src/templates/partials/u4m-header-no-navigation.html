@@ -1,0 +1,20 @@
+<!--
+templateType: global_partial
+label: Header no navigation
+-->
+
+<header>
+  <div class="hd_hgh lpHeader">
+    <div class="hd_wrap">
+      <div class="page-center">
+        <div class="hd_inr">
+          <div class="hd_logo">
+            {% module "header_logo" path="@hubspot/logo", label="Header Logo",
+            img={src= "{{ get_asset_url('../..//templates/images/L2L.svg')}}",
+            width=52, override_inherited_src= true, alt="L2L" } , link="/" %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

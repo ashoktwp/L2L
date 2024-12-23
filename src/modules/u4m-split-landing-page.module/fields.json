@@ -14,7 +14,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "cb3997b3-3dd3-d2f3-1b1e-ffde45061688",
     "name" : "logo",
@@ -392,7 +392,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "include_logo" : true,
+    "include_logo" : false,
     "logo" : {
       "size_type" : "auto",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/L2L-1.png",
@@ -767,7 +767,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "top-padding-default"
+    "default" : "top-padding-custom"
   }, {
     "id" : "custom_top_padding",
     "name" : "custom_top_padding",
@@ -786,7 +786,7 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
-    "default" : 100
+    "default" : 194
   }, {
     "id" : "custom_top_padding_mobile",
     "name" : "custom_top_padding_mobile",
