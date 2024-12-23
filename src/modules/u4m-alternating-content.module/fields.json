@@ -680,18 +680,18 @@
         "access" : null
       },
       "responsive" : true,
-      "resizable" : true,
+      "resizable" : false,
       "show_loading" : false,
       "type" : "image",
       "default" : {
         "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/menu_card.png",
-        "alt" : "menu_card",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Real-time%20visibility.png",
+        "alt" : "Real-time visibility",
         "loading" : "lazy",
-        "width" : 552,
-        "height" : 396,
-        "max_width" : 552,
-        "max_height" : 396
+        "width" : 1024,
+        "height" : 697,
+        "max_width" : 1024,
+        "max_height" : 697
       }
     }, {
       "id" : "d4fed55c-05b0-c157-95b7-a82efc372dd9",
@@ -787,13 +787,13 @@
       "media_type" : "img",
       "image" : {
         "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/menu_card.png",
-        "alt" : "menu_card",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Real-time%20visibility.png",
+        "alt" : "Real-time visibility",
         "loading" : "lazy",
-        "width" : 552,
-        "height" : 396,
-        "max_width" : 552,
-        "max_height" : 396
+        "width" : 1024,
+        "height" : 697,
+        "max_width" : 1024,
+        "max_height" : 697
       },
       "video_section" : {
         "video_type" : "file",
@@ -819,13 +819,13 @@
       "media_type" : "img",
       "image" : {
         "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/menu_card.png",
-        "alt" : "menu_card",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Real-time%20visibility.png",
+        "alt" : "Real-time visibility",
         "loading" : "lazy",
-        "width" : 552,
-        "height" : 396,
-        "max_width" : 552,
-        "max_height" : 396
+        "width" : 1024,
+        "height" : 697,
+        "max_width" : 1024,
+        "max_height" : 697
       },
       "video_section" : {
         "video_type" : "file",
@@ -838,21 +838,21 @@
     "text_alignment" : "left",
     "content" : {
       "eyebrow_text_copy" : "Eyebrow Text",
-      "heading" : "Real-time visibility,real-time action",
-      "content" : "<p>L2L empowers frontline teams with instant access to critical information and guided workflows and learning pathways, enabling them to proactively ad dress issues and optimize operations.</p>",
+      "heading" : "Data-driven decision making, always in the workflow",
+      "content" : "<p>By providing unparalleled insight into production processes, L2L helps organizations identify bottlenecks, measure performance, and make data-driven decisions that drive continuous improvement.</p>",
       "button_group" : [ ]
     },
     "media_column" : {
       "media_type" : "img",
       "image" : {
         "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/menu_card.png",
-        "alt" : "menu_card",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Data-driven%20decision.jpg",
+        "alt" : "Real-time visibility",
         "loading" : "lazy",
-        "width" : 552,
-        "height" : 396,
-        "max_width" : 552,
-        "max_height" : 396
+        "width" : 1024,
+        "height" : 697,
+        "max_width" : 1024,
+        "max_height" : 697
       },
       "video_section" : {
         "video_type" : "file",
@@ -865,21 +865,21 @@
     "text_alignment" : "left",
     "content" : {
       "eyebrow_text_copy" : "Eyebrow Text",
-      "heading" : "Real-time visibility,real-time action",
-      "content" : "<p>L2L empowers frontline teams with instant access to critical information and guided workflows and learning pathways, enabling them to proactively ad dress issues and optimize operations.</p>",
+      "heading" : "Collaborative problem solving",
+      "content" : "<p>L2L fosters a culture of frictionless collaboration, enabling teams to work together to solve problems, share best practices, and drive productivity across the organization - from the shop floor to the top floor.</p>",
       "button_group" : [ ]
     },
     "media_column" : {
       "media_type" : "img",
       "image" : {
         "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/menu_card.png",
-        "alt" : "menu_card",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Collaborative.jpg",
+        "alt" : "Real-time visibility",
         "loading" : "lazy",
-        "width" : 552,
-        "height" : 396,
-        "max_width" : 552,
-        "max_height" : 396
+        "width" : 1024,
+        "height" : 697,
+        "max_width" : 1024,
+        "max_height" : 697
       },
       "video_section" : {
         "video_type" : "file",

@@ -1,14 +1,24 @@
 @import "../../css/_module-imports";
 
 section.u4m-hero-left-aligned {
-  padding-top: 94px;
+  padding-top: 190px;
   padding-bottom: 94px;
   min-height: 864px;
+  &.u4m-hero-center {
+    padding-top: 307px;
+    min-height: 1024px;
+    @include tabletvert {
+      padding: 50px 0;
+      padding-top: 145px;
+      min-height: auto;
+    }
+  }
   @include tabletvert {
     padding: 50px 0;
+    padding-top: 145px;
     min-height: auto;
   }
-  .center {
+  .hero-align-center {
     .intro_wrapp {
       flex-direction: column-reverse;
     }
@@ -24,6 +34,12 @@ section.u4m-hero-left-aligned {
 
     .media-column {
       width: 100%;
+      img {
+        min-height: 390px;
+        max-height: 390px;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
   video.video-bg {
@@ -61,6 +77,10 @@ section.u4m-hero-left-aligned {
     video {
       width: 100%;
       vertical-align: middle;
+    }
+    iframe.iframe_video {
+      width: 100%;
+      min-height: 390px;
     }
   }
   .intro_wrapp {

@@ -541,6 +541,14 @@
   "label" : "Form Settings",
   "required" : false,
   "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "include_form",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
   "children" : [ {
     "id" : "ce8117f1-4150-676e-aa32-7b43c9f4ca56",
     "name" : "background_settings",
@@ -639,7 +647,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "top-margin-default"
+    "default" : "top-margin-none"
   }, {
     "id" : "custom_top_margin",
     "name" : "custom_top_margin",
@@ -699,7 +707,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "bottom-margin-default"
+    "default" : "bottom-margin-none"
   }, {
     "id" : "custom_bottom_margin",
     "name" : "custom_bottom_margin",
@@ -1057,10 +1065,10 @@
   "type" : "group",
   "default" : {
     "enable_overrides" : true,
-    "top_margin" : "top-margin-default",
+    "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
-    "bottom_margin" : "bottom-margin-default",
+    "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
     "top_padding" : "top-padding-default",
