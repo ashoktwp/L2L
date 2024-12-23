@@ -8911,22 +8911,22 @@ section.u4m-blog-post div.comments div.content form .hs-button:disabled {
   background-color: #969696;
   border-color: #969696;
 }
-section.u4m-blog-post .u4m-blog-post .post_content {
+section.u4m-blog-post .post_content {
   padding-top: 96px;
   padding-bottom: 70px;
   background-color: #f3faf4;
 }
 @media (max-width: 767px) {
-  section.u4m-blog-post .u4m-blog-post .post_content {
+  section.u4m-blog-post .post_content {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-wrapper {
+section.u4m-blog-post .post_content .post-wrapper {
   max-width: 786px;
   margin: 0 auto;
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-wrapper .content p {
+section.u4m-blog-post .post_content .post-wrapper .content p {
   font-size: 21rem;
   line-height: 1.57;
   color: #2e2e2e;
@@ -8936,7 +8936,7 @@ section.u4m-blog-post .u4m-blog-post .post_content .post-wrapper .content p {
   margin-top: 0;
   margin-bottom: 41px;
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-wrapper .content blockquote {
+section.u4m-blog-post .post_content .post-wrapper .content blockquote {
   border-left: #409650 solid 2px;
   margin: 0;
   padding-left: 29px;
@@ -8946,21 +8946,21 @@ section.u4m-blog-post .u4m-blog-post .post_content .post-wrapper .content blockq
   font-weight: 500;
   font-family: "Inter";
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-wrapper .content blockquote p {
+section.u4m-blog-post .post_content .post-wrapper .content blockquote p {
   margin: 0;
   color: #102F04;
   font-weight: 500;
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-wrapper .content img {
+section.u4m-blog-post .post_content .post-wrapper .content img {
   border-radius: 13px;
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-wrapper .topics {
+section.u4m-blog-post .post_content .post-wrapper .topics {
   font-size: 14rem;
   margin-top: 56px;
   margin-bottom: 66px;
   line-height: 1;
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-wrapper .topics .link {
+section.u4m-blog-post .post_content .post-wrapper .topics .link {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -8969,7 +8969,7 @@ section.u4m-blog-post .u4m-blog-post .post_content .post-wrapper .topics .link {
   color: #2c6938;
   text-transform: uppercase;
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-share {
+section.u4m-blog-post .post_content .post-share {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -8980,7 +8980,7 @@ section.u4m-blog-post .u4m-blog-post .post_content .post-share {
   top: 110px;
 }
 @media (max-width: 991px) {
-  section.u4m-blog-post .u4m-blog-post .post_content .post-share {
+  section.u4m-blog-post .post_content .post-share {
     position: static;
     float: none;
     max-width: 786px;
@@ -8994,7 +8994,7 @@ section.u4m-blog-post .u4m-blog-post .post_content .post-share {
     margin-bottom: 20px;
   }
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-share .share_text {
+section.u4m-blog-post .post_content .post-share .share_text {
   font-size: 14rem;
   font-family: "Inter";
   font-style: normal;
@@ -9005,29 +9005,29 @@ section.u4m-blog-post .u4m-blog-post .post_content .post-share .share_text {
   margin-bottom: 22px;
 }
 @media (max-width: 991px) {
-  section.u4m-blog-post .u4m-blog-post .post_content .post-share .share_text {
+  section.u4m-blog-post .post_content .post-share .share_text {
     margin-bottom: 0;
   }
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-share a {
+section.u4m-blog-post .post_content .post-share a {
   line-height: 1;
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-share a:not(:last-child) {
+section.u4m-blog-post .post_content .post-share a:not(:last-child) {
   margin-bottom: 17px;
 }
 @media (max-width: 991px) {
-  section.u4m-blog-post .u4m-blog-post .post_content .post-share a:not(:last-child) {
+  section.u4m-blog-post .post_content .post-share a:not(:last-child) {
     margin-bottom: 0;
   }
 }
-section.u4m-blog-post .u4m-blog-post .post_content .post-share svg {
+section.u4m-blog-post .post_content .post-share svg {
   max-width: 21px;
   width: 100%;
   height: 24px;
   fill: #2c6938;
 }
 @media (max-width: 991px) {
-  section.u4m-blog-post .u4m-blog-post .post_content .post-share svg {
+  section.u4m-blog-post .post_content .post-share svg {
     height: 15px;
     max-width: 100%;
   }
