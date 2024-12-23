@@ -100,31 +100,58 @@
 
 {% require_js %}
 <script>
-  $(document).ready(function () {
-    let isInitialized = false;
+document.addEventListener("DOMContentLoaded", () => {
+  const sliderSection = document.querySelector(".u4m-slider-tabs-top-variation-c");
+  let isInitialized = false; // Flag to track initialization
+
+  if (sliderSection) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !isInitialized) {
+          // Initialize the slider functionality
+          initSliderFunctionality();
+          isInitialized = true; // Mark as initialized
+          observer.disconnect(); // Stop observing after initialization
+        }
+      });
+    }, {
+      root: null, // Default to viewport
+      rootMargin: '0px 0px -1000px 0px', // Trigger 200px before the section is fully in view
+      threshold: 0 // Trigger when any part of the section is visible
+    });
+
+    observer.observe(sliderSection);
+  }
+
+  function initSliderFunctionality() {
+    // Add the slider animation
+    $('.u4m-slider-tabs-top-variation-c').addClass('hide');
+    setTimeout(function () {
+      $('.u4m-slider-tabs-top-variation-c').removeClass('hide');
+    }, 1500);
 
     // Initialize Slick Slider
-    const $sliderFor = $('.slider-for'); // Cache the selector
+    const $sliderFor = $('.slider-for');
     const $sliderNav = $('.slider-nav');
 
     if ($sliderFor.length) {
       $sliderFor
         .on('init', function () {
-        isInitialized = true; // Mark slider as initialized
-        setTimeout(startProgressAnimation, 50); // Delay slightly to ensure the slider is ready
-      })
+          isInitialized = true; // Mark slider as initialized
+          setTimeout(startProgressAnimation, 50); // Delay slightly to ensure the slider is ready
+        })
         .slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        fade: true,
-        asNavFor: '.slider-nav',
-        autoplay: true,
-        autoplaySpeed: 5000, // Match SVG animation duration
-        pauseOnHover: false,
-        pauseOnFocus: false,
-        infinite: true,
-      });
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          fade: true,
+          asNavFor: '.slider-nav',
+          autoplay: true,
+          autoplaySpeed: 5000, // Match SVG animation duration
+          pauseOnHover: false,
+          pauseOnFocus: false,
+          infinite: true,
+        });
     } else {
       console.error('No element found with class .slider-for');
       return; // Exit script if slider-for does not exist
@@ -143,7 +170,6 @@
 
     // Function to start progress animation
     function startProgressAnimation() {
-      if (!isInitialized) return; // Ensure slider is fully initialized
       const circle = document.querySelector('.progress circle');
       if (!circle) {
         console.error('No SVG circle element found for progress animation');
@@ -197,17 +223,12 @@
       resetProgressAnimation();
     });
 
-    // Ensure animation starts immediately on page load
+    // Ensure animation starts immediately after initialization
     $sliderFor.slick('slickGoTo', 0); // Force the slider to the first slide
     setTimeout(startProgressAnimation, 100); // Slight delay to ensure slider is fully rendered
-
     resetProgressAnimation();
-  });
-
-  $('.u4m-slider-tabs-top-variation-c').addClass('hide');
-  setTimeout(function(){
-    $('.u4m-slider-tabs-top-variation-c').removeClass('hide');
-  },1500)
+  }
+});
 
 </script>
 {% end_require_js %}

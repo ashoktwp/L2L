@@ -269,15 +269,17 @@
       }
     }
     .slider-tabs-content {
+      .tabs-content-items {
+        .slick-arrow {
+          opacity: 0;
+        }
+      }
       position: relative;
       z-index: 3;
     }
   }
   .slider-tabs-wrp {
     position: relative;
-    .slick-arrow {
-      opacity: 0;
-    }
   }
   .arrow-section {
     .tab-prev-arrow {
