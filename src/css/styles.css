@@ -9773,6 +9773,7 @@ header .hd_hgh .hd_wrap {
   right: 0;
   z-index: 99;
   backdrop-filter: blur(10px);
+  box-shadow: 0 0.6021873018px 0.6021873018px -1.25px rgba(0, 0, 0, 0.9), 0 2.2885333032px 2.2885333032px -2.5px rgba(0, 0, 0, 0.8), 0 10px 10px -3.75px rgba(0, 0, 0, 0.3);
 }
 header .hd_hgh .hd_wrap .hd_inr {
   display: flex;
@@ -10269,4 +10270,8 @@ header .hd_hgh .hd_wrap .hd_inr .hd_right .hd_btn .hs-button:active {
 }
 .withouthd header .hd_hgh .hd_wrap {
   background-color: #0e2514;
+}
+
+.withouthd.page-scrolled header .hd_wrap {
+  background-color: rgba(14, 37, 20, 0.79);
 }

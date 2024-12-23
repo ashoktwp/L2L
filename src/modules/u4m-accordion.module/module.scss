@@ -1,6 +1,6 @@
 @import "../../css/_module-imports";
 
-.u4m-accordion {
+.u4m-accordion.dnd_padd {
   @include tabletMin {
     padding: 83px 148px;
   }

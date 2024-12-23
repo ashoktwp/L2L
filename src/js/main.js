@@ -30,3 +30,8 @@ window.addEventListener("scroll", function () {
     document.body.classList.remove("page-scrolled");
   }
 });
+$(document).ready(function () {
+  if (!$('section').hasClass('u4m-hero-left-aligned')) {
+    $("body").addClass("withouthd");
+  }
+})

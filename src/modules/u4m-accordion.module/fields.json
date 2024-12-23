@@ -432,7 +432,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
@@ -786,7 +786,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : ""
+      "default" : "frostee_bg"
     }, {
       "id" : "2659085b-598d-e346-643e-6a9ebb3bae70",
       "name" : "select_gradient",
@@ -822,7 +822,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "",
+      "select_color" : "frostee_bg",
       "select_gradient" : ""
     }
   }, {
@@ -891,7 +891,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_overrides" : false,
+    "enable_overrides" : true,
     "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
@@ -913,7 +913,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "",
+      "select_color" : "frostee_bg",
       "select_gradient" : ""
     },
     "container" : {
