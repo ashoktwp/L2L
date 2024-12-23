@@ -185,7 +185,8 @@ html {
 }
 .u4m-slider-gallery .innerCntt .slick-track img {
   height: 100% !important;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100% !important;
 }
 .u4m-slider-gallery .innerCntt .slick-center {
