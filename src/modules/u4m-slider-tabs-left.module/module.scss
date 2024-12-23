@@ -1,236 +1,241 @@
 @import "../../css/_module-imports";
 
 .u4m-slider-tabs-left {
-    &.reverse-text {
-        .slider-tabs-wrapper {
-            .right_col {
-                .acc-items {
-                    .toggle_section {
-                        > * {
-                            color: $white;
-                        }
-                        p {
-                            color: $Pale_Mint;
-                        }
-                    }
-                }
-            }
-        }
-    }
+  &.reverse-text {
     .slider-tabs-wrapper {
-        position: relative;
-        z-index: 9;
-        .row {
-            display: flex;
-            gap: 40px;
-            gap: 58px;
-            align-items: center;
-            @include tabletmid {
-                flex-wrap: wrap;
+      .right_col {
+        .acc-items {
+          .toggle_section {
+            > * {
+              color: $white;
             }
+            p {
+              color: $Pale_Mint;
+            }
+          }
         }
-        .left_col {
-            border-radius: 25px;
-            overflow: hidden;
-            flex: 1;
-            flex: unset;
-            max-width: 582px;
-            width: 100%;
-            .img-items {
-                display: none;
-                height: 720px;
-                img {
-                    width: 100%;
-                    border-radius: 34px;
-                    width: 100%;
-                    object-fit: cover;
-                    height: 100%;
-                }
-            }
-            .img-items.acc-open {
-                display: block;
-            }
-            @include midlaptop {
-                width: calc(50% - 29px);
-                max-width: 100%;
-            }
-            @include tabletmid {
-                width: 100%;
-                display: none;
-            }
-        }
-        .right_col {
-            flex: 1;
-            flex: unset;
-            width: calc(100% - 582px);
-            .acc-items {
-                .acc-count {
-                    display: flex;
-                    padding-bottom: 1px;
-                    .toggle_section {
-                        flex: 100%;
-                    }
-                    > span {
-                        padding-right: 50px;
-                        transition: all 0.3s;
-                        line-height: 30px;
-                        @include size21;
-                        font-weight: 400;
-                        font-family: $secondaryFont;
-                        opacity: 0.45;
-                        @include phone {
-                            padding-right: 25px;
-                        }
-                    }
-                    .title-section {
-                        width: 100%;
-                        .title_inner {
-                            display: flex;
-                            justify-content: space-between;
-                            cursor: pointer;
-                            padding-bottom: 20px;
-                            h3 {
-                                margin: 0;
-                                transition: all 0.3s;
-                                line-height: 1.21875;
-                                opacity: 0.45;
-                            }
-                            .icon {
-                                position: relative;
-                                overflow: hidden;
-                                cursor: pointer;
-                                width: 36px;
-                                height: 36px;
-                                span {
-                                    width: 36px;
-                                    height: 36px;
-                                    svg {
-                                        width: 36px;
-                                        height: 36px;
-                                        @include phone {
-                                            height: 25px;
-                                            width: 25px;
-                                        }
-                                    }
-                                    @include phone {
-                                        height: 25px;
-                                        width: 25px;
-                                    }
-                                }
-                                span.plus-icons {
-                                    padding: 0;
-                                }
-                                .arrowbtn {
-                                    display: none !important;
-                                }
-                                @include phone {
-                                    height: 25px;
-                                    width: 25px;
-                                }
-                            }
-                            &:hover {
-                                * {
-                                    opacity: 1;
-                                }
-                            }
-                        }
-                        .progress {
-                            width: 100%;
-                            height: 2px;
-                            background: rgba($White, 0.27);
-                            position: relative;
-                            .progress-line {
-                                height: 2px;
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                background: $Medium_Aquamarine;
-                            }
-                        }
-                    }
-                    &:hover {
-                        > span {
-                            opacity: 1;
-                        }
-                    }
-                }
-                .toggle_section {
-                    display: none;
-                    padding-bottom: 0;
-                    padding-top: 23px;
-                    padding-left: 75px;
-                    .img-wrpp {
-                        display: none;
-
-                        img {
-                            border-radius: 34px;
-                        }
-
-                        @include tabletmid {
-                            display: block;
-                            margin-bottom: 30px;
-                        }
-                    }
-                    p {
-                        margin: 0;
-                        @include size14;
-                        line-height: 24px;
-                        &:last-child {
-                            margin: 0;
-                        }
-                    }
-                    @include phone {
-                        padding-left: 50px;
-                    }
-                }
-                margin: 0;
-                padding: 0;
-                padding-bottom: 17px;
-                &:last-child {
-                    margin: 0;
-                }
-            }
-            .acc-items.acc-open {
-                .acc-count {
-                    > span {
-                        opacity: 1;
-                    }
-                    .title-section {
-                        .title_inner {
-                            h3 {
-                                opacity: 1;
-                            }
-                            .icon {
-                                span.plus-icons {
-                                    display: none;
-                                }
-                                .arrowbtn {
-                                    display: block !important;
-                                }
-                            }
-                        }
-                    }
-                    &:hover {
-                        > span {
-                            opacity: 1;
-                        }
-                    }
-                }
-                padding: 0;
-            }
-            .accordion-section {
-                display: flex;
-                flex-direction: column;
-                gap: 29px;
-            }
-            @include midlaptop {
-                width: calc(50% - 29px);
-                max-width: 100%;
-            }
-
-            @include tabletmid {
-                width: 100%;
-            }
-        }
+      }
     }
+  }
+  .slider-tabs-wrapper {
+    position: relative;
+    z-index: 9;
+    .row {
+      display: flex;
+      gap: 40px;
+      gap: 58px;
+      align-items: center;
+      @include tabletmid {
+        flex-wrap: wrap;
+      }
+    }
+    .left_col {
+      border-radius: 25px;
+      overflow: hidden;
+      flex: 1;
+      flex: unset;
+      max-width: 582px;
+      width: 100%;
+      .img-items {
+        display: none;
+        height: 720px;
+        img {
+          width: 100%;
+          border-radius: 34px;
+          width: 100%;
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+      .img-items.acc-open {
+        display: block;
+      }
+      @include midlaptop {
+        width: calc(50% - 29px);
+        max-width: 100%;
+      }
+      @include tabletmid {
+        width: 100%;
+        display: none;
+      }
+    }
+    .right_col {
+      flex: 1;
+      flex: unset;
+      width: calc(100% - 582px);
+      .acc-items {
+        .acc-count {
+          display: flex;
+          padding-bottom: 1px;
+          .toggle_section {
+            flex: 100%;
+          }
+          > span {
+            padding-right: 50px;
+            transition: all 0.3s;
+            line-height: 30px;
+            @include size21;
+            font-weight: 400;
+            font-family: $secondaryFont;
+            opacity: 0.45;
+            @include phone {
+              padding-right: 25px;
+            }
+          }
+          .title-section {
+            width: 100%;
+            .title_inner {
+              display: flex;
+              justify-content: space-between;
+              cursor: pointer;
+              padding-bottom: 20px;
+              h3 {
+                margin: 0;
+                transition: all 0.3s;
+                line-height: 1.21875;
+                opacity: 0.45;
+              }
+              .icon {
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                width: 36px;
+                height: 36px;
+                span {
+                  width: 36px;
+                  height: 36px;
+                  svg {
+                    width: 36px;
+                    height: 36px;
+                    @include phone {
+                      height: 25px;
+                      width: 25px;
+                    }
+                  }
+                  @include phone {
+                    height: 25px;
+                    width: 25px;
+                  }
+                }
+                span.plus-icons {
+                  padding: 0;
+                }
+                .arrowbtn {
+                  display: none !important;
+                }
+                @include phone {
+                  height: 25px;
+                  width: 25px;
+                }
+              }
+              &:hover {
+                * {
+                  opacity: 1;
+                }
+              }
+            }
+            .progress {
+              width: 100%;
+              height: 2px;
+              background: rgba($White, 0.27);
+              position: relative;
+              .progress-line {
+                height: 2px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: $Medium_Aquamarine;
+              }
+            }
+          }
+          &:hover {
+            > span {
+              opacity: 1;
+            }
+          }
+        }
+        .toggle_section {
+          display: none;
+          padding-bottom: 0;
+          padding-top: 23px;
+          padding-left: 75px;
+          .img-wrpp {
+            display: none;
+
+            img {
+              border-radius: 34px;
+            }
+
+            @include tabletmid {
+              display: block;
+              margin-bottom: 30px;
+            }
+          }
+          p {
+            margin: 0;
+            @include size14;
+            line-height: 24px;
+            &:last-child {
+              margin: 0;
+            }
+          }
+          @include phone {
+            padding-left: 50px;
+          }
+        }
+        margin: 0;
+        padding: 0;
+        padding-bottom: 17px;
+        &:last-child {
+          margin: 0;
+        }
+        &:first-child {
+          .toggle_section {
+            display: block;
+          }
+        }
+      }
+      .acc-items.acc-open {
+        .acc-count {
+          > span {
+            opacity: 1;
+          }
+          .title-section {
+            .title_inner {
+              h3 {
+                opacity: 1;
+              }
+              .icon {
+                span.plus-icons {
+                  display: none;
+                }
+                .arrowbtn {
+                  display: block !important;
+                }
+              }
+            }
+          }
+          &:hover {
+            > span {
+              opacity: 1;
+            }
+          }
+        }
+        padding: 0;
+      }
+      .accordion-section {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+      }
+      @include midlaptop {
+        width: calc(50% - 29px);
+        max-width: 100%;
+      }
+
+      @include tabletmid {
+        width: 100%;
+      }
+    }
+  }
 }
