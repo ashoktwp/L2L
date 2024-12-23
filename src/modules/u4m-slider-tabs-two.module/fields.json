@@ -377,7 +377,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : null,
-    "default" : 6
+    "default" : 10
   },
   "children" : [ {
     "id" : "3891b69d-3940-779c-231b-922ca2f4fe49",
@@ -420,7 +420,7 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "hubspot", "Hubspot" ], [ "vimeo", "Vimeo" ] ],
+    "choices" : [ [ "hubspot", "Hubspot" ], [ "vimeo", "External" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
@@ -447,7 +447,7 @@
     "id" : "32aae181-63a4-aef7-8ea3-146f08a787ac",
     "name" : "vimeo_id",
     "display_width" : null,
-    "label" : "Vimeo Id",
+    "label" : "Embed URL",
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
@@ -462,7 +462,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "706460799"
+    "default" : "https://player.vimeo.com/video/706460799?autoplay=1"
   }, {
     "id" : "9ee4e87d-737f-dec9-1649-db2edf8ec8f4",
     "name" : "logo_image",
@@ -476,13 +476,13 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/ABB_logo.png",
+      "alt" : "ABB",
       "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
+      "width" : 114,
+      "height" : 45,
+      "max_width" : 114,
+      "max_height" : 45
     }
   }, {
     "id" : "b7ac2525-fb10-ea10-8424-53885ee324d5",
@@ -566,16 +566,16 @@
       "max_height" : 297
     },
     "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
+    "vimeo_id" : "https://player.vimeo.com/video/706460799?autoplay=1",
     "logo_image" : {
       "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/ABB_logo.png",
+      "alt" : "ABB",
       "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
+      "width" : 114,
+      "height" : 45,
+      "max_width" : 114,
+      "max_height" : 45
     },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
@@ -591,7 +591,7 @@
       "no_follow" : false
     }
   }, {
-    "tab_title" : "Industry 1",
+    "tab_title" : "Industry 2",
     "image_field" : {
       "size_type" : "auto",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
@@ -603,16 +603,16 @@
       "max_height" : 297
     },
     "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
+    "vimeo_id" : "https://player.vimeo.com/video/706460799?autoplay=1",
     "logo_image" : {
       "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/ABB_logo.png",
+      "alt" : "ABB",
       "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
+      "width" : 114,
+      "height" : 45,
+      "max_width" : 114,
+      "max_height" : 45
     },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
@@ -628,7 +628,7 @@
       "no_follow" : false
     }
   }, {
-    "tab_title" : "Industry 1",
+    "tab_title" : "Industry 3",
     "image_field" : {
       "size_type" : "auto",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
@@ -640,16 +640,16 @@
       "max_height" : 297
     },
     "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
+    "vimeo_id" : "https://player.vimeo.com/video/706460799?autoplay=1",
     "logo_image" : {
       "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/ABB_logo.png",
+      "alt" : "ABB",
       "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
+      "width" : 114,
+      "height" : 45,
+      "max_width" : 114,
+      "max_height" : 45
     },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
@@ -665,7 +665,7 @@
       "no_follow" : false
     }
   }, {
-    "tab_title" : "Industry 1",
+    "tab_title" : "Industry 4",
     "image_field" : {
       "size_type" : "auto",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
@@ -677,16 +677,16 @@
       "max_height" : 297
     },
     "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
+    "vimeo_id" : "https://player.vimeo.com/video/706460799?autoplay=1",
     "logo_image" : {
       "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/ABB_logo.png",
+      "alt" : "ABB",
       "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
+      "width" : 114,
+      "height" : 45,
+      "max_width" : 114,
+      "max_height" : 45
     },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
@@ -702,7 +702,7 @@
       "no_follow" : false
     }
   }, {
-    "tab_title" : "Industry 1",
+    "tab_title" : "Industry 5",
     "image_field" : {
       "size_type" : "auto",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
@@ -714,16 +714,16 @@
       "max_height" : 297
     },
     "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
+    "vimeo_id" : "https://player.vimeo.com/video/706460799?autoplay=1",
     "logo_image" : {
       "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/ABB_logo.png",
+      "alt" : "ABB",
       "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
+      "width" : 114,
+      "height" : 45,
+      "max_width" : 114,
+      "max_height" : 45
     },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
@@ -739,7 +739,7 @@
       "no_follow" : false
     }
   }, {
-    "tab_title" : "Industry 1",
+    "tab_title" : "Industry 6",
     "image_field" : {
       "size_type" : "auto",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
@@ -751,16 +751,164 @@
       "max_height" : 297
     },
     "select_video_type" : "vimeo",
-    "vimeo_id" : "706460799",
+    "vimeo_id" : "https://player.vimeo.com/video/706460799?autoplay=1",
     "logo_image" : {
       "size_type" : "auto",
-      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/iOS.png",
-      "alt" : "iOS",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/ABB_logo.png",
+      "alt" : "ABB",
       "loading" : "lazy",
-      "width" : 27,
-      "height" : 27,
-      "max_width" : 27,
-      "max_height" : 27
+      "width" : 114,
+      "height" : 45,
+      "max_width" : 114,
+      "max_height" : 45
+    },
+    "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
+    "author_name" : "JORIS STOLK",
+    "designation" : "Brewery Manager at Lagunitas in Chicago",
+    "read_button_text" : "READ THE CUSTOMER STORY",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "tab_title" : "Industry 7",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+      "alt" : "Rectangle",
+      "loading" : "lazy",
+      "width" : 513,
+      "height" : 297,
+      "max_width" : 513,
+      "max_height" : 297
+    },
+    "select_video_type" : "vimeo",
+    "vimeo_id" : "https://player.vimeo.com/video/706460799?autoplay=1",
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/ABB_logo.png",
+      "alt" : "ABB",
+      "loading" : "lazy",
+      "width" : 114,
+      "height" : 45,
+      "max_width" : 114,
+      "max_height" : 45
+    },
+    "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
+    "author_name" : "JORIS STOLK",
+    "designation" : "Brewery Manager at Lagunitas in Chicago",
+    "read_button_text" : "READ THE CUSTOMER STORY",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "tab_title" : "Industry 8",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+      "alt" : "Rectangle",
+      "loading" : "lazy",
+      "width" : 513,
+      "height" : 297,
+      "max_width" : 513,
+      "max_height" : 297
+    },
+    "select_video_type" : "vimeo",
+    "vimeo_id" : "https://player.vimeo.com/video/706460799?autoplay=1",
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/ABB_logo.png",
+      "alt" : "ABB",
+      "loading" : "lazy",
+      "width" : 114,
+      "height" : 45,
+      "max_width" : 114,
+      "max_height" : 45
+    },
+    "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
+    "author_name" : "JORIS STOLK",
+    "designation" : "Brewery Manager at Lagunitas in Chicago",
+    "read_button_text" : "READ THE CUSTOMER STORY",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "tab_title" : "Industry 9",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+      "alt" : "Rectangle",
+      "loading" : "lazy",
+      "width" : 513,
+      "height" : 297,
+      "max_width" : 513,
+      "max_height" : 297
+    },
+    "select_video_type" : "vimeo",
+    "vimeo_id" : "https://player.vimeo.com/video/706460799?autoplay=1",
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/ABB_logo.png",
+      "alt" : "ABB",
+      "loading" : "lazy",
+      "width" : 114,
+      "height" : 45,
+      "max_width" : 114,
+      "max_height" : 45
+    },
+    "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
+    "author_name" : "JORIS STOLK",
+    "designation" : "Brewery Manager at Lagunitas in Chicago",
+    "read_button_text" : "READ THE CUSTOMER STORY",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "tab_title" : "Industry 10",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Rectangle.png",
+      "alt" : "Rectangle",
+      "loading" : "lazy",
+      "width" : 513,
+      "height" : 297,
+      "max_width" : 513,
+      "max_height" : 297
+    },
+    "select_video_type" : "vimeo",
+    "vimeo_id" : "https://player.vimeo.com/video/706460799?autoplay=1",
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/ABB_logo.png",
+      "alt" : "ABB",
+      "loading" : "lazy",
+      "width" : 114,
+      "height" : 45,
+      "max_width" : 114,
+      "max_height" : 45
     },
     "quote" : "<p><sup>”</sup>Real advantage for employee engagement by involving operators in the creation process.<sup>”</sup></p>",
     "author_name" : "JORIS STOLK",
@@ -835,7 +983,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "top-margin-default"
+    "default" : "top-margin-none"
   }, {
     "id" : "custom_top_margin",
     "name" : "custom_top_margin",
@@ -895,7 +1043,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "bottom-margin-default"
+    "default" : "bottom-margin-none"
   }, {
     "id" : "custom_bottom_margin",
     "name" : "custom_bottom_margin",
@@ -1100,7 +1248,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : ""
     }, {
       "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
       "name" : "background_image",
@@ -1176,7 +1324,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "color",
+      "background_type" : "",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",
@@ -1253,10 +1401,10 @@
   "type" : "group",
   "default" : {
     "enable_overrides" : true,
-    "top_margin" : "top-margin-default",
+    "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
-    "bottom_margin" : "bottom-margin-default",
+    "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
     "top_padding" : "top-padding-default",
@@ -1267,7 +1415,7 @@
     "custom_bottom_padding_mobile" : 50,
     "reverse_text" : false,
     "background_settings" : {
-      "background_type" : "color",
+      "background_type" : "",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",
