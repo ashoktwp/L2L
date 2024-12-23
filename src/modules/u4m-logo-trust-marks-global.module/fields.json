@@ -525,14 +525,14 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "normal"
+    "default" : "grayscale"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "logo_theme" : "normal"
+    "logo_theme" : "grayscale"
   }
 }, {
   "id" : "module_overrides",
