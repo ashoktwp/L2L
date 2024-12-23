@@ -76,7 +76,8 @@ section.u4m-filtered-content .featured .card .image-wrap a .image {
 section.u4m-filtered-content .featured .card .image-wrap .image img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 section.u4m-filtered-content .featured .card .content {
   text-align: left;
@@ -283,7 +284,9 @@ section.u4m-filtered-content .filters form.multi-filter .input input[type=email]
   background-color: #fff;
   padding: 5.5rem 16rem;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   font-family: "Sofia Sans";
   font-size: 18rem;
   line-height: 1.6;
@@ -326,6 +329,9 @@ section.u4m-filtered-content .filters form.multi-filter .input input[type=email]
 section.u4m-filtered-content .filters form.multi-filter .input input[type=email].invalid {
   border: 1rem solid red;
 }
+section.u4m-filtered-content .filters form.multi-filter.hs-form .input input[type=text]::-moz-placeholder, section.u4m-filtered-content .filters form.multi-filter.hs-form .input input[type=number]::-moz-placeholder, section.u4m-filtered-content .filters form.multi-filter.hs-form .input input[type=tel]::-moz-placeholder, section.u4m-filtered-content .filters form.multi-filter.hs-form .input input[type=email]::-moz-placeholder, section.u4m-filtered-content .filters form.multi-filter.mixitup-multifilter .input input[type=text]::-moz-placeholder, section.u4m-filtered-content .filters form.multi-filter.mixitup-multifilter .input input[type=number]::-moz-placeholder, section.u4m-filtered-content .filters form.multi-filter.mixitup-multifilter .input input[type=tel]::-moz-placeholder, section.u4m-filtered-content .filters form.multi-filter.mixitup-multifilter .input input[type=email]::-moz-placeholder, section.u4m-filtered-content .filters form.multi-filter .input input[type=text]::-moz-placeholder, section.u4m-filtered-content .filters form.multi-filter .input input[type=number]::-moz-placeholder, section.u4m-filtered-content .filters form.multi-filter .input input[type=tel]::-moz-placeholder, section.u4m-filtered-content .filters form.multi-filter .input input[type=email]::-moz-placeholder {
+  color: black;
+}
 section.u4m-filtered-content .filters form.multi-filter.hs-form .input input[type=text]::placeholder,
 section.u4m-filtered-content .filters form.multi-filter.hs-form .input input[type=number]::placeholder,
 section.u4m-filtered-content .filters form.multi-filter.hs-form .input input[type=tel]::placeholder,
@@ -361,7 +367,9 @@ section.u4m-filtered-content .filters form.multi-filter.hs-form .input input[typ
   margin-bottom: 23rem;
 }
 section.u4m-filtered-content .filters form.multi-filter.hs-form .input select, section.u4m-filtered-content .filters form.multi-filter.mixitup-multifilter .input select, section.u4m-filtered-content .filters form.multi-filter .input select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
   background-size: 13rem 8rem;
   background-position: 97% 51%;
@@ -783,7 +791,8 @@ section.u4m-filtered-content .filters form.multi-filter fieldset.selects select 
   padding: 10rem 15rem;
   width: 100%;
   -moz-appearance: none;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 section.u4m-filtered-content .filters form.multi-filter fieldset.checkboxes label {
   display: inline-block;
@@ -803,7 +812,9 @@ section.u4m-filtered-content .filters form.multi-filter fieldset.search input {
   background-color: #fff;
   padding: 10rem 15rem;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 section.u4m-filtered-content .filters form.multi-filter.mixitup-sorting {
   display: flex;
@@ -947,7 +958,8 @@ section.u4m-filtered-content #container .resource-card .image.filled {
 section.u4m-filtered-content #container .resource-card .image.filled img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
 }
 section.u4m-filtered-content #container .resource-card .image a {
@@ -1111,7 +1123,8 @@ section.u4m-filtered-content #container .resource-card a.link-wrap .image {
 section.u4m-filtered-content #container .resource-card a.link-wrap .image img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
 }
 section.u4m-filtered-content #container .resource-card a.link-wrap .content {

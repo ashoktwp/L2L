@@ -211,7 +211,8 @@ section.u4m-slider-resource-cards .container .slick-list .slick-track .slick-sli
 section.u4m-slider-resource-cards .container .slick-list .slick-track .slick-slide div .resource-card .image.filled img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
 }
 section.u4m-slider-resource-cards .container .slick-list .slick-track .slick-slide div .resource-card .image a {
@@ -375,7 +376,8 @@ section.u4m-slider-resource-cards .container .slick-list .slick-track .slick-sli
 section.u4m-slider-resource-cards .container .slick-list .slick-track .slick-slide div .resource-card a.link-wrap .image img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
 }
 section.u4m-slider-resource-cards .container .slick-list .slick-track .slick-slide div .resource-card a.link-wrap .content {
