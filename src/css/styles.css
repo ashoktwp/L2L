@@ -77,7 +77,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -407,7 +408,6 @@ select {
   padding: 6px;
   display: inline-block;
   width: 100%;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -2260,11 +2260,9 @@ body {
   box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
-  -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
@@ -2288,10 +2286,6 @@ body {
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -2371,8 +2365,6 @@ body {
   width: 20px;
   height: 20px;
   padding: 0;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   cursor: pointer;
   color: transparent;
@@ -2551,8 +2543,6 @@ body {
   left: 0;
   top: 0;
   padding: 0 8px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -2586,15 +2576,11 @@ body {
 }
 
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-  cursor: -moz-zoom-out;
-  cursor: -webkit-zoom-out;
   cursor: zoom-out;
 }
 
 .mfp-zoom {
   cursor: pointer;
-  cursor: -webkit-zoom-in;
-  cursor: -moz-zoom-in;
   cursor: zoom-in;
 }
 
@@ -2650,7 +2636,6 @@ button.mfp-arrow, button.mfp-close {
   outline: 0;
   padding: 0;
   z-index: 1046;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -2820,8 +2805,6 @@ img.mfp-img {
   height: auto;
   display: block;
   line-height: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 40px 0;
   margin: 0 auto;
@@ -2905,8 +2888,6 @@ img.mfp-img {
     top: auto;
     padding: 3px 5px;
     position: fixed;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
   .mfp-img-mobile .mfp-bottom-bar:empty {
@@ -2930,15 +2911,12 @@ img.mfp-img {
 }
 @media all and (max-width: 900px) {
   .mfp-arrow {
-    -webkit-transform: scale(0.75);
     transform: scale(0.75);
   }
   .mfp-arrow-left {
-    -webkit-transform-origin: 0;
     transform-origin: 0;
   }
   .mfp-arrow-right {
-    -webkit-transform-origin: 100%;
     transform-origin: 100%;
   }
   .mfp-container {
@@ -4218,35 +4196,22 @@ section.u4m-backup-unsubscribe form {
     padding: 30px 20px;
   }
 }
-section.u4m-backup-unsubscribe form h3 {
-  font-size: 14rem;
-  margin-bottom: 30rem;
-  line-height: 1.71;
-  color: #2e2e2e;
-  font-family: "Sofia Sans";
-  font-weight: bold;
-  letter-spacing: 0px;
-}
 section.u4m-backup-unsubscribe form div.legal-consent-container {
   font-size: 14rem;
   line-height: 1.5;
   margin-bottom: 20rem;
 }
+section.u4m-backup-unsubscribe form div.legal-consent-container .hs-form-booleancheckbox-display > span {
+  margin-left: 0px;
+}
 section.u4m-backup-unsubscribe form div.legal-consent-container p,
 section.u4m-backup-unsubscribe form div.legal-consent-container .hs-form-booleancheckbox label {
-  font-family: "Sofia Sans";
-  font-size: 12rem;
-  line-height: 1.6;
-  letter-spacing: 0.35rem;
-  margin-bottom: 10rem;
   font-size: 14rem;
   line-height: 1.5;
+  position: relative;
 }
-@media (max-width: 580px) {
-  section.u4m-backup-unsubscribe form div.legal-consent-container p,
-  section.u4m-backup-unsubscribe form div.legal-consent-container .hs-form-booleancheckbox label {
-    font-size: 12rem;
-  }
+section.u4m-backup-unsubscribe form div.legal-consent-container .hs-form-booleancheckbox label {
+  padding-left: 24px;
 }
 section.u4m-backup-unsubscribe form.hs-form fieldset, section.u4m-backup-unsubscribe form.mixitup-multifilter fieldset, section.u4m-backup-unsubscribe form fieldset {
   max-width: none;
@@ -4264,33 +4229,25 @@ section.u4m-backup-unsubscribe form.hs-form .hs_error_rollup ul.hs-error-msgs li
 }
 section.u4m-backup-unsubscribe form.hs-form .hs_error_rollup ul.hs-error-msgs li label, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs_error_rollup ul.hs-error-msgs li label, section.u4m-backup-unsubscribe form .hs_error_rollup ul.hs-error-msgs li label {
   color: red;
-  font-size: 18rem;
+  font-size: 14rem;
   text-align: center;
-  padding: 10rem 0 0;
+  padding: 0;
   margin: 20rem 0 0;
   display: block;
   flex: 0 0 100%;
   font-weight: normal;
   text-transform: none;
+  vertical-align: middle;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-form-field, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-form-field, section.u4m-backup-unsubscribe form .hs-form-field {
   margin-bottom: 20rem;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-form-field > label, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-form-field > label, section.u4m-backup-unsubscribe form .hs-form-field > label {
-  font-size: 12rem;
-  font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: 1rem;
-  pointer-events: auto;
-  font-family: "Sofia Sans";
   font-size: 14rem;
-  font-weight: bold;
-  line-height: 1.5em;
-  letter-spacing: 1.5rem;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 10rem;
-  margin-bottom: 6rem;
+  font-weight: 600;
+  line-height: 1.72;
+  pointer-events: auto;
+  margin-bottom: 8rem;
   display: inline-block;
 }
 section.u4m-backup-unsubscribe form.hs-form .input input[type=text],
@@ -4303,34 +4260,20 @@ section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=email]
 section.u4m-backup-unsubscribe form .input input[type=number],
 section.u4m-backup-unsubscribe form .input input[type=tel],
 section.u4m-backup-unsubscribe form .input input[type=email] {
-  border: 1rem solid transparent;
-  border-radius: 5rem;
+  border-radius: 8px;
   margin-top: 0rem;
+  font-family: "Inter";
   font-size: 16rem;
+  line-height: 1.75;
   background-color: #fff;
-  padding: 5.5rem 16rem;
+  padding: 19px 20px;
   width: 100%;
-  appearance: none;
-  font-family: "Sofia Sans";
-  font-size: 18rem;
-  line-height: 1.6;
-  letter-spacing: 0.25rem;
-  margin-bottom: 20rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-}
-@media (max-width: 580px) {
-  section.u4m-backup-unsubscribe form.hs-form .input input[type=text],
-  section.u4m-backup-unsubscribe form.hs-form .input input[type=number],
-  section.u4m-backup-unsubscribe form.hs-form .input input[type=tel],
-  section.u4m-backup-unsubscribe form.hs-form .input input[type=email], section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=text],
-  section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=number],
-  section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=tel],
-  section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=email], section.u4m-backup-unsubscribe form .input input[type=text],
-  section.u4m-backup-unsubscribe form .input input[type=number],
-  section.u4m-backup-unsubscribe form .input input[type=tel],
-  section.u4m-backup-unsubscribe form .input input[type=email] {
-    font-size: 16rem;
-  }
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid transparent;
+  color: #2c6938;
+  outline: none;
 }
 section.u4m-backup-unsubscribe form.hs-form .input input[type=text].error, section.u4m-backup-unsubscribe form.hs-form .input input[type=text].invalid,
 section.u4m-backup-unsubscribe form.hs-form .input input[type=number].error,
@@ -4353,6 +4296,9 @@ section.u4m-backup-unsubscribe form .input input[type=email].error,
 section.u4m-backup-unsubscribe form .input input[type=email].invalid {
   border: 1rem solid red;
 }
+section.u4m-backup-unsubscribe form.hs-form .input input[type=text]::-moz-placeholder, section.u4m-backup-unsubscribe form.hs-form .input input[type=number]::-moz-placeholder, section.u4m-backup-unsubscribe form.hs-form .input input[type=tel]::-moz-placeholder, section.u4m-backup-unsubscribe form.hs-form .input input[type=email]::-moz-placeholder, section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=text]::-moz-placeholder, section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=number]::-moz-placeholder, section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=tel]::-moz-placeholder, section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=email]::-moz-placeholder, section.u4m-backup-unsubscribe form .input input[type=text]::-moz-placeholder, section.u4m-backup-unsubscribe form .input input[type=number]::-moz-placeholder, section.u4m-backup-unsubscribe form .input input[type=tel]::-moz-placeholder, section.u4m-backup-unsubscribe form .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
+}
 section.u4m-backup-unsubscribe form.hs-form .input input[type=text]::placeholder,
 section.u4m-backup-unsubscribe form.hs-form .input input[type=number]::placeholder,
 section.u4m-backup-unsubscribe form.hs-form .input input[type=tel]::placeholder,
@@ -4363,7 +4309,7 @@ section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=email]
 section.u4m-backup-unsubscribe form .input input[type=number]::placeholder,
 section.u4m-backup-unsubscribe form .input input[type=tel]::placeholder,
 section.u4m-backup-unsubscribe form .input input[type=email]::placeholder {
-  color: black;
+  color: #2c6938;
 }
 section.u4m-backup-unsubscribe form.hs-form .input input[type=checkbox],
 section.u4m-backup-unsubscribe form.hs-form .input input[type=radio], section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=checkbox],
@@ -4371,34 +4317,37 @@ section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=radio]
 section.u4m-backup-unsubscribe form .input input[type=radio] {
   width: auto;
 }
-section.u4m-backup-unsubscribe form.hs-form .input input select, section.u4m-backup-unsubscribe form.mixitup-multifilter .input input select, section.u4m-backup-unsubscribe form .input input select {
-  border: 0;
+section.u4m-backup-unsubscribe form.hs-form .input select, section.u4m-backup-unsubscribe form.mixitup-multifilter .input select, section.u4m-backup-unsubscribe form .input select {
   border-radius: 4rem;
   margin-top: 0rem;
   margin-bottom: 20rem;
   font-size: 16rem;
   background-color: #fff;
+  padding: 19px 20px;
+  border-radius: 8px;
+  width: 100%;
+  color: #2c6938;
+  line-height: 1.75;
 }
 section.u4m-backup-unsubscribe form.hs-form .input input[type=file], section.u4m-backup-unsubscribe form.mixitup-multifilter .input input[type=file], section.u4m-backup-unsubscribe form .input input[type=file] {
   font-size: 16rem;
-  font-family: "Sofia Sans";
   background-color: transparent;
   position: relative;
   font-weight: bold;
   margin-bottom: 23rem;
 }
 section.u4m-backup-unsubscribe form.hs-form .input select, section.u4m-backup-unsubscribe form.mixitup-multifilter .input select, section.u4m-backup-unsubscribe form .input select {
-  appearance: none;
-  background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
-  background-size: 13rem 8rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
+  background-size: 16rem 8rem;
   background-position: 97% 51%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 5rem;
+  border: 1px solid transparent;
   margin-top: 0rem;
   margin-bottom: 0;
   background-color: #fff;
-  padding: 12rem 16rem;
-  line-height: 1;
+  outline: none;
 }
 section.u4m-backup-unsubscribe form.hs-form .input + .hs-error-msgs, section.u4m-backup-unsubscribe form.mixitup-multifilter .input + .hs-error-msgs, section.u4m-backup-unsubscribe form .input + .hs-error-msgs {
   position: relative;
@@ -4420,7 +4369,7 @@ section.u4m-backup-unsubscribe form.hs-form .input + .hs-error-msgs li, section.
   text-align: center;
   background: red;
   display: inline-block;
-  color: white;
+  color: #fff;
   border-radius: 5rem;
   padding: 5rem 8rem;
   line-height: 1.2;
@@ -4441,7 +4390,6 @@ section.u4m-backup-unsubscribe form.hs-form .input + .hs-error-msgs li:before, s
 }
 section.u4m-backup-unsubscribe form.hs-form .input + .hs-error-msgs li label, section.u4m-backup-unsubscribe form.mixitup-multifilter .input + .hs-error-msgs li label, section.u4m-backup-unsubscribe form .input + .hs-error-msgs li label {
   font-size: 12rem;
-  font-family: "Sofia Sans";
   text-transform: uppercase;
   letter-spacing: 1rem;
   display: inline-block;
@@ -4464,7 +4412,7 @@ section.u4m-backup-unsubscribe form.hs-form textarea, section.u4m-backup-unsubsc
   font-size: 16rem;
   width: 100%;
   border-radius: 5rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
   width: 100% !important;
 }
 section.u4m-backup-unsubscribe form.hs-form textarea.invalid, section.u4m-backup-unsubscribe form.mixitup-multifilter textarea.invalid, section.u4m-backup-unsubscribe form textarea.invalid {
@@ -4492,7 +4440,7 @@ section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-form-booleancheckbox
 section.u4m-backup-unsubscribe form .hs-form-booleancheckbox,
 section.u4m-backup-unsubscribe form .hs-form-checkbox,
 section.u4m-backup-unsubscribe form .hs-form-booleancheckbox {
-  line-height: 1.2;
+  line-height: 1.72;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-form-checkbox input,
 section.u4m-backup-unsubscribe form.hs-form .hs-form-booleancheckbox input,
@@ -4505,10 +4453,13 @@ section.u4m-backup-unsubscribe form .hs-form-booleancheckbox input,
 section.u4m-backup-unsubscribe form .hs-form-checkbox input,
 section.u4m-backup-unsubscribe form .hs-form-booleancheckbox input {
   width: auto;
-  margin: 0 10rem 15rem 0;
+  margin: 0 10rem 0rem 0;
   position: relative;
-  top: 8rem;
+  top: 2rem;
   float: left;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-form-checkbox label,
 section.u4m-backup-unsubscribe form.hs-form .hs-form-booleancheckbox label,
@@ -4520,10 +4471,11 @@ section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-form-booleancheckbox
 section.u4m-backup-unsubscribe form .hs-form-booleancheckbox label,
 section.u4m-backup-unsubscribe form .hs-form-checkbox label,
 section.u4m-backup-unsubscribe form .hs-form-booleancheckbox label {
-  font-size: 16rem;
-  font-weight: normal;
+  font-size: 14rem;
   display: flex;
   align-items: center;
+  padding-left: 24px;
+  position: relative;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-form-checkbox label span,
 section.u4m-backup-unsubscribe form.hs-form .hs-form-booleancheckbox label span,
@@ -4549,8 +4501,10 @@ section.u4m-backup-unsubscribe form.mixitup-multifilter .form-columns-3 .hs-form
 section.u4m-backup-unsubscribe form .form-columns-1 .hs-form-radio,
 section.u4m-backup-unsubscribe form .form-columns-2 .hs-form-radio,
 section.u4m-backup-unsubscribe form .form-columns-3 .hs-form-radio {
-  display: inline-block;
   margin-right: 20rem;
+  letter-spacing: 0;
+  font-size: 14rem;
+  margin-bottom: 12px;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-form-radio input,
 section.u4m-backup-unsubscribe form.hs-form .form-columns-1 .hs-form-radio input,
@@ -4566,7 +4520,7 @@ section.u4m-backup-unsubscribe form .form-columns-3 .hs-form-radio input {
   margin-right: 10rem;
   margin-left: 2rem;
   position: relative;
-  top: -2rem;
+  top: 2rem;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-form-radio span,
 section.u4m-backup-unsubscribe form.hs-form .form-columns-1 .hs-form-radio span,
@@ -4579,7 +4533,7 @@ section.u4m-backup-unsubscribe form .form-columns-1 .hs-form-radio span,
 section.u4m-backup-unsubscribe form .form-columns-2 .hs-form-radio span,
 section.u4m-backup-unsubscribe form .form-columns-3 .hs-form-radio span {
   font-size: 14rem;
-  font-weight: normal;
+  line-height: 1.72;
 }
 @media (max-width: 580px) {
   section.u4m-backup-unsubscribe form.hs-form .hs-form-radio,
@@ -4608,6 +4562,48 @@ section.u4m-backup-unsubscribe form .form-columns-3 .hs-form-radio span {
     position: relative;
     top: 2rem;
   }
+}
+section.u4m-backup-unsubscribe form.hs-form input.hs-input[type=checkbox], section.u4m-backup-unsubscribe form.mixitup-multifilter input.hs-input[type=checkbox], section.u4m-backup-unsubscribe form input.hs-input[type=checkbox] {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 2px;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  border: none;
+  outline: none;
+}
+section.u4m-backup-unsubscribe form.hs-form input.hs-input[type=checkbox]::before, section.u4m-backup-unsubscribe form.mixitup-multifilter input.hs-input[type=checkbox]::before, section.u4m-backup-unsubscribe form input.hs-input[type=checkbox]::before {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 0;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  content: "";
+}
+section.u4m-backup-unsubscribe form.hs-form input.hs-input[type=checkbox]::after, section.u4m-backup-unsubscribe form.mixitup-multifilter input.hs-input[type=checkbox]::after, section.u4m-backup-unsubscribe form input.hs-input[type=checkbox]::after {
+  content: "";
+  display: block;
+  height: 7px;
+  left: 6px;
+  min-width: 12px;
+  position: relative;
+  position: absolute;
+  top: 6px;
+  width: 12px;
 }
 section.u4m-backup-unsubscribe form.hs-form .form-columns-3 .hs-form-field, section.u4m-backup-unsubscribe form.mixitup-multifilter .form-columns-3 .hs-form-field, section.u4m-backup-unsubscribe form .form-columns-3 .hs-form-field {
   width: 33.05%;
@@ -4649,6 +4645,15 @@ section.u4m-backup-unsubscribe form .form-columns-3 select {
   margin-right: 0;
   width: 100%;
 }
+section.u4m-backup-unsubscribe form.hs-form .form-columns-1 select,
+section.u4m-backup-unsubscribe form.hs-form .form-columns-2 select,
+section.u4m-backup-unsubscribe form.hs-form .form-columns-3 select, section.u4m-backup-unsubscribe form.mixitup-multifilter .form-columns-1 select,
+section.u4m-backup-unsubscribe form.mixitup-multifilter .form-columns-2 select,
+section.u4m-backup-unsubscribe form.mixitup-multifilter .form-columns-3 select, section.u4m-backup-unsubscribe form .form-columns-1 select,
+section.u4m-backup-unsubscribe form .form-columns-2 select,
+section.u4m-backup-unsubscribe form .form-columns-3 select {
+  width: 100% !important;
+}
 @media (max-width: 580px) {
   section.u4m-backup-unsubscribe form.hs-form .form-columns-1 div div,
   section.u4m-backup-unsubscribe form.hs-form .form-columns-1 div:last-child div,
@@ -4688,7 +4693,7 @@ section.u4m-backup-unsubscribe form .form-columns-3 select {
   }
 }
 section.u4m-backup-unsubscribe form.hs-form .form-columns-2 > div, section.u4m-backup-unsubscribe form.mixitup-multifilter .form-columns-2 > div, section.u4m-backup-unsubscribe form .form-columns-2 > div {
-  width: calc(50% - 10rem);
+  width: calc(50% - 10rem) !important;
 }
 section.u4m-backup-unsubscribe form.hs-form .form-columns-2 > div:last-of-type, section.u4m-backup-unsubscribe form.mixitup-multifilter .form-columns-2 > div:last-of-type, section.u4m-backup-unsubscribe form .form-columns-2 > div:last-of-type {
   margin-left: 20rem;
@@ -4803,19 +4808,6 @@ section.u4m-password-prompt form {
     padding: 30px 20px;
   }
 }
-section.u4m-membership-login form h3,
-section.u4m-membership-register form h3,
-section.u4m-membership-reset-password-request form h3,
-section.u4m-membership-reset-password form h3,
-section.u4m-password-prompt form h3 {
-  font-size: 14rem;
-  margin-bottom: 30rem;
-  line-height: 1.71;
-  color: #2e2e2e;
-  font-family: "Sofia Sans";
-  font-weight: bold;
-  letter-spacing: 0px;
-}
 section.u4m-membership-login form div.legal-consent-container,
 section.u4m-membership-register form div.legal-consent-container,
 section.u4m-membership-reset-password-request form div.legal-consent-container,
@@ -4824,6 +4816,13 @@ section.u4m-password-prompt form div.legal-consent-container {
   font-size: 14rem;
   line-height: 1.5;
   margin-bottom: 20rem;
+}
+section.u4m-membership-login form div.legal-consent-container .hs-form-booleancheckbox-display > span,
+section.u4m-membership-register form div.legal-consent-container .hs-form-booleancheckbox-display > span,
+section.u4m-membership-reset-password-request form div.legal-consent-container .hs-form-booleancheckbox-display > span,
+section.u4m-membership-reset-password form div.legal-consent-container .hs-form-booleancheckbox-display > span,
+section.u4m-password-prompt form div.legal-consent-container .hs-form-booleancheckbox-display > span {
+  margin-left: 0px;
 }
 section.u4m-membership-login form div.legal-consent-container p,
 section.u4m-membership-login form div.legal-consent-container .hs-form-booleancheckbox label,
@@ -4835,27 +4834,16 @@ section.u4m-membership-reset-password form div.legal-consent-container p,
 section.u4m-membership-reset-password form div.legal-consent-container .hs-form-booleancheckbox label,
 section.u4m-password-prompt form div.legal-consent-container p,
 section.u4m-password-prompt form div.legal-consent-container .hs-form-booleancheckbox label {
-  font-family: "Sofia Sans";
-  font-size: 12rem;
-  line-height: 1.6;
-  letter-spacing: 0.35rem;
-  margin-bottom: 10rem;
   font-size: 14rem;
   line-height: 1.5;
+  position: relative;
 }
-@media (max-width: 580px) {
-  section.u4m-membership-login form div.legal-consent-container p,
-  section.u4m-membership-login form div.legal-consent-container .hs-form-booleancheckbox label,
-  section.u4m-membership-register form div.legal-consent-container p,
-  section.u4m-membership-register form div.legal-consent-container .hs-form-booleancheckbox label,
-  section.u4m-membership-reset-password-request form div.legal-consent-container p,
-  section.u4m-membership-reset-password-request form div.legal-consent-container .hs-form-booleancheckbox label,
-  section.u4m-membership-reset-password form div.legal-consent-container p,
-  section.u4m-membership-reset-password form div.legal-consent-container .hs-form-booleancheckbox label,
-  section.u4m-password-prompt form div.legal-consent-container p,
-  section.u4m-password-prompt form div.legal-consent-container .hs-form-booleancheckbox label {
-    font-size: 12rem;
-  }
+section.u4m-membership-login form div.legal-consent-container .hs-form-booleancheckbox label,
+section.u4m-membership-register form div.legal-consent-container .hs-form-booleancheckbox label,
+section.u4m-membership-reset-password-request form div.legal-consent-container .hs-form-booleancheckbox label,
+section.u4m-membership-reset-password form div.legal-consent-container .hs-form-booleancheckbox label,
+section.u4m-password-prompt form div.legal-consent-container .hs-form-booleancheckbox label {
+  padding-left: 24px;
 }
 section.u4m-membership-login form.hs-form fieldset, section.u4m-membership-login form.mixitup-multifilter fieldset, section.u4m-membership-login form fieldset,
 section.u4m-membership-register form.hs-form fieldset,
@@ -4933,14 +4921,15 @@ section.u4m-password-prompt form.hs-form .hs_error_rollup ul.hs-error-msgs li la
 section.u4m-password-prompt form.mixitup-multifilter .hs_error_rollup ul.hs-error-msgs li label,
 section.u4m-password-prompt form .hs_error_rollup ul.hs-error-msgs li label {
   color: red;
-  font-size: 18rem;
+  font-size: 14rem;
   text-align: center;
-  padding: 10rem 0 0;
+  padding: 0;
   margin: 20rem 0 0;
   display: block;
   flex: 0 0 100%;
   font-weight: normal;
   text-transform: none;
+  vertical-align: middle;
 }
 section.u4m-membership-login form.hs-form .hs-form-field, section.u4m-membership-login form.mixitup-multifilter .hs-form-field, section.u4m-membership-login form .hs-form-field,
 section.u4m-membership-register form.hs-form .hs-form-field,
@@ -4970,20 +4959,11 @@ section.u4m-membership-reset-password form .hs-form-field > label,
 section.u4m-password-prompt form.hs-form .hs-form-field > label,
 section.u4m-password-prompt form.mixitup-multifilter .hs-form-field > label,
 section.u4m-password-prompt form .hs-form-field > label {
-  font-size: 12rem;
-  font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: 1rem;
-  pointer-events: auto;
-  font-family: "Sofia Sans";
   font-size: 14rem;
-  font-weight: bold;
-  line-height: 1.5em;
-  letter-spacing: 1.5rem;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 10rem;
-  margin-bottom: 6rem;
+  font-weight: 600;
+  line-height: 1.72;
+  pointer-events: auto;
+  margin-bottom: 8rem;
   display: inline-block;
 }
 section.u4m-membership-login form.hs-form .input input[type=text],
@@ -5044,82 +5024,20 @@ section.u4m-password-prompt form .input input[type=text],
 section.u4m-password-prompt form .input input[type=number],
 section.u4m-password-prompt form .input input[type=tel],
 section.u4m-password-prompt form .input input[type=email] {
-  border: 1rem solid transparent;
-  border-radius: 5rem;
+  border-radius: 8px;
   margin-top: 0rem;
+  font-family: "Inter";
   font-size: 16rem;
+  line-height: 1.75;
   background-color: #fff;
-  padding: 5.5rem 16rem;
+  padding: 19px 20px;
   width: 100%;
-  appearance: none;
-  font-family: "Sofia Sans";
-  font-size: 18rem;
-  line-height: 1.6;
-  letter-spacing: 0.25rem;
-  margin-bottom: 20rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-}
-@media (max-width: 580px) {
-  section.u4m-membership-login form.hs-form .input input[type=text],
-  section.u4m-membership-login form.hs-form .input input[type=number],
-  section.u4m-membership-login form.hs-form .input input[type=tel],
-  section.u4m-membership-login form.hs-form .input input[type=email], section.u4m-membership-login form.mixitup-multifilter .input input[type=text],
-  section.u4m-membership-login form.mixitup-multifilter .input input[type=number],
-  section.u4m-membership-login form.mixitup-multifilter .input input[type=tel],
-  section.u4m-membership-login form.mixitup-multifilter .input input[type=email], section.u4m-membership-login form .input input[type=text],
-  section.u4m-membership-login form .input input[type=number],
-  section.u4m-membership-login form .input input[type=tel],
-  section.u4m-membership-login form .input input[type=email],
-  section.u4m-membership-register form.hs-form .input input[type=text],
-  section.u4m-membership-register form.hs-form .input input[type=number],
-  section.u4m-membership-register form.hs-form .input input[type=tel],
-  section.u4m-membership-register form.hs-form .input input[type=email],
-  section.u4m-membership-register form.mixitup-multifilter .input input[type=text],
-  section.u4m-membership-register form.mixitup-multifilter .input input[type=number],
-  section.u4m-membership-register form.mixitup-multifilter .input input[type=tel],
-  section.u4m-membership-register form.mixitup-multifilter .input input[type=email],
-  section.u4m-membership-register form .input input[type=text],
-  section.u4m-membership-register form .input input[type=number],
-  section.u4m-membership-register form .input input[type=tel],
-  section.u4m-membership-register form .input input[type=email],
-  section.u4m-membership-reset-password-request form.hs-form .input input[type=text],
-  section.u4m-membership-reset-password-request form.hs-form .input input[type=number],
-  section.u4m-membership-reset-password-request form.hs-form .input input[type=tel],
-  section.u4m-membership-reset-password-request form.hs-form .input input[type=email],
-  section.u4m-membership-reset-password-request form.mixitup-multifilter .input input[type=text],
-  section.u4m-membership-reset-password-request form.mixitup-multifilter .input input[type=number],
-  section.u4m-membership-reset-password-request form.mixitup-multifilter .input input[type=tel],
-  section.u4m-membership-reset-password-request form.mixitup-multifilter .input input[type=email],
-  section.u4m-membership-reset-password-request form .input input[type=text],
-  section.u4m-membership-reset-password-request form .input input[type=number],
-  section.u4m-membership-reset-password-request form .input input[type=tel],
-  section.u4m-membership-reset-password-request form .input input[type=email],
-  section.u4m-membership-reset-password form.hs-form .input input[type=text],
-  section.u4m-membership-reset-password form.hs-form .input input[type=number],
-  section.u4m-membership-reset-password form.hs-form .input input[type=tel],
-  section.u4m-membership-reset-password form.hs-form .input input[type=email],
-  section.u4m-membership-reset-password form.mixitup-multifilter .input input[type=text],
-  section.u4m-membership-reset-password form.mixitup-multifilter .input input[type=number],
-  section.u4m-membership-reset-password form.mixitup-multifilter .input input[type=tel],
-  section.u4m-membership-reset-password form.mixitup-multifilter .input input[type=email],
-  section.u4m-membership-reset-password form .input input[type=text],
-  section.u4m-membership-reset-password form .input input[type=number],
-  section.u4m-membership-reset-password form .input input[type=tel],
-  section.u4m-membership-reset-password form .input input[type=email],
-  section.u4m-password-prompt form.hs-form .input input[type=text],
-  section.u4m-password-prompt form.hs-form .input input[type=number],
-  section.u4m-password-prompt form.hs-form .input input[type=tel],
-  section.u4m-password-prompt form.hs-form .input input[type=email],
-  section.u4m-password-prompt form.mixitup-multifilter .input input[type=text],
-  section.u4m-password-prompt form.mixitup-multifilter .input input[type=number],
-  section.u4m-password-prompt form.mixitup-multifilter .input input[type=tel],
-  section.u4m-password-prompt form.mixitup-multifilter .input input[type=email],
-  section.u4m-password-prompt form .input input[type=text],
-  section.u4m-password-prompt form .input input[type=number],
-  section.u4m-password-prompt form .input input[type=tel],
-  section.u4m-password-prompt form .input input[type=email] {
-    font-size: 16rem;
-  }
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid transparent;
+  color: #2c6938;
+  outline: none;
 }
 section.u4m-membership-login form.hs-form .input input[type=text].error, section.u4m-membership-login form.hs-form .input input[type=text].invalid,
 section.u4m-membership-login form.hs-form .input input[type=number].error,
@@ -5238,6 +5156,9 @@ section.u4m-password-prompt form .input input[type=email].error,
 section.u4m-password-prompt form .input input[type=email].invalid {
   border: 1rem solid red;
 }
+section.u4m-membership-login form.hs-form .input input[type=text]::-moz-placeholder, section.u4m-membership-login form.hs-form .input input[type=number]::-moz-placeholder, section.u4m-membership-login form.hs-form .input input[type=tel]::-moz-placeholder, section.u4m-membership-login form.hs-form .input input[type=email]::-moz-placeholder, section.u4m-membership-login form.mixitup-multifilter .input input[type=text]::-moz-placeholder, section.u4m-membership-login form.mixitup-multifilter .input input[type=number]::-moz-placeholder, section.u4m-membership-login form.mixitup-multifilter .input input[type=tel]::-moz-placeholder, section.u4m-membership-login form.mixitup-multifilter .input input[type=email]::-moz-placeholder, section.u4m-membership-login form .input input[type=text]::-moz-placeholder, section.u4m-membership-login form .input input[type=number]::-moz-placeholder, section.u4m-membership-login form .input input[type=tel]::-moz-placeholder, section.u4m-membership-login form .input input[type=email]::-moz-placeholder, section.u4m-membership-register form.hs-form .input input[type=text]::-moz-placeholder, section.u4m-membership-register form.hs-form .input input[type=number]::-moz-placeholder, section.u4m-membership-register form.hs-form .input input[type=tel]::-moz-placeholder, section.u4m-membership-register form.hs-form .input input[type=email]::-moz-placeholder, section.u4m-membership-register form.mixitup-multifilter .input input[type=text]::-moz-placeholder, section.u4m-membership-register form.mixitup-multifilter .input input[type=number]::-moz-placeholder, section.u4m-membership-register form.mixitup-multifilter .input input[type=tel]::-moz-placeholder, section.u4m-membership-register form.mixitup-multifilter .input input[type=email]::-moz-placeholder, section.u4m-membership-register form .input input[type=text]::-moz-placeholder, section.u4m-membership-register form .input input[type=number]::-moz-placeholder, section.u4m-membership-register form .input input[type=tel]::-moz-placeholder, section.u4m-membership-register form .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password-request form.hs-form .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password-request form.hs-form .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password-request form.hs-form .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password-request form.hs-form .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password-request form.mixitup-multifilter .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password-request form.mixitup-multifilter .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password-request form.mixitup-multifilter .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password-request form.mixitup-multifilter .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password-request form .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password-request form .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password-request form .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password-request form .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password form.hs-form .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password form.hs-form .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password form.hs-form .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password form.hs-form .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password form.mixitup-multifilter .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password form.mixitup-multifilter .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password form.mixitup-multifilter .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password form.mixitup-multifilter .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password form .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password form .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password form .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password form .input input[type=email]::-moz-placeholder, section.u4m-password-prompt form.hs-form .input input[type=text]::-moz-placeholder, section.u4m-password-prompt form.hs-form .input input[type=number]::-moz-placeholder, section.u4m-password-prompt form.hs-form .input input[type=tel]::-moz-placeholder, section.u4m-password-prompt form.hs-form .input input[type=email]::-moz-placeholder, section.u4m-password-prompt form.mixitup-multifilter .input input[type=text]::-moz-placeholder, section.u4m-password-prompt form.mixitup-multifilter .input input[type=number]::-moz-placeholder, section.u4m-password-prompt form.mixitup-multifilter .input input[type=tel]::-moz-placeholder, section.u4m-password-prompt form.mixitup-multifilter .input input[type=email]::-moz-placeholder, section.u4m-password-prompt form .input input[type=text]::-moz-placeholder, section.u4m-password-prompt form .input input[type=number]::-moz-placeholder, section.u4m-password-prompt form .input input[type=tel]::-moz-placeholder, section.u4m-password-prompt form .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
+}
 section.u4m-membership-login form.hs-form .input input[type=text]::placeholder,
 section.u4m-membership-login form.hs-form .input input[type=number]::placeholder,
 section.u4m-membership-login form.hs-form .input input[type=tel]::placeholder,
@@ -5296,7 +5217,7 @@ section.u4m-password-prompt form .input input[type=text]::placeholder,
 section.u4m-password-prompt form .input input[type=number]::placeholder,
 section.u4m-password-prompt form .input input[type=tel]::placeholder,
 section.u4m-password-prompt form .input input[type=email]::placeholder {
-  color: black;
+  color: #2c6938;
 }
 section.u4m-membership-login form.hs-form .input input[type=checkbox],
 section.u4m-membership-login form.hs-form .input input[type=radio], section.u4m-membership-login form.mixitup-multifilter .input input[type=checkbox],
@@ -5328,25 +5249,29 @@ section.u4m-password-prompt form .input input[type=checkbox],
 section.u4m-password-prompt form .input input[type=radio] {
   width: auto;
 }
-section.u4m-membership-login form.hs-form .input input select, section.u4m-membership-login form.mixitup-multifilter .input input select, section.u4m-membership-login form .input input select,
-section.u4m-membership-register form.hs-form .input input select,
-section.u4m-membership-register form.mixitup-multifilter .input input select,
-section.u4m-membership-register form .input input select,
-section.u4m-membership-reset-password-request form.hs-form .input input select,
-section.u4m-membership-reset-password-request form.mixitup-multifilter .input input select,
-section.u4m-membership-reset-password-request form .input input select,
-section.u4m-membership-reset-password form.hs-form .input input select,
-section.u4m-membership-reset-password form.mixitup-multifilter .input input select,
-section.u4m-membership-reset-password form .input input select,
-section.u4m-password-prompt form.hs-form .input input select,
-section.u4m-password-prompt form.mixitup-multifilter .input input select,
-section.u4m-password-prompt form .input input select {
-  border: 0;
+section.u4m-membership-login form.hs-form .input select, section.u4m-membership-login form.mixitup-multifilter .input select, section.u4m-membership-login form .input select,
+section.u4m-membership-register form.hs-form .input select,
+section.u4m-membership-register form.mixitup-multifilter .input select,
+section.u4m-membership-register form .input select,
+section.u4m-membership-reset-password-request form.hs-form .input select,
+section.u4m-membership-reset-password-request form.mixitup-multifilter .input select,
+section.u4m-membership-reset-password-request form .input select,
+section.u4m-membership-reset-password form.hs-form .input select,
+section.u4m-membership-reset-password form.mixitup-multifilter .input select,
+section.u4m-membership-reset-password form .input select,
+section.u4m-password-prompt form.hs-form .input select,
+section.u4m-password-prompt form.mixitup-multifilter .input select,
+section.u4m-password-prompt form .input select {
   border-radius: 4rem;
   margin-top: 0rem;
   margin-bottom: 20rem;
   font-size: 16rem;
   background-color: #fff;
+  padding: 19px 20px;
+  border-radius: 8px;
+  width: 100%;
+  color: #2c6938;
+  line-height: 1.75;
 }
 section.u4m-membership-login form.hs-form .input input[type=file], section.u4m-membership-login form.mixitup-multifilter .input input[type=file], section.u4m-membership-login form .input input[type=file],
 section.u4m-membership-register form.hs-form .input input[type=file],
@@ -5362,7 +5287,6 @@ section.u4m-password-prompt form.hs-form .input input[type=file],
 section.u4m-password-prompt form.mixitup-multifilter .input input[type=file],
 section.u4m-password-prompt form .input input[type=file] {
   font-size: 16rem;
-  font-family: "Sofia Sans";
   background-color: transparent;
   position: relative;
   font-weight: bold;
@@ -5381,17 +5305,17 @@ section.u4m-membership-reset-password form .input select,
 section.u4m-password-prompt form.hs-form .input select,
 section.u4m-password-prompt form.mixitup-multifilter .input select,
 section.u4m-password-prompt form .input select {
-  appearance: none;
-  background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
-  background-size: 13rem 8rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
+  background-size: 16rem 8rem;
   background-position: 97% 51%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 5rem;
+  border: 1px solid transparent;
   margin-top: 0rem;
   margin-bottom: 0;
   background-color: #fff;
-  padding: 12rem 16rem;
-  line-height: 1;
+  outline: none;
 }
 section.u4m-membership-login form.hs-form .input + .hs-error-msgs, section.u4m-membership-login form.mixitup-multifilter .input + .hs-error-msgs, section.u4m-membership-login form .input + .hs-error-msgs,
 section.u4m-membership-register form.hs-form .input + .hs-error-msgs,
@@ -5449,7 +5373,7 @@ section.u4m-password-prompt form .input + .hs-error-msgs li {
   text-align: center;
   background: red;
   display: inline-block;
-  color: white;
+  color: #fff;
   border-radius: 5rem;
   padding: 5rem 8rem;
   line-height: 1.2;
@@ -5494,7 +5418,6 @@ section.u4m-password-prompt form.hs-form .input + .hs-error-msgs li label,
 section.u4m-password-prompt form.mixitup-multifilter .input + .hs-error-msgs li label,
 section.u4m-password-prompt form .input + .hs-error-msgs li label {
   font-size: 12rem;
-  font-family: "Sofia Sans";
   text-transform: uppercase;
   letter-spacing: 1rem;
   display: inline-block;
@@ -5553,7 +5476,7 @@ section.u4m-password-prompt form textarea {
   font-size: 16rem;
   width: 100%;
   border-radius: 5rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
   width: 100% !important;
 }
 section.u4m-membership-login form.hs-form textarea.invalid, section.u4m-membership-login form.mixitup-multifilter textarea.invalid, section.u4m-membership-login form textarea.invalid,
@@ -5689,7 +5612,7 @@ section.u4m-password-prompt form .hs-form-checkbox,
 section.u4m-password-prompt form .hs-form-booleancheckbox,
 section.u4m-password-prompt form .hs-form-checkbox,
 section.u4m-password-prompt form .hs-form-booleancheckbox {
-  line-height: 1.2;
+  line-height: 1.72;
 }
 section.u4m-membership-login form.hs-form .hs-form-checkbox input,
 section.u4m-membership-login form.hs-form .hs-form-booleancheckbox input,
@@ -5750,10 +5673,13 @@ section.u4m-password-prompt form .hs-form-booleancheckbox input,
 section.u4m-password-prompt form .hs-form-checkbox input,
 section.u4m-password-prompt form .hs-form-booleancheckbox input {
   width: auto;
-  margin: 0 10rem 15rem 0;
+  margin: 0 10rem 0rem 0;
   position: relative;
-  top: 8rem;
+  top: 2rem;
   float: left;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 section.u4m-membership-login form.hs-form .hs-form-checkbox label,
 section.u4m-membership-login form.hs-form .hs-form-booleancheckbox label,
@@ -5813,10 +5739,11 @@ section.u4m-password-prompt form .hs-form-checkbox label,
 section.u4m-password-prompt form .hs-form-booleancheckbox label,
 section.u4m-password-prompt form .hs-form-checkbox label,
 section.u4m-password-prompt form .hs-form-booleancheckbox label {
-  font-size: 16rem;
-  font-weight: normal;
+  font-size: 14rem;
   display: flex;
   align-items: center;
+  padding-left: 24px;
+  position: relative;
 }
 section.u4m-membership-login form.hs-form .hs-form-checkbox label span,
 section.u4m-membership-login form.hs-form .hs-form-booleancheckbox label span,
@@ -5938,8 +5865,10 @@ section.u4m-password-prompt form .hs-form-radio,
 section.u4m-password-prompt form .form-columns-1 .hs-form-radio,
 section.u4m-password-prompt form .form-columns-2 .hs-form-radio,
 section.u4m-password-prompt form .form-columns-3 .hs-form-radio {
-  display: inline-block;
   margin-right: 20rem;
+  letter-spacing: 0;
+  font-size: 14rem;
+  margin-bottom: 12px;
 }
 section.u4m-membership-login form.hs-form .hs-form-radio input,
 section.u4m-membership-login form.hs-form .form-columns-1 .hs-form-radio input,
@@ -6003,7 +5932,7 @@ section.u4m-password-prompt form .form-columns-3 .hs-form-radio input {
   margin-right: 10rem;
   margin-left: 2rem;
   position: relative;
-  top: -2rem;
+  top: 2rem;
 }
 section.u4m-membership-login form.hs-form .hs-form-radio span,
 section.u4m-membership-login form.hs-form .form-columns-1 .hs-form-radio span,
@@ -6064,7 +5993,7 @@ section.u4m-password-prompt form .form-columns-1 .hs-form-radio span,
 section.u4m-password-prompt form .form-columns-2 .hs-form-radio span,
 section.u4m-password-prompt form .form-columns-3 .hs-form-radio span {
   font-size: 14rem;
-  font-weight: normal;
+  line-height: 1.72;
 }
 @media (max-width: 580px) {
   section.u4m-membership-login form.hs-form .hs-form-radio,
@@ -6189,6 +6118,84 @@ section.u4m-password-prompt form .form-columns-3 .hs-form-radio span {
     position: relative;
     top: 2rem;
   }
+}
+section.u4m-membership-login form.hs-form input.hs-input[type=checkbox], section.u4m-membership-login form.mixitup-multifilter input.hs-input[type=checkbox], section.u4m-membership-login form input.hs-input[type=checkbox],
+section.u4m-membership-register form.hs-form input.hs-input[type=checkbox],
+section.u4m-membership-register form.mixitup-multifilter input.hs-input[type=checkbox],
+section.u4m-membership-register form input.hs-input[type=checkbox],
+section.u4m-membership-reset-password-request form.hs-form input.hs-input[type=checkbox],
+section.u4m-membership-reset-password-request form.mixitup-multifilter input.hs-input[type=checkbox],
+section.u4m-membership-reset-password-request form input.hs-input[type=checkbox],
+section.u4m-membership-reset-password form.hs-form input.hs-input[type=checkbox],
+section.u4m-membership-reset-password form.mixitup-multifilter input.hs-input[type=checkbox],
+section.u4m-membership-reset-password form input.hs-input[type=checkbox],
+section.u4m-password-prompt form.hs-form input.hs-input[type=checkbox],
+section.u4m-password-prompt form.mixitup-multifilter input.hs-input[type=checkbox],
+section.u4m-password-prompt form input.hs-input[type=checkbox] {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 2px;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  border: none;
+  outline: none;
+}
+section.u4m-membership-login form.hs-form input.hs-input[type=checkbox]::before, section.u4m-membership-login form.mixitup-multifilter input.hs-input[type=checkbox]::before, section.u4m-membership-login form input.hs-input[type=checkbox]::before,
+section.u4m-membership-register form.hs-form input.hs-input[type=checkbox]::before,
+section.u4m-membership-register form.mixitup-multifilter input.hs-input[type=checkbox]::before,
+section.u4m-membership-register form input.hs-input[type=checkbox]::before,
+section.u4m-membership-reset-password-request form.hs-form input.hs-input[type=checkbox]::before,
+section.u4m-membership-reset-password-request form.mixitup-multifilter input.hs-input[type=checkbox]::before,
+section.u4m-membership-reset-password-request form input.hs-input[type=checkbox]::before,
+section.u4m-membership-reset-password form.hs-form input.hs-input[type=checkbox]::before,
+section.u4m-membership-reset-password form.mixitup-multifilter input.hs-input[type=checkbox]::before,
+section.u4m-membership-reset-password form input.hs-input[type=checkbox]::before,
+section.u4m-password-prompt form.hs-form input.hs-input[type=checkbox]::before,
+section.u4m-password-prompt form.mixitup-multifilter input.hs-input[type=checkbox]::before,
+section.u4m-password-prompt form input.hs-input[type=checkbox]::before {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 0;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  content: "";
+}
+section.u4m-membership-login form.hs-form input.hs-input[type=checkbox]::after, section.u4m-membership-login form.mixitup-multifilter input.hs-input[type=checkbox]::after, section.u4m-membership-login form input.hs-input[type=checkbox]::after,
+section.u4m-membership-register form.hs-form input.hs-input[type=checkbox]::after,
+section.u4m-membership-register form.mixitup-multifilter input.hs-input[type=checkbox]::after,
+section.u4m-membership-register form input.hs-input[type=checkbox]::after,
+section.u4m-membership-reset-password-request form.hs-form input.hs-input[type=checkbox]::after,
+section.u4m-membership-reset-password-request form.mixitup-multifilter input.hs-input[type=checkbox]::after,
+section.u4m-membership-reset-password-request form input.hs-input[type=checkbox]::after,
+section.u4m-membership-reset-password form.hs-form input.hs-input[type=checkbox]::after,
+section.u4m-membership-reset-password form.mixitup-multifilter input.hs-input[type=checkbox]::after,
+section.u4m-membership-reset-password form input.hs-input[type=checkbox]::after,
+section.u4m-password-prompt form.hs-form input.hs-input[type=checkbox]::after,
+section.u4m-password-prompt form.mixitup-multifilter input.hs-input[type=checkbox]::after,
+section.u4m-password-prompt form input.hs-input[type=checkbox]::after {
+  content: "";
+  display: block;
+  height: 7px;
+  left: 6px;
+  min-width: 12px;
+  position: relative;
+  position: absolute;
+  top: 6px;
+  width: 12px;
 }
 section.u4m-membership-login form.hs-form .form-columns-3 .hs-form-field, section.u4m-membership-login form.mixitup-multifilter .form-columns-3 .hs-form-field, section.u4m-membership-login form .form-columns-3 .hs-form-field,
 section.u4m-membership-register form.hs-form .form-columns-3 .hs-form-field,
@@ -6361,6 +6368,51 @@ section.u4m-password-prompt form .form-columns-3 .input,
 section.u4m-password-prompt form .form-columns-3 select {
   margin-right: 0;
   width: 100%;
+}
+section.u4m-membership-login form.hs-form .form-columns-1 select,
+section.u4m-membership-login form.hs-form .form-columns-2 select,
+section.u4m-membership-login form.hs-form .form-columns-3 select, section.u4m-membership-login form.mixitup-multifilter .form-columns-1 select,
+section.u4m-membership-login form.mixitup-multifilter .form-columns-2 select,
+section.u4m-membership-login form.mixitup-multifilter .form-columns-3 select, section.u4m-membership-login form .form-columns-1 select,
+section.u4m-membership-login form .form-columns-2 select,
+section.u4m-membership-login form .form-columns-3 select,
+section.u4m-membership-register form.hs-form .form-columns-1 select,
+section.u4m-membership-register form.hs-form .form-columns-2 select,
+section.u4m-membership-register form.hs-form .form-columns-3 select,
+section.u4m-membership-register form.mixitup-multifilter .form-columns-1 select,
+section.u4m-membership-register form.mixitup-multifilter .form-columns-2 select,
+section.u4m-membership-register form.mixitup-multifilter .form-columns-3 select,
+section.u4m-membership-register form .form-columns-1 select,
+section.u4m-membership-register form .form-columns-2 select,
+section.u4m-membership-register form .form-columns-3 select,
+section.u4m-membership-reset-password-request form.hs-form .form-columns-1 select,
+section.u4m-membership-reset-password-request form.hs-form .form-columns-2 select,
+section.u4m-membership-reset-password-request form.hs-form .form-columns-3 select,
+section.u4m-membership-reset-password-request form.mixitup-multifilter .form-columns-1 select,
+section.u4m-membership-reset-password-request form.mixitup-multifilter .form-columns-2 select,
+section.u4m-membership-reset-password-request form.mixitup-multifilter .form-columns-3 select,
+section.u4m-membership-reset-password-request form .form-columns-1 select,
+section.u4m-membership-reset-password-request form .form-columns-2 select,
+section.u4m-membership-reset-password-request form .form-columns-3 select,
+section.u4m-membership-reset-password form.hs-form .form-columns-1 select,
+section.u4m-membership-reset-password form.hs-form .form-columns-2 select,
+section.u4m-membership-reset-password form.hs-form .form-columns-3 select,
+section.u4m-membership-reset-password form.mixitup-multifilter .form-columns-1 select,
+section.u4m-membership-reset-password form.mixitup-multifilter .form-columns-2 select,
+section.u4m-membership-reset-password form.mixitup-multifilter .form-columns-3 select,
+section.u4m-membership-reset-password form .form-columns-1 select,
+section.u4m-membership-reset-password form .form-columns-2 select,
+section.u4m-membership-reset-password form .form-columns-3 select,
+section.u4m-password-prompt form.hs-form .form-columns-1 select,
+section.u4m-password-prompt form.hs-form .form-columns-2 select,
+section.u4m-password-prompt form.hs-form .form-columns-3 select,
+section.u4m-password-prompt form.mixitup-multifilter .form-columns-1 select,
+section.u4m-password-prompt form.mixitup-multifilter .form-columns-2 select,
+section.u4m-password-prompt form.mixitup-multifilter .form-columns-3 select,
+section.u4m-password-prompt form .form-columns-1 select,
+section.u4m-password-prompt form .form-columns-2 select,
+section.u4m-password-prompt form .form-columns-3 select {
+  width: 100% !important;
 }
 @media (max-width: 580px) {
   section.u4m-membership-login form.hs-form .form-columns-1 div div,
@@ -6557,7 +6609,7 @@ section.u4m-membership-reset-password form .form-columns-2 > div,
 section.u4m-password-prompt form.hs-form .form-columns-2 > div,
 section.u4m-password-prompt form.mixitup-multifilter .form-columns-2 > div,
 section.u4m-password-prompt form .form-columns-2 > div {
-  width: calc(50% - 10rem);
+  width: calc(50% - 10rem) !important;
 }
 section.u4m-membership-login form.hs-form .form-columns-2 > div:last-of-type, section.u4m-membership-login form.mixitup-multifilter .form-columns-2 > div:last-of-type, section.u4m-membership-login form .form-columns-2 > div:last-of-type,
 section.u4m-membership-register form.hs-form .form-columns-2 > div:last-of-type,
@@ -6756,35 +6808,22 @@ section.u4m-subscription-preferences form {
     padding: 30px 20px;
   }
 }
-section.u4m-subscription-preferences form h3 {
-  font-size: 14rem;
-  margin-bottom: 30rem;
-  line-height: 1.71;
-  color: #2e2e2e;
-  font-family: "Sofia Sans";
-  font-weight: bold;
-  letter-spacing: 0px;
-}
 section.u4m-subscription-preferences form div.legal-consent-container {
   font-size: 14rem;
   line-height: 1.5;
   margin-bottom: 20rem;
 }
+section.u4m-subscription-preferences form div.legal-consent-container .hs-form-booleancheckbox-display > span {
+  margin-left: 0px;
+}
 section.u4m-subscription-preferences form div.legal-consent-container p,
 section.u4m-subscription-preferences form div.legal-consent-container .hs-form-booleancheckbox label {
-  font-family: "Sofia Sans";
-  font-size: 12rem;
-  line-height: 1.6;
-  letter-spacing: 0.35rem;
-  margin-bottom: 10rem;
   font-size: 14rem;
   line-height: 1.5;
+  position: relative;
 }
-@media (max-width: 580px) {
-  section.u4m-subscription-preferences form div.legal-consent-container p,
-  section.u4m-subscription-preferences form div.legal-consent-container .hs-form-booleancheckbox label {
-    font-size: 12rem;
-  }
+section.u4m-subscription-preferences form div.legal-consent-container .hs-form-booleancheckbox label {
+  padding-left: 24px;
 }
 section.u4m-subscription-preferences form.hs-form fieldset, section.u4m-subscription-preferences form.mixitup-multifilter fieldset, section.u4m-subscription-preferences form fieldset {
   max-width: none;
@@ -6802,33 +6841,25 @@ section.u4m-subscription-preferences form.hs-form .hs_error_rollup ul.hs-error-m
 }
 section.u4m-subscription-preferences form.hs-form .hs_error_rollup ul.hs-error-msgs li label, section.u4m-subscription-preferences form.mixitup-multifilter .hs_error_rollup ul.hs-error-msgs li label, section.u4m-subscription-preferences form .hs_error_rollup ul.hs-error-msgs li label {
   color: red;
-  font-size: 18rem;
+  font-size: 14rem;
   text-align: center;
-  padding: 10rem 0 0;
+  padding: 0;
   margin: 20rem 0 0;
   display: block;
   flex: 0 0 100%;
   font-weight: normal;
   text-transform: none;
+  vertical-align: middle;
 }
 section.u4m-subscription-preferences form.hs-form .hs-form-field, section.u4m-subscription-preferences form.mixitup-multifilter .hs-form-field, section.u4m-subscription-preferences form .hs-form-field {
   margin-bottom: 20rem;
 }
 section.u4m-subscription-preferences form.hs-form .hs-form-field > label, section.u4m-subscription-preferences form.mixitup-multifilter .hs-form-field > label, section.u4m-subscription-preferences form .hs-form-field > label {
-  font-size: 12rem;
-  font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: 1rem;
-  pointer-events: auto;
-  font-family: "Sofia Sans";
   font-size: 14rem;
-  font-weight: bold;
-  line-height: 1.5em;
-  letter-spacing: 1.5rem;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 10rem;
-  margin-bottom: 6rem;
+  font-weight: 600;
+  line-height: 1.72;
+  pointer-events: auto;
+  margin-bottom: 8rem;
   display: inline-block;
 }
 section.u4m-subscription-preferences form.hs-form .input input[type=text],
@@ -6841,34 +6872,20 @@ section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=
 section.u4m-subscription-preferences form .input input[type=number],
 section.u4m-subscription-preferences form .input input[type=tel],
 section.u4m-subscription-preferences form .input input[type=email] {
-  border: 1rem solid transparent;
-  border-radius: 5rem;
+  border-radius: 8px;
   margin-top: 0rem;
+  font-family: "Inter";
   font-size: 16rem;
+  line-height: 1.75;
   background-color: #fff;
-  padding: 5.5rem 16rem;
+  padding: 19px 20px;
   width: 100%;
-  appearance: none;
-  font-family: "Sofia Sans";
-  font-size: 18rem;
-  line-height: 1.6;
-  letter-spacing: 0.25rem;
-  margin-bottom: 20rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-}
-@media (max-width: 580px) {
-  section.u4m-subscription-preferences form.hs-form .input input[type=text],
-  section.u4m-subscription-preferences form.hs-form .input input[type=number],
-  section.u4m-subscription-preferences form.hs-form .input input[type=tel],
-  section.u4m-subscription-preferences form.hs-form .input input[type=email], section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=text],
-  section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=number],
-  section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=tel],
-  section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=email], section.u4m-subscription-preferences form .input input[type=text],
-  section.u4m-subscription-preferences form .input input[type=number],
-  section.u4m-subscription-preferences form .input input[type=tel],
-  section.u4m-subscription-preferences form .input input[type=email] {
-    font-size: 16rem;
-  }
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid transparent;
+  color: #2c6938;
+  outline: none;
 }
 section.u4m-subscription-preferences form.hs-form .input input[type=text].error, section.u4m-subscription-preferences form.hs-form .input input[type=text].invalid,
 section.u4m-subscription-preferences form.hs-form .input input[type=number].error,
@@ -6891,6 +6908,9 @@ section.u4m-subscription-preferences form .input input[type=email].error,
 section.u4m-subscription-preferences form .input input[type=email].invalid {
   border: 1rem solid red;
 }
+section.u4m-subscription-preferences form.hs-form .input input[type=text]::-moz-placeholder, section.u4m-subscription-preferences form.hs-form .input input[type=number]::-moz-placeholder, section.u4m-subscription-preferences form.hs-form .input input[type=tel]::-moz-placeholder, section.u4m-subscription-preferences form.hs-form .input input[type=email]::-moz-placeholder, section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=text]::-moz-placeholder, section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=number]::-moz-placeholder, section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=tel]::-moz-placeholder, section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=email]::-moz-placeholder, section.u4m-subscription-preferences form .input input[type=text]::-moz-placeholder, section.u4m-subscription-preferences form .input input[type=number]::-moz-placeholder, section.u4m-subscription-preferences form .input input[type=tel]::-moz-placeholder, section.u4m-subscription-preferences form .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
+}
 section.u4m-subscription-preferences form.hs-form .input input[type=text]::placeholder,
 section.u4m-subscription-preferences form.hs-form .input input[type=number]::placeholder,
 section.u4m-subscription-preferences form.hs-form .input input[type=tel]::placeholder,
@@ -6901,7 +6921,7 @@ section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=
 section.u4m-subscription-preferences form .input input[type=number]::placeholder,
 section.u4m-subscription-preferences form .input input[type=tel]::placeholder,
 section.u4m-subscription-preferences form .input input[type=email]::placeholder {
-  color: black;
+  color: #2c6938;
 }
 section.u4m-subscription-preferences form.hs-form .input input[type=checkbox],
 section.u4m-subscription-preferences form.hs-form .input input[type=radio], section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=checkbox],
@@ -6909,34 +6929,37 @@ section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=
 section.u4m-subscription-preferences form .input input[type=radio] {
   width: auto;
 }
-section.u4m-subscription-preferences form.hs-form .input input select, section.u4m-subscription-preferences form.mixitup-multifilter .input input select, section.u4m-subscription-preferences form .input input select {
-  border: 0;
+section.u4m-subscription-preferences form.hs-form .input select, section.u4m-subscription-preferences form.mixitup-multifilter .input select, section.u4m-subscription-preferences form .input select {
   border-radius: 4rem;
   margin-top: 0rem;
   margin-bottom: 20rem;
   font-size: 16rem;
   background-color: #fff;
+  padding: 19px 20px;
+  border-radius: 8px;
+  width: 100%;
+  color: #2c6938;
+  line-height: 1.75;
 }
 section.u4m-subscription-preferences form.hs-form .input input[type=file], section.u4m-subscription-preferences form.mixitup-multifilter .input input[type=file], section.u4m-subscription-preferences form .input input[type=file] {
   font-size: 16rem;
-  font-family: "Sofia Sans";
   background-color: transparent;
   position: relative;
   font-weight: bold;
   margin-bottom: 23rem;
 }
 section.u4m-subscription-preferences form.hs-form .input select, section.u4m-subscription-preferences form.mixitup-multifilter .input select, section.u4m-subscription-preferences form .input select {
-  appearance: none;
-  background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
-  background-size: 13rem 8rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
+  background-size: 16rem 8rem;
   background-position: 97% 51%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 5rem;
+  border: 1px solid transparent;
   margin-top: 0rem;
   margin-bottom: 0;
   background-color: #fff;
-  padding: 12rem 16rem;
-  line-height: 1;
+  outline: none;
 }
 section.u4m-subscription-preferences form.hs-form .input + .hs-error-msgs, section.u4m-subscription-preferences form.mixitup-multifilter .input + .hs-error-msgs, section.u4m-subscription-preferences form .input + .hs-error-msgs {
   position: relative;
@@ -6958,7 +6981,7 @@ section.u4m-subscription-preferences form.hs-form .input + .hs-error-msgs li, se
   text-align: center;
   background: red;
   display: inline-block;
-  color: white;
+  color: #fff;
   border-radius: 5rem;
   padding: 5rem 8rem;
   line-height: 1.2;
@@ -6979,7 +7002,6 @@ section.u4m-subscription-preferences form.hs-form .input + .hs-error-msgs li:bef
 }
 section.u4m-subscription-preferences form.hs-form .input + .hs-error-msgs li label, section.u4m-subscription-preferences form.mixitup-multifilter .input + .hs-error-msgs li label, section.u4m-subscription-preferences form .input + .hs-error-msgs li label {
   font-size: 12rem;
-  font-family: "Sofia Sans";
   text-transform: uppercase;
   letter-spacing: 1rem;
   display: inline-block;
@@ -7002,7 +7024,7 @@ section.u4m-subscription-preferences form.hs-form textarea, section.u4m-subscrip
   font-size: 16rem;
   width: 100%;
   border-radius: 5rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
   width: 100% !important;
 }
 section.u4m-subscription-preferences form.hs-form textarea.invalid, section.u4m-subscription-preferences form.mixitup-multifilter textarea.invalid, section.u4m-subscription-preferences form textarea.invalid {
@@ -7030,7 +7052,7 @@ section.u4m-subscription-preferences form.mixitup-multifilter .hs-form-booleanch
 section.u4m-subscription-preferences form .hs-form-booleancheckbox,
 section.u4m-subscription-preferences form .hs-form-checkbox,
 section.u4m-subscription-preferences form .hs-form-booleancheckbox {
-  line-height: 1.2;
+  line-height: 1.72;
 }
 section.u4m-subscription-preferences form.hs-form .hs-form-checkbox input,
 section.u4m-subscription-preferences form.hs-form .hs-form-booleancheckbox input,
@@ -7043,10 +7065,13 @@ section.u4m-subscription-preferences form .hs-form-booleancheckbox input,
 section.u4m-subscription-preferences form .hs-form-checkbox input,
 section.u4m-subscription-preferences form .hs-form-booleancheckbox input {
   width: auto;
-  margin: 0 10rem 15rem 0;
+  margin: 0 10rem 0rem 0;
   position: relative;
-  top: 8rem;
+  top: 2rem;
   float: left;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 section.u4m-subscription-preferences form.hs-form .hs-form-checkbox label,
 section.u4m-subscription-preferences form.hs-form .hs-form-booleancheckbox label,
@@ -7058,10 +7083,11 @@ section.u4m-subscription-preferences form.mixitup-multifilter .hs-form-booleanch
 section.u4m-subscription-preferences form .hs-form-booleancheckbox label,
 section.u4m-subscription-preferences form .hs-form-checkbox label,
 section.u4m-subscription-preferences form .hs-form-booleancheckbox label {
-  font-size: 16rem;
-  font-weight: normal;
+  font-size: 14rem;
   display: flex;
   align-items: center;
+  padding-left: 24px;
+  position: relative;
 }
 section.u4m-subscription-preferences form.hs-form .hs-form-checkbox label span,
 section.u4m-subscription-preferences form.hs-form .hs-form-booleancheckbox label span,
@@ -7087,8 +7113,10 @@ section.u4m-subscription-preferences form.mixitup-multifilter .form-columns-3 .h
 section.u4m-subscription-preferences form .form-columns-1 .hs-form-radio,
 section.u4m-subscription-preferences form .form-columns-2 .hs-form-radio,
 section.u4m-subscription-preferences form .form-columns-3 .hs-form-radio {
-  display: inline-block;
   margin-right: 20rem;
+  letter-spacing: 0;
+  font-size: 14rem;
+  margin-bottom: 12px;
 }
 section.u4m-subscription-preferences form.hs-form .hs-form-radio input,
 section.u4m-subscription-preferences form.hs-form .form-columns-1 .hs-form-radio input,
@@ -7104,7 +7132,7 @@ section.u4m-subscription-preferences form .form-columns-3 .hs-form-radio input {
   margin-right: 10rem;
   margin-left: 2rem;
   position: relative;
-  top: -2rem;
+  top: 2rem;
 }
 section.u4m-subscription-preferences form.hs-form .hs-form-radio span,
 section.u4m-subscription-preferences form.hs-form .form-columns-1 .hs-form-radio span,
@@ -7117,7 +7145,7 @@ section.u4m-subscription-preferences form .form-columns-1 .hs-form-radio span,
 section.u4m-subscription-preferences form .form-columns-2 .hs-form-radio span,
 section.u4m-subscription-preferences form .form-columns-3 .hs-form-radio span {
   font-size: 14rem;
-  font-weight: normal;
+  line-height: 1.72;
 }
 @media (max-width: 580px) {
   section.u4m-subscription-preferences form.hs-form .hs-form-radio,
@@ -7146,6 +7174,48 @@ section.u4m-subscription-preferences form .form-columns-3 .hs-form-radio span {
     position: relative;
     top: 2rem;
   }
+}
+section.u4m-subscription-preferences form.hs-form input.hs-input[type=checkbox], section.u4m-subscription-preferences form.mixitup-multifilter input.hs-input[type=checkbox], section.u4m-subscription-preferences form input.hs-input[type=checkbox] {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 2px;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  border: none;
+  outline: none;
+}
+section.u4m-subscription-preferences form.hs-form input.hs-input[type=checkbox]::before, section.u4m-subscription-preferences form.mixitup-multifilter input.hs-input[type=checkbox]::before, section.u4m-subscription-preferences form input.hs-input[type=checkbox]::before {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 0;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  content: "";
+}
+section.u4m-subscription-preferences form.hs-form input.hs-input[type=checkbox]::after, section.u4m-subscription-preferences form.mixitup-multifilter input.hs-input[type=checkbox]::after, section.u4m-subscription-preferences form input.hs-input[type=checkbox]::after {
+  content: "";
+  display: block;
+  height: 7px;
+  left: 6px;
+  min-width: 12px;
+  position: relative;
+  position: absolute;
+  top: 6px;
+  width: 12px;
 }
 section.u4m-subscription-preferences form.hs-form .form-columns-3 .hs-form-field, section.u4m-subscription-preferences form.mixitup-multifilter .form-columns-3 .hs-form-field, section.u4m-subscription-preferences form .form-columns-3 .hs-form-field {
   width: 33.05%;
@@ -7187,6 +7257,15 @@ section.u4m-subscription-preferences form .form-columns-3 select {
   margin-right: 0;
   width: 100%;
 }
+section.u4m-subscription-preferences form.hs-form .form-columns-1 select,
+section.u4m-subscription-preferences form.hs-form .form-columns-2 select,
+section.u4m-subscription-preferences form.hs-form .form-columns-3 select, section.u4m-subscription-preferences form.mixitup-multifilter .form-columns-1 select,
+section.u4m-subscription-preferences form.mixitup-multifilter .form-columns-2 select,
+section.u4m-subscription-preferences form.mixitup-multifilter .form-columns-3 select, section.u4m-subscription-preferences form .form-columns-1 select,
+section.u4m-subscription-preferences form .form-columns-2 select,
+section.u4m-subscription-preferences form .form-columns-3 select {
+  width: 100% !important;
+}
 @media (max-width: 580px) {
   section.u4m-subscription-preferences form.hs-form .form-columns-1 div div,
   section.u4m-subscription-preferences form.hs-form .form-columns-1 div:last-child div,
@@ -7226,7 +7305,7 @@ section.u4m-subscription-preferences form .form-columns-3 select {
   }
 }
 section.u4m-subscription-preferences form.hs-form .form-columns-2 > div, section.u4m-subscription-preferences form.mixitup-multifilter .form-columns-2 > div, section.u4m-subscription-preferences form .form-columns-2 > div {
-  width: calc(50% - 10rem);
+  width: calc(50% - 10rem) !important;
 }
 section.u4m-subscription-preferences form.hs-form .form-columns-2 > div:last-of-type, section.u4m-subscription-preferences form.mixitup-multifilter .form-columns-2 > div:last-of-type, section.u4m-subscription-preferences form .form-columns-2 > div:last-of-type {
   margin-left: 20rem;
@@ -7320,35 +7399,22 @@ section.u4m-drag-and-drop-area form {
     padding: 30px 20px;
   }
 }
-section.u4m-drag-and-drop-area form h3 {
-  font-size: 14rem;
-  margin-bottom: 30rem;
-  line-height: 1.71;
-  color: #2e2e2e;
-  font-family: "Sofia Sans";
-  font-weight: bold;
-  letter-spacing: 0px;
-}
 section.u4m-drag-and-drop-area form div.legal-consent-container {
   font-size: 14rem;
   line-height: 1.5;
   margin-bottom: 20rem;
 }
+section.u4m-drag-and-drop-area form div.legal-consent-container .hs-form-booleancheckbox-display > span {
+  margin-left: 0px;
+}
 section.u4m-drag-and-drop-area form div.legal-consent-container p,
 section.u4m-drag-and-drop-area form div.legal-consent-container .hs-form-booleancheckbox label {
-  font-family: "Sofia Sans";
-  font-size: 12rem;
-  line-height: 1.6;
-  letter-spacing: 0.35rem;
-  margin-bottom: 10rem;
   font-size: 14rem;
   line-height: 1.5;
+  position: relative;
 }
-@media (max-width: 580px) {
-  section.u4m-drag-and-drop-area form div.legal-consent-container p,
-  section.u4m-drag-and-drop-area form div.legal-consent-container .hs-form-booleancheckbox label {
-    font-size: 12rem;
-  }
+section.u4m-drag-and-drop-area form div.legal-consent-container .hs-form-booleancheckbox label {
+  padding-left: 24px;
 }
 section.u4m-drag-and-drop-area form.hs-form fieldset, section.u4m-drag-and-drop-area form.mixitup-multifilter fieldset, section.u4m-drag-and-drop-area form fieldset {
   max-width: none;
@@ -7366,33 +7432,25 @@ section.u4m-drag-and-drop-area form.hs-form .hs_error_rollup ul.hs-error-msgs li
 }
 section.u4m-drag-and-drop-area form.hs-form .hs_error_rollup ul.hs-error-msgs li label, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs_error_rollup ul.hs-error-msgs li label, section.u4m-drag-and-drop-area form .hs_error_rollup ul.hs-error-msgs li label {
   color: red;
-  font-size: 18rem;
+  font-size: 14rem;
   text-align: center;
-  padding: 10rem 0 0;
+  padding: 0;
   margin: 20rem 0 0;
   display: block;
   flex: 0 0 100%;
   font-weight: normal;
   text-transform: none;
+  vertical-align: middle;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-form-field, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-form-field, section.u4m-drag-and-drop-area form .hs-form-field {
   margin-bottom: 20rem;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-form-field > label, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-form-field > label, section.u4m-drag-and-drop-area form .hs-form-field > label {
-  font-size: 12rem;
-  font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: 1rem;
-  pointer-events: auto;
-  font-family: "Sofia Sans";
   font-size: 14rem;
-  font-weight: bold;
-  line-height: 1.5em;
-  letter-spacing: 1.5rem;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 10rem;
-  margin-bottom: 6rem;
+  font-weight: 600;
+  line-height: 1.72;
+  pointer-events: auto;
+  margin-bottom: 8rem;
   display: inline-block;
 }
 section.u4m-drag-and-drop-area form.hs-form .input input[type=text],
@@ -7405,34 +7463,20 @@ section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=email]
 section.u4m-drag-and-drop-area form .input input[type=number],
 section.u4m-drag-and-drop-area form .input input[type=tel],
 section.u4m-drag-and-drop-area form .input input[type=email] {
-  border: 1rem solid transparent;
-  border-radius: 5rem;
+  border-radius: 8px;
   margin-top: 0rem;
+  font-family: "Inter";
   font-size: 16rem;
+  line-height: 1.75;
   background-color: #fff;
-  padding: 5.5rem 16rem;
+  padding: 19px 20px;
   width: 100%;
-  appearance: none;
-  font-family: "Sofia Sans";
-  font-size: 18rem;
-  line-height: 1.6;
-  letter-spacing: 0.25rem;
-  margin-bottom: 20rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-}
-@media (max-width: 580px) {
-  section.u4m-drag-and-drop-area form.hs-form .input input[type=text],
-  section.u4m-drag-and-drop-area form.hs-form .input input[type=number],
-  section.u4m-drag-and-drop-area form.hs-form .input input[type=tel],
-  section.u4m-drag-and-drop-area form.hs-form .input input[type=email], section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=text],
-  section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=number],
-  section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=tel],
-  section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=email], section.u4m-drag-and-drop-area form .input input[type=text],
-  section.u4m-drag-and-drop-area form .input input[type=number],
-  section.u4m-drag-and-drop-area form .input input[type=tel],
-  section.u4m-drag-and-drop-area form .input input[type=email] {
-    font-size: 16rem;
-  }
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid transparent;
+  color: #2c6938;
+  outline: none;
 }
 section.u4m-drag-and-drop-area form.hs-form .input input[type=text].error, section.u4m-drag-and-drop-area form.hs-form .input input[type=text].invalid,
 section.u4m-drag-and-drop-area form.hs-form .input input[type=number].error,
@@ -7455,6 +7499,9 @@ section.u4m-drag-and-drop-area form .input input[type=email].error,
 section.u4m-drag-and-drop-area form .input input[type=email].invalid {
   border: 1rem solid red;
 }
+section.u4m-drag-and-drop-area form.hs-form .input input[type=text]::-moz-placeholder, section.u4m-drag-and-drop-area form.hs-form .input input[type=number]::-moz-placeholder, section.u4m-drag-and-drop-area form.hs-form .input input[type=tel]::-moz-placeholder, section.u4m-drag-and-drop-area form.hs-form .input input[type=email]::-moz-placeholder, section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=text]::-moz-placeholder, section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=number]::-moz-placeholder, section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=tel]::-moz-placeholder, section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=email]::-moz-placeholder, section.u4m-drag-and-drop-area form .input input[type=text]::-moz-placeholder, section.u4m-drag-and-drop-area form .input input[type=number]::-moz-placeholder, section.u4m-drag-and-drop-area form .input input[type=tel]::-moz-placeholder, section.u4m-drag-and-drop-area form .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
+}
 section.u4m-drag-and-drop-area form.hs-form .input input[type=text]::placeholder,
 section.u4m-drag-and-drop-area form.hs-form .input input[type=number]::placeholder,
 section.u4m-drag-and-drop-area form.hs-form .input input[type=tel]::placeholder,
@@ -7465,7 +7512,7 @@ section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=email]
 section.u4m-drag-and-drop-area form .input input[type=number]::placeholder,
 section.u4m-drag-and-drop-area form .input input[type=tel]::placeholder,
 section.u4m-drag-and-drop-area form .input input[type=email]::placeholder {
-  color: black;
+  color: #2c6938;
 }
 section.u4m-drag-and-drop-area form.hs-form .input input[type=checkbox],
 section.u4m-drag-and-drop-area form.hs-form .input input[type=radio], section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=checkbox],
@@ -7473,34 +7520,37 @@ section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=radio]
 section.u4m-drag-and-drop-area form .input input[type=radio] {
   width: auto;
 }
-section.u4m-drag-and-drop-area form.hs-form .input input select, section.u4m-drag-and-drop-area form.mixitup-multifilter .input input select, section.u4m-drag-and-drop-area form .input input select {
-  border: 0;
+section.u4m-drag-and-drop-area form.hs-form .input select, section.u4m-drag-and-drop-area form.mixitup-multifilter .input select, section.u4m-drag-and-drop-area form .input select {
   border-radius: 4rem;
   margin-top: 0rem;
   margin-bottom: 20rem;
   font-size: 16rem;
   background-color: #fff;
+  padding: 19px 20px;
+  border-radius: 8px;
+  width: 100%;
+  color: #2c6938;
+  line-height: 1.75;
 }
 section.u4m-drag-and-drop-area form.hs-form .input input[type=file], section.u4m-drag-and-drop-area form.mixitup-multifilter .input input[type=file], section.u4m-drag-and-drop-area form .input input[type=file] {
   font-size: 16rem;
-  font-family: "Sofia Sans";
   background-color: transparent;
   position: relative;
   font-weight: bold;
   margin-bottom: 23rem;
 }
 section.u4m-drag-and-drop-area form.hs-form .input select, section.u4m-drag-and-drop-area form.mixitup-multifilter .input select, section.u4m-drag-and-drop-area form .input select {
-  appearance: none;
-  background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
-  background-size: 13rem 8rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
+  background-size: 16rem 8rem;
   background-position: 97% 51%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 5rem;
+  border: 1px solid transparent;
   margin-top: 0rem;
   margin-bottom: 0;
   background-color: #fff;
-  padding: 12rem 16rem;
-  line-height: 1;
+  outline: none;
 }
 section.u4m-drag-and-drop-area form.hs-form .input + .hs-error-msgs, section.u4m-drag-and-drop-area form.mixitup-multifilter .input + .hs-error-msgs, section.u4m-drag-and-drop-area form .input + .hs-error-msgs {
   position: relative;
@@ -7522,7 +7572,7 @@ section.u4m-drag-and-drop-area form.hs-form .input + .hs-error-msgs li, section.
   text-align: center;
   background: red;
   display: inline-block;
-  color: white;
+  color: #fff;
   border-radius: 5rem;
   padding: 5rem 8rem;
   line-height: 1.2;
@@ -7543,7 +7593,6 @@ section.u4m-drag-and-drop-area form.hs-form .input + .hs-error-msgs li:before, s
 }
 section.u4m-drag-and-drop-area form.hs-form .input + .hs-error-msgs li label, section.u4m-drag-and-drop-area form.mixitup-multifilter .input + .hs-error-msgs li label, section.u4m-drag-and-drop-area form .input + .hs-error-msgs li label {
   font-size: 12rem;
-  font-family: "Sofia Sans";
   text-transform: uppercase;
   letter-spacing: 1rem;
   display: inline-block;
@@ -7566,7 +7615,7 @@ section.u4m-drag-and-drop-area form.hs-form textarea, section.u4m-drag-and-drop-
   font-size: 16rem;
   width: 100%;
   border-radius: 5rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
   width: 100% !important;
 }
 section.u4m-drag-and-drop-area form.hs-form textarea.invalid, section.u4m-drag-and-drop-area form.mixitup-multifilter textarea.invalid, section.u4m-drag-and-drop-area form textarea.invalid {
@@ -7594,7 +7643,7 @@ section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-form-booleancheckbox
 section.u4m-drag-and-drop-area form .hs-form-booleancheckbox,
 section.u4m-drag-and-drop-area form .hs-form-checkbox,
 section.u4m-drag-and-drop-area form .hs-form-booleancheckbox {
-  line-height: 1.2;
+  line-height: 1.72;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-form-checkbox input,
 section.u4m-drag-and-drop-area form.hs-form .hs-form-booleancheckbox input,
@@ -7607,10 +7656,13 @@ section.u4m-drag-and-drop-area form .hs-form-booleancheckbox input,
 section.u4m-drag-and-drop-area form .hs-form-checkbox input,
 section.u4m-drag-and-drop-area form .hs-form-booleancheckbox input {
   width: auto;
-  margin: 0 10rem 15rem 0;
+  margin: 0 10rem 0rem 0;
   position: relative;
-  top: 8rem;
+  top: 2rem;
   float: left;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-form-checkbox label,
 section.u4m-drag-and-drop-area form.hs-form .hs-form-booleancheckbox label,
@@ -7622,10 +7674,11 @@ section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-form-booleancheckbox
 section.u4m-drag-and-drop-area form .hs-form-booleancheckbox label,
 section.u4m-drag-and-drop-area form .hs-form-checkbox label,
 section.u4m-drag-and-drop-area form .hs-form-booleancheckbox label {
-  font-size: 16rem;
-  font-weight: normal;
+  font-size: 14rem;
   display: flex;
   align-items: center;
+  padding-left: 24px;
+  position: relative;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-form-checkbox label span,
 section.u4m-drag-and-drop-area form.hs-form .hs-form-booleancheckbox label span,
@@ -7651,8 +7704,10 @@ section.u4m-drag-and-drop-area form.mixitup-multifilter .form-columns-3 .hs-form
 section.u4m-drag-and-drop-area form .form-columns-1 .hs-form-radio,
 section.u4m-drag-and-drop-area form .form-columns-2 .hs-form-radio,
 section.u4m-drag-and-drop-area form .form-columns-3 .hs-form-radio {
-  display: inline-block;
   margin-right: 20rem;
+  letter-spacing: 0;
+  font-size: 14rem;
+  margin-bottom: 12px;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-form-radio input,
 section.u4m-drag-and-drop-area form.hs-form .form-columns-1 .hs-form-radio input,
@@ -7668,7 +7723,7 @@ section.u4m-drag-and-drop-area form .form-columns-3 .hs-form-radio input {
   margin-right: 10rem;
   margin-left: 2rem;
   position: relative;
-  top: -2rem;
+  top: 2rem;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-form-radio span,
 section.u4m-drag-and-drop-area form.hs-form .form-columns-1 .hs-form-radio span,
@@ -7681,7 +7736,7 @@ section.u4m-drag-and-drop-area form .form-columns-1 .hs-form-radio span,
 section.u4m-drag-and-drop-area form .form-columns-2 .hs-form-radio span,
 section.u4m-drag-and-drop-area form .form-columns-3 .hs-form-radio span {
   font-size: 14rem;
-  font-weight: normal;
+  line-height: 1.72;
 }
 @media (max-width: 580px) {
   section.u4m-drag-and-drop-area form.hs-form .hs-form-radio,
@@ -7710,6 +7765,48 @@ section.u4m-drag-and-drop-area form .form-columns-3 .hs-form-radio span {
     position: relative;
     top: 2rem;
   }
+}
+section.u4m-drag-and-drop-area form.hs-form input.hs-input[type=checkbox], section.u4m-drag-and-drop-area form.mixitup-multifilter input.hs-input[type=checkbox], section.u4m-drag-and-drop-area form input.hs-input[type=checkbox] {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 2px;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  border: none;
+  outline: none;
+}
+section.u4m-drag-and-drop-area form.hs-form input.hs-input[type=checkbox]::before, section.u4m-drag-and-drop-area form.mixitup-multifilter input.hs-input[type=checkbox]::before, section.u4m-drag-and-drop-area form input.hs-input[type=checkbox]::before {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 0;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  content: "";
+}
+section.u4m-drag-and-drop-area form.hs-form input.hs-input[type=checkbox]::after, section.u4m-drag-and-drop-area form.mixitup-multifilter input.hs-input[type=checkbox]::after, section.u4m-drag-and-drop-area form input.hs-input[type=checkbox]::after {
+  content: "";
+  display: block;
+  height: 7px;
+  left: 6px;
+  min-width: 12px;
+  position: relative;
+  position: absolute;
+  top: 6px;
+  width: 12px;
 }
 section.u4m-drag-and-drop-area form.hs-form .form-columns-3 .hs-form-field, section.u4m-drag-and-drop-area form.mixitup-multifilter .form-columns-3 .hs-form-field, section.u4m-drag-and-drop-area form .form-columns-3 .hs-form-field {
   width: 33.05%;
@@ -7751,6 +7848,15 @@ section.u4m-drag-and-drop-area form .form-columns-3 select {
   margin-right: 0;
   width: 100%;
 }
+section.u4m-drag-and-drop-area form.hs-form .form-columns-1 select,
+section.u4m-drag-and-drop-area form.hs-form .form-columns-2 select,
+section.u4m-drag-and-drop-area form.hs-form .form-columns-3 select, section.u4m-drag-and-drop-area form.mixitup-multifilter .form-columns-1 select,
+section.u4m-drag-and-drop-area form.mixitup-multifilter .form-columns-2 select,
+section.u4m-drag-and-drop-area form.mixitup-multifilter .form-columns-3 select, section.u4m-drag-and-drop-area form .form-columns-1 select,
+section.u4m-drag-and-drop-area form .form-columns-2 select,
+section.u4m-drag-and-drop-area form .form-columns-3 select {
+  width: 100% !important;
+}
 @media (max-width: 580px) {
   section.u4m-drag-and-drop-area form.hs-form .form-columns-1 div div,
   section.u4m-drag-and-drop-area form.hs-form .form-columns-1 div:last-child div,
@@ -7790,7 +7896,7 @@ section.u4m-drag-and-drop-area form .form-columns-3 select {
   }
 }
 section.u4m-drag-and-drop-area form.hs-form .form-columns-2 > div, section.u4m-drag-and-drop-area form.mixitup-multifilter .form-columns-2 > div, section.u4m-drag-and-drop-area form .form-columns-2 > div {
-  width: calc(50% - 10rem);
+  width: calc(50% - 10rem) !important;
 }
 section.u4m-drag-and-drop-area form.hs-form .form-columns-2 > div:last-of-type, section.u4m-drag-and-drop-area form.mixitup-multifilter .form-columns-2 > div:last-of-type, section.u4m-drag-and-drop-area form .form-columns-2 > div:last-of-type {
   margin-left: 20rem;
@@ -7834,6 +7940,563 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:active, section.u4m-drag-
   border-color: #275430;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-button:disabled, section.u4m-drag-and-drop-area form .hs-button:disabled {
+  border-radius: 8px;
+  color: #fff;
+  background-color: #969696;
+  border-color: #969696;
+}
+
+form {
+  border-radius: 8px;
+  padding: 60px 50px;
+  background-color: #c8eace;
+}
+@media (max-width: 767px) {
+  form {
+    padding: 30px 20px;
+  }
+}
+form div.legal-consent-container {
+  font-size: 14rem;
+  line-height: 1.5;
+  margin-bottom: 20rem;
+}
+form div.legal-consent-container .hs-form-booleancheckbox-display > span {
+  margin-left: 0px;
+}
+form div.legal-consent-container p,
+form div.legal-consent-container .hs-form-booleancheckbox label {
+  font-size: 14rem;
+  line-height: 1.5;
+  position: relative;
+}
+form div.legal-consent-container .hs-form-booleancheckbox label {
+  padding-left: 24px;
+}
+form.hs-form fieldset, form.mixitup-multifilter fieldset, form fieldset {
+  max-width: none;
+}
+form.hs-form .hs_error_rollup, form.mixitup-multifilter .hs_error_rollup, form .hs_error_rollup {
+  flex: 0 0 100%;
+  margin: 0;
+}
+form.hs-form .hs_error_rollup ul.hs-error-msgs, form.mixitup-multifilter .hs_error_rollup ul.hs-error-msgs, form .hs_error_rollup ul.hs-error-msgs {
+  animation: fadeIn2 0.5s ease;
+  margin-bottom: 0;
+}
+form.hs-form .hs_error_rollup ul.hs-error-msgs li, form.mixitup-multifilter .hs_error_rollup ul.hs-error-msgs li, form .hs_error_rollup ul.hs-error-msgs li {
+  margin-bottom: 0;
+}
+form.hs-form .hs_error_rollup ul.hs-error-msgs li label, form.mixitup-multifilter .hs_error_rollup ul.hs-error-msgs li label, form .hs_error_rollup ul.hs-error-msgs li label {
+  color: red;
+  font-size: 14rem;
+  text-align: center;
+  padding: 0;
+  margin: 20rem 0 0;
+  display: block;
+  flex: 0 0 100%;
+  font-weight: normal;
+  text-transform: none;
+  vertical-align: middle;
+}
+form.hs-form .hs-form-field, form.mixitup-multifilter .hs-form-field, form .hs-form-field {
+  margin-bottom: 20rem;
+}
+form.hs-form .hs-form-field > label, form.mixitup-multifilter .hs-form-field > label, form .hs-form-field > label {
+  font-size: 14rem;
+  font-weight: 600;
+  line-height: 1.72;
+  pointer-events: auto;
+  margin-bottom: 8rem;
+  display: inline-block;
+}
+form.hs-form .input input[type=text],
+form.hs-form .input input[type=number],
+form.hs-form .input input[type=tel],
+form.hs-form .input input[type=email], form.mixitup-multifilter .input input[type=text],
+form.mixitup-multifilter .input input[type=number],
+form.mixitup-multifilter .input input[type=tel],
+form.mixitup-multifilter .input input[type=email], form .input input[type=text],
+form .input input[type=number],
+form .input input[type=tel],
+form .input input[type=email] {
+  border-radius: 8px;
+  margin-top: 0rem;
+  font-family: "Inter";
+  font-size: 16rem;
+  line-height: 1.75;
+  background-color: #fff;
+  padding: 19px 20px;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid transparent;
+  color: #2c6938;
+  outline: none;
+}
+form.hs-form .input input[type=text].error, form.hs-form .input input[type=text].invalid,
+form.hs-form .input input[type=number].error,
+form.hs-form .input input[type=number].invalid,
+form.hs-form .input input[type=tel].error,
+form.hs-form .input input[type=tel].invalid,
+form.hs-form .input input[type=email].error,
+form.hs-form .input input[type=email].invalid, form.mixitup-multifilter .input input[type=text].error, form.mixitup-multifilter .input input[type=text].invalid,
+form.mixitup-multifilter .input input[type=number].error,
+form.mixitup-multifilter .input input[type=number].invalid,
+form.mixitup-multifilter .input input[type=tel].error,
+form.mixitup-multifilter .input input[type=tel].invalid,
+form.mixitup-multifilter .input input[type=email].error,
+form.mixitup-multifilter .input input[type=email].invalid, form .input input[type=text].error, form .input input[type=text].invalid,
+form .input input[type=number].error,
+form .input input[type=number].invalid,
+form .input input[type=tel].error,
+form .input input[type=tel].invalid,
+form .input input[type=email].error,
+form .input input[type=email].invalid {
+  border: 1rem solid red;
+}
+form.hs-form .input input[type=text]::-moz-placeholder, form.hs-form .input input[type=number]::-moz-placeholder, form.hs-form .input input[type=tel]::-moz-placeholder, form.hs-form .input input[type=email]::-moz-placeholder, form.mixitup-multifilter .input input[type=text]::-moz-placeholder, form.mixitup-multifilter .input input[type=number]::-moz-placeholder, form.mixitup-multifilter .input input[type=tel]::-moz-placeholder, form.mixitup-multifilter .input input[type=email]::-moz-placeholder, form .input input[type=text]::-moz-placeholder, form .input input[type=number]::-moz-placeholder, form .input input[type=tel]::-moz-placeholder, form .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
+}
+form.hs-form .input input[type=text]::placeholder,
+form.hs-form .input input[type=number]::placeholder,
+form.hs-form .input input[type=tel]::placeholder,
+form.hs-form .input input[type=email]::placeholder, form.mixitup-multifilter .input input[type=text]::placeholder,
+form.mixitup-multifilter .input input[type=number]::placeholder,
+form.mixitup-multifilter .input input[type=tel]::placeholder,
+form.mixitup-multifilter .input input[type=email]::placeholder, form .input input[type=text]::placeholder,
+form .input input[type=number]::placeholder,
+form .input input[type=tel]::placeholder,
+form .input input[type=email]::placeholder {
+  color: #2c6938;
+}
+form.hs-form .input input[type=checkbox],
+form.hs-form .input input[type=radio], form.mixitup-multifilter .input input[type=checkbox],
+form.mixitup-multifilter .input input[type=radio], form .input input[type=checkbox],
+form .input input[type=radio] {
+  width: auto;
+}
+form.hs-form .input select, form.mixitup-multifilter .input select, form .input select {
+  border-radius: 4rem;
+  margin-top: 0rem;
+  margin-bottom: 20rem;
+  font-size: 16rem;
+  background-color: #fff;
+  padding: 19px 20px;
+  border-radius: 8px;
+  width: 100%;
+  color: #2c6938;
+  line-height: 1.75;
+}
+form.hs-form .input input[type=file], form.mixitup-multifilter .input input[type=file], form .input input[type=file] {
+  font-size: 16rem;
+  background-color: transparent;
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 23rem;
+}
+form.hs-form .input select, form.mixitup-multifilter .input select, form .input select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
+  background-size: 16rem 8rem;
+  background-position: 97% 51%;
+  border: 1px solid transparent;
+  margin-top: 0rem;
+  margin-bottom: 0;
+  background-color: #fff;
+  outline: none;
+}
+form.hs-form .input + .hs-error-msgs, form.mixitup-multifilter .input + .hs-error-msgs, form .input + .hs-error-msgs {
+  position: relative;
+  width: 100%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+  margin: 0rem 0 0;
+  padding: 0;
+  animation: fadeIn1 0.3s ease;
+}
+@media (max-width: 580px) {
+  form.hs-form .input + .hs-error-msgs, form.mixitup-multifilter .input + .hs-error-msgs, form .input + .hs-error-msgs {
+    position: relative;
+  }
+}
+form.hs-form .input + .hs-error-msgs li, form.mixitup-multifilter .input + .hs-error-msgs li, form .input + .hs-error-msgs li {
+  position: relative;
+  text-align: center;
+  background: red;
+  display: inline-block;
+  color: #fff;
+  border-radius: 5rem;
+  padding: 5rem 8rem;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+form.hs-form .input + .hs-error-msgs li:before, form.mixitup-multifilter .input + .hs-error-msgs li:before, form .input + .hs-error-msgs li:before {
+  border-style: solid;
+  border-width: 0 8rem 8rem 8rem;
+  bottom: 100%;
+  border-color: transparent transparent red transparent;
+  position: absolute;
+  height: 8rem;
+  width: 0rem;
+  content: "";
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+form.hs-form .input + .hs-error-msgs li label, form.mixitup-multifilter .input + .hs-error-msgs li label, form .input + .hs-error-msgs li label {
+  font-size: 12rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+@media (max-width: 580px) {
+  form.hs-form .input + .hs-error-msgs li label, form.mixitup-multifilter .input + .hs-error-msgs li label, form .input + .hs-error-msgs li label {
+    font-size: 12rem;
+  }
+}
+form.hs-form .hs_upload_resume, form.mixitup-multifilter .hs_upload_resume, form .hs_upload_resume {
+  margin-bottom: -3rem;
+}
+form.hs-form textarea, form.mixitup-multifilter textarea, form textarea {
+  display: block;
+  min-height: 100rem;
+  font-size: 16rem;
+  width: 100%;
+  border-radius: 5rem;
+  border: 1px solid transparent;
+  width: 100% !important;
+}
+form.hs-form textarea.invalid, form.mixitup-multifilter textarea.invalid, form textarea.invalid {
+  border: 1px solid red;
+}
+form.hs-form ul, form.mixitup-multifilter ul, form ul {
+  padding: 0;
+}
+form.hs-form ul.inputs-list, form.mixitup-multifilter ul.inputs-list, form ul.inputs-list {
+  margin-bottom: 17rem;
+}
+form.hs-form li, form.mixitup-multifilter li, form li {
+  list-style-type: none;
+}
+form.hs-form li.hs-form-booleancheckbox, form.mixitup-multifilter li.hs-form-booleancheckbox, form li.hs-form-booleancheckbox {
+  margin-bottom: 0;
+}
+form.hs-form .hs-form-checkbox,
+form.hs-form .hs-form-booleancheckbox,
+form.hs-form .hs-form-checkbox,
+form.hs-form .hs-form-booleancheckbox, form.mixitup-multifilter .hs-form-checkbox,
+form.mixitup-multifilter .hs-form-booleancheckbox,
+form.mixitup-multifilter .hs-form-checkbox,
+form.mixitup-multifilter .hs-form-booleancheckbox, form .hs-form-checkbox,
+form .hs-form-booleancheckbox,
+form .hs-form-checkbox,
+form .hs-form-booleancheckbox {
+  line-height: 1.72;
+}
+form.hs-form .hs-form-checkbox input,
+form.hs-form .hs-form-booleancheckbox input,
+form.hs-form .hs-form-checkbox input,
+form.hs-form .hs-form-booleancheckbox input, form.mixitup-multifilter .hs-form-checkbox input,
+form.mixitup-multifilter .hs-form-booleancheckbox input,
+form.mixitup-multifilter .hs-form-checkbox input,
+form.mixitup-multifilter .hs-form-booleancheckbox input, form .hs-form-checkbox input,
+form .hs-form-booleancheckbox input,
+form .hs-form-checkbox input,
+form .hs-form-booleancheckbox input {
+  width: auto;
+  margin: 0 10rem 0rem 0;
+  position: relative;
+  top: 2rem;
+  float: left;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+form.hs-form .hs-form-checkbox label,
+form.hs-form .hs-form-booleancheckbox label,
+form.hs-form .hs-form-checkbox label,
+form.hs-form .hs-form-booleancheckbox label, form.mixitup-multifilter .hs-form-checkbox label,
+form.mixitup-multifilter .hs-form-booleancheckbox label,
+form.mixitup-multifilter .hs-form-checkbox label,
+form.mixitup-multifilter .hs-form-booleancheckbox label, form .hs-form-checkbox label,
+form .hs-form-booleancheckbox label,
+form .hs-form-checkbox label,
+form .hs-form-booleancheckbox label {
+  font-size: 14rem;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  position: relative;
+}
+form.hs-form .hs-form-checkbox label span,
+form.hs-form .hs-form-booleancheckbox label span,
+form.hs-form .hs-form-checkbox label span,
+form.hs-form .hs-form-booleancheckbox label span, form.mixitup-multifilter .hs-form-checkbox label span,
+form.mixitup-multifilter .hs-form-booleancheckbox label span,
+form.mixitup-multifilter .hs-form-checkbox label span,
+form.mixitup-multifilter .hs-form-booleancheckbox label span, form .hs-form-checkbox label span,
+form .hs-form-booleancheckbox label span,
+form .hs-form-checkbox label span,
+form .hs-form-booleancheckbox label span {
+  position: relative;
+  top: 2rem;
+  font-size: 14rem;
+}
+form.hs-form .hs-form-radio,
+form.hs-form .form-columns-1 .hs-form-radio,
+form.hs-form .form-columns-2 .hs-form-radio,
+form.hs-form .form-columns-3 .hs-form-radio, form.mixitup-multifilter .hs-form-radio,
+form.mixitup-multifilter .form-columns-1 .hs-form-radio,
+form.mixitup-multifilter .form-columns-2 .hs-form-radio,
+form.mixitup-multifilter .form-columns-3 .hs-form-radio, form .hs-form-radio,
+form .form-columns-1 .hs-form-radio,
+form .form-columns-2 .hs-form-radio,
+form .form-columns-3 .hs-form-radio {
+  margin-right: 20rem;
+  letter-spacing: 0;
+  font-size: 14rem;
+  margin-bottom: 12px;
+}
+form.hs-form .hs-form-radio input,
+form.hs-form .form-columns-1 .hs-form-radio input,
+form.hs-form .form-columns-2 .hs-form-radio input,
+form.hs-form .form-columns-3 .hs-form-radio input, form.mixitup-multifilter .hs-form-radio input,
+form.mixitup-multifilter .form-columns-1 .hs-form-radio input,
+form.mixitup-multifilter .form-columns-2 .hs-form-radio input,
+form.mixitup-multifilter .form-columns-3 .hs-form-radio input, form .hs-form-radio input,
+form .form-columns-1 .hs-form-radio input,
+form .form-columns-2 .hs-form-radio input,
+form .form-columns-3 .hs-form-radio input {
+  width: auto;
+  margin-right: 10rem;
+  margin-left: 2rem;
+  position: relative;
+  top: 2rem;
+}
+form.hs-form .hs-form-radio span,
+form.hs-form .form-columns-1 .hs-form-radio span,
+form.hs-form .form-columns-2 .hs-form-radio span,
+form.hs-form .form-columns-3 .hs-form-radio span, form.mixitup-multifilter .hs-form-radio span,
+form.mixitup-multifilter .form-columns-1 .hs-form-radio span,
+form.mixitup-multifilter .form-columns-2 .hs-form-radio span,
+form.mixitup-multifilter .form-columns-3 .hs-form-radio span, form .hs-form-radio span,
+form .form-columns-1 .hs-form-radio span,
+form .form-columns-2 .hs-form-radio span,
+form .form-columns-3 .hs-form-radio span {
+  font-size: 14rem;
+  line-height: 1.72;
+}
+@media (max-width: 580px) {
+  form.hs-form .hs-form-radio,
+  form.hs-form .form-columns-1 .hs-form-radio,
+  form.hs-form .form-columns-2 .hs-form-radio,
+  form.hs-form .form-columns-3 .hs-form-radio, form.mixitup-multifilter .hs-form-radio,
+  form.mixitup-multifilter .form-columns-1 .hs-form-radio,
+  form.mixitup-multifilter .form-columns-2 .hs-form-radio,
+  form.mixitup-multifilter .form-columns-3 .hs-form-radio, form .hs-form-radio,
+  form .form-columns-1 .hs-form-radio,
+  form .form-columns-2 .hs-form-radio,
+  form .form-columns-3 .hs-form-radio {
+    display: block;
+  }
+  form.hs-form .hs-form-radio input,
+  form.hs-form .form-columns-1 .hs-form-radio input,
+  form.hs-form .form-columns-2 .hs-form-radio input,
+  form.hs-form .form-columns-3 .hs-form-radio input, form.mixitup-multifilter .hs-form-radio input,
+  form.mixitup-multifilter .form-columns-1 .hs-form-radio input,
+  form.mixitup-multifilter .form-columns-2 .hs-form-radio input,
+  form.mixitup-multifilter .form-columns-3 .hs-form-radio input, form .hs-form-radio input,
+  form .form-columns-1 .hs-form-radio input,
+  form .form-columns-2 .hs-form-radio input,
+  form .form-columns-3 .hs-form-radio input {
+    margin-bottom: 0;
+    position: relative;
+    top: 2rem;
+  }
+}
+form.hs-form input.hs-input[type=checkbox], form.mixitup-multifilter input.hs-input[type=checkbox], form input.hs-input[type=checkbox] {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 2px;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  border: none;
+  outline: none;
+}
+form.hs-form input.hs-input[type=checkbox]::before, form.mixitup-multifilter input.hs-input[type=checkbox]::before, form input.hs-input[type=checkbox]::before {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 0;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  content: "";
+}
+form.hs-form input.hs-input[type=checkbox]::after, form.mixitup-multifilter input.hs-input[type=checkbox]::after, form input.hs-input[type=checkbox]::after {
+  content: "";
+  display: block;
+  height: 7px;
+  left: 6px;
+  min-width: 12px;
+  position: relative;
+  position: absolute;
+  top: 6px;
+  width: 12px;
+}
+form.hs-form .form-columns-3 .hs-form-field, form.mixitup-multifilter .form-columns-3 .hs-form-field, form .form-columns-3 .hs-form-field {
+  width: 33.05%;
+}
+@media (max-width: 1024px) {
+  form.hs-form .form-columns-3 .hs-form-field, form.mixitup-multifilter .form-columns-3 .hs-form-field, form .form-columns-3 .hs-form-field {
+    width: 100%;
+  }
+}
+@media (max-width: 580px) {
+  form.hs-form .form-columns-3 .hs-form-field, form.mixitup-multifilter .form-columns-3 .hs-form-field, form .form-columns-3 .hs-form-field {
+    width: 100%;
+  }
+}
+form.hs-form .form-columns-3 div:last-child div, form.mixitup-multifilter .form-columns-3 div:last-child div, form .form-columns-3 div:last-child div {
+  margin-right: 0;
+}
+@media (max-width: 580px) {
+  form.hs-form .form-columns-2 .hs-form-field, form.mixitup-multifilter .form-columns-2 .hs-form-field, form .form-columns-2 .hs-form-field {
+    width: 100%;
+  }
+}
+form.hs-form .form-columns-1 .input,
+form.hs-form .form-columns-1 select,
+form.hs-form .form-columns-2 .input,
+form.hs-form .form-columns-2 select,
+form.hs-form .form-columns-3 .input,
+form.hs-form .form-columns-3 select, form.mixitup-multifilter .form-columns-1 .input,
+form.mixitup-multifilter .form-columns-1 select,
+form.mixitup-multifilter .form-columns-2 .input,
+form.mixitup-multifilter .form-columns-2 select,
+form.mixitup-multifilter .form-columns-3 .input,
+form.mixitup-multifilter .form-columns-3 select, form .form-columns-1 .input,
+form .form-columns-1 select,
+form .form-columns-2 .input,
+form .form-columns-2 select,
+form .form-columns-3 .input,
+form .form-columns-3 select {
+  margin-right: 0;
+  width: 100%;
+}
+form.hs-form .form-columns-1 select,
+form.hs-form .form-columns-2 select,
+form.hs-form .form-columns-3 select, form.mixitup-multifilter .form-columns-1 select,
+form.mixitup-multifilter .form-columns-2 select,
+form.mixitup-multifilter .form-columns-3 select, form .form-columns-1 select,
+form .form-columns-2 select,
+form .form-columns-3 select {
+  width: 100% !important;
+}
+@media (max-width: 580px) {
+  form.hs-form .form-columns-1 div div,
+  form.hs-form .form-columns-1 div:last-child div,
+  form.hs-form .form-columns-2 div div,
+  form.hs-form .form-columns-2 div:last-child div,
+  form.hs-form .form-columns-3 div div,
+  form.hs-form .form-columns-3 div:last-child div, form.mixitup-multifilter .form-columns-1 div div,
+  form.mixitup-multifilter .form-columns-1 div:last-child div,
+  form.mixitup-multifilter .form-columns-2 div div,
+  form.mixitup-multifilter .form-columns-2 div:last-child div,
+  form.mixitup-multifilter .form-columns-3 div div,
+  form.mixitup-multifilter .form-columns-3 div:last-child div, form .form-columns-1 div div,
+  form .form-columns-1 div:last-child div,
+  form .form-columns-2 div div,
+  form .form-columns-2 div:last-child div,
+  form .form-columns-3 div div,
+  form .form-columns-3 div:last-child div {
+    margin-right: 8rem;
+  }
+  form.hs-form .form-columns-1 div div .hs-input:not([type=checkbox]):not([type=radio]),
+  form.hs-form .form-columns-1 div:last-child div .hs-input:not([type=checkbox]):not([type=radio]),
+  form.hs-form .form-columns-2 div div .hs-input:not([type=checkbox]):not([type=radio]),
+  form.hs-form .form-columns-2 div:last-child div .hs-input:not([type=checkbox]):not([type=radio]),
+  form.hs-form .form-columns-3 div div .hs-input:not([type=checkbox]):not([type=radio]),
+  form.hs-form .form-columns-3 div:last-child div .hs-input:not([type=checkbox]):not([type=radio]), form.mixitup-multifilter .form-columns-1 div div .hs-input:not([type=checkbox]):not([type=radio]),
+  form.mixitup-multifilter .form-columns-1 div:last-child div .hs-input:not([type=checkbox]):not([type=radio]),
+  form.mixitup-multifilter .form-columns-2 div div .hs-input:not([type=checkbox]):not([type=radio]),
+  form.mixitup-multifilter .form-columns-2 div:last-child div .hs-input:not([type=checkbox]):not([type=radio]),
+  form.mixitup-multifilter .form-columns-3 div div .hs-input:not([type=checkbox]):not([type=radio]),
+  form.mixitup-multifilter .form-columns-3 div:last-child div .hs-input:not([type=checkbox]):not([type=radio]), form .form-columns-1 div div .hs-input:not([type=checkbox]):not([type=radio]),
+  form .form-columns-1 div:last-child div .hs-input:not([type=checkbox]):not([type=radio]),
+  form .form-columns-2 div div .hs-input:not([type=checkbox]):not([type=radio]),
+  form .form-columns-2 div:last-child div .hs-input:not([type=checkbox]):not([type=radio]),
+  form .form-columns-3 div div .hs-input:not([type=checkbox]):not([type=radio]),
+  form .form-columns-3 div:last-child div .hs-input:not([type=checkbox]):not([type=radio]) {
+    width: 100%;
+  }
+}
+form.hs-form .form-columns-2 > div, form.mixitup-multifilter .form-columns-2 > div, form .form-columns-2 > div {
+  width: calc(50% - 10rem) !important;
+}
+form.hs-form .form-columns-2 > div:last-of-type, form.mixitup-multifilter .form-columns-2 > div:last-of-type, form .form-columns-2 > div:last-of-type {
+  margin-left: 20rem;
+}
+@media (max-width: 580px) {
+  form.hs-form .form-columns-2 > div:last-of-type, form.mixitup-multifilter .form-columns-2 > div:last-of-type, form .form-columns-2 > div:last-of-type {
+    margin-left: 0;
+  }
+}
+form.hs-form .hs-button, form.mixitup-multifilter .hs-button, form .hs-button {
+  line-height: 1.71;
+  font-size: 14rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid;
+  text-decoration: none;
+  padding: 14rem 30rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #409650;
+  border-color: #409650;
+  cursor: pointer;
+}
+form.hs-form .hs-button:hover, form.mixitup-multifilter .hs-button:hover, form .hs-button:hover {
+  border-radius: 21px;
+  color: #c0fc95;
+  background-color: #2c6938;
+  border-color: #2c6938;
+}
+form.hs-form .hs-button:active, form.mixitup-multifilter .hs-button:active, form .hs-button:active {
+  border-radius: 21px;
+  color: #9bf75f;
+  background-color: #275430;
+  border-color: #275430;
+}
+form.hs-form .hs-button:disabled, form.mixitup-multifilter .hs-button:disabled, form .hs-button:disabled {
   border-radius: 8px;
   color: #fff;
   background-color: #969696;
@@ -7914,7 +8577,8 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
 .visually-hidden,
 .sr-only {
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -8339,35 +9003,22 @@ section.u4m-blog-post div.comments div.content form {
     padding: 30px 20px;
   }
 }
-section.u4m-blog-post div.comments div.content form h3 {
-  font-size: 14rem;
-  margin-bottom: 30rem;
-  line-height: 1.71;
-  color: #2e2e2e;
-  font-family: "Sofia Sans";
-  font-weight: bold;
-  letter-spacing: 0px;
-}
 section.u4m-blog-post div.comments div.content form div.legal-consent-container {
   font-size: 14rem;
   line-height: 1.5;
   margin-bottom: 20rem;
 }
+section.u4m-blog-post div.comments div.content form div.legal-consent-container .hs-form-booleancheckbox-display > span {
+  margin-left: 0px;
+}
 section.u4m-blog-post div.comments div.content form div.legal-consent-container p,
 section.u4m-blog-post div.comments div.content form div.legal-consent-container .hs-form-booleancheckbox label {
-  font-family: "Sofia Sans";
-  font-size: 12rem;
-  line-height: 1.6;
-  letter-spacing: 0.35rem;
-  margin-bottom: 10rem;
   font-size: 14rem;
   line-height: 1.5;
+  position: relative;
 }
-@media (max-width: 580px) {
-  section.u4m-blog-post div.comments div.content form div.legal-consent-container p,
-  section.u4m-blog-post div.comments div.content form div.legal-consent-container .hs-form-booleancheckbox label {
-    font-size: 12rem;
-  }
+section.u4m-blog-post div.comments div.content form div.legal-consent-container .hs-form-booleancheckbox label {
+  padding-left: 24px;
 }
 section.u4m-blog-post div.comments div.content form.hs-form fieldset, section.u4m-blog-post div.comments div.content form.mixitup-multifilter fieldset, section.u4m-blog-post div.comments div.content form fieldset {
   max-width: none;
@@ -8385,33 +9036,25 @@ section.u4m-blog-post div.comments div.content form.hs-form .hs_error_rollup ul.
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs_error_rollup ul.hs-error-msgs li label, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs_error_rollup ul.hs-error-msgs li label, section.u4m-blog-post div.comments div.content form .hs_error_rollup ul.hs-error-msgs li label {
   color: red;
-  font-size: 18rem;
+  font-size: 14rem;
   text-align: center;
-  padding: 10rem 0 0;
+  padding: 0;
   margin: 20rem 0 0;
   display: block;
   flex: 0 0 100%;
   font-weight: normal;
   text-transform: none;
+  vertical-align: middle;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-field, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-form-field, section.u4m-blog-post div.comments div.content form .hs-form-field {
   margin-bottom: 20rem;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-field > label, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-form-field > label, section.u4m-blog-post div.comments div.content form .hs-form-field > label {
-  font-size: 12rem;
-  font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: 1rem;
-  pointer-events: auto;
-  font-family: "Sofia Sans";
   font-size: 14rem;
-  font-weight: bold;
-  line-height: 1.5em;
-  letter-spacing: 1.5rem;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 10rem;
-  margin-bottom: 6rem;
+  font-weight: 600;
+  line-height: 1.72;
+  pointer-events: auto;
+  margin-bottom: 8rem;
   display: inline-block;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .input input[type=text],
@@ -8424,34 +9067,20 @@ section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input i
 section.u4m-blog-post div.comments div.content form .input input[type=number],
 section.u4m-blog-post div.comments div.content form .input input[type=tel],
 section.u4m-blog-post div.comments div.content form .input input[type=email] {
-  border: 1rem solid transparent;
-  border-radius: 5rem;
+  border-radius: 8px;
   margin-top: 0rem;
+  font-family: "Inter";
   font-size: 16rem;
+  line-height: 1.75;
   background-color: #fff;
-  padding: 5.5rem 16rem;
+  padding: 19px 20px;
   width: 100%;
-  appearance: none;
-  font-family: "Sofia Sans";
-  font-size: 18rem;
-  line-height: 1.6;
-  letter-spacing: 0.25rem;
-  margin-bottom: 20rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-}
-@media (max-width: 580px) {
-  section.u4m-blog-post div.comments div.content form.hs-form .input input[type=text],
-  section.u4m-blog-post div.comments div.content form.hs-form .input input[type=number],
-  section.u4m-blog-post div.comments div.content form.hs-form .input input[type=tel],
-  section.u4m-blog-post div.comments div.content form.hs-form .input input[type=email], section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input input[type=text],
-  section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input input[type=number],
-  section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input input[type=tel],
-  section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input input[type=email], section.u4m-blog-post div.comments div.content form .input input[type=text],
-  section.u4m-blog-post div.comments div.content form .input input[type=number],
-  section.u4m-blog-post div.comments div.content form .input input[type=tel],
-  section.u4m-blog-post div.comments div.content form .input input[type=email] {
-    font-size: 16rem;
-  }
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid transparent;
+  color: #2c6938;
+  outline: none;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .input input[type=text].error, section.u4m-blog-post div.comments div.content form.hs-form .input input[type=text].invalid,
 section.u4m-blog-post div.comments div.content form.hs-form .input input[type=number].error,
@@ -8474,6 +9103,9 @@ section.u4m-blog-post div.comments div.content form .input input[type=email].err
 section.u4m-blog-post div.comments div.content form .input input[type=email].invalid {
   border: 1rem solid red;
 }
+section.u4m-blog-post div.comments div.content form.hs-form .input input[type=text]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.hs-form .input input[type=number]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.hs-form .input input[type=tel]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.hs-form .input input[type=email]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input input[type=text]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input input[type=number]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input input[type=tel]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input input[type=email]::-moz-placeholder, section.u4m-blog-post div.comments div.content form .input input[type=text]::-moz-placeholder, section.u4m-blog-post div.comments div.content form .input input[type=number]::-moz-placeholder, section.u4m-blog-post div.comments div.content form .input input[type=tel]::-moz-placeholder, section.u4m-blog-post div.comments div.content form .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
+}
 section.u4m-blog-post div.comments div.content form.hs-form .input input[type=text]::placeholder,
 section.u4m-blog-post div.comments div.content form.hs-form .input input[type=number]::placeholder,
 section.u4m-blog-post div.comments div.content form.hs-form .input input[type=tel]::placeholder,
@@ -8484,7 +9116,7 @@ section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input i
 section.u4m-blog-post div.comments div.content form .input input[type=number]::placeholder,
 section.u4m-blog-post div.comments div.content form .input input[type=tel]::placeholder,
 section.u4m-blog-post div.comments div.content form .input input[type=email]::placeholder {
-  color: black;
+  color: #2c6938;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .input input[type=checkbox],
 section.u4m-blog-post div.comments div.content form.hs-form .input input[type=radio], section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input input[type=checkbox],
@@ -8492,34 +9124,37 @@ section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input i
 section.u4m-blog-post div.comments div.content form .input input[type=radio] {
   width: auto;
 }
-section.u4m-blog-post div.comments div.content form.hs-form .input input select, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input input select, section.u4m-blog-post div.comments div.content form .input input select {
-  border: 0;
+section.u4m-blog-post div.comments div.content form.hs-form .input select, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input select, section.u4m-blog-post div.comments div.content form .input select {
   border-radius: 4rem;
   margin-top: 0rem;
   margin-bottom: 20rem;
   font-size: 16rem;
   background-color: #fff;
+  padding: 19px 20px;
+  border-radius: 8px;
+  width: 100%;
+  color: #2c6938;
+  line-height: 1.75;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .input input[type=file], section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input input[type=file], section.u4m-blog-post div.comments div.content form .input input[type=file] {
   font-size: 16rem;
-  font-family: "Sofia Sans";
   background-color: transparent;
   position: relative;
   font-weight: bold;
   margin-bottom: 23rem;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .input select, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input select, section.u4m-blog-post div.comments div.content form .input select {
-  appearance: none;
-  background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
-  background-size: 13rem 8rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
+  background-size: 16rem 8rem;
   background-position: 97% 51%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 5rem;
+  border: 1px solid transparent;
   margin-top: 0rem;
   margin-bottom: 0;
   background-color: #fff;
-  padding: 12rem 16rem;
-  line-height: 1;
+  outline: none;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .input + .hs-error-msgs, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input + .hs-error-msgs, section.u4m-blog-post div.comments div.content form .input + .hs-error-msgs {
   position: relative;
@@ -8541,7 +9176,7 @@ section.u4m-blog-post div.comments div.content form.hs-form .input + .hs-error-m
   text-align: center;
   background: red;
   display: inline-block;
-  color: white;
+  color: #fff;
   border-radius: 5rem;
   padding: 5rem 8rem;
   line-height: 1.2;
@@ -8562,7 +9197,6 @@ section.u4m-blog-post div.comments div.content form.hs-form .input + .hs-error-m
 }
 section.u4m-blog-post div.comments div.content form.hs-form .input + .hs-error-msgs li label, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .input + .hs-error-msgs li label, section.u4m-blog-post div.comments div.content form .input + .hs-error-msgs li label {
   font-size: 12rem;
-  font-family: "Sofia Sans";
   text-transform: uppercase;
   letter-spacing: 1rem;
   display: inline-block;
@@ -8585,7 +9219,7 @@ section.u4m-blog-post div.comments div.content form.hs-form textarea, section.u4
   font-size: 16rem;
   width: 100%;
   border-radius: 5rem;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
   width: 100% !important;
 }
 section.u4m-blog-post div.comments div.content form.hs-form textarea.invalid, section.u4m-blog-post div.comments div.content form.mixitup-multifilter textarea.invalid, section.u4m-blog-post div.comments div.content form textarea.invalid {
@@ -8613,7 +9247,7 @@ section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-form
 section.u4m-blog-post div.comments div.content form .hs-form-booleancheckbox,
 section.u4m-blog-post div.comments div.content form .hs-form-checkbox,
 section.u4m-blog-post div.comments div.content form .hs-form-booleancheckbox {
-  line-height: 1.2;
+  line-height: 1.72;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-checkbox input,
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-booleancheckbox input,
@@ -8626,10 +9260,13 @@ section.u4m-blog-post div.comments div.content form .hs-form-booleancheckbox inp
 section.u4m-blog-post div.comments div.content form .hs-form-checkbox input,
 section.u4m-blog-post div.comments div.content form .hs-form-booleancheckbox input {
   width: auto;
-  margin: 0 10rem 15rem 0;
+  margin: 0 10rem 0rem 0;
   position: relative;
-  top: 8rem;
+  top: 2rem;
   float: left;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-checkbox label,
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-booleancheckbox label,
@@ -8641,10 +9278,11 @@ section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-form
 section.u4m-blog-post div.comments div.content form .hs-form-booleancheckbox label,
 section.u4m-blog-post div.comments div.content form .hs-form-checkbox label,
 section.u4m-blog-post div.comments div.content form .hs-form-booleancheckbox label {
-  font-size: 16rem;
-  font-weight: normal;
+  font-size: 14rem;
   display: flex;
   align-items: center;
+  padding-left: 24px;
+  position: relative;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-checkbox label span,
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-booleancheckbox label span,
@@ -8670,8 +9308,10 @@ section.u4m-blog-post div.comments div.content form.mixitup-multifilter .form-co
 section.u4m-blog-post div.comments div.content form .form-columns-1 .hs-form-radio,
 section.u4m-blog-post div.comments div.content form .form-columns-2 .hs-form-radio,
 section.u4m-blog-post div.comments div.content form .form-columns-3 .hs-form-radio {
-  display: inline-block;
   margin-right: 20rem;
+  letter-spacing: 0;
+  font-size: 14rem;
+  margin-bottom: 12px;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-radio input,
 section.u4m-blog-post div.comments div.content form.hs-form .form-columns-1 .hs-form-radio input,
@@ -8687,7 +9327,7 @@ section.u4m-blog-post div.comments div.content form .form-columns-3 .hs-form-rad
   margin-right: 10rem;
   margin-left: 2rem;
   position: relative;
-  top: -2rem;
+  top: 2rem;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-radio span,
 section.u4m-blog-post div.comments div.content form.hs-form .form-columns-1 .hs-form-radio span,
@@ -8700,7 +9340,7 @@ section.u4m-blog-post div.comments div.content form .form-columns-1 .hs-form-rad
 section.u4m-blog-post div.comments div.content form .form-columns-2 .hs-form-radio span,
 section.u4m-blog-post div.comments div.content form .form-columns-3 .hs-form-radio span {
   font-size: 14rem;
-  font-weight: normal;
+  line-height: 1.72;
 }
 @media (max-width: 580px) {
   section.u4m-blog-post div.comments div.content form.hs-form .hs-form-radio,
@@ -8729,6 +9369,48 @@ section.u4m-blog-post div.comments div.content form .form-columns-3 .hs-form-rad
     position: relative;
     top: 2rem;
   }
+}
+section.u4m-blog-post div.comments div.content form.hs-form input.hs-input[type=checkbox], section.u4m-blog-post div.comments div.content form.mixitup-multifilter input.hs-input[type=checkbox], section.u4m-blog-post div.comments div.content form input.hs-input[type=checkbox] {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 2px;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  border: none;
+  outline: none;
+}
+section.u4m-blog-post div.comments div.content form.hs-form input.hs-input[type=checkbox]::before, section.u4m-blog-post div.comments div.content form.mixitup-multifilter input.hs-input[type=checkbox]::before, section.u4m-blog-post div.comments div.content form input.hs-input[type=checkbox]::before {
+  background: #fff;
+  border-color: #2e2e2e;
+  height: 16px;
+  left: 0;
+  margin-right: 0;
+  padding: 0 !important;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 0;
+  content: "";
+}
+section.u4m-blog-post div.comments div.content form.hs-form input.hs-input[type=checkbox]::after, section.u4m-blog-post div.comments div.content form.mixitup-multifilter input.hs-input[type=checkbox]::after, section.u4m-blog-post div.comments div.content form input.hs-input[type=checkbox]::after {
+  content: "";
+  display: block;
+  height: 7px;
+  left: 6px;
+  min-width: 12px;
+  position: relative;
+  position: absolute;
+  top: 6px;
+  width: 12px;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .form-columns-3 .hs-form-field, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .form-columns-3 .hs-form-field, section.u4m-blog-post div.comments div.content form .form-columns-3 .hs-form-field {
   width: 33.05%;
@@ -8770,6 +9452,15 @@ section.u4m-blog-post div.comments div.content form .form-columns-3 select {
   margin-right: 0;
   width: 100%;
 }
+section.u4m-blog-post div.comments div.content form.hs-form .form-columns-1 select,
+section.u4m-blog-post div.comments div.content form.hs-form .form-columns-2 select,
+section.u4m-blog-post div.comments div.content form.hs-form .form-columns-3 select, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .form-columns-1 select,
+section.u4m-blog-post div.comments div.content form.mixitup-multifilter .form-columns-2 select,
+section.u4m-blog-post div.comments div.content form.mixitup-multifilter .form-columns-3 select, section.u4m-blog-post div.comments div.content form .form-columns-1 select,
+section.u4m-blog-post div.comments div.content form .form-columns-2 select,
+section.u4m-blog-post div.comments div.content form .form-columns-3 select {
+  width: 100% !important;
+}
 @media (max-width: 580px) {
   section.u4m-blog-post div.comments div.content form.hs-form .form-columns-1 div div,
   section.u4m-blog-post div.comments div.content form.hs-form .form-columns-1 div:last-child div,
@@ -8809,7 +9500,7 @@ section.u4m-blog-post div.comments div.content form .form-columns-3 select {
   }
 }
 section.u4m-blog-post div.comments div.content form.hs-form .form-columns-2 > div, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .form-columns-2 > div, section.u4m-blog-post div.comments div.content form .form-columns-2 > div {
-  width: calc(50% - 10rem);
+  width: calc(50% - 10rem) !important;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .form-columns-2 > div:last-of-type, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .form-columns-2 > div:last-of-type, section.u4m-blog-post div.comments div.content form .form-columns-2 > div:last-of-type {
   margin-left: 20rem;
@@ -8974,7 +9665,8 @@ section.u4m-blog-post .post_content .post-share {
     text-align: left;
     width: 100%;
     flex-direction: row;
-    column-gap: 17px;
+    -moz-column-gap: 17px;
+         column-gap: 17px;
     align-items: center;
     margin-bottom: 20px;
   }
@@ -9031,13 +9723,15 @@ section.u4m-blog-post .author-section {
 section.u4m-blog-post .author-section .author-wrap {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 46px;
+  -moz-column-gap: 46px;
+       column-gap: 46px;
   flex-direction: row;
 }
 @media (max-width: 767px) {
   section.u4m-blog-post .author-section .author-wrap {
     flex-direction: column;
-    column-gap: 0;
+    -moz-column-gap: 0;
+         column-gap: 0;
     row-gap: 40px;
   }
 }
@@ -9100,7 +9794,8 @@ section.u4m-blog-post .author-section .author-wrap .author-link {
   line-height: 1.57;
   text-align: left;
   text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 @media (max-width: 767px) {
   section.u4m-blog-post .author-section .author-wrap .author-link {
@@ -9117,7 +9812,8 @@ section.u4m-blog-post .author-section .author-wrap .author-link .author-share {
 section.u4m-blog-post .author-section .author-wrap .author-link .author-share .author-share-inn {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   line-height: 1;
 }
 section.u4m-blog-post .author-section .author-wrap .author-link .author-share .author-share-inn svg {
@@ -9426,7 +10122,8 @@ footer.ftr_wrpp .top_wrp .right_wrpp .inner_wrp .cm_ratings .plateform_rate ul l
   height: 24px;
 }
 footer.ftr_wrpp .top_wrp .right_wrpp .inner_wrp .cm_ratings .plateform_rate ul li a .img img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   vertical-align: baseline;
 }
 footer.ftr_wrpp .top_wrp .right_wrpp .inner_wrp .cm_ratings .plateform_rate ul li a:hover {
@@ -9485,14 +10182,14 @@ footer.ftr_wrpp .page-center .copyright .social_wrpp ul li a:hover {
   opacity: 1;
   transform: scale(1.1);
 }
-footer.ftr_wrpp .page-center .copyright .topCntt span {
+footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
   align-items: center;
 }
-footer.ftr_wrpp .page-center .copyright .topCntt span p {
+footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper p {
   margin: 0;
   margin: 0;
   font-style: normal;
@@ -9511,16 +10208,16 @@ footer.ftr_wrpp .page-center .copyright .topCntt span p {
   letter-spacing: normal;
 }
 @media (max-width: 580px) {
-  footer.ftr_wrpp .page-center .copyright .topCntt span p {
+  footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper p {
     font-size: 14rem;
   }
 }
 @media (max-width: 1280px) {
-  footer.ftr_wrpp .page-center .copyright .topCntt span p {
+  footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper p {
     width: 100%;
   }
 }
-footer.ftr_wrpp .page-center .copyright .topCntt span ul {
+footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper ul {
   display: flex;
   list-style: none;
   margin: 0;
@@ -9528,10 +10225,10 @@ footer.ftr_wrpp .page-center .copyright .topCntt span ul {
   gap: 31px;
   flex-wrap: wrap;
 }
-footer.ftr_wrpp .page-center .copyright .topCntt span ul li {
+footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper ul li {
   margin: 0;
 }
-footer.ftr_wrpp .page-center .copyright .topCntt span ul li a {
+footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper ul li a {
   margin: 0;
   font-family: "Inter";
   font-style: normal;
@@ -9548,15 +10245,15 @@ footer.ftr_wrpp .page-center .copyright .topCntt span ul li a {
   letter-spacing: normal;
 }
 @media (max-width: 580px) {
-  footer.ftr_wrpp .page-center .copyright .topCntt span ul li a {
+  footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper ul li a {
     font-size: 14rem;
   }
 }
-footer.ftr_wrpp .page-center .copyright .topCntt span ul li a:hover {
+footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper ul li a:hover {
   color: #c0fc95;
 }
 @media (max-width: 1280px) {
-  footer.ftr_wrpp .page-center .copyright .topCntt span ul {
+  footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper ul {
     width: 100%;
     row-gap: 20px;
   }
@@ -9651,7 +10348,8 @@ footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li 
 }
 footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a .img img {
   vertical-align: super;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a:hover {
   color: #c0fc95;
@@ -9772,7 +10470,8 @@ header .hd_hgh .hd_wrap {
   left: 0;
   right: 0;
   z-index: 99;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   box-shadow: 0 0.6021873018px 0.6021873018px -1.25px rgba(0, 0, 0, 0.9), 0 2.2885333032px 2.2885333032px -2.5px rgba(0, 0, 0, 0.8), 0 10px 10px -3.75px rgba(0, 0, 0, 0.3);
 }
 header .hd_hgh .hd_wrap .hd_inr {
