@@ -1,6 +1,9 @@
 @import "../../css/_module-imports";
 
 .u4m-rich-text {
+  code.hljs {
+    background-color: $Dark_jungle;
+  }
   h2 {
     margin-bottom: 23px;
   }

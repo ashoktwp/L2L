@@ -16,6 +16,9 @@ html {
   }
 }
 
+.u4m-rich-text code.hljs {
+  background-color: #0e2514;
+}
 .u4m-rich-text h2 {
   margin-bottom: 23px;
 }
