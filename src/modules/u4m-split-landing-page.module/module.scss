@@ -161,12 +161,6 @@
             padding: 0;
             list-style: none;
           }
-          .hs-form-booleancheckbox input,
-          .hs-form-radio input {
-            margin-right: 10px;
-            position: relative;
-            top: 3px;
-          }
           &.hs-fieldtype-select,
           &.hs-fieldtype-radio,
           &.hs-fieldtype-booleancheckbox {
@@ -200,50 +194,6 @@
               border-radius: 3px;
               left: 13px;
               transition: all 0.3s ease-in-out;
-            }
-          }
-          .input {
-            select,
-            input:not([type="checkbox"]),
-            input:not([type="radio"]),
-            input[type="text"],
-            input[type="number"],
-            input[type="tel"],
-            input[type="email"] {
-              border-radius: 8px;
-              border: 1px solid $border_color;
-              padding: 25px 20px !important;
-              width: 100%;
-              font-family: $secondaryFont;
-              @include size16;
-              line-height: 1.125;
-              color: $Fern_green;
-              outline: none;
-              min-height: inherit !important;
-              &::placeholder {
-                opacity: 0;
-              }
-
-              &.error,
-              &.invalid {
-                border: 1rem solid red;
-              }
-              ::-webkit-input-placeholder,
-              &::placeholder {
-                color: rgba($black, 0.5);
-              }
-            }
-            select {
-              appearance: none;
-              background-image: url(https://www.l2l.com/hubfs/L2L-u4m/images/dropdownArrow.png);
-              background-repeat: no-repeat;
-              background-size: 13rem 8rem;
-              background-position: 97% 51%;
-              background-color: $white;
-            }
-            input[type="checkbox"],
-            input[type="radio"] {
-              width: auto;
             }
           }
           .hs-error-msgs {

@@ -5,13 +5,13 @@ section.u4m-drag-and-drop-area {
     @include form;
   }
 }
-form {
-  @include form;
-}
+
 .dnd_padd,
 .dnd-section {
   padding: 100rem 0;
-
+  form {
+    @include form;
+  }
   @include tablet {
     padding: 60rem 0;
   }

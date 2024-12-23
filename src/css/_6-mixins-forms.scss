@@ -16,12 +16,12 @@
     .hs-form-booleancheckbox-display > span {
       margin-left: 0px;
     }
-    @include size14;
+    @include size12;
     line-height: 1.5;
     margin-bottom: 20rem;
     p,
     .hs-form-booleancheckbox label {
-      @include size14;
+      @include size12;
       line-height: 1.5;
       position: relative;
     }
@@ -53,7 +53,7 @@
 
           label {
             color: red;
-            @include size14;
+            @include size12;
             text-align: center;
             padding: 0;
             margin: 20rem 0 0;
@@ -77,131 +77,132 @@
         margin-bottom: 8rem;
         display: inline-block;
       }
-    }
-
-    .input {
-      input[type="text"],
-      input[type="number"],
-      input[type="tel"],
-      input[type="email"] {
-        border-radius: 8px;
-        margin-top: 0rem;
-        font-family: $secondaryFont;
-        @include size16;
-        line-height: 1.75;
-        background-color: $white;
-        padding: 19px 20px;
-        width: 100%;
-        appearance: none;
-        border: 1px solid transparent;
-        color: $Fern_green;
-        outline: none;
-        &.error,
-        &.invalid {
-          border: 1rem solid red;
-        }
-
-        &::placeholder {
-          color: rgba($Fern_green, 1);
-        }
-      }
-
-      input[type="checkbox"],
-      input[type="radio"] {
-        width: auto;
-      }
-
-      select {
-        border-radius: 4rem;
-        margin-top: 0rem;
-        margin-bottom: 20rem;
-        @include size16; // Note anything below 16rem will trigger the zoom feature on iOS
-        background-color: $white;
-        padding: 19px 20px;
-        border-radius: 8px;
-        width: 100%;
-        color: $Fern_green;
-        line-height: 1.75;
-      }
-
-      input[type="file"] {
-        @include size16;
-        background-color: transparent;
-        position: relative;
-        font-weight: bold;
-        margin-bottom: 23rem;
-      }
-
-      select {
-        appearance: none;
-        background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png")
-          no-repeat;
-        background-size: 16rem 8rem;
-        background-position: 97% 51%;
-        border: 1px solid transparent;
-        margin-top: 0rem;
-        margin-bottom: 0;
-        background-color: $white;
-        outline: none;
-        // Note anything below 16rem will trigger the zoom feature on iOS
-      }
-
-      & + .hs-error-msgs {
-        position: relative;
-        width: 100%;
-        padding-left: 0;
-        list-style: none;
-        text-align: center;
-        margin: 0rem 0 0;
-        padding: 0;
-        animation: fadeIn1 0.3s ease;
-
-        @include phone {
-          position: relative;
-        }
-
-        li {
-          position: relative;
-          text-align: center;
-          background: red;
-          display: inline-block;
-          color: $white;
-          border-radius: 5rem;
-          padding: 5rem 8rem;
-          line-height: 1.2;
-          margin-bottom: 0;
-
-          &:before {
-            border-style: solid;
-            border-width: 0 8rem 8rem 8rem;
-            bottom: 100%;
-            border-color: transparent transparent red transparent;
-            position: absolute;
-            height: 8rem;
-            width: 0rem;
-            content: "";
-            left: 0;
-            right: 0;
-            margin: auto;
+      .input {
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="email"] {
+          border-radius: 8px;
+          margin-top: 0rem;
+          font-family: $secondaryFont;
+          @include size16;
+          line-height: 1.75;
+          background-color: $white;
+          padding: 19px 20px !important;
+          width: 100%;
+          appearance: none;
+          border: 1px solid transparent;
+          color: $Fern_green;
+          outline: none;
+          &.error,
+          &.invalid {
+            border: 1rem solid red;
           }
-
-          label {
-            font-size: 12rem;
-            text-transform: uppercase;
-            letter-spacing: 1rem;
+  
+          &::placeholder {
+            color: rgba($Fern_green, 1);
+          }
+        }
+  
+        input[type="checkbox"],
+        input[type="radio"] {
+          width: auto;
+        }
+  
+        select {
+          border-radius: 4rem;
+          margin-top: 0rem;
+          margin-bottom: 20rem;
+          @include size16; // Note anything below 16rem will trigger the zoom feature on iOS
+          background-color: $white;
+          padding: 19px 20px;
+          border-radius: 8px;
+          width: 100%;
+          color: $Fern_green;
+          line-height: 1.75;
+        }
+  
+        input[type="file"] {
+          @include size16;
+          background-color: transparent;
+          position: relative;
+          font-weight: bold;
+          margin-bottom: 23rem;
+        }
+  
+        select {
+          appearance: none;
+          background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png")
+            no-repeat;
+          background-size: 16rem 8rem;
+          background-position: 97% 51%;
+          border: 1px solid transparent;
+          margin-top: 0rem;
+          margin-bottom: 0;
+          background-color: $white;
+          outline: none;
+          // Note anything below 16rem will trigger the zoom feature on iOS
+        }
+  
+        & + .hs-error-msgs {
+          position: relative;
+          width: 100%;
+          padding-left: 0;
+          list-style: none;
+          text-align: center;
+          margin: 0rem 0 0;
+          padding: 0;
+          animation: fadeIn1 0.3s ease;
+  
+          @include phone {
+            position: relative;
+          }
+  
+          li {
+            position: relative;
+            text-align: center;
+            background: red;
             display: inline-block;
-            font-weight: bold;
-            line-height: 1.4;
+            color: $white;
+            border-radius: 5rem;
+            padding: 5rem 8rem;
+            line-height: 1.2;
             margin-bottom: 0;
-            margin-top: 1rem;
-
-            @include phone {
+  
+            &:before {
+              border-style: solid;
+              border-width: 0 8rem 8rem 8rem;
+              bottom: 100%;
+              border-color: transparent transparent red transparent;
+              position: absolute;
+              height: 8rem;
+              width: 0rem;
+              content: "";
+              left: 0;
+              right: 0;
+              margin: auto;
+            }
+  
+            label {
               font-size: 12rem;
+              text-transform: uppercase;
+              letter-spacing: 1rem;
+              display: inline-block;
+              font-weight: bold;
+              line-height: 1.4;
+              margin-bottom: 0;
+              margin-top: 1rem;
+  
+              @include phone {
+                font-size: 12rem;
+              }
             }
           }
         }
       }
     }
+
+    
 
     .hs_upload_resume {
       margin-bottom: -3rem;
@@ -236,11 +237,15 @@
         margin-bottom: 0;
       }
     }
-
+   
     .hs-form-checkbox,
     .hs-form-booleancheckbox,
     .hs-form-checkbox,
-    .hs-form-booleancheckbox {
+    .hs-form-booleancheckbox,
+    .hs-form-radio,
+    .form-columns-1 .hs-form-radio,
+    .form-columns-2 .hs-form-radio,
+    .form-columns-3 .hs-form-radio {
       line-height: 1.72;
 
       input {
@@ -258,9 +263,10 @@
         align-items: center;
         padding-left: 24px;
         position: relative;
+        cursor: pointer;
         span {
           position: relative;
-          top: 2rem;
+          top: 0;
           @include size14;
         }
       }
@@ -281,6 +287,9 @@
         margin-left: 2rem;
         position: relative;
         top: 2rem;
+        &::before {
+          border-radius: 100%;
+        }
       }
 
       span {
@@ -298,10 +307,10 @@
         }
       }
     }
-    input.hs-input[type="checkbox"] {
+    input.hs-input[type="checkbox"],
+    input.hs-input[type="radio"] {
       background: $white;
-      border-color: $baseColor;
-      height: 16px;
+      height: 0;
       left: 2px;
       margin-right: 0;
       padding: 0 !important;
@@ -313,6 +322,9 @@
       width: 0;
       border: none;
       outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &::before {
         background: $white;
         border-color: $baseColor;
@@ -325,20 +337,29 @@
         top: 50%;
         transform: translateY(-50%);
         vertical-align: middle;
-        width: 0;
+        width: 16px;
         content: "";
+        border: 1px solid $baseColor;
       }
       &::after {
         content: "";
         display: block;
         height: 7px;
-        left: 6px;
+        left: 2px;
         min-width: 12px;
         position: relative;
-        position: absolute;
-        top: 6px;
+        top: 0px;
         width: 12px;
       }
+      &:checked::before {
+        background-color: $baseColor;
+      }  
+      &:checked::after {
+        background-image: url("https://www.l2l.com/hubfs/L2L-u4m/images/Arrow.svg");
+        background-repeat: no-repeat no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }  
     }
     .form-columns-3 {
       .hs-form-field {

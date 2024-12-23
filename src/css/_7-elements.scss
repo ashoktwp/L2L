@@ -796,3 +796,28 @@ section[class*="u4m-"] {
   background-position: center center;
   background-size: cover;
 }
+
+.tag_case-studies:before {
+  background: $YellowWarm;
+}
+.tag_ebook:before {
+  background: $Prismic_mango;
+}
+.tag_webinar:before {
+  background: $Menthol;
+}
+.tag_interactive-tools:before {
+  background: $SprayDopely;
+}
+.tag_videos:before {
+  background: $Lavender;
+}
+.tag_white-papers:before {
+  background: $teaGreen;
+}
+.tag_events:before {
+  background: $Sea_Green;
+}
+.tag_podcast:before {
+  background: $white;
+}
