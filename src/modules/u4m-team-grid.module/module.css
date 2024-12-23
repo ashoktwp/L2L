@@ -138,6 +138,7 @@ body.overflow-hidden {
   font-weight: 600;
   letter-spacing: 1px;
   color: #9dd8a7;
+  font-family: "Inter";
 }
 .u4m-team-grid .team_grid_row .team_item .team_item_inn .member_name {
   line-height: 1.28571429;

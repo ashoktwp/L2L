@@ -56,7 +56,7 @@ body {
         height: 100%;
         padding: 18px;
         text-align: center;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         border-radius: 13px;
 
         &:hover {
@@ -86,7 +86,9 @@ body {
           border-image-slice: 1;
           border-radius: 13px;
           bottom: 0;
-          -webkit-mask: linear-gradient($white 0 0) content-box, linear-gradient($Medium_Aquamarine 0 0);
+          -webkit-mask:
+            linear-gradient($white 0 0) content-box,
+            linear-gradient($Medium_Aquamarine 0 0);
           -webkit-mask-composite: xor;
           mask-composite: exclude;
           overflow: hidden;
@@ -108,7 +110,7 @@ body {
           left: 0;
           opacity: 0;
           top: 0;
-          transition: all .2s ease;
+          transition: all 0.2s ease;
           transition: none;
           width: 100%;
         }
@@ -141,6 +143,7 @@ body {
           font-weight: 600;
           letter-spacing: 1px;
           color: $Pale_Green;
+          font-family: $secondaryFont;
         }
 
         .member_name {
@@ -238,7 +241,7 @@ body {
               height: 100%;
               padding: 18px;
               text-align: center;
-              transition: all .3s ease-in-out;
+              transition: all 0.3s ease-in-out;
 
               &:hover {
                 transform: translateY(-12px);
@@ -267,7 +270,9 @@ body {
                 border-image-slice: 1;
                 border-radius: 13px;
                 bottom: 0;
-                -webkit-mask: linear-gradient($white 0 0) content-box, linear-gradient($Medium_Aquamarine 0 0);
+                -webkit-mask:
+                  linear-gradient($white 0 0) content-box,
+                  linear-gradient($Medium_Aquamarine 0 0);
                 -webkit-mask-composite: xor;
                 mask-composite: exclude;
                 overflow: hidden;
@@ -289,11 +294,9 @@ body {
                 left: 0;
                 opacity: 0;
                 top: 0;
-                transition: all .2s ease;
+                transition: all 0.2s ease;
                 transition: none;
                 width: 100%;
-
-
               }
 
               img {
@@ -342,7 +345,7 @@ body {
             }
 
             p {
-              margin-top: .0;
+              margin-top: 0;
               color: $white;
               font-weight: 400;
             }
