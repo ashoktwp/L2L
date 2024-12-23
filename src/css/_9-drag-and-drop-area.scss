@@ -1,69 +1,70 @@
 section.u4m-drag-and-drop-area {
-    @include center;
-    margin: 100rem auto;
-    form {
-      @include form;
-    }
+  @include center;
+  margin: 100rem auto;
+  form {
+    @include form;
   }
-  
-  .dnd_padd,
-  .dnd-section {
-    padding: 100rem 0;
-  
-    @include tablet {
-      padding: 60rem 0;
-    }
-  
-    @include tabletvert {
-      padding: 50rem 0;
-    }
-  
-    @include phone {
-      padding: 40rem 0;
-    }
+}
+
+.dnd_padd,
+.dnd-section {
+  padding: 100rem 0;
+  form {
+    @include form;
   }
-  
-  .dnd_padd {
-    &.bg_pos_inside {
-      border-radius: 10px;
-      width: calc(100% - 40px);
-      margin-left: auto;
-      margin-right: auto;
-      overflow: hidden;
-    }
+  @include tablet {
+    padding: 60rem 0;
   }
-  
-  .dnd-section[class*="full-width"],
-  .dnd-section.dnd_padding {
-    padding: 0rem 0;
+
+  @include tabletvert {
+    padding: 50rem 0;
   }
-  
-  .page-center,
-  .content-wrapper,
-  .dnd-section > .row-fluid {
-    @include center;
-    margin: 0 auto;
+
+  @include phone {
+    padding: 40rem 0;
   }
-  
-  .full-width,
-  [class*="full-width-section"].dnd-section > .row-fluid {
-    max-width: 100%;
-    padding: 0;
+}
+
+.dnd_padd {
+  &.bg_pos_inside {
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
   }
-  [class*="full-width-section"].dnd-section > .row-fluid > .dnd-column {
-    padding: 0;
+}
+
+.dnd-section[class*="full-width"],
+.dnd-section.dnd_padding {
+  padding: 0rem 0;
+}
+
+.page-center,
+.content-wrapper,
+.dnd-section > .row-fluid {
+  @include center;
+  margin: 0 auto;
+}
+
+.full-width,
+[class*="full-width-section"].dnd-section > .row-fluid {
+  max-width: 100%;
+  padding: 0;
+}
+[class*="full-width-section"].dnd-section > .row-fluid > .dnd-column {
+  padding: 0;
+}
+
+.flex-row,
+.flex_row {
+  display: flex;
+  flex-wrap: wrap;
+}
+@include tabletvertmin {
+  .dnd-section .row-fluid > .dnd-column,
+  .col {
+    padding-left: 15px;
+    padding-right: 15px;
   }
-  
-  .flex-row,
-  .flex_row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  @include tabletvertmin {
-    .dnd-section .row-fluid > .dnd-column,
-    .col {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-  
+}

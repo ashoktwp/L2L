@@ -1,22 +1,64 @@
 {% set moduleName = 'u4m-accordion' %}
 {% include "../partials/u4-module-includes.html" %}
-  <div class='intro'>
-    <div class="heading">
-      {% if module.include_heading %}
-      <h2>{{ module.heading }}</h2>
-      {% endif %}
-      {% if module.include_copy %}
-      <p>{{ module.copy }}</p>
-      {% endif %}     
+
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="intro_wrapp">
+    {{ macros.introGroup(module.intro_content)}}
+  </div>
+  <div class="accordion_wrap">
+    <div class="acc_inr">
+      {% for item in module.accordion %}
+      <div class="acc_item">
+        <div class="acc_ttl">
+          <h4>
+            {{ item.title }}
+          </h4>
+          <span class="plus">
+          
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Module-Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Accordion" transform="translate(-1343, -408)">
+        <g id="Group-2-Copy" transform="translate(203, 372)">
+            <g id="Icons/barricade" transform="translate(1140, 36)">
+                <g id="Group">
+                    <rect id="Rectangle" x="0" y="0" width="18" height="18"></rect>
+                </g>
+                <g id="Group">
+                    <rect id="Rectangle" x="0" y="0" width="18" height="18"></rect>
+                    <line x1="2.8125" y1="9.01484375" x2="15.1875" y2="9.01484375" id="Path" stroke="#C8EACE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="9.01484375" y1="2.8125" x2="9.01484375" y2="15.1875" id="Path" stroke="#C8EACE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</g>
+</svg>
+          </span>
+        </div>
+        <div class="acc_cnt">
+          <div class="acc_cnt_inr">
+            {{ item.content }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
-  <div class='accordions'>
-  {# Using details.js as a polyfill for browsers that don't suppose details/open #}
-    {% for accordion in module.accordions %}
-    <details>
-      <summary>{{ accordion.summary }}</summary>
-      <div>{{ accordion.detail }}</div>
-    </details>
-    {% endfor %}
-  </div>
+</div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

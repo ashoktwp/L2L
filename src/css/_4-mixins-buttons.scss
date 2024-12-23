@@ -5,66 +5,78 @@
   font-size: 14rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+  font-family: $primaryFont;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
 }
+
 @mixin button {
   @include buttonBase;
   border-radius: 8px;
-  margin-bottom: 30rem;
-  font-family: $primaryFont;
   transition: 0.3s ease;
   border: 1px solid;
   text-decoration: none;
-  padding: 15rem 30rem;
+  padding: 14rem 30rem;
   text-transform: uppercase;
   color: $white;
   background-color: $L2L_green;
-
+  border-color: $L2L_green;
   cursor: pointer;
+
   &:hover {
     border-radius: 21px;
     color: $Menthol;
     background-color: $Fern_green;
+    border-color: $Fern_green;
   }
+
   &:active {
     border-radius: 21px;
     color: $Lime_Green;
     background-color: $Forest_Green;
+    border-color: $Forest_Green;
   }
+
   &:disabled {
     border-radius: 8px;
     color: $white;
     background-color: $light_grey;
+    border-color: $light_grey;
   }
 }
 
 @mixin buttonTwo {
   @include button;
-  background: linear-gradient(
-    308.96deg,
-    $Prismic_mint -8.65%,
-    $Pale_Yellow_Green 81.32%
-  );
+  border: none;
+  padding: 15rem 30rem;
+  background: linear-gradient(308.96deg, $Prismic_mint -8.65%, $Pale_Yellow_Green 81.32%);
   color: $baseColor;
+
   &:hover {
-    background-color: $Menthol;
+    background: linear-gradient(308.96deg, $Menthol 0%, $Menthol 100%);
     color: $baseColor;
   }
+
   &:active {
-    background-color: $Lime_Green;
+    background: $Lime_Green;
     color: $baseColor;
   }
 }
 
 @mixin buttonThree {
   @include button;
-  background-color: rgba($Sea_Green, 0.8);
+  background-color: rgba($Sea_Green, 0.08);
   color: $white;
   border-color: $Sea_Green;
+
   &:hover {
-    background-color: rgba($Menthol, 0.8);
+    background-color: rgba($Menthol, 0.08);
     color: $Menthol;
     border-color: $Menthol;
   }
+
   &:active {
     background-color: rgba($Lime_Green, 0.13);
     color: $Lime_Green;
@@ -75,21 +87,59 @@
 @mixin buttonWithIcon {
   @include buttonBase;
   display: inline-flex;
-  color: $White;
+  color: $Nori_Green;
+
+  .arrowbtn {
+    display: inline-block;
+    height: 24px;
+    margin-left: 5px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 24px;
+
+    svg {
+      height: 24px;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: 0.3s transform;
+      -webkit-transition: 0.3s transform;
+      width: 24px;
+
+      &.btnArrow2 {
+        transform: translate(-30px, 30px);
+      }
+    }
+  }
+
   &:hover {
     color: $Medium_Aquamarine;
+
+    svg {
+      &.btnArrow1 {
+        transform: translate(30px, -30px);
+      }
+
+      &.btnArrow2 {
+        transform: translate(0, 0);
+      }
+    }
   }
 }
 
 @mixin buttonWithIconTwo {
-  color: $White;
+  color: $Nori_Green;
+
   &:hover {
     color: $Menthol;
   }
 }
 
 @mixin buttonWithIconThree {
-  color: $White;
+  color: $Nori_Green;
+
   &:hover {
     color: $Prismic_mango;
   }
@@ -200,13 +250,14 @@
     }
   }
 
-  > li:only-child {
+  >li:only-child {
     display: none;
   }
 }
 
 // Arrow navigation for slick.js
 @mixin slickArrows {
+
   &.slick-next,
   &.slick-prev {
     &:before {

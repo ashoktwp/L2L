@@ -1,88 +1,190 @@
 {% set moduleName = 'u4m-slider-gallery' %}
-{% set bgImageMax = 1920 %}
-{% set imageMax = 1000 %}
+{% include "../partials/u4-module-includes.html" %}
 
+{% macro plyicon()%}
 
-{% include "/L2L/modules/partials/u4-module-includes.html" %}
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="47" viewBox="0 0 39 47" fill="none">
+  <path d="M4.07615 45.7644L37.3413 25.9068C39.1529 24.8249 39.1529 22.1212 37.3413 21.0393L4.07615 1.18165C2.26453 0.0997255 0 1.45156 0 3.61541V43.333C0 45.4968 2.26453 46.8487 4.07615 45.7667V45.7644Z" ></path>
+</svg>
 
-<div class="container">
-  <div class="intro">
-    {{ '<h2 class="optional-headline" >{{ module.optional_headline }}</h2>' if  module.optional_headline }}
-    {{ '<span class="optional-body" >{{ module.gallery_body_copy }}</span>' if module.include_body }}
+{% endmacro%}
+
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="intro_wrapp"> 
+    {{macros.introGroup(module.intro_content)}}
   </div>
-  <div class="splide {{name}}">
-    <div class="splide__track" >
-      <div class="splide__list">
-        {% for item in module.slider_repeater %}
-        <div class="splide__slide showing-{{ module.slides_to_show }}" 
-             data-bg="{{ resize_image_url(item.video_thumbnail.src, 0,0,imageMax) }}"
-             data-media-type="{{ item.media_type }}">
-          {% if item.media_type == 'video' %}
 
-          {{'<div class="play-button popout" href="{{ item.video_link.oembed_url }}">' if item.lightbox else '<a class="play-button" href="{{ item.video_link.oembed_url }}" target="_blank">' }}
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 256L0 32V480L384 256z"/></svg>
-          {{'</div>' if item.lightbox else '</a>'}}
-          <img {{ 'class="popout video" ' if item.lightbox }} href="{{ item.video_link.oembed_url }}" src="{{ item.video_thumbnail.src }}" width="300" alt="{{ item.video_thumbnail.alt }}">
-
-          {% elif item.media_type == 'image' %}
-
-          {% if item.gallery_image.src %}
-          <img src="{{ item.gallery_image.src }}" 
-               width="{{ item.gallery_image.width }}"
-               height="{{ item.gallery_image.height }}"
-               {{ ' class="mfp-image popout" ' if item.lightbox }}
-               {{ ' href="{{ item.gallery_image.src }}" ' if item.lightbox }} 
-               alt="{{ item.gallery_image.alt }}">
-          {% endif %}
-
-          {% endif %}
+  <div class="btm_wrp">
+    <div class="innerCntt sliderCnntt">
+      {% for item in module.items_group %}
+      <div class="items_wrp">
+        {% if item.type == 'image'%}
+        {% if item.image_field.src %}
+        {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+        {% if item.image_field.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+        {% elif item.image_field.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+        {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+        <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+        {% elif item.type == 'video' %}
+        <div class="cardVideo" data-popup-id="videopop-{{ name }}">
+          <div class="cardVideoPoster" style="background-image:url({{ item.image_field.src|escape_url }});">
+            <div class="playIcon {{ module.module_settings.theme }}_color">
+              <span>{{plyicon()}}</span>
+            </div>
+          </div> 
         </div>
-        {% endfor %}
+        {% endif %}
       </div>
+      {% endfor %}
     </div>
   </div>
 </div>
+
+
+
+{% for item in module.items_group %}
+{% if item.type == 'video' %}
+{% if item.video_group.video_type %}
+{% if (item.video_group.video_type == "file" and item.video_group.video ) or (item.video_group.video_type == "embed" and item.video_group.embedded_path) %}
+
+
+<div id="videopop-{{ name }}" class="cardVideoPopup ">
+  <div class="cardVideoPopupInr small_container">
+    <div class="cardpopVideo ">
+      <div class="close">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 122.88"><defs></defs><title>cross</title><path d="M6,6H6a20.53,20.53,0,0,1,29,0l26.5,26.49L87.93,6a20.54,20.54,0,0,1,29,0h0a20.53,20.53,0,0,1,0,29L90.41,61.44,116.9,87.93a20.54,20.54,0,0,1,0,29h0a20.54,20.54,0,0,1-29,0L61.44,90.41,35,116.9a20.54,20.54,0,0,1-29,0H6a20.54,20.54,0,0,1,0-29L32.47,61.44,6,34.94A20.53,20.53,0,0,1,6,6Z"/></svg>
+      </div>
+      {% if item.video_group.video_type == 'file' %}
+      <video id="video-videopop-{{ name }}" poster="{{ item.image_field.src|escape_url }} " src="{{ item.video_group.video}}" controls></video>
+      {% else %}
+      <div class="iframe_wrap">
+        <div class="iframe_wrap_inr">
+          {% if item.video_group.embedded_path is string_containing "youtube.com" %}
+          <iframe src="" data-src="{{ item.video_group.embedded_path }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1" frameborder="0" allowFullScreen class="iframe_video"></iframe>
+          {% else %}
+          <iframe src="" data-src="{{ item.video_group.embedded_path}}?autoplay=1&loop=0&autopause=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowFullScreen class="iframe_video"></iframe>
+          {% endif %}
+        </div>    
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+
+{% endif %}
+{% endif %}
+{% endif %}
+
+{% endfor %}
+
+
+
 </section>
 
-{% require_js %}
-<script> 
-  // Slider Extension In Use: https://splidejs.com/extensions/auto-scroll/
-  // Slider Options: https://splidejs.com/guides/options/
-  document.addEventListener( 'DOMContentLoaded', function() {
-    new Splide( '.splide.{{name}}', {
-               type: 'loop',
-               easing: 'ease-in-out',
-               pauseOnHover: true,
-               pagination: false,
-               arrows: true,
-               perPage: {{ module.slides_to_show }},
-               gap: "20rem",
-               autoScroll:{
-               autoStart: false,
-               speed: 1,
-               },
-                            breakpoints: {
-                            {% if module.slides_to_show > 6 %}
-                            1200: {
-                            perPage: 6,
-                            },
-    {% endif %}
-    {% if module.slides_to_show > 4 %}
-    1024: {
-      perPage: 4,
-    },
-      {% endif %}
-      768: {
-        perPage: 3,
+
+
+
+
+{% require_js%}
+<script>
+  $('.sliderCnntt').slick({
+    slidesToShow: 3,      // Default number of slides on large screens
+    infinite: true,
+    autoplay: true,        
+    autoplaySpeed: 3000,    
+    speed: 500,
+    centerMode: true,
+    centerPadding: '0px',
+    adaptiveHeight: true,
+    responsive: [
+      {
+        // For tablet screens (768px and up)
+        breakpoint: 1024, 
+        settings: {
+          slidesToShow: 2, // Show 2 slides
+          centerMode: false, // Keep center mode enabled
+          centerPadding: '0px', // Remove padding for tablet size
+
+        }
       },
-        576: {
-          perPage: 2,
-        },
-          320: {
-            perPage: 1,
-          },
-  },
-  }).mount( window.splide.Extensions );
+      {
+        // For mobile screens (600px and up)
+        breakpoint: 600, 
+        settings: {
+          slidesToShow: 1, // Show 1 slide
+          centerMode: false, // Keep center mode enabled
+          centerPadding: '0px', // Remove padding for mobile size
+        }
+      }
+    ]
+  });
+  document.querySelectorAll('.cardVideo').forEach(function(cardVideo) {
+    cardVideo.addEventListener('click', function() {
+      var dtPopup = cardVideo.getAttribute('data-popup-id');
+      var popupElement = document.getElementById(dtPopup);
+
+      if (popupElement) {
+        // Show the popup
+        popupElement.style.display = 'flex';
+
+        // Find the video element inside the popup
+        var video = popupElement.querySelector('video');
+        var iframe = popupElement.querySelector('iframe');
+
+        // Handle regular video autoplay
+        if (video) {
+          video.setAttribute('autoplay', "autoplay");
+          video.play();
+        }
+
+        // Handle iframe autoplay (YouTube video)
+        if (iframe) {
+          // Set the iframe source to autoplay the YouTube video
+          var iframeSrc = iframe.getAttribute('data-src');
+          iframe.setAttribute('src', iframeSrc + '&autoplay=1');
+        }
+      }
+    });
+  });
+
+  // Handling close button to stop videos or iframes
+  document.querySelectorAll('.cardpopVideo .close').forEach(function(closeButton) {
+    closeButton.addEventListener('click', function() {
+      document.querySelectorAll('.cardVideoPopup').forEach(function(cardVideoPopup) {
+        cardVideoPopup.style.display = 'none';
+
+        // Find and stop regular video
+        var video = cardVideoPopup.querySelector('video');
+        if (video) {
+          video.setAttribute('autoplay', "");
+          video.pause();
+        }
+
+        // Find and stop iframe video (YouTube)
+        var iframe = cardVideoPopup.querySelector('iframe');
+        if (iframe) {
+          // Remove the iframe src to stop the video
+          iframe.setAttribute('src', '');
+        }
+      });
+    });
   });
 </script>
-{% end_require_js %}
+
+{% end_require_js%}
+
+
+
+
+
+<style> 
+  .u4m-slider-gallery .innerCntt .slick-arrow::before {
+    background-image:url({{ get_asset_url('../../templates/images/Path.png') }});
+  }
+</style>
+

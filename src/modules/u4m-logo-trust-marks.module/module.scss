@@ -1,145 +1,64 @@
 @import "../../css/_module-imports";
 
-section.u4m-logo-trust-marks {
-  margin: 100rem 0;
+.u4m-logo-trustmarks {
+  .intro_content {
+    margin-bottom: 57px;
 
-  &.reverse-text {
-    color: $white;
+    .intro_title {
+      font-weight: 600;
+    }
   }
 
-  .container {
-    @include center;
+  .items.grayscale {
+    filter: grayscale(100%);
+  }
 
-    .intro {
-      @include centerSmall;
-      margin-bottom: 50rem;
-      padding: 0;
+  .btm {
+    z-index: 11;
+    padding: 14px 0;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      rgba($darkBack, 0) 0%,
+      $darkBack 12.5%,
+      $darkBack 87.5%,
+      rgba($darkBack, 0) 100%
+    );
 
-      .heading {
-        @include h2;
-        text-align: center;
-      }
+    .img {
+      width: 174px;
+      height: 67px;
+      display: flex;
+      align-items: center;
 
-      .subheading {
-        text-align: center;
-        @include b2;
-      }
-    }
-
-    .splide {
-      &:not(.is-overflow) {
-        .splide__list {
-          .splide__slide:last-child {
-            margin: 0 !important;
-          }
-        }
-      }
-
-      .splide__track {
-        .splide__list {
-          transform: ease-in-out;
-
-          .splide__slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: translate3d(0, 0, 0);
-            backface-visibility: hidden;
-
-            img.logo {
-              width: auto;
-              height: 100%;
-              max-height: 80rem;
-              object-fit: contain;
-              object-position: center;
-
-              @include tablet {
-                max-height: 60rem;
-              }
-            }
-          }
-        }
-      }
-
-      .splide__arrows {
-        .splide__arrow {
-          background: $white;
-          opacity: 1;
-
-          &:hover {
-            svg {
-              fill: $action2;
-            }
-          }
-
-          svg {
-            fill: $black;
-          }
-
-          &.splide__arrow--prev {
-            left: -20rem;
-          }
-
-          &.splide__arrow--next {
-            right: -20rem;
-          }
-        }
+      img {
+        -o-object-fit: contain;
+        object-fit: contain;
+        height: auto;
+        height: 67px !important;
+        width: auto !important;
       }
     }
 
-    .grid {
-      @include centerSmall;
-      padding: 0rem;
+    .slick-slide {
+      width: 174px !important;
+      margin-right: 30px;
+      box-sizing: border-box;
 
-      .grid__wrapper {
-        .grid__list {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: center;
-          margin: 0rem -10rem;
-
-          .grid__item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: $white;
-            box-shadow: $shadow2;
-            padding: 20rem;
-            margin: 10rem;
-            transition: scale 0.3s ease-in-out;
-
-            @include tabletvert {
-              flex: 0 0 calc(50% - 20rem);
-            }
-
-            @include phone {
-              flex: 0 0 calc(100% - 20rem);
-              max-width: 300rem;
-            }
-
-            &.with-link {
-              transition: $animation1;
-
-              &:hover {
-                transform: scale(1.1);
-              }
-            }
-
-            img.logo {
-              width: 100%;
-              height: 100%;
-              max-height: 60rem;
-              object-fit: contain;
-              object-position: center;
-
-              @include tabletvert {
-                max-height: 50rem;
-              }
-            }
-          }
-        }
+      &:last-child {
+        margin-right: 0;
       }
+    }
+
+    .slick-list {
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .slick-track {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

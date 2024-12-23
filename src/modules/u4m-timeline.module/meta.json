@@ -1,7 +1,0 @@
-{
-  "global": false,
-  "host_template_types": ["PAGE", "BLOG_POST", "BLOG_LISTING"],
-  "label": "Timeline",
-  "icon": "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
-  "is_available_for_new_content": true
-}

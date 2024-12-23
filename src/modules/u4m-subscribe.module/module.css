@@ -28,7 +28,7 @@ section.u4m-subscribe div.inner {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1340rem;
+  max-width: 1224rem;
   padding-left: 20rem;
   padding-right: 20rem;
   display: flex;
@@ -40,13 +40,9 @@ section.u4m-subscribe div.inner .right {
 }
 section.u4m-subscribe div.inner .left form,
 section.u4m-subscribe div.inner .right form {
-  padding: 50rem 38rem;
-  max-width: 765rem;
-  margin: 0 auto;
-  float: none;
-  overflow: auto;
-  background-color: transparent;
-  border-radius: 25rem;
+  border-radius: 8px;
+  padding: 60px 50px;
+  background-color: #c8eace;
   margin: 0;
   padding: 0;
   max-width: unset;
@@ -55,39 +51,21 @@ section.u4m-subscribe div.inner .right form {
   display: flex;
   margin-left: 50px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   section.u4m-subscribe div.inner .left form,
   section.u4m-subscribe div.inner .right form {
-    padding: 30rem;
-  }
-}
-@media (max-width: 1024px) {
-  section.u4m-subscribe div.inner .left form,
-  section.u4m-subscribe div.inner .right form {
-    padding: 30rem;
+    padding: 30px 20px;
   }
 }
 section.u4m-subscribe div.inner .left form h3,
 section.u4m-subscribe div.inner .right form h3 {
-  font-family: "Montserrat";
-  font-size: 24rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  font-size: 14rem;
   margin-bottom: 30rem;
-  line-height: 1.2;
-}
-@media (max-width: 1024px) {
-  section.u4m-subscribe div.inner .left form h3,
-  section.u4m-subscribe div.inner .right form h3 {
-    font-size: 20rem;
-  }
-}
-@media (max-width: 580px) {
-  section.u4m-subscribe div.inner .left form h3,
-  section.u4m-subscribe div.inner .right form h3 {
-    font-size: 18rem;
-    margin-bottom: 20rem;
-  }
+  line-height: 1.71;
+  color: #2e2e2e;
+  font-family: "Sofia Sans";
+  font-weight: bold;
+  letter-spacing: 0px;
 }
 section.u4m-subscribe div.inner .left form div.legal-consent-container,
 section.u4m-subscribe div.inner .right form div.legal-consent-container {
@@ -99,7 +77,7 @@ section.u4m-subscribe div.inner .left form div.legal-consent-container p,
 section.u4m-subscribe div.inner .left form div.legal-consent-container .hs-form-booleancheckbox label,
 section.u4m-subscribe div.inner .right form div.legal-consent-container p,
 section.u4m-subscribe div.inner .right form div.legal-consent-container .hs-form-booleancheckbox label {
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 12rem;
   line-height: 1.6;
   letter-spacing: 0.35rem;
@@ -170,10 +148,11 @@ section.u4m-subscribe div.inner .right form .hs-form-field > label {
   line-height: 1.2;
   letter-spacing: 1rem;
   pointer-events: auto;
-  font-family: "Montserrat";
-  font-size: 16rem;
+  font-family: "Sofia Sans";
+  font-size: 14rem;
   font-weight: bold;
-  letter-spacing: 1rem;
+  line-height: 1.5em;
+  letter-spacing: 1.5rem;
   text-transform: uppercase;
   display: block;
   margin-bottom: 10rem;
@@ -212,7 +191,7 @@ section.u4m-subscribe div.inner .right form .input input[type=email] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   font-size: 18rem;
   line-height: 1.6;
   letter-spacing: 0.25rem;
@@ -345,7 +324,7 @@ section.u4m-subscribe div.inner .right form.hs-form .input input[type=file],
 section.u4m-subscribe div.inner .right form.mixitup-multifilter .input input[type=file],
 section.u4m-subscribe div.inner .right form .input input[type=file] {
   font-size: 16rem;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   background-color: transparent;
   position: relative;
   font-weight: bold;
@@ -425,7 +404,7 @@ section.u4m-subscribe div.inner .right form.hs-form .input + .hs-error-msgs li l
 section.u4m-subscribe div.inner .right form.mixitup-multifilter .input + .hs-error-msgs li label,
 section.u4m-subscribe div.inner .right form .input + .hs-error-msgs li label {
   font-size: 12rem;
-  font-family: "Montserrat";
+  font-family: "Sofia Sans";
   text-transform: uppercase;
   letter-spacing: 1rem;
   display: inline-block;
@@ -896,34 +875,52 @@ section.u4m-subscribe div.inner .left form.hs-form .hs-button, section.u4m-subsc
 section.u4m-subscribe div.inner .right form.hs-form .hs-button,
 section.u4m-subscribe div.inner .right form.mixitup-multifilter .hs-button,
 section.u4m-subscribe div.inner .right form .hs-button {
-  display: inline-block;
-  font-family: "Montserrat";
-  color: #fff;
-  background-color: #733bf7;
-  border: 0;
-  border-radius: 4rem;
-  padding: 15rem 40rem 15rem 40rem;
-  margin: 20rem 0;
-  transition: 0.1s ease-in;
-  text-transform: uppercase;
-  font-weight: bold;
+  line-height: 1.71;
   font-size: 14rem;
-  line-height: 1.2;
-  letter-spacing: 0.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Sofia Sans";
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid;
   text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-  box-shadow: 0rem 1rem 12rem 0 rgba(51, 71, 91, 0.1);
-}
-section.u4m-subscribe div.inner .left form.hs-form .hs-button:hover, section.u4m-subscribe div.inner .left form.hs-form .hs-button:focus, section.u4m-subscribe div.inner .left form.mixitup-multifilter .hs-button:hover, section.u4m-subscribe div.inner .left form.mixitup-multifilter .hs-button:focus, section.u4m-subscribe div.inner .left form .hs-button:hover, section.u4m-subscribe div.inner .left form .hs-button:focus,
-section.u4m-subscribe div.inner .right form.hs-form .hs-button:hover,
-section.u4m-subscribe div.inner .right form.hs-form .hs-button:focus,
-section.u4m-subscribe div.inner .right form.mixitup-multifilter .hs-button:hover,
-section.u4m-subscribe div.inner .right form.mixitup-multifilter .hs-button:focus,
-section.u4m-subscribe div.inner .right form .hs-button:hover,
-section.u4m-subscribe div.inner .right form .hs-button:focus {
-  background-color: #33475b;
+  padding: 14rem 30rem;
+  text-transform: uppercase;
   color: #fff;
+  background-color: #409650;
+  border-color: #409650;
+  cursor: pointer;
+}
+section.u4m-subscribe div.inner .left form.hs-form .hs-button:hover, section.u4m-subscribe div.inner .left form.mixitup-multifilter .hs-button:hover, section.u4m-subscribe div.inner .left form .hs-button:hover,
+section.u4m-subscribe div.inner .right form.hs-form .hs-button:hover,
+section.u4m-subscribe div.inner .right form.mixitup-multifilter .hs-button:hover,
+section.u4m-subscribe div.inner .right form .hs-button:hover {
+  border-radius: 21px;
+  color: #c0fc95;
+  background-color: #2c6938;
+  border-color: #2c6938;
+}
+section.u4m-subscribe div.inner .left form.hs-form .hs-button:active, section.u4m-subscribe div.inner .left form.mixitup-multifilter .hs-button:active, section.u4m-subscribe div.inner .left form .hs-button:active,
+section.u4m-subscribe div.inner .right form.hs-form .hs-button:active,
+section.u4m-subscribe div.inner .right form.mixitup-multifilter .hs-button:active,
+section.u4m-subscribe div.inner .right form .hs-button:active {
+  border-radius: 21px;
+  color: #9bf75f;
+  background-color: #275430;
+  border-color: #275430;
+}
+section.u4m-subscribe div.inner .left form.hs-form .hs-button:disabled, section.u4m-subscribe div.inner .left form.mixitup-multifilter .hs-button:disabled, section.u4m-subscribe div.inner .left form .hs-button:disabled,
+section.u4m-subscribe div.inner .right form.hs-form .hs-button:disabled,
+section.u4m-subscribe div.inner .right form.mixitup-multifilter .hs-button:disabled,
+section.u4m-subscribe div.inner .right form .hs-button:disabled {
+  border-radius: 8px;
+  color: #fff;
+  background-color: #969696;
+  border-color: #969696;
 }
 section.u4m-subscribe div.inner .left form .hs-email,
 section.u4m-subscribe div.inner .right form .hs-email {

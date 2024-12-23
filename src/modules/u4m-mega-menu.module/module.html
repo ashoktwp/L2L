@@ -1,0 +1,197 @@
+<div class="megamenu_mdl">
+	<div class="megamenu_inr">
+
+		<ul class="main_menu">
+			{% for item in module.add_menus %}
+			<li>
+				{% set href = item.menu_link.url.href %}
+				{% if item.menu_link.url.type is equalto "EMAIL_ADDRESS" %}
+				{% set href = "mailto:" + href %}
+				{% endif %}
+				<a {% if item.menu_link.url.type is equalto "CALL_TO_ACTION" %} href="{{ href }}" {# The href here is
+					not escaped as it is not editable and functions as a JavaScript call to the associated CTA #} {%
+					else %} href="{{ href|escape_url }}" {% endif %} {% if item.menu_link.open_in_new_tab %}
+					target="_blank" {% endif %} {% if item.menu_link.rel %} rel="{{ item.menu_link.rel|escape_attr }}"
+					{% endif %}>{{ item.menu_text }}
+					{% if item.mega_menu.add_child_columns || item.mega_menu.bottom_row.link_text %}
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"
+							color="var(--token-ed297ba0-74a2-4493-ac7c-8ec9c6a7c025, rgb(192, 252, 149))"
+							style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-ed297ba0-74a2-4493-ac7c-8ec9c6a7c025, rgb(192, 252, 149)); color: var(--token-ed297ba0-74a2-4493-ac7c-8ec9c6a7c025, rgb(192, 252, 149)); flex-shrink: 0;">
+							<g color="var(--token-ed297ba0-74a2-4493-ac7c-8ec9c6a7c025, rgb(192, 252, 149))"
+								weight="regular">
+								<path
+									d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+								</path>
+							</g>
+						</svg>
+					</span>
+					{% endif %}
+				</a>
+				{% if item.mega_menu.add_child_columns || item.mega_menu.bottom_row.link_text %}
+					<span class="icon childTrigger">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false"
+							color="var(--token-ed297ba0-74a2-4493-ac7c-8ec9c6a7c025, rgb(192, 252, 149))"
+							style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-ed297ba0-74a2-4493-ac7c-8ec9c6a7c025, rgb(192, 252, 149)); color: var(--token-ed297ba0-74a2-4493-ac7c-8ec9c6a7c025, rgb(192, 252, 149)); flex-shrink: 0;">
+							<g color="var(--token-ed297ba0-74a2-4493-ac7c-8ec9c6a7c025, rgb(192, 252, 149))"
+								weight="regular">
+								<path
+									d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+								</path>
+							</g>
+						</svg>
+					</span>
+					{% endif %}
+				{% if item.mega_menu.add_child_columns || item.mega_menu.bottom_row.link_text %}
+				<div
+					class="child_wrapper {% for item2 in item.mega_menu.add_child_columns %}{% if loop.first %}menuitem{{ loop.length }}{% endif %}{% endfor %}">
+					<div class="child_inner">
+						<div class="child_row">
+							<div class="child_flex">
+								{% for item2 in item.mega_menu.add_child_columns %}
+								<div class="child_col child{{ loop.length }}">
+									{% if item2.select_column_type == 'menu_items' %}
+									{% if item2.title %}
+									<div class="ttl">
+										{% set href = item2.title_link.url.href %}
+										{% if item2.title_link.url.type is equalto "EMAIL_ADDRESS" %}
+										{% set href = "mailto:" + href %}
+										{% endif %}
+										<a {% if item2.title_link.url.type is equalto "CALL_TO_ACTION" %}
+											href="{{ href }}" {# The href here is not escaped as it is not editable and
+											functions as a JavaScript call to the associated CTA #} {% else %}
+											href="{{ href|escape_url }}" {% endif %} {% if
+											item2.title_link.open_in_new_tab %} target="_blank" {% endif %} {% if
+											item2.title_link.rel %} rel="{{ item2.title_link.rel|escape_attr }}" {%
+											endif %}>{{ item2.title }}</a>
+									</div>
+									{% endif %}
+									{% for item3 in item2.child_menu_items %}
+									<div class="child_menus">
+										<div class="child_menuitems">
+
+											{% set href = item3.menu_link.url.href %}
+											{% if item3.menu_link.url.type is equalto "EMAIL_ADDRESS" %}
+											{% set href = "mailto:" + href %}
+											{% endif %}
+											<a {% if item3.menu_link.url.type is equalto "CALL_TO_ACTION" %}
+												href="{{ href }}" {# The href here is not escaped as it is not editable
+												and functions as a JavaScript call to the associated CTA #} {% else %}
+												href="{{ href|escape_url }}" {% endif %} {% if
+												item3.menu_link.open_in_new_tab %} target="_blank" {% endif %} {% if
+												item3.menu_link.rel %} rel="{{ item3.menu_link.rel|escape_attr }}" {%
+												endif %}>
+												<div><strong>{{ item3.menu_text }}</strong>{% if item3.apply_new %}<div
+														class="new">new</div>{% endif %}</div>
+												<p>{{ item3.description }}</p>
+											</a>
+										</div>
+
+									</div>
+									{% endfor %}
+									{% else %}
+									<div class="child_card">
+										{% if item2.card.select_image.src %}
+										<div class="hdcard_img">
+											<img src="{{ item2.card.select_image.src }}"
+												alt="{{ item2.card.select_image.alt }}">
+										</div>
+										{% endif %}
+										{% if item2.card.content %}
+										<div class="hdcard_cnt">
+											{{ item2.card.content }}
+										</div>
+										{% endif %}
+									</div>
+									{% endif %}
+									{% if item2.button.button_type %}
+									<div class="child_btn">
+										{% if item2.button.button_type == 'stnd' %}
+										{% set href = item2.button.button_link.url.href %}
+										{% if item2.button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+										{% set href = "mailto:" + href %}
+										{% endif %}
+										<a class="arrow-link" {% if item2.button.button_link.url.type is equalto "CALL_TO_ACTION" %}
+											href="{{ href }}" {# The href here is not escaped as it is not editable and
+											functions as a JavaScript call to the associated CTA #} {% else %}
+											href="{{ href|escape_url }}" {% endif %} {% if
+											item2.button.button_link.open_in_new_tab %} target="_blank" {% endif %} {%
+											if item2.button.button_link.rel %}
+											rel="{{ item2.button.button_link.rel|escape_attr }}" {% endif %}>
+											{{ item2.button.button_text }}
+											<span class="arrowbtn">
+                    <svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"></path>
+                    </svg>
+                    <svg class="btnArrow2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"></path>
+                    </svg>
+                  </span>
+										</a>
+										{% else %}
+										{% cta guid="{{ item2.button.cta_field }}" %}
+										{% endif %}
+									</div>
+									{% endif %}
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+						{% if item.mega_menu.bottom_row.link_text %}
+						<div class="bt_row">
+							<div class="bt_btn">
+								{% set href = item.mega_menu.bottom_row.link_field.url.href %}
+								{% if item.mega_menu.bottom_row.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+								{% set href = "mailto:" + href %}
+								{% endif %}
+								<a {% if item.mega_menu.bottom_row.link_field.url.type is equalto "CALL_TO_ACTION" %}
+									href="{{ href }}" {# The href here is not escaped as it is not editable and
+									functions as a JavaScript call to the associated CTA #} {% else %}
+									href="{{ href|escape_url }}" {% endif %} {% if
+									item.mega_menu.bottom_row.link_field.open_in_new_tab %} target="_blank" {% endif %}
+									{% if item.mega_menu.bottom_row.link_field.rel %}
+									rel="{{ item.mega_menu.bottom_row.link_field.rel|escape_attr }}" {% endif %}>
+									{{ item.mega_menu.bottom_row.link_text }}
+<span class="arrow">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+    <title>Arrow</title>
+    <defs>
+        <filter x="6.2%" y="12.5%" width="87.5%" height="75.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Module-Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-Nav-mega-menu" transform="translate(-404, -541)">
+            <g id="Group-2" transform="translate(285, 99)">
+                <g id="Arrow" filter="url(#filter-1)" transform="translate(119, 442)">
+                    <g id="Group">
+                        <rect id="Rectangle" x="0" y="0" width="24" height="24"/>
+                        <line x1="3.75" y1="12.003125" x2="20.25" y2="12.003125" id="Path" stroke="#D8D8D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline id="Path" stroke="#D8D8D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="13.5 5.25 20.25 12 13.5 18.75"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+</span>
+
+								</a>
+							</div>
+						</div>
+						{% endif %}
+					</div>
+				</div>
+				{% endif %}
+			</li>
+			{% endfor %}
+		</ul>
+
+	</div>
+</div>

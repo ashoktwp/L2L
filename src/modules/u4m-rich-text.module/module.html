@@ -1,10 +1,60 @@
 {% set moduleName = 'u4m-rich-text' %}
-{% set imageMax = 1000 %}
-{% set bgImageMax = 1920 %}
- 
-
 {% include "../partials/u4-module-includes.html" %}
-  <div class="content">
-    {% inline_rich_text field="richtext_field" value="{{ module.richtext_field }}" %}
+
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="richCntt"> 
+    <div class=inner_wrpp>
+      {{ module.content }}
+    </div>
   </div>
+</div>
 </section>
+
+
+{{ require_css('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css')}}
+{{ require_css('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark.min.css')}}
+
+{{ require_js(get_asset_url('../../js/jquery-3.1.js')) }}
+{{ require_js('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js') }}
+
+
+
+
+
+
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    for (let i = 0; i < document.querySelectorAll("code").length; i++) {
+      document.querySelectorAll("code")[i].innerHTML = document.querySelectorAll("code")[i].innerHTML.trim();
+    }
+
+    hljs.initHighlightingOnLoad();
+
+    var pre = document.getElementsByTagName("pre");
+    var pl = pre.length; 
+    for (var i = 0; i < pl; i++) {
+      var num = pre[i].innerHTML.split(/\n/).length;
+      for (var j = 0; j < (num - 1); j++) {
+        var line_num = pre[i].getElementsByTagName("span")[0];
+        line_num.innerHTML += "<span>" + (j + 1) + "</span>";
+      }
+    }
+  });
+
+</script>
+
+<style>
+.u4m-rich-text pre code {
+  max-width:990px;
+  margin: 0 auto;
+    border-radius: 13px;
+    padding: 30px !important;
+}
+  .u4m-rich-text pre {
+    margin-top: 57px;
+    margin-bottom: 66px;
+}
+</style>
+

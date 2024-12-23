@@ -1,0 +1,131 @@
+@import "../../css/_module-imports";
+section.u4m-cta-row-3 {
+  .page-center {
+    padding-left: 15rem;
+    padding-right: 15rem;
+    .cta-content-row {
+      border-radius: 34px;
+      overflow: hidden;
+      position: relative;
+      padding: 65px 72px 77px;
+      @include tablet {
+        padding: 65px 30px 77px;
+      }
+      &.bg_image {
+        .bg_overlay.bg_image {
+          width: 832px;
+          left: 33%;
+          right: 0;
+          opacity: 0.34;
+        }
+        .bg_overlay.bg_color {
+          background-image: linear-gradient(
+            269deg,
+            rgba(14, 37, 20, 0) 33%,
+            $Dark_jungle 100%
+          );
+        }
+      }
+      .cta-content-flex {
+        max-width: 642px;
+        .intro_content {
+          max-width: 100%;
+          text-align: left;
+          margin-bottom: 33rem;
+          .intro__inner {
+            .intro_title {
+              color: $white;
+            }
+            .intro_desc {
+              color: $Frostee;
+            }
+            .intro_btn_wrap {
+              justify-content: flex-start;
+              .arrow-link {
+                &:not(:hover) {
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+        .cta-form {
+          @include subscribeForm;
+          form {
+            .hs-form-field {
+              margin-bottom: 24rem;
+              .hs-form-field.hs-fieldtype-booleancheckbox {
+                margin-bottom: 0;
+              }
+              .hs-input {
+                border: none;
+                padding: 22px 144px 22px 30px !important;
+              }
+              ul.inputs-list {
+                li {
+                  label {
+                    position: relative;
+                    padding-left: 36px;
+                    cursor: pointer;
+                    input.hs-input {
+                      padding: 0 !important;
+                      width: 0;
+                      height: 24px;
+                      background: transparent;
+                      border-color: $Prismic_mango;
+                      vertical-align: middle;
+                      top: 0;
+                      margin-right: 0;
+                      position: absolute;
+                      left: 0;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      &:before {
+                        position: relative;
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+                        border: 1px solid #f7c36e;
+                        content: "";
+                        background: transparent;
+                        border-radius: 5px;
+                        min-width: 24px;
+                      }
+                      &:after {
+                        position: relative;
+                        display: block;
+                        width: 12px;
+                        height: 12px;
+                        min-width: 12px;
+                        content: "";
+                        position: absolute;
+                        top: 6px;
+                        left: 6px;
+                      }
+                      &:checked::after {
+                        background-image: url("https://www.l2l.com/hubfs/L2L-u4m/images/Arrow.svg");
+                        background-repeat: no-repeat no-repeat;
+                        background-position: center center;
+                        background-size: cover;
+                      }
+                    }
+                    span {
+                      color: inherit;
+                      vertical-align: middle;
+                      a {
+                        text-decoration: underline;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .hs_error_rollup {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,435 +1,516 @@
-[{
-  "id": "22926887-65f1-ecb5-cb10-e99d0fb78ab6",
-  "name": "richtext_field",
-  "label": "Rich text field",
-  "required": false,
-  "locked": false,
-  "type": "richtext",
-  "default": "<h2>U4M Rich Text</h2>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lacus eget sem efficitur eleifend eget quis massa. Quisque hendrerit id dolor non vehicula. Sed non ex vel metus dignissim pellentesque vitae eu risus. Cras dui enim, rhoncus in efficitur sed, rutrum rhoncus augue. Cras sodales at leo quis pharetra.</p>\n<ul>\n<li>Lorem ipsum dolor sit amet consectetur adipiscing elit</li>\n<li>Suspendisse eget lacus eget sem efficitur eleifend eget quis massa</li>\n<li>Quisque hendrerit id dolor non vehicula</li>\n</ul>\n<ol>\n<li>Sed non ex vel metus dignissim pellentesque vitae eu risus</li>\n<li>Cras dui enim rhoncus in efficitur sed, rutrum rhoncus augue</li>\n<li>Cras sodales at leo quis pharetra</li>\n</ol>"
+[ {
+  "id" : "a92ebdae-596e-edd1-d347-abae5e7ed929",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h2>Velit aute labore proident sit esse ex non consequat consectetur.</h2>\n<p>Esse nostrud id enim ex proident veniam amet proident ad laborum amet labore dolore. Et ad aliquip nostrud non ea ex sunt. Enim minim ad consequat esse laborum consequat non. Tempor esse elit aliquip minim. Eu dolore fugiat nostrud ea dolor in officia magna sunt dolore ut. Ad laboris cillum incididunt in qui eiusmod laborum commodo non. Velit esse ea sint nulla ipsum fugiat anim magna labore sint. Sint ad quis aliquip sunt laborum mollit esse mollit consectetur dolor qui laborum aliqua commodo excepteur.</p>\n<hr>\n<p>Sunt sunt aute esse aliquip occaecat labore enim. Ipsum veniam aliquip commodo amet et incididunt labore reprehenderit ad sint. Exercitation pariatur adipisicing eiusmod. Id laboris ullamco nisi nostrud duis fugiat eiusmod ea mollit officia. Ad officia cillum ad incididunt. Minim proident amet incididunt elit exercitation eu culpa labore ut fugiat. Ea consequat elit quis commodo ea elit duis elit mollit. Cillum magna ipsum voluptate dolore laboris culpa et culpa cupidatat in ut est pariatur</p>\n<p>Eu esse aute voluptate pariatur deserunt incididunt et. Exercitation fugiat reprehenderit ea occaecat proident nostrud sit enim est sunt. Qui pariatur reprehenderit ullamco culpa officia. Deserunt aliqua aliqua voluptate fugiat exercitation aliqua quis et incididunt aute do tempor. Officia consequat amet sint dolore exercitation est veniam commodo incididunt.</p>\n<blockquote>Amet exercitation do anim velit dolore elit veniam aute ut pariatur ad. Commodo reprehenderit officia cupidatat aute ipsum nostrud irure duis ipsum adipisicing commodo mollit enim. Velit sunt velit ipsum. Occaecat ut aliquip sit Lorem nisi ex incididunt mollit culpa in minim consectetur pariatur. Mollit ut laboris deserunt pariatur culpa ea magna. Commodo deserunt qui sit pariatur fugiat voluptate elit quis ex et ullamco ipsum fugiat ipsum.</blockquote>\n<p>Nulla commodo voluptate aute aute. Elit adipisicing dolore ipsum minim culpa. Eu laborum non ut ut. Sit adipisicing nulla officia enim laboris nostrud non amet et. Velit deserunt aute eu irure.</p>\n<h2>Id sit non duis laborum tempor ex.</h2>\n<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut <a href=\"#\"> Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est.</a> Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>\n<h3><span> Adipisicing: </span> cupidatat eu proident incididunt nisi</h3>\n<ul>\n<li>Nisi veniam excepteur enim id non esse voluptate.</li>\n<li>Aliqua officia amet ut nisi fugiat.</li>\n<li>Culpa sit veniam nostrud velit non duis. Sit ut ex exercitation sit. Sit quis occaecat Lorem do amet ipsum aliquip magna nostrud occaecat ullamco ea.</li>\n<li>Occaecat ad ea aliqua exercitation culpa aliqua mollit mollit consequat sit occaecat ex.</li>\n<li>Incididunt veniam Lorem commodo consectetur minim tempor fugiat enim fugiat ad aliquip. Sint dolor consequat dolore elit duis do veniam. Laboris eiusmod laborum ex. Laborum ad sit laborum do minim aliquip magna cillum fugiat veniam eiusmod officia reprehenderit et culpa. Commodo ullamco aliqua reprehenderit minim magna anim et anim do nostrud.</li>\n</ul>\n<p><strong> Consequat cillum:</strong></p>\n<ol>\n<li>Sit eu nostrud ipsum Lorem nostrud excepteur. Consectetur nostrud nisi ea sunt tempor ad enim exercitation ut. Do ullamco quis elit tempor non proident ex elit non sint sit dolor.</li>\n<li>Do aliqua ullamco in incididunt enim qui. Labore nisi magna culpa voluptate qui sunt. Cupidatat amet do cupidatat voluptate quis laboris ipsum Lorem. Eu proident in velit est mollit ea in elit Lorem eiusmod consequat tempor.</li>\n<li>Qui ea esse enim ipsum ex non ipsum.</li>\n<li>Nulla non adipisicing enim adipisicing sit occaecat commodo elit. Voluptate laborum qui magna non cillum aute adipisicing amet laboris. Enim incididunt eiusmod elit ex fugiat dolor qui minim et incididunt ipsum. Nulla officia sint incididunt incididunt ad est.</li>\n<li>Officia amet culpa nulla minim aliqua aute pariatur. Ut aliquip esse culpa fugiat pariatur duis occaecat nulla sint voluptate tempor dolore.</li>\n</ol>\n<p><strong> Anim voluptate reprehenderit enim ipsum exercitation exercitation sint eiusmod duis:</strong></p>\n<ul>\n<li>Ipsum anim voluptate velit culpa fugiat culpa commodo ullamco est minim in.</li>\n<li>Culpa non adipisicing eiusmod sit et aliqua.</li>\n<li>Ad amet dolore esse qui commodo consequat nulla aliqua do non sunt amet ex incididunt proident.</li>\n<li>Consectetur excepteur id aute laborum ex nisi reprehenderit anim enim quis sint magna nulla. Voluptate sunt quis est dolore nulla excepteur quis irure ullamco.</li>\n</ul>\n<p><strong> Mollit cillum aliquip aliquip ex elit elit:</strong></p>\n<ul>\n<li>Enim non consequat deserunt velit cillum eu elit magna</li>\n<li>Dolore sunt non ullamco deserunt aliqua proident ullamco eiusmod dolore aliquip voluptate qui exercitation.</li>\n<li>Aliquip occaecat incididunt quis proident. Ut laborum sunt cupidatat et reprehenderit magna aute cupidatat Lorem pariatur. Qui aute ad officia consectetur ea elit esse.</li>\n<li>Eiusmod ut consequat non enim amet aliquip sit anim et aliquip. Pariatur labore adipisicing in elit. Minim irure laboris sunt aliqua. Commodo sint Lorem reprehenderit dolore veniam fugiat.</li>\n</ul>\n<div class=\"hs-embed-wrapper\" data-service=\"youtube\" data-responsive=\"true\" style=\"position: relative; overflow: hidden; width: 100%; height: auto; padding: 0; max-width: 100%; min-width: 100%; display: block; margin: auto;\"><div class=\"hs-embed-content-wrapper\"><div style=\"position: relative;overflow: hidden;max-width: 100%;padding-bottom: 56.25%;margin: 0px;\"> <iframe src=\"https://www.youtube.com/embed/9xwazD5SyVg?mute=1&amp;showinfo=0&amp;controls=1\" frameborder=\"0\" allowfullscreen=\"\" class=\"iframe_video\" style=\"width:100%; height:100%; border-radius: 34px;\">\n    </iframe></div></div></div>\n<p>Esse nostrud id enim ex proident veniam amet proident ad laborum amet labore dolore. Et ad aliquip nostrud non ea ex sunt. Enim minim ad consequat esse laborum consequat non. Tempor esse elit aliquip minim. Eu dolore fugiat nostrud ea dolor in officia magna sunt dolore ut. Ad laboris cillum incididunt in qui eiusmod laborum commodo non. Velit esse ea sint nulla ipsum fugiat anim magna labore sint. Sint ad quis aliquip sunt laborum mollit esse mollit consectetur dolor qui laborum aliqua commodo excepteur.</p>\n<p>Laboris in non nostrud occaecat deserunt est nostrud consequat voluptate occaecat. Velit Lorem et laborum consequat reprehenderit velit tempor veniam sint non eiusmod voluptate eu. Pariatur culpa deserunt fugiat veniam excepteur eiusmod aliqua ut eu quis cillum commodo quis amet. Eu reprehenderit nisi fugiat. Consequat qui cillum amet do est occaecat est Lorem. In aliqua ex ad. Consequat exercitation aliquip laborum ad ipsum et.</p>\n<figure><img src=\"https://www.l2l.com/hubfs/L2L-u4m/images/Img%20Richtext.png\" loading=\"lazy\" alt=\"Img Richtext\" style=\"height: auto; max-width: 100%;\">\n<figcaption><strong>Photo — </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</figcaption>\n</figure>\n<p>Irure sunt enim dolore incididunt sunt non dolor sit excepteur. Nulla exercitation aliquip minim officia consectetur ut aliqua eiusmod exercitation eiusmod adipisicing non. Deserunt tempor proident voluptate ea. Veniam dolore esse esse irure ad elit cillum commodo qui fugiat cupidatat deserunt ipsum deserunt. Est cupidatat tempor reprehenderit do aliqua sit adipisicing in minim veniam non aliqua fugiat. Pariatur sint nulla do anim amet incididunt laboris. Proident ea pariatur sint ea consequat non. Aute in cillum elit irure quis aute esse exercitation eiusmod esse proident enim amet nostrud veniam. Magna voluptate minim voluptate labore tempor proident dolore id consectetur et anim esse id id. Cillum do laborum sint. Pariatur non tempor aute ex non anim non eu veniam sint ea id eiusmod in non. Anim nisi voluptate ea officia Lorem dolor ut dolore culpa voluptate.</p>\n<table>\n<thead>\n<tr>\n<th>Lorem Ipsum</th>\n<th>Lorem Ipsum</th>\n<th>Lorem Ipsum</th>\n<th>Lorem Ipsum</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Lorem ipsum</td>\n<td>Lorem ipsum</td>\n<td>Lorem Ipsum</td>\n<td>Integer suscipit</td>\n</tr>\n<tr>\n<td>Quisque</td>\n<td>ornare lacus</td>\n<td>at enim mollis</td>\n<td>quis finibus</td>\n</tr>\n<tr>\n<td>risus vestibulum</td>\n<td>Vivamus quis</td>\n<td>risus sed dolor</td>\n<td>vulputate ullamcorper</td>\n</tr>\n<tr>\n<td>Quisque facilisis</td>\n<td>Fusce blandit</td>\n<td>sapien ac nisi</td>\n<td>tellus malesuada</td>\n</tr>\n<tr>\n<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>\n<td>Mauris cursus quam a eros viverra facilisis.</td>\n<td>Quisque ut lacus at massa gravida facilisis.</td>\n<td>In faucibus est vel sem molestie, quis porta elit mollis.</td>\n</tr>\n</tbody>\n</table>\n<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\n<pre><code>\ncode {\n    background-color: #F7C36E;\n    font-weight: bold;\n    text-align: center;\n}\n    </code></pre>\n<p>Sunt sunt aute esse aliquip occaecat labore enim. Ipsum veniam aliquip commodo amet et incididunt labore reprehenderit ad sint. Exercitation pariatur adipisicing eiusmod. Id laboris ullamco nisi nostrud duis fugiat eiusmod ea mollit officia. Ad officia cillum ad incididunt. Minim proident amet incididunt elit exercitation eu culpa labore ut fugiat. Ea consequat elit quis commodo ea elit duis elit mollit. Cillum magna ipsum voluptate dolore laboris culpa et culpa cupidatat in ut est pariatur</p>\n<p>Eu esse aute voluptate pariatur deserunt incididunt et. Exercitation fugiat reprehenderit ea occaecat proident nostrud sit enim est sunt. Qui pariatur reprehenderit ullamco culpa officia. Deserunt aliqua aliqua voluptate fugiat exercitation aliqua quis et incididunt aute do tempor. Officia consequat amet sint dolore exercitation est veniam commodo incididunt.</p>"
 }, {
-  "id": "module_overrides",
-  "name": "module_overrides",
-  "label": "Module Overrides",
-  "required": false,
-  "locked": false,
-  "children": [{
-      "id": "enable_overrides",
-      "name": "enable_overrides",
-      "label": "Enable Overrides",
-      "help_text": "Toggle to override section ID and vertical margin. ",
-      "required": false,
-      "locked": false,
-      "display": "checkbox",
-      "type": "boolean",
-      "default": false
-    }, {
-      "id": "module_overrides.section_id",
-      "name": "section_id",
-      "label": "Section ID",
-      "help_text": "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
-      "required": false,
-      "locked": false,
-      "validation_regex": "",
-      "visibility": {
-        "controlling_field": "enable_overrides",
-        "controlling_value_regex": "true",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "allow_new_line": false,
-      "show_emoji_picker": false,
-      "type": "text"
-    }, {
-      "id": "module_overrides.top_margin",
-      "name": "top_margin",
-      "label": "Top Margin",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "enable_overrides",
-        "controlling_value_regex": "true",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "select",
-      "choices": [
-        ["top-margin-default", "Default"],
-        ["top-margin-none", "None"],
-        ["top-margin-small", "Small"],
-        ["top-margin-medium", "Medium"],
-        ["top-margin-large", "Large"],
-        ["top-margin-custom", "Custom"]
-      ],
-      "type": "choice",
-      "default": "top-margin-default"
-    }, {
-      "id": "custom_top_margin",
-      "name": "custom_top_margin",
-      "label": "Custom Top Margin",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "module_overrides.top_margin",
-        "controlling_value_regex": "top-margin-custom",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "text",
-      "step": 1,
-      "type": "number",
-      "default": 100
-    }, {
-      "id": "custom_top_margin_mobile",
-      "name": "custom_top_margin_mobile",
-      "label": "Custom Top Margin Mobile",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "module_overrides.top_margin",
-        "controlling_value_regex": "top-margin-custom",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "text",
-      "step": 1,
-      "type": "number",
-      "default": 50
-    }, {
-      "id": "module_overrides.bottom_margin",
-      "name": "bottom_margin",
-      "label": "Bottom Margin",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "enable_overrides",
-        "controlling_value_regex": "true",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "select",
-      "choices": [
-        ["bottom-margin-default", "Default"],
-        ["bottom-margin-none", "None"],
-        ["bottom-margin-small", "Small"],
-        ["bottom-margin-medium", "Medium"],
-        ["bottom-margin-large", "Large"],
-        ["bottom-margin-custom", "Custom"]
-      ],
-      "type": "choice",
-      "default": "bottom-margin-default"
-    }, {
-      "id": "custom_bottom_margin",
-      "name": "custom_bottom_margin",
-      "label": "Custom Bottom Margin",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "module_overrides.bottom_margin",
-        "controlling_value_regex": "bottom-margin-custom",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "text",
-      "step": 1,
-      "type": "number",
-      "default": 100
-    }, {
-      "id": "custom_bottom_margin_mobile",
-      "name": "custom_bottom_margin_mobile",
-      "label": "Custom Bottom Margin Mobile",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "module_overrides.bottom_margin",
-        "controlling_value_regex": "bottom-margin-custom",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "text",
-      "step": 1,
-      "type": "number",
-      "default": 50
-    }, {
-      "id": "module_overrides.top_padding",
-      "name": "top_padding",
-      "label": "Top Padding",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "enable_overrides",
-        "controlling_value_regex": "true",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "select",
-      "choices": [
-        ["top-padding-default", "Default"],
-        ["top-padding-none", "None"],
-        ["top-padding-small", "Small"],
-        ["top-padding-medium", "Medium"],
-        ["top-padding-large", "Large"],
-        ["top-padding-custom", "Custom"]
-      ],
-      "type": "choice",
-      "default": "top-padding-default"
-    }, {
-      "id": "custom_top_padding",
-      "name": "custom_top_padding",
-      "label": "Custom Top Padding",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "module_overrides.top_padding",
-        "controlling_value_regex": "top-padding-custom",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "text",
-      "step": 1,
-      "type": "number",
-      "default": 100
-    }, {
-      "id": "custom_top_padding_mobile",
-      "name": "custom_top_padding_mobile",
-      "label": "Custom Top Padding Mobile",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "module_overrides.top_padding",
-        "controlling_value_regex": "top-padding-custom",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "text",
-      "step": 1,
-      "type": "number",
-      "default": 50
-    }, {
-      "id": "module_overrides.bottom_padding",
-      "name": "bottom_padding",
-      "label": "Bottom Padding",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "enable_overrides",
-        "controlling_value_regex": "true",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "select",
-      "choices": [
-        ["bottom-padding-default", "Default"],
-        ["bottom-padding-none", "None"],
-        ["bottom-padding-small", "Small"],
-        ["bottom-padding-medium", "Medium"],
-        ["bottom-padding-large", "Large"],
-        ["bottom-padding-custom", "Custom"]
-      ],
-      "type": "choice",
-      "default": "bottom-padding-default"
-    }, {
-      "id": "custom_bottom_padding",
-      "name": "custom_bottom_padding",
-      "label": "Custom Bottom Padding",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "module_overrides.bottom_padding",
-        "controlling_value_regex": "bottom-padding-custom",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "text",
-      "step": 1,
-      "type": "number",
-      "default": 100
-    }, {
-      "id": "custom_bottom_padding_mobile",
-      "name": "custom_bottom_padding_mobile",
-      "label": "Custom Bottom Padding Mobile",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "module_overrides.bottom_padding",
-        "controlling_value_regex": "bottom-padding-custom",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "display": "text",
-      "step": 1,
-      "type": "number",
-      "default": 50
-    }, {
-      "id": "6c8bfd0e-1629-1268-e01c-17b4047ecfce",
-      "name": "background_color",
-      "label": "Background Color",
-      "help_text": "If a module has formal settings for a background color they will take priority over this value.",
-      "inline_help_text": "",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "enable_overrides",
-        "controlling_value_regex": "true",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "type": "color",
-      "default": {
-        "color": null,
-        "opacity": null
-      }
-    }, {
-      "id": "878364f4-31ac-6917-e76f-65307d7d36e5",
-      "name": "background_image",
-      "label": "Background Image",
-      "help_text": "If a module has formal settings for a background image they will take priority over this value.",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "enable_overrides",
-        "controlling_value_regex": "true",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
-      },
-      "responsive": true,
-      "resizable": false,
-      "show_loading": false,
-      "type": "image",
-      "default": {
-        "size_type": "auto",
-        "src": "",
-        "alt": null,
-        "loading": "disabled"
-      }
-    }, {
-      "choices": [
-        [
-          "top left",
-          "Top Left"
-        ],
-        [
-          "top center",
-          "Top Center"
-        ],
-        [
-          "top right",
-          "Top Right"
-        ],
-        [
-          "center left",
-          "Center Left"
-        ],
-        [
-          "center center",
-          "Center"
-        ],
-        [
-          "center right",
-          "Center Right"
-        ],
-        [
-          "bottom left",
-          "Bottom Left"
-        ],
-        [
-          "bottom center",
-          "Bottom Center"
-        ],
-        [
-          "bottom right",
-          "Bottom Right"
-        ]
-      ],
-      "default": "center center",
-      "display": "select",
-      "display_width": null,
-      "id": "background-image-position",
-      "label": "Select Background Image Position",
-      "locked": false,
-      "name": "background_image_position",
-      "required": false,
-      "type": "choice",
-      "visibility": {
-        "controlling_field": "enable_overrides",
-        "controlling_value_regex": "true",
-        "operator": "EQUAL"
-      }
+  "id" : "module_overrides",
+  "name" : "module_overrides",
+  "display_width" : null,
+  "label" : "Module Overrides",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "enable_overrides",
+    "name" : "enable_overrides",
+    "display_width" : null,
+    "label" : "Enable Overrides",
+    "help_text" : "Toggle to override section ID and vertical margin. ",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "module_overrides.section_id",
+    "name" : "section_id",
+    "display_width" : null,
+    "label" : "Section ID",
+    "help_text" : "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
     },
-    {
-      "default": true,
-      "display": "checkbox",
-      "id": "lazy-background",
-      "inline_help_text": "If enabled, the background image will be loaded only when the module is in view.",
-      "label": "Lazy Load Background Image?",
-      "locked": false,
-      "name": "background_lazy",
-      "required": false,
-      "type": "boolean",
-      "visibility": {
-        "controlling_field": "enable_overrides",
-        "controlling_value_regex": "true",
-        "operator": "EQUAL"
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "module_overrides.top_margin",
+    "name" : "top_margin",
+    "display_width" : null,
+    "label" : "Top Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "top-margin-default", "Default" ], [ "top-margin-none", "None" ], [ "top-margin-small", "Small" ], [ "top-margin-medium", "Medium" ], [ "top-margin-large", "Large" ], [ "top-margin-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "top-margin-none"
+  }, {
+    "id" : "custom_top_margin",
+    "name" : "custom_top_margin",
+    "display_width" : null,
+    "label" : "Custom Top Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_top_margin_mobile",
+    "name" : "custom_top_margin_mobile",
+    "display_width" : null,
+    "label" : "Custom Top Margin Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "module_overrides.bottom_margin",
+    "name" : "bottom_margin",
+    "display_width" : null,
+    "label" : "Bottom Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "bottom-margin-default", "Default" ], [ "bottom-margin-none", "None" ], [ "bottom-margin-small", "Small" ], [ "bottom-margin-medium", "Medium" ], [ "bottom-margin-large", "Large" ], [ "bottom-margin-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "bottom-margin-none"
+  }, {
+    "id" : "custom_bottom_margin",
+    "name" : "custom_bottom_margin",
+    "display_width" : null,
+    "label" : "Custom Bottom Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 100
+  }, {
+    "id" : "custom_bottom_margin_mobile",
+    "name" : "custom_bottom_margin_mobile",
+    "display_width" : null,
+    "label" : "Custom Bottom Margin Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "module_overrides.top_padding",
+    "name" : "top_padding",
+    "display_width" : null,
+    "label" : "Top Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "top-padding-default", "Default" ], [ "top-padding-none", "None" ], [ "top-padding-small", "Small" ], [ "top-padding-medium", "Medium" ], [ "top-padding-large", "Large" ], [ "top-padding-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "top-padding-custom"
+  }, {
+    "id" : "custom_top_padding",
+    "name" : "custom_top_padding",
+    "display_width" : null,
+    "label" : "Custom Top Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 90
+  }, {
+    "id" : "custom_top_padding_mobile",
+    "name" : "custom_top_padding_mobile",
+    "display_width" : null,
+    "label" : "Custom Top Padding Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "module_overrides.bottom_padding",
+    "name" : "bottom_padding",
+    "display_width" : null,
+    "label" : "Bottom Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "bottom-padding-default", "Default" ], [ "bottom-padding-none", "None" ], [ "bottom-padding-small", "Small" ], [ "bottom-padding-medium", "Medium" ], [ "bottom-padding-large", "Large" ], [ "bottom-padding-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "bottom-padding-custom"
+  }, {
+    "id" : "custom_bottom_padding",
+    "name" : "custom_bottom_padding",
+    "display_width" : null,
+    "label" : "Custom Bottom Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 90
+  }, {
+    "id" : "custom_bottom_padding_mobile",
+    "name" : "custom_bottom_padding_mobile",
+    "display_width" : null,
+    "label" : "Custom Bottom Padding Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 50
+  }, {
+    "id" : "3eccf45d-b0dc-4bac-42a0-f923e4405158",
+    "name" : "reverse_text",
+    "display_width" : null,
+    "label" : "Dark Theme",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
+    "name" : "background_settings",
+    "display_width" : null,
+    "label" : "Background Settings",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "3c812905-0c66-421d-6e7e-7a7109acdd49",
+      "name" : "background_type",
+      "display_width" : null,
+      "label" : "Background Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "color", "Color" ], [ "image", "Image" ], [ "gradient", "Gradient" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "color"
+    }, {
+      "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
+      "name" : "background_image",
+      "display_width" : null,
+      "label" : "Background Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "image",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
       }
     }, {
-      "id": "3eccf45d-b0dc-4bac-42a0-f923e4405158",
-      "name": "reverse_text",
-      "label": "Reverse Text",
-      "required": false,
-      "locked": false,
-      "visibility": {
-        "controlling_field": "enable_overrides",
-        "controlling_value_regex": "true",
-        "operator": "EQUAL",
-        "access": null,
-        "hidden_subfields": null
+      "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
+      "name" : "select_color",
+      "display_width" : null,
+      "label" : "Select Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
       },
-      "display": "checkbox",
-      "type": "boolean",
-      "default": false
+      "display" : "select",
+      "choices" : [ [ "prismic_mango_bg", "Prismic Mango" ], [ "prismic_mint_bg", "Prismic Mint" ], [ "frostee_bg", "Frostee" ], [ "mint_cream_bg", "Mint Cream" ], [ "menthol_bg", "Menthol" ], [ "l2l_green_bg", "L2L Green" ], [ "fern_green_bg", "Fern Green" ], [ "dark_jungle_bg", "Dark Jungle" ], [ "mystic_green_bg", "Mystic Green" ], [ "lime_green_bg", "Lime Green" ], [ "white_bg", "White" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "white_bg"
+    }, {
+      "id" : "2659085b-598d-e346-643e-6a9ebb3bae70",
+      "name" : "select_gradient",
+      "display_width" : null,
+      "label" : "Select Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ], [ "gradient3", "Gradient 3" ], [ "gradient4", "Gradient 4" ], [ "gradient5", "Gradient 5" ], [ "gradient6", "Gradient 6" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : ""
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : true,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "background_type" : "color",
+      "background_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "select_color" : "white_bg",
+      "select_gradient" : ""
     }
-  ],
-  "tab": "CONTENT",
-  "expanded": false,
-  "type": "group",
-  "default": {
-    "enable_overrides": false,
-    "top_margin": "top-margin-default",
-    "custom_top_margin": 100,
-    "custom_top_margin_mobile": 50,
-    "bottom_margin": "bottom-margin-default",
-    "custom_bottom_margin": 100,
-    "custom_bottom_margin_mobile": 50,
-    "top_padding": "top-padding-default",
-    "custom_top_padding": 100,
-    "custom_top_padding_mobile": 50,
-    "bottom_padding": "bottom-padding-default",
-    "custom_bottom_padding": 100,
-    "custom_bottom_padding_mobile": 50,
-    "background_color": {
-      "color": null,
-      "opacity": null
+  }, {
+    "id" : "c813f3af-99b7-d54e-7ce2-b074f008a27c",
+    "name" : "container",
+    "display_width" : null,
+    "label" : "Container",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
     },
-    "background_image": {
-      "size_type": "auto",
-      "src": "",
-      "alt": null,
-      "loading": "disabled"
+    "children" : [ {
+      "id" : "87361475-d2b5-329d-45b2-227103ad95d9",
+      "name" : "size",
+      "display_width" : null,
+      "label" : "Size",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "theme", "Theme" ], [ "full-width", "Full Width" ], [ "custom", "Custom" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "custom"
+    }, {
+      "id" : "b9865f26-0901-d5ad-66a2-7c6ecacec658",
+      "name" : "custom_size",
+      "display_width" : null,
+      "label" : "Custom Size",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.container.size",
+        "controlling_value_regex" : "custom",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "slider",
+      "min" : 500,
+      "max" : 1920,
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 1234
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "size" : "custom",
+      "custom_size" : 1234
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "enable_overrides" : true,
+    "top_margin" : "top-margin-none",
+    "custom_top_margin" : 100,
+    "custom_top_margin_mobile" : 50,
+    "bottom_margin" : "bottom-margin-none",
+    "custom_bottom_margin" : 100,
+    "custom_bottom_margin_mobile" : 50,
+    "top_padding" : "top-padding-custom",
+    "custom_top_padding" : 90,
+    "custom_top_padding_mobile" : 50,
+    "bottom_padding" : "bottom-padding-custom",
+    "custom_bottom_padding" : 90,
+    "custom_bottom_padding_mobile" : 50,
+    "reverse_text" : false,
+    "background_settings" : {
+      "background_type" : "color",
+      "background_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "select_color" : "white_bg",
+      "select_gradient" : ""
     },
-    "reverse_text": false
+    "container" : {
+      "size" : "custom",
+      "custom_size" : 1234
+    }
   }
-}]
+} ]

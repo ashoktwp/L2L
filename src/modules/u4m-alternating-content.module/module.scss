@@ -1,100 +1,166 @@
 @import "../../css/_module-imports";
+
 section.u4m-alternating-content {
-  margin-top: 100rem;
-  margin-bottom: 100rem;
-  &.reverse-text {
-    .inner .content {
-      color: $white;
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  .baseColor .content-col > *,
+  .baseColor .intro__inner > *,
+  .baseColor .intro_btn_wrap .arrow-link:not(:hover) {
+    color: $baseColor;
+  }
+  .prismic_mango_color .content-col > *,
+  .prismic_mango_color .intro__inner > *,
+  .prismic_mango_color .arrow-link:not(:hover) {
+    color: $Prismic_mango;
+  }
+  .menthol_color .content-col > *,
+  .menthol_color .intro__inner > *,
+  .menthol_color .arrow-link:not(:hover) {
+    color: $Menthol;
+  }
+  .l2l_green_color .content-col > *,
+  .l2l_green_color .intro__inner > *,
+  .l2l_green_color .arrow-link:not(:hover) {
+    color: $L2L_green;
+  }
+  .fern_green_color .content-col > *,
+  .fern_green_color .intro__inner > *,
+  .fern_green_color .arrow-link:not(:hover) {
+    color: $Fern_green;
+  }
+  .dark_jungle_color .content-col > *,
+  .dark_jungle_color .intro__inner > *,
+  .dark_jungle_color .arrow-link:not(:hover) {
+    color: $Dark_jungle;
+  }
+  .mystic_green_color .content-col > *,
+  .mystic_green_color .intro__inner > *,
+  .mystic_green_color .arrow-link:not(:hover) {
+    color: $Mystic_green;
+  }
+  .lime_green_color .content-col > *,
+  .lime_green_color .intro__inner > *,
+  .lime_green_color .arrow-link:not(:hover) {
+    color: $Lime_Green;
+  }
+  .white_color .content-col > *,
+  .white_color .intro__inner > *,
+  .white_color .arrow-link:not(:hover) {
+    color: $White;
+  }
+  @include tabletvert {
+    padding: 50px 0;
+  }
+  .two-col-content {
+    row-gap: 108px;
+    display: flex;
+    flex-wrap: wrap;
+    @include tabletmid {
+      row-gap: 50px;
     }
   }
-  div.inner {
-    @include center;
+  .two-col-content-item {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
-    @include tablet {
-      display: block;
-    }
-    div.additional-content {
-      flex-direction: column;
-      flex: 1 1 50%;
-      @include tablet {
-        float: none;
-        width: 100%;
+    width: 100%;
+    .media-col {
+      max-width: 582px;
+      width: 100%;
+      @include laptop {
+        max-width: 100%;
+        width: 50%;
       }
-      div.image {
-        //text-align: center;
-        img {
-          max-width: 600rem;
-          @include tablet {
-            max-width: 100%;
-            width: 100%;
-          }
-        }
-      }
-      div.video {
-        flex: 1 1 50%;
-        h3 {
-          @include h6;
-        }
-        h4 {
-          @include b2;
-          font-weight: bold;
-        }
-      }
-    }
-    div.content {
-      flex: 1 1 50%;
-      padding-left: 50rem;
-      @include tablet {
+      @include tabletmid {
         max-width: 100%;
         width: 100%;
-        margin-top: 0;
-        padding: 30rem 0;
+        margin-bottom: 20px;
       }
-      .eyebrow {
+      iframe.iframe_video {
+        width: 100%;
+        min-height: 396px;
+        max-height: 396px;
+        @include tabletvert {
+          min-height: 300px;
+          max-height: 300px;
+        }
+      }
+      img {
+        width: 100%;
+        max-height: 396px;
+        object-fit: cover;
+        min-height: 396px;
+        @include tabletvert {
+          min-height: 300px;
+          max-height: 300px;
+        }
+      }
+      .video-media {
+        width: 100%;
+      }
+    }
+    .content-col {
+      width: calc(100% - 582px);
+      padding-right: 130px;
+      &.center-align {
+        text-align: center;
+        .intro_btn_wrap {
+          justify-content: center;
+        }
+      }
+      &.right-align {
+        text-align: right;
+        .intro_btn_wrap {
+          justify-content: flex-end;
+        }
+      }
+      .intro_btn_wrap {
+        justify-content: flex-start;
+      }
+      @include laptop {
+        width: 50%;
+        padding-right: 100px;
+      }
+      @include tabletmid {
+        width: 100%;
+        padding-right: 0;
+      }
+      .eyebrow_text {
         @include eyebrow;
       }
       h2 {
-        margin-top: 0;
-        @include h5;
-        @include phone {
-          margin-bottom: 0;
-        }
-      }
-      h3 {
-        @include h6;
-      }
-      h4 {
-        @include b2;
-        font-weight: bold;
+        margin-bottom: 14px;
+        font-weight: 500;
+        letter-spacing: 0.25px;
+        line-height: 1.188;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       p {
-        @include b2;
-        &:last-of-type {
+        margin-top: 0;
+        &:last-child {
           margin-bottom: 0;
-        }
-        @include phone {
-          @include b4;
-        }
-      }
-      a {
-        margin-bottom: 0;
-      }
-      span.url,
-      span.cta {
-        a {
-          @include buttonSmall;
-          margin-top: 35rem;
         }
       }
     }
-    &.left {
+    &.right {
       flex-direction: row-reverse;
-      div.content {
-        padding-left: 0;
-        padding-right: 30rem;
+      .content-col {
+        padding-right: 0;
+        padding-left: 130px;
+        @include laptop {
+          padding-left: 100px;
+        }
+        @include tabletmid {
+          padding-left: 0;
+        }
+      }
+    }
+    @include tabletmid {
+      flex-direction: column-reverse;
+      &.right {
+        flex-direction: column-reverse;
       }
     }
   }

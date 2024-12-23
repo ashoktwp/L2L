@@ -1,0 +1,247 @@
+{% set moduleName = 'u4m-slider-tabs-top-variation-c' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="intro_wrapp">
+    {{macros.introGroup(module.intro_content)}}
+  </div>
+  <div class="slider-tabs-wrp">
+    <div class="slider-tabs-items mobile-hide">
+      <div class="slider-pie">
+        <div class="slider-pie-inn">
+        </div>
+      </div>
+      <div class="slider-tabs">
+        <div class="tab-items slider-nav">
+          {% for item in module.tab_items %}
+          <div class="tab-item">
+            <button class="tab-btn">
+              {{ item.tab_title }}
+            </button>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+      <div class="slider-tabs-content">
+        <div class="tabs-content-items slider-for">
+          {% for item in module.tab_items %}
+          <div class="tabs-content-item">
+            <div class="tabs-content">
+              {% if item.tab_title %}
+              <div class="tabs-subheading">
+                {{ item.tab_title }}
+              </div>
+              {% endif %}
+              {% if item.tab_content.title %}
+              <div class="tabs-heading">
+                {{ item.tab_content.title }}
+              </div>
+              {% endif %}
+              {% if item.tab_content.content %}
+              {{ item.tab_content.content }}
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="arrow-section mobile-hide">
+      <div class="tab-prev-arrow prev-btn">
+        <div class="tab-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+        </div>   
+      </div>
+      <div class="tab-next-arrow next-btn">
+        <div class="progress-round__wrap">
+          <svg class="progress">
+            <circle r="22" cx="26" cy="26"/>
+          </svg>
+        </div>
+        <div class="tab-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+        </div>
+      </div>
+    </div>
+
+    {# Mobile Sturture #}
+    <div class="slider-tabs-items  mobile-visible">
+      <div class="slider-tabs-content">
+        <div class="tabs-content-items">
+          {% for item in module.tab_items %}
+          <div class="tabs-content-item">
+            <div class="tabs-content">
+              {% if item.tab_title %}
+              <div class="tabs-subheading">
+                {{ item.tab_title }}
+              </div>
+              {% endif %}
+              {% if item.tab_content.title %}
+              <div class="tabs-heading">
+                {{ item.tab_content.title }}
+              </div>
+              {% endif %}
+              {% if item.tab_content.content %}
+              {{ item.tab_content.content }}
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+{% require_js %}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sliderSection = document.querySelector(".u4m-slider-tabs-top-variation-c");
+  let isInitialized = false; // Flag to track initialization
+
+  if (sliderSection) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !isInitialized) {
+          // Initialize the slider functionality
+          initSliderFunctionality();
+          isInitialized = true; // Mark as initialized
+          observer.disconnect(); // Stop observing after initialization
+        }
+      });
+    }, {
+      root: null, // Default to viewport
+      rootMargin: '0px 0px -1000px 0px', // Trigger 200px before the section is fully in view
+      threshold: 0 // Trigger when any part of the section is visible
+    });
+
+    observer.observe(sliderSection);
+  }
+
+  function initSliderFunctionality() {
+    // Add the slider animation
+    $('.u4m-slider-tabs-top-variation-c').addClass('hide');
+    setTimeout(function () {
+      $('.u4m-slider-tabs-top-variation-c').removeClass('hide');
+    }, 1500);
+
+    // Initialize Slick Slider
+    const $sliderFor = $('.slider-for');
+    const $sliderNav = $('.slider-nav');
+
+    if ($sliderFor.length) {
+      $sliderFor
+        .on('init', function () {
+          isInitialized = true; // Mark slider as initialized
+          setTimeout(startProgressAnimation, 50); // Delay slightly to ensure the slider is ready
+        })
+        .slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          fade: true,
+          asNavFor: '.slider-nav',
+          autoplay: true,
+          autoplaySpeed: 5000, // Match SVG animation duration
+          pauseOnHover: false,
+          pauseOnFocus: false,
+          infinite: true,
+        });
+    } else {
+      console.error('No element found with class .slider-for');
+      return; // Exit script if slider-for does not exist
+    }
+
+    if ($sliderNav.length) {
+      $sliderNav.slick({
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        asNavFor: '.slider-for',
+        dots: false,
+        focusOnSelect: true,
+        infinite: true,
+      });
+    }
+
+    // Function to start progress animation
+    function startProgressAnimation() {
+      const circle = document.querySelector('.progress circle');
+      if (!circle) {
+        console.error('No SVG circle element found for progress animation');
+        return;
+      }
+
+      const radius = circle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+
+      circle.style.strokeDasharray = `${circumference} ${circumference}`;
+      circle.style.strokeDashoffset = `${circumference}`;
+
+      // Start animation: stroke-dashoffset to 0 over 10 seconds
+      circle.style.transition = 'stroke-dashoffset 5s linear';
+      circle.style.strokeDashoffset = '0';
+    }
+
+    // Function to reset progress animation
+    function resetProgressAnimation() {
+      const circle = document.querySelector('.progress circle');
+      if (!circle) {
+        console.error('No SVG circle element found for progress reset');
+        return;
+      }
+
+      const radius = circle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+
+      circle.style.transition = 'none'; // Stop ongoing animation
+      circle.style.strokeDashoffset = `${circumference}`; // Reset offset
+      setTimeout(startProgressAnimation, 50); // Restart animation after a small delay
+    }
+
+    // Reset and restart progress animation during slide transitions
+    $sliderFor.on('beforeChange', function () {
+      resetProgressAnimation(); // Reset before slide transition starts
+    });
+
+    $sliderFor.on('afterChange', function () {
+      startProgressAnimation(); // Ensure progress starts fresh
+    });
+
+    // Reset progress on manual navigation
+    $(".prev-btn").click(function () {
+      $sliderFor.slick("slickPrev");
+      resetProgressAnimation();
+    });
+
+    $(".next-btn").click(function () {
+      $sliderFor.slick("slickNext");
+      resetProgressAnimation();
+    });
+
+    // Ensure animation starts immediately after initialization
+    $sliderFor.slick('slickGoTo', 0); // Force the slider to the first slide
+    setTimeout(startProgressAnimation, 100); // Slight delay to ensure slider is fully rendered
+    resetProgressAnimation();
+  }
+});
+
+</script>
+{% end_require_js %}
+
+
+
+
+
+
+
+
+
+
+
+
+

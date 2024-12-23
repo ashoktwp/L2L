@@ -1,7 +1,9 @@
 {
-  "global": false,
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
   "host_template_types" : [ "PAGE" ],
-"icon": "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
-  "label": "Alternating Content",
-  "is_available_for_new_content": true
+  "module_id" : 184039249178,
+  "label" : "Alternating Content",
+  "is_available_for_new_content" : true
 }

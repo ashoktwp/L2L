@@ -1,0 +1,153 @@
+<div class="megamenu_mdl">
+	<div  class="megamenu_inr">
+		{% for item in module.add_menus %}
+		<ul class="main_menu">
+			<li>
+				{% set href = item.menu_link.url.href %}
+				{% if item.menu_link.url.type is equalto "EMAIL_ADDRESS" %}
+				{% set href = "mailto:" + href %}
+				{% endif %}
+				<a
+					 {% if item.menu_link.url.type is equalto "CALL_TO_ACTION"  %}
+					 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+					 {% else %}
+					 href="{{ href|escape_url }}"
+					 {% endif %}
+					 {% if item.menu_link.open_in_new_tab %}
+					 target="_blank"
+					 {% endif %}
+					 {% if item.menu_link.rel %}
+					 rel="{{ item.menu_link.rel|escape_attr }}"
+					 {% endif %}
+					 >{{ item.menu_text }}
+				</a>
+				<div class="child_wrapper">
+					<div class="child_inner">
+						<div class="child_row">
+							<div class="child_flex">
+								{% for item2 in item.mega_menu.add_child_columns %}
+								<div class="child_col child{{ loop.index }}">
+									{% if item2.select_column_type == 'menu_items' %}
+									{% if item2.title %}
+									<div class="ttl">
+										{% set href = item2.title_link.url.href %}
+		{% if item2.title_link.url.type is equalto "EMAIL_ADDRESS" %}
+		  {% set href = "mailto:" + href %}
+		{% endif %}
+		<a
+		  {% if item2.title_link.url.type is equalto "CALL_TO_ACTION"  %}
+		    href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+		  {% else %}
+		    href="{{ href|escape_url }}"
+		  {% endif %}
+		  {% if item2.title_link.open_in_new_tab %}
+		    target="_blank"
+		  {% endif %}
+		  {% if item2.title_link.rel %}
+		    rel="{{ item2.title_link.rel|escape_attr }}"
+		  {% endif %}
+			 >{{ item2.title }}</a>
+									</div>
+									{% endif %}
+									{% for item3 in item2.child_menu_items %}
+									<div class="child_menus">
+										<div class="child_menuitems">
+											
+											{% set href = item3.menu_link.url.href %}
+											{% if item3.menu_link.url.type is equalto "EMAIL_ADDRESS" %}
+											{% set href = "mailto:" + href %}
+											{% endif %}
+											<a
+												 {% if item3.menu_link.url.type is equalto "CALL_TO_ACTION"  %}
+												 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+												 {% else %}
+												 href="{{ href|escape_url }}"
+												 {% endif %}
+												 {% if item3.menu_link.open_in_new_tab %}
+												 target="_blank"
+												 {% endif %}
+												 {% if item3.menu_link.rel %}
+												 rel="{{ item3.menu_link.rel|escape_attr }}"
+												 {% endif %}
+												 >
+												<div><strong>{{ item3.menu_text }}</strong>{% if item3.apply_new %}<div class="new">new</div>{% endif %}</div>
+												<p>{{ item3.description }}</p>				
+											</a>
+										</div>
+										
+									</div>
+									{% endfor %}
+									{% else %}
+									<div class="child_card">
+										{% if item2.card.select_image.src  %}
+										<div class="hdcard_img">
+											<img src="{{ item2.card.select_image.src }}" alt="{{ item2.card.select_image.alt }}" >
+										</div>
+										{% endif %}
+										{% if item2.card.content %}
+										<div class="hdcard_cnt">
+											{{ item2.card.content }}
+										</div>
+										{% endif %}
+									</div>
+									{% endif %}
+									<div class="child_btn">
+										{% if item2.button.button_type == 'stnd' %} 
+										{% set href = item2.button.button_link.url.href %}
+										{% if item2.button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+										{% set href = "mailto:" + href %}
+										{% endif %}
+										<a
+											 {% if item2.button.button_link.url.type is equalto "CALL_TO_ACTION"  %}
+											 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+											 {% else %}
+											 href="{{ href|escape_url }}"
+											 {% endif %}
+											 {% if item2.button.button_link.open_in_new_tab %}
+											 target="_blank"
+											 {% endif %}
+											 {% if item2.button.button_link.rel %}
+											 rel="{{ item2.button.button_link.rel|escape_attr }}"
+											 {% endif %}
+											 >
+											{{ item2.button.button_text }}
+										</a>
+										{% else %}
+										{% cta guid="{{ item2.button.cta_field }}" %}
+										{% endif %}
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+						<div class="bt_row">
+							<div class="bt_btn">
+								{% set href = item.mega_menu.bottom_row.link_field.url.href %}
+								{% if item.mega_menu.bottom_row.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+								{% set href = "mailto:" + href %}
+								{% endif %}
+								<a
+									 {% if item.mega_menu.bottom_row.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+									 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+									 {% else %}
+									 href="{{ href|escape_url }}"
+									 {% endif %}
+									 {% if item.mega_menu.bottom_row.link_field.open_in_new_tab %}
+									 target="_blank"
+									 {% endif %}
+									 {% if item.mega_menu.bottom_row.link_field.rel %}
+									 rel="{{ item.mega_menu.bottom_row.link_field.rel|escape_attr }}"
+									 {% endif %}
+									 >
+									{{ item.mega_menu.bottom_row.link_text }}
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</li>
+		</ul>
+		{% endfor %}
+	</div>
+</div>

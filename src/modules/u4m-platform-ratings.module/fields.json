@@ -32,7 +32,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/Star.png",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Star.png",
       "alt" : "Star",
       "loading" : "lazy",
       "width" : 18,
@@ -71,7 +71,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/Group%20117.png",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Group%20117.png",
       "alt" : "Group 117",
       "loading" : "lazy",
       "width" : 19,
@@ -88,7 +88,7 @@
     "Select_rating" : "4",
     "full_star_image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/Star.png",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Star.png",
       "alt" : "Star",
       "loading" : "lazy",
       "width" : 18,
@@ -99,7 +99,7 @@
     "include_half_rating" : true,
     "half_star_image_copy" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/Group%20117.png",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Group%20117.png",
       "alt" : "Group 117",
       "loading" : "lazy",
       "width" : 19,
@@ -122,6 +122,25 @@
     "default" : 2
   },
   "children" : [ {
+    "id" : "af89eb39-c598-bc3b-b3d7-6dc1d959899f",
+    "name" : "link_field",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "#",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
     "id" : "795e9b72-22e3-f804-1e7e-704ff08c2fd7",
     "name" : "image_field",
     "display_width" : null,
@@ -134,7 +153,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/Group%20(1).png",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Group%20(1).png",
       "alt" : "Group (1)",
       "loading" : "lazy",
       "width" : 24,
@@ -160,9 +179,18 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "#",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
     "image_field" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/Group%20(1).png",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Group%20(1).png",
       "alt" : "Group (1)",
       "loading" : "lazy",
       "width" : 24,
@@ -172,9 +200,18 @@
     },
     "title" : "4.8 on G2"
   }, {
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "#",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
     "image_field" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/Group%20(1).png",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Group%20(1).png",
       "alt" : "Group (1)",
       "loading" : "lazy",
       "width" : 24,

@@ -14,6 +14,12 @@ $Dark_jungle: #0e2514;
 $Mystic_green: #d0f76f;
 $Lime_Green: #9bf75f;
 
+$YellowWarm: #FBE0AD;
+$SprayDopely: #E0DB7E;
+$Lavender: #E4F3C4;
+$teaGreen: #C4EDB1;
+
+
 // color shades
 $Nori_Green: #0e2514;
 $Dark_Green: #22452a;
@@ -26,10 +32,15 @@ $Pale_Green: #9dd8a7;
 $Very_Pale_Green: #c8eace;
 $Pale_Mint: #e3f5e6;
 $Off-White: #f3faf4;
+$grey: #bfbfbf;
+$grey2: #b6b6b6;
 
 $light_grey: #969696;
 $Pale_Yellow_Green: #d0f76e;
 
+$arrowBtn: #F08C1F;
+$Orange: #ff492c;
+$Dark_Green2: #102F04;
 //==============
 
 // Colors - For transparency use rgba($action1, 0.5) = 50% opaque
@@ -40,21 +51,37 @@ $white: #fff;
 $gray1: #edf0f2;
 $gray2: #cbd6e2;
 $gray3: #7c98b6;
+$border_color: #d8d8d8;
+$darkBack: #000000;
 $gradient1: linear-gradient(-45deg, $black 0%, $action2 50%);
 
 $gradient1: linear-gradient(129.51deg, $white -3.8%, $Frostee 107.08%);
+$gradient2: linear-gradient(260.94deg, $Pale_Yellow_Green 3.36%, $Prismic_mint 98.11%);
 
-$gradient2: linear-gradient(
-  260.94deg,
-  $Pale_Yellow_Green 3.36%,
-  $Prismic_mint 98.11%
-);
+$gradient3: radial-gradient(circle at 50% -1.3e-14%, $Fern_green 0%, $Dark_jungle 78%);
 
+$gradient4: linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
+    linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
+    linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
+    linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%);
+$gradient5: radial-gradient(circle at 1.1e2% -9.2%, $white 0%, rgba($white, 0) 52%);
+$gradient6: radial-gradient(circle at 1.1e2% -9.2%, $Dark_Green 0%, $Dark_jungle 52%);
+$borderRadius13: 13rem;
+$shadow4: inset 0 1px 3px 0 $Forest_Green;
+$arrowBtn: #F08C1F;
+$iconbg1: linear-gradient(225deg, rgba($grey, 0.45) 0%, rgba($Dark_jungle, 0.45) 38%, rgba($Dark_jungle, 0.45) 66%, rgba($L2L_green, 0.45) 100%);
+$iconbg2: linear-gradient(225deg, rgba($grey2, 0.45) 0%, rgba($Dark_jungle, 0.45) 38%, rgba($Dark_jungle, 0.45) 66%, rgba($Prismic_mango, 0.45) 100%);
+$iconbg3: linear-gradient(225deg, rgba($grey, 0.45) 0%, rgba($Dark_jungle, 0.45) 38%, rgba($Dark_jungle, 0.45) 66%, rgba($Menthol, 0.45) 100%);
+
+
+$darkBack: #000000;
+$arrowDots: #F08C1F;
 // ==============
 
 //============
 $primaryFont: "Sofia Sans";
 $secondaryFont: "Inter";
+$tertiaryFont: "Cairo";
 
 $font1: $primaryFont;
 $baseFontSize: 21rem;
@@ -70,6 +97,7 @@ $shadow1: 0rem 1rem 12rem 0 rgba($black, 0.1);
 $shadow2: 0 5rem 25rem 0 rgba($black, 0.2);
 $shadow3: 0 10rem 50rem 0 rgba($black, 0.3);
 $textShadow1: 0 0 4rem rgba($black, 0.3);
+$shadow4: inset 0 1px 3px 0 #275430;
 // Animation
 $animation1: 0.1s ease-in;
 $animation2: 0.25s ease-in;
@@ -78,3 +106,4 @@ $animation3: 1s ease-in;
 $borderRadius: 25rem;
 $containerSize: 1224rem;
 $introContainer: 810rem;
+$videoOverlay: rgba($black, 0.6);

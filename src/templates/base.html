@@ -4,7 +4,7 @@ isAvailableForNewContent: false
 -->
 <!doctype html>
 <html lang="{{ html_lang }}" {{ html_lang_dir }}>
-<head>
+  <head>
     <meta charset="utf-8">
     <title>{{ page_meta.html_title }}</title>
     <link rel="shortcut icon" href='{{ "{{ site_settings.favicon_src }}" if site_settings.favicon_src }}'/>
@@ -19,19 +19,22 @@ isAvailableForNewContent: false
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
-</head>
-<body class="{{ builtin_body_classes }} {% if request.full_url is string_containing "/author/" %} author-listing {% endif %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+  </head>
+  <body class="{{ builtin_body_classes }} {% if request.full_url is string_containing "/author/" %} author-listing {% endif %}">
     {% block header %}
-        {% module 'u4m-header' path='../modules/u4m-header', label='U4M Header' %}
+    {% global_partial path='././partials/u4m-header.html' %}
     {% endblock header %}
 
     {% block body %}
     {% endblock body %}
-    
+
     {% block footer %}
-        {% module 'u4m-footer' path='../modules/u4m-footer', label='U4M Footer' %}
+    {% global_partial path='././partials/u4m-footer.html' %}
     {% endblock footer %}
-{{ require_js(get_asset_url('../js/main.js')) }}
-{{ standard_footer_includes }}
-</body>
+    {{ require_js(get_asset_url('../js/jquery.js')) }} 
+    {{ require_js(get_asset_url('../js/aos.js')) }} 
+    {{ require_js(get_asset_url('../js/main.js')) }} 
+    {{ standard_footer_includes }}
+  </body>
 </html>

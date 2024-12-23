@@ -1,0 +1,58 @@
+{% set moduleName = 'u4m-image-card' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="intro_wrapp">
+    {{macros.introGroup(module.intro_content)}}
+  </div>
+
+  <div class="card_wrap">
+    <div class="card_flex flex_row">
+      {% for item in module.add_items %}
+      <div class="card_item">
+        <div class="item_inr">
+        <div class="item_inr_top">
+          <div class="card_img">
+            {% if item.select_image.src %}
+            <img src="{{ item.select_image.src }}" alt="{{ item.select_image.alt }}" >
+            {% endif %}
+          </div>
+          <div class="card_cnt">
+            {% if item.title %}
+            <h4>{{ item.title }}</h4>
+            {% endif %}
+            {% if item.content %}
+            <div class="inr_cnt">
+              {{ item.content }}
+            </div>
+            {% endif %}
+          </div>
+          </div>
+          {% if item.include_button %}
+          <div class="card_btn">
+            {{macros.buttonGroup(item.button_group)}}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

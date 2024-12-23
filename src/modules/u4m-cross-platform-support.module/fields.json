@@ -1,4 +1,23 @@
 [ {
+  "id" : "24ed6301-ec84-90a3-b92e-e3dc0449875c",
+  "name" : "link_field",
+  "display_width" : null,
+  "label" : "Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "href" : "#",
+      "type" : "EXTERNAL"
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
   "id" : "a900b889-d3e8-7d06-f84f-d62c7bb6d954",
   "name" : "title",
   "display_width" : null,
@@ -21,7 +40,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "7466e733-9ca9-878d-c5f6-74cff268e08d",
-    "default" : 3
+    "default" : 5
   },
   "children" : [ {
     "id" : "7466e733-9ca9-878d-c5f6-74cff268e08d",
@@ -36,8 +55,8 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade-1.png",
-      "alt" : "Browser",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/barricade-1.png",
+      "alt" : "barricade-1",
       "loading" : "lazy",
       "width" : 24,
       "height" : 24,
@@ -64,8 +83,8 @@
   "default" : [ {
     "image_field" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade-1.png",
-      "alt" : "Browser",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/barricade-1.png",
+      "alt" : "barricade-1",
       "loading" : "lazy",
       "width" : 24,
       "height" : 24,
@@ -76,8 +95,8 @@
   }, {
     "image_field" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade-1.png",
-      "alt" : "Browser",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/barricade-1.png",
+      "alt" : "barricade-1",
       "loading" : "lazy",
       "width" : 24,
       "height" : 24,
@@ -88,8 +107,32 @@
   }, {
     "image_field" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/L2L/barricade-1.png",
-      "alt" : "Browser",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/barricade-1.png",
+      "alt" : "barricade-1",
+      "loading" : "lazy",
+      "width" : 24,
+      "height" : 24,
+      "max_width" : 24,
+      "max_height" : 24
+    },
+    "title" : "Browser"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/barricade-1.png",
+      "alt" : "barricade-1",
+      "loading" : "lazy",
+      "width" : 24,
+      "height" : 24,
+      "max_width" : 24,
+      "max_height" : 24
+    },
+    "title" : "Browser"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/barricade-1.png",
+      "alt" : "barricade-1",
       "loading" : "lazy",
       "width" : 24,
       "height" : 24,

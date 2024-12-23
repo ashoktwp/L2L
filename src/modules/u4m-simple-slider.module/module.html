@@ -1,0 +1,112 @@
+{% set moduleName = 'u4m-simple-slider' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="intro_wrapp">
+    {{macros.introGroup(module.intro_content)}}
+  </div>
+  <div class="btm_slider Cmslider">
+    {% for item in module.member_group %}
+    <div class="itmes {{ module.module_settings.select_color }} {% if module.module_settings.dark_theme  %} card_reverse_textt {% else %} theme_text{% endif %}">
+      <div class="left_wrp">
+        <div class="inner_wrpp intro_content">
+          {% if item.member_name %}
+          <h3 class="member_name">
+            {{ item.member_name }}
+          </h3>
+          {% endif %} 
+          {% if item.member_position %}
+          <div class="member_position eyebrow_text {{ module.module_settings.super_title_group.background }} {% if  module.module_settings.super_title_group.dark_theme %} position_reverse_text {% else %} theme_text{% endif %}">
+            {{ item.member_position }}
+          </div>
+          {% endif %} 
+          <div class="des">
+            {{ item.description }}
+          </div>
+          <div class="member_share">
+            <ul>
+              {% for item2 in item.social_icon %}
+              <li>
+                {% set href = item2.link_field.url.href %}
+                {% if item2.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                <a
+                   {% if item2.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+                   href="{{ href }}" 
+                   {% else %}
+                   href="{{ href|escape_url }}"
+                   {% endif %}
+                   {% if item2.link_field.open_in_new_tab %}
+                   target="_blank"
+                   {% endif %}
+                   {% if item2.link_field.rel %}
+                   rel="{{ item2.link_field.rel|escape_attr }}"
+                   {% endif %}
+                   >
+                  {% if item2.select_icon_type == "image" %}
+                  {% if item2.image_field_1.src %}
+                  {% set sizeAttrs = 'width="{{ item2.image_field_1.width|escape_attr }}" height="{{ item2.image_field_1.height|escape_attr }}"' %}
+                  {% if item2.image_field_1.size_type == 'auto' %}
+                  {% set sizeAttrs = 'width="{{ item2.image_field_1.width|escape_attr }}" height="{{ item2.image_field_1.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                  {% elif item2.image_field_1.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item2.image_field_1.max_width|escape_attr }}" height="{{ item2.image_field_1.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                  {% endif %}
+                  {% set loadingAttr = item2.image_field_1.loading != 'disabled' ? 'loading="{{ item2.image_field_1.loading|escape_attr }}"' : '' %}
+                  <img src="{{ item2.image_field_1.src|escape_url }}" alt="{{ item2.image_field_1.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                  {% endif %}
+                  {% if item2.select_icon_type == "fontawesome" %}
+                  {% icon
+        name="{{ item2.icon_field.name }}"
+        style="{{ item2.icon_field.type }}"
+        unicode="{{ item2.icon_field.unicode }}"
+        icon_set="{{ item2.icon_field.icon_set }}"
+      %}
+                  {% endif %}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right_wrp">
+        <div class="inner_wrpp">
+          {% if item.image_field.src %}
+          {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+          {% if item.image_field.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+          {% elif item.image_field.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+          <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<style> 
+.u4m-simple-slider .btm_slider .slick-arrow::before {
+    background-image:url({{ get_asset_url('../../templates/images/Path.png') }});
+  }
+</style>
+
+
+

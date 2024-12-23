@@ -1,0 +1,57 @@
+@import "../../css/_module-imports";
+
+.u4m-revisions-card {
+  &.dnd_padd {
+    padding: 30rem 29rem 46rem 36rem;
+  }
+  border-radius: 8px;
+  overflow: hidden;
+  .page-center {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.reverse-text * {
+    color: $White;
+  }
+  .revisions-accord {
+    &:not(.active-card) {
+      .accord-icon {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .accor-title {
+    line-height: 1.57142857;
+    margin-bottom: 22px;
+    font-weight: 600;
+    font-family: $secondaryFont;
+    color: $headingColor;
+    .accord-icon {
+      width: 36px;
+      height: 36px;
+      display: inline-block;
+      float: right;
+      transition: all 0.3s ease;
+      svg {
+        fill: $Medium_Sea_Green;
+      }
+    }
+  }
+  .revisions-content {
+    @include b3;
+    line-height: 2.0625;
+    color: $headingColor;
+    letter-spacing: normal;
+    margin-bottom: 0;
+    display: block;
+    font-family: $secondaryFont;
+    p {
+      margin-top: 0;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

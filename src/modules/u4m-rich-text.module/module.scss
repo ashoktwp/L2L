@@ -1,200 +1,158 @@
 @import "../../css/_module-imports";
 
-section.u4m-rich-text {
-  background-size: cover;
-  background-position: 50% 50%;
-
-  &.reverse-text {
-    color: $white;
+.u4m-rich-text {
+  code.hljs {
+    background-color: $Dark_jungle;
   }
-
-  div.content {
-    @include center;
-    max-width: 1000rem;
-    margin-top: 50rem;
-    margin-bottom: 100rem;
-
-    .b1 {
-      @include b1;
+  h2 {
+    margin-bottom: 23px;
+  }
+  p {
+    color: $Dark_Green2;
+    + {
+      h2 {
+        margin-top: 59px;
+        margin-bottom: 34px;
+      }
+      h3 {
+        margin-top: 41px;
+        margin-bottom: 19px;
+      }
     }
-
-    .b2 {
-      @include b2;
+    &:last-child {
+      margin: 0;
     }
-
-    p,
-    ul,
-    ol,
-    .b3 {
-      @include b3;
+    a {
+      color: $L2L_green;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
     }
-
-    .b4 {
-      @include b4;
+  }
+  hr {
+    border: 2px solid $L2L_green;
+    margin-top: 45px;
+    margin-bottom: 30px;
+  }
+  h3 {
+    color: $Dark_Green2;
+    span {
+      color: $L2L_green;
     }
-
-    h1,
-    .h1 {
-      @include h1;
+  }
+  ul {
+    padding: 0;
+    padding-left: 36px;
+    padding-left: 36px;
+    margin-bottom: 33px;
+    li {
+      margin-bottom: 12px;
+      padding-left: 18px;
+      letter-spacing: normal;
+      &:last-child {
+        margin: 0;
+      }
     }
-
-    h2,
-    .h2 {
-      @include h2;
+    + {
+      .hs-embed-wrapper {
+        margin-top: 60px !important;
+        margin-bottom: 40px !important;
+      }
     }
-
-    h3,
-    .h3 {
-      @include h3;
+  }
+  ol {
+    padding: 0;
+    padding-left: 36px;
+    padding-left: 36px;
+    margin-bottom: 33px;
+    li {
+      margin-bottom: 12px;
+      padding-left: 18px;
+      letter-spacing: normal;
+      &:last-child {
+        margin: 0;
+      }
+      &::marker {
+        font-weight: 600;
+      }
     }
-
-    h4,
-    .h4 {
-      @include h4;
-    }
-
-    h5,
-    .h5 {
-      @include h5;
-    }
-
-    h6,
-    .h6 {
-      @include h6;
-    }
-
-    .swatches div {
-      width: 90rem;
-      height: 90rem;
-      padding: 5rem;
-      font-size: 10rem;
-      text-align: center;
-      display: inline-block;
-      margin: 8rem;
-      vertical-align: top;
-      line-height: normal;
-    }
-
-    .swatches div.secondary {
-      width: 50rem;
-      height: 50rem;
-    }
-
-    .action1 {
-      background-color: $action1;
-      color: $white;
-    }
-
-    .action2 {
-      background-color: $action2;
-      color: $white;
-    }
-
-    .black {
-      background-color: $black;
-      color: $white;
-    }
-
-    .gray1 {
-      background-color: $gray1;
-      color: $black;
-    }
-
-    .gray2 {
-      background-color: $gray2;
-    }
-
-    .gray3 {
-      background-color: $gray3;
-      color: $white;
-    }
-
-    .white {
-      background-color: $white;
-      color: $black;
-      border: 1rem solid $gray2;
-    }
-
-    .button {
-      @include button;
-    }
-
-    .button-small {
-      @include buttonSmall;
-    }
-
-    .button-stroked {
-      @include buttonStroked;
-    }
-
-    .button-text {
-      @include buttonText;
-    }
-
-    .hs-cta-wrapper a {
-      @include button;
-    }
-
-    .animation-sample-short,
-    .animation-sample-medium,
-    .animation-sample-long {
-      cursor: pointer;
-      background-color: $action1;
-      padding: 60rem 20rem;
-      color: $white;
-      margin: 10rem auto;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-    .animation-sample-short {
-      transition: $animation1;
-      width: 50%;
-    }
-
-    .animation-sample-medium {
-      transition: $animation2;
-      width: 50%;
-    }
-
-    .animation-sample-long {
-      transition: $animation3;
-      width: 50%;
-    }
-
-    .animation-sample-short:hover,
-    .animation-sample-medium:hover,
-    .animation-sample-long:hover {
+  }
+  iframe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  figure {
+    margin: 0;
+    margin-top: 54px;
+    margin-bottom: 50px;
+    img {
+      border-radius: 21px !important;
+      overflow: hidden;
       width: 100%;
     }
-
-    .anchor {
-      display: block;
-      position: relative;
-      top: -100rem;
-      visibility: hidden;
+    figcaption {
+      text-align: center;
+      margin-top: 21px;
+      @include size14;
+      line-height: 1.42857143;
+      color: $headingColor;
     }
-
-    .anchor2 {
-      display: block;
-      position: relative;
-      top: -300rem;
-      visibility: hidden;
+  }
+}
+blockquote {
+  line-height: 33px;
+  margin: 0;
+  @include size21;
+  font-family: $secondaryFont;
+  color: $Dark_Green2;
+  font-weight: 500;
+  margin-right: 0;
+  margin-top: 33px;
+  margin-bottom: 45px;
+  border-left: 2px solid #409650;
+  padding-left: 28px;
+}
+table {
+  border: 2px solid #6abe7a;
+  border-collapse: collapse;
+  margin: 0;
+  margin-top: 44px;
+  th {
+    border: 2px solid #6abe7a;
+    text-align: center;
+    line-height: 1.28571429;
+    @include size21;
+    padding: 24px 24px 27px 24px !important;
+    font-weight: 600;
+    color: $headingColor;
+  }
+  td {
+    border: 2px solid #6abe7a;
+    text-align: center;
+    line-height: 1.28571429;
+    @include size21;
+    padding: 22px 24px 26px 24px !important;
+    color: $Dark_Green2;
+  }
+  + {
+    p {
+      margin-top: 57px;
     }
-
-    .clear {
-      clear: both;
-    }
-
-    .hs_cos_wrapper_type_rich_text,
-    .hs_cos_wrapper_type_text,
-    .hs_cos_wrapper_type_header,
-    .hs_cos_wrapper_type_section_header,
-    .hs_cos_wrapper_type_raw_html,
-    .hs_cos_wrapper_type_raw_jinja,
-    .hs_cos_wrapper_type_page_footer {
-      word-wrap: break-word;
+  }
+}
+@include tabletmid {
+  table {
+    display: block;
+    border: 0;
+    white-space: nowrap;
+    overflow-y: auto;
+    width: 100%;
+    thead {
+      width: 100%;
     }
   }
 }

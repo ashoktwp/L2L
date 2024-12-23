@@ -1,0 +1,82 @@
+{% set moduleName = 'u4m-icon-card' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="intro_wrapp">
+    {{macros.introGroup(module.intro_content)}}
+  </div>
+
+  <div class="card_wrap">
+    <div class="card_flex flex_row">
+      {% for item in module.add_items %}
+      <div class="card_item">
+        <div class="item_inr">
+          <div class="item_inr_top">
+            <div class="item_top_flex flex{{ item.icon_background }}">
+              <div class="item_iconwrap {{ item.icon_background }}">
+              
+                  {% if item.select_icon_type %}
+                  <span class="title-icon">
+                    {% if item.select_icon_type == "image" %}
+                    {% if item.icon_image.src %}
+                    {% set loadingAttr = item.icon_image.loading != 'disabled' ? 'loading="{{ item.icon_image.loading|escape_attr }}"' : '' %}
+                    <img src="{{ item.icon_image.src|escape_url }}" alt="{{ item.icon_image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                    {% endif %}
+                    {% elif item.select_icon_type == "icon" %}
+                    {% icon
+		name="{{ item.icon_field.name }}"
+		style="{{ item.icon_field.type }}"
+		unicode="{{ item.icon_field.unicode }}"
+		icon_set="{{ item.icon_field.icon_set }}"
+	%}
+                    {% elif item.select_icon_type == "custom" %}
+                    <i class="ph ph-{{ item.custom_icon }}"></i>
+                    {% endif %}
+                  </span>
+                  {% endif %}
+                
+
+              </div>
+              <div class="item_ttl">
+                {% if item.title %}
+                <h4>{{ item.title }}</h4>
+                {% endif %}
+              </div>
+            </div>
+            <div class="card_cnt">
+
+              {% if item.content %}
+              <div class="inr_cnt">
+                {{ item.content }}
+              </div>
+              {% endif %}
+            </div>
+          </div>
+          {% if item.include_button %}
+          <div class="card_btn btn{{ item.icon_background }}">
+            {{macros.buttonGroup(item.button_group)}}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

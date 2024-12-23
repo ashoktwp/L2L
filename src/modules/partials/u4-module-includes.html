@@ -13,13 +13,14 @@ require_css (get_asset_url('../../css/styles.css')) }} {% endif %}
   %}
   <div
     class="bg_overlay bg_color {{ module.module_overrides.background_settings.select_color }}"
-    style="opacity:  {{ module.module_overrides.background_settings.opacity/ 100 }}"
   ></div>
-  {% if module.module_overrides.background_settings.include_overlay_image %}
-  <div class="bg_overlay bg_overlay_image"></div>
-  {% endif %} {% endif %} {% if
-  module.module_overrides.background_settings.background_type == "image" %}
-
+  {% endif %} {% if module.module_overrides.background_settings.background_type
+  == "gradient" %}
+  <div
+    class="bg_overlay bg_color {{ module.module_overrides.background_settings.select_gradient }}"
+  ></div>
+  {% endif %} {% if module.module_overrides.background_settings.background_type
+  == "image" %}
   <div class="bg_overlay bg_image"></div>
   {% endif %} {% if module.module_overrides.enable_overrides %} {% require_js %}
   <style>

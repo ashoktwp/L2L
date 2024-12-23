@@ -1,177 +1,238 @@
-{% set featuredImageMax = 580 %}
-{% set avatarImageMax = 300 %}
-{% set listingImageMax = 360 %}
-{% set resourceImageMax = 300 %}
-  
-<section class="u4m-blog-listing {% if simple_list_page %}--simple{% endif %}">
-<div class="hero"> 
-    <h1 class="heading">
-    {% if topic %}
-    <span class="topic-name">
-        {% for content_topic in contents_topics %}      
-        {% if topic == content_topic.name|lower|replace(' ','-') %}
-        {{ content_topic.name }}
-        {% endif %}
-        {% endfor %}
-    </span>     
-    {% elif blog_author %}
-    <span class="author-name">Posts by {{ blog_author.display_name }}</span>
-    {% else %}
-    <span class="blog-title">{{ content_group.name }}</span>
-    {% endif %}
-    </h1>
-    <div class="wrapper {% if (request.full_url is string_containing "/tag/") or (request.full_url is string_containing "/topic/") or (request.full_url is string_containing "/author/") %} none {% endif %}">
-    <!-- set blog -->
-    {% set blogID = blog_recent_posts('{{ group.id }}', limit=1)  %}
-    <!-- set featured category -->
-    {% set featured_post = blog_recent_tag_posts('{{ group.id }}', 'featured', 1 ) %}
-    {% for post in featured_post %}       
-    {% unless (request.full_url is string_containing "/page/") %} 
-        <div class="card">          
-            <div class="image-wrap">
-            <a href="{{ post.absolute_url }}">
+{% set moduleName = 'u4m-blog-listing' %}
+	{% set featrows = blog_recent_tag_posts(group.id,module.featured_post.select_tag,1) %} 
+	
+	<section class='u4m-blog-listing {% if topic or blog_author %} topic-page {% endif %}'>
+	
+		<div class='blog-banner'>
+			<div class="bg_overlay {% if module.background_settings.background_type =='color' %}bg_color {{ module.background_settings.select_color }} {% endif %} {% if module.background_settings.background_type =='gradient' %} bg_gradient {{ module.background_settings.select_gradient }}{% endif %}"  {% if module.background_settings.background_type =='color' %}style="opacity: {{module.background_settings.opacity}}"{% endif %}>
+			</div>
+			<div class='page-center'>
+	
+				<div class='page-title'>
+					{% if topic %}
+					<h1>
+						{{ topic | replace('-',' ') }}
+					</h1>
+					{% elif blog_author %}
+					<h1>
+						{{ blog_author }}
+					</h1>
+					{% else %}
+					<h1>
+						{{ group.public_title }}
+					</h1>
+					{% endif %}
+				</div>
+				{% if not blog_author && not topic %}
+				<div class='featured-post-wrap'>
+	
+					{% for tag_post in featrows %}
+					<div class='featured-post {% if not tag_post.post_list_summary_featured_image %}no-img {% endif %}'>
+						{% if tag_post.post_list_summary_featured_image %}
+						<div class='featured-img-col'>
+							<a href="{{ tag_post.absolute_url }}">
+								<img src="{{ tag_post.post_list_summary_featured_image }}" alt="{{ tag_post.name | striptags }}">
+							</a>
+						</div> 
+						{% endif %}
+						<div class='featured-content-col'>
+						{% if tag_post.topic_list %}
+							<div class='featured-topic'>
+								{% set included_topics = tag_post.topic_list | rejectattr("slug", "equalto", "featured") | list %}
+								{% for topic in included_topics %}
+									{% if loop.first %}
+									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+								{% endif %}
+								{% endfor %}
+							</div>
+						{% endif %}
+							<h3>
+								<a href="{{ tag_post.absolute_url }}">{{ tag_post.name }}</a>
+							</h3>
+							<p> {{ tag_post.post_list_content|safe|truncatehtml(160, '.' , false)|striptags}}
+							</p>
+							{% if module.featured_post.read_more_text %}
+							<div class='read-more'>
+								<a class="more-link arrow-link" href="{{ tag_post.absolute_url }}">{{ module.featured_post.read_more_text }}
+								<span class="arrowbtn">
+								<svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+								<path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+								</svg>
+								<svg class="btnArrow2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+								<path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+								</svg>
+								</span>
+								</a>
+							</div>
+							{% endif %}
+						</div>
+					</div>
+					{% endfor %}
+	
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	<div class="main-listing">
+		<div class='site-search-wrap'>
+			<div class='page-center'>
+				<div class='search-col'>
+					{# Need help setting up site search?
+			   Start here: https://knowledge.hubspot.com/articles/kcs_article/cos-general/how-do-i-set-up-a-results-page-for-my-search-field-in-hubspot #}
+	
+					{% set search_page = module.site_search.results.use_custom_search_results_template is truthy and module.site_search.results.path_id ? content_by_id(module.site_search.results.path_id).absolute_url : site_settings.content_search_results_page_path %}
+	
+					{% unless (search_page is string_containing "//") %}
+					{% set search_page = "/" ~ search_page %}
+					{% endunless %}
+	
+					{% set search_page = search_page|regex_replace("http:", "") %}
+	
+					<div class="hs-search-field">
+						<div class="hs-search-field__bar">
+							<form data-hs-do-not-collect="true" action="{{ search_page|escape_url }}">
+								{% if module.site_search.field_label %}
+								<label for="term">{{ module.site_search.field_label|sanitize_html }}</label>
+								{% endif %}
+								<input type="text" class="hs-search-field__input" name="term" autocomplete="off" aria-label="{{ module.site_search.field_label|escape_attr || "Search" }}" placeholder="{{ module.site_search.placeholder|escape_attr }}">
+	
+								{% if module.site_search.content_types.website_pages %}
+								<input type="hidden" name="type" value="SITE_PAGE">
+								{% endif %}
+								{% if module.site_search.content_types.landing_pages %}
+								<input type="hidden" name="type" value="LANDING_PAGE">
+								{% endif %}
+								{% if module.site_search.content_types.blog_posts %}
+								<input type="hidden" name="type" value="BLOG_POST">
+								<input type="hidden" name="type" value="LISTING_PAGE">
+								{% endif %}
+								{% if module.site_search.content_types.knowledge_articles %}
+								<input type="hidden" name="type" value="KNOWLEDGE_ARTICLE">
+								{% endif %}
+								{% if module.site_search.content_types.case_studies %}
+								<input type="hidden" name="type" value="HS_CASE_STUDY">
+								{% endif %}
+								{% if module.site_search.include_search_button %}
+								<button aria-label="Search"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.29922C0 2.82065 2.82065 0 6.29923 0C9.7778 0 12.5985 2.82065 12.5985 6.29922C12.5985 7.78304 12.0805 9.15487 11.2196 10.2327L13.7953 12.8084C14.0682 13.0814 14.0682 13.5223 13.7953 13.7953C13.5223 14.0683 13.0814 14.0683 12.8084 13.7953L10.2327 11.2196C9.15487 12.0805 7.79004 12.5984 6.29923 12.5984C2.82065 12.5984 0 9.7778 0 6.29922ZM6.29923 1.39983C3.59056 1.39983 1.39983 3.59056 1.39983 6.29922C1.39983 9.00789 3.59056 11.1986 6.29923 11.1986C7.65006 11.1986 8.87487 10.6527 9.76377 9.76381C10.6527 8.87492 11.1986 7.65006 11.1986 6.29922C11.1986 3.59056 9.00789 1.39983 6.29923 1.39983Z" fill="#00161D"></path>
+							</svg></button>
+								{% endif %}
+							</form>
+						</div>
+						<ul class="hs-search-field__suggestions"></ul>
+					</div>
+				</div>
+				<div class="tag-col">
+					{% set my_topics = blog_topics(group.id, 50) %}
+					<select id="tinynav1" class="tinynav tinynav1" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
+						<option value="{{ group.absolute_url }}">Filter by Topic</option>
+						{% for item in my_topics %}
+						{% if item=="Featured"%}
+						{% else %}
+						<option value="{{ blog_tag_url(group.id, item.slug) }}" {% if content.absolute_url == blog_tag_url(group.id, item.slug) %} selected{% endif %}>{{ item|capitalize}}</option>
+						{% endif %}
+						{% endfor %}
+					</select>  
+				</div>
+			</div>
+		</div>
+	
+		<div class='listing-wrap'>
+			<div class='page-center'>
+				<div class='flex-row'>
+					{% for content in contents %}
+					<div class='post-item'>
+					<div class='post-item-inner'>
+						{% if module.blog_listing.featured_image %}
+						{% if content.post_list_summary_featured_image %}
+						<div class="featured-img">
+							<a href="{{content.absolute_url}}">
+								<img src="{{ content.post_list_summary_featured_image }}" alt="{{ content.name | striptags }}">
+							</a>
+						</div>
+						{% endif %}
+						{% endif %}
+						<div class="post-content">
+							{% if module.blog_listing.tag %}
+							{% if content.topic_list %}
+							<div class='post-item-topic'>
 
-                <div class="image">
-                    <img src="{{resize_image_url(post.featured_image, 0,0,featuredImageMax)}}" alt="{{post.featured_image_alt_text}}">
-                </div>
+							{% set included_topics = content.topic_list | rejectattr("slug", "equalto", "featured") | list %}
+								{% for topic in included_topics %}
+									{% if loop.first %}
+									<a class="{{ topic.slug }}" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+								{% endif %}
+								{% endfor %}
 
-            </a>
-            </div>
-            <div class="content">
-            <h2 class="heading"><a href="{{ post.absolute_url }}">{{ post.name }}</a></h2>
-            <div class="read-time">
-            {% set finishedPostWords = (((post.post_body|wordcount/100) * 100)|divide(200)|round(2)) %}
-            {% if finishedPostWord < 0 %}
-              {% set finishedPostWord = 1 %}
-            {% endif %}
-            {% if finishedPostWords|round >= 1 %}
-              {{ finishedPostWords|round }} min read
-                <span class="date"> | {{ post.publish_date|datetimeformat('%B %e, %Y') }}</span>
-            {% endif %}
-          </div>
-            <p>{{ post.post_list_content|safe|truncatehtml(175)|striptags }}</p>
-            <a class="link" href="{{ post.absolute_url }}"><span class="learn-more">Read More</span></a>
-            </div>          
-        </div>
-    {% endunless %}
-    {% endfor %}
-    </div>
-</div>
-{% unless is_listing_view && topic %}
-<div class="filter" id='blog-filters'>
-    {% unless module.blog_menu %}
-    <div class="menu">
-    {% menu id="{{ module.blog_menu }}" %}
-    </div>
-    {% set default_node = menu(module.blog_menu) %}
-    <div class="mobile-menu">
-    <h3 class="title">Filter by Topic</h3>
-    <select class="menu-wrap" onchange="document.location.href=this.value">
-        {% for child in default_node.children %}
-        <option value="{{ child.url }}" {% if child.url == content.absolute_url %}selected{% endif %} >{{ child.label }}</option>
-        {% endfor %}
-    </select>
-    </div>
-    {% else %}
-    <div class='menu dynamic'>
-        <ul class="menu-list">
-            <li class="menu-item">
-            <a class='button' href="/blog">All</a>
-            </li>
-            {% for content_topic in contents_topics %}
-            <li class="menu-item">
-            <a href="/blog/topic/{{ content_topic.name|lower|replace(' ','-') }}">{{ content_topic.name }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endunless %}
-</div>
-{% endunless %}
-<!-- Blog Author Listing -->
-{% if blog_author %}
-<div class="author">
-    <div class="inner">
-    {% if blog_author.avatar %}
-    <div class="avatar lazy" data-bg="{{ resize_image_url(blog_author.avatar, 0,0,avatarImageMax) }}"></div>
-    {% endif %}
-    <div class="blog-author-text">
-        {% if blog_author.bio %}<h2 class="header">About the Author</h2>{% endif %}
-        {% if blog_author.bio %}<p class="bio">{{ blog_author.bio }}</p>{% endif %}
-        {% if blog_author.has_social_profiles %}
-            <div class="social">
-            {% if blog_author.linkedin %}<a class="linkedin" href="{{ blog_author.linkedin }}" target="_blank" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"></path></svg></a>{% endif %}
-            {% if blog_author.twitter %}<a class="twitter" href="{{ blog_author.twitter }}" target="_blank" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M10.053,7.988l5.631,8.024h-1.497L8.566,7.988H10.053z M21,6v12	c0,1.657-1.343,3-3,3H6c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h12C19.657,3,21,4.343,21,6z M17.538,17l-4.186-5.99L16.774,7	h-1.311l-2.704,3.16L10.552,7H6.702l3.941,5.633L6.906,17h1.333l3.001-3.516L13.698,17H17.538z"></path></svg></a>{% endif %}
-            {% if blog_author.facebook %}<a class="facebook" href="{{ blog_author.facebook }}" target="_blank" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z"></path></svg></a>{% endif %}
-            {% if blog_author.website %}<a class="website" href="{{ blog_author.website }}?rel=author" target="_blank" aria-label="Website"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M 12 2 C 6.484375 2 2 6.484375 2 12 C 2 17.515625 6.484375 22 12 22 C 17.515625 22 22 17.511719 22 12 C 22 6.484375 17.515625 2 12 2 Z M 12 3 C 16.960938 3 21 7.035156 21 12 C 21 16.964844 16.960938 21 12 21 C 7.039063 21 3 16.960938 3 12 C 3 7.035156 7.039063 3 12 3 Z M 12 4 C 9.203125 4 6.742188 5.421875 5.3125 7.59375 C 5.5 7.601563 5.695313 7.625 5.84375 7.625 C 6.679688 7.625 7.96875 7.5 7.96875 7.5 C 8.398438 7.476563 8.429688 8.136719 8 8.1875 C 8 8.1875 7.574219 8.222656 7.09375 8.25 L 9.75 16.1875 L 11.5 10.9375 L 10.53125 8.25 C 10.101563 8.226563 9.6875 8.1875 9.6875 8.1875 C 9.253906 8.160156 9.289063 7.472656 9.71875 7.5 C 9.71875 7.5 11.058594 7.625 11.84375 7.625 C 12.679688 7.625 13.96875 7.5 13.96875 7.5 C 14.402344 7.476563 14.460938 8.136719 14.03125 8.1875 C 14.03125 8.1875 13.574219 8.222656 13.09375 8.25 L 16 16.25 L 16.8125 13.59375 C 17.074219 12.527344 17.40625 11.6875 17.40625 11 C 17.40625 10.25 17.0625 9.902344 16.75 9.375 C 16.355469 8.710938 15.96875 8.160156 15.96875 7.5 C 15.96875 6.765625 16.527344 6.09375 17.3125 6.09375 C 17.347656 6.09375 17.371094 6.089844 17.40625 6.09375 C 15.980469 4.789063 14.082031 4 12 4 Z M 19.03125 8.15625 C 19.066406 8.410156 19.046875 8.671875 19.0625 8.96875 C 19.101563 9.78125 18.941406 11.03125 18.75 11.625 C 18.140625 13.511719 16.34375 18.6875 16.34375 18.6875 C 16.375 18.675781 16.433594 18.652344 16.5625 18.5625 C 18.652344 17.132813 20 14.722656 20 12 C 20 10.609375 19.65625 9.296875 19.03125 8.15625 Z M 4.6875 8.75 C 4.246094 9.742188 4 10.839844 4 12 C 4 15.164063 5.832031 17.890625 8.5 19.1875 Z M 12.15625 12.6875 L 9.75 19.6875 C 10.46875 19.898438 11.214844 20 12 20 C 12.929688 20 13.824219 19.855469 14.65625 19.5625 C 14.636719 19.527344 14.609375 19.476563 14.59375 19.4375 Z"></path></svg></a>{% endif %}
-            </div>
-        {% endif %}
-
-    </div>
-    </div>
-
-</div>
-{% endif %}  
-<!-- Main Post Listing -->
-<div class="posts">
-    {% for post in contents %}
-    {% include "/L2L/modules/partials/u4-blog-cards.html" %}
-    {% if loop.index==6 && current_page_num==1  %}
-    {% set blogResourceTable = hubdb_table_rows( module.blog_resources_by_topic , "&orderBy=name") %}
-    {% for row in blogResourceTable %}
-    <!-- Checks to see if the topic of the page matches any of the rows in HubDB with -->
-    {% if row.topic == topic or row.topic == blog_author.slug  %}
-    {% set counter = 1 %}
-    {% for resource in row.resource %}
-    <div class="resource-card {% if resource.demand_generation %} demand-generation{% endif %}{% if resource.sales_conversion %} sales-conversion{% endif %}{% if resource.growth_acquisition %} growth-acquisition{% endif %}{% if resource.insight_analytics1 %} insight-analytics{% endif %}">
-    <a href="{{ resource.landing_page_url }}">
-        <div class="image lazy" data-bg="{{ resize_image_url(resource.cover_image.url, 0,0,resourceImageMax) }}"></div>
-        <div class="content">
-        <span class="type {{ resource.medium.name|lower }}">{{ resource.medium.name }}</span>
-        <h2 class="title">{{ resource.name }}</h2>
-        <p>{{ resource.description|truncate(200) }}</p>
-        <span class="link {{ resource.medium.name|lower }}">{{ resource.link_text }}</span>
-        </div>
-    </a>
-    </div>
-    {% endfor %}
-    {% endif %} 
-    <!-- If there is not a row in hubDB that matches the current topic, the loop will be run again the the rows marked "DEFAULT" in HubDB will be printed -->
-    {% if loop.last && counter != 1 %}
-    {% for row in blogResourceTable %}
-    {% if row.topic == "DEFAULT"  %}
-    {% for resource in row.resource %}
-    <div class="resource-card {% if resource.demand_generation %} demand-generation{% endif %}{% if resource.sales_conversion %} sales-conversion{% endif %}{% if resource.growth_acquisition %} growth-acquisition{% endif %}{% if resource.insight_analytics1 %} insight-analytics{% endif %}">
-    <a href="{{ resource.landing_page_url }}">
-        <div class="image lazy" data-bg="{{ resize_image_url(resource.cover_image.url, 0,0,resourceImageMax) }}"></div>
-        <div class="content">
-        <span class="type {{ resource.medium.name|lower }}">{{ resource.medium.name }}</span>
-        <h2 class="title">{{ resource.name }}</h2>
-        <p>{{ resource.description|truncate(200) }}</p>
-        <span class="link {{ resource.medium.name|lower }}">{{ resource.link_text }}</span>
-        </div>
-    </a>
-    </div>
-    {% endfor %}
-    {% endif %}
-    {% endfor %} 
-    {% endif %}
-    {% endfor %}
-    {% endif %}
-    {% endfor %}
-</div>
-
-{# include "/L2L/modules/partials/u4-blog-infinite-pagination.html" #}
-{% include "/L2L/modules/partials/u4-blog-standard-pagination.html" %}
-
-</section>
-
-{% require_js %}
-
-{% if (absolute_url is string_containing "/topic/") or (absolute_url is string_containing "/tag/")  %}
-    <script>
-    $( "body" ).addClass( "topic" );
-    </script>
-{% endif %}
-
-{% end_require_js%}
+								
+							</div>
+						{% endif %}
+							{% endif %}
+							{% if module.blog_listing.title %}
+							<h4>
+								<a href="{{ content.absolute_url }}">{{ content.name }}</a>
+							</h4>
+							{% endif %}
+							{% if module.blog_listing.read_more_text %}
+							<div class='read-more'>
+							<a class="more-link arrow-link" href="{{ content.absolute_url }}">{{ module.blog_listing.read_more_text }}
+							<span class="arrowbtn">
+							<svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+							<path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+							</svg>
+							<svg class="btnArrow2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+							<path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+							</svg>
+							</span>
+							</a>
+						</div>
+							{% endif %}
+						</div>
+					</div>
+					</div>
+					{% endfor %}
+				</div>
+	
+				<div class="blog-pagination">
+					{% set page_list = [-2, -1, 0, 1, 2] %}
+					{% if contents.total_page_count - current_page_num == 1 %}{% set offset = -1 %}
+					{% elif contents.total_page_count - current_page_num == 0 %}{% set offset = -2 %}
+					{% elif current_page_num == 2 %}{% set offset = 1 %}
+					{% elif current_page_num == 1 %}{% set offset = 2 %}
+					{% else %}{% set offset = 0 %}{% endif %}
+	
+					{% if last_page_num %}<a class="prev-link" href="{{ blog_page_link(last_page_num) }}"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+						<path d="M6.85403 0.145971L11.854 5.14597C11.9005 5.19241 11.9374 5.24755 11.9626 5.30825C11.9877 5.36895 12.0007 5.43401 12.0007 5.49972C12.0007 5.56543 11.9877 5.63049 11.9626 5.69119C11.9374 5.75189 11.9005 5.80704 11.854 5.85347L6.85403 10.8535C6.76021 10.9473 6.63296 11 6.50028 11C6.3676 11 6.24035 10.9473 6.14653 10.8535C6.05271 10.7597 6 10.6324 6 10.4997C6 10.367 6.05271 10.2398 6.14653 10.146L10.7934 5.49972L6.14653 0.853472C6.10007 0.807016 6.06322 0.751866 6.03808 0.69117C6.01294 0.630473 6 0.565419 6 0.499722C6 0.434024 6.01294 0.36897 6.03808 0.308273C6.06322 0.247577 6.10007 0.192427 6.14653 0.145971C6.19298 0.0995159 6.24813 0.0626669 6.30883 0.0375252C6.36953 0.0123835 6.43458 -0.000556946 6.50028 -0.000556946C6.56598 -0.000556946 6.63103 0.0123835 6.69173 0.0375252C6.75242 0.0626669 6.80757 0.0995159 6.85403 0.145971Z" fill="#2E2E2E"/>
+						<path d="M0.854028 0.145971L5.85403 5.14597C5.90052 5.19241 5.9374 5.24755 5.96256 5.30825C5.98772 5.36895 6.00067 5.43401 6.00067 5.49972C6.00067 5.56543 5.98772 5.63049 5.96256 5.69119C5.9374 5.75189 5.90052 5.80704 5.85403 5.85347L0.854028 10.8535C0.760208 10.9473 0.63296 11 0.500278 11C0.367596 11 0.240348 10.9473 0.146528 10.8535C0.0527074 10.7597 0 10.6324 0 10.4997C0 10.367 0.0527074 10.2398 0.146528 10.146L4.7934 5.49972L0.146528 0.853472C0.100073 0.807016 0.0632225 0.751866 0.0380812 0.69117C0.0129398 0.630473 0 0.565419 0 0.499722C0 0.434024 0.0129398 0.36897 0.0380812 0.308273C0.0632225 0.247577 0.100073 0.192427 0.146528 0.145971C0.192983 0.0995159 0.248133 0.0626669 0.30883 0.0375252C0.369526 0.0123835 0.434581 -0.000556946 0.500278 -0.000556946C0.565975 -0.000556946 0.63103 0.0123835 0.691726 0.0375252C0.752423 0.0626669 0.807573 0.0995159 0.854028 0.145971Z" fill="#2E2E2E"/>
+						</svg></a>{% endif %}
+					{% if contents.total_page_count > 5 %}
+					{% if current_page_num >= 4 %}
+					<a href="{{ blog_page_link(1) }}">1</a>
+					<a class="elipses" href="{% if current_page_num <= 5 %}{{ blog_page_link(1) }}{% else %}{{ blog_page_link(current_page_num - 5) }}{% endif %}">...</a>
+					{% endif %}
+					{% endif %}
+	
+					{% for page in page_list %}
+					{% set this_page = current_page_num + page + offset %}
+					{% if this_page > 0 and this_page <= contents.total_page_count %}
+					<a {% if this_page == current_page_num %}class="active"{% endif %} href="{{ blog_page_link(this_page) }}">{{ this_page }}</a>
+					{% endif %}
+					{% endfor %}
+	
+					{% if contents.total_page_count > 5 %}
+					{% if contents.total_page_count - current_page_num > 2 %}
+					<a class="elipses" href="{% if contents.total_page_count - current_page_num <= 5 %}{{ contents.total_page_count }}{% else %}{{ blog_page_link(current_page_num + 5) }}{% endif %}">...</a>
+					<a href="{{ blog_page_link(contents.total_page_count) }}">{{ contents.total_page_count }}</a>
+					{% endif %}
+					{% endif %}   
+					{% if next_page_num %}<a class="next-link" href="{{ blog_page_link(current_page_num + 1) }}"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+						<path d="M6.85403 0.145971L11.854 5.14597C11.9005 5.19241 11.9374 5.24755 11.9626 5.30825C11.9877 5.36895 12.0007 5.43401 12.0007 5.49972C12.0007 5.56543 11.9877 5.63049 11.9626 5.69119C11.9374 5.75189 11.9005 5.80704 11.854 5.85347L6.85403 10.8535C6.76021 10.9473 6.63296 11 6.50028 11C6.3676 11 6.24035 10.9473 6.14653 10.8535C6.05271 10.7597 6 10.6324 6 10.4997C6 10.367 6.05271 10.2398 6.14653 10.146L10.7934 5.49972L6.14653 0.853472C6.10007 0.807016 6.06322 0.751866 6.03808 0.69117C6.01294 0.630473 6 0.565419 6 0.499722C6 0.434024 6.01294 0.36897 6.03808 0.308273C6.06322 0.247577 6.10007 0.192427 6.14653 0.145971C6.19298 0.0995159 6.24813 0.0626669 6.30883 0.0375252C6.36953 0.0123835 6.43458 -0.000556946 6.50028 -0.000556946C6.56598 -0.000556946 6.63103 0.0123835 6.69173 0.0375252C6.75242 0.0626669 6.80757 0.0995159 6.85403 0.145971Z" fill="#2E2E2E"/>
+						<path d="M0.854028 0.145971L5.85403 5.14597C5.90052 5.19241 5.9374 5.24755 5.96256 5.30825C5.98772 5.36895 6.00067 5.43401 6.00067 5.49972C6.00067 5.56543 5.98772 5.63049 5.96256 5.69119C5.9374 5.75189 5.90052 5.80704 5.85403 5.85347L0.854028 10.8535C0.760208 10.9473 0.63296 11 0.500278 11C0.367596 11 0.240348 10.9473 0.146528 10.8535C0.0527074 10.7597 0 10.6324 0 10.4997C0 10.367 0.0527074 10.2398 0.146528 10.146L4.7934 5.49972L0.146528 0.853472C0.100073 0.807016 0.0632225 0.751866 0.0380812 0.69117C0.0129398 0.630473 0 0.565419 0 0.499722C0 0.434024 0.0129398 0.36897 0.0380812 0.308273C0.0632225 0.247577 0.100073 0.192427 0.146528 0.145971C0.192983 0.0995159 0.248133 0.0626669 0.30883 0.0375252C0.369526 0.0123835 0.434581 -0.000556946 0.500278 -0.000556946C0.565975 -0.000556946 0.63103 0.0123835 0.691726 0.0375252C0.752423 0.0626669 0.807573 0.0995159 0.854028 0.145971Z" fill="#2E2E2E"/>
+						</svg></a>{% endif %}
+	
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	

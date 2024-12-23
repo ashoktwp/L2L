@@ -79,6 +79,18 @@ div.hs_cos_wrapper_widget section.top-margin-none {
   margin-top: 0;
 }
 
+div.hs_cos_wrapper_widget section.top-margin-default {
+  margin-top: 100rem;
+
+  @include tabletvert {
+    margin-top: 50rem;
+  }
+
+  @include phone {
+    margin-top: 25rem;
+  }
+}
+
 div.hs_cos_wrapper_widget section.top-margin-small {
   margin-top: 50rem;
 
@@ -117,6 +129,18 @@ div.hs_cos_wrapper_widget section.top-margin-large {
 
 div.hs_cos_wrapper_widget section.bottom-margin-none {
   margin-bottom: 0;
+}
+
+div.hs_cos_wrapper_widget section.bottom-margin-default {
+  margin-bottom: 100rem;
+
+  @include tabletvert {
+    margin-bottom: 50rem;
+  }
+
+  @include phone {
+    margin-bottom: 25rem;
+  }
 }
 
 div.hs_cos_wrapper_widget section.bottom-margin-small {
@@ -410,7 +434,7 @@ code {
   border-radius: 0;
 }
 
-pre > code {
+pre>code {
   display: block;
   padding: 1rem 15rem;
   white-space: pre;
@@ -498,8 +522,8 @@ section[class*="u4m-"] {
   z-index: 1;
   pointer-events: none;
 
-  & ~ .full-width-container,
-  & ~ .page-center {
+  &~.full-width-container,
+  &~.page-center {
     position: relative;
     z-index: 3;
   }
@@ -544,6 +568,65 @@ section[class*="u4m-"] {
   }
 }
 
+.intro_btn_wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 36px;
+  align-items: center;
+}
+
+.hs-button {
+  @include button;
+
+  &.theme2 {
+    @include buttonTwo;
+  }
+
+  &.theme3 {
+    @include buttonThree;
+  }
+}
+
+.arrow-link {
+  @include buttonWithIcon;
+
+  &.theme2 {
+    @include buttonWithIconTwo;
+  }
+
+  &.theme3 {
+    @include buttonWithIconThree;
+  }
+}
+
+.intro_content {
+  text-align: center;
+  margin-bottom: 36rem;
+  max-width: $introContainer;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .eyebrow_text {
+    @include eyebrow;
+    margin-bottom: 11rem;
+  }
+
+  .intro_title {
+    margin-bottom: 16rem;
+  }
+
+  .intro_desc {
+    margin-bottom: 36px;
+    color: $Dark_jungle;
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+}
+
 .reverse-text {
   color: $white;
 
@@ -553,7 +636,188 @@ section[class*="u4m-"] {
     color: $white;
   }
 
-  &:not(.arrownotStyle) .arrow-link {
+  :is(h1, h2, h3, h4, h5, h6) {
     color: $white;
   }
+
+  .arrow-link:not(:hover) {
+    color: $white;
+  }
+}
+
+// Primary color Bg Color
+
+.Nori_Green_bg {
+  background-color: $Nori_Green;
+}
+
+.Dark_Green_bg {
+  background-color: $Dark_Green;
+}
+
+.Forest_Green_bg {
+  background-color: $Forest_Green;
+}
+
+.Olive_Green_bg {
+  background-color: $Olive_Green;
+}
+
+.Medium_Sea_Green_bg {
+  background-color: $Medium_Sea_Green;
+}
+
+.Sea_Green_bg {
+  background-color: $Sea_Green;
+}
+
+.Medium_Aquamarine_bg {
+  background-color: $Medium_Aquamarine;
+}
+
+.Pale_Green_bg {
+  background-color: $Pale_Green;
+}
+
+.Very_Pale_Green_bg {
+  background-color: $Very_Pale_Green;
+}
+
+.Pale_Mint_bg {
+  background-color: $Pale_Mint;
+}
+
+.Off-White_bg {
+  background-color: $Off-White;
+}
+
+.light_grey_bg {
+  background-color: $light_grey;
+}
+
+.Pale_Yellow_Green_bg {
+  background-color: $Pale_Yellow_Green;
+}
+
+// pallets Bg Color
+
+.prismic_mango_bg {
+  background-color: $Prismic_mango;
+}
+
+.prismic_mint_bg {
+  background-color: $Prismic_mint;
+}
+
+.frostee_bg {
+  background-color: $Frostee;
+}
+
+.mint_cream_bg {
+  background-color: $Mint_cream;
+}
+
+.white_bg {
+  background-color: $White;
+}
+
+.menthol_bg {
+  background-color: $Menthol;
+}
+
+.l2l_green_bg {
+  background-color: $L2L_green;
+}
+
+.fern_green_bg {
+  background-color: $Fern_green;
+}
+
+.dark_jungle_bg {
+  background-color: $Dark_jungle;
+}
+
+.mystic_green_bg {
+  background-color: $Mystic_green;
+}
+
+.lime_green_bg {
+  background-color: $Lime_Green;
+}
+
+.very_pale_green_bg {
+  background-color: $Very_Pale_Green;
+}
+
+// gradient Color
+
+.gradient1 {
+  background-image: $gradient1;
+}
+
+.gradient2 {
+  background-image: $gradient2;
+}
+
+.gradient3 {
+  background-image: $gradient3;
+}
+
+.gradient4 {
+  background-image: $gradient4;
+}
+
+.gradient5 {
+  background-image: $gradient5;
+}
+
+.gradient6 {
+  background-image: $gradient6;
+}
+
+.material-icons-outlined {
+  font-family: "Material Icons Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.bg_image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.tag_case-studies:before {
+  background: $YellowWarm;
+}
+.tag_ebook:before {
+  background: $Prismic_mango;
+}
+.tag_webinar:before {
+  background: $Menthol;
+}
+.tag_interactive-tools:before {
+  background: $SprayDopely;
+}
+.tag_videos:before {
+  background: $Lavender;
+}
+.tag_white-papers:before {
+  background: $teaGreen;
+}
+.tag_events:before {
+  background: $Sea_Green;
+}
+.tag_podcast:before {
+  background: $white;
 }

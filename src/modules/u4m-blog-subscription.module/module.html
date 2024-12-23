@@ -1,0 +1,42 @@
+{% set moduleName = 'u4m-blog-subscription' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center  {{ module.module_settings.theme }}">
+	<div class="intro_wrapp">
+		{{macros.introGroup(module.intro_content)}}
+	</div>
+	{% if module.subscribe_form.form %}
+	<div class="subscribe-form">
+		{% form
+	form_to_use="{{ module.subscribe_form.form.form_id }}"
+	response_response_type="{{ module.subscribe_form.form.response_type }}"
+	response_message="{{ module.subscribe_form.form.message }}"
+	response_redirect_id="{{ module.subscribe_form.form.redirect_id }}"
+	response_redirect_url="{{module.subscribe_form.form.redirect_url}}"
+	gotowebinar_webinar_key="{{ module.subscribe_form.form.gotowebinar_webinar_key }}"
+%}
+	</div>
+	{% endif %}
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,205 @@
+
+{% set moduleName = 'u4m-slider-tabs-one' %}
+{% include "../partials/u4-module-includes.html" %}
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="intro_wrapp">
+    {{macros.introGroup(module.intro_content)}}
+  </div>
+  <div class="slider-tabs-wrp desktop-wrpp">
+    <div class="slider-tabs-inn">
+      <div class="slider-tabs">
+        <ul>
+          {% for item in module.tab_items %}
+          <li data-id="{{ item.tab.title|split(" ")|join("-")|capitalize }}{{loop.index}}"  class="tablinks  tab {% if loop.first %}active{% endif %}">
+            <div class="tab-title">
+              {% if item.tab.select_icon_type %}
+              <span class="title-icon">
+                {% if item.tab.select_icon_type == "image" %}
+                {% if item.tab.image_field_1.src %}
+                {% set loadingAttr = item.tab.image_field_1.loading != 'disabled' ? 'loading="{{ item.tab.image_field_1.loading|escape_attr }}"' : '' %}
+                <img src="{{ item.tab.image_field_1.src|escape_url }}" alt="{{ item.tab.image_field_1.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                {% endif %}
+                {% elif item.tab.select_icon_type == "icon" %}
+                {% icon
+		name="{{ item.tab.icon_field.name }}"
+		style="{{ item.tab.icon_field.type }}"
+		unicode="{{ item.tab.icon_field.unicode }}"
+		icon_set="{{ item.tab.icon_field.icon_set }}"
+	%}
+                {% elif item.tab.select_icon_type == "custom" %}
+                <i class="ph ph-{{ item.tab.custom_icon }}"></i>
+                {% endif %}
+              </span>
+              {% endif %}
+              <span>
+                {{ item.tab.title }}
+              </span>
+            </div>
+            {% if item.tab.caption %}
+            <div class="tab-title-caption">
+              {{ item.tab.caption }}
+            </div>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="slider-tabs-content">
+        <div class="slider-content-inn">
+          {% for item in module.tab_items %}
+          <div class="tabcontent tabs-content {% if loop.first %}active{% endif %}" id="{{ item.tab.title|split(" ")|join("-")|capitalize }}{{loop.index}}">
+            <div class="tabs-content-inn">
+              {% if item.tab_content.select_media_type == "image" %}
+              {% if item.tab_content.image_field.src %}
+              {% set loadingAttr = item.tab_content.image_field.loading != 'disabled' ? 'loading="{{ item.tab_content.image_field.loading|escape_attr }}"' : '' %}
+              <img class="tab-cnt-img" src="{{ item.tab_content.image_field.src|escape_url }}" alt="{{ item.tab_content.image_field.alt|escape_attr }}" {{ loadingAttr }}>
+              {% endif %}
+              {% endif %}
+
+              {% if item.tab_content.select_media_type == "video" %}
+              {% if item.tab_content.select_video_type == "hubspot" %}
+              <video controls autoplay muted>
+                <source src="{{ item.tab_content.select_video }}" type="video/mp4">
+              </video>
+              {% endif %}
+              {% if item.tab_content.select_video_type == "vimeo" %}
+              <div class="embbd">
+                <iframe title="video-Frame" id="iframe1" src="https://player.vimeo.com/video/{{ item.tab_content.vimeo_id }}" frameborder="0" loading="lazy" allowfullscreen></iframe>
+              </div>
+              {% endif %}
+              {% endif %}
+
+              {% if item.tab_content.content %}
+              {{ item.tab_content.content }}
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slider-tabs-wrp mobile-wrpp">
+    <div class="slider-tabs-inn">
+      <div class="slider-tabs">
+        <ul>
+          {% for item in module.tab_items %}
+          <li data-id="{{ item.tab.title|split(" ")|join("-")|capitalize }}{{loop.index}}"  class="tablinks  tab {% if loop.first %}active{% endif %}">
+            <div class="topCnt">
+              <div class="tab-title">
+                {% if item.tab.select_icon_type %}
+                <span class="title-icon">
+                  {% if item.tab.select_icon_type == "image" %}
+                  {% if item.tab.image_field_1.src %}
+                  {% set loadingAttr = item.tab.image_field_1.loading != 'disabled' ? 'loading="{{ item.tab.image_field_1.loading|escape_attr }}"' : '' %}
+                  <img src="{{ item.tab.image_field_1.src|escape_url }}" alt="{{ item.tab.image_field_1.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                  {% elif item.tab.select_icon_type == "icon" %}
+                  {% icon
+		name="{{ item.tab.icon_field.name }}"
+		style="{{ item.tab.icon_field.type }}"
+		unicode="{{ item.tab.icon_field.unicode }}"
+		icon_set="{{ item.tab.icon_field.icon_set }}"
+	%}
+                  {% elif item.tab.select_icon_type == "custom" %}
+                  <i class="ph ph-{{ item.tab.custom_icon }}"></i>
+                  {% endif %}
+                </span>
+                {% endif %}
+                <span>
+                  {{ item.tab.title }}
+                </span>
+              </div>
+              {% if item.tab.caption %}
+              <div class="tab-title-caption">
+                {{ item.tab.caption }}
+              </div>
+              {% endif %}
+            </div>
+            <div class="slider-tabs-content">
+              <div class="slider-content-inn">
+                <div class="tabcontent tabs-content {% if loop.first %}active{% endif %}" id="{{ item.tab.title|split(" ")|join("-")|capitalize }}{{loop.index}}">
+                  <div class="tabs-content-inn">
+                    {% if item.tab_content.select_media_type == "image" %}
+                    {% if item.tab_content.image_field.src %}
+                    {% set loadingAttr = item.tab_content.image_field.loading != 'disabled' ? 'loading="{{ item.tab_content.image_field.loading|escape_attr }}"' : '' %}
+                    <img class="tab-cnt-img" src="{{ item.tab_content.image_field.src|escape_url }}" alt="{{ item.tab_content.image_field.alt|escape_attr }}" {{ loadingAttr }}>
+                    {% endif %}
+                    {% endif %}
+
+                    {% if item.tab_content.select_media_type == "video" %}
+                    {% if item.tab_content.select_video_type == "hubspot" %}
+                    <video controls autoplay muted>
+                      <source src="{{ item.tab_content.select_video }}" type="video/mp4">
+                    </video>
+                    {% endif %}
+                    {% if item.tab_content.select_video_type == "vimeo" %}
+                    <div class="embbd">
+                      <iframe title="video-Frame" id="iframe1" src="https://player.vimeo.com/video/{{ item.tab_content.vimeo_id }}" frameborder="0" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                    {% endif %}
+                    {% endif %}
+
+                    {% if item.tab_content.content %}
+                    {{ item.tab_content.content }}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</section>
+
+
+
+{% require_js %}
+<script>
+  var tabLinks = document.querySelectorAll(".tablinks");
+  var tabContent = document.querySelectorAll(".tabcontent");
+
+
+  tabLinks.forEach(function(el) {
+    el.addEventListener("click", openTabs);
+  });
+
+
+
+  function openTabs(el) {
+    var btnTarget = el.currentTarget;
+    var tabId = btnTarget.dataset.id;
+
+    tabContent.forEach(function(el) {
+      el.classList.remove("active");
+    });
+
+    tabLinks.forEach(function(el) {
+      el.classList.remove("active");
+    });
+
+    document.querySelector("#" + tabId).classList.add("active");
+
+    btnTarget.classList.add("active");
+  }
+
+</script>
+{% end_require_js %}
+
+
+
+
+
+
+
+
+
+
+
+
