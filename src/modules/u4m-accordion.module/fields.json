@@ -786,7 +786,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "frostee_bg"
+      "default" : ""
     }, {
       "id" : "2659085b-598d-e346-643e-6a9ebb3bae70",
       "name" : "select_gradient",
@@ -822,7 +822,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "frostee_bg",
+      "select_color" : "",
       "select_gradient" : ""
     }
   }, {
@@ -913,7 +913,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "frostee_bg",
+      "select_color" : "",
       "select_gradient" : ""
     },
     "container" : {
