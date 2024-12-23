@@ -36,7 +36,7 @@
                     <a href="{{row.select_resource.columns.link}}">
                       <img src="{{ row.select_resource.columns.image.url }}" alt="{{ row.select_resource.columns.name | striptags }}">
                     </a>
-                    <div class='featured-tag'>{{ row.select_resource.columns.topic.name }}</div>
+                    <div class='featured-tag tag_{{ row.select_resource.columns.topic.name|lower|replace(' ','-') }}'>{{ row.select_resource.columns.topic.name }}</div>
                   </div>
                   {% endif %}
                   <div class="post-content">
@@ -69,7 +69,7 @@
                     <a href="{{row.link}}">
                       <img src="{{ row.image.url }}" alt="{{ row.name | striptags }}">
                     </a>
-                    <div class='featured-tag'>{{ row.topic.name }}</div>
+                    <div class='featured-tag tag_{{ row.topic.name|lower|replace(' ','-') }}'>{{ row.topic.name }}</div>
                   </div>
                   {% endif %}
                   <div class="post-content">

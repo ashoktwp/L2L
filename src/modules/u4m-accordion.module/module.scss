@@ -5,11 +5,7 @@
     padding: 83px 148px;
   }
 
-  &.reverse-text {
-    .acc_item .acc_cnt .acc_cnt_inr {
-      color: inherit;
-    }
-  }
+
 
   .intro_content {
     margin-bottom: 50px;
@@ -17,6 +13,7 @@
 
   .acc_item {
     margin-bottom: 12px;
+    background-color: $white;
 
     .acc_ttl {
       padding: 30px 60px 27px 36px;
@@ -35,6 +32,7 @@
         margin: 0;
         font-weight: bold;
         font-family: inherit;
+        color: $headingColor;
       }
 
       &:hover .plus,

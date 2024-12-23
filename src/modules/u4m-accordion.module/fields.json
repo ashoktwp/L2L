@@ -377,7 +377,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "9788d4fd-5252-51b3-ec25-bc5077273f53",
-    "default" : 3
+    "default" : 5
   },
   "children" : [ {
     "id" : "9788d4fd-5252-51b3-ec25-bc5077273f53",
@@ -414,6 +414,12 @@
   }, {
     "title" : "Veniam aliquip aute ex reprehenderit voluptate laboris non proident minim dolor sunt duis minim.",
     "content" : "<p>Dolore dolore sint magna sint. Velit nulla irure sit enim reprehenderit nostrud consequat et ex ea laboris. Ipsum proident ea duis dolore in magna est. Adipisicing dolor ullamco ut sit magna aliqua dolor eiusmod nulla cupidatat eiusmod in duis qui.</p>"
+  }, {
+    "title" : "Veniam aliquip aute ex reprehenderit voluptate laboris non proident minim dolor sunt duis minim.",
+    "content" : "<p>Dolore dolore sint magna sint. Velit nulla irure sit enim reprehenderit nostrud consequat et ex ea laboris. Ipsum proident ea duis dolore in magna est. Adipisicing dolor ullamco ut sit magna aliqua dolor eiusmod nulla cupidatat eiusmod in duis qui.</p>"
+  }, {
+    "title" : "Veniam aliquip aute ex reprehenderit voluptate laboris non proident minim dolor sunt duis minim.",
+    "content" : "<p>Dolore dolore sint magna sint. Velit nulla irure sit enim reprehenderit nostrud consequat et ex ea laboris. Ipsum proident ea duis dolore in magna est. Adipisicing dolor ullamco ut sit magna aliqua dolor eiusmod nulla cupidatat eiusmod in duis qui.</p>"
   } ]
 }, {
   "id" : "module_overrides",
@@ -432,7 +438,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
@@ -786,7 +792,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : ""
+      "default" : "frostee_bg"
     }, {
       "id" : "2659085b-598d-e346-643e-6a9ebb3bae70",
       "name" : "select_gradient",
@@ -822,7 +828,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "",
+      "select_color" : "frostee_bg",
       "select_gradient" : ""
     }
   }, {
@@ -891,7 +897,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_overrides" : false,
+    "enable_overrides" : true,
     "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
@@ -913,7 +919,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "",
+      "select_color" : "frostee_bg",
       "select_gradient" : ""
     },
     "container" : {

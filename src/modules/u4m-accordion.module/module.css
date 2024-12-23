@@ -21,14 +21,12 @@ html {
     padding: 83px 148px;
   }
 }
-.u4m-accordion.dnd_padd.reverse-text .acc_item .acc_cnt .acc_cnt_inr {
-  color: inherit;
-}
 .u4m-accordion.dnd_padd .intro_content {
   margin-bottom: 50px;
 }
 .u4m-accordion.dnd_padd .acc_item {
   margin-bottom: 12px;
+  background-color: #fff;
 }
 .u4m-accordion.dnd_padd .acc_item .acc_ttl {
   padding: 30px 60px 27px 36px;
@@ -49,6 +47,7 @@ html {
   margin: 0;
   font-weight: bold;
   font-family: inherit;
+  color: #0e2514;
 }
 .u4m-accordion.dnd_padd .acc_item .acc_ttl:hover .plus, .u4m-accordion.dnd_padd .acc_item .acc_ttl.active .plus {
   transform: rotate(45deg);

@@ -31,7 +31,7 @@ window.addEventListener("scroll", function () {
   }
 });
 $(document).ready(function () {
-  if (!$('section').hasClass('u4m-hero-left-aligned')) {
+  if (!$('section').hasClass('u4m-hero-left-aligned' && 'u4m-split-landing-page')) {
     $("body").addClass("withouthd");
   }
 })
