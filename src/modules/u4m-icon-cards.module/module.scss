@@ -1,6 +1,10 @@
 @import "../../css/_module-imports";
 
 .u4m-icon-card {
+    .intro_title {
+        font-weight: 500;
+    }
+
     .card_wrap {
         .arrow-link {
             color: $white;
@@ -117,6 +121,11 @@
                                 align-items: center;
                                 @include size24;
 
+                                img {
+                                    width: 24px;
+                                    display: block;
+                                }
+
                                 svg {
                                     width: 24px;
                                     height: 24px;
@@ -133,6 +142,7 @@
                             margin: 0;
                             line-height: 2;
                             color: $white;
+                            font-weight: 600;
                         }
                     }
 

@@ -423,7 +423,7 @@
       "access" : null
     },
     "responsive" : true,
-    "resizable" : true,
+    "resizable" : false,
     "show_loading" : false,
     "type" : "image",
     "default" : {
