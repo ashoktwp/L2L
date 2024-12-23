@@ -33,7 +33,6 @@
 
         .card_flex {
             gap: 30px;
-            justify-content: center;
 
             .card_item {
                 width: calc(33.3% - 20px);
@@ -50,20 +49,39 @@
 
                 .item_inr {
                     background-image: $gradient6;
-                    padding: 36px;
+                    padding: 30px 36px;
                     border-radius: 13px;
                     box-shadow: $shadow4;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
 
+                    @include tablet {
+                        padding: 30px 20px;
+                    }
+
+                    .card_cnt p:last-child {
+                        margin-bottom: 0;
+                    }
+
                     .item_top_flex {
                         display: flex;
                         flex-wrap: wrap;
                         gap: 18px;
-                        padding-bottom: 25px;
+                        padding-bottom: 24px;
                         border-bottom: 1px solid $Menthol;
                         margin-bottom: 18px;
+
+                        &.flextype2 {
+                            border-color: $Prismic_mango;
+
+
+                        }
+
+                        &.flextype3 {
+                            border-color: $L2L_green;
+
+                        }
 
                         .item_iconwrap {
                             width: 54px;
@@ -72,29 +90,29 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            background: rgba(14, 37, 20, 0.34);
-                            border: 1px solid #22452A;
-                            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.50);
+                            background: rgba($Nori_Green, 0.34);
+                            border: 1px solid $Dark_Green;
+                            box-shadow: 0 3px 5px 0 rgba($black, 0.50);
 
                             &.type1 {
-                                background-image: linear-gradient(225deg, rgba(191, 191, 191, 0.45) 0%, rgba(14, 37, 20, 0.45) 38%, rgba(14, 37, 20, 0.45) 66%, rgba(64, 150, 80, 0.45) 100%);
+                                background-image: $iconbg1;
                             }
 
                             &.type2 {
-                                background-image: linear-gradient(225deg, rgba(182, 182, 182, 0.45) 0%, rgba(14, 37, 20, 0.45) 38%, rgba(14, 37, 20, 0.45) 66%, rgba(247, 195, 110, 0.45) 100%);
+                                background-image: $iconbg2;
                             }
 
                             &.type3 {
-                                background-image: linear-gradient(225deg, rgba(191, 191, 191, 0.45) 0%, rgba(14, 37, 20, 0.45) 38%, rgba(14, 37, 20, 0.45) 66%, rgba(192, 252, 149, 0.45) 100%);
+                                background-image: $iconbg3
                             }
 
                             .title-icon {
                                 justify-content: center;
                                 height: 42px;
                                 width: 42px;
-                                background: rgba(14, 37, 20, 0.34);
-                                border: 1px solid #22452A;
-                                box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.50);
+                                background: rgba($Nori_Green, 0.34);
+                                border: 1px solid $Dark_Green;
+                                box-shadow: 0 3px 5px 0 gba($black, 0.50);
                                 display: flex;
                                 align-items: center;
 
@@ -128,9 +146,26 @@
                     .card_btn {
                         margin-top: auto;
 
+                        a.arrow-link {
+                            color: $white;
+
+                            &:hover .arrowbtn {
+                                color: $Menthol;
+                            }
+                        }
+
+                        &.btntype2 a.arrow-link:hover .arrowbtn {
+                            color: $Prismic_mango;
+
+                        }
+
+                        &.btntype3 a.arrow-link:hover .arrowbtn {
+                            color: $L2L_green;
+
+                        }
 
                         .intro_btn_wrap {
-                            margin-top: 25px;
+                            margin-top: 24px;
                             justify-content: flex-start;
                         }
                     }

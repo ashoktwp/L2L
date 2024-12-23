@@ -26,6 +26,8 @@ $Pale_Green: #9dd8a7;
 $Very_Pale_Green: #c8eace;
 $Pale_Mint: #e3f5e6;
 $Off-White: #f3faf4;
+$grey: #bfbfbf;
+$grey2: #b6b6b6;
 
 $light_grey: #969696;
 $Pale_Yellow_Green: #d0f76e;
@@ -61,8 +63,9 @@ $gradient6: radial-gradient(circle at 1.1e2% -9.2%, $Dark_Green 0%, $Dark_jungle
 $borderRadius13: 13rem;
 $shadow4: inset 0 1px 3px 0 $Forest_Green;
 $arrowBtn: #F08C1F;
-
-
+$iconbg1: linear-gradient(225deg, rgba($grey, 0.45) 0%, rgba($Dark_jungle, 0.45) 38%, rgba($Dark_jungle, 0.45) 66%, rgba($L2L_green, 0.45) 100%);
+$iconbg2: linear-gradient(225deg, rgba($grey2, 0.45) 0%, rgba($Dark_jungle, 0.45) 38%, rgba($Dark_jungle, 0.45) 66%, rgba($Prismic_mango, 0.45) 100%);
+$iconbg3: linear-gradient(225deg, rgba($grey, 0.45) 0%, rgba($Dark_jungle, 0.45) 38%, rgba($Dark_jungle, 0.45) 66%, rgba($Menthol, 0.45) 100%);
 
 
 $darkBack: #000000;

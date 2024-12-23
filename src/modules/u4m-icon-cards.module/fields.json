@@ -562,7 +562,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "hs-button"
+      "default" : "arrow-link"
     }, {
       "id" : "11311ebc-475a-ffbb-8f6c-375e5c04a38d",
       "name" : "button_theme",
@@ -673,7 +673,7 @@
     "type" : "group",
     "default" : [ {
       "button_type" : "std",
-      "button_style" : "hs-button",
+      "button_style" : "arrow-link",
       "button_theme" : "theme1",
       "button_text" : "Button",
       "link" : {
@@ -694,25 +694,6 @@
   "type" : "group",
   "default" : [ {
     "icon_background" : "type1",
-    "title" : "Improve quality",
-    "content" : "<p>Ipsum non ex duis quis. Duis deserunt qui quis. Et deserunt incididunt mollit laboris consectetur id ipsum cupidatat commodo commodo tempor irure tempor ea do. Consequat reprehenderit cupidatat nisi ad quis eu nostrud sint quis eu eiusmod eiusmod.</p>",
-    "include_button" : true,
-    "button_group" : [ {
-      "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_theme" : "theme1",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      },
-      "enable_arrow" : false
-    } ],
     "select_icon_type" : "icon",
     "icon_image" : {
       "size_type" : "auto",
@@ -725,28 +706,28 @@
       "unicode" : "f562",
       "type" : "SOLID"
     },
-    "custom_icon" : "list-checks"
+    "custom_icon" : "list-checks",
+    "title" : "Improve quality",
+    "content" : "<p>Ipsum non ex duis quis. Duis deserunt qui quis. Et deserunt incididunt mollit laboris consectetur id ipsum cupidatat commodo commodo tempor irure tempor ea do. Consequat reprehenderit cupidatat nisi ad quis eu nostrud sint quis eu eiusmod eiusmod.</p>",
+    "include_button" : true,
+    "button_group" : [ {
+      "button_type" : "std",
+      "button_style" : "arrow-link",
+      "button_theme" : "theme1",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "enable_arrow" : false
+    } ]
   }, {
     "icon_background" : "type1",
-    "title" : "Improve quality",
-    "content" : "<p>Ipsum non ex duis quis. Duis deserunt qui quis. Et deserunt incididunt mollit laboris consectetur id ipsum cupidatat commodo commodo tempor irure tempor ea do. Consequat reprehenderit cupidatat nisi ad quis eu nostrud sint quis eu eiusmod eiusmod.</p>",
-    "include_button" : true,
-    "button_group" : [ {
-      "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_theme" : "theme1",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      },
-      "enable_arrow" : false
-    } ],
     "select_icon_type" : "icon",
     "icon_image" : {
       "size_type" : "auto",
@@ -759,28 +740,28 @@
       "unicode" : "f562",
       "type" : "SOLID"
     },
-    "custom_icon" : "list-checks"
+    "custom_icon" : "list-checks",
+    "title" : "Improve quality",
+    "content" : "<p>Ipsum non ex duis quis. Duis deserunt qui quis. Et deserunt incididunt mollit laboris consectetur id ipsum cupidatat commodo commodo tempor irure tempor ea do. Consequat reprehenderit cupidatat nisi ad quis eu nostrud sint quis eu eiusmod eiusmod.</p>",
+    "include_button" : true,
+    "button_group" : [ {
+      "button_type" : "std",
+      "button_style" : "arrow-link",
+      "button_theme" : "theme1",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "enable_arrow" : false
+    } ]
   }, {
     "icon_background" : "type1",
-    "title" : "Improve quality",
-    "content" : "<p>Ipsum non ex duis quis. Duis deserunt qui quis. Et deserunt incididunt mollit laboris consectetur id ipsum cupidatat commodo commodo tempor irure tempor ea do. Consequat reprehenderit cupidatat nisi ad quis eu nostrud sint quis eu eiusmod eiusmod.</p>",
-    "include_button" : true,
-    "button_group" : [ {
-      "button_type" : "std",
-      "button_style" : "hs-button",
-      "button_theme" : "theme1",
-      "button_text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      },
-      "enable_arrow" : false
-    } ],
     "select_icon_type" : "icon",
     "icon_image" : {
       "size_type" : "auto",
@@ -793,7 +774,26 @@
       "unicode" : "f562",
       "type" : "SOLID"
     },
-    "custom_icon" : "list-checks"
+    "custom_icon" : "list-checks",
+    "title" : "Improve quality",
+    "content" : "<p>Ipsum non ex duis quis. Duis deserunt qui quis. Et deserunt incididunt mollit laboris consectetur id ipsum cupidatat commodo commodo tempor irure tempor ea do. Consequat reprehenderit cupidatat nisi ad quis eu nostrud sint quis eu eiusmod eiusmod.</p>",
+    "include_button" : true,
+    "button_group" : [ {
+      "button_type" : "std",
+      "button_style" : "arrow-link",
+      "button_theme" : "theme1",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "enable_arrow" : false
+    } ]
   } ]
 }, {
   "id" : "module_overrides",

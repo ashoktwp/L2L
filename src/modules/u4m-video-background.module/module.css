@@ -28,8 +28,7 @@ section.u4m-video-background {
 section.u4m-video-background video.video {
   position: absolute;
   z-index: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   top: 50%;
