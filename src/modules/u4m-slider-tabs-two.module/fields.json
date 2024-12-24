@@ -374,7 +374,7 @@
   "required" : false,
   "locked" : false,
   "occurrence" : {
-    "min" : 10,
+    "min" : 3,
     "max" : null,
     "sorting_label_field" : "3891b69d-3940-779c-231b-922ca2f4fe49",
     "default" : 10
