@@ -6,6 +6,36 @@
   "required" : false,
   "locked" : false,
   "children" : [ {
+    "id" : "df59129c-40ad-20ab-db73-7954ac42980e",
+    "name" : "include_eyebrow_text",
+    "display_width" : null,
+    "label" : "Include Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "f0258f38-1fce-6a49-eb8e-43602e0d21ad",
+    "name" : "eyebrow_text",
+    "display_width" : null,
+    "label" : "Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_eyebrow_text",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Eyebrow Text"
+  }, {
     "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
     "name" : "include_heading",
     "display_width" : null,
@@ -312,6 +342,8 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
+    "include_eyebrow_text" : false,
+    "eyebrow_text" : "Eyebrow Text",
     "include_heading" : true,
     "heading_size" : "h2",
     "heading" : "Subscribe to our newsletter",
@@ -336,7 +368,7 @@
     } ],
     "include_form" : true,
     "select_form" : {
-      "form_id" : "dc199d68-fae9-4ccd-b18b-a03e4cf92ca3",
+      "form_id" : "3a09d8c4-7d8f-4050-84c7-edc5b68c8ac6",
       "response_type" : "inline",
       "message" : "Thanks for submitting the form."
     }
@@ -934,10 +966,10 @@
   "type" : "group",
   "default" : {
     "enable_overrides" : true,
-    "top_margin" : "top-margin-default",
+    "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
-    "bottom_margin" : "bottom-margin-default",
+    "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
     "top_padding" : "top-padding-default",

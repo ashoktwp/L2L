@@ -85,6 +85,9 @@ section.u4m-password-prompt {
     input#hs-login-widget-remember {
       width: auto !important;
       margin-bottom: 0;
+      &::after {
+        top: 2px;
+      }
     }
 
     a {

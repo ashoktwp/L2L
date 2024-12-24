@@ -6,6 +6,36 @@
   "required" : false,
   "locked" : false,
   "children" : [ {
+    "id" : "98aca49b-bdd2-f499-49ee-bb6eeff913d9",
+    "name" : "include_eyebrow_text",
+    "display_width" : null,
+    "label" : "Include Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "07beb1aa-53b3-121c-081c-a3ffee9e8232",
+    "name" : "eyebrow_text",
+    "display_width" : null,
+    "label" : "Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_eyebrow_text",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Eyebrow Text"
+  }, {
     "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
     "name" : "include_heading",
     "display_width" : null,
@@ -312,6 +342,8 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
+    "include_eyebrow_text" : false,
+    "eyebrow_text" : "Eyebrow Text",
     "include_heading" : true,
     "heading_size" : "h2",
     "heading" : "Intro Heading Add Here",
@@ -319,6 +351,7 @@
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>",
     "include_form" : false,
     "select_form" : {
+      "form_id" : "3a09d8c4-7d8f-4050-84c7-edc5b68c8ac6",
       "response_type" : "inline",
       "message" : "Thanks for submitting the form."
     },
@@ -384,11 +417,11 @@
       "size_type" : "exact",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/cta1_media.png",
       "alt" : null,
-      "loading": "lazy",
-      "width": 450,
-      "height": 213,
-      "max_width": 476,
-      "max_height": 225
+      "loading" : "lazy",
+      "width" : 450,
+      "height" : 213,
+      "max_width" : 476,
+      "max_height" : 225
     }
   }, {
     "id" : "efdce3fc-9d52-2b1c-d15f-6b49f4e3dafb",
@@ -457,13 +490,17 @@
   "default" : {
     "select_media_type" : "image",
     "image_field" : {
-      "size_type" : "auto",
-      "src" : "",
+      "size_type" : "exact",
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/cta1_media.png",
       "alt" : null,
-      "loading" : "lazy"
+      "loading" : "lazy",
+      "width" : 450,
+      "height" : 213,
+      "max_width" : 476,
+      "max_height" : 225
     },
     "select_video_type" : "",
-    "vimeo_id" : "706460799"
+    "vimeo_id" : ""
   }
 }, {
   "id" : "9c45ee1b-055c-6b8c-79b0-75ec4a7ea206",
@@ -566,12 +603,41 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "background_type" : "color",
+    "background_type" : "image",
     "background_image" : {
-      "src" : ""
+      "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/cta1_background.png"
     },
     "select_color" : "dark_jungle_bg",
     "select_gradient" : "gradient1"
+  }
+}, {
+  "id" : "1fcdfdeb-8ca4-d6af-38ee-08b890c4f37a",
+  "name" : "module_settings",
+  "display_width" : null,
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "12a4dd85-3fb0-0b40-21cf-28c90aafd5da",
+    "name" : "select_column",
+    "display_width" : null,
+    "label" : "Select Column",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "two_col", "Two Column" ], [ "full_width", "Full Width" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "two_col"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "select_column" : "two_col"
   }
 }, {
   "id" : "module_overrides",
@@ -977,7 +1043,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "image",
+      "background_type" : "gradient",
       "background_image" : {
         "size_type" : "auto_custom_max",
         "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG.png",
@@ -989,7 +1055,7 @@
         "max_height" : 879.1666666666666
       },
       "select_color" : "prismic_mango_bg",
-      "select_gradient" : "gradient1"
+      "select_gradient" : "gradient3"
     }
   }, {
     "id" : "c813f3af-99b7-d54e-7ce2-b074f008a27c",
@@ -1058,10 +1124,10 @@
   "type" : "group",
   "default" : {
     "enable_overrides" : true,
-    "top_margin" : "top-margin-default",
+    "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
-    "bottom_margin" : "bottom-margin-default",
+    "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
     "top_padding" : "top-padding-default",
@@ -1072,7 +1138,7 @@
     "custom_bottom_padding_mobile" : 50,
     "reverse_text" : true,
     "background_settings" : {
-      "background_type" : "image",
+      "background_type" : "gradient",
       "background_image" : {
         "size_type" : "auto_custom_max",
         "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/BG.png",
@@ -1084,7 +1150,7 @@
         "max_height" : 879.1666666666666
       },
       "select_color" : "prismic_mango_bg",
-      "select_gradient" : "gradient1"
+      "select_gradient" : "gradient3"
     },
     "container" : {
       "size" : "theme",

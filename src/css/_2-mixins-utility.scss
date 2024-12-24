@@ -1,4 +1,10 @@
 // Viewports & Browsers
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
 @mixin phone {
   @media (max-width: 580px) {
     @content;

@@ -16,7 +16,7 @@
     <div class="bg_overlay bg_color"></div>
     {% endif %}
 
-    <div class="cta-content-flex flex_row col12">
+    <div class="cta-content-flex flex_row col12 {{ module.module_settings.select_column }}">
       <div class="intro_wrapp {% if module.media_content.select_media_type %} col6 {% else %}col12{% endif %}">
         <div class="intro_wrapp_inn">
           {{macros.introGroup(module.intro_content)}}

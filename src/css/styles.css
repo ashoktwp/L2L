@@ -4242,9 +4242,6 @@ section.u4m-backup-unsubscribe form div.legal-consent-container .hs-form-boolean
   line-height: 1.5;
   position: relative;
 }
-section.u4m-backup-unsubscribe form div.legal-consent-container .hs-form-booleancheckbox label {
-  padding-left: 24px;
-}
 section.u4m-backup-unsubscribe form.hs-form fieldset, section.u4m-backup-unsubscribe form.mixitup-multifilter fieldset, section.u4m-backup-unsubscribe form fieldset {
   max-width: none;
 }
@@ -4511,7 +4508,7 @@ section.u4m-backup-unsubscribe form .form-columns-3 .hs-form-radio input {
   width: auto;
   margin: 0 10rem 0rem 0;
   position: relative;
-  top: 2rem;
+  top: 0rem;
   float: left;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -4542,7 +4539,7 @@ section.u4m-backup-unsubscribe form .form-columns-3 .hs-form-radio label {
   font-size: 14rem;
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  padding-left: 0px;
   position: relative;
   cursor: pointer;
 }
@@ -4599,7 +4596,7 @@ section.u4m-backup-unsubscribe form .form-columns-2 .hs-form-radio input,
 section.u4m-backup-unsubscribe form .form-columns-3 .hs-form-radio input {
   width: auto;
   margin-right: 10rem;
-  margin-left: 2rem;
+  margin-left: 0rem;
   position: relative;
   top: 2rem;
 }
@@ -4661,21 +4658,17 @@ section.u4m-backup-unsubscribe form.hs-form input.hs-input[type=radio], section.
 section.u4m-backup-unsubscribe form.mixitup-multifilter input.hs-input[type=radio], section.u4m-backup-unsubscribe form input.hs-input[type=checkbox],
 section.u4m-backup-unsubscribe form input.hs-input[type=radio] {
   background: #fff;
-  height: 0;
-  left: 2px;
+  left: 0px;
   margin-right: 0;
   padding: 0 !important;
-  position: absolute;
+  position: relative;
   top: 0;
-  top: 50%;
-  transform: translateY(-50%);
   vertical-align: middle;
   width: 0;
   border: none;
   outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  margin-right: 10px;
 }
 section.u4m-backup-unsubscribe form.hs-form input.hs-input[type=checkbox]::before,
 section.u4m-backup-unsubscribe form.hs-form input.hs-input[type=radio]::before, section.u4m-backup-unsubscribe form.mixitup-multifilter input.hs-input[type=checkbox]::before,
@@ -4688,7 +4681,7 @@ section.u4m-backup-unsubscribe form input.hs-input[type=radio]::before {
   margin-right: 0;
   padding: 0 !important;
   position: absolute;
-  top: 0;
+  top: -1px;
   top: 50%;
   transform: translateY(-50%);
   vertical-align: middle;
@@ -4956,13 +4949,6 @@ section.u4m-password-prompt form div.legal-consent-container .hs-form-booleanche
   font-size: 12rem;
   line-height: 1.5;
   position: relative;
-}
-section.u4m-membership-login form div.legal-consent-container .hs-form-booleancheckbox label,
-section.u4m-membership-register form div.legal-consent-container .hs-form-booleancheckbox label,
-section.u4m-membership-reset-password-request form div.legal-consent-container .hs-form-booleancheckbox label,
-section.u4m-membership-reset-password form div.legal-consent-container .hs-form-booleancheckbox label,
-section.u4m-password-prompt form div.legal-consent-container .hs-form-booleancheckbox label {
-  padding-left: 24px;
 }
 section.u4m-membership-login form.hs-form fieldset, section.u4m-membership-login form.mixitup-multifilter fieldset, section.u4m-membership-login form fieldset,
 section.u4m-membership-register form.hs-form fieldset,
@@ -5914,7 +5900,7 @@ section.u4m-password-prompt form .form-columns-3 .hs-form-radio input {
   width: auto;
   margin: 0 10rem 0rem 0;
   position: relative;
-  top: 2rem;
+  top: 0rem;
   float: left;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -6041,7 +6027,7 @@ section.u4m-password-prompt form .form-columns-3 .hs-form-radio label {
   font-size: 14rem;
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  padding-left: 0px;
   position: relative;
   cursor: pointer;
 }
@@ -6290,7 +6276,7 @@ section.u4m-password-prompt form .form-columns-2 .hs-form-radio input,
 section.u4m-password-prompt form .form-columns-3 .hs-form-radio input {
   width: auto;
   margin-right: 10rem;
-  margin-left: 2rem;
+  margin-left: 0rem;
   position: relative;
   top: 2rem;
 }
@@ -6568,21 +6554,17 @@ section.u4m-password-prompt form.mixitup-multifilter input.hs-input[type=radio],
 section.u4m-password-prompt form input.hs-input[type=checkbox],
 section.u4m-password-prompt form input.hs-input[type=radio] {
   background: #fff;
-  height: 0;
-  left: 2px;
+  left: 0px;
   margin-right: 0;
   padding: 0 !important;
-  position: absolute;
+  position: relative;
   top: 0;
-  top: 50%;
-  transform: translateY(-50%);
   vertical-align: middle;
   width: 0;
   border: none;
   outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  margin-right: 10px;
 }
 section.u4m-membership-login form.hs-form input.hs-input[type=checkbox]::before,
 section.u4m-membership-login form.hs-form input.hs-input[type=radio]::before, section.u4m-membership-login form.mixitup-multifilter input.hs-input[type=checkbox]::before,
@@ -6619,7 +6601,7 @@ section.u4m-password-prompt form input.hs-input[type=radio]::before {
   margin-right: 0;
   padding: 0 !important;
   position: absolute;
-  top: 0;
+  top: -1px;
   top: 50%;
   transform: translateY(-50%);
   vertical-align: middle;
@@ -7282,6 +7264,13 @@ section.u4m-password-prompt form input#hs-login-widget-remember {
   width: auto !important;
   margin-bottom: 0;
 }
+section.u4m-membership-login form input#hs-login-widget-remember::after,
+section.u4m-membership-register form input#hs-login-widget-remember::after,
+section.u4m-membership-reset-password-request form input#hs-login-widget-remember::after,
+section.u4m-membership-reset-password form input#hs-login-widget-remember::after,
+section.u4m-password-prompt form input#hs-login-widget-remember::after {
+  top: 2px;
+}
 section.u4m-membership-login form a,
 section.u4m-membership-register form a,
 section.u4m-membership-reset-password-request form a,
@@ -7351,9 +7340,6 @@ section.u4m-subscription-preferences form div.legal-consent-container .hs-form-b
   font-size: 12rem;
   line-height: 1.5;
   position: relative;
-}
-section.u4m-subscription-preferences form div.legal-consent-container .hs-form-booleancheckbox label {
-  padding-left: 24px;
 }
 section.u4m-subscription-preferences form.hs-form fieldset, section.u4m-subscription-preferences form.mixitup-multifilter fieldset, section.u4m-subscription-preferences form fieldset {
   max-width: none;
@@ -7621,7 +7607,7 @@ section.u4m-subscription-preferences form .form-columns-3 .hs-form-radio input {
   width: auto;
   margin: 0 10rem 0rem 0;
   position: relative;
-  top: 2rem;
+  top: 0rem;
   float: left;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -7652,7 +7638,7 @@ section.u4m-subscription-preferences form .form-columns-3 .hs-form-radio label {
   font-size: 14rem;
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  padding-left: 0px;
   position: relative;
   cursor: pointer;
 }
@@ -7709,7 +7695,7 @@ section.u4m-subscription-preferences form .form-columns-2 .hs-form-radio input,
 section.u4m-subscription-preferences form .form-columns-3 .hs-form-radio input {
   width: auto;
   margin-right: 10rem;
-  margin-left: 2rem;
+  margin-left: 0rem;
   position: relative;
   top: 2rem;
 }
@@ -7771,21 +7757,17 @@ section.u4m-subscription-preferences form.hs-form input.hs-input[type=radio], se
 section.u4m-subscription-preferences form.mixitup-multifilter input.hs-input[type=radio], section.u4m-subscription-preferences form input.hs-input[type=checkbox],
 section.u4m-subscription-preferences form input.hs-input[type=radio] {
   background: #fff;
-  height: 0;
-  left: 2px;
+  left: 0px;
   margin-right: 0;
   padding: 0 !important;
-  position: absolute;
+  position: relative;
   top: 0;
-  top: 50%;
-  transform: translateY(-50%);
   vertical-align: middle;
   width: 0;
   border: none;
   outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  margin-right: 10px;
 }
 section.u4m-subscription-preferences form.hs-form input.hs-input[type=checkbox]::before,
 section.u4m-subscription-preferences form.hs-form input.hs-input[type=radio]::before, section.u4m-subscription-preferences form.mixitup-multifilter input.hs-input[type=checkbox]::before,
@@ -7798,7 +7780,7 @@ section.u4m-subscription-preferences form input.hs-input[type=radio]::before {
   margin-right: 0;
   padding: 0 !important;
   position: absolute;
-  top: 0;
+  top: -1px;
   top: 50%;
   transform: translateY(-50%);
   vertical-align: middle;
@@ -8029,9 +8011,6 @@ section.u4m-drag-and-drop-area form div.legal-consent-container .hs-form-boolean
   font-size: 12rem;
   line-height: 1.5;
   position: relative;
-}
-section.u4m-drag-and-drop-area form div.legal-consent-container .hs-form-booleancheckbox label {
-  padding-left: 24px;
 }
 section.u4m-drag-and-drop-area form.hs-form fieldset, section.u4m-drag-and-drop-area form.mixitup-multifilter fieldset, section.u4m-drag-and-drop-area form fieldset {
   max-width: none;
@@ -8299,7 +8278,7 @@ section.u4m-drag-and-drop-area form .form-columns-3 .hs-form-radio input {
   width: auto;
   margin: 0 10rem 0rem 0;
   position: relative;
-  top: 2rem;
+  top: 0rem;
   float: left;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -8330,7 +8309,7 @@ section.u4m-drag-and-drop-area form .form-columns-3 .hs-form-radio label {
   font-size: 14rem;
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  padding-left: 0px;
   position: relative;
   cursor: pointer;
 }
@@ -8387,7 +8366,7 @@ section.u4m-drag-and-drop-area form .form-columns-2 .hs-form-radio input,
 section.u4m-drag-and-drop-area form .form-columns-3 .hs-form-radio input {
   width: auto;
   margin-right: 10rem;
-  margin-left: 2rem;
+  margin-left: 0rem;
   position: relative;
   top: 2rem;
 }
@@ -8449,21 +8428,17 @@ section.u4m-drag-and-drop-area form.hs-form input.hs-input[type=radio], section.
 section.u4m-drag-and-drop-area form.mixitup-multifilter input.hs-input[type=radio], section.u4m-drag-and-drop-area form input.hs-input[type=checkbox],
 section.u4m-drag-and-drop-area form input.hs-input[type=radio] {
   background: #fff;
-  height: 0;
-  left: 2px;
+  left: 0px;
   margin-right: 0;
   padding: 0 !important;
-  position: absolute;
+  position: relative;
   top: 0;
-  top: 50%;
-  transform: translateY(-50%);
   vertical-align: middle;
   width: 0;
   border: none;
   outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  margin-right: 10px;
 }
 section.u4m-drag-and-drop-area form.hs-form input.hs-input[type=checkbox]::before,
 section.u4m-drag-and-drop-area form.hs-form input.hs-input[type=radio]::before, section.u4m-drag-and-drop-area form.mixitup-multifilter input.hs-input[type=checkbox]::before,
@@ -8476,7 +8451,7 @@ section.u4m-drag-and-drop-area form input.hs-input[type=radio]::before {
   margin-right: 0;
   padding: 0 !important;
   position: absolute;
-  top: 0;
+  top: -1px;
   top: 50%;
   transform: translateY(-50%);
   vertical-align: middle;
@@ -8683,10 +8658,6 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
   font-size: 12rem;
   line-height: 1.5;
   position: relative;
-}
-.dnd_padd form div.legal-consent-container .hs-form-booleancheckbox label,
-.dnd-section form div.legal-consent-container .hs-form-booleancheckbox label {
-  padding-left: 24px;
 }
 .dnd_padd form.hs-form fieldset, .dnd_padd form.mixitup-multifilter fieldset, .dnd_padd form fieldset,
 .dnd-section form.hs-form fieldset,
@@ -9125,7 +9096,7 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
   width: auto;
   margin: 0 10rem 0rem 0;
   position: relative;
-  top: 2rem;
+  top: 0rem;
   float: left;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -9180,7 +9151,7 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
   font-size: 14rem;
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  padding-left: 0px;
   position: relative;
   cursor: pointer;
 }
@@ -9285,7 +9256,7 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
 .dnd-section form .form-columns-3 .hs-form-radio input {
   width: auto;
   margin-right: 10rem;
-  margin-left: 2rem;
+  margin-left: 0rem;
   position: relative;
   top: 2rem;
 }
@@ -9401,21 +9372,17 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
 .dnd-section form input.hs-input[type=checkbox],
 .dnd-section form input.hs-input[type=radio] {
   background: #fff;
-  height: 0;
-  left: 2px;
+  left: 0px;
   margin-right: 0;
   padding: 0 !important;
-  position: absolute;
+  position: relative;
   top: 0;
-  top: 50%;
-  transform: translateY(-50%);
   vertical-align: middle;
   width: 0;
   border: none;
   outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  margin-right: 10px;
 }
 .dnd_padd form.hs-form input.hs-input[type=checkbox]::before,
 .dnd_padd form.hs-form input.hs-input[type=radio]::before, .dnd_padd form.mixitup-multifilter input.hs-input[type=checkbox]::before,
@@ -9434,7 +9401,7 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
   margin-right: 0;
   padding: 0 !important;
   position: absolute;
-  top: 0;
+  top: -1px;
   top: 50%;
   transform: translateY(-50%);
   vertical-align: middle;
@@ -10234,9 +10201,6 @@ section.u4m-blog-post div.comments div.content form div.legal-consent-container 
   line-height: 1.5;
   position: relative;
 }
-section.u4m-blog-post div.comments div.content form div.legal-consent-container .hs-form-booleancheckbox label {
-  padding-left: 24px;
-}
 section.u4m-blog-post div.comments div.content form.hs-form fieldset, section.u4m-blog-post div.comments div.content form.mixitup-multifilter fieldset, section.u4m-blog-post div.comments div.content form fieldset {
   max-width: none;
 }
@@ -10503,7 +10467,7 @@ section.u4m-blog-post div.comments div.content form .form-columns-3 .hs-form-rad
   width: auto;
   margin: 0 10rem 0rem 0;
   position: relative;
-  top: 2rem;
+  top: 0rem;
   float: left;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -10534,7 +10498,7 @@ section.u4m-blog-post div.comments div.content form .form-columns-3 .hs-form-rad
   font-size: 14rem;
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  padding-left: 0px;
   position: relative;
   cursor: pointer;
 }
@@ -10591,7 +10555,7 @@ section.u4m-blog-post div.comments div.content form .form-columns-2 .hs-form-rad
 section.u4m-blog-post div.comments div.content form .form-columns-3 .hs-form-radio input {
   width: auto;
   margin-right: 10rem;
-  margin-left: 2rem;
+  margin-left: 0rem;
   position: relative;
   top: 2rem;
 }
@@ -10653,21 +10617,17 @@ section.u4m-blog-post div.comments div.content form.hs-form input.hs-input[type=
 section.u4m-blog-post div.comments div.content form.mixitup-multifilter input.hs-input[type=radio], section.u4m-blog-post div.comments div.content form input.hs-input[type=checkbox],
 section.u4m-blog-post div.comments div.content form input.hs-input[type=radio] {
   background: #fff;
-  height: 0;
-  left: 2px;
+  left: 0px;
   margin-right: 0;
   padding: 0 !important;
-  position: absolute;
+  position: relative;
   top: 0;
-  top: 50%;
-  transform: translateY(-50%);
   vertical-align: middle;
   width: 0;
   border: none;
   outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  margin-right: 10px;
 }
 section.u4m-blog-post div.comments div.content form.hs-form input.hs-input[type=checkbox]::before,
 section.u4m-blog-post div.comments div.content form.hs-form input.hs-input[type=radio]::before, section.u4m-blog-post div.comments div.content form.mixitup-multifilter input.hs-input[type=checkbox]::before,
@@ -10680,7 +10640,7 @@ section.u4m-blog-post div.comments div.content form input.hs-input[type=radio]::
   margin-right: 0;
   padding: 0 !important;
   position: absolute;
-  top: 0;
+  top: -1px;
   top: 50%;
   transform: translateY(-50%);
   vertical-align: middle;

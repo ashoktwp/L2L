@@ -153,6 +153,9 @@ html {
               color: $L2L_green;
               font-size: 32px;
               top: -5px;
+              @include tabletvert {
+                top: 2px;
+              }
             }
           }
         }
@@ -315,6 +318,9 @@ html {
       li {
         margin: 0;
         min-width: 121px;
+        @include laptop {
+          min-width: 135px;
+        }
         a {
           display: inline-block;
           padding-bottom: 15px;
@@ -455,6 +461,12 @@ html {
     display: none;
     margin-top: 36px;
     min-width: 540px;
+    @include tabletmid {
+      min-width: 320px;
+    }
+    @include phone {
+      min-width: 265px;
+    }
   }
   .ctvb-tabtxt {
     font-family: $secondaryFont;
@@ -499,6 +511,10 @@ html {
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      @include navbreak {
+        flex-wrap: wrap;
+        gap: 5px;
+      }
     }
     .ctvb-tabtn {
       a {
@@ -536,7 +552,7 @@ html {
     transform: translate(-50%, -50%);
     position: absolute;
     display: flex;
-    
+
     align-items: center;
     justify-content: center;
     width: 6px;
@@ -621,7 +637,13 @@ html {
     }
   }
 }
-@media (max-width: 580px) {
+
+@include mobile {
+  .ctvb-tabcol.slick-current {
+    max-width: 295px !important;
+  }
+}
+@include phone {
   html {
     font-size: 1px;
   }
@@ -656,12 +678,12 @@ html {
     }
   }
 }
-@media (min-width: 2560px) {
+@include large {
   html {
     font-size: 1px;
   }
 }
-@media (max-width: 1070px) {
+@include navbreakMin {
   .u4m-slider-tabs-left {
     .ctvb-tabcol.slick-current {
       max-width: 350px;
@@ -671,7 +693,7 @@ html {
     }
   }
 }
-@media (max-width: 1199px) {
+@include midlaptop {
   .u4m-slider-tabs-left {
     .ctvb-toprow {
       ul {

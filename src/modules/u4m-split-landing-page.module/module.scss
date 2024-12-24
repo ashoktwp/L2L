@@ -177,19 +177,22 @@
             }
           }
           > label {
-            font-family: $secondaryFont;
             @include size16;
             line-height: 1.125;
             color: $Fern_green;
             position: absolute;
             top: 25px;
             left: 20px;
+            font-weight: normal;
+          }
+          .hs-input::placeholder {
+            opacity: 0;
           }
           &.focused,
           &.textExist {
             > label {
               top: -10px;
-              background: #fff;
+              background: $white;
               padding: 3px 7px;
               border-radius: 3px;
               left: 13px;
@@ -203,14 +206,12 @@
             margin-top: 0px;
             .hs-error-msg {
               @include size14;
-              color: red;
             }
           }
           .hs-form-booleancheckbox,
           .hs-form-radio {
             label {
               span {
-                font-family: $secondaryFont;
                 @include size12;
                 line-height: 1.72;
                 color: $Fern_green;
@@ -220,7 +221,6 @@
         }
         .hs-richtext {
           color: $Fern_green;
-          font-family: $secondaryFont;
           @include size12;
           line-height: 1.5;
         }
@@ -235,7 +235,6 @@
     .bottom_content {
       @include size16;
       color: $Dark_Green2;
-      font-family: $secondaryFont;
       line-height: 1.75;
       ul {
         li {
