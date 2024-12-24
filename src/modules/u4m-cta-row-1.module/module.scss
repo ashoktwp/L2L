@@ -25,6 +25,26 @@ section.u4m-cta-row-1 {
         }
       }
       .cta-content-flex {
+        &.full_width {
+          flex-direction: column-reverse;
+          flex-wrap: wrap;
+          .col6 {
+            width: 100%;
+            max-width: 100%;
+            background: transparent;
+            .intro_wrapp_inn {
+              .intro_content {
+                max-width: 100%;
+                text-align: center;
+                .intro__inner {
+                  .intro_btn_wrap {
+                    justify-content: center;
+                  }
+                }
+              }
+            }
+          }
+        }
         @include tablet {
           flex-direction: column-reverse;
         }

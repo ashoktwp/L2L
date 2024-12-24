@@ -611,6 +611,35 @@
     "select_gradient" : "gradient1"
   }
 }, {
+  "id" : "1fcdfdeb-8ca4-d6af-38ee-08b890c4f37a",
+  "name" : "module_settings",
+  "display_width" : null,
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "12a4dd85-3fb0-0b40-21cf-28c90aafd5da",
+    "name" : "select_column",
+    "display_width" : null,
+    "label" : "Select Column",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "two_col", "Two Column" ], [ "full_width", "Full Width" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "two_col"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "select_column" : "two_col"
+  }
+}, {
   "id" : "module_overrides",
   "name" : "module_overrides",
   "display_width" : null,
