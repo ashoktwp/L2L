@@ -1,187 +1,180 @@
 @import "../../css/_module-imports";
 
 .u4m-icon-card {
-    .intro_title {
-        font-weight: 500;
+  .intro_title {
+    font-weight: 500;
+  }
+
+  .card_wrap {
+    .arrow-link {
+      color: $white;
+
+      &:hover {
+        color: $Medium_Aquamarine;
+      }
+
+      &.theme2 {
+        color: $white;
+      }
+
+      &.theme2:hover {
+        color: $Menthol;
+      }
+
+      &.theme3 {
+        color: $white;
+      }
+
+      &.theme3:hover {
+        color: $Prismic_mango;
+      }
     }
+  }
 
-    .card_wrap {
-        .arrow-link {
-            color: $white;
+  .card_wrap {
+    padding-top: 30px;
 
-            &:hover {
-                color: $Medium_Aquamarine;
+    .card_flex {
+      gap: 30px;
+      justify-content: center;
+
+      .card_item {
+        width: calc(33.3% - 20px);
+        @include size14;
+        line-height: 1.7;
+
+        @include tablet {
+          width: calc(50% - 15px);
+        }
+
+        @include tabletvert {
+          width: 100%;
+        }
+
+        .item_inr {
+          background-image: $gradient6;
+          padding: 30px 36px;
+          border-radius: 13px;
+          box-shadow: $shadow4;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
+          @include tablet {
+            padding: 30px 20px;
+          }
+
+          .card_cnt p:last-child {
+            margin-bottom: 0;
+          }
+
+          .item_top_flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid $Menthol;
+            margin-bottom: 18px;
+
+            &.flextype2 {
+              border-color: $Prismic_mango;
             }
 
-            &.theme2 {
-                color: $white;
+            &.flextype3 {
+              border-color: $L2L_green;
             }
 
-            &.theme2:hover {
+            .item_iconwrap {
+              width: 54px;
+              height: 54px;
+              border-radius: 8px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: rgba($Nori_Green, 0.34);
+              border: 1px solid $Dark_Green;
+              box-shadow: 0 3px 5px 0 rgba($black, 0.5);
+
+              &.type1 {
+                background-image: $iconbg1;
+              }
+
+              &.type2 {
+                background-image: $iconbg2;
+              }
+
+              &.type3 {
+                background-image: $iconbg3;
+              }
+
+              .title-icon {
+                justify-content: center;
+                height: 42px;
+                width: 42px;
+                background: rgba($Nori_Green, 0.34);
+                border: 1px solid $Dark_Green;
+                box-shadow: 0 3px 5px 0 gba($black, 0.5);
+                display: flex;
+                align-items: center;
+                @include size24;
+
+                img {
+                  width: 24px;
+                  display: block;
+                }
+
+                svg {
+                  width: 24px;
+                  height: 24px;
+                  display: block;
+
+                  path {
+                    fill: $white;
+                  }
+                }
+              }
+            }
+
+            h4 {
+              margin: 0;
+              line-height: 2;
+              color: $white;
+              font-weight: 600;
+            }
+          }
+
+          .card_cnt {
+            p {
+              color: $Frostee;
+            }
+          }
+
+          .card_btn {
+            margin-top: auto;
+
+            a.arrow-link {
+              color: $white;
+
+              &:hover .arrowbtn {
                 color: $Menthol;
+              }
             }
 
-            &.theme3 {
-                color: $white;
-
+            &.btntype2 a.arrow-link:hover .arrowbtn {
+              color: $Prismic_mango;
             }
 
-            &.theme3:hover {
-                color: $Prismic_mango;
+            &.btntype3 a.arrow-link:hover .arrowbtn {
+              color: $L2L_green;
             }
+
+            .intro_btn_wrap {
+              margin-top: 24px;
+              justify-content: flex-start;
+            }
+          }
         }
+      }
     }
-
-    .card_wrap {
-        padding-top: 30px;
-
-        .card_flex {
-            gap: 30px;
-
-            .card_item {
-                width: calc(33.3% - 20px);
-                @include size14;
-                line-height: 1.7;
-
-                @include tablet {
-                    width: calc(50% - 15px);
-                }
-
-                @include tabletvert {
-                    width: 100%;
-                }
-
-                .item_inr {
-                    background-image: $gradient6;
-                    padding: 30px 36px;
-                    border-radius: 13px;
-                    box-shadow: $shadow4;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-
-                    @include tablet {
-                        padding: 30px 20px;
-                    }
-
-                    .card_cnt p:last-child {
-                        margin-bottom: 0;
-                    }
-
-                    .item_top_flex {
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 18px;
-                        padding-bottom: 24px;
-                        border-bottom: 1px solid $Menthol;
-                        margin-bottom: 18px;
-
-                        &.flextype2 {
-                            border-color: $Prismic_mango;
-
-
-                        }
-
-                        &.flextype3 {
-                            border-color: $L2L_green;
-
-                        }
-
-                        .item_iconwrap {
-                            width: 54px;
-                            height: 54px;
-                            border-radius: 8px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            background: rgba($Nori_Green, 0.34);
-                            border: 1px solid $Dark_Green;
-                            box-shadow: 0 3px 5px 0 rgba($black, 0.50);
-
-                            &.type1 {
-                                background-image: $iconbg1;
-                            }
-
-                            &.type2 {
-                                background-image: $iconbg2;
-                            }
-
-                            &.type3 {
-                                background-image: $iconbg3
-                            }
-
-                            .title-icon {
-                                justify-content: center;
-                                height: 42px;
-                                width: 42px;
-                                background: rgba($Nori_Green, 0.34);
-                                border: 1px solid $Dark_Green;
-                                box-shadow: 0 3px 5px 0 gba($black, 0.50);
-                                display: flex;
-                                align-items: center;
-                                @include size24;
-
-                                img {
-                                    width: 24px;
-                                    display: block;
-                                }
-
-                                svg {
-                                    width: 24px;
-                                    height: 24px;
-                                    display: block;
-
-                                    path {
-                                        fill: $white;
-                                    }
-                                }
-                            }
-                        }
-
-                        h4 {
-                            margin: 0;
-                            line-height: 2;
-                            color: $white;
-                            font-weight: 600;
-                        }
-                    }
-
-                    .card_cnt {
-
-
-                        p {
-                            color: $Frostee;
-                        }
-                    }
-
-                    .card_btn {
-                        margin-top: auto;
-
-                        a.arrow-link {
-                            color: $white;
-
-                            &:hover .arrowbtn {
-                                color: $Menthol;
-                            }
-                        }
-
-                        &.btntype2 a.arrow-link:hover .arrowbtn {
-                            color: $Prismic_mango;
-
-                        }
-
-                        &.btntype3 a.arrow-link:hover .arrowbtn {
-                            color: $L2L_green;
-
-                        }
-
-                        .intro_btn_wrap {
-                            margin-top: 24px;
-                            justify-content: flex-start;
-                        }
-                    }
-                }
-            }
-        }
-    }
+  }
 }
