@@ -1,4 +1,58 @@
-
+{% macro buttonGroup(items)%}
+{% if items %}
+<div class="intro_btn_wrap">
+  {% for item in items %}
+  <div class="btn_item">
+    {% if item.button_type == "std" %}
+    {% set href = item.link.url.href %}
+    {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+    {% set href = "mailto:" + href %}
+    {% endif %}
+    <a class="{{ item.button_style ? item.button_style : "hs-button" }} {{item.button_theme}}"
+       {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+       href="{{ href }}" 
+       {% else %}
+       href="{{ href }}"
+       {% endif %}
+       {% if item.link.open_in_new_tab %}
+       target="_blank"
+       {% endif %}
+       {% if item.link.rel %}
+       rel="{{ item.link.rel }}"
+       {% endif %}>
+      <span>{{ item.button_text }}</span>
+      {% if item.button_style=="hs-button" %}
+      {% if item.enable_arrow %}
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 12H20.25Z" fill="currentcolor"/>
+        <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      {% endif %}
+      {% elif item.button_style=="arrow-link" %}
+      <span class="arrowbtn">
+        <svg class="btnArrow1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
+          <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="btnArrow2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
+          <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      {% endif %}
+    </a>
+    {% endif %}
+    {% if item.button_type == "cta" %}
+    {% cta guid="{{ item.cta }}" %}
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endmacro%}
 {% set moduleName = 'u4m-slider-tabs-one' %}
 {% include "../partials/u4-module-includes.html" %}
 <div class="page-center  {{ module.module_settings.theme }}">
@@ -72,6 +126,9 @@
               {% if item.tab_content.content %}
               {{ item.tab_content.content }}
               {% endif %}
+              {% if item.tab_content.include_button %}
+              {{buttonGroup(item.tab_content.button_group)}}
+              {% endif %}
             </div>
           </div>
           {% endfor %}
@@ -142,6 +199,10 @@
 
                     {% if item.tab_content.content %}
                     {{ item.tab_content.content }}
+                    {% endif %}
+
+                    {% if item.tab_content.include_button %}
+                    {{ buttonGroup(item.tab_content.button_group)}}
                     {% endif %}
                   </div>
                 </div>

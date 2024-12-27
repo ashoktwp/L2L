@@ -86,3 +86,9 @@ function initAccordionFunctionality() {
   openAccordion(currentIndex);
   startAutoplay();
 }
+
+
+
+
+
+

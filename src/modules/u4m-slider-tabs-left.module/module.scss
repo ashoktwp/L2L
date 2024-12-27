@@ -212,6 +212,17 @@
                 .arrowbtn {
                   display: block !important;
                 }
+                &.nolink {
+                  span.plus-icons {
+                    display: block;
+                    * {
+                      opacity: 1;
+                    }
+                    .line2 {
+                      display: none;
+                    }
+                  }
+                }
               }
             }
           }

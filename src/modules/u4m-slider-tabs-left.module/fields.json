@@ -421,6 +421,25 @@
     "locked" : false,
     "type" : "richtext",
     "default" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
+  }, {
+    "id" : "5230ae92-fadb-6f4d-f2d1-31dfce73df85",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "CONTENT"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -438,7 +457,16 @@
       "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "CONTENT"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
   }, {
     "image_field" : {
       "size_type" : "auto_custom_max",
@@ -451,7 +479,16 @@
       "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "CONTENT"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
   }, {
     "image_field" : {
       "size_type" : "auto_custom_max",
@@ -464,7 +501,16 @@
       "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "CONTENT"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
   }, {
     "image_field" : {
       "size_type" : "auto_custom_max",
@@ -477,7 +523,16 @@
       "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "CONTENT"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
   }, {
     "image_field" : {
       "size_type" : "auto_custom_max",
@@ -490,7 +545,16 @@
       "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "CONTENT"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
   }, {
     "image_field" : {
       "size_type" : "auto_custom_max",
@@ -503,7 +567,16 @@
       "max_height" : 720
     },
     "title" : "Work Instructions.",
-    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>"
+    "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "",
+        "type" : "CONTENT"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
   } ]
 }, {
   "id" : "module_overrides",
