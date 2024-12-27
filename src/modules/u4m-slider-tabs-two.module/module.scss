@@ -317,7 +317,7 @@ html {
       gap: 36px;
       li {
         margin: 0;
-        min-width: 121px;
+        padding-right: 40px;
         @include laptop {
           min-width: 135px;
         }

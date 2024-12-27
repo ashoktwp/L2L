@@ -625,6 +625,212 @@
       "locked" : false,
       "type" : "richtext",
       "default" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>"
+    }, {
+      "id" : "0f5e9bca-1f9f-73ec-0fef-5ef5ed6fe771",
+      "name" : "include_button",
+      "display_width" : null,
+      "label" : "Include Button",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "4cdf1a68-b20e-f25b-a33e-8f05a6e2632e",
+      "name" : "button_group",
+      "display_width" : null,
+      "label" : "Button Group",
+      "required" : false,
+      "locked" : false,
+      "occurrence" : {
+        "min" : null,
+        "max" : 2,
+        "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+        "default" : 2
+      },
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tab_items.tab_content.include_button",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "children" : [ {
+        "id" : "ff2162b3-d17d-88eb-6b82-8fe3f1d12f47",
+        "name" : "button_type",
+        "display_width" : null,
+        "label" : "Button Type",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "std"
+      }, {
+        "id" : "02aeb4de-1440-022a-9ee1-8c9429aa99ba",
+        "name" : "button_style",
+        "display_width" : null,
+        "label" : "Button Style",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_items.tab_content.button_group.button_type",
+          "controlling_value_regex" : "std",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "hs-button", "Primary" ], [ "arrow-link", "Arrow Link" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "hs-button"
+      }, {
+        "id" : "27c1b41e-89fa-23f8-3773-8278764753dc",
+        "name" : "button_theme",
+        "display_width" : null,
+        "label" : "Button Theme",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_items.tab_content.button_group.button_type",
+          "controlling_value_regex" : "std",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "theme1", "Theme 1" ], [ "theme2", "Theme 2" ], [ "theme3", "Theme 3" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "theme1"
+      }, {
+        "id" : "9dc7003c-151d-e4ca-5447-bc64d7b9bfc5",
+        "name" : "button_text",
+        "display_width" : null,
+        "label" : "Button Text",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "intro_content.button_group.button_type",
+          "controlling_value_regex" : "std",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Button"
+      }, {
+        "id" : "800cfb61-413a-3325-ec9e-4a598e5d8e9a",
+        "name" : "link",
+        "display_width" : null,
+        "label" : "Link",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_items.tab_content.button_group.button_type",
+          "controlling_value_regex" : "std",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
+        "show_advanced_rel_options" : false,
+        "type" : "link",
+        "default" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "id" : "76a10a75-f39b-529c-1b10-c61699fab3db",
+        "name" : "enable_arrow",
+        "display_width" : null,
+        "label" : "Enable Arrow",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_items.tab_content.button_group.button_type",
+          "controlling_value_regex" : "hs-button",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "checkbox",
+        "type" : "boolean",
+        "default" : false
+      }, {
+        "id" : "9b51d8c3-319c-2d42-7dc3-51b2af5bba81",
+        "name" : "cta",
+        "display_width" : null,
+        "label" : "CTA",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_items.tab_content.button_group.button_type",
+          "controlling_value_regex" : "cta",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "type" : "cta"
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "default" : [ {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      }, {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      } ]
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -645,7 +851,39 @@
       "select_video_type" : "vimeo",
       "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
       "vimeo_id" : "706460799",
-      "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>"
+      "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>",
+      "include_button" : false,
+      "button_group" : [ {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      }, {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      } ]
     }
   } ],
   "tab" : "CONTENT",
@@ -664,7 +902,16 @@
       },
       "icon_field" : { },
       "custom_icon" : "barricade",
-      "caption" : "Adipisicing deserunt anim amet non deserunt "
+      "caption" : "Adipisicing deserunt anim amet non deserunt ",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "",
+          "type" : "CONTENT"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
     },
     "tab_content" : {
       "select_media_type" : "image",
@@ -681,7 +928,39 @@
       "select_video_type" : "vimeo",
       "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
       "vimeo_id" : "706460799",
-      "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>"
+      "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>",
+      "include_button" : false,
+      "button_group" : [ {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      }, {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      } ]
     }
   }, {
     "tab" : {
@@ -695,7 +974,16 @@
       },
       "icon_field" : { },
       "custom_icon" : "barricade",
-      "caption" : "Adipisicing deserunt anim amet non deserunt "
+      "caption" : "Adipisicing deserunt anim amet non deserunt ",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "",
+          "type" : "CONTENT"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
     },
     "tab_content" : {
       "select_media_type" : "image",
@@ -712,7 +1000,39 @@
       "select_video_type" : "vimeo",
       "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
       "vimeo_id" : "706460799",
-      "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>"
+      "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>",
+      "include_button" : false,
+      "button_group" : [ {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      }, {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      } ]
     }
   }, {
     "tab" : {
@@ -726,7 +1046,16 @@
       },
       "icon_field" : { },
       "custom_icon" : "barricade",
-      "caption" : "Adipisicing deserunt anim amet non deserunt "
+      "caption" : "Adipisicing deserunt anim amet non deserunt ",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "",
+          "type" : "CONTENT"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
     },
     "tab_content" : {
       "select_media_type" : "image",
@@ -743,7 +1072,39 @@
       "select_video_type" : "vimeo",
       "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
       "vimeo_id" : "706460799",
-      "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>"
+      "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>",
+      "include_button" : false,
+      "button_group" : [ {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      }, {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      } ]
     }
   }, {
     "tab" : {
@@ -757,7 +1118,16 @@
       },
       "icon_field" : { },
       "custom_icon" : "barricade",
-      "caption" : "Adipisicing deserunt anim amet non deserunt "
+      "caption" : "Adipisicing deserunt anim amet non deserunt ",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "href" : "",
+          "type" : "CONTENT"
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
     },
     "tab_content" : {
       "select_media_type" : "image",
@@ -774,7 +1144,39 @@
       "select_video_type" : "vimeo",
       "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
       "vimeo_id" : "706460799",
-      "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>"
+      "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>",
+      "include_button" : false,
+      "button_group" : [ {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      }, {
+        "button_type" : "std",
+        "button_style" : "hs-button",
+        "button_theme" : "theme1",
+        "button_text" : "Button",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "enable_arrow" : false
+      } ]
     }
   } ]
 }, {

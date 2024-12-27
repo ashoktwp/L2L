@@ -21,10 +21,17 @@ body {
     gap: 30px;
     max-width: 100%;
     margin: 0;
+    justify-content: center;
 
     .team_item {
       padding: 0;
-      flex: 1;
+      width: 100%;
+      @include tabletvertmin {
+        width: calc((100% - 30px) / 2);
+      }
+      @include tabletMinlarge {
+        width: calc((100% - 60px) / 3);
+      }
 
       &.card_reverse_text {
         .team_item_inn {
@@ -123,10 +130,16 @@ body {
           margin-bottom: 10px;
           margin-left: auto;
           margin-right: auto;
-
-          img {
-            object-fit: cover;
+          .team_img_inn {
             height: 100%;
+            width: 100%;
+            img {
+              height: 100%;
+              -o-object-fit: cover;
+              object-fit: cover;
+              width: 100%;
+              object-position: right;
+            }
           }
 
           @include tabletvert {

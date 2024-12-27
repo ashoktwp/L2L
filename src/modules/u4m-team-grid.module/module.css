@@ -32,10 +32,21 @@ body.overflow-hidden {
   gap: 30px;
   max-width: 100%;
   margin: 0;
+  justify-content: center;
 }
 .u4m-team-grid .team_grid_row .team_item {
   padding: 0;
-  flex: 1;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .u4m-team-grid .team_grid_row .team_item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 1200px) {
+  .u4m-team-grid .team_grid_row .team_item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 .u4m-team-grid .team_grid_row .team_item.card_reverse_text .team_item_inn .member_position {
   color: #fff;
@@ -119,10 +130,17 @@ body.overflow-hidden {
   margin-left: auto;
   margin-right: auto;
 }
-.u4m-team-grid .team_grid_row .team_item .team_item_inn .team_img img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.u4m-team-grid .team_grid_row .team_item .team_item_inn .team_img .team_img_inn {
   height: 100%;
+  width: 100%;
+}
+.u4m-team-grid .team_grid_row .team_item .team_item_inn .team_img .team_img_inn img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  -o-object-position: right;
+     object-position: right;
 }
 @media (max-width: 767px) {
   .u4m-team-grid .team_grid_row .team_item .team_item_inn .team_img {

@@ -660,6 +660,16 @@
     "default" : {
       "select_color" : "frostee_bg"
     }
+  }, {
+    "id" : "d00420e6-0f35-3d03-dc64-12f0421a8739",
+    "name" : "enable_slider",
+    "display_width" : null,
+    "label" : "Enable Slider",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -668,7 +678,8 @@
   "default" : {
     "background_settings" : {
       "select_color" : "frostee_bg"
-    }
+    },
+    "enable_slider" : true
   }
 }, {
   "id" : "module_overrides",
@@ -1077,7 +1088,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "white_bg",
+      "select_color" : "mint_cream_bg",
       "select_gradient" : ""
     }
   }, {
@@ -1147,10 +1158,10 @@
   "type" : "group",
   "default" : {
     "enable_overrides" : true,
-    "top_margin" : "top-margin-default",
+    "top_margin" : "top-margin-none",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
-    "bottom_margin" : "bottom-margin-default",
+    "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
     "top_padding" : "top-padding-default",
@@ -1168,7 +1179,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "select_color" : "white_bg",
+      "select_color" : "mint_cream_bg",
       "select_gradient" : ""
     },
     "container" : {
