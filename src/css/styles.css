@@ -3743,7 +3743,6 @@ section[class*=u4m-] {
   margin-bottom: 24rem;
 }
 .intro_content .intro_desc {
-  opacity: 0.66;
   margin-bottom: 36px;
   max-width: 760px;
   margin-left: auto;
@@ -3751,6 +3750,10 @@ section[class*=u4m-] {
 }
 .intro_content .intro_desc p:last-child {
   margin: 0;
+}
+
+.intro_desc {
+  opacity: 0.66;
 }
 
 .intro_btn_wrap {
@@ -11770,6 +11773,14 @@ header .hd_hgh .hd_wrap .hd_inr .hd_menu .megamenu_inr > ul > li > a .icon svg {
   fill: #c0fc95 !important;
   display: block !important;
 }
+header .hd_hgh .hd_wrap .hd_inr .hd_menu .megamenu_inr > ul > li.support .child_wrapper {
+  margin-right: 13%;
+}
+@media (max-width: 1280px) {
+  header .hd_hgh .hd_wrap .hd_inr .hd_menu .megamenu_inr > ul > li.support .child_wrapper {
+    margin-right: 5%;
+  }
+}
 header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper {
   visibility: hidden;
   opacity: 0;
@@ -11903,6 +11914,11 @@ header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .
 }
 header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .hdcard_img {
   margin-bottom: 16px;
+}
+@media (max-width: 1024px) {
+  header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .hdcard_img {
+    max-width: 300px;
+  }
 }
 header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .hdcard_cnt p {
   font-size: 14rem;

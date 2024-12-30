@@ -26,9 +26,11 @@ body {
     .team_item {
       padding: 0;
       width: 100%;
+
       @include tabletvertmin {
         width: calc((100% - 30px) / 2);
       }
+
       @include tabletMinlarge {
         width: calc((100% - 60px) / 3);
       }
@@ -130,9 +132,11 @@ body {
           margin-bottom: 10px;
           margin-left: auto;
           margin-right: auto;
+
           .team_img_inn {
             height: 100%;
             width: 100%;
+
             img {
               height: 100%;
               -o-object-fit: cover;
@@ -256,17 +260,7 @@ body {
               text-align: center;
               transition: all 0.3s ease-in-out;
 
-              &:hover {
-                transform: translateY(-12px);
 
-                &:before {
-                  opacity: 0;
-                }
-
-                &::after {
-                  opacity: 0;
-                }
-              }
 
               &:after {
                 content: "";
@@ -350,11 +344,14 @@ body {
               display: inline-block;
               border-radius: 3px;
               padding: 4px 7px;
-              line-height: 2.35714286;
               font-weight: 600;
               margin-bottom: 27px;
               font-family: $secondaryFont;
               color: $Menthol;
+            }
+
+            .des {
+              opacity: 0.66;
             }
 
             p {

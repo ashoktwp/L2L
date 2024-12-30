@@ -560,7 +560,6 @@ section[class*="u4m-"] {
   }
 
   .intro_desc {
-    opacity: 0.66;
     margin-bottom: 36px;
     max-width: 760px;
     margin-left: auto;
@@ -570,6 +569,10 @@ section[class*="u4m-"] {
       margin: 0;
     }
   }
+}
+
+.intro_desc {
+  opacity: 0.66;
 }
 
 .intro_btn_wrap {

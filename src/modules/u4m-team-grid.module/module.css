@@ -245,15 +245,6 @@ body.overflow-hidden {
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
-.u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_img_col .popup_img_inn:hover {
-  transform: translateY(-12px);
-}
-.u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_img_col .popup_img_inn:hover:before {
-  opacity: 0;
-}
-.u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_img_col .popup_img_inn:hover::after {
-  opacity: 0;
-}
 .u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_img_col .popup_img_inn:after {
   content: "";
   height: calc(100% + 2px);
@@ -336,11 +327,13 @@ body.overflow-hidden {
   display: inline-block;
   border-radius: 3px;
   padding: 4px 7px;
-  line-height: 2.35714286;
   font-weight: 600;
   margin-bottom: 27px;
   font-family: "Inter";
   color: #c0fc95;
+}
+.u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_cnt .des {
+  opacity: 0.66;
 }
 .u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_cnt p {
   margin-top: 0;

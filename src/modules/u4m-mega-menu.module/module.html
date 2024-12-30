@@ -3,7 +3,7 @@
 
 		<ul class="main_menu">
 			{% for item in module.add_menus %}
-			<li>
+			<li class="{{ item.menu_text|lower|replace(' ','') }}">
 				{% set href = item.menu_link.url.href %}
 				{% if item.menu_link.url.type is equalto "EMAIL_ADDRESS" %}
 				{% set href = "mailto:" + href %}

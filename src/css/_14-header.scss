@@ -55,6 +55,8 @@ header {
                                 }
                             }
 
+
+
                             &>a {
                                 color: $white;
                                 @include size14;
@@ -81,6 +83,14 @@ header {
                                         fill: $Menthol !important;
                                         display: block !important;
                                     }
+                                }
+                            }
+
+                            &.support .child_wrapper {
+                                margin-right: 13%;
+
+                                @include navbreak {
+                                    margin-right: 5%;
                                 }
                             }
                         }
@@ -246,6 +256,10 @@ header {
 
                                 .hdcard_img {
                                     margin-bottom: 16px;
+
+                                    @include tablet {
+                                        max-width: 300px;
+                                    }
                                 }
 
                                 .hdcard_cnt p {
@@ -428,6 +442,8 @@ header {
                                     justify-content: space-between;
                                     flex-wrap: wrap;
                                     position: relative;
+
+
 
                                     &>a {
                                         display: block;

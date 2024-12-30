@@ -10,6 +10,10 @@
             font-weight: 500;
         }
 
+        .intro_desc {
+            color: $baseColor;
+        }
+
         margin-bottom: 61px;
     }
 
@@ -52,6 +56,13 @@
                 .inner_wrpp {
                     height: 100%;
 
+                    @include tabletvert {
+                        margin: 0 auto;
+                        max-width: 300px;
+                        padding-top: 30px;
+                    }
+
+
                     img {
                         object-fit: cover;
                         height: 100% !important;
@@ -76,6 +87,10 @@
                     margin: 0;
                     text-align: left;
 
+                    @include tabletvert {
+                        text-align: center;
+                    }
+
                     h3.member_name {
                         line-height: 1.78125;
                         margin: 0;
@@ -95,6 +110,11 @@
                         align-items: center;
                         width: fit-content;
                         margin-bottom: 37px;
+
+                        @include tabletvert {
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
 
                         &.theme_text {
                             color: $Forest_Green;
@@ -129,6 +149,10 @@
                             list-style: none;
                             display: flex;
                             gap: 20px;
+
+                            @include tabletvert {
+                                justify-content: center;
+                            }
 
                             li {
                                 margin: 0;
