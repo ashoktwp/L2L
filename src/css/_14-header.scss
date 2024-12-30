@@ -140,19 +140,21 @@ header {
                                     display: flex;
                                     gap: 9px;
 
+                                    svg line {
+                                        STROKE: $Menthol !important;
+                                    }
+
+                                    svg polyline {
+                                        STROKE: $Menthol !important;
+                                    }
+
                                     &:hover {
                                         color: $Menthol;
 
                                         .arrow {
                                             margin-left: 5px;
 
-                                            svg line {
-                                                STROKE: $Menthol !important;
-                                            }
 
-                                            svg polyline {
-                                                STROKE: $Menthol !important;
-                                            }
                                         }
                                     }
 

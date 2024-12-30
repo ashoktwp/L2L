@@ -943,6 +943,16 @@
       "color" : null,
       "opacity" : null
     }
+  }, {
+    "id" : "f43585e9-f308-f5fd-d905-8c3580778823",
+    "name" : "apply_content_opacity",
+    "display_width" : null,
+    "label" : "Apply Content Opacity",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -954,7 +964,8 @@
     "color" : {
       "color" : null,
       "opacity" : null
-    }
+    },
+    "apply_content_opacity" : true
   }
 }, {
   "id" : "module_overrides",

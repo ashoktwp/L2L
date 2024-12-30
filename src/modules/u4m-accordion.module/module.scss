@@ -14,9 +14,10 @@
   .acc_item {
     margin-bottom: 12px;
     background-color: $white;
+    border-radius: $border3;
 
     .acc_ttl {
-      padding: 30px 60px 27px 36px;
+      padding: 30px 70px 27px 36px;
       position: relative;
       cursor: pointer;
 
@@ -37,12 +38,15 @@
 
       &:hover .plus,
       &.active .plus {
-        transform: rotate(45deg);
         background-color: $Medium_Sea_Green;
 
         svg line {
           stroke: $white !important;
         }
+      }
+
+      &.active .plus {
+        transform: rotate(45deg);
       }
 
       .plus {

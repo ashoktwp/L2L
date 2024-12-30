@@ -5,7 +5,10 @@
   <video class="video-bg" autoplay muted loop playsinline>
     <source src="{{ module.module_overrides.background_settings.bg_video }}" type="video/mp4">
   </video>
-  <div class="overlay-color" style="background-color:rgb({{ module.module_overrides.background_settings.overlay_color.color|convert_rgb }},
+
+  {% endif %}
+  {% if module.module_overrides.background_settings.background_type == 'video' || module.module_overrides.background_settings.background_type == 'image'  %}
+  <div class="bg_overlay overlay-color {% if module.module_overrides.background_settings.include_overlay_on_mobile %}onmb{% endif %}" style="background-color:rgb({{ module.module_overrides.background_settings.overlay_color.color|convert_rgb }},
                                     {{ module.module_overrides.background_settings.overlay_color.opacity*0.01 }})">
   
   </div>

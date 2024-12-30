@@ -9,7 +9,7 @@
   <div class='two-col-content'>
     {% for item in module.content %}
     <div class='two-col-content-item {{item.content_alignment}}'>
-      <div class="content-col {{ item.text_alignment }}-align">
+      <div class="content-col {{ item.text_alignment }}-align {% if module.module_settings.apply_content_opacity %}opacity{% endif %}">
         {% if item.content.include_eyebrow_text %}
         <div class="eyebrow_text">
           {{ item.content.eyebrow_text }}
@@ -20,7 +20,9 @@
           {{ item.content.heading }}
         </h2>
         {% endif %}
+        <div class="cnt">
         {{ item.content.content }}
+        </div>
 
         {{macros.buttonGroup(item.content.button_group)}}
 

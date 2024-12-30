@@ -560,7 +560,11 @@ section[class*="u4m-"] {
   }
 
   .intro_desc {
+    opacity: 0.66;
     margin-bottom: 36px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
 
     p:last-child {
       margin: 0;
@@ -615,6 +619,7 @@ section[class*="u4m-"] {
 
   .intro_title {
     margin-bottom: 16rem;
+    margin-top: 0;
   }
 
   .intro_desc {
@@ -800,24 +805,31 @@ section[class*="u4m-"] {
 .tag_case-studies:before {
   background: $YellowWarm;
 }
+
 .tag_ebook:before {
   background: $Prismic_mango;
 }
+
 .tag_webinar:before {
   background: $Menthol;
 }
+
 .tag_interactive-tools:before {
   background: $SprayDopely;
 }
+
 .tag_videos:before {
   background: $Lavender;
 }
+
 .tag_white-papers:before {
   background: $teaGreen;
 }
+
 .tag_events:before {
   background: $Sea_Green;
 }
+
 .tag_podcast:before {
   background: $white;
 }

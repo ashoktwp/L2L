@@ -415,6 +415,18 @@
     "type" : "text",
     "default" : "%"
   }, {
+    "id" : "584fe645-d1ab-3200-625d-f73473c071eb",
+    "name" : "suffix",
+    "display_width" : null,
+    "label" : "Suffix",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : ""
+  }, {
     "id" : "8f278220-6ac5-db43-9fb5-04d061f0bfb4",
     "name" : "caption",
     "display_width" : null,
@@ -433,21 +445,25 @@
   "type" : "group",
   "default" : [ {
     "prefix" : "-",
+    "suffix" : "",
     "numeric_stat" : 54,
     "stat_unit" : "%",
     "caption" : "Less Downtime"
   }, {
     "prefix" : "-",
+    "suffix" : "",
     "numeric_stat" : 54,
     "stat_unit" : "%",
     "caption" : "Less Downtime"
   }, {
     "prefix" : "-",
+    "suffix" : "",
     "numeric_stat" : 54,
     "stat_unit" : "%",
     "caption" : "Less Downtime"
   }, {
     "prefix" : "-",
+    "suffix" : "",
     "numeric_stat" : 54,
     "stat_unit" : "%",
     "caption" : "Less Downtime"
