@@ -1,3 +1,47 @@
+var filterlabeln = document.querySelectorAll(".filter_label");
+
+filterlabeln.forEach((label) => {
+  label.addEventListener("click", (event) => {
+    event.currentTarget.parentElement.classList.toggle("dropdownopen");
+  });
+});
+
+document.querySelectorAll(".filter_label").forEach((filterLabel) => {
+  filterLabel.addEventListener("click", function (e) {
+    const selctArrow = this.parentElement;
+    const siblings = Array.from(selctArrow.parentElement.children).filter(
+      (child) => child !== selctArrow
+    );
+    siblings.forEach((sibling) => sibling.classList.remove("dropdownopen"));
+    e.stopPropagation();
+  });
+});
+
+document.body.addEventListener("click", function () {
+  document.querySelectorAll(".selctArrow").forEach((selctArrow) => {
+    selctArrow.classList.remove("dropdownopen");
+  });
+});
+
+document.querySelectorAll(".filter_label").forEach((filterLabel) => {
+  filterLabel.addEventListener("click", function () {
+    const selctArrow = this.parentElement;
+
+    const siblings = Array.from(selctArrow.parentElement.children).filter(
+      (child) => child !== selctArrow
+    );
+    siblings.forEach((sibling) => sibling.classList.remove("dropdownopen"));
+  });
+});
+
+document.querySelectorAll(".filter_dropdown").forEach((filterDropdown) => {
+  filterDropdown.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
+});
+
+//
+
 const wrapper = document.querySelector(".resourceList");
 const pagination = document.querySelector(".pagination");
 const items = Array.from(document.querySelectorAll(".resourceCard"));
@@ -5,23 +49,43 @@ let filteredItems = items;
 let currPage = 1;
 const TagSelect = document.querySelector(".resourceSelect");
 const TopicSelect = document.querySelector(".topicSelect");
+const TypeSelectCheck = document.querySelectorAll(".typeSelect .filter_input");
 const searchField = document.querySelector(".resourceInput");
+const TypeSelectLabel = document.querySelector(".type_filter_label");
 
-function filterItems(el, keyword, type, category) {
+// ===================
+function filterItems(el, keyword, type, topic) {
   const title = el.querySelector(".restitle").innerText.toLowerCase();
   const hasKeyword = !keyword || title.includes(keyword);
-  const isOfType = !type || el.classList.contains(type);
-  const isOfcategory = !category || el.classList.contains(category);
 
-  return hasKeyword && isOfType && isOfcategory;
+  const isOfType =
+    !type?.length || type.some((filter) => el.classList.contains(filter));
+  const isOfTopic = !topic || el.classList.contains(topic);
+
+  console.log(hasKeyword);
+  return hasKeyword && isOfType && isOfTopic;
 }
 
-function MainLogic() {
-  const keyword = searchField.value;
-  const type = TagSelect.value;
-  const topic = TopicSelect.value;
+let typeArrayValues = "";
 
-  filteredItems = items.filter((el) => filterItems(el, keyword, type, topic));
+function typeArrayUpdate(value) {
+  typeArrayValues = value;
+}
+
+function printTypeArrayUpdate() {
+  return typeArrayValues;
+}
+
+function MainLogic(reset = false, inputValue, typeValues, topicValues) {
+  const keywordText = inputValue || searchField.value;
+  const keyword = keywordText.toLowerCase();
+  const typeCheck = typeValues;
+  const topic = topicValues;
+
+  filteredItems = reset
+    ? items
+    : items.filter((el) => filterItems(el, keyword, typeCheck, topic));
+
   currPage = 1;
 
   if (filteredItems.length !== 0) {
@@ -142,25 +206,112 @@ function setHTML(items) {
   nav.innerHTML = paginationHTML;
   pagination.append(nav);
 
+  nav.classList.add("count" + totalPages);
   const start = (currentPage - 1) * pageSize;
   const end = currentPage * pageSize;
   items.slice(start, end).forEach((el) => {
     wrapper.append(el);
   });
 }
-TagSelect.addEventListener("change", (f) => {
-  f.preventDefault();
-  MainLogic();
-});
 
-TopicSelect.addEventListener("change", (f) => {
-  f.preventDefault();
-  MainLogic();
-});
+var params = new URLSearchParams(window.location.search);
+var typeParam = params.get("type");
+
+var typeArray = typeParam?.length > 0 ? typeParam?.split(",") : [];
+
+// ==========
 
 searchField.addEventListener("keyup", (g) => {
   g.preventDefault();
-  MainLogic();
+  const getInputVaue = $(this).value;
+  const topicSelectValue = TopicSelect.value;
+  MainLogic(
+    typeArray?.length > 0 || topicSelectValue?.length > 0 ? false : true,
+    getInputVaue,
+    typeArray,
+    topicSelectValue
+  );
+});
+
+TypeSelectCheck.forEach((checkbox) => {
+  checkbox.addEventListener("change", (event) => {
+    const value = event.target.value;
+    var url = window.location.href.split("?")[0];
+    var newUrl;
+
+    const inputValue = searchField.value;
+
+    let topicSelectValue = TopicSelect.value;
+
+    if (event.target.checked) {
+      if (value?.length > 0) {
+        typeArray.push(value);
+      }
+    } else {
+      event.target.removeAttribute("checked");
+      typeArray.splice(typeArray.indexOf(value), 1);
+    }
+
+    var printValue = typeArray;
+    if (typeArray != "") {
+      TypeSelectLabel.textContent = printValue
+        ?.map((tag) => tag.trim())
+        ?.map((tag) =>
+          tag
+            .split("-")
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ")
+        )
+        .join(", ");
+    } else {
+      TypeSelectLabel.textContent = "Filter by Topic";
+    }
+
+    if (typeArray != "" || topicSelectValue != "") {
+      if (window.location.href.indexOf("?") > 0) {
+        newUrl =
+          url + "?topic=" + topicSelectValue + "&type=" + typeArray.join(",");
+      } else {
+        newUrl =
+          url + "?topic=" + topicSelectValue + "&type=" + typeArray.join(",");
+      }
+      window.history.pushState({ path: newUrl }, "", newUrl);
+    } else {
+      window.history.pushState({ path: url }, "", url);
+    }
+    typeArrayUpdate(typeArray);
+    MainLogic(
+      typeArray?.length > 0 || topicSelectValue?.length > 0 ? false : true,
+      inputValue,
+      typeArray,
+      topicSelectValue
+    );
+  });
+});
+
+// ==============
+TopicSelect.addEventListener("change", (f) => {
+  f.preventDefault();
+  const getValue = f.target.value;
+  var url = window.location.href.split("?")[0];
+  const inputValue = searchField.value;
+
+  if (typeArray != "" || getValue != "") {
+    if (window.location.href.indexOf("?") > 0) {
+      newUrl = url + "?topic=" + getValue + "&type=" + typeArray.join(",");
+    } else {
+      newUrl = url + "?topic=" + getValue + "&type=" + typeArray.join(",");
+    }
+    window.history.pushState({ path: newUrl }, "", newUrl);
+  } else {
+    window.history.pushState({ path: url }, "", url);
+  }
+  MainLogic(
+    typeArray?.length > 0 || getValue?.length > 0 ? false : true,
+    inputValue,
+    typeArray,
+    getValue
+  );
 });
 
 document.addEventListener("click", (e) => {

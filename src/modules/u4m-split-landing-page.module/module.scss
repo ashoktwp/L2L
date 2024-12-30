@@ -57,6 +57,25 @@
             fill: currentColor;
           }
         }
+
+        img {
+          width: 18px;
+          vertical-align: middle;
+        }
+
+        span {
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          vertical-align: middle;
+
+          svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+            vertical-align: middle;
+          }
+        }
       }
     }
     .intro_title {

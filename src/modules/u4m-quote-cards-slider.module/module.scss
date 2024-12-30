@@ -35,6 +35,9 @@ section.u4m-quote-cards-slider {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+      @include tabletvert {
+        padding: 42px 32px;
+      }
       .top-img {
         padding-bottom: 36px;
         img {
@@ -62,7 +65,11 @@ section.u4m-quote-cards-slider {
       }
       .slide-content {
         margin-bottom: 24px;
-        background: linear-gradient(to bottom, $Forest_Green 0%, rgba($Forest_Green, 0.66) 100%);
+        background: linear-gradient(
+          to bottom,
+          $Forest_Green 0%,
+          rgba($Forest_Green, 0.66) 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;

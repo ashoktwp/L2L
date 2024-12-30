@@ -102,6 +102,127 @@
     "type" : "text",
     "default" : "CASE STUDY"
   }, {
+    "id" : "60c6c44c-5b96-ddb4-2ac1-ced58d8bbbd1",
+    "name" : "include_eyebrowtext_icon",
+    "display_width" : null,
+    "label" : "Include Eyebrowtext Icon",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "5816840c-4dac-2d90-e3c6-b838a85c262c",
+    "name" : "eyebrow_text_icon",
+    "display_width" : null,
+    "label" : "Eyebrow Text Icon",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_eyebrowtext_icon",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "705a3b78-caef-b696-91fd-de91909b5351",
+      "name" : "select_icon_type",
+      "display_width" : null,
+      "label" : "Select Icon Type",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.include_eyebrowtext_icon",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "image", "Image" ], [ "icon", "Icon" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "image"
+    }, {
+      "id" : "a1eebd37-e594-13ad-50e6-2262dd02310a",
+      "name" : "icom_image",
+      "display_width" : null,
+      "label" : "Icom Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.eyebrow_text_icon.select_icon_type",
+        "controlling_value_regex" : "image",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/chart_icon.svg",
+        "alt" : "chart_icon",
+        "loading" : "lazy",
+        "width" : 18,
+        "height" : 18,
+        "max_width" : 18,
+        "max_height" : 18
+      }
+    }, {
+      "id" : "8ebaa0d4-980e-2e5d-0f8b-5896201e33b6",
+      "name" : "icon",
+      "display_width" : null,
+      "label" : "Icon",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.eyebrow_text_icon.select_icon_type",
+        "controlling_value_regex" : "icon",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "icon_set" : "fontawesome-5.14.0",
+      "type" : "icon",
+      "default" : {
+        "name" : "Check",
+        "unicode" : "f00c",
+        "type" : "SOLID"
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : {
+      "select_icon_type" : "image",
+      "icom_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/chart_icon.svg",
+        "alt" : "chart_icon",
+        "loading" : "lazy",
+        "width" : 18,
+        "height" : 18,
+        "max_width" : 18,
+        "max_height" : 18
+      },
+      "icon" : {
+        "name" : "Check",
+        "unicode" : "f00c",
+        "type" : "SOLID"
+      }
+    }
+  }, {
     "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
     "name" : "include_heading",
     "display_width" : null,
@@ -414,6 +535,25 @@
     },
     "include_eyebrow_text" : true,
     "eyebrow_text" : "CASE STUDY",
+    "include_eyebrowtext_icon" : true,
+    "eyebrow_text_icon" : {
+      "select_icon_type" : "image",
+      "icom_image" : {
+        "size_type" : "auto",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/chart_icon.svg",
+        "alt" : "chart_icon",
+        "loading" : "lazy",
+        "width" : 18,
+        "height" : 18,
+        "max_width" : 18,
+        "max_height" : 18
+      },
+      "icon" : {
+        "name" : "Check",
+        "unicode" : "f00c",
+        "type" : "SOLID"
+      }
+    },
     "include_heading" : true,
     "heading_size" : "h2",
     "heading" : "Nunc et libero egestas heit ur feugiat mauris",
@@ -1071,8 +1211,8 @@
     "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
-    "top_padding" : "top-padding-default",
-    "custom_top_padding" : 100,
+    "top_padding" : "top-padding-custom",
+    "custom_top_padding" : 194,
     "custom_top_padding_mobile" : 50,
     "bottom_padding" : "bottom-padding-default",
     "custom_bottom_padding" : 100,
