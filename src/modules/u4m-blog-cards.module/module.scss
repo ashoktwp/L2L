@@ -90,6 +90,7 @@
               $white 0%,
               rgba($white, 0) 100%
             );
+            background: transparent;
             border-radius: 34px;
             &:before,
             &:after {
@@ -125,6 +126,7 @@
               rgba($white, 0) 100%
             );
             border-radius: 34px;
+            background: transparent;
             .featured-img {
               img {
                 border-radius: 21px;

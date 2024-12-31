@@ -148,7 +148,7 @@
           width: 7px;
           height: 7px;
           border-radius: 100%;
-          background: $white; 
+          background: $white;
         }
       }
     }
@@ -373,6 +373,10 @@
               margin-top: auto;
             }
           }
+        }
+
+        &:hover .post-item-inner {
+          background: transparent;
         }
       }
     }
