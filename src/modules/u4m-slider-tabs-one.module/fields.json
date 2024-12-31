@@ -548,13 +548,13 @@
       "type" : "image",
       "default" : {
         "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/image.png",
-        "alt" : "image",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/improve.png",
+        "alt" : "improve",
         "loading" : "lazy",
-        "width" : 1194,
-        "height" : 684,
-        "max_width" : 1194,
-        "max_height" : 684
+        "width" : 612,
+        "height" : 396,
+        "max_width" : 612,
+        "max_height" : 396
       }
     }, {
       "id" : "cd38eb59-935f-8880-e2b0-c2c948a9dcec",
@@ -577,7 +577,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "vimeo"
+      "default" : ""
     }, {
       "picker" : "video",
       "id" : "e45e8269-6293-91b9-b46a-eb640f2cca31",
@@ -840,15 +840,15 @@
       "select_media_type" : "image",
       "image_field" : {
         "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/image.png",
-        "alt" : "image",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/improve.png",
+        "alt" : "improve",
         "loading" : "lazy",
-        "width" : 1194,
-        "height" : 684,
-        "max_width" : 1194,
-        "max_height" : 684
+        "width" : 612,
+        "height" : 396,
+        "max_width" : 612,
+        "max_height" : 396
       },
-      "select_video_type" : "vimeo",
+      "select_video_type" : "",
       "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
       "vimeo_id" : "706460799",
       "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>",
@@ -917,15 +917,15 @@
       "select_media_type" : "image",
       "image_field" : {
         "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/image.png",
-        "alt" : "image",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/improve.png",
+        "alt" : "improve",
         "loading" : "lazy",
-        "width" : 1194,
-        "height" : 684,
-        "max_width" : 1194,
-        "max_height" : 684
+        "width" : 612,
+        "height" : 396,
+        "max_width" : 612,
+        "max_height" : 396
       },
-      "select_video_type" : "vimeo",
+      "select_video_type" : "",
       "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
       "vimeo_id" : "706460799",
       "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>",
@@ -989,15 +989,15 @@
       "select_media_type" : "image",
       "image_field" : {
         "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/image.png",
-        "alt" : "image",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/improve.png",
+        "alt" : "improve",
         "loading" : "lazy",
-        "width" : 1194,
-        "height" : 684,
-        "max_width" : 1194,
-        "max_height" : 684
+        "width" : 612,
+        "height" : 396,
+        "max_width" : 612,
+        "max_height" : 396
       },
-      "select_video_type" : "vimeo",
+      "select_video_type" : "",
       "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
       "vimeo_id" : "706460799",
       "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>",
@@ -1061,15 +1061,15 @@
       "select_media_type" : "image",
       "image_field" : {
         "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/image.png",
-        "alt" : "image",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/improve.png",
+        "alt" : "improve",
         "loading" : "lazy",
-        "width" : 1194,
-        "height" : 684,
-        "max_width" : 1194,
-        "max_height" : 684
+        "width" : 612,
+        "height" : 396,
+        "max_width" : 612,
+        "max_height" : 396
       },
-      "select_video_type" : "vimeo",
+      "select_video_type" : "",
       "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
       "vimeo_id" : "706460799",
       "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>",
@@ -1133,15 +1133,15 @@
       "select_media_type" : "image",
       "image_field" : {
         "size_type" : "auto",
-        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/image.png",
-        "alt" : "image",
+        "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/improve.png",
+        "alt" : "improve",
         "loading" : "lazy",
-        "width" : 1194,
-        "height" : 684,
-        "max_width" : 1194,
-        "max_height" : 684
+        "width" : 612,
+        "height" : 396,
+        "max_width" : 612,
+        "max_height" : 396
       },
-      "select_video_type" : "vimeo",
+      "select_video_type" : "",
       "select_video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
       "vimeo_id" : "706460799",
       "content" : "<p>Ipsum aliqua cupidatat nulla ut deserunt et ut. Lorem incididunt in proident. Aliqua tempor officia ut ex non est occaecat ut ex duis do do consectetur incididunt. Reprehenderit dolor ut Lorem ut aute culpa mollit deserunt qui laborum ad laborum et est. Ex veniam nulla cillum sint adipisicing tempor non laborum quis esse cillum aliquip ex amet. Deserunt velit eiusmod enim. Ad laborum ullamco do aliquip.</p>",
