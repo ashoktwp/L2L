@@ -376,7 +376,6 @@ html {
     margin-top: 60px;
     width: 100%;
     justify-content: space-between;
-
     .sslider-nav .slick-track {
       transform: none !important;
       width: auto !important;
@@ -481,6 +480,12 @@ html {
     z-index: 1;
     width: 100%;
     min-height: 324px;
+    @include tabletvert {
+      max-width: 582px;
+    }
+    @include phone {
+      max-width: 295px;
+    }
   }
 
   .ctvb-tabtn {
@@ -567,7 +572,11 @@ html {
 
     @include tabletvert {
       min-width: 100%;
-      display: block;
+      display: block;  
+      max-width: 582px;
+    }
+    @include phone {
+      max-width: 295px;
     }
   }
 
@@ -819,13 +828,6 @@ html {
 @include navbreakMin {
   .u4m-slider-tabs-left {
     .ctvb-tabcol.slick-current {
-      max-width: 350px;
-
-      @include tabletvert {
-        max-width: 100%;
-        width: 100%;
-      }
-
       .ctvb-tabtn {
         padding-top: 10px;
       }
