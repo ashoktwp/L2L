@@ -50,7 +50,6 @@ section.u4m-cta-row-1 {
         }
         .intro_wrapp {
           padding: 65px 10px 77px 72px;
-          background: #101813;
           max-width: 565px;
           @include tablet {
             padding: 65px 20px 77px;
@@ -192,6 +191,16 @@ section.u4m-cta-row-1 {
           }
         }
       }
+    }
+  }
+
+  .intro_wrapp {
+    background: $white;
+  }
+
+  &.reverse-text {
+    .intro_wrapp {
+      background: $customDarkBg;
     }
   }
 }

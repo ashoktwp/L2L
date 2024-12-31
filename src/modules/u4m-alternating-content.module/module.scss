@@ -4,56 +4,56 @@ section.u4m-alternating-content {
   padding-top: 90px;
   padding-bottom: 90px;
 
-  .baseColor .content-col>*,
-  .baseColor .intro__inner>*,
+  .baseColor .content-col > *,
+  .baseColor .intro__inner > *,
   .baseColor .intro_btn_wrap .arrow-link:not(:hover) {
     color: $baseColor;
   }
 
-  .prismic_mango_color .content-col>*,
-  .prismic_mango_color .intro__inner>*,
+  .prismic_mango_color .content-col > *,
+  .prismic_mango_color .intro__inner > *,
   .prismic_mango_color .arrow-link:not(:hover) {
     color: $Prismic_mango;
   }
 
-  .menthol_color .content-col>*,
-  .menthol_color .intro__inner>*,
+  .menthol_color .content-col > *,
+  .menthol_color .intro__inner > *,
   .menthol_color .arrow-link:not(:hover) {
     color: $Menthol;
   }
 
-  .l2l_green_color .content-col>*,
-  .l2l_green_color .intro__inner>*,
+  .l2l_green_color .content-col > *,
+  .l2l_green_color .intro__inner > *,
   .l2l_green_color .arrow-link:not(:hover) {
     color: $L2L_green;
   }
 
-  .fern_green_color .content-col>*,
-  .fern_green_color .intro__inner>*,
+  .fern_green_color .content-col > *,
+  .fern_green_color .intro__inner > *,
   .fern_green_color .arrow-link:not(:hover) {
     color: $Fern_green;
   }
 
-  .dark_jungle_color .content-col>*,
-  .dark_jungle_color .intro__inner>*,
+  .dark_jungle_color .content-col > *,
+  .dark_jungle_color .intro__inner > *,
   .dark_jungle_color .arrow-link:not(:hover) {
     color: $Dark_jungle;
   }
 
-  .mystic_green_color .content-col>*,
-  .mystic_green_color .intro__inner>*,
+  .mystic_green_color .content-col > *,
+  .mystic_green_color .intro__inner > *,
   .mystic_green_color .arrow-link:not(:hover) {
     color: $Mystic_green;
   }
 
-  .lime_green_color .content-col>*,
-  .lime_green_color .intro__inner>*,
+  .lime_green_color .content-col > *,
+  .lime_green_color .intro__inner > *,
   .lime_green_color .arrow-link:not(:hover) {
     color: $Lime_Green;
   }
 
-  .white_color .content-col>*,
-  .white_color .intro__inner>*,
+  .white_color .content-col > *,
+  .white_color .intro__inner > *,
   .white_color .arrow-link:not(:hover) {
     color: $White;
   }
@@ -206,5 +206,9 @@ section.u4m-alternating-content {
         flex-direction: column-reverse;
       }
     }
+  }
+
+  .intro_btn_wrap {
+    margin-top: 30px;
   }
 }

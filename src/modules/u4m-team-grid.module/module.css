@@ -139,7 +139,8 @@ body.overflow-hidden {
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
-  object-position: right;
+  -o-object-position: right;
+     object-position: right;
 }
 @media (max-width: 767px) {
   .u4m-team-grid .team_grid_row .team_item .team_item_inn .team_img {
@@ -207,7 +208,8 @@ body.overflow-hidden {
   opacity: 0.9;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .u4m-team-grid .team_popup .team_popup_container {
   max-width: 1236px;
@@ -286,7 +288,8 @@ body.overflow-hidden {
   width: 100%;
 }
 .u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_img_col .popup_img_inn img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 342px;
   height: 342px;
   border-radius: 8px;
@@ -355,7 +358,8 @@ body.overflow-hidden {
 .u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_cnt .member_share ul li img {
   width: 21px;
   height: 21px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .u4m-team-grid .team_popup .team_popup_container .team_popup_row .team_popup_inn .popup_cnt .member_share ul li svg {
   fill: #fff;

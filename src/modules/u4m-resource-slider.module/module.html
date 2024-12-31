@@ -38,11 +38,18 @@
                   <a href="{{row.select_resource.columns.link}}">
                     <img src="{{ row.select_resource.columns.image.url }}" alt="{{ row.select_resource.columns.name | striptags }}">
                   </a>
-                  <div class='featured-tag tag_{{ row.select_resource.columns.topic.name|lower|replace(' ','-') }}'>{{ row.select_resource.columns.topic.name }}</div>
+                  {% if row.select_resource.columns.type.name %}
+                  <div class='featured-tag tag_{{ row.select_resource.columns.type.name|lower|replace(' ','-') }}'>{{ row.select_resource.columns.type.name }}</div>
+                  {% endif %}
+
                 </div>
                 {% endif %}
                 <div class="post-content">
-                  <div class='post-item-topic'>{{ row.select_resource.columns.type.name }}</div>
+                  {% if row.select_resource.columns.topics_tags %}
+                  <div class='post-item-topic'>
+                    {% for tag in row.select_resource.columns.topics_tags %}{% if loop.index == 1%}{{ tag.name|lower|replace(' ','-') }}{% endif %}{% endfor %} 
+                  </div>
+                  {% endif %}
                   <h4 class="resourcetitle">
                     <a href="{{ row.select_resource.columns.link }}">{{ row.select_resource.columns.name }}</a>
                   </h4>
@@ -71,11 +78,16 @@
                   <a href="{{row.link}}">
                     <img src="{{ row.image.url }}" alt="{{ row.name | striptags }}">
                   </a>
-                  <div class='featured-tag tag_{{ row.topic.name|lower|replace(' ','-') }}'>{{ row.topic.name }}</div>
+{#                   <div class='featured-tag tag_{{ row.topic.name|lower|replace(' ','-') }}'>{{ row.topic.name }}</div> #}
+                  {% if row.type.name %}
+                  <div class='featured-tag tag_{{ row.type.name|lower|replace(' ','-') }}'>{{ row.type.name }}</div>
+                  {% endif %}
                 </div>
                 {% endif %}
                 <div class="post-content">
-                  <div class='post-item-topic'>{{ row.type.name }}</div>
+                  <div class='post-item-topic'>
+                    {% for tag in row.topics_tags %}{% if loop.index == 1%}{{ tag.name|lower|replace(' ','-') }}{% endif %}{% endfor %}
+                  </div>
                   <h4 class="resourcetitle">
                     <a href="{{ row.link }}">{{ row.name }}</a>
                   </h4>
