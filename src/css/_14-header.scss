@@ -55,6 +55,8 @@ header {
                                 }
                             }
 
+
+
                             &>a {
                                 color: $white;
                                 @include size14;
@@ -81,6 +83,14 @@ header {
                                         fill: $Menthol !important;
                                         display: block !important;
                                     }
+                                }
+                            }
+
+                            &.support .child_wrapper {
+                                margin-right: 13%;
+
+                                @include navbreak {
+                                    margin-right: 5%;
                                 }
                             }
                         }
@@ -140,19 +150,21 @@ header {
                                     display: flex;
                                     gap: 9px;
 
+                                    svg line {
+                                        STROKE: $Menthol !important;
+                                    }
+
+                                    svg polyline {
+                                        STROKE: $Menthol !important;
+                                    }
+
                                     &:hover {
                                         color: $Menthol;
 
                                         .arrow {
                                             margin-left: 5px;
 
-                                            svg line {
-                                                STROKE: $Menthol !important;
-                                            }
 
-                                            svg polyline {
-                                                STROKE: $Menthol !important;
-                                            }
                                         }
                                     }
 
@@ -244,6 +256,10 @@ header {
 
                                 .hdcard_img {
                                     margin-bottom: 16px;
+
+                                    @include tablet {
+                                        max-width: 300px;
+                                    }
                                 }
 
                                 .hdcard_cnt p {
@@ -426,6 +442,8 @@ header {
                                     justify-content: space-between;
                                     flex-wrap: wrap;
                                     position: relative;
+
+
 
                                     &>a {
                                         display: block;

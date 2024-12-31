@@ -14,6 +14,7 @@
           {% if item.prefix %}<span class="prefix">{{ item.prefix }}</span>{% endif %}
           <span class="number counter-value" data-count="{{ item.numeric_stat }}">0</span>
           {% if item.stat_unit %}<span class="unit">{{ item.stat_unit }}</span>{% endif %}
+          {% if item.suffix %}<span class="prefix">{{ item.suffix }}</span>{% endif %}
         </div>
         {% if item.caption %}
         <div class="statistics_caption">

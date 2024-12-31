@@ -67,18 +67,26 @@
         <div class="srchSection">
           <input type="text" id="filterTitle{{ name|replace('widget_','')|replace('module_','') }}" placeholder="Search..." class="resourceInput">
           <div class="Searchbtn">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.29922C0 2.82065 2.82065 0 6.29923 0C9.7778 0 12.5985 2.82065 12.5985 6.29922C12.5985 7.78304 12.0805 9.15487 11.2196 10.2327L13.7953 12.8084C14.0682 13.0814 14.0682 13.5223 13.7953 13.7953C13.5223 14.0683 13.0814 14.0683 12.8084 13.7953L10.2327 11.2196C9.15487 12.0805 7.79004 12.5984 6.29923 12.5984C2.82065 12.5984 0 9.7778 0 6.29922ZM6.29923 1.39983C3.59056 1.39983 1.39983 3.59056 1.39983 6.29922C1.39983 9.00789 3.59056 11.1986 6.29923 11.1986C7.65006 11.1986 8.87487 10.6527 9.76377 9.76381C10.6527 8.87492 11.1986 7.65006 11.1986 6.29922C11.1986 3.59056 9.00789 1.39983 6.29923 1.39983Z" fill="#00161D"></path>
-							</svg></div>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.29922C0 2.82065 2.82065 0 6.29923 0C9.7778 0 12.5985 2.82065 12.5985 6.29922C12.5985 7.78304 12.0805 9.15487 11.2196 10.2327L13.7953 12.8084C14.0682 13.0814 14.0682 13.5223 13.7953 13.7953C13.5223 14.0683 13.0814 14.0683 12.8084 13.7953L10.2327 11.2196C9.15487 12.0805 7.79004 12.5984 6.29923 12.5984C2.82065 12.5984 0 9.7778 0 6.29922ZM6.29923 1.39983C3.59056 1.39983 1.39983 3.59056 1.39983 6.29922C1.39983 9.00789 3.59056 11.1986 6.29923 11.1986C7.65006 11.1986 8.87487 10.6527 9.76377 9.76381C10.6527 8.87492 11.1986 7.65006 11.1986 6.29922C11.1986 3.59056 9.00789 1.39983 6.29923 1.39983Z" fill="#00161D"></path>
+            </svg></div>
         </div>
       </div> 
       <div class=" selctArrow tag-col">   
-        <select name="type" id="type" class="resourceSelect" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
-          <option value="" selected>Filter by Topic</option> 
-          {% for topic in hubdb_table_column(table, 'topic').options %}
-          <option value="{{ topic.name|lower|replace(' ','-') }}">{{ topic.name }}</option>
+        <div class="filter_label type_filter_label" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
+          Filter by Topic
+        </div>
+        <div class="filter_dropdown typeSelect resourceSelect type_filter">
+          {% for tag in hubdb_table_column(table, 'topics_tags').options %}
+          <div>
+            <label for="type{{loop.index}}">
+              <input type="checkbox" class="filter_input" id="type{{loop.index}}" name="type" label="{{ tag.name }}" value="{{ tag.name|lower|replace(' ','-') }}" data-query="{{ request.query_dict.type }}" {% if request.query_dict.type is containing tag.name|lower|replace(' ','-') %}checked{% endif %} />
+              <span class="tag_name">{{ tag.name }}</span>
+            </label>
+          </div>
           {% endfor %}
-        </select> 
+        </div>
+
       </div>   
       <div class=" selctArrow tag-col">  
         <select name="topic" id="topic" class="topicSelect resourceSelect" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
@@ -94,18 +102,22 @@
     <div class='page-center cardSctn'>
       <div class='flex-row resourceList'>
         {% for row in resouces %}
-        <div class='resourceCard post-item {{ row.topic.name|lower|replace(' ','-') }} {{ row.type.name|lower|replace(' ','-') }}'>
+        <div class='resourceCard post-item {{ row.type.name|lower|replace(' ','-') }} {% for tag in row.topics_tags %}{{ tag.name|lower|replace(' ','-') }} {% endfor %}'>
           <div class='post-item-inner'>
             {% if row.image.url %}
             <div class="featured-img">
               <a href="{{row.link}}">
                 <img src="{{ row.image.url }}" alt="{{ row.name | striptags }}">
               </a>
-              <div class='featured-tag tag_{{ row.topic.name|lower|replace(' ','-') }}'>{{ row.topic.name }}</div>
+              {% if row.type.name %}
+              <div class='featured-tag tag_{{ row.type.name|lower|replace(' ','-') }}'>{{ row.type.name }}</div>
+              {% endif %}
             </div>
             {% endif %}
             <div class="post-content">
-              <div class='post-item-topic'>{{ row.type.name }}</div>
+              <div class='post-item-topic'>{{ row.type.name }}
+                {% for tag in row.topics_tags %}{% if loop.index == 1%}{{ tag.name|lower|replace(' ','-') }}{% endif %}{% endfor %}
+              </div>
               <h4 class="restitle">
                 <a href="{{ row.link }}">{{ row.name }}</a>
               </h4>
@@ -131,11 +143,6 @@
   </div>
 </div>
 </div>
-
-
-
-
-
 
 
 

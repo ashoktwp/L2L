@@ -27,9 +27,10 @@ html {
 .u4m-accordion.dnd_padd .acc_item {
   margin-bottom: 12px;
   background-color: #fff;
+  border-radius: 10rem;
 }
 .u4m-accordion.dnd_padd .acc_item .acc_ttl {
-  padding: 30px 60px 27px 36px;
+  padding: 30px 70px 27px 36px;
   position: relative;
   cursor: pointer;
 }
@@ -50,11 +51,13 @@ html {
   color: #0e2514;
 }
 .u4m-accordion.dnd_padd .acc_item .acc_ttl:hover .plus, .u4m-accordion.dnd_padd .acc_item .acc_ttl.active .plus {
-  transform: rotate(45deg);
   background-color: #348543;
 }
 .u4m-accordion.dnd_padd .acc_item .acc_ttl:hover .plus svg line, .u4m-accordion.dnd_padd .acc_item .acc_ttl.active .plus svg line {
   stroke: #fff !important;
+}
+.u4m-accordion.dnd_padd .acc_item .acc_ttl.active .plus {
+  transform: rotate(45deg);
 }
 .u4m-accordion.dnd_padd .acc_item .acc_ttl .plus {
   width: 36px;

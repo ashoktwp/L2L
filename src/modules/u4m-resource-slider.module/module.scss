@@ -71,20 +71,27 @@
       }
 
       &::before {
-        background: linear-gradient(180deg,
-            $Medium_Aquamarine 0%,
-            rgba($Medium_Aquamarine, 0.0001) 100%);
+        background: linear-gradient(
+          180deg,
+          $Medium_Aquamarine 0%,
+          rgba($Medium_Aquamarine, 0.0001) 100%
+        );
         border: 1px solid transparent;
-        -o-border-image: linear-gradient(180deg,
-            $Medium_Aquamarine 0%,
-            rgba($Medium_Aquamarine, 0.0001) 100%);
-        border-image: linear-gradient(180deg,
-            $Medium_Aquamarine 0%,
-            rgba($Medium_Aquamarine, 0.0001) 100%);
+        -o-border-image: linear-gradient(
+          180deg,
+          $Medium_Aquamarine 0%,
+          rgba($Medium_Aquamarine, 0.0001) 100%
+        );
+        border-image: linear-gradient(
+          180deg,
+          $Medium_Aquamarine 0%,
+          rgba($Medium_Aquamarine, 0.0001) 100%
+        );
         border-image-slice: 1;
         border-radius: 13px;
         bottom: 0;
-        -webkit-mask: linear-gradient($White 0 0) content-box,
+        -webkit-mask:
+          linear-gradient($White 0 0) content-box,
           linear-gradient($Medium_Aquamarine 0 0);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
@@ -141,6 +148,7 @@
           width: 7px;
           height: 7px;
           border-radius: 100%;
+          background: $white;
         }
       }
     }
@@ -298,6 +306,14 @@
     }
   }
 
+  .resourceSlider .slick-track {
+    display: flex;
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+
   .resources-slider-wrap {
     @include CardItems;
 
@@ -306,6 +322,7 @@
       row-gap: 35px;
 
       .post-item {
+        height: auto;
         .post-item-inner {
           .featured-img {
             .featured-tag {
@@ -333,6 +350,7 @@
                 width: 7px;
                 height: 7px;
                 border-radius: 100%;
+                background: $white;
               }
             }
 
@@ -355,6 +373,10 @@
               margin-top: auto;
             }
           }
+        }
+
+        &:hover .post-item-inner {
+          background: transparent;
         }
       }
     }

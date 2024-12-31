@@ -4,29 +4,46 @@ section.u4m-hero-left-aligned {
   padding-top: 190px;
   padding-bottom: 94px;
   min-height: 864px;
+
+  @include tabletMin {
+    &.bg_image .bg_overlay.overlay-color.onmb {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    min-height: auto;
+  }
+
   &.u4m-hero-center {
     padding-top: 307px;
     min-height: 1024px;
+
+
+
     @include tabletvert {
       padding: 50px 0;
       padding-top: 145px;
-      min-height: auto;
     }
   }
+
   @include tabletvert {
     padding: 50px 0;
     padding-top: 145px;
     min-height: auto;
   }
+
   .hero-align-center {
     .intro_wrapp {
       flex-direction: column-reverse;
     }
+
     .intro_content {
       text-align: center;
       margin-left: auto;
       max-width: 100%;
       width: 100%;
+
       .intro_btn_wrap {
         justify-content: center;
       }
@@ -34,6 +51,7 @@ section.u4m-hero-left-aligned {
 
     .media-column {
       width: 100%;
+
       img {
         min-height: 390px;
         max-height: 390px;
@@ -42,6 +60,7 @@ section.u4m-hero-left-aligned {
       }
     }
   }
+
   video.video-bg {
     position: absolute;
     z-index: 0;
@@ -53,6 +72,7 @@ section.u4m-hero-left-aligned {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
   .overlay-color {
     position: absolute;
     width: 100%;
@@ -60,59 +80,77 @@ section.u4m-hero-left-aligned {
     left: 0;
     top: 0;
   }
+
   .page-center {
     position: relative;
   }
+
   .media-column {
     width: calc(100% - 612px);
+
     @include tablet {
       width: calc(50% - 15px);
     }
+
     @include tabletvert {
       width: 100%;
     }
+
     img {
       width: 100%;
     }
+
     video {
       width: 100%;
       vertical-align: middle;
     }
+
     iframe.iframe_video {
       width: 100%;
       min-height: 390px;
     }
   }
+
   .intro_wrapp {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 30px;
   }
+
   .intro_content {
     margin-left: 0;
     text-align: left;
     margin-bottom: 0;
     max-width: 582px;
+
     @include tablet {
       max-width: 100%;
       width: calc(50% - 15px);
     }
+
     @include tabletvert {
       width: 100%;
     }
+
     h1 {
       margin-bottom: 20px;
     }
+
     .intro_desc {
       margin-bottom: 34px;
+      font-weight: 300;
+      opacity: 0.66;
     }
+
     .intro_btn_wrap {
       justify-content: flex-start;
     }
+
     .list-item {
       margin-bottom: 34px;
     }
+
     .list-item ul {
       margin: 0;
       padding: 0;

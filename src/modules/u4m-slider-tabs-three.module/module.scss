@@ -129,6 +129,10 @@
       opacity: 0.45;
       mix-blend-mode: plus-lighter;
       margin-bottom: 8px;
+
+      @include tabletvert {
+        margin-bottom: 0;
+      }
     }
     .tabs-heading {
       @include h3;
@@ -195,7 +199,8 @@
           border-image-slice: 2;
           border-radius: 50%;
           bottom: 0;
-          -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
             linear-gradient(#6abe7a 0 0);
           -webkit-mask-composite: xor;
           mask-composite: exclude;
@@ -353,7 +358,7 @@
       padding-top: 0;
     }
     .tabs-content-item {
-      margin-bottom: 30px;
+      margin-bottom: 60px;
       &:last-child {
         margin-bottom: 0;
       }

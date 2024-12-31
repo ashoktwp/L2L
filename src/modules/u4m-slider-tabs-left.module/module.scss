@@ -164,6 +164,10 @@
 
             img {
               border-radius: 34px;
+              @include tabletmid {
+                margin-top: 30px;
+                max-height: 500px;
+              }
             }
 
             @include tabletmid {
@@ -211,6 +215,17 @@
                 }
                 .arrowbtn {
                   display: block !important;
+                }
+                &.nolink {
+                  span.plus-icons {
+                    display: block;
+                    * {
+                      opacity: 1;
+                    }
+                    .line2 {
+                      display: none;
+                    }
+                  }
                 }
               }
             }

@@ -5,6 +5,10 @@
     font-weight: 500;
   }
 
+  .intro_desc {
+    opacity: 0.66;
+  }
+
   .card_wrap {
     .arrow-link {
       color: $white;
@@ -137,13 +141,15 @@
 
             h4 {
               margin: 0;
-              line-height: 2;
+              line-height: 1.2;
               color: $white;
               font-weight: 600;
             }
           }
 
           .card_cnt {
+            opacity: 0.66;
+
             p {
               color: $Frostee;
             }

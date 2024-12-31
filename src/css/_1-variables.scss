@@ -14,11 +14,10 @@ $Dark_jungle: #0e2514;
 $Mystic_green: #d0f76f;
 $Lime_Green: #9bf75f;
 
-$YellowWarm: #FBE0AD;
-$SprayDopely: #E0DB7E;
-$Lavender: #E4F3C4;
-$teaGreen: #C4EDB1;
-
+$YellowWarm: #fbe0ad;
+$SprayDopely: #e0db7e;
+$Lavender: #e4f3c4;
+$teaGreen: #c4edb1;
 
 // color shades
 $Nori_Green: #0e2514;
@@ -38,9 +37,9 @@ $grey2: #b6b6b6;
 $light_grey: #969696;
 $Pale_Yellow_Green: #d0f76e;
 
-$arrowBtn: #F08C1F;
+$arrowBtn: #f08c1f;
 $Orange: #ff492c;
-$Dark_Green2: #102F04;
+$Dark_Green2: #102f04;
 //==============
 
 // Colors - For transparency use rgba($action1, 0.5) = 50% opaque
@@ -56,26 +55,59 @@ $darkBack: #000000;
 $gradient1: linear-gradient(-45deg, $black 0%, $action2 50%);
 
 $gradient1: linear-gradient(129.51deg, $white -3.8%, $Frostee 107.08%);
-$gradient2: linear-gradient(260.94deg, $Pale_Yellow_Green 3.36%, $Prismic_mint 98.11%);
+$gradient2: linear-gradient(
+  260.94deg,
+  $Pale_Yellow_Green 3.36%,
+  $Prismic_mint 98.11%
+);
 
-$gradient3: radial-gradient(circle at 50% -1.3e-14%, $Fern_green 0%, $Dark_jungle 78%);
+$gradient3: radial-gradient(
+  circle at 50% -1.3e-14%,
+  $Fern_green 0%,
+  $Dark_jungle 78%
+);
 
 $gradient4: linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
-    linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
-    linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
-    linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%);
-$gradient5: radial-gradient(circle at 1.1e2% -9.2%, $white 0%, rgba($white, 0) 52%);
-$gradient6: radial-gradient(circle at 1.1e2% -9.2%, $Dark_Green 0%, $Dark_jungle 52%);
+  linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
+  linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%),
+  linear-gradient(180deg, $white 0%, rgba($white, 0.27) 100%);
+$gradient5: radial-gradient(
+  circle at 1.1e2% -9.2%,
+  $white 0%,
+  rgba($white, 0) 52%
+);
+$gradient6: radial-gradient(
+  circle at 1.1e2% -9.2%,
+  $Dark_Green 0%,
+  $Dark_jungle 52%
+);
 $borderRadius13: 13rem;
 $shadow4: inset 0 1px 3px 0 $Forest_Green;
-$arrowBtn: #F08C1F;
-$iconbg1: linear-gradient(225deg, rgba($grey, 0.45) 0%, rgba($Dark_jungle, 0.45) 38%, rgba($Dark_jungle, 0.45) 66%, rgba($L2L_green, 0.45) 100%);
-$iconbg2: linear-gradient(225deg, rgba($grey2, 0.45) 0%, rgba($Dark_jungle, 0.45) 38%, rgba($Dark_jungle, 0.45) 66%, rgba($Prismic_mango, 0.45) 100%);
-$iconbg3: linear-gradient(225deg, rgba($grey, 0.45) 0%, rgba($Dark_jungle, 0.45) 38%, rgba($Dark_jungle, 0.45) 66%, rgba($Menthol, 0.45) 100%);
-
+$arrowBtn: #f08c1f;
+$iconbg1: linear-gradient(
+  225deg,
+  rgba($grey, 0.45) 0%,
+  rgba($Dark_jungle, 0.45) 38%,
+  rgba($Dark_jungle, 0.45) 66%,
+  rgba($L2L_green, 0.45) 100%
+);
+$iconbg2: linear-gradient(
+  225deg,
+  rgba($grey2, 0.45) 0%,
+  rgba($Dark_jungle, 0.45) 38%,
+  rgba($Dark_jungle, 0.45) 66%,
+  rgba($Prismic_mango, 0.45) 100%
+);
+$iconbg3: linear-gradient(
+  225deg,
+  rgba($grey, 0.45) 0%,
+  rgba($Dark_jungle, 0.45) 38%,
+  rgba($Dark_jungle, 0.45) 66%,
+  rgba($Menthol, 0.45) 100%
+);
 
 $darkBack: #000000;
-$arrowDots: #F08C1F;
+$arrowDots: #f08c1f;
 // ==============
 
 //============
@@ -107,3 +139,5 @@ $borderRadius: 25rem;
 $containerSize: 1224rem;
 $introContainer: 810rem;
 $videoOverlay: rgba($black, 0.6);
+
+$customDarkBg: #101813;

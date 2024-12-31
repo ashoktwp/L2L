@@ -403,7 +403,7 @@
       "required" : false,
       "locked" : false,
       "table_name_or_id" : "104592500",
-      "columns_to_fetch" : [ "image", "featured", "name", "link", "topic", "type", "link_text" ],
+      "columns_to_fetch" : [ "image", "featured", "name", "link", "topics_tags", "topic", "type", "link_text" ],
       "display_columns" : [ "name" ],
       "type" : "hubdbrow",
       "default" : {

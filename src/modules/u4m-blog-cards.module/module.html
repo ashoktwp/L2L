@@ -2,7 +2,7 @@
   {% include "../partials/u4-module-includes.html" %}
   
   <div class="page-center  {{ module.module_settings.theme }}">
-    <div class="intro_wrapp">
+    <div class="intro_wrapp ">
       {{macros.introGroup(module.intro_content)}}
     </div>
   
@@ -36,10 +36,11 @@
     {% endif %}
     
     
-    
-    <div class="blog_posts_row">
+      {% set checkCount = rec_posts|length%}
+    <div class="blog_posts_row {% if checkCount == 0%}nofeed{% endif %}">
       <div class="blog_posts_items">
-        {% set checkCount = rec_posts|length%}
+      
+      
         {% set i = 0 %}
   
         {% for post in rec_posts %}
@@ -105,7 +106,7 @@
     {% endif %}
   
     {% if module.blog_feed.blog_post_type == "title" %}
-    <div class="blog_posts_row">
+    <div class="blog_posts_row {% if module.blog_feed.post_items|length == 0%}nofeed{% endif %}">
       <div class="blog_posts_items">
         {% set checkCount = module.blog_feed.post_items|length %}
         {% for item in module.blog_feed.post_items %}

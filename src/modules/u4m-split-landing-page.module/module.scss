@@ -57,6 +57,25 @@
             fill: currentColor;
           }
         }
+
+        img {
+          width: 18px;
+          vertical-align: middle;
+        }
+
+        span {
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          vertical-align: middle;
+
+          svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+            vertical-align: middle;
+          }
+        }
       }
     }
     .intro_title {
@@ -100,6 +119,13 @@
         @include tabletvert {
           padding: 30px 20px;
         }
+
+        .hs-form-field {
+          & > label {
+            display: block;
+          }
+        }
+
         .hs_error_rollup {
           flex: 0 0 100%;
           margin: 0;
@@ -143,6 +169,7 @@
               &:last-child {
                 > label {
                   left: 20px;
+                  left: 0;
                 }
               }
             }
@@ -184,6 +211,7 @@
             top: 25px;
             left: 20px;
             font-weight: normal;
+            transition: all 0.3s ease-in-out;
           }
           .hs-input::placeholder {
             opacity: 0;
@@ -193,10 +221,13 @@
             > label {
               top: -10px;
               background: $white;
+              background-color: transparent;
               padding: 3px 7px;
               border-radius: 3px;
               left: 13px;
               transition: all 0.3s ease-in-out;
+              left: 0;
+              top: -24px;
             }
           }
           .hs-error-msgs {
@@ -246,5 +277,11 @@
       color: $headingColor;
       margin-bottom: 20px;
     }
+  }
+
+  .submitted-message {
+    padding: 10px;
+    text-align: center;
+    color: $Fern_green;
   }
 }

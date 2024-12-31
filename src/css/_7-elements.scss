@@ -561,11 +561,18 @@ section[class*="u4m-"] {
 
   .intro_desc {
     margin-bottom: 36px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
 
     p:last-child {
       margin: 0;
     }
   }
+}
+
+.intro_desc {
+  opacity: 0.66;
 }
 
 .intro_btn_wrap {
@@ -615,6 +622,7 @@ section[class*="u4m-"] {
 
   .intro_title {
     margin-bottom: 16rem;
+    margin-top: 0;
   }
 
   .intro_desc {
@@ -800,24 +808,191 @@ section[class*="u4m-"] {
 .tag_case-studies:before {
   background: $YellowWarm;
 }
+
 .tag_ebook:before {
   background: $Prismic_mango;
 }
+
 .tag_webinar:before {
   background: $Menthol;
 }
+
 .tag_interactive-tools:before {
   background: $SprayDopely;
 }
+
 .tag_videos:before {
   background: $Lavender;
 }
+
 .tag_white-papers:before {
   background: $teaGreen;
 }
+
 .tag_events:before {
   background: $Sea_Green;
 }
+
 .tag_podcast:before {
   background: $white;
+}
+
+
+// form input background
+
+
+.input_Nori_Green_bg form.hs-form .hs-form-field .input textarea,
+.input_Nori_Green_bg form.hs-form .hs-form-field .input select,
+.input_Nori_Green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Nori_Green !important;
+}
+
+.input_Dark_Green_bg form.hs-form .hs-form-field .input textarea,
+.input_Dark_Green_bg form.hs-form .hs-form-field .input select,
+.input_Dark_Green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Dark_Green !important;
+}
+
+.input_Forest_Green_bg form.hs-form .hs-form-field .input textarea,
+.input_Forest_Green_bg form.hs-form .hs-form-field .input select,
+.input_Forest_Green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Forest_Green !important;
+}
+
+.input_Olive_Green_bg form.hs-form .hs-form-field .input textarea,
+.input_Olive_Green_bg form.hs-form .hs-form-field .input select,
+.input_Olive_Green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Olive_Green !important;
+}
+
+.input_Medium_Sea_Green_bg form.hs-form .hs-form-field .input textarea,
+.input_Medium_Sea_Green_bg form.hs-form .hs-form-field .input select,
+.input_Medium_Sea_Green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Medium_Sea_Green !important;
+}
+
+.input_Sea_Green_bg form.hs-form .hs-form-field .input textarea,
+.input_Sea_Green_bg form.hs-form .hs-form-field .input select,
+.input_Sea_Green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Sea_Green !important;
+}
+
+.input_Medium_Aquamarine_bg form.hs-form .hs-form-field .input textarea,
+.input_Medium_Aquamarine_bg form.hs-form .hs-form-field .input select,
+.input_Medium_Aquamarine_bg form.hs-form .hs-form-field .input input {
+  background-color: $Medium_Aquamarine !important;
+}
+
+.input_Pale_Green_bg form.hs-form .hs-form-field .input textarea,
+.input_Pale_Green_bg form.hs-form .hs-form-field .input select,
+.input_Pale_Green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Pale_Green !important;
+}
+
+.input_Very_Pale_Green_bg form.hs-form .hs-form-field .input textarea,
+.input_Very_Pale_Green_bg form.hs-form .hs-form-field .input select,
+.input_Very_Pale_Green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Very_Pale_Green !important;
+}
+
+.input_Pale_Mint_bg form.hs-form .hs-form-field .input textarea,
+.input_Pale_Mint_bg form.hs-form .hs-form-field .input select,
+.input_Pale_Mint_bg form.hs-form .hs-form-field .input input {
+  background-color: $Pale_Mint !important;
+}
+
+.input_OffWhite_bg form.hs-form .hs-form-field .input textarea,
+.input_OffWhite_bg form.hs-form .hs-form-field .input select,
+.input_OffWhite_bg form.hs-form .hs-form-field .input input {
+  background-color: $Off-White !important;
+}
+
+.input_light_grey_bg form.hs-form .hs-form-field .input textarea,
+.input_light_grey_bg form.hs-form .hs-form-field .input select,
+.input_light_grey_bg form.hs-form .hs-form-field .input input {
+  background-color: $light_grey !important;
+}
+
+.input_Pale_Yellow_Green_bg form.hs-form .hs-form-field .input textarea,
+.input_Pale_Yellow_Green_bg form.hs-form .hs-form-field .input select,
+.input_Pale_Yellow_Green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Pale_Yellow_Green !important;
+}
+
+// pallets Bg Color
+
+.input_prismic_mango_bg form.hs-form .hs-form-field .input textarea,
+.input_prismic_mango_bg form.hs-form .hs-form-field .input select,
+.input_prismic_mango_bg form.hs-form .hs-form-field .input input {
+  background-color: $Prismic_mango !important;
+}
+
+.input_prismic_mint_bg form.hs-form .hs-form-field .input textarea,
+.input_prismic_mint_bg form.hs-form .hs-form-field .input select,
+.input_prismic_mint_bg form.hs-form .hs-form-field .input input {
+  background-color: $Prismic_mint !important;
+}
+
+.input_frostee_bg form.hs-form .hs-form-field .input textarea,
+.input_frostee_bg form.hs-form .hs-form-field .input select,
+.input_frostee_bg form.hs-form .hs-form-field .input input {
+  background-color: $Frostee !important;
+}
+
+.input_mint_cream_bg form.hs-form .hs-form-field .input textarea,
+.input_mint_cream_bg form.hs-form .hs-form-field .input select,
+.input_mint_cream_bg form.hs-form .hs-form-field .input input {
+  background-color: $Mint_cream !important;
+}
+
+.input_white_bg form.hs-form .hs-form-field .input textarea,
+.input_white_bg form.hs-form .hs-form-field .input select,
+.input_white_bg form.hs-form .hs-form-field .input input {
+  background-color: $White !important;
+}
+
+.input_menthol_bg form.hs-form .hs-form-field .input textarea,
+.input_menthol_bg form.hs-form .hs-form-field .input select,
+.input_menthol_bg form.hs-form .hs-form-field .input input {
+  background-color: $Menthol !important;
+}
+
+.input_l2l_green_bg form.hs-form .hs-form-field .input textarea,
+.input_l2l_green_bg form.hs-form .hs-form-field .input select,
+.input_l2l_green_bg form.hs-form .hs-form-field .input input {
+  background-color: $L2L_green !important;
+}
+
+.input_fern_green_bg form.hs-form .hs-form-field .input textarea,
+.input_fern_green_bg form.hs-form .hs-form-field .input select,
+.input_fern_green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Fern_green !important;
+}
+
+.input_dark_jungle_bg form.hs-form .hs-form-field .input textarea,
+.input_dark_jungle_bg form.hs-form .hs-form-field .input select,
+.input_dark_jungle_bg form.hs-form .hs-form-field .input input {
+  background-color: $Dark_jungle !important;
+}
+
+.input_mystic_green_bg form.hs-form .hs-form-field .input textarea,
+.input_mystic_green_bg form.hs-form .hs-form-field .input select,
+.input_mystic_green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Mystic_green !important;
+}
+
+.input_lime_green_bg form.hs-form .hs-form-field .input textarea,
+.input_lime_green_bg form.hs-form .hs-form-field .input select,
+.input_lime_green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Lime_Green !important;
+}
+
+.input_very_pale_green_bg form.hs-form .hs-form-field .input textarea,
+.input_very_pale_green_bg form.hs-form .hs-form-field .input select,
+.input_very_pale_green_bg form.hs-form .hs-form-field .input input {
+  background-color: $Very_Pale_Green !important;
+}
+
+iframe[id*=‘_ccpx_cont’] {
+  display: none;
 }

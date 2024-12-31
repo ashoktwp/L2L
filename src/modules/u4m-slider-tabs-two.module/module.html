@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<div class="ctvb-section fullwidth main-sec ">
+<div class="ctvb-section fullwidth main-sec updatedSlider">
   <div class="page-center">
     <div class="sec-inner fullwidth">
       <div class="ctvb-toprow">
@@ -147,34 +147,8 @@
 
 {% require_js %}
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const sliderTabsSection = document.querySelector(".u4m-slider-tabs-left");
-
-    if (sliderTabsSection) {
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Initialize the slider functionality
-            initSliderTabsFunctionality();
-            observer.disconnect(); // Stop observing after slider initialization
-          }
-        });
-      }, {
-        root: null, // Default to viewport
-        threshold: 0.1 // Trigger when 10% of the section is visible
-      });
-
-      // Check if the section is already visible on load
-      if (sliderTabsSection.getBoundingClientRect().top < window.innerHeight && sliderTabsSection.getBoundingClientRect().bottom > 0) {
-        // Section is visible, initialize immediately
-        initSliderTabsFunctionality();
-      } else {
-        // Otherwise, observe for visibility
-        observer.observe(sliderTabsSection);
-      }
-    }
-  });
-
+ 
+  initSliderTabsFunctionality();
   function initSliderTabsFunctionality() {
     function hideVideos() {
       const nonCurrentTabs = $(".ctvb-tabcol").not('.slick-current');
@@ -192,7 +166,7 @@
     }
 
     $('.sslider-for').slick({
-      slidesToShow: 8,
+      slidesToShow: 3,
       slidesToScroll: 1,
       variableWidth: true,
       arrows: true,
@@ -201,16 +175,33 @@
       asNavFor: '.sslider-nav',
       autoplaySpeed: 5000,
       infinite: true,
-      autoplay: false, // Disable autoplay initially
+      autoplay: false,
+      responsive: [ 
+      {
+        breakpoint: 767,
+        settings: { 
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+          breakpoint: 400,
+          settings: { 
+            slidesToShow: 1,
+            slidesToScroll: 1,  
+          }
+        }
+    ]
     });
 
     $('.sslider-nav').slick({
-      slidesToShow: 10,
-      variableWidth: true,
+      slidesToShow: 3,
       slidesToScroll: 1,
+      variableWidth: true, 
       asNavFor: '.sslider-for',
-      dots: false,
-      infinite: true,
+      dots: false, 
+      infinite: false,
+      autoplay: false,
       responsive: [
         {
           breakpoint: 1400,
@@ -220,20 +211,20 @@
           }
         },
         {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1
+          breakpoint: 767,
+          settings: { 
+            slidesToShow: 1,
+            slidesToScroll: 1, 
           }
         },
         {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
+          breakpoint: 400,
+          settings: { 
+            slidesToShow: 1,
+            slidesToScroll: 1,  
           }
         }
-      ]
+      ] 
     });
 
     function startProgressBar() {
@@ -252,7 +243,7 @@
           strokeDashoffset: 0, // Animate to complete the circle
         });
       }, 0);
-      $('.sslider-for,.sslider-nav').slick('slickPlay');
+      {# $('.sslider-for,.sslider-nav').slick('slickPlay'); #}
     }
 
     function handleSlideChange() {
@@ -276,7 +267,7 @@
     $('.sslider-nav').on('click', '.slick-slide', function () {
       const index = $(this).data('slick-index');
       $('.sslider-for').slick('slickGoTo', index);
-      $('.sslider-for,.sslider-nav').slick('slickPlay');
+      {# $('.sslider-for,.sslider-nav').slick('slickPlay'); #}
       handleSlideChange();
       hideVideos();
     });

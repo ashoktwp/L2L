@@ -5,33 +5,42 @@
     padding-top: 84px;
     padding-bottom: 75px;
   }
+
   .page-center {
     padding-right: 15px;
     padding-left: 15px;
   }
+
   .intro_content {
     margin-bottom: 20px;
+
     .intro_title {
       font-weight: 600;
       line-height: 1.1875;
       letter-spacing: -0.5px;
     }
   }
+
   .statistics {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
     row-gap: 20px;
+    justify-content: center;
+
     .statistics__item {
       width: 25%;
       padding: 0 15px;
       text-align: center;
+
       @include tabletmid {
         width: 50%;
       }
+
       @include tabletvert {
         width: 100%;
       }
+
       .statistics_count {
         @include h1;
         font-family: $tertiaryFont;
@@ -45,10 +54,12 @@
         justify-content: center;
         flex-wrap: wrap;
         column-gap: 2px;
+
         .prefix {
           color: $L2L_green;
         }
       }
+
       .statistics_caption {
         @include bodyStyle;
         text-align: center;
@@ -56,12 +67,14 @@
       }
     }
   }
+
   .statistics_btn_wrap {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 62px;
     gap: 20px;
+
     a {
       font-family: $secondaryFont;
       padding-top: 5px;
@@ -69,15 +82,18 @@
       line-height: 3;
     }
   }
+
   &.reverse-text {
     .statistics {
       .statistics__item {
         .statistics_count {
           color: $White;
+
           .prefix {
             color: $White;
           }
         }
+
         .statistics_caption {
           color: $White;
         }

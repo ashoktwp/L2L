@@ -17,6 +17,13 @@ section.u4m-quote-cards-slider {
     position: relative;
     z-index: 2;
   }
+  .noSlider {
+    .quote-cards-slide {
+      max-width: 816px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
   .quote-cards-slide {
     padding: 0 12px;
     .quote-cards-slide-inner {
@@ -28,6 +35,9 @@ section.u4m-quote-cards-slider {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+      @include tabletvert {
+        padding: 42px 32px;
+      }
       .top-img {
         padding-bottom: 36px;
         img {
