@@ -3016,7 +3016,7 @@ img.mfp-img {
 }
 @font-face {
   font-family: "Phosphor";
-  src: url("{{ get_asset_url('./../fonts/Phosphor.woff2') }}") format("woff2"), url("{{ get_asset_url('./../fonts/Phosphor.woff') }}") format("woff"), url("{{ get_asset_url('./../fonts/Phosphor.ttf') }}") format("truetype"), url("{{ get_asset_url('./../fonts/Phosphor.svg') }}") format("svg");
+  src: url("{{ get_asset_url('./../fonts/Phosphor.woff2') }}") format("woff2"), url("{{ get_asset_url('./../fonts/Phosphor.woff') }}") format("woff"), url("{{ get_asset_url('./../fonts/Phosphor.ttf') }}") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -10486,6 +10486,10 @@ section[class*=u4m-] {
 .input_very_pale_green_bg form.hs-form .hs-form-field .input select,
 .input_very_pale_green_bg form.hs-form .hs-form-field .input input {
   background-color: #c8eace !important;
+}
+
+iframe[id*=‘_ccpx_cont’] {
+  display: none;
 }
 
 section.u4m-404-error,

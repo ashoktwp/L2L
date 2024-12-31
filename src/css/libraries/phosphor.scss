@@ -2,8 +2,7 @@
     font-family: "Phosphor";
     src: url("{{ get_asset_url('./../fonts/Phosphor.woff2') }}") format("woff2"),
     url("{{ get_asset_url('./../fonts/Phosphor.woff') }}") format("woff"),
-    url("{{ get_asset_url('./../fonts/Phosphor.ttf') }}") format("truetype"),
-    url("{{ get_asset_url('./../fonts/Phosphor.svg') }}") format("svg");
+    url("{{ get_asset_url('./../fonts/Phosphor.ttf') }}") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: block;

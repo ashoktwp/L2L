@@ -4,21 +4,26 @@
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
+
 @keyframes rotating {
   from {
     transform: rotate(0);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 html {
   font-size: 1px;
 }
+
 .u4m-slider-tabs-left {
   &.reverse-text {
     .ctvb-toprow {
@@ -26,6 +31,7 @@ html {
         li {
           a {
             color: $White;
+
             &:before {
               background-color: $White;
             }
@@ -33,11 +39,13 @@ html {
         }
       }
     }
+
     .ctvb-tabname {
       .saprator {
         color: $White;
       }
     }
+
     .ctvb-section {
       .ctvb-tabcol {
         .ctvb-tabcontent {
@@ -52,22 +60,26 @@ html {
       }
     }
   }
+
   .progress-bar {
     position: absolute;
     top: 0px;
     left: 0;
   }
+
   .progress-svg {
     transform: rotate(-90deg);
     width: 40px;
     height: 40px;
     overflow: visible;
   }
+
   .circle-base {
     fill: none;
     stroke: #e6e6e6;
     stroke-width: 2;
   }
+
   .circle-go {
     fill: none;
     stroke: #4caf50;
@@ -75,12 +87,15 @@ html {
     stroke-dasharray: 106.76;
     stroke-dashoffset: 106.76;
   }
+
   .ctvb-section {
     position: relative;
     z-index: 9;
     overflow: hidden;
+
     .sec-inner {
       position: relative;
+
       .arrow-section {
         .tab-prev-arrow {
           position: absolute;
@@ -89,6 +104,7 @@ html {
           transform: translateY(-50%);
           left: -10px;
           cursor: pointer;
+
           .tab-arrow {
             width: 35px;
             border-radius: 50px;
@@ -98,14 +114,17 @@ html {
             display: flex;
             align-items: center;
             justify-content: center;
+
             svg {
               width: 18px;
+
               path {
                 fill: $white;
               }
             }
           }
         }
+
         .tab-next-arrow {
           position: absolute;
           top: 36%;
@@ -115,6 +134,7 @@ html {
           cursor: pointer;
           left: auto;
           right: 0;
+
           .tab-arrow {
             width: 35px;
             border-radius: 50px;
@@ -124,8 +144,10 @@ html {
             display: flex;
             align-items: center;
             justify-content: center;
+
             svg {
               width: 18px;
+
               path {
                 fill: $white;
               }
@@ -134,25 +156,33 @@ html {
         }
       }
     }
+
     .ctvb-tabcol {
-      min-width: 230px;
-      max-width: 230px;
+      @include tabletvertmin {
+        min-width: 230px;
+        max-width: 230px;
+      }
+
+
       .ctvb-tabcontent {
         .ctvb-tabname {
           font-size: 14px;
           font-weight: 700;
           line-height: 27px;
         }
+
         .ctvb-tabcompany {
           font-size: 14px;
           line-height: 27px;
         }
+
         .ctvb-tabtxt {
           p {
             sup {
               color: $L2L_green;
               font-size: 32px;
               top: -5px;
+
               @include tabletvert {
                 top: 2px;
               }
@@ -160,6 +190,7 @@ html {
           }
         }
       }
+
       &:not(.slick-current) {
         .ctvb-playbtn {
           pointer-events: none;
@@ -167,42 +198,55 @@ html {
       }
     }
   }
+
   .ctvb-tabcol {
     padding: 0 15px;
     width: auto;
     position: relative;
     transition: 0.3s all;
     transition-delay: 0.6s;
+
     &:not(.slick-current) {
       .ctvb-tabottom {
         opacity: 1;
       }
+
       .ctvb-tabplaceholder {
         opacity: 1;
+
         &:before {
           opacity: 1;
         }
       }
+
       span.ctvb-playbtn {
         opacity: 1;
       }
+
       .ctvb-vdo {
         z-index: -2;
         opacity: 0;
       }
     }
-    &:hover {
-      padding: 0 15px;
-      .ctvb-tabplaceholder {
-        transform: scale(1.1667, 1);
+
+    @include tabletvertmin {
+      &:hover {
+        padding: 0 15px;
+
+
+        .ctvb-tabplaceholder {
+          transform: scale(1.1667, 1);
+        }
       }
     }
+
     .ctvb-tabottom {
       .ctvb-tabtn {
         display: none;
       }
     }
   }
+
   .ctvb-tabs {
     ul {
       align-items: center;
@@ -210,18 +254,22 @@ html {
       margin: 0;
       padding: 0;
       gap: 36px;
+
       li.slick-current {
         a {
           opacity: 1;
           font-weight: 700;
+
           &:before {
             opacity: 1;
           }
         }
       }
+
       li {
         a {
           letter-spacing: 0.25px;
+
           &:before {
             opacity: 0;
             content: "";
@@ -237,90 +285,123 @@ html {
       }
     }
   }
+
   .hs-inline-edit {
     .element_fade-in {
       opacity: 1;
     }
   }
+
   .ctvb-tabcol.slick-current {
     max-width: 582px;
+
     &:hover {
       padding: 0 15px;
+
       .ctvb-tabplaceholder {
         transform: unset;
       }
     }
+
     .ctvb-tabcontent {
       display: block;
     }
+
     .ctvb-tabtn {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       padding-bottom: 0;
+
       a {
         color: $white;
         font-size: 14px;
+
         &:hover {
           svg.ctvb-tablink-hover {
             transform: translate(0, 0);
           }
+
           svg.ctvb-tablink-normal {
             transform: translate(30px, -30px);
           }
         }
+
         svg.ctvb-tablink-hover {
           transform: translate(-30px, 30px);
         }
       }
     }
+
     .ctvb-tabottom {
       .ctvb-tabtn {
         display: block;
       }
     }
+
     span.ctvb-playbtn {
       background-color: $Medium_Sea_Green;
       border-color: $Medium_Sea_Green;
       transition: all 0.3s;
+
       &:hover {
         background-color: $Fern_green;
       }
     }
+
     .ctvb-tabplaceholder {
       &:before {
-        background: linear-gradient(
-          rgba(0, 0, 0, 0) 0,
-          rgba(0, 0, 0, 0.77) 100%
-        );
+        background: linear-gradient(rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0.77) 100%);
       }
     }
+
     span.ctvb-plusicon {
       background-color: $L2L_green;
+
       &:before {
         background-color: $L2L_green;
       }
     }
+
     .ctvb-vdo {
       width: 100%;
       background-color: $darkBack;
     }
   }
+
   .ctvb-toprow {
     padding-bottom: 34px;
     margin-top: 0;
     margin-top: 60px;
     width: 100%;
     justify-content: space-between;
+
+    .sslider-nav .slick-track {
+      transform: none !important;
+      width: auto !important;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &:before,
+      &:after {
+        display: none !important;
+      }
+    }
+
     ul {
       display: flex;
       gap: 36px;
+
       li {
         margin: 0;
         padding-right: 40px;
-        @include laptop {
-          min-width: 135px;
+
+        @include tabletvert {
+          padding-right: 15px;
         }
+
         a {
           display: inline-block;
           padding-bottom: 15px;
@@ -330,6 +411,7 @@ html {
           color: $baseColor;
         }
       }
+
       li.active {
         a {
           &:before {
@@ -339,17 +421,21 @@ html {
       }
     }
   }
+
   .ctvb-tabbingrow.slick-currentlast {
     justify-content: flex-end;
   }
+
   .row--justify-flex-end {
     justify-content: flex-end;
   }
+
   .ctvb-btn {
     display: flex;
     flex-wrap: wrap;
     width: 40%;
     justify-content: flex-end;
+
     a {
       display: inline-block;
       vertical-align: middle;
@@ -359,6 +445,7 @@ html {
       font-weight: 700;
       font-family: $secondaryFont;
       font-size: 16px;
+
       span {
         overflow: hidden;
         vertical-align: middle;
@@ -369,6 +456,7 @@ html {
         -webkit-transition: 0.5s;
         display: inline-block;
         position: relative;
+
         svg {
           fill: #f08c1f;
           width: 24px;
@@ -383,6 +471,7 @@ html {
       }
     }
   }
+
   .ctvb-tabimage {
     display: flex;
     flex-wrap: wrap;
@@ -393,6 +482,7 @@ html {
     width: 100%;
     min-height: 324px;
   }
+
   .ctvb-tabtn {
     a {
       display: inline-block;
@@ -403,6 +493,7 @@ html {
       font-weight: 700;
       font-family: $secondaryFont;
       font-size: 16px;
+
       span {
         overflow: hidden;
         vertical-align: middle;
@@ -413,6 +504,7 @@ html {
         -webkit-transition: 0.5s;
         display: inline-block;
         position: relative;
+
         svg {
           fill: $L2L_green;
           width: 24px;
@@ -425,8 +517,10 @@ html {
           -webkit-transition: 0.3s;
         }
       }
+
       &:hover {
         color: $white;
+
         span {
           .ctvb-tablink-hover {
             transform: translate(0, 0);
@@ -436,6 +530,7 @@ html {
       }
     }
   }
+
   .ctvb-tabbingrow {
     width: calc(100% + 30px);
     margin-left: -15px;
@@ -443,36 +538,45 @@ html {
     margin-top: 0;
     display: flex;
     overflow: visible;
+
     &::-webkit-scrollbar {
       height: 6px;
       background-color: $white;
       border-radius: 3px;
     }
+
     &::-webkit-scrollbar-thumb {
       background-color: $L2L_green;
       border-radius: 3px;
     }
+
     .slick-list {
       overflow: visible;
       width: 100%;
     }
   }
+
   .ctvb-tabcontent {
     display: none;
     margin-top: 36px;
     min-width: 540px;
+
     @include tabletmid {
       min-width: 320px;
     }
-    @include phone {
-      min-width: 265px;
+
+    @include tabletvert {
+      min-width: 100%;
+      display: block;
     }
   }
+
   .ctvb-tabtxt {
     font-family: $secondaryFont;
     font-size: 30px;
     line-height: 42px;
     font-weight: 400;
+
     p {
       font-family: $secondaryFont;
       font-size: 30px;
@@ -480,6 +584,7 @@ html {
       font-weight: 400;
     }
   }
+
   .ctvb-tabcompany {
     font-family: $secondaryFont;
     font-size: 15px;
@@ -487,6 +592,7 @@ html {
     letter-spacing: 0.25px;
     font-weight: 400;
   }
+
   .ctvb-tabname {
     font-family: $secondaryFont;
     font-size: 15px;
@@ -495,10 +601,12 @@ html {
     margin-top: 30px;
     font-weight: 700;
     text-transform: uppercase;
+
     .saprator {
       color: $L2L_green;
     }
   }
+
   .ctvb-tabottom {
     padding: 20px;
     width: 100%;
@@ -506,16 +614,19 @@ html {
     flex-wrap: wrap;
     align-content: flex-end;
     justify-content: space-between;
+
     .tab_bottom_inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
+
       @include navbreak {
         flex-wrap: wrap;
         gap: 5px;
       }
     }
+
     .ctvb-tabtn {
       a {
         color: $white;
@@ -524,6 +635,7 @@ html {
       }
     }
   }
+
   span.ctvb-playbtn {
     cursor: pointer;
     display: flex;
@@ -538,12 +650,14 @@ html {
     border: 2px solid $white;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+
     svg {
       margin-left: 4px;
       width: 18px;
       fill: $white;
     }
   }
+
   span.ctvb-plusicon {
     flex-wrap: wrap;
     top: 50%;
@@ -557,6 +671,7 @@ html {
     justify-content: center;
     width: 6px;
     height: 40px;
+
     &:before {
       flex-wrap: wrap;
       top: 50%;
@@ -572,6 +687,7 @@ html {
       width: 40px;
     }
   }
+
   .ctvb-tabplaceholder {
     transition: 0.5s;
     -webkit-transition: 0.5s;
@@ -581,6 +697,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
+
     img {
       border-radius: inherit;
       -o-object-position: center center;
@@ -591,6 +708,7 @@ html {
       height: 100% !important;
       image-rendering: auto;
     }
+
     &:before {
       transition: 0.5s;
       -webkit-transition: 0.5s;
@@ -600,12 +718,11 @@ html {
       width: 100%;
       height: 100%;
       content: "";
-      background: linear-gradient(
-        rgba(0, 0, 0, 0.66) 0%,
-        rgba(0, 0, 0, 0.79) 100%
-      );
+      background: linear-gradient(rgba(0, 0, 0, 0.66) 0%,
+          rgba(0, 0, 0, 0.79) 100%);
     }
   }
+
   .ctvb-vdo {
     z-index: -2;
     position: absolute;
@@ -613,6 +730,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
+
     iframe {
       border-radius: inherit;
       -o-object-position: center center;
@@ -623,11 +741,13 @@ html {
       height: 100%;
     }
   }
+
   .ctvb-tablogo {
     img {
       max-width: 140px !important;
     }
   }
+
   .ft-section {
     .sec-top {
       h2 {
@@ -643,10 +763,12 @@ html {
     max-width: 295px !important;
   }
 }
+
 @include phone {
   html {
     font-size: 1px;
   }
+
   .u4m-slider-tabs-left {
     .ctvb-section {
       .sec-inner {
@@ -654,23 +776,32 @@ html {
           .tab-prev-arrow {
             top: 50%;
           }
+
           .tab-next-arrow {
             top: 50%;
           }
         }
       }
     }
+
     .ctvb-tabcol.slick-current {
       max-width: 295px;
+
+      @include tabletvert {
+        max-width: 100%;
+      }
+
       .ctvb-tabtn {
         a {
           font-size: 12px;
         }
       }
     }
+
     .ctvb-tabtxt {
       font-size: 20px;
       line-height: 32px;
+
       p {
         font-size: 20px;
         line-height: 32px;
@@ -678,27 +809,37 @@ html {
     }
   }
 }
+
 @include large {
   html {
     font-size: 1px;
   }
 }
+
 @include navbreakMin {
   .u4m-slider-tabs-left {
     .ctvb-tabcol.slick-current {
       max-width: 350px;
+
+      @include tabletvert {
+        max-width: 100%;
+        width: 100%;
+      }
+
       .ctvb-tabtn {
         padding-top: 10px;
       }
     }
   }
 }
+
 @include midlaptop {
   .u4m-slider-tabs-left {
     .ctvb-toprow {
       ul {
         gap: 20px;
         flex-wrap: wrap;
+
         li {
           a {
             padding-bottom: 0;

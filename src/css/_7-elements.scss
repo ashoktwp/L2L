@@ -992,3 +992,7 @@ section[class*="u4m-"] {
 .input_very_pale_green_bg form.hs-form .hs-form-field .input input {
   background-color: $Very_Pale_Green !important;
 }
+
+iframe[id*=‘_ccpx_cont’] {
+  display: none;
+}

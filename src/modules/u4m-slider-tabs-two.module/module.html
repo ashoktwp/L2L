@@ -201,16 +201,34 @@
       asNavFor: '.sslider-nav',
       autoplaySpeed: 5000,
       infinite: true,
-      autoplay: false, // Disable autoplay initially
+      autoplay: true,
+      responsive: [ 
+      {
+        breakpoint: 767,
+        settings: { 
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          variableWidth: false,
+        }
+      },
+      {
+          breakpoint: 400,
+          settings: { 
+            slidesToShow: 1,
+            slidesToScroll: 1,  
+            variableWidth: false,
+          }
+        }
+    ]
     });
 
     $('.sslider-nav').slick({
       slidesToShow: 3,
-      variableWidth: true,
       slidesToScroll: 1,
+      variableWidth: true, 
       asNavFor: '.sslider-for',
-      dots: false,
-      infinite: true,
+      dots: false, 
+      infinite: false,
       responsive: [
         {
           breakpoint: 1400,
@@ -220,20 +238,20 @@
           }
         },
         {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1
+          breakpoint: 767,
+          settings: { 
+            slidesToShow: 1,
+            slidesToScroll: 1, 
           }
         },
         {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
+          breakpoint: 400,
+          settings: { 
+            slidesToShow: 1,
+            slidesToScroll: 1,  
           }
         }
-      ]
+      ] 
     });
 
     function startProgressBar() {
