@@ -96,6 +96,7 @@
               opacity: 0;
             }
             .featured-img {
+              border-radius: 21px;
               img {
                 border-radius: 21px;
               }
@@ -147,6 +148,7 @@
           overflow: hidden;
           margin-bottom: 15px;
           z-index: 3;
+          transition: 0.1s ease-in;
           img {
             position: absolute;
             top: 0;
@@ -199,6 +201,14 @@
                 color: $Fern_green;
               }
             }
+          }
+        }
+      }
+
+      &:hover {
+        .blog_item_inn {
+          .feature_img {
+            border-radius: 21px;
           }
         }
       }

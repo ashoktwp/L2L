@@ -690,43 +690,92 @@
     "access" : null
   },
   "children" : [ {
-    "id" : "ce8117f1-4150-676e-aa32-7b43c9f4ca56",
-    "name" : "background_settings",
+    "id" : "16761754-bd6c-6ecc-bdcf-d28c3e7cde3d",
+    "name" : "override_form_style",
     "display_width" : null,
-    "label" : "Background Settings",
+    "label" : "Override Form Style",
     "required" : false,
     "locked" : false,
-    "children" : [ {
-      "id" : "7abaddf5-b935-3dc3-392d-fb0bbe88cdb6",
-      "name" : "select_color",
-      "display_width" : null,
-      "label" : "Select Color",
-      "required" : false,
-      "locked" : false,
-      "display" : "select",
-      "choices" : [ [ "prismic_mango_bg", "Prismic Mango" ], [ "prismic_mint_bg", "Prismic Mint" ], [ "frostee_bg", "Frostee" ], [ "mint_cream_bg", "Mint Cream" ], [ "menthol_bg", "Menthol" ], [ "l2l_green_bg", "L2L Green" ], [ "fern_green_bg", "Fern Green" ], [ "dark_jungle_bg", "Dark Jungle" ], [ "mystic_green_bg", "Mystic Green" ], [ "lime_green_bg", "Lime Green" ], [ "white_bg", "White" ], [ "very_pale_green_bg", "Very Pale Green" ] ],
-      "multiple" : false,
-      "reordering_enabled" : true,
-      "preset" : null,
-      "type" : "choice",
-      "default" : "very_pale_green_bg"
-    } ],
-    "tab" : "CONTENT",
-    "expanded" : true,
-    "group_occurrence_meta" : null,
-    "type" : "group",
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "7abaddf5-b935-3dc3-392d-fb0bbe88cdb6",
+    "name" : "select_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "form_settings.override_form_style",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "prismic_mango_bg", "Prismic Mango" ], [ "prismic_mint_bg", "Prismic Mint" ], [ "frostee_bg", "Frostee" ], [ "mint_cream_bg", "Mint Cream" ], [ "menthol_bg", "Menthol" ], [ "l2l_green_bg", "L2L Green" ], [ "fern_green_bg", "Fern Green" ], [ "dark_jungle_bg", "Dark Jungle" ], [ "mystic_green_bg", "Mystic Green" ], [ "lime_green_bg", "Lime Green" ], [ "white_bg", "White" ], [ "very_pale_green_bg", "Very Pale Green" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "very_pale_green_bg"
+  }, {
+    "id" : "0ca744cd-84f6-215d-a12e-f7351b9fe46d",
+    "name" : "color",
+    "display_width" : null,
+    "label" : "Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "form_settings.override_form_style",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "color",
     "default" : {
-      "select_color" : "very_pale_green_bg"
+      "color" : null,
+      "opacity" : null
     }
+  }, {
+    "id" : "770943fc-412e-a7d9-4df3-3605b51b74ef",
+    "name" : "input_background_color",
+    "display_width" : null,
+    "label" : "Input Background Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "form_settings.override_form_style",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "prismic_mango_bg", "Prismic Mango" ], [ "prismic_mint_bg", "Prismic Mint" ], [ "frostee_bg", "Frostee" ], [ "mint_cream_bg", "Mint Cream" ], [ "menthol_bg", "Menthol" ], [ "l2l_green_bg", "L2L Green" ], [ "fern_green_bg", "Fern Green" ], [ "dark_jungle_bg", "Dark Jungle" ], [ "mystic_green_bg", "Mystic Green" ], [ "lime_green_bg", "Lime Green" ], [ "white_bg", "White" ], [ "very_pale_green_bg", "Very Pale Green" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "white_bg"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "background_settings" : {
-      "select_color" : "very_pale_green_bg"
-    }
+    "override_form_style" : false,
+    "select_color" : "very_pale_green_bg",
+    "color" : {
+      "color" : null,
+      "opacity" : null
+    },
+    "input_background_color" : "white_bg"
   }
 }, {
   "id" : "module_overrides",

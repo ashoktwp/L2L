@@ -1,5 +1,8 @@
 {% set moduleName = 'u4m-split-landing-page' %}
-<div class="u4m-split-form-wrapper splitOuter{{name}} {% if module.include_form and  module.form_group.select_form.form_id %}formAdded{% endif %}">
+
+
+
+<div class="u4m-split-form-wrapper splitOuter{{name}} {% if module.form_settings.override_form_style %}form_style_override{% endif %} {% if module.include_form and  module.form_group.select_form.form_id %}formAdded{% endif %}">
   <div class="splitform_topwrap">
     {% include "../partials/u4-module-includes.html" %}
     <div class="page-center">
@@ -70,10 +73,12 @@
       </div>
 
 
+
+
       {% if module.include_form %}
       {% if module.form_group.select_form.form_id%}
       <div class="form_column ">
-        <div class="form_column_inner {{ module.form_settings.background_settings.select_color }}">
+        <div class="form_column_inner  {% if module.form_settings.override_form_style %} {{ module.form_settings.select_color }} input_{{ module.form_settings.input_background_color }}{% else %}very_pale_green_bg{% endif %}">
 
           {% if module.form_group.select_form.form_id %}              
           <div class="form_box">
@@ -208,17 +213,22 @@
 {% end_require_js %}
 
 
+{% if module.form_settings.override_form_style %}
+{% require_css %}
+<style>
 
-
-
-
-
-
-
-
-
-
-
+  .u4m-split-form-wrapper.splitOuter{{name}}.form_style_override .form_column_inner  .submitted-message,
+  .u4m-split-form-wrapper.splitOuter{{name}}.form_style_override .form_column_inner form .hs-form-booleancheckbox label span,
+  .u4m-split-form-wrapper.splitOuter{{name}}.form_style_override .form_column_inner form .input textarea,
+  .u4m-split-form-wrapper.splitOuter{{name}}.form_style_override .form_column_inner form .input select,
+  .u4m-split-form-wrapper.splitOuter{{name}}.form_style_override .form_column_inner form .input input,
+  .u4m-split-form-wrapper.splitOuter{{name}}.form_style_override .form_column_inner form .hs-richtext,
+  .u4m-split-form-wrapper.splitOuter{{name}}.form_style_override .form_column_inner form .hs-form-field > label {
+    color: {{ module.form_settings.color.rgba }}
+  }
+</style>
+{% end_require_css %}
+{% endif %}
 
 
 

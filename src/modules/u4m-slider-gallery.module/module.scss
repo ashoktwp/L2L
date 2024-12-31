@@ -1,7 +1,5 @@
 @import "../../css/_module-imports";
 
-
-
 .u4m-slider-gallery {
   .intro_content {
     margin-bottom: 0rem;
@@ -224,6 +222,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transform: translateY(-50%);
+      top: 50%;
 
       &::before {
         content: "";
@@ -233,6 +233,9 @@
         width: 6px;
         height: 12px;
         background-position: center;
+        position: relative;
+        left: -2px;
+        top: -1px;
       }
 
       &.slick-prev {
@@ -240,7 +243,7 @@
 
         @include midlaptop {
           left: -10px;
-          z-index: 99
+          z-index: 99;
         }
       }
 
@@ -248,12 +251,15 @@
         right: -50px;
 
         &::before {
+          left: 1px;
+          position: relative;
           transform: rotate(180deg);
+          top: 0;
         }
 
         @include midlaptop {
           right: -10px;
-          z-index: 99
+          z-index: 99;
         }
       }
     }
