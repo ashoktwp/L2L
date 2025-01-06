@@ -156,14 +156,33 @@ table + p {
 }
 
 @media (max-width: 991px) {
-  table {
-    display: block;
-    border: 0;
-    white-space: nowrap;
+  .table-container {
     overflow-y: auto;
     width: 100%;
+    position: relative;
   }
-  table thead {
+  .table-container table {
+    display: block;
+    border: 0;
+  }
+  .table-container table thead {
     width: 100%;
   }
+  .table-container .tooltip {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 11rem;
+    background: #9dd8a7;
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: block !important;
+  }
+  .table-container .tooltip.show {
+    display: block;
+  }
+}
+.table-container .tooltip {
+  display: none;
 }

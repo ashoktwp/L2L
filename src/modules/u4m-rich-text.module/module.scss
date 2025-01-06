@@ -144,15 +144,36 @@ table {
     }
   }
 }
+.table-container {
+
 @include tabletmid {
-  table {
-    display: block;
-    border: 0;
-    white-space: nowrap;
     overflow-y: auto;
     width: 100%;
-    thead {
-      width: 100%;
+    position: relative;
+      table {
+        display: block;
+        border: 0;
+        thead {
+          width: 100%;
+        }
     }
+
+    .tooltip {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      font-size: 11rem;
+      background: $Pale_Green;
+      color: $darkBack;
+      padding: 5px 10px;
+      border-radius: 4px;
+      display: block !important; 
+      &.show {
+        display: block;
+      }
+  }
+  }
+  .tooltip {
+    display: none;
   }
 }

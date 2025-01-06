@@ -4,6 +4,11 @@
   "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
   "host_template_types" : [ "PAGE" ],
   "module_id" : 184028710247,
+  "js_assets" : [ {
+    "url" : "https://www.l2l.com/hubfs/L2L-u4m/js/stacktableN.js",
+    "autoload" : true,
+    "name" : "stacktable.min.js"
+  } ],
   "label" : "Rich Text",
   "is_available_for_new_content" : true
 }
