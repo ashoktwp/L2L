@@ -14,7 +14,7 @@ section.u4m-cta-row-1 {
             max-height: 380px;
             background-position: right;
           }
-           @include phone {
+          @include phone {
             max-height: 54vw;
           }
         }
@@ -29,8 +29,8 @@ section.u4m-cta-row-1 {
           height: 100%;
           top: 50%;
           transform: translateY(-50%);
-           @include tablet {
-             max-width: 100%;
+          @include tablet {
+            max-width: 100%;
           }
         }
       }

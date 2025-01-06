@@ -698,7 +698,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "7abaddf5-b935-3dc3-392d-fb0bbe88cdb6",
     "name" : "select_color",
@@ -720,7 +720,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "very_pale_green_bg"
+    "default" : "white_bg"
   }, {
     "id" : "0ca744cd-84f6-215d-a12e-f7351b9fe46d",
     "name" : "color",
@@ -769,8 +769,8 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "override_form_style" : false,
-    "select_color" : "very_pale_green_bg",
+    "override_form_style" : true,
+    "select_color" : "white_bg",
     "color" : {
       "color" : null,
       "opacity" : null

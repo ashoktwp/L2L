@@ -186,6 +186,7 @@
     .slick-slide {
       margin: 0 6px;
       height: 198px;
+      transition: 0.1s ease;
     }
 
     .items_wrp {
@@ -204,12 +205,14 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      min-height: 258px;
     }
 
     .slick-center {
       height: 258px;
       opacity: 1;
       z-index: 2;
+      transition: 0.4s ease 0.2s;
     }
 
     .slick-arrow {

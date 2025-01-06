@@ -1,526 +1,518 @@
 header {
+  .hd_hgh {
+    .hd_wrap {
+      background-color: rgba($Nori_Green, 0.79);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      backdrop-filter: blur(10px);
+      box-shadow:
+        0 0.6021873017743928px 0.6021873017743928px -1.25px rgba($darkBack, 0.9),
+        0 2.288533303243457px 2.288533303243457px -2.5px rgba($darkBack, 0.8),
+        0 10px 10px -3.75px rgba($darkBack, 0.3);
 
-    .hd_hgh {
-        .hd_wrap {
-            background-color: rgba($Nori_Green, 0.79);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 99;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 .6021873017743928px .6021873017743928px -1.25px rgba($darkBack, 0.9), 0 2.288533303243457px 2.288533303243457px -2.5px rgba($darkBack, 0.8), 0 10px 10px -3.75px rgba($darkBack, 0.3);
+      .hd_inr {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 96px;
+        font-family: $secondaryFont;
 
-            .hd_inr {
+        @include tabletMin {
+          .mobile_menu {
+            display: none;
+          }
+        }
+
+        .hd_menu {
+          flex: 1;
+
+          .megamenu_inr > ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+            justify-content: center;
+            position: relative;
+
+            & > li {
+              letter-spacing: normal;
+              margin: 0;
+              line-height: normal;
+
+              &:hover .child_wrapper {
+                display: block;
+                visibility: visible;
+                opacity: 1;
+              }
+
+              @include tabletMin {
+                .childTrigger {
+                  display: none;
+                }
+              }
+
+              & > a {
+                color: $white;
+                @include size14;
+                letter-spacing: 0.15px;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                min-height: 96px;
-                font-family: $secondaryFont;
+                gap: 9px;
 
-                @include tabletMin {
-                    .mobile_menu {
-                        display: none;
-                    }
+                &:hover {
+                  color: $Menthol;
+
+                  .icon {
+                    transform: rotate(180deg);
+                  }
                 }
 
-                .hd_menu {
-                    flex: 1;
+                .icon {
+                  display: block;
+                  width: 12px;
+                  height: 12px;
+                  transition: all 0.2s ease-in;
 
-                    .megamenu_inr>ul {
-                        display: flex;
-                        list-style: none;
-                        align-items: center;
-                        margin: 0;
-                        padding: 0;
-                        gap: 30px;
-                        justify-content: center;
-                        position: relative;
-
-                        &>li {
-                            letter-spacing: normal;
-                            margin: 0;
-                            line-height: normal;
-
-                            &:hover .child_wrapper {
-                                display: block;
-                                visibility: visible;
-                                opacity: 1;
-                            }
-
-                            @include tabletMin {
-                                .childTrigger {
-                                    display: none;
-                                }
-                            }
-
-
-
-                            &>a {
-                                color: $white;
-                                @include size14;
-                                letter-spacing: 0.15px;
-                                display: flex;
-                                align-items: center;
-                                gap: 9px;
-
-                                &:hover {
-                                    color: $Menthol;
-
-                                    .icon {
-                                        transform: rotate(180deg);
-                                    }
-                                }
-
-                                .icon {
-                                    display: block;
-                                    width: 12px;
-                                    height: 12px;
-                                    transition: all .2s ease-in;
-
-                                    svg {
-                                        fill: $Menthol !important;
-                                        display: block !important;
-                                    }
-                                }
-                            }
-
-                            &.support .child_wrapper {
-                                margin-right: 13%;
-
-                                @include navbreak {
-                                    margin-right: 5%;
-                                }
-                            }
-                        }
-                    }
-
-                    .child_wrapper {
-                        visibility: hidden;
-                        opacity: 0;
-                        position: absolute;
-                        padding: 30px;
-                        background-color: rgba($Nori_Green, 1);
-                        border-radius: 0 0 13px 13px;
-                        top: 100%;
-                        z-index: 999;
-                        transition: all 0.3s linear;
-                        width: 300px;
-                        margin: 38px auto 0;
-                        left: 0;
-                        right: 0;
-
-                        &.menuitem2 {
-                            width: 642px;
-                        }
-
-                        &.menuitem3 {
-                            width: 948px;
-
-                            @include tabletMinlargeTotabletMin {
-                                width: 900px;
-                            }
-                        }
-
-                        &::before {
-                            content: "";
-                            display: block;
-                            position: absolute;
-                            width: 100%;
-                            height: 40px;
-                            top: -39px;
-
-                        }
-
-                        .bt_row {
-                            padding-top: 20px;
-                            border-top: 1px solid rgba($Nori_Green, 0.66);
-                            margin-top: 30px;
-
-                            .bt_btn {
-                                display: flex;
-
-                                a {
-                                    @include size14;
-                                    color: $white;
-                                    letter-spacing: 0;
-                                    line-height: 1.7;
-                                    font-weight: 600;
-                                    display: flex;
-                                    gap: 9px;
-
-                                    svg line {
-                                        STROKE: $Menthol !important;
-                                    }
-
-                                    svg polyline {
-                                        STROKE: $Menthol !important;
-                                    }
-
-                                    &:hover {
-                                        color: $Menthol;
-
-                                        .arrow {
-                                            margin-left: 5px;
-
-
-                                        }
-                                    }
-
-                                    .arrow {
-                                        display: inline;
-                                        height: 24px;
-                                        width: 24px;
-                                        transition: all 0.2s linear;
-
-                                        svg line {
-                                            fill: $white !important;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .child_flex {
-                            display: flex;
-                            gap: 20px;
-
-                            .child_col {
-
-                                &.child2 {
-                                    width: 50%;
-                                }
-
-                                &.child3 {
-                                    width: 33.3%;
-                                }
-
-                                .ttl {
-                                    @include size14;
-                                    line-height: 1.9;
-                                    letter-spacing: 0.5px;
-                                    opacity: 0.66;
-                                    text-transform: uppercase;
-                                    margin-bottom: 23px;
-
-                                    a {
-                                        color: rgba($Pale_Green, 1);
-                                        font-weight: 600;
-                                    }
-                                }
-
-                                .child_menus:not(:last-of-type) {
-                                    margin-bottom: 18px;
-                                }
-
-                                .child_menuitems>a {
-
-                                    @include size14;
-                                    color: $white;
-                                    letter-spacing: 0;
-                                    line-height: 1.7;
-                                    font-weight: 600;
-
-                                    &>div {
-                                        display: flex;
-                                        gap: 10px;
-
-                                        .new {
-                                            background: $Forest_Green;
-                                            @include size10;
-                                            color: $Menthol;
-                                            letter-spacing: 0;
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
-                                            line-height: normal;
-                                            text-transform: uppercase;
-                                            padding: 5px;
-                                            border-radius: 5px;
-                                        }
-                                    }
-
-                                    strong {
-                                        font-weight: normal;
-                                    }
-
-                                    p {
-                                        color: $Pale_Mint;
-                                        font-weight: 400;
-                                        opacity: 0.79;
-                                        margin: 0;
-                                        margin-top: 3px;
-                                    }
-                                }
-
-                                .hdcard_img {
-                                    margin-bottom: 16px;
-
-                                    @include tablet {
-                                        max-width: 300px;
-                                    }
-                                }
-
-                                .hdcard_cnt p {
-                                    @include size14;
-                                    color: $white;
-                                    letter-spacing: 0;
-                                    line-height: 1.7;
-                                    margin: 0;
-                                    margin-top: 3px;
-
-                                    span {
-                                        color: $Pale_Mint;
-                                        opacity: 0.79;
-                                    }
-                                }
-                            }
-
-                            .child_btn {
-                                display: flex;
-
-                                a {
-                                    @include buttonThree;
-                                    display: flex;
-                                    align-items: center;
-                                    font-family: $secondaryFont;
-
-                                    span {
-                                        display: block;
-                                        width: 14px;
-                                        height: 14px;
-
-                                        svg {
-                                            width: 100%;
-                                            height: 100%;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                  svg {
+                    fill: $Menthol !important;
+                    display: block !important;
+                  }
                 }
+              }
 
-                .hd_right {
-                    display: flex;
-                    align-items: center;
-                    gap: 30px;
+              &.support .child_wrapper {
+                margin-right: 13%;
 
-                    .hd_links {
-                        ul {
-                            margin: 0;
-                            padding: 0;
-                            display: flex;
-                            list-style: none;
-                            align-items: center;
-                            gap: 30px;
-
-                            &::before,
-                            &::after {
-                                display: none;
-                            }
-
-                            li {
-                                letter-spacing: normal;
-                                margin: 0;
-                                line-height: normal;
-
-                                a {
-                                    color: $white;
-                                    @include size14;
-                                    letter-spacing: 0.15px;
-                                    padding: 0;
-
-                                    &:hover {
-                                        color: $Menthol;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .hd_btn {
-                        .hs-button {
-                            @include buttonTwo;
-                            font-family: $secondaryFont;
-
-                            @include tablet {
-                                display: inline-block;
-                            }
-                        }
-                    }
+                @include navbreak {
+                  margin-right: 5%;
                 }
-
-                @include tablet {
-
-                    .dsk {
-                        display: none !important;
-                    }
-
-                    .mobile_menu {
-
-                        .trigger {
-                            cursor: pointer;
-                            display: inline-block;
-                            height: auto;
-                            width: auto;
-
-                            i {
-                                background-color: $white;
-                                border-radius: 1px;
-                                display: inline;
-                                display: inline-block;
-                                height: 3.5px;
-                                position: relative;
-                                top: -5px;
-                                width: 33px;
-
-                                &:before {
-                                    background-color: $white;
-                                    border-radius: 1px;
-                                    content: "";
-                                    display: inline-block;
-                                    height: 3.5px;
-                                    position: absolute;
-                                    top: -9px;
-                                    width: 33px
-                                }
-
-                                &:after {
-                                    background-color: $white;
-                                    border-radius: 1px;
-                                    content: "";
-                                    display: inline-block;
-                                    height: 3.5px;
-                                    position: absolute;
-                                    top: 9px;
-                                    width: 33px
-                                }
-                            }
-                        }
-
-                        .mb_menu_wrap {
-                            position: absolute;
-                            width: 100%;
-                            left: 0;
-                            right: 0;
-                            top: 100%;
-                            z-index: 999;
-                            background-color: rgba($Nori_Green, 1);
-                            display: none;
-
-                            .mb_menu_inr {
-                                padding: 30px;
-                                overflow: auto;
-                                max-height: 87vh;
-                            }
-
-                            .hd_right {
-                                display: block;
-
-                                .hd_links ul {
-                                    display: block;
-
-                                    &>li {
-                                        margin-bottom: 20px;
-                                        float: none;
-                                        margin-bottom: 20px;
-                                        @include size14;
-
-
-                                    }
-                                }
-                            }
-
-                            .hd_menu .megamenu_inr>ul {
-                                display: block;
-
-                                &>li {
-                                    margin-bottom: 20px;
-                                    display: flex;
-                                    justify-content: space-between;
-                                    flex-wrap: wrap;
-                                    position: relative;
-
-
-
-                                    &>a {
-                                        display: block;
-                                        width: 100%;
-                                        font-weight: 600;
-                                        line-height: 1.7;
-
-                                        .icon {
-                                            display: none;
-                                        }
-                                    }
-
-                                    .childTrigger {
-                                        display: block;
-                                        height: 25px;
-                                        width: 25px;
-                                        position: absolute;
-                                        right: 0;
-                                        top: 0;
-                                        z-index: 99;
-                                        transition: none !important;
-                                        cursor: pointer;
-
-                                        svg {
-                                            height: 20px !important;
-                                            width: 20px !important;
-                                        }
-                                    }
-
-                                    .child_wrapper {
-                                        width: 100% !important;
-                                        position: static;
-                                        opacity: 1;
-                                        visibility: visible;
-                                        margin-top: 0;
-                                        display: none;
-                                        padding: 0 10px;
-                                        transition: none;
-
-                                        &::before {
-                                            display: none;
-                                        }
-
-                                        .child_flex {
-                                            display: flex;
-                                            gap: 25px;
-                                            flex-wrap: wrap;
-                                            flex-direction: column;
-                                            margin-top: 15px;
-
-                                            .child_col {
-                                                width: 100% !important;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                }
+              }
             }
+          }
+
+          .child_wrapper {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            padding: 30px;
+            background-color: rgba($Nori_Green, 1);
+            border-radius: 0 0 13px 13px;
+            top: 100%;
+            z-index: 999;
+            transition: all 0.3s linear;
+            width: 300px;
+            margin: 38px auto 0;
+            left: 0;
+            right: 0;
+
+            &.menuitem2 {
+              width: 642px;
+            }
+
+            &.menuitem3 {
+              width: 948px;
+
+              @include tabletMinlargeTotabletMin {
+                width: 900px;
+              }
+            }
+
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: 40px;
+              top: -39px;
+            }
+
+            .bt_row {
+              padding-top: 20px;
+              border-top: 1px solid rgba($Nori_Green, 0.66);
+              margin-top: 30px;
+
+              .bt_btn {
+                display: flex;
+
+                a {
+                  @include size14;
+                  color: $white;
+                  letter-spacing: 0;
+                  line-height: 1.7;
+                  font-weight: 600;
+                  display: flex;
+                  gap: 9px;
+
+                  svg line {
+                    stroke: $Menthol !important;
+                  }
+
+                  svg polyline {
+                    stroke: $Menthol !important;
+                  }
+
+                  &:hover {
+                    color: $Menthol;
+
+                    .arrow {
+                      margin-left: 5px;
+                    }
+                  }
+
+                  .arrow {
+                    display: inline;
+                    height: 24px;
+                    width: 24px;
+                    transition: all 0.2s linear;
+
+                    svg line {
+                      fill: $white !important;
+                    }
+                  }
+                }
+              }
+            }
+
+            .child_flex {
+              display: flex;
+              gap: 20px;
+
+              .child_col {
+                &.child2 {
+                  width: 50%;
+                }
+
+                &.child3 {
+                  width: 33.3%;
+                }
+
+                .ttl {
+                  @include size14;
+                  line-height: 1.9;
+                  letter-spacing: 0.5px;
+                  opacity: 0.66;
+                  text-transform: uppercase;
+                  margin-bottom: 23px;
+
+                  a {
+                    color: rgba($Pale_Green, 1);
+                    font-weight: 600;
+                  }
+                }
+
+                .child_menus:not(:last-of-type) {
+                  margin-bottom: 18px;
+                }
+
+                .child_menuitems > a {
+                  @include size14;
+                  color: $white;
+                  letter-spacing: 0;
+                  line-height: 1.7;
+                  font-weight: 600;
+                  transition: color 0.2s ease;
+
+                  & > div {
+                    display: flex;
+                    gap: 10px;
+
+                    .new {
+                      background: $Forest_Green;
+                      @include size10;
+                      color: $Menthol;
+                      letter-spacing: 0;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      line-height: normal;
+                      text-transform: uppercase;
+                      padding: 5px;
+                      border-radius: 5px;
+                    }
+                  }
+
+                  strong {
+                    font-weight: normal;
+                  }
+
+                  p {
+                    color: $Pale_Mint;
+                    font-weight: 400;
+                    opacity: 0.79;
+                    margin: 0;
+                    margin-top: 3px;
+                  }
+
+                  &:hover {
+                    color: $Menthol;
+                  }
+                }
+
+                .hdcard_img {
+                  margin-bottom: 16px;
+
+                  @include tablet {
+                    max-width: 300px;
+                  }
+                }
+
+                .hdcard_cnt p {
+                  @include size14;
+                  color: $white;
+                  letter-spacing: 0;
+                  line-height: 1.7;
+                  margin: 0;
+                  margin-top: 3px;
+
+                  span {
+                    color: $Pale_Mint;
+                    opacity: 0.79;
+                  }
+                }
+              }
+
+              .child_btn {
+                display: flex;
+
+                a {
+                  @include buttonThree;
+                  display: flex;
+                  align-items: center;
+                  font-family: $secondaryFont;
+
+                  span {
+                    display: block;
+                    width: 14px;
+                    height: 14px;
+
+                    svg {
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
+
+        .hd_right {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+
+          .hd_links {
+            ul {
+              margin: 0;
+              padding: 0;
+              display: flex;
+              list-style: none;
+              align-items: center;
+              gap: 30px;
+
+              &::before,
+              &::after {
+                display: none;
+              }
+
+              li {
+                letter-spacing: normal;
+                margin: 0;
+                line-height: normal;
+
+                a {
+                  color: $white;
+                  @include size14;
+                  letter-spacing: 0.15px;
+                  padding: 0;
+
+                  &:hover {
+                    color: $Menthol;
+                  }
+                }
+              }
+            }
+          }
+
+          .hd_btn {
+            .hs-button {
+              @include buttonTwo;
+              font-family: $secondaryFont;
+
+              @include tablet {
+                display: inline-block;
+              }
+            }
+          }
+        }
+
+        @include tablet {
+          .dsk {
+            display: none !important;
+          }
+
+          .mobile_menu {
+            .trigger {
+              cursor: pointer;
+              display: inline-block;
+              height: auto;
+              width: auto;
+
+              i {
+                background-color: $white;
+                border-radius: 1px;
+                display: inline;
+                display: inline-block;
+                height: 3.5px;
+                position: relative;
+                top: -5px;
+                width: 33px;
+
+                &:before {
+                  background-color: $white;
+                  border-radius: 1px;
+                  content: "";
+                  display: inline-block;
+                  height: 3.5px;
+                  position: absolute;
+                  top: -9px;
+                  width: 33px;
+                }
+
+                &:after {
+                  background-color: $white;
+                  border-radius: 1px;
+                  content: "";
+                  display: inline-block;
+                  height: 3.5px;
+                  position: absolute;
+                  top: 9px;
+                  width: 33px;
+                }
+              }
+            }
+
+            .mb_menu_wrap {
+              position: absolute;
+              width: 100%;
+              left: 0;
+              right: 0;
+              top: 100%;
+              z-index: 999;
+              background-color: rgba($Nori_Green, 1);
+              display: none;
+
+              .mb_menu_inr {
+                padding: 30px;
+                overflow: auto;
+                max-height: 87vh;
+              }
+
+              .hd_right {
+                display: block;
+
+                .hd_links ul {
+                  display: block;
+
+                  & > li {
+                    margin-bottom: 20px;
+                    float: none;
+                    margin-bottom: 20px;
+                    @include size14;
+                  }
+                }
+              }
+
+              .hd_menu .megamenu_inr > ul {
+                display: block;
+
+                & > li {
+                  margin-bottom: 20px;
+                  display: flex;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                  position: relative;
+
+                  & > a {
+                    display: block;
+                    width: 100%;
+                    font-weight: 600;
+                    line-height: 1.7;
+
+                    .icon {
+                      display: none;
+                    }
+                  }
+
+                  .childTrigger {
+                    display: block;
+                    height: 25px;
+                    width: 25px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: 99;
+                    transition: none !important;
+                    cursor: pointer;
+
+                    svg {
+                      height: 20px !important;
+                      width: 20px !important;
+                    }
+                  }
+
+                  .child_wrapper {
+                    width: 100% !important;
+                    position: static;
+                    opacity: 1;
+                    visibility: visible;
+                    margin-top: 0;
+                    display: none;
+                    padding: 0 10px;
+                    transition: none;
+
+                    &::before {
+                      display: none;
+                    }
+
+                    .child_flex {
+                      display: flex;
+                      gap: 25px;
+                      flex-wrap: wrap;
+                      flex-direction: column;
+                      margin-top: 15px;
+
+                      .child_col {
+                        width: 100% !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
 
-
 .withouthd header {
-    .hd_hgh {
-        min-height: 96px;
+  .hd_hgh {
+    min-height: 96px;
 
-        .hd_wrap {
-            background-color: rgba($Nori_Green, 1);
-        }
+    .hd_wrap {
+      background-color: rgba($Nori_Green, 1);
     }
+  }
 }
 
 .withouthd.page-scrolled header .hd_wrap {
-    background-color: rgba($Nori_Green, 0.79);
+  background-color: rgba($Nori_Green, 0.79);
 }

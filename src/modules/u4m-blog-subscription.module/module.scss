@@ -33,6 +33,14 @@ section.u4m-blog-subscription {
         width: 100%;
       }
       @include subscribeForm;
+      form {
+        .hs-input {
+          border-color: currentColor !important;
+        }
+        .hs-button {
+          margin: 7px 0;
+        }
+      }
     }
   }
 }

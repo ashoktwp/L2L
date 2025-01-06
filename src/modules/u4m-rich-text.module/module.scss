@@ -1,6 +1,12 @@
 @import "../../css/_module-imports";
 
 .u4m-rich-text {
+  .inner_wrpp p,
+  .inner_wrpp ul,
+  .inner_wrpp ol {
+    opacity: 0.79;
+  }
+
   code.hljs {
     background-color: $Dark_jungle;
   }
@@ -31,7 +37,7 @@
     }
   }
   hr {
-    border: 2px solid $L2L_green;
+    border: 1px solid $L2L_green;
     margin-top: 45px;
     margin-bottom: 30px;
   }
@@ -145,17 +151,16 @@ table {
   }
 }
 .table-container {
-
-@include tabletmid {
+  @include tabletmid {
     overflow-y: auto;
     width: 100%;
     position: relative;
-      table {
-        display: block;
-        border: 0;
-        thead {
-          width: 100%;
-        }
+    table {
+      display: block;
+      border: 0;
+      thead {
+        width: 100%;
+      }
     }
 
     .tooltip {
@@ -167,11 +172,11 @@ table {
       color: $darkBack;
       padding: 5px 10px;
       border-radius: 4px;
-      display: block !important; 
+      display: block !important;
       &.show {
         display: block;
       }
-  }
+    }
   }
   .tooltip {
     display: none;
