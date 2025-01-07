@@ -179,12 +179,11 @@ html {
         .ctvb-tabtxt {
           p {
             sup {
-              color: $L2L_green;
               font-size: 32px;
               top: -5px;
 
               @include tabletvert {
-                top: 2px;
+                top: -3px;
               }
             }
           }
@@ -200,11 +199,13 @@ html {
   }
 
   .ctvb-tabcol {
-    padding: 0 15px;
-    width: auto;
-    position: relative;
-    transition: 0.3s all;
-    transition-delay: 0.6s;
+    @include tabletvertmin {
+      padding: 0 15px;
+      width: auto;
+      position: relative;
+      transition: 0.3s all;
+      transition-delay: .6s;
+    }
 
     &:not(.slick-current) {
       .ctvb-tabottom {
@@ -228,7 +229,11 @@ html {
         opacity: 0;
       }
     }
-
+    &:hover {
+      .ctvb-tabimage {
+        opacity: 1;
+      }
+    }
     @include tabletvertmin {
       &:hover {
         padding: 0 15px;
@@ -291,10 +296,20 @@ html {
       opacity: 1;
     }
   }
-
+  .ctvb-tabcol.slick-now {
+    @include tabletvertmin {
+      max-width: 582px;
+    }
+  }
   .ctvb-tabcol.slick-current {
-    max-width: 582px;
+    .ctvb-tabimage {
+      opacity: 1;
+    }
 
+    .topCat {
+        display: block;
+    }
+    @include tabletvertmin {
     &:hover {
       padding: 0 15px;
 
@@ -302,6 +317,7 @@ html {
         transform: unset;
       }
     }
+  }
 
     .ctvb-tabcontent {
       display: block;
@@ -395,8 +411,10 @@ html {
 
       li {
         margin: 0;
-        padding-right: 40px;
-
+        padding-right: 35px;
+        &:last-child {
+          padding-right: 0;
+      }
         @include tabletvert {
           padding-right: 15px;
         }
@@ -408,6 +426,7 @@ html {
           font-size: 14px;
           position: relative;
           color: $baseColor;
+          text-transform: uppercase;
         }
       }
 
@@ -480,11 +499,24 @@ html {
     z-index: 1;
     width: 100%;
     min-height: 324px;
+    opacity: .45;
+    transition: all .3s linear;
     @include tabletvert {
-      max-width: 582px;
+      max-width: 100%;
     }
-    @include phone {
-      max-width: 295px;
+    .topCat {
+        backdrop-filter: blur(8px);
+        background-color: rgba(0, 0, 0, 0.66);
+        padding: 7.5px 12px;
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        color: #fff;
+        line-height: 1.4;
+        text-transform: uppercase;
+        display: none;
+        font-size: 15rem;
+        font-weight: bold;
     }
   }
 
@@ -543,7 +575,10 @@ html {
     margin-top: 0;
     display: flex;
     overflow: visible;
-
+    @include tabletvert {
+      margin: 0;
+      width: 100%;
+    }
     &::-webkit-scrollbar {
       height: 6px;
       background-color: $white;
@@ -558,6 +593,14 @@ html {
     .slick-list {
       overflow: visible;
       width: 100%;
+      @include tabletvert {
+        overflow: hidden;
+      }
+      .slick-track {
+        @include tabletvertmin {
+        // transition: transform .5s linear;
+        }
+      }
     }
   }
 
@@ -571,12 +614,9 @@ html {
     }
 
     @include tabletvert {
-      min-width: 100%;
+      min-width: auto;
       display: block;  
-      max-width: 582px;
-    }
-    @include phone {
-      max-width: 295px;
+      max-width: 100%;
     }
   }
 
@@ -698,8 +738,8 @@ html {
   }
 
   .ctvb-tabplaceholder {
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -719,8 +759,8 @@ html {
     }
 
     &:before {
-      transition: 0.5s;
-      -webkit-transition: 0.5s;
+      transition:all .3s linear;
+      -webkit-transition: all .3s linear;
       position: absolute;
       top: 0;
       left: 0;
@@ -767,11 +807,6 @@ html {
   }
 }
 
-@include mobile {
-  .ctvb-tabcol.slick-current {
-    max-width: 295px !important;
-  }
-}
 
 @include phone {
   html {
@@ -795,7 +830,9 @@ html {
 
     .ctvb-tabcol.slick-current {
       max-width: 295px;
-
+      .ctvb-tabimage {
+        opacity: 1;
+      }
       @include tabletvert {
         max-width: 100%;
       }
@@ -814,6 +851,9 @@ html {
       p {
         font-size: 20px;
         line-height: 32px;
+         sup {
+          font-size: inherit !important;
+         }
       }
     }
   }

@@ -25,6 +25,9 @@
         {% for item in module.tabber_items %}
         <div id="tab-{{ loop.index }}" class="ctvb-tabcol ctvb-video">
           <div class="ctvb-tabimage">
+          <div class="topCat">
+          {{ item.tab_title }}
+          </div>
             <div class="ctvb-tabplaceholder">
               {% if item.image_field.src %}
               {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
@@ -176,21 +179,16 @@
       autoplaySpeed: 5000,
       infinite: true,
       autoplay: false,
+      focusOnSelect: true,
       responsive: [ 
       {
         breakpoint: 767,
         settings: { 
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
+          variableWidth: false,
         }
-      },
-      {
-          breakpoint: 400,
-          settings: { 
-            slidesToShow: 1,
-            slidesToScroll: 1,  
-          }
-        }
+      }
     ]
     });
 
@@ -202,6 +200,7 @@
       dots: false, 
       infinite: false,
       autoplay: false,
+      arrows: false,
       responsive: [
         {
           breakpoint: 1400,
@@ -216,16 +215,17 @@
             slidesToShow: 1,
             slidesToScroll: 1, 
           }
-        },
-        {
-          breakpoint: 400,
-          settings: { 
-            slidesToShow: 1,
-            slidesToScroll: 1,  
-          }
         }
       ] 
     });
+
+    $('.sslider-for').on('beforeChange', function(event, { slideCount: count }, currentSlide, nextSlide){
+    let selectors = [nextSlide, nextSlide - count, nextSlide + count].map(n => `[data-slick-index="${n}"]`).join(', ');
+      $('.slick-now').removeClass('slick-now');
+      $(selectors).addClass('slick-now');
+    });
+
+    $('[data-slick-index="0"]').addClass('slick-now');
 
     function startProgressBar() {
       const $progressBar = $('.progress-bar .circle-go');
