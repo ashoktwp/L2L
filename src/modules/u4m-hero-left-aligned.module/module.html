@@ -1,125 +1,136 @@
 {% set moduleName = 'u4m-hero-left-aligned' %}
-  {% include "../partials/u4-module-includes.html" %}
-  
-  {% if module.module_overrides.background_settings.background_type == 'video' %}
-  <video class="video-bg" autoplay muted loop playsinline>
-    <source src="{{ module.module_overrides.background_settings.bg_video }}" type="video/mp4">
-  </video>
+{% include "../partials/u4-module-includes.html" %}
 
-  {% endif %}
-  {% if module.module_overrides.background_settings.background_type == 'video' || module.module_overrides.background_settings.background_type == 'image'  %}
-  <div class="bg_overlay overlay-color {% if module.module_overrides.background_settings.include_overlay_on_mobile %}onmb{% endif %}" style="background-color:rgb({{ module.module_overrides.background_settings.overlay_color.color|convert_rgb }},
-                                    {{ module.module_overrides.background_settings.overlay_color.opacity*0.01 }})">
-  
-  </div>
-  {% endif %}
-  <div class="page-center  {{ module.module_settings.theme }} hero-align-{{ module.content_alignment }}">
-    <div class="intro_wrapp {% if not module.media_column.image.src and not module.media_column.video  %}no-media-column{% endif %}">
-  
-  
-  
-      {% if module.intro_content.include_eyebrow_text or module.intro_content.include_heading or module.intro_content.include_content or  module.intro_content.include_button or module.intro_content.list_items %}
-      <div class="intro_content">
-  
-        <div class="intro__inner">
-          {% if module.intro_content.include_eyebrow_text %}
-          <div class="eyebrow_text">
-            {{ module.intro_content.eyebrow_text }}
-          </div>
+{% if module.module_overrides.background_settings.background_type == 'video' %}
+<video class="video-bg" autoplay muted loop playsinline>
+  <source src="{{ module.module_overrides.background_settings.bg_video }}" type="video/mp4">
+</video>
+
+{% endif %}
+{% if module.module_overrides.background_settings.background_type == 'video' || module.module_overrides.background_settings.background_type == 'image'  %}
+<div class="bg_overlay overlay-color {% if module.module_overrides.background_settings.include_overlay_on_mobile %}onmb{% endif %}" style="background-color:rgb({{ module.module_overrides.background_settings.overlay_color.color|convert_rgb }},
+                                                                                                                                           {{ module.module_overrides.background_settings.overlay_color.opacity*0.01 }})">
+
+</div>
+{% endif %}
+<div class="page-center  {{ module.module_settings.theme }} hero-align-{{ module.content_alignment }}">
+  <div class="intro_wrapp {% if not module.media_column.image.src and not module.media_column.video  %}no-media-column{% endif %}">
+
+
+
+    {% if module.intro_content.include_eyebrow_text or module.intro_content.include_heading or module.intro_content.include_content or  module.intro_content.include_button or module.intro_content.list_items %}
+    <div class="intro_content">
+
+      <div class="intro__inner">
+        {% if module.intro_content.include_eyebrow_text %}
+        <div class="eyebrow_text">
+          {{ module.intro_content.eyebrow_text }}
+        </div>
+        {% endif %}
+
+
+
+        {% if module.intro_content.include_heading %}
+        <{{module.intro_content.heading_size}} class="intro_title">{{ module.intro_content.heading }}</{{module.intro_content.heading_size}}>
           {% endif %}
-  
-  
-  
-          {% if module.intro_content.include_heading %}
-          <{{module.intro_content.heading_size}} class="intro_title">{{ module.intro_content.heading }}</{{module.intro_content.heading_size}}>
-            {% endif %}
-  
-  
-  
-  
-            {% if module.intro_content.include_content %}
-            <div class="intro_desc {{ module.intro_content.content_style }}">
-          {{ module.intro_content.content }}
-        </div>
-        {% endif %}
-        {% if intro_content.list_items %}
-        <div class="list-item">
-          <ul>
-            {% for item in module.intro_content.list_items %}
-            <li>
-              <span class="icon"> {% icon
-      name="{{ item.icon.name }}"
-      style="{{ item.icon.type }}"
-      unicode="{{ item.icon.unicode }}"
-      icon_set="{{ item.icon.icon_set }}"
-    %}</span><span>{{ item.list_item }}</span>
-            </li>
-            {% endfor %} 
-          </ul>
-        </div>
-        {% endif %}
-        {% if module.intro_content.include_button %}
-        <div class="intro_btn_wrap">
-          {{macros.buttonGroup( module.intro_content.button_group)}}
-        </div>
-        {% endif %}
-        {#===#}
-  
+
+
+
+
+          {% if module.intro_content.include_content %}
+          <div class="intro_desc {{ module.intro_content.content_style }}">
+        {{ module.intro_content.content }}
       </div>
+      {% endif %}
+      {% if intro_content.list_items %}
+      <div class="list-item">
+        <ul>
+          {% for item in module.intro_content.list_items %}
+          <li>
+            <span class="icon"> {% icon
+        name="{{ item.icon.name }}"
+        style="{{ item.icon.type }}"
+        unicode="{{ item.icon.unicode }}"
+        icon_set="{{ item.icon.icon_set }}"
+      %}</span><span>{{ item.list_item }}</span>
+          </li>
+          {% endfor %} 
+        </ul>
+      </div>
+      {% endif %}
+      {% if module.intro_content.include_button %}
+      <div class="intro_btn_wrap">
+        {{macros.buttonGroup( module.intro_content.button_group)}}
+      </div>
+      {% endif %}
+      {#===#}
+
     </div>
-    {% endif %}
-    {% if module.media_column.image.src or module.media_column.video or module.media_column.video_section.embed_path  %}
-    <div class="media-column">
-      {% if module.media_column.media_type == 'img' %}
-      {% if module.media_column.image.src %}
-      <img src="{{ module.media_column.image.src|escape_url }}" alt="{{ module.media_column.image.alt|escape_attr }}">
-      {% endif %}
-      {% endif %}
-      {% if module.media_column.media_type == 'video' %}
-      {% if module.media_column.video_section.video_type == 'file'%}
-      {% if module.media_column.video_section.video %}
-      <video class="video" controls>
-        <source src="{{ module.media_column.video_section.video }}" type="video/mp4">
-      </video>
-      {% endif %}
-      {% endif %}
-  
-      {% if module.media_column.video_section.video_type == 'embed' %}
-      <iframe src="{{ module.media_column.video_section.embed_path }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1"  frameborder="0" allowfullscreen="" class="iframe_video" ></iframe>
-      {% endif %}
-  
-      {% endif %}
-  
-    </div>
-    {% endif %}
-  
   </div>
+  {% endif %}
+  {% if module.media_column.image.src or module.media_column.video or module.media_column.video_section.embed_path  %}
+  <div class="media-column">
+    {% if module.media_column.media_type == 'img' %}
+    {% if module.media_column.image.src %}
+    <img src="{{ module.media_column.image.src|escape_url }}" alt="{{ module.media_column.image.alt|escape_attr }}">
+    {% endif %}
+    {% endif %}
+    {% if module.media_column.media_type == 'video' %}
+    {% if module.media_column.video_section.video_type == 'file'%}
+    {% if module.media_column.video_section.video %}
+    <video class="video" controls>
+      <source src="{{ module.media_column.video_section.video }}" type="video/mp4">
+    </video>
+    {% endif %}
+    {% endif %}
+
+    {% if module.media_column.video_section.video_type == 'embed' %}
+    <iframe src="{{ module.media_column.video_section.embed_path }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1"  frameborder="0" allowfullscreen="" class="iframe_video" ></iframe>
+    {% endif %}
+
+    {% endif %}
+
   </div>
-  </section>
-  
+  {% endif %}
+
+</div>
+</div>
+</section>
+
 {% require_js %}
-  <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
-  // Check if the class .hero-align-center exists
-  if (document.querySelector(".{{name}} .hero-align-center")) {
-    // Add a class to .u4m-hero-left-aligned
-    document.querySelectorAll(".{{name}}.u4m-hero-left-aligned").forEach((element) => {
-      element.classList.add("u4m-hero-center"); 
-    });
+    // Check if the class .hero-align-center exists
+    if (document.querySelector(".{{name}} .hero-align-center")) {
+                               // Add a class to .u4m-hero-left-aligned
+                               document.querySelectorAll(".{{name}}.u4m-hero-left-aligned").forEach((element) => {
+                               element.classList.add("u4m-hero-center"); 
+        });
   }
-});
+                            });
 </script>
 {% end_require_js %}
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+{% if module.module_overrides.background_settings.background_type == "image"%}
+{% require_css %}
+<style>
+  @media(max-width: 767px){
+    .{{name}}.{{moduleName}} .bg_overlay.bg_image{
+      background-position: {{ module.module_overrides.background_settings.mobile_background_image_position }}
+    }
+  }
+</style>
+{% end_require_css %}
+{% endif %}
+

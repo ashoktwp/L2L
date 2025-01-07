@@ -66,6 +66,7 @@
 
           @include tablet {
             padding: 30px 20px;
+            padding: 25px;
           }
 
           .card_cnt p:last-child {
@@ -79,6 +80,7 @@
             padding-bottom: 24px;
             border-bottom: 1px solid $Menthol;
             margin-bottom: 18px;
+            align-items: center;
 
             &.flextype2 {
               border-color: $Prismic_mango;
@@ -161,16 +163,16 @@
             a.arrow-link {
               color: $white;
 
-              &:hover .arrowbtn {
+              .arrowbtn {
                 color: $Menthol;
               }
             }
 
-            &.btntype2 a.arrow-link:hover .arrowbtn {
+            &.btntype2 a.arrow-link .arrowbtn {
               color: $Prismic_mango;
             }
 
-            &.btntype3 a.arrow-link:hover .arrowbtn {
+            &.btntype3 a.arrow-link .arrowbtn {
               color: $L2L_green;
             }
 

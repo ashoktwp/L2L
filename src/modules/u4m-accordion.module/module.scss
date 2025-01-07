@@ -5,8 +5,6 @@
     padding: 83px 148px;
   }
 
-
-
   .intro_content {
     margin-bottom: 50px;
   }
@@ -22,16 +20,16 @@
       cursor: pointer;
 
       @include tabletvert {
-        padding: 10px 50px 10px 20px;
+        padding: 24px 50px 24px 20px;
       }
 
       @include phone {
-        padding: 10px 50px 10px 10px;
+        padding: 24px 50px 24px 24px;
       }
 
       h4 {
         margin: 0;
-        font-weight: bold;
+        font-weight: 600;
         font-family: inherit;
         color: $headingColor;
       }
@@ -83,11 +81,13 @@
         opacity: 0.66;
 
         @include tabletvert {
-          padding: 10px 20px;
+          padding: 10px 24px;
+          padding: 0 24px 24px;
         }
 
         @include phone {
-          padding: 10px;
+          padding: 10px 24px 24px;
+          padding: 0 24px 24px;
           @include size14;
         }
 

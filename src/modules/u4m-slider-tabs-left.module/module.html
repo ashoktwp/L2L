@@ -9,19 +9,33 @@
 <div class="slider-tabs-wrapper">
   <div class="page-center">
     <div class="row">
-      <div class="left_col">
+      <div class="left_col carousel">
         {% for item in module.accordion_items %}
-        <div class="img-items {% if loop.first %}acc-open{% endif %}" data-img="data{{ loop.index }}">
+        <div class="img-items {{item.select_media_type}} {% if loop.first %}acc-open{% endif %}" data-img="data{{ loop.index }}">
+
+          {% if item.select_media_type == "video" %}
+          {% if item.video %}
+          <div class="video_player_box">
+            <video src="{{ item.video }}" autoplay="" muted="" controls="" controlslist="nodownload"></video>
+          </div>
+          {% endif %}
+
+          {% else %}
           {% if item.image_field.src %}
           <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}">
           {% endif %}
+          {% endif %}
         </div>
         {% endfor %}
+
+
+
+
       </div>
       <div class="right_col">
-        <div class="accordion-section">
+        <div class="accordion-section slider_navbar">
           {% for item in module.accordion_items %}
-          <div class="acc-items {% if loop.first %}acc-open{% endif %}">
+          <div class="acc-items media_{{item.select_media_type}} {% if loop.first %}acc-open animateDiv{% endif %}">
             <div class="acc-count">
               <span>{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
               <div class="title-section" acc-data="data{{ loop.index }}">
@@ -38,7 +52,7 @@
                   {% set href = "mailto:" + href %}
                   {% endif %}
                   <a class="icon arrow-link {% if not href %}nolink{% endif %}"
-                    {% if href %} {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+                     {% if href %} {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
                      href="{{ href }}"
                      {% else %}
                      href="{{ href|escape_url }}"
@@ -50,7 +64,7 @@
                      rel="{{ item.link.rel|escape_attr }}"
                      {% endif %}
                      {% else %}href="javascript:voild;"{% endif %}>
-                     <span class="plus-icons">
+                    <span class="plus-icons">
                       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
                         <title>Icons/arrow-2</title>
                         <g id="Module-Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.45">
@@ -73,7 +87,7 @@
                         </g>
                       </svg>
                     </span>
-                     {% if href %}
+                    {% if href %}
                     <span class="arrowbtn">
                       <svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
                         <title>Icons/arrow-2</title>
@@ -117,13 +131,27 @@
             </div>
             {% if item.content %}
             <div class="toggle_section">
-             
+
               {{ item.content }}
               <div class="img-wrpp">
-              {% if item.image_field.src %}
-              <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}">
-              {% endif %}
-            </div>
+                {#                 {% if item.image_field.src %}
+                <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}">
+                {% endif %}
+ #}
+                {% if item.select_media_type == "video" %}
+                {% if item.video %}
+                <div class="video_player_box">
+                  <video src="{{ item.video }}" autoplay="" muted="" controls="" controlslist="nodownload"></video>
+                </div>
+                {% endif %}
+
+                {% else %}
+                {% if item.image_field.src %}
+                <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}">
+                {% endif %}
+                {% endif %}
+
+              </div>
             </div>
             {% endif %}
           </div>
@@ -134,3 +162,235 @@
   </div>
 </div>
 </section>
+
+
+{% require_css%}
+<style>
+.u4m-slider-tabs-left   .accordion-section .slick-track {
+    transform: none !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .u4m-slider-tabs-left  .accordion-section .slick-list.draggable {
+    height: auto !important;
+  }
+
+  .u4m-slider-tabs-left  .video_player_box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    display: inline-flex;
+    margin: auto;
+    border-radius: 25px;
+  }
+
+  .u4m-slider-tabs-left  .video_player_box video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0;
+    display: block;
+    border-radius: 25px;
+  }
+
+  .u4m-slider-tabs-left .slider-tabs-wrapper .img-items.video.slick-slide {
+    display: flex;
+  }
+
+
+  .u4m-slider-tabs-left .slider-tabs-wrapper .left_col .img-items{
+    display: block;
+  }
+
+  .u4m-slider-tabs-left .slider-tabs-wrapper .toggle_section {
+    display: none;
+  }
+
+  .u4m-slider-tabs-left .slider-tabs-wrapper .slick-active .toggle_section {
+    display: block;
+  }
+
+  .u4m-slider-tabs-left  .accordion-section .slick-track:after,
+  .u4m-slider-tabs-left .accordion-section .slick-track:before {
+    content: '';
+    display: none;
+  }
+
+  .u4m-slider-tabs-left  .accordion-section .slick-track {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .u4m-slider-tabs-left .slider-tabs-wrapper   .acc-items.media_image.acc-open .progress-line {
+    transition-duration: 3000ms;
+  }
+
+  .u4m-slider-tabs-left .slider-tabs-wrapper .acc-open .progress-line {
+    width: 100%;
+    /*     transition-duration: 3000ms; */
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: width;
+  }
+
+
+
+  .u4m-slider-tabs-left .slider-tabs-wrapper .progress-line {
+    width: 0;
+  }
+
+</style>
+{% end_require_css%}
+
+{% require_js%}
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>  -->
+
+<script>
+
+  var isPlaying = true;
+  var videoPlaying = false; 
+
+  $('.slider-tabs-wrapper .left_col').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    dots: false,
+    autoplay : isPlaying,
+    pauseOnHover: false,
+    asNavFor: '.slider_navbar'
+  });
+  $('.accordion-section').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    vertical:true,
+    asNavFor: '.slider-tabs-wrapper .left_col',
+    dots: false,
+    focusOnSelect: true,
+    verticalSwiping:true,
+    infinite: false,
+    pauseOnHover: false,
+    arrows: false
+  });
+
+
+  $(".slider-tabs-wrapper .left_col").on(
+    "beforeChange",
+    function (event, slick, currentSlide, nextSlide) {
+      var nextSlideElement = slick.$slides[nextSlide];
+
+      if ($(nextSlideElement).find("video").length > 0) {
+        var getLength = $(nextSlideElement).find("video").length
+        var getDuration = $(nextSlideElement).find("video").duration
+
+        $(".carousel").slick("slickPause");
+      }
+    }
+  );
+
+
+  //   =========
+
+  $(".slider-tabs-wrapper .left_col").on("afterChange", function (event, slick, currentSlide) {
+    var currentSlideElement = slick.$slides[currentSlide];
+
+    var getSameIndexParent = $('.acc-items.slick-slide[data-slick-index="' + currentSlide + '"]');
+
+    // Remove inline CSS from all .progress-line elements
+    $('.progress-line').removeAttr('style');
+
+    // Pause and mute all sibling videos except the active slide
+    $(".slider-tabs-wrapper .left_col .img-items").each(function () {
+      var getThis = $(this);
+      if (!getThis.hasClass('slick-current slick-active') && getThis.find("video").length > 0) {
+        var siblingVideo = getThis.find("video")[0];
+        siblingVideo.pause();
+        siblingVideo.currentTime = 0;
+        siblingVideo.muted = true;
+        console.log('Paused and muted sibling video');
+      }
+    });
+
+    // Handle video in the current slide
+    if ($(currentSlideElement).find("video").length > 0) {
+      var video = $(currentSlideElement).find("video")[0];
+
+      var getSameIndex = getSameIndexParent.find('.progress-line');
+
+      // Reset and load the video
+      video.pause();
+      video.currentTime = 0;
+      video.load();
+
+      video.onloadedmetadata = function () {
+        let duration = video.duration;
+        let totalTransitionDuration = (duration + 0.8) * 1000 + "ms";
+
+        // Set the transition duration for the progress line
+        $(getSameIndex).css({ "transition-duration": totalTransitionDuration });
+        console.log('Duration set:', totalTransitionDuration);
+
+        // Add animation class to current slide
+        $('.acc-items.slick-slide').removeClass('acc-open');
+        getSameIndexParent.addClass('acc-open');
+
+        // Start video playback
+        setTimeout(function () {
+          video.play();
+          //           video.muted = false;
+          console.log('Video playing');
+        }, 100);
+
+        videoPlaying = true;
+
+        video.onended = function () {
+          videoPlaying = false;
+          video.pause();
+          video.currentTime = 0;
+          video.muted = true;
+
+          // Remove transition effect after video ends
+          $(getSameIndex).removeAttr('style');
+          console.log('Duration removed');
+
+          // Move to the next slide after video ends
+          $(".slider-tabs-wrapper .left_col").slick("slickPlay");
+          $(".slider-tabs-wrapper .left_col").slick("slickNext");
+        };
+      };
+
+      video.onerror = function () {
+        console.error("Error loading video");
+        $(".slider-tabs-wrapper .left_col").slick("slickPlay");
+      };
+    } else {
+      // If the current slide has no video, add animation class and continue autoplay
+      $('.acc-items.slick-slide').removeClass('acc-open');
+      getSameIndexParent.addClass('acc-open');
+      $(".slider-tabs-wrapper .left_col").slick("slickPlay");
+    }
+  });
+
+
+
+  $(".slider-tabs-wrapper .left_col").on(
+    "beforeChange",
+    function (event, slick, currentSlide, nextSlide) {
+      if (videoPlaying) {
+        event.stopImmediatePropagation(); 
+      }
+    }
+  );
+
+
+
+</script>
+
+{% end_require_js%}

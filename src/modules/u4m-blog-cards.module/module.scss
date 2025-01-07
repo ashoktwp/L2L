@@ -163,10 +163,13 @@
         .post_body {
           position: relative;
           z-index: 3;
-          height: calc(100% - 213px);
+          min-height: calc(100% - 213px);
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
+          & > div {
+            width: 100%;
+          }
           .post_meta {
             @include eyebrow2;
             margin-bottom: 6px;

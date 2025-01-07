@@ -60,6 +60,9 @@ section.u4m-cta-row-3 {
               .hs-input {
                 border: none;
                 padding: 22px 144px 22px 30px !important;
+                @include tabletvert {
+                  padding: 22px 159px 22px 16px !important;
+                }
               }
               ul.inputs-list {
                 li {

@@ -107,6 +107,7 @@
       left: 0;
       width: 100%;
       border-radius: 8px;
+      border: 1px solid $Fern_green;
       @include tablet {
         position: static;
       }
@@ -123,6 +124,18 @@
         .hs-form-field {
           & > label {
             display: block;
+            color: $Fern_green;
+          }
+
+          .input select,
+          .input textarea,
+          .input input {
+            border: 1px solid $Fern_green !important;
+          }
+
+          .input input[type="radio"],
+          .input input[type="checkbox"] {
+            border: none !important;
           }
         }
 
@@ -162,6 +175,15 @@
               }
               .input {
                 margin-left: 10px;
+              }
+              @media (max-width: 400px),
+                (min-device-width: 320px) and (max-device-width: 480px) {
+                > label {
+                  padding-left: 0;
+                }
+                .input {
+                  margin-left: 0;
+                }
               }
             }
             &.focused,

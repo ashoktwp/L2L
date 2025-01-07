@@ -93,6 +93,7 @@
           }
         }
 
+        li:hover:not(.active),
         li.active {
           .tab-title {
             color: $L2L_green;
@@ -128,9 +129,9 @@
           margin-bottom: 0;
         }
 
-        h3+p,
-        h2+p,
-        h1+p {
+        h3 + p,
+        h2 + p,
+        h1 + p {
           margin-top: 0;
         }
       }

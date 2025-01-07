@@ -370,7 +370,7 @@
   "id" : "0ca5a646-56f2-00da-d39f-524c782b23e5",
   "name" : "accordion_items",
   "display_width" : null,
-  "label" : "Accordion Items",
+  "label" : "Tabber Items",
   "required" : false,
   "locked" : false,
   "occurrence" : {
@@ -380,12 +380,34 @@
     "default" : 6
   },
   "children" : [ {
+    "id" : "c7300af8-3ed5-6542-935b-d1af76194c0c",
+    "name" : "select_media_type",
+    "display_width" : null,
+    "label" : "Select Media Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "image", "Image" ], [ "video", "Video" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "image"
+  }, {
     "id" : "2cfa8680-2dc2-978d-1ddd-0a39ee3dec39",
     "name" : "image_field",
     "display_width" : null,
     "label" : "Image",
     "required" : false,
     "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "accordion_items.select_media_type",
+      "controlling_value_regex" : "image",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
     "responsive" : true,
     "resizable" : false,
     "show_loading" : false,
@@ -400,6 +422,24 @@
       "max_width" : 582,
       "max_height" : 720
     }
+  }, {
+    "picker" : "video",
+    "id" : "6d72ba05-cb3a-bb77-60ac-ff4ae61396f9",
+    "name" : "video",
+    "display_width" : null,
+    "label" : "Video",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "accordion_items.select_media_type",
+      "controlling_value_regex" : "video",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "file",
+    "default" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4"
   }, {
     "id" : "e9d976c5-c725-9ea3-59b2-7ebd15820a43",
     "name" : "title",
@@ -446,6 +486,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
+    "select_media_type" : "image",
     "image_field" : {
       "size_type" : "auto_custom_max",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
@@ -456,6 +497,7 @@
       "max_width" : 582,
       "max_height" : 720
     },
+    "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
     "title" : "Work Instructions.",
     "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
     "link" : {
@@ -468,6 +510,7 @@
       "no_follow" : false
     }
   }, {
+    "select_media_type" : "image",
     "image_field" : {
       "size_type" : "auto_custom_max",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
@@ -478,6 +521,7 @@
       "max_width" : 582,
       "max_height" : 720
     },
+    "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
     "title" : "Work Instructions.",
     "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
     "link" : {
@@ -490,6 +534,7 @@
       "no_follow" : false
     }
   }, {
+    "select_media_type" : "image",
     "image_field" : {
       "size_type" : "auto_custom_max",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
@@ -500,6 +545,7 @@
       "max_width" : 582,
       "max_height" : 720
     },
+    "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
     "title" : "Work Instructions.",
     "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
     "link" : {
@@ -512,6 +558,7 @@
       "no_follow" : false
     }
   }, {
+    "select_media_type" : "image",
     "image_field" : {
       "size_type" : "auto_custom_max",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
@@ -522,6 +569,7 @@
       "max_width" : 582,
       "max_height" : 720
     },
+    "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
     "title" : "Work Instructions.",
     "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
     "link" : {
@@ -534,6 +582,7 @@
       "no_follow" : false
     }
   }, {
+    "select_media_type" : "image",
     "image_field" : {
       "size_type" : "auto_custom_max",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
@@ -544,6 +593,7 @@
       "max_width" : 582,
       "max_height" : 720
     },
+    "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
     "title" : "Work Instructions.",
     "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
     "link" : {
@@ -556,6 +606,7 @@
       "no_follow" : false
     }
   }, {
+    "select_media_type" : "image",
     "image_field" : {
       "size_type" : "auto_custom_max",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/Instructions.png",
@@ -566,6 +617,7 @@
       "max_width" : 582,
       "max_height" : 720
     },
+    "video" : "https://www.l2l.com/hubfs/L2L-u4m/pdf/big_buck_bunny_720p_1mb.mp4",
     "title" : "Work Instructions.",
     "content" : "<p>Skills-based learning that helps frontline teams learn the capabilities needed to keep up with expectations and thrive.</p>",
     "link" : {

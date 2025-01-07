@@ -987,6 +987,27 @@
       "display" : "checkbox",
       "type" : "boolean",
       "default" : false
+    }, {
+      "id" : "b5c3c060-52aa-b868-8db0-1cb035ce48bb",
+      "name" : "mobile_background_image_position",
+      "display_width" : null,
+      "label" : "Mobile Background Image Position",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "image",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "placeholder" : "50% 50% | left top | center center",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "60% 50%"
     } ],
     "tab" : "CONTENT",
     "expanded" : true,
@@ -1011,7 +1032,8 @@
         "color" : "#000000",
         "opacity" : 40
       },
-      "include_overlay_on_mobile" : false
+      "include_overlay_on_mobile" : false,
+      "mobile_background_image_position" : "60% 50%"
     }
   }, {
     "id" : "c813f3af-99b7-d54e-7ce2-b074f008a27c",
@@ -1112,7 +1134,8 @@
         "color" : "#000000",
         "opacity" : 40
       },
-      "include_overlay_on_mobile" : false
+      "include_overlay_on_mobile" : false,
+      "mobile_background_image_position" : "60% 50%"
     },
     "container" : {
       "size" : "theme",

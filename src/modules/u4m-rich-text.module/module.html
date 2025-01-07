@@ -17,13 +17,31 @@
 {{ require_js(get_asset_url('../../js/jquery-3.1.js')) }}
 {{ require_js('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js') }}
 
-
-
-
-
-
-
+{% require_js %}
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const table = document.querySelector(".u4m-rich-text table");
+  const tableContainer = document.createElement("div");
+  tableContainer.className = "table-container";
+  table.parentNode.insertBefore(tableContainer, table);
+  tableContainer.appendChild(table);
+  const tooltip = document.createElement("div");
+  tooltip.className = "tooltip";
+  tooltip.textContent = "Scroll horizontally to view more columns →";
+  tableContainer.appendChild(tooltip);
+
+  // Show tooltip on mouseover
+  tableContainer.addEventListener("mouseover", () => {
+    tooltip.classList.add("show");
+  });
+  tableContainer.addEventListener("mouseout", () => {
+    tooltip.classList.remove("show");
+  });
+  tableContainer.addEventListener("scroll", () => {
+    tooltip.classList.remove("show");
+  });
+});
+
 
   document.addEventListener("DOMContentLoaded", (event) => {
     for (let i = 0; i < document.querySelectorAll("code").length; i++) {
@@ -44,7 +62,9 @@
   });
 
 </script>
+{% end_require_js %}
 
+{% require_css %}
 <style>
 .u4m-rich-text pre code {
   max-width:990px;
@@ -57,4 +77,4 @@
     margin-bottom: 66px;
 }
 </style>
-
+{% end_require_css %}

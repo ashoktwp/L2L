@@ -24,97 +24,102 @@
       <div class="ctvb-tabbingrow sslider-for">
         {% for item in module.tabber_items %}
         <div id="tab-{{ loop.index }}" class="ctvb-tabcol ctvb-video">
-          <div class="ctvb-tabimage">
-            <div class="ctvb-tabplaceholder">
-              {% if item.image_field.src %}
-              {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
-              {% if item.image_field.size_type == 'auto' %}
-              {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-              {% elif item.image_field.size_type == 'auto_custom_max' %}
-              {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-              {% endif %}
-              {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
-              <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
-              {% endif %}
-            </div>
-            <span class="ctvb-btnicon ctvb-playbtn">
-              <svg width="18.002" height="22.501" xmlns="http://www.w3.org/2000/svg">
-                <path d="m16.999 13.125-13.5 9A2.25 2.25 0 0 1 0 20.252v-18A2.25 2.25 0 0 1 3.499.378l13.5 9a2.25 2.25 0 0 1 0 3.747Z"></path>
-              </svg>
-            </span>
-            <div class="ctvb-vdo">
-              {% if item.select_video_type == "hubspot" %}
-              <video controls>
-                <source src="{{ item.select_video }}" type="video/mp4">
-              </video>
-              {% endif %}
-              {% if item.select_video_type == "vimeo" %}
-              <iframe title="video-Frame" class="hides" id="iframe{{loop.index }}" width="640" height="360"  data-src="{{ item.vimeo_id }}" src=""  frameborder="0" loading="lazy" allowfullscreen></iframe>
-              {% endif %}
-            </div>
-            <div class="ctvb-tabottom">
-              <div class="tab_bottom_inner">
-                <div class="ctvb-tablogo">
-                  {% if item.logo_image.src %}
-                  {% set sizeAttrs = 'width="{{ item.logo_image.width|escape_attr }}" height="{{ item.logo_image.height|escape_attr }}"' %}
-                  {% if item.logo_image.size_type == 'auto' %}
-                  {% set sizeAttrs = 'width="{{ item.logo_image.width|escape_attr }}" height="{{ item.logo_image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-                  {% elif item.logo_image.size_type == 'auto_custom_max' %}
-                  {% set sizeAttrs = 'width="{{ item.logo_image.max_width|escape_attr }}" height="{{ item.logo_image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-                  {% endif %}
-                  {% set loadingAttr = item.logo_image.loading != 'disabled' ? 'loading="{{ item.logo_image.loading|escape_attr }}"' : '' %}
-                  <img src="{{ item.logo_image.src|escape_url }}" alt="{{ item.logo_image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
-                  {% endif %}
-                </div>
-                <div class="ctvb-tabtn">
-                  {% if item.read_button_text %}
-                  {% set href = item.link_field.url.href %}
-                  {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
-                  {% set href = "mailto:" + href %}
-                  {% endif %}
-                  <a
-                     {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
-                     href="{{ href }}"
-                     {% else %}
-                     href="{{ href|escape_url }}"
-                     {% endif %}
-                     {% if item.link_field.open_in_new_tab %}
-                     target="_blank"
-                     {% endif %}
-                     {% if item.link_field.rel %}
-                     rel="{{ item.link_field.rel|escape_attr }}"
-                     {% endif %}
-                     >
-                    {{ item.read_button_text }} <span class="ctvb-tablink-icon">
-                    <svg class="ctvb-tablink-normal" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256" focusable="false" style="user-select: none; display: inline-block; flex-shrink: 0;">
-                      <g weight="regular">
-                        <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path>
-                      </g>
-                    </svg>
-                    <svg class="ctvb-tablink-hover" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256" focusable="false" style="user-select: none; display: inline-block; flex-shrink: 0;">
-                      <g weight="regular">
-                        <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path>
-                      </g>
-                    </svg>
-                    </span>
-                  </a>
-                  {% endif %}
+          <div class="slick_slide_inner">
+            <div class="ctvb-tabimage">
+              <div class="topCat">
+                {{ item.tab_title }}
+              </div>
+              <div class="ctvb-tabplaceholder">
+                {% if item.image_field.src %}
+                {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+                {% if item.image_field.size_type == 'auto' %}
+                {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                {% elif item.image_field.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+                <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                {% endif %}
+              </div>
+              <span class="ctvb-btnicon ctvb-playbtn">
+                <svg width="18.002" height="22.501" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m16.999 13.125-13.5 9A2.25 2.25 0 0 1 0 20.252v-18A2.25 2.25 0 0 1 3.499.378l13.5 9a2.25 2.25 0 0 1 0 3.747Z"></path>
+                </svg>
+              </span>
+              <div class="ctvb-vdo">
+                {% if item.select_video_type == "hubspot" %}
+                <video controls>
+                  <source src="{{ item.select_video }}" type="video/mp4">
+                </video>
+                {% endif %}
+                {% if item.select_video_type == "vimeo" %}
+                <iframe title="video-Frame" class="hides" id="iframe{{loop.index }}" width="640" height="360"  data-src="{{ item.vimeo_id }}" src=""  frameborder="0" loading="lazy" allowfullscreen></iframe>
+                {% endif %}
+              </div>
+              <div class="ctvb-tabottom">
+                <div class="tab_bottom_inner">
+                  <div class="ctvb-tablogo">
+                    {% if item.logo_image.src %}
+                    {% set sizeAttrs = 'width="{{ item.logo_image.width|escape_attr }}" height="{{ item.logo_image.height|escape_attr }}"' %}
+                    {% if item.logo_image.size_type == 'auto' %}
+                    {% set sizeAttrs = 'width="{{ item.logo_image.width|escape_attr }}" height="{{ item.logo_image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                    {% elif item.logo_image.size_type == 'auto_custom_max' %}
+                    {% set sizeAttrs = 'width="{{ item.logo_image.max_width|escape_attr }}" height="{{ item.logo_image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                    {% endif %}
+                    {% set loadingAttr = item.logo_image.loading != 'disabled' ? 'loading="{{ item.logo_image.loading|escape_attr }}"' : '' %}
+                    <img src="{{ item.logo_image.src|escape_url }}" alt="{{ item.logo_image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                    {% endif %}
+                  </div>
+                  <div class="ctvb-tabtn">
+                    {% if item.read_button_text %}
+                    {% set href = item.link_field.url.href %}
+                    {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                    {% endif %}
+                    <a
+                       {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+                       href="{{ href }}"
+                       {% else %}
+                       href="{{ href|escape_url }}"
+                       {% endif %}
+                       {% if item.link_field.open_in_new_tab %}
+                       target="_blank"
+                       {% endif %}
+                       {% if item.link_field.rel %}
+                       rel="{{ item.link_field.rel|escape_attr }}"
+                       {% endif %}
+                       >
+                      {{ item.read_button_text }} <span class="ctvb-tablink-icon">
+                      <svg class="ctvb-tablink-normal" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256" focusable="false" style="user-select: none; display: inline-block; flex-shrink: 0;">
+                        <g weight="regular">
+                          <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path>
+                        </g>
+                      </svg>
+                      <svg class="ctvb-tablink-hover" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256 256" focusable="false" style="user-select: none; display: inline-block; flex-shrink: 0;">
+                        <g weight="regular">
+                          <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path>
+                        </g>
+                      </svg>
+                      </span>
+                    </a>
+                    {% endif %}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="ctvb-tabcontent">
-            {% if item.quote %}
-            <div class="ctvb-tabtxt">
-              {{ item.quote }}
+            <div class="ctvb-tabcontent">
+              {% if item.quote %}
+              <div class="ctvb-tabtxt">
+                {{ item.quote }}
+              </div>
+              {% endif %}
+              {% if item.author_name %}
+              <div class="ctvb-tabname"> <span class="saprator">—</span> {{ item.author_name }}, </div>
+              {% endif %}
+              {% if item.designation %}
+              <div class="ctvb-tabcompany"> {{ item.designation }} </div>
+              {% endif %}
             </div>
-            {% endif %}
-            {% if item.author_name %}
-            <div class="ctvb-tabname"> <span class="saprator">—</span> {{ item.author_name }}, </div>
-            {% endif %}
-            {% if item.designation %}
-            <div class="ctvb-tabcompany"> {{ item.designation }} </div>
-            {% endif %}
           </div>
         </div>
         {% endfor %}
@@ -145,9 +150,15 @@
 
 </section>
 
+{% require_css %}
+<style>
+
+</style>
+{% end_require_css %}
+
 {% require_js %}
 <script>
- 
+
   initSliderTabsFunctionality();
   function initSliderTabsFunctionality() {
     function hideVideos() {
@@ -173,25 +184,27 @@
       nextArrow: '.tab-next-arrow',
       prevArrow: '.tab-prev-arrow',
       asNavFor: '.sslider-nav',
+      speed: 400 , // Transition speed of 500ms
       autoplaySpeed: 5000,
-      infinite: true,
-      autoplay: false,
+      easing: 'linear',
+      infinite: false,
+      autoplay: true,
+      focusOnSelect: true,
       responsive: [ 
-      {
-        breakpoint: 767,
-        settings: { 
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      {
-          breakpoint: 400,
+        {
+          breakpoint: 767,
           settings: { 
             slidesToShow: 1,
-            slidesToScroll: 1,  
+            slidesToScroll: 1,
+            variableWidth: false,
+            focusOnSelect: false,
+            pauseOnHover: false,
+            infinite: true,
+            focusOnSelect: false
+
           }
         }
-    ]
+      ]
     });
 
     $('.sslider-nav').slick({
@@ -202,6 +215,7 @@
       dots: false, 
       infinite: false,
       autoplay: false,
+      arrows: false,
       responsive: [
         {
           breakpoint: 1400,
@@ -216,16 +230,15 @@
             slidesToShow: 1,
             slidesToScroll: 1, 
           }
-        },
-        {
-          breakpoint: 400,
-          settings: { 
-            slidesToShow: 1,
-            slidesToScroll: 1,  
-          }
         }
       ] 
     });
+
+    $('[data-slick-index="0"]').addClass('slick-now');
+
+
+ 
+
 
     function startProgressBar() {
       const $progressBar = $('.progress-bar .circle-go');
@@ -245,6 +258,18 @@
       }, 0);
       {# $('.sslider-for,.sslider-nav').slick('slickPlay'); #}
     }
+
+
+    $('.sslider-for').on('afterChange', function(event, slick, currentSlide) {
+    // Remove class from all slides
+    $('.sslider-for .slick-slide').removeClass('slick-now');
+
+    // Add class to the current slide
+    $('.sslider-for .slick-slide').eq(currentSlide).addClass('slick-now');
+    startProgressBar();
+    hideVideos();
+  });
+
 
     function handleSlideChange() {
       startProgressBar();
