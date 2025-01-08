@@ -1,101 +1,109 @@
 {% set moduleName = 'u4m-quote-cards-slider' %}
-  {% include "../partials/u4-module-includes.html" %}
-  
-  <div class="page-center  {{ module.module_settings.theme }} {{ module.module_settings.background_settings.select_color }}">
-    <div class="intro_wrapp">
-      {{macros.introGroup(module.intro_content)}}
-    </div>
-    <div class="quote-cards-inner {% if module.module_settings.enable_slider%}enableSlider{% else %}noSlider{% endif %}">
-      <div class="quote-cards-slider">
-        {% for item in module.slide_item %}
-        <div class="quote-cards-slide">
-          <div class="quote-cards-slide-inner">
-            {% if item.image_type == 'img' %}
-            <div class="top-img">
-              {% if item.image.src %}
-              <img src="{{ item.image.src|escape_url }}" alt="{{ item.image.alt|escape_attr }}">
-              {% endif %}
-            </div>
+{% include "../partials/u4-module-includes.html" %}
+
+{% set sliderLength = module.slide_item|length%}
+
+<div class="page-center  {{ module.module_settings.theme }} {{ module.module_settings.background_settings.select_color }}">
+  <div class="intro_wrapp">
+    {{macros.introGroup(module.intro_content)}}
+  </div>
+
+  <div class="quote-cards-inner {% if module.module_settings.enable_slider%}enableSlider{% else %}noSlider{% endif %}">
+    <div class="quote-cards-slider {% if sliderLength <= 1 %}lessSlides{% else %} moreSlides {% endif%}">
+      {% for item in module.slide_item %}
+      <div class="quote-cards-slide">
+        <div class="quote-cards-slide-inner">
+          {% if item.image_type == 'img' %}
+          <div class="top-img">
+            {% if item.image.src %}
+            <img src="{{ item.image.src|escape_url }}" alt="{{ item.image.alt|escape_attr }}">
             {% endif %}
-            {% if item.image_type == 'icon' %}
-            <div class="icon">
-              <div class="icon-inner">
-                {% icon
+          </div>
+          {% endif %}
+          {% if item.image_type == 'icon' %}
+          <div class="icon">
+            <div class="icon-inner">
+              {% icon
       name="{{ item.icon.name }}"
       style="{{ item.icon.type }}"
       unicode="{{ item.icon.unicode }}"
       icon_set="{{ item.icon.icon_set }}"
     %}
-              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% if item.content %}
+          <div class="slide-content">
+            {{ item.content }}
+          </div>
+          {% endif %}
+          <div class="author-col">
+            {% if item.author_image.src %}
+            <div class="author-img">
+              <img src="{{ item.author_image.src|escape_url }}" alt="{{ item.author_image.alt|escape_attr }}">
             </div>
             {% endif %}
-            {% if item.content %}
-            <div class="slide-content">
-              {{ item.content }}
-            </div>
-            {% endif %}
-            <div class="author-col">
-              {% if item.author_image.src %}
-              <div class="author-img">
-                <img src="{{ item.author_image.src|escape_url }}" alt="{{ item.author_image.alt|escape_attr }}">
-              </div>
-              {% endif %}
-              <div class="author-name">
-                {{ item.author_name }}
-              </div>
+            <div class="author-name">
+              {{ item.author_name }}
             </div>
           </div>
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
     </div>
   </div>
-  
-  </section>
-  {% require_js %}
-  <script>
-    $(".{{name}} .enableSlider .quote-cards-slider").slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      infinite: true,
-      draggable: true,
-      centerMode: true,
-      arrows: true,
-      centerPadding: '204px',
-      autoplay: true,
-      speed: 800,
-      autoplaySpeed: 2000,
-      pauseOnHover:true,
-           responsive: [
-           {
-            breakpoint: 1200,
-             settings: {
-             centerPadding: '100px',
-             }
-           },
-           {
-           breakpoint: 991,
-           settings: {
-           centerPadding: '50px',
-           }
-           },
-           {
-           breakpoint: 767,
-           settings: {
-           centerPadding: '0',
-           }
-         }
-         ]
-      });
-  </script>
-  {% end_require_js %}
-  
-  
-  {% require_css %}
-    <style> 
-    .{{name}} .enableSlider .quote-cards-slider .slick-arrow::before {
-        background-image:url({{ get_asset_url('../../templates/images/Path.png') }});
+</div>
+
+</section>
+
+
+
+
+{% if sliderLength > 1%}
+{% require_js %}
+<script>
+  $(".{{name}} .enableSlider .quote-cards-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+
+    arrows: true,
+    centerMode: true,
+    centerPadding: '204px',
+    autoplay: false,
+    speed: 800,
+    autoplaySpeed: 2000,
+    pauseOnHover:true,
+    responsive: [
+    {
+    breakpoint: 1200,
+    settings: {
+    centerPadding: '100px',
+    }
+  },
+    {
+      breakpoint: 991,
+        settings: {
+          centerPadding: '50px',
+        }
+    },
+      {
+        breakpoint: 767,
+          settings: {
+            centerPadding: '0',
+          }
       }
-    </style>
-  
-  {% end_require_css %}
+  ]
+  });
+</script>
+{% end_require_js %}
+ {% endif %}
+
+{% require_css %}
+<style> 
+  .{{name}} .enableSlider .quote-cards-slider .slick-arrow::before {
+    background-image:url({{ get_asset_url('../../templates/images/Path.png') }});
+  }
+</style>
+
+{% end_require_css %}

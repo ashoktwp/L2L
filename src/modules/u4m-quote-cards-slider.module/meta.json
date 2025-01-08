@@ -6,6 +6,10 @@
   "module_id" : 184115801371,
   "js_assets" : [ {
     "autoload" : true,
+    "path" : "../../js/jquery.js",
+    "name" : "jquery.js"
+  }, {
+    "autoload" : true,
     "path" : "../../js/slick.js",
     "name" : "slick.js"
   } ],
