@@ -167,4 +167,33 @@ section.u4m-quote-cards-slider {
       right: -5px;
     }
   }
+
+  //
+
+  .quote-cards-slider {
+    .slick-track:after,
+    .slick-track:before {
+      display: none;
+    }
+
+    .slick-track {
+      display: flex;
+
+      .quote-cards-slide {
+        height: auto;
+        display: flex;
+      }
+
+      .quote-cards-slide-inner {
+        width: 100%;
+      }
+    }
+  }
+
+  .quote-cards-inner {
+    .slick-arrow {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }

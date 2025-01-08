@@ -228,6 +228,12 @@
     background-color: $Mint_cream;
     padding-top: 80px;
     padding-bottom: 110px;
+    opacity: 0;
+    transition: 0.1s ease 0.3s;
+
+    &.loaddedList {
+      opacity: 1;
+    }
 
     @include tabletvert {
       padding: 50px 0;

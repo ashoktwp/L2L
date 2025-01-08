@@ -7,9 +7,9 @@
   </div>
 
   <div class="card_wrap">
-    <div class="card_flex flex_row">
+    <div class="card_flex flex_row ">
       {% for item in module.add_items %}
-      <div class="card_item">
+      <div class="card_item cardinRow_{{ module.module_settings.cards_in_row }}">
         <div class="item_inr">
           <div class="item_inr_top">
             <div class="item_top_flex flex{{ item.icon_background }}">

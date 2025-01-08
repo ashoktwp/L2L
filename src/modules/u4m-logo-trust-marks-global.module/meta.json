@@ -7,12 +7,12 @@
   "module_id" : 184073995327,
   "js_assets" : [ {
     "autoload" : true,
-    "path" : "../../js/jquery.js",
-    "name" : "jquery.js"
+    "path" : "../../js/splide.js",
+    "name" : "splide.js"
   }, {
     "autoload" : true,
-    "path" : "../../js/slick.js",
-    "name" : "slick.js"
+    "path" : "../../js/splide-extension.js",
+    "name" : "splide-extension.js"
   } ],
   "label" : "Logo Trust Marks  Global ",
   "is_available_for_new_content" : true

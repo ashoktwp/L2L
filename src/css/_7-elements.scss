@@ -996,3 +996,6 @@ section[class*="u4m-"] {
 iframe[id*=‘_ccpx_cont’] {
   display: none;
 }
+main#main-content ~ iframe[height="1"] {
+  display: none;
+}

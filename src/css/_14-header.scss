@@ -262,6 +262,21 @@ header {
                   }
                 }
 
+                .card_title {
+                  @include size14;
+                  color: $white;
+                  letter-spacing: 0;
+                  line-height: 1.7;
+                }
+
+                .child_card {
+                  &:hover {
+                    .card_title {
+                      color: $Menthol;
+                    }
+                  }
+                }
+
                 .hdcard_cnt p {
                   @include size14;
                   color: $white;
@@ -269,11 +284,8 @@ header {
                   line-height: 1.7;
                   margin: 0;
                   margin-top: 3px;
-
-                  span {
-                    color: $Pale_Mint;
-                    opacity: 0.79;
-                  }
+                  color: $Pale_Mint;
+                  opacity: 0.79;
                 }
               }
 
