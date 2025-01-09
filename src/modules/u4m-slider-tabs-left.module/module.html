@@ -1,7 +1,8 @@
 {% set moduleName = 'u4m-slider-tabs-left' %}
 {% include "../partials/u4-module-includes.html" %}
 
-<div class="page-center  {{ module.module_settings.theme }}">
+
+<div class="page-center  {{ module.module_settings.theme }} {% if module.module_settings.top_content_left_align %}top_content_left {% endif %}{% if module.module_settings.make_content_full_width %}tab_content_full{% endif %}">
   <div class="intro_wrapp">
     {{macros.introGroup(module.intro_content)}}
   </div>
@@ -166,7 +167,7 @@
 
 {% require_css%}
 <style>
-.u4m-slider-tabs-left   .accordion-section .slick-track {
+  .u4m-slider-tabs-left   .accordion-section .slick-track {
     transform: none !important;
     height: auto !important;
     overflow: visible !important;
@@ -226,7 +227,7 @@
     gap: 36px;
   }
 
-  .u4m-slider-tabs-left .slider-tabs-wrapper   .acc-items.media_image.acc-open .progress-line {
+  .u4m-slider-tabs-left .slider-tabs-wrapper   .acc-items:not(.media_video) .progress-line {
     transition-duration: 3000ms;
   }
 
@@ -257,7 +258,7 @@
   var isPlaying = true;
   var videoPlaying = false; 
 
-  $('.slider-tabs-wrapper .left_col').slick({
+  $('.{{name}} .slider-tabs-wrapper .left_col').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -265,128 +266,128 @@
     dots: false,
     autoplay : isPlaying,
     pauseOnHover: false,
-    asNavFor: '.slider_navbar'
-  });
-  $('.accordion-section').slick({
+    asNavFor: '.{{name}} .slider_navbar'
+    });
+  $('.{{name}} .accordion-section').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     vertical:true,
-    asNavFor: '.slider-tabs-wrapper .left_col',
+    asNavFor: '.{{name}} .slider-tabs-wrapper .left_col',
     dots: false,
     focusOnSelect: true,
     verticalSwiping:true,
     infinite: false,
     pauseOnHover: false,
     arrows: false
-  });
+    });
 
 
-  $(".slider-tabs-wrapper .left_col").on(
+  $(".{{name}} .slider-tabs-wrapper .left_col").on(
     "beforeChange",
     function (event, slick, currentSlide, nextSlide) {
-      var nextSlideElement = slick.$slides[nextSlide];
+    var nextSlideElement = slick.$slides[nextSlide];
 
-      if ($(nextSlideElement).find("video").length > 0) {
-        var getLength = $(nextSlideElement).find("video").length
-        var getDuration = $(nextSlideElement).find("video").duration
+    if ($(nextSlideElement).find("video").length > 0) {
+      var getLength = $(nextSlideElement).find("video").length
+      var getDuration = $(nextSlideElement).find("video").duration
 
-        $(".carousel").slick("slickPause");
-      }
-    }
+      $(".{{name}} .carousel").slick("slickPause");
+        }
+  }
   );
 
 
   //   =========
 
-  $(".slider-tabs-wrapper .left_col").on("afterChange", function (event, slick, currentSlide) {
+  $(".{{name}} .slider-tabs-wrapper .left_col").on("afterChange", function (event, slick, currentSlide) {
     var currentSlideElement = slick.$slides[currentSlide];
 
-    var getSameIndexParent = $('.acc-items.slick-slide[data-slick-index="' + currentSlide + '"]');
+  var getSameIndexParent = $('.{{name}} .acc-items.slick-slide[data-slick-index="' + currentSlide + '"]');
 
-    // Remove inline CSS from all .progress-line elements
-    $('.progress-line').removeAttr('style');
+                             // Remove inline CSS from all .progress-line elements
+                             $('.{{name}} .progress-line').removeAttr('style');
 
-    // Pause and mute all sibling videos except the active slide
-    $(".slider-tabs-wrapper .left_col .img-items").each(function () {
-      var getThis = $(this);
-      if (!getThis.hasClass('slick-current slick-active') && getThis.find("video").length > 0) {
-        var siblingVideo = getThis.find("video")[0];
-        siblingVideo.pause();
-        siblingVideo.currentTime = 0;
-        siblingVideo.muted = true;
-        console.log('Paused and muted sibling video');
-      }
-    });
+                             // Pause and mute all sibling videos except the active slide
+                             $(".{{name}} .slider-tabs-wrapper .left_col .img-items").each(function () {
+                             var getThis = $(this);
+  if (!getThis.hasClass('slick-current slick-active') && getThis.find("video").length > 0) {
+    var siblingVideo = getThis.find("video")[0];
+    siblingVideo.pause();
+    siblingVideo.currentTime = 0;
+    siblingVideo.muted = true;
+    console.log('Paused and muted sibling video');
+  }
+  });
 
-    // Handle video in the current slide
-    if ($(currentSlideElement).find("video").length > 0) {
-      var video = $(currentSlideElement).find("video")[0];
+  // Handle video in the current slide
+  if ($(currentSlideElement).find("video").length > 0) {
+    var video = $(currentSlideElement).find("video")[0];
 
-      var getSameIndex = getSameIndexParent.find('.progress-line');
+    var getSameIndex = getSameIndexParent.find('.progress-line');
 
-      // Reset and load the video
-      video.pause();
-      video.currentTime = 0;
-      video.load();
+    // Reset and load the video
+    video.pause();
+    video.currentTime = 0;
+    video.load();
 
-      video.onloadedmetadata = function () {
-        let duration = video.duration;
-        let totalTransitionDuration = (duration + 0.8) * 1000 + "ms";
+    video.onloadedmetadata = function () {
+      let duration = video.duration;
+      let totalTransitionDuration = (duration + 0.8) * 1000 + "ms";
 
-        // Set the transition duration for the progress line
-        $(getSameIndex).css({ "transition-duration": totalTransitionDuration });
-        console.log('Duration set:', totalTransitionDuration);
+      // Set the transition duration for the progress line
+      $(getSameIndex).css({ "transition-duration": totalTransitionDuration });
+      console.log('Duration set:', totalTransitionDuration);
 
-        // Add animation class to current slide
-        $('.acc-items.slick-slide').removeClass('acc-open');
+      // Add animation class to current slide
+      $('.{{name}} .acc-items.slick-slide').removeClass('acc-open');
         getSameIndexParent.addClass('acc-open');
 
-        // Start video playback
-        setTimeout(function () {
-          video.play();
-          //           video.muted = false;
-          console.log('Video playing');
-        }, 100);
+      // Start video playback
+      setTimeout(function () {
+        video.play();
+        //           video.muted = false;
+        console.log('Video playing');
+      }, 100);
 
-        videoPlaying = true;
+      videoPlaying = true;
 
-        video.onended = function () {
-          videoPlaying = false;
-          video.pause();
-          video.currentTime = 0;
-          video.muted = true;
+      video.onended = function () {
+        videoPlaying = false;
+        video.pause();
+        video.currentTime = 0;
+        video.muted = true;
 
-          // Remove transition effect after video ends
-          $(getSameIndex).removeAttr('style');
-          console.log('Duration removed');
+        // Remove transition effect after video ends
+        $(getSameIndex).removeAttr('style');
+        console.log('Duration removed');
 
-          // Move to the next slide after video ends
-          $(".slider-tabs-wrapper .left_col").slick("slickPlay");
-          $(".slider-tabs-wrapper .left_col").slick("slickNext");
+        // Move to the next slide after video ends
+        $(".{{name}} .slider-tabs-wrapper .left_col").slick("slickPlay");
+          $(".{{name}} .slider-tabs-wrapper .left_col").slick("slickNext");
+          };
+    };
+
+    video.onerror = function () {
+      console.error("Error loading video");
+      $(".{{name}} .slider-tabs-wrapper .left_col").slick("slickPlay");
         };
-      };
-
-      video.onerror = function () {
-        console.error("Error loading video");
-        $(".slider-tabs-wrapper .left_col").slick("slickPlay");
-      };
-    } else {
-      // If the current slide has no video, add animation class and continue autoplay
-      $('.acc-items.slick-slide').removeClass('acc-open');
+  } else {
+    // If the current slide has no video, add animation class and continue autoplay
+    $('.{{name}} .acc-items.slick-slide').removeClass('acc-open');
       getSameIndexParent.addClass('acc-open');
-      $(".slider-tabs-wrapper .left_col").slick("slickPlay");
-    }
+    $(".{{name}} .slider-tabs-wrapper .left_col").slick("slickPlay");
+      }
   });
 
 
 
-  $(".slider-tabs-wrapper .left_col").on(
+  $(".{{name}} .slider-tabs-wrapper .left_col").on(
     "beforeChange",
     function (event, slick, currentSlide, nextSlide) {
-      if (videoPlaying) {
-        event.stopImmediatePropagation(); 
-      }
+    if (videoPlaying) {
+      event.stopImmediatePropagation(); 
     }
+  }
   );
 
 
