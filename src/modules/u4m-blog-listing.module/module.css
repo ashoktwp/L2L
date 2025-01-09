@@ -393,6 +393,21 @@ section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner .po
 section.u4m-blog-listing .listing-wrap .flex-row .post-item .post-item-inner .post-content .read-more a:hover {
   color: #f08c1f;
 }
+section.u4m-blog-listing .listing-wrap .overlayLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+}
+section.u4m-blog-listing .listing-wrap .post-content {
+  position: static !important;
+}
+section.u4m-blog-listing .listing-wrap .post-content .post-item-topic a {
+  position: relative;
+  z-index: 10;
+}
 section.u4m-blog-listing .listing-wrap .blog-pagination {
   align-items: center;
   display: flex;

@@ -25,6 +25,10 @@ html {
 }
 
 .u4m-slider-tabs-left {
+  .section_relative {
+    position: relative;
+  }
+
   &.reverse-text {
     .ctvb-toprow {
       ul {
@@ -99,9 +103,9 @@ html {
       .arrow-section {
         .tab-prev-arrow {
           position: absolute;
-          top: 36%;
+          top: 150px;
           z-index: 9;
-          transform: translateY(-50%);
+          transform: none;
           left: -10px;
           cursor: pointer;
 
@@ -127,9 +131,9 @@ html {
 
         .tab-next-arrow {
           position: absolute;
-          top: 36%;
+          top: 150px;
           z-index: 9;
-          transform: translateY(-50%);
+          transform: none;
           left: -10px;
           cursor: pointer;
           left: auto;
@@ -825,20 +829,6 @@ html {
   }
 
   .u4m-slider-tabs-left {
-    .ctvb-section {
-      .sec-inner {
-        .arrow-section {
-          .tab-prev-arrow {
-            top: 50%;
-          }
-
-          .tab-next-arrow {
-            top: 50%;
-          }
-        }
-      }
-    }
-
     .ctvb-tabcol.slick-current {
       max-width: 295px;
       .ctvb-tabimage {
@@ -902,3 +892,6 @@ html {
     }
   }
 }
+
+
+
