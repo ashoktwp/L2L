@@ -17,6 +17,18 @@
       }
     }
   }
+  .top_content_left {
+    .intro_content {
+      margin-left: 0;
+      text-align: left;
+      .intro_desc {
+        margin-left: 0;
+      }
+      .intro_btn_wrap {
+        justify-content: start;
+      }
+    }
+  }
   .slider-tabs-wrapper {
     position: relative;
     z-index: 9;
@@ -39,6 +51,9 @@
       .img-items {
         display: none;
         height: 720px;
+        &.nomedia {
+          height: auto;
+        }
         img {
           width: 100%;
           border-radius: 34px;
@@ -250,6 +265,17 @@
 
       @include tabletmid {
         width: 100%;
+      }
+    }
+    &.tab_content_full {
+      .left_col {
+        width: 100%;
+      }
+      .right_col {
+        width: 100%;
+      }
+      .row {
+        flex-wrap: wrap;
       }
     }
   }

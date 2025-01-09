@@ -2,17 +2,18 @@
 {% include "../partials/u4-module-includes.html" %}
 
 
-<div class="page-center  {{ module.module_settings.theme }} {% if module.module_settings.top_content_left_align %}top_content_left {% endif %}{% if module.module_settings.make_content_full_width %}tab_content_full{% endif %}">
+<div class="page-center  {{ module.module_settings.theme }} {% if module.module_settings.top_content_left_align %}top_content_left {% endif %}">
   <div class="intro_wrapp">
     {{macros.introGroup(module.intro_content)}}
   </div>
 </div>
-<div class="slider-tabs-wrapper">
+<div class="slider-tabs-wrapper {% if module.module_settings.make_content_full_width %}tab_content_full{% endif %}">
   <div class="page-center">
     <div class="row">
       <div class="left_col carousel">
         {% for item in module.accordion_items %}
-        <div class="img-items {{item.select_media_type}} {% if loop.first %}acc-open{% endif %}" data-img="data{{ loop.index }}">
+        
+        <div class="img-items {{item.select_media_type}} {% if loop.first %}acc-open{% endif %}{% if item.video || item.image_field.src %}{% else %} nomedia{% endif%}" data-img="data{{ loop.index }}">
 
           {% if item.select_media_type == "video" %}
           {% if item.video %}
@@ -211,7 +212,7 @@
     display: none;
   }
 
-  .u4m-slider-tabs-left .slider-tabs-wrapper .slick-active .toggle_section {
+  .u4m-slider-tabs-left .slider-tabs-wrapper .acc-open .toggle_section {
     display: block;
   }
 

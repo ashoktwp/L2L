@@ -19,8 +19,6 @@ section.u4m-hero-left-aligned {
     padding-top: 307px;
     min-height: 1024px;
 
-
-
     @include tabletvert {
       padding: 50px 0;
       padding-top: 145px;
@@ -145,6 +143,10 @@ section.u4m-hero-left-aligned {
 
     .intro_btn_wrap {
       justify-content: flex-start;
+      .hs-button {
+        min-width: 184px;
+        justify-content: center;
+      }
     }
 
     .list-item {

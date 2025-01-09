@@ -12,6 +12,9 @@ section.u4m-quote-cards-slider {
   .page-center {
     border-radius: 13px;
     padding: 54px 0;
+    .intro_wrapp {
+      padding: 0 10px;
+    }
   }
   .quote-cards-inner {
     position: relative;
@@ -66,11 +69,7 @@ section.u4m-quote-cards-slider {
       .slide-content {
         margin-bottom: 24px;
         font-size: 18rem;
-        background: linear-gradient(
-          to bottom,
-          $Forest_Green 0%,
-          rgba($Forest_Green, 0.66) 100%
-        );
+        background: linear-gradient(to bottom, $Forest_Green 0%, rgba($Forest_Green, 0.66) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -218,22 +217,15 @@ section.u4m-quote-cards-slider {
     transition: 0.2s ease 0.2s;
   }
 
-  .quote-cards-slider.slick-slider
-    .quote-cards-slide:not(.slick-current.slick-active) {
+  .quote-cards-slider.slick-slider .quote-cards-slide:not(.slick-current.slick-active) {
     opacity: 0.45;
   }
 
-  .quote-cards-slider.slick-slider
-    .quote-cards-slide:not(.slick-current.slick-active)
-    .quote-cards-slide-inner
-    > div {
+  .quote-cards-slider.slick-slider .quote-cards-slide:not(.slick-current.slick-active) .quote-cards-slide-inner > div {
     opacity: 0;
   }
 
-  .quote-cards-slider.slick-slider
-    .quote-cards-slide
-    .quote-cards-slide-inner
-    > div {
+  .quote-cards-slider.slick-slider .quote-cards-slide .quote-cards-slide-inner > div {
     transition: 0.5s ease 0.1s;
   }
 }
