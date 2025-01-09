@@ -267,7 +267,7 @@
     dots: false,
     autoplay : isPlaying,
     pauseOnHover: false,
-    asNavFor: '.{{name}} .slider_navbar'
+    asNavFor: '.{{name}} .slider_navbar',
     });
   $('.{{name}} .accordion-section').slick({
     slidesToShow: 1,
@@ -279,7 +279,15 @@
     verticalSwiping:true,
     infinite: false,
     pauseOnHover: false,
-    arrows: false
+    arrows: false,
+    responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+      verticalSwiping:false,
+      },
+    },
+  ],
     });
 
 
@@ -296,6 +304,7 @@
         }
   }
   );
+
 
 
   //   =========

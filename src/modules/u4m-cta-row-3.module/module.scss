@@ -11,6 +11,9 @@ section.u4m-cta-row-3 {
       @include tablet {
         padding: 65px 30px 77px;
       }
+      @include phone {
+        padding: 65px 20px 77px;
+      }
       &.bg_image {
         .bg_overlay.bg_image {
           width: 832px;
@@ -19,11 +22,7 @@ section.u4m-cta-row-3 {
           opacity: 0.34;
         }
         .bg_overlay.bg_color {
-          background-image: linear-gradient(
-            269deg,
-            rgba(14, 37, 20, 0) 33%,
-            $Dark_jungle 100%
-          );
+          background-image: linear-gradient(269deg, rgba(14, 37, 20, 0) 33%, $Dark_jungle 100%);
         }
       }
       .cta-content-flex {
@@ -62,6 +61,15 @@ section.u4m-cta-row-3 {
                 padding: 22px 144px 22px 30px !important;
                 @include tabletvert {
                   padding: 22px 159px 22px 16px !important;
+                }
+                @include phone {
+                  padding: 22px 16px !important;
+                }
+
+                &::placeholder {
+                  @include phone {
+                    font-size: 12px;
+                  }
                 }
               }
               ul.inputs-list {
@@ -121,6 +129,11 @@ section.u4m-cta-row-3 {
                     }
                   }
                 }
+              }
+            }
+            .hs_submit.hs-submit {
+              @include phone {
+                position: static;
               }
             }
             .hs_error_rollup {

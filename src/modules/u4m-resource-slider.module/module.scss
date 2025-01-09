@@ -112,22 +112,10 @@
       }
 
       &::before {
-        background: linear-gradient(
-          180deg,
-          $Medium_Aquamarine 0%,
-          rgba($Medium_Aquamarine, 0.0001) 100%
-        );
+        background: linear-gradient(180deg, $Medium_Aquamarine 0%, rgba($Medium_Aquamarine, 0.0001) 100%);
         border: 1px solid transparent;
-        -o-border-image: linear-gradient(
-          180deg,
-          $Medium_Aquamarine 0%,
-          rgba($Medium_Aquamarine, 0.0001) 100%
-        );
-        border-image: linear-gradient(
-          180deg,
-          $Medium_Aquamarine 0%,
-          rgba($Medium_Aquamarine, 0.0001) 100%
-        );
+        -o-border-image: linear-gradient(180deg, $Medium_Aquamarine 0%, rgba($Medium_Aquamarine, 0.0001) 100%);
+        border-image: linear-gradient(180deg, $Medium_Aquamarine 0%, rgba($Medium_Aquamarine, 0.0001) 100%);
         border-image-slice: 1;
         border-radius: 13px;
         bottom: 0;
@@ -405,7 +393,6 @@
     width: 36px;
     height: 36px;
     border-radius: 100%;
-    transform: none;
     display: flex;
     align-items: center;
     justify-content: center;
