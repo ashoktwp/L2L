@@ -1,4 +1,4 @@
-{% set moduleName = 'u4m-slider-tabs-left' %}
+{% set moduleName = 'u4m-slider-tabs-two-wrap' %}
 {% include "../partials/u4-module-includes.html" %}
 
 <div class="page-center  {{ module.module_settings.theme }}">
@@ -178,7 +178,7 @@
     }
 
     $('.sslider-for').slick({
-      slidesToShow: 3,
+      slidesToShow: 1,
       slidesToScroll: 1,
       variableWidth: true,
       arrows: true,
@@ -191,6 +191,8 @@
       infinite: false,
       autoplay: true,
       focusOnSelect: true,
+      pauseOnFocus: false,
+
       responsive: [ 
         {
           breakpoint: 767,
@@ -215,7 +217,8 @@
       asNavFor: '.sslider-for',
       dots: false, 
       infinite: false,
-      autoplay: false,
+      autoplay: true,
+      autoplaySpeed: 5000,
       arrows: false,
       responsive: [
         {
