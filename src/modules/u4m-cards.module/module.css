@@ -1,3 +1,4 @@
+/* Rectangle */
 html {
   font-size: 1px;
 }
@@ -229,7 +230,8 @@ section.u4m-cards .wrapper div.card .image.filled {
 section.u4m-cards .wrapper div.card .image.filled img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
 }
 section.u4m-cards .wrapper div.card .image a {

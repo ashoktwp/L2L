@@ -1,3 +1,4 @@
+/* Rectangle */
 html {
   font-size: 1px;
 }
@@ -174,6 +175,7 @@ html {
 .u4m-slider-gallery .innerCntt .slick-slide {
   margin: 0 6px;
   height: 198px;
+  transition: 0.1s ease;
 }
 .u4m-slider-gallery .innerCntt .items_wrp img {
   border-radius: 8px;
@@ -182,16 +184,19 @@ html {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  min-height: 258px;
 }
 .u4m-slider-gallery .innerCntt .slick-track img {
   height: 100% !important;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100% !important;
 }
 .u4m-slider-gallery .innerCntt .slick-center {
   height: 258px;
   opacity: 1;
   z-index: 2;
+  transition: 0.4s ease 0.2s;
 }
 .u4m-slider-gallery .innerCntt .slick-arrow {
   padding: 12px;

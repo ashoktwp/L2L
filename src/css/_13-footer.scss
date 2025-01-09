@@ -505,7 +505,8 @@ footer.ftr_wrpp {
     .rhtCnt {
       .hs-button {
         margin: 0;
-        @include buttonTwo;
+        // @include buttonTwo;
+        @include buttonTwoRevrse;
         font-family: $secondaryFont;
       }
     }

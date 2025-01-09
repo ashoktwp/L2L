@@ -354,7 +354,8 @@ header {
 
           .hd_btn {
             .hs-button {
-              @include buttonTwo;
+              // @include buttonTwo;
+              @include buttonTwoRevrse;
               font-family: $secondaryFont;
 
               @include tablet {

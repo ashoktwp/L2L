@@ -16,105 +16,126 @@
 
 
 <div class='resources-slider'>
-  <div class='page-center {{ module.module_overrides.container.size }}'>
+<div class='page-center {{ module.module_overrides.container.size }}'>
 
-    <div class='page-title'>
-      <div class="intro_wrapp">
-        {{macros.introGroup(module.intro_content)}}
-      </div>
+  <div class='page-title'>
+    <div class="intro_wrapp">
+      {{macros.introGroup(module.intro_content)}}
     </div>
+  </div>
 
-    <div class="resources-listing">
-      <div class='resources-slider-wrap'>
-        <div class='page-center cardSctn'>
-          <div class='flex-row resourceSlider'>
-            {% if module.resources.resource_type == "title" %}
-            {% set data = module.resources.resources_by_title %}
-            {% for row in data %}
-            <div class='resourceCardItem post-item cm-title {{ row.select_resource.columns.topic.name|lower|replace(' ','-') }} {{ row.select_resource.columns.type.name|lower|replace(' ','-') }}'>
-              <div class='post-item-inner'>
-                {% if row.select_resource.columns.image.url %}
-                <div class="featured-img">
-                  <a href="{{row.select_resource.columns.link}}">
-                    <img src="{{ row.select_resource.columns.image.url }}" alt="{{ row.select_resource.columns.name | striptags }}">
-                  </a>
-                  {% if row.select_resource.columns.type.name %}
+  <div class="resources-listing">
+    <div class='resources-slider-wrap'>
+      <div class='page-center cardSctn'>
+        <div class='flex-row resourceSlider'>
+          {% if module.resources.resource_type == "title" %}
+          {% set data = module.resources.resources_by_title %}
+          {% for row in data %}
+          <div class='resourceCardItem post-item cm-title {{ row.select_resource.columns.topic.name|lower|replace(' ','-') }} {{ row.select_resource.columns.type.name|lower|replace(' ','-') }}'>
+          <div class='post-item-inner  {% if not row.select_resource.columns.image.url %}noImage{% endif %}'>
+              {% if row.select_resource.columns.image.url %}
+              <div class="featured-img">
+                <a href="{{row.select_resource.columns.page_url}}">
+                  <img src="{{ row.select_resource.columns.image.url }}" alt="{{ row.select_resource.columns.name | striptags }}">
+                </a>
+                {% if row.select_resource.columns.type.name %}
+                <div class='featured-tag tag_{{ row.select_resource.columns.type.name|lower|replace(' ','-') }}'>{{ row.select_resource.columns.type.name }}</div>
+                {% endif %}
+
+              </div>
+            
+              {% else%}
+                {% if row.select_resource.columns.type.name %}
                   <div class='featured-tag tag_{{ row.select_resource.columns.type.name|lower|replace(' ','-') }}'>{{ row.select_resource.columns.type.name }}</div>
                   {% endif %}
+              {% endif %}
 
+
+
+
+              <div class="post-content">
+                {% if row.select_resource.columns.topics_tags %}
+                <div class='post-item-topic'>
+                  {% for tag in row.select_resource.columns.topics_tags %}{% if loop.index == 1%}{{ tag.name|lower|replace(' ','-') }}{% endif %}{% endfor %} 
                 </div>
                 {% endif %}
-                <div class="post-content">
-                  {% if row.select_resource.columns.topics_tags %}
-                  <div class='post-item-topic'>
-                    {% for tag in row.select_resource.columns.topics_tags %}{% if loop.index == 1%}{{ tag.name|lower|replace(' ','-') }}{% endif %}{% endfor %} 
-                  </div>
-                  {% endif %}
-                  <h4 class="resourcetitle">
-                    <a href="{{ row.select_resource.columns.link }}">{{ row.select_resource.columns.name }}</a>
-                  </h4>
-                  <div class='read-more'>
-                    <a class="more-link arrow-link" href="{{ row.select_resource.columns.link }}">{{ row.select_resource.columns.link_text }}
-                      <span class="arrowbtn">
-                        <svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                          <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
-                        </svg>
-                        <svg class="btnArrow2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                          <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
+                <h4 class="resourcetitle">
+                  <a href="{{ row.select_resource.columns.page_url }}">{{ row.select_resource.columns.name }}</a>
+                </h4>
+                <div class='read-more'>
+                  <a class="more-link arrow-link" href="{{ row.select_resource.columns.page_url }}">{{ row.select_resource.columns.page_url_text }}
+                    <span class="arrowbtn">
+                      <svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+                      </svg>
+                      <svg class="btnArrow2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+                      </svg>
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
-            {% endfor %}
-            {% else %}
-            {% for row in data %}
-            <div class='resourceCardItem post-item cm-recent-tag {{ row.topic.name|lower|replace(' ','-') }} {{ row.type.name|lower|replace(' ','-') }}'>
-              <div class='post-item-inner'>
-                {% if row.image.url %}
-                <div class="featured-img">
-                  <a href="{{row.link}}">
-                    <img src="{{ row.image.url }}" alt="{{ row.name | striptags }}">
-                  </a>
-{#                   <div class='featured-tag tag_{{ row.topic.name|lower|replace(' ','-') }}'>{{ row.topic.name }}</div> #}
-                  {% if row.type.name %}
+          </div>
+          {% endfor %}
+          {% else %}
+          {% for row in data %}
+          <div class='resourceCardItem post-item cm-recent-tag {{ row.topic.name|lower|replace(' ','-') }} {{ row.type.name|lower|replace(' ','-') }}'>
+            
+            <div class='post-item-inner  {% if not row.image.url %}noImage{% endif %}'>
+
+              {% if row.image.url %}
+              <div class="featured-img">
+                <a href="{{row.page_url}}">
+                  <img src="{{ row.image.url }}" alt="{{ row.name | striptags }}">
+                </a>
+
+                
+                {% if row.type.name %}
+                <div class='featured-tag tag_{{ row.type.name|lower|replace(' ','-') }}'>{{ row.type.name }}</div>
+                {% endif %}
+              </div>
+              
+              
+              {% else%}
+                {% if row.type.name %}
                   <div class='featured-tag tag_{{ row.type.name|lower|replace(' ','-') }}'>{{ row.type.name }}</div>
                   {% endif %}
+              {% endif %}
+
+
+
+              <div class="post-content">
+                <div class='post-item-topic'>
+                  {% for tag in row.topics_tags %}{% if loop.index == 1%}{{ tag.name|lower|replace(' ','-') }}{% endif %}{% endfor %}
                 </div>
-                {% endif %}
-                <div class="post-content">
-                  <div class='post-item-topic'>
-                    {% for tag in row.topics_tags %}{% if loop.index == 1%}{{ tag.name|lower|replace(' ','-') }}{% endif %}{% endfor %}
-                  </div>
-                  <h4 class="resourcetitle">
-                    <a href="{{ row.link }}">{{ row.name }}</a>
-                  </h4>
-                  <div class='read-more'>
-                    <a class="more-link arrow-link" href="{{ row.link }}">{{ row.link_text }}
-                      <span class="arrowbtn">
-                        <svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                          <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
-                        </svg>
-                        <svg class="btnArrow2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                          <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
+                <h4 class="resourcetitle">
+                  <a href="{{ row.page_url }}">{{ row.name }}</a>
+                </h4>
+                <div class='read-more'>
+                  <a class="more-link arrow-link" href="{{ row.page_url }}">{{ row.button_text }}
+                    <span class="arrowbtn">
+                      <svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+                      </svg>
+                      <svg class="btnArrow2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
+                      </svg>
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
-            {% endfor %}
-            {% endif  %}
           </div>
-
+          {% endfor %}
+          {% endif  %}
         </div>
+
       </div>
     </div>
-
   </div>
+
+</div>
 </div>
 
 </section>
@@ -125,36 +146,36 @@
 
 <script>
 
-  $('.{{name}} .resourceSlider').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots:true,
-    responsive: [
-    {
-    breakpoint: 1024,
-    settings: {
-    slidesToShow: 2
-    }
-  },
-    {
-      breakpoint: 767,
-        settings: {
-          slidesToShow: 1
-        }
-    }
+$('.{{name}} .resourceSlider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots:true,
+  responsive: [
+  {
+  breakpoint: 1024,
+  settings: {
+  slidesToShow: 2
+  }
+},
+  {
+    breakpoint: 767,
+      settings: {
+        slidesToShow: 1
+      }
+  }
 
-  ]
-  });
+]
+});
 </script>
 
 {% end_require_js %}
 
 {% require_css %}
 <style> 
-  .u4m-resources-slider .slick-arrow::before {
-    background-image:url({{ get_asset_url('../../templates/images/Path.png') }});
-  }
+.u4m-resources-slider .slick-arrow::before {
+  background-image:url({{ get_asset_url('../../templates/images/Path.png') }});
+}
 </style>
 
 {% end_require_css%}

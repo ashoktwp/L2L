@@ -77,7 +77,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -407,7 +408,6 @@ select {
   padding: 6px;
   display: inline-block;
   width: 100%;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -2260,11 +2260,9 @@ body {
   box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
-  -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
@@ -2288,10 +2286,6 @@ body {
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -2371,8 +2365,6 @@ body {
   width: 20px;
   height: 20px;
   padding: 0;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   cursor: pointer;
   color: transparent;
@@ -2551,8 +2543,6 @@ body {
   left: 0;
   top: 0;
   padding: 0 8px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -2586,15 +2576,11 @@ body {
 }
 
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-  cursor: -moz-zoom-out;
-  cursor: -webkit-zoom-out;
   cursor: zoom-out;
 }
 
 .mfp-zoom {
   cursor: pointer;
-  cursor: -webkit-zoom-in;
-  cursor: -moz-zoom-in;
   cursor: zoom-in;
 }
 
@@ -2650,7 +2636,6 @@ button.mfp-arrow, button.mfp-close {
   outline: 0;
   padding: 0;
   z-index: 1046;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -2820,8 +2805,6 @@ img.mfp-img {
   height: auto;
   display: block;
   line-height: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 40px 0;
   margin: 0 auto;
@@ -2905,8 +2888,6 @@ img.mfp-img {
     top: auto;
     padding: 3px 5px;
     position: fixed;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
   .mfp-img-mobile .mfp-bottom-bar:empty {
@@ -2930,15 +2911,12 @@ img.mfp-img {
 }
 @media all and (max-width: 900px) {
   .mfp-arrow {
-    -webkit-transform: scale(0.75);
     transform: scale(0.75);
   }
   .mfp-arrow-left {
-    -webkit-transform-origin: 0;
     transform-origin: 0;
   }
   .mfp-arrow-right {
-    -webkit-transform-origin: 100%;
     transform-origin: 100%;
   }
   .mfp-container {
@@ -3032,12 +3010,8 @@ img.mfp-img {
   line-height: 1;
   /* Enable Ligatures ================ */
   letter-spacing: 0;
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
   -ms-font-feature-settings: "liga" 1;
   font-feature-settings: "liga";
-  -webkit-font-variant-ligatures: discretionary-ligatures;
   font-variant-ligatures: discretionary-ligatures;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -9164,6 +9138,356 @@ img.mfp-img {
   content: "\e4fc";
 }
 
+.splide__container {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.splide__list {
+  backface-visibility: hidden;
+  display: flex;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.splide.is-initialized:not(.is-active) .splide__list {
+  display: block;
+}
+
+.splide__pagination {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  pointer-events: none;
+}
+
+.splide__pagination li {
+  display: inline-block;
+  line-height: 1;
+  list-style-type: none;
+  margin: 0;
+  pointer-events: auto;
+}
+
+.splide:not(.is-overflow) .splide__pagination {
+  display: none;
+}
+
+.splide__progress__bar {
+  width: 0;
+}
+
+.splide {
+  position: relative;
+  visibility: hidden;
+}
+
+.splide.is-initialized, .splide.is-rendered {
+  visibility: visible;
+}
+
+.splide__slide {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  list-style-type: none !important;
+  margin: 0;
+  position: relative;
+}
+
+.splide__slide img {
+  vertical-align: bottom;
+}
+
+.splide__spinner {
+  animation: splide-loading 1s linear infinite;
+  border: 2px solid #999;
+  border-left-color: transparent;
+  border-radius: 50%;
+  bottom: 0;
+  contain: strict;
+  display: inline-block;
+  height: 20px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+}
+
+.splide__sr {
+  clip: rect(0 0 0 0);
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.splide__toggle.is-active .splide__toggle__play, .splide__toggle__pause {
+  display: none;
+}
+
+.splide__toggle.is-active .splide__toggle__pause {
+  display: inline;
+}
+
+.splide__track {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+@keyframes splide-loading {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.splide__track--draggable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+
+.splide__track--fade > .splide__list > .splide__slide {
+  margin: 0 !important;
+  opacity: 0;
+  z-index: 0;
+}
+
+.splide__track--fade > .splide__list > .splide__slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.splide--rtl {
+  direction: rtl;
+}
+
+.splide__track--ttb > .splide__list {
+  display: block;
+}
+
+.splide__arrow {
+  align-items: center;
+  background: #ccc;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  height: 2em;
+  justify-content: center;
+  opacity: 0.7;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2em;
+  z-index: 1;
+}
+
+.splide__arrow svg {
+  fill: #000;
+  height: 1.2em;
+  width: 1.2em;
+}
+
+.splide__arrow:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.splide__arrow:disabled {
+  opacity: 0.3;
+}
+
+.splide__arrow:focus-visible {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide__arrow--prev {
+  left: 1em;
+}
+
+.splide__arrow--prev svg {
+  transform: scaleX(-1);
+}
+
+.splide__arrow--next {
+  right: 1em;
+}
+
+.splide.is-focus-in .splide__arrow:focus {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide__pagination {
+  bottom: 0.5em;
+  left: 0;
+  padding: 0 1em;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.splide__pagination__page {
+  background: #ccc;
+  border: 0;
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  margin: 3px;
+  opacity: 0.7;
+  padding: 0;
+  position: relative;
+  transition: transform 0.2s linear;
+  width: 8px;
+}
+
+.splide__pagination__page.is-active {
+  background: #fff;
+  transform: scale(1.4);
+  z-index: 1;
+}
+
+.splide__pagination__page:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.splide__pagination__page:focus-visible {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide.is-focus-in .splide__pagination__page:focus {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide__progress__bar {
+  background: #ccc;
+  height: 3px;
+}
+
+.splide__slide {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.splide__slide:focus {
+  outline: 0;
+}
+
+@supports (outline-offset: -3px) {
+  .splide__slide:focus-visible {
+    outline: 3px solid #0bf;
+    outline-offset: -3px;
+  }
+}
+@media screen and (-ms-high-contrast: none) {
+  .splide__slide:focus-visible {
+    border: 3px solid #0bf;
+  }
+}
+@supports (outline-offset: -3px) {
+  .splide.is-focus-in .splide__slide:focus {
+    outline: 3px solid #0bf;
+    outline-offset: -3px;
+  }
+}
+@media screen and (-ms-high-contrast: none) {
+  .splide.is-focus-in .splide__slide:focus {
+    border: 3px solid #0bf;
+  }
+  .splide.is-focus-in .splide__track > .splide__list > .splide__slide:focus {
+    border-color: #0bf;
+  }
+}
+.splide__toggle {
+  cursor: pointer;
+}
+
+.splide__toggle:focus-visible {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide.is-focus-in .splide__toggle:focus {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+
+.splide__track--nav > .splide__list > .splide__slide {
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.splide__track--nav > .splide__list > .splide__slide.is-active {
+  border: 3px solid #000;
+}
+
+.splide__arrows--rtl .splide__arrow--prev {
+  left: auto;
+  right: 1em;
+}
+
+.splide__arrows--rtl .splide__arrow--prev svg {
+  transform: scaleX(1);
+}
+
+.splide__arrows--rtl .splide__arrow--next {
+  left: 1em;
+  right: auto;
+}
+
+.splide__arrows--rtl .splide__arrow--next svg {
+  transform: scaleX(-1);
+}
+
+.splide__arrows--ttb .splide__arrow {
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.splide__arrows--ttb .splide__arrow--prev {
+  top: 1em;
+}
+
+.splide__arrows--ttb .splide__arrow--prev svg {
+  transform: rotate(-90deg);
+}
+
+.splide__arrows--ttb .splide__arrow--next {
+  bottom: 1em;
+  top: auto;
+}
+
+.splide__arrows--ttb .splide__arrow--next svg {
+  transform: rotate(90deg);
+}
+
+.splide__pagination--ttb {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: auto;
+  padding: 1em 0;
+  right: 0.5em;
+  top: 0;
+}
+
+/* Rectangle */
 html {
   font-size: 1px;
 }
@@ -10492,6 +10816,10 @@ iframe[id*=‘_ccpx_cont’] {
   display: none;
 }
 
+main#main-content ~ iframe[height="1"] {
+  display: none;
+}
+
 section.u4m-404-error,
 section.u4m-500-error {
   float: none;
@@ -10631,7 +10959,9 @@ section.u4m-backup-unsubscribe form .hs-form-field .input input[type=email] {
   background-color: #fff;
   padding: 19px 20px !important;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 1px solid transparent;
   color: #2c6938;
   outline: none;
@@ -10656,6 +10986,9 @@ section.u4m-backup-unsubscribe form .hs-form-field .input input[type=tel].invali
 section.u4m-backup-unsubscribe form .hs-form-field .input input[type=email].error,
 section.u4m-backup-unsubscribe form .hs-form-field .input input[type=email].invalid {
   border: 1rem solid red;
+}
+section.u4m-backup-unsubscribe form.hs-form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-backup-unsubscribe form.hs-form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-backup-unsubscribe form.hs-form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-backup-unsubscribe form.hs-form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-backup-unsubscribe form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-backup-unsubscribe form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-backup-unsubscribe form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-backup-unsubscribe form .hs-form-field .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-form-field .input input[type=text]::placeholder,
 section.u4m-backup-unsubscribe form.hs-form .hs-form-field .input input[type=number]::placeholder,
@@ -10695,7 +11028,9 @@ section.u4m-backup-unsubscribe form.hs-form .hs-form-field .input input[type=fil
   margin-bottom: 23rem;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-form-field .input select, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-form-field .input select, section.u4m-backup-unsubscribe form .hs-form-field .input select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
   background-size: 16rem 8rem;
   background-position: 97% 51%;
@@ -10837,7 +11172,9 @@ section.u4m-backup-unsubscribe form .form-columns-3 .hs-form-radio input {
   position: relative;
   top: 0rem;
   float: left;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-form-checkbox label,
 section.u4m-backup-unsubscribe form.hs-form .hs-form-booleancheckbox label,
@@ -11138,6 +11475,11 @@ section.u4m-backup-unsubscribe form.hs-form .form-columns-2 > div:last-of-type, 
 @media (max-width: 580px) {
   section.u4m-backup-unsubscribe form.hs-form .form-columns-2 > div:last-of-type, section.u4m-backup-unsubscribe form.mixitup-multifilter .form-columns-2 > div:last-of-type, section.u4m-backup-unsubscribe form .form-columns-2 > div:last-of-type {
     margin-left: 0;
+  }
+}
+@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px) {
+  section.u4m-backup-unsubscribe form.hs-form .form-columns-2 > div, section.u4m-backup-unsubscribe form.mixitup-multifilter .form-columns-2 > div, section.u4m-backup-unsubscribe form .form-columns-2 > div {
+    width: 100% !important;
   }
 }
 section.u4m-backup-unsubscribe form.hs-form .hs-button, section.u4m-backup-unsubscribe form.mixitup-multifilter .hs-button, section.u4m-backup-unsubscribe form .hs-button {
@@ -11462,7 +11804,9 @@ section.u4m-password-prompt form .hs-form-field .input input[type=email] {
   background-color: #fff;
   padding: 19px 20px !important;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 1px solid transparent;
   color: #2c6938;
   outline: none;
@@ -11583,6 +11927,9 @@ section.u4m-password-prompt form .hs-form-field .input input[type=tel].invalid,
 section.u4m-password-prompt form .hs-form-field .input input[type=email].error,
 section.u4m-password-prompt form .hs-form-field .input input[type=email].invalid {
   border: 1rem solid red;
+}
+section.u4m-membership-login form.hs-form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-login form.hs-form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-login form.hs-form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-login form.hs-form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-membership-login form.mixitup-multifilter .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-login form.mixitup-multifilter .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-login form.mixitup-multifilter .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-login form.mixitup-multifilter .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-membership-login form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-login form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-login form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-login form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-membership-register form.hs-form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-register form.hs-form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-register form.hs-form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-register form.hs-form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-membership-register form.mixitup-multifilter .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-register form.mixitup-multifilter .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-register form.mixitup-multifilter .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-register form.mixitup-multifilter .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-membership-register form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-register form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-register form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-register form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password-request form.hs-form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password-request form.hs-form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password-request form.hs-form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password-request form.hs-form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password-request form.mixitup-multifilter .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password-request form.mixitup-multifilter .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password-request form.mixitup-multifilter .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password-request form.mixitup-multifilter .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password-request form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password-request form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password-request form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password-request form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password form.hs-form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password form.hs-form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password form.hs-form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password form.hs-form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password form.mixitup-multifilter .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password form.mixitup-multifilter .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password form.mixitup-multifilter .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password form.mixitup-multifilter .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-membership-reset-password form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-membership-reset-password form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-membership-reset-password form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-membership-reset-password form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-password-prompt form.hs-form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-password-prompt form.hs-form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-password-prompt form.hs-form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-password-prompt form.hs-form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-password-prompt form.mixitup-multifilter .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-password-prompt form.mixitup-multifilter .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-password-prompt form.mixitup-multifilter .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-password-prompt form.mixitup-multifilter .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-password-prompt form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-password-prompt form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-password-prompt form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-password-prompt form .hs-form-field .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
 }
 section.u4m-membership-login form.hs-form .hs-form-field .input input[type=text]::placeholder,
 section.u4m-membership-login form.hs-form .hs-form-field .input input[type=number]::placeholder,
@@ -11730,7 +12077,9 @@ section.u4m-membership-reset-password form .hs-form-field .input select,
 section.u4m-password-prompt form.hs-form .hs-form-field .input select,
 section.u4m-password-prompt form.mixitup-multifilter .hs-form-field .input select,
 section.u4m-password-prompt form .hs-form-field .input select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
   background-size: 16rem 8rem;
   background-position: 97% 51%;
@@ -12220,7 +12569,9 @@ section.u4m-password-prompt form .form-columns-3 .hs-form-radio input {
   position: relative;
   top: 0rem;
   float: left;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 section.u4m-membership-login form.hs-form .hs-form-checkbox label,
 section.u4m-membership-login form.hs-form .hs-form-booleancheckbox label,
@@ -13471,6 +13822,23 @@ section.u4m-password-prompt form .form-columns-2 > div:last-of-type {
     margin-left: 0;
   }
 }
+@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px) {
+  section.u4m-membership-login form.hs-form .form-columns-2 > div, section.u4m-membership-login form.mixitup-multifilter .form-columns-2 > div, section.u4m-membership-login form .form-columns-2 > div,
+  section.u4m-membership-register form.hs-form .form-columns-2 > div,
+  section.u4m-membership-register form.mixitup-multifilter .form-columns-2 > div,
+  section.u4m-membership-register form .form-columns-2 > div,
+  section.u4m-membership-reset-password-request form.hs-form .form-columns-2 > div,
+  section.u4m-membership-reset-password-request form.mixitup-multifilter .form-columns-2 > div,
+  section.u4m-membership-reset-password-request form .form-columns-2 > div,
+  section.u4m-membership-reset-password form.hs-form .form-columns-2 > div,
+  section.u4m-membership-reset-password form.mixitup-multifilter .form-columns-2 > div,
+  section.u4m-membership-reset-password form .form-columns-2 > div,
+  section.u4m-password-prompt form.hs-form .form-columns-2 > div,
+  section.u4m-password-prompt form.mixitup-multifilter .form-columns-2 > div,
+  section.u4m-password-prompt form .form-columns-2 > div {
+    width: 100% !important;
+  }
+}
 section.u4m-membership-login form.hs-form .hs-button, section.u4m-membership-login form.mixitup-multifilter .hs-button, section.u4m-membership-login form .hs-button,
 section.u4m-membership-register form.hs-form .hs-button,
 section.u4m-membership-register form.mixitup-multifilter .hs-button,
@@ -13712,7 +14080,9 @@ section.u4m-subscription-preferences form .hs-form-field .input input[type=email
   background-color: #fff;
   padding: 19px 20px !important;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 1px solid transparent;
   color: #2c6938;
   outline: none;
@@ -13737,6 +14107,9 @@ section.u4m-subscription-preferences form .hs-form-field .input input[type=tel].
 section.u4m-subscription-preferences form .hs-form-field .input input[type=email].error,
 section.u4m-subscription-preferences form .hs-form-field .input input[type=email].invalid {
   border: 1rem solid red;
+}
+section.u4m-subscription-preferences form.hs-form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-subscription-preferences form.hs-form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-subscription-preferences form.hs-form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-subscription-preferences form.hs-form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-subscription-preferences form.mixitup-multifilter .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-subscription-preferences form.mixitup-multifilter .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-subscription-preferences form.mixitup-multifilter .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-subscription-preferences form.mixitup-multifilter .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-subscription-preferences form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-subscription-preferences form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-subscription-preferences form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-subscription-preferences form .hs-form-field .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
 }
 section.u4m-subscription-preferences form.hs-form .hs-form-field .input input[type=text]::placeholder,
 section.u4m-subscription-preferences form.hs-form .hs-form-field .input input[type=number]::placeholder,
@@ -13776,7 +14149,9 @@ section.u4m-subscription-preferences form.hs-form .hs-form-field .input input[ty
   margin-bottom: 23rem;
 }
 section.u4m-subscription-preferences form.hs-form .hs-form-field .input select, section.u4m-subscription-preferences form.mixitup-multifilter .hs-form-field .input select, section.u4m-subscription-preferences form .hs-form-field .input select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
   background-size: 16rem 8rem;
   background-position: 97% 51%;
@@ -13918,7 +14293,9 @@ section.u4m-subscription-preferences form .form-columns-3 .hs-form-radio input {
   position: relative;
   top: 0rem;
   float: left;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 section.u4m-subscription-preferences form.hs-form .hs-form-checkbox label,
 section.u4m-subscription-preferences form.hs-form .hs-form-booleancheckbox label,
@@ -14221,6 +14598,11 @@ section.u4m-subscription-preferences form.hs-form .form-columns-2 > div:last-of-
     margin-left: 0;
   }
 }
+@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px) {
+  section.u4m-subscription-preferences form.hs-form .form-columns-2 > div, section.u4m-subscription-preferences form.mixitup-multifilter .form-columns-2 > div, section.u4m-subscription-preferences form .form-columns-2 > div {
+    width: 100% !important;
+  }
+}
 section.u4m-subscription-preferences form.hs-form .hs-button, section.u4m-subscription-preferences form.mixitup-multifilter .hs-button, section.u4m-subscription-preferences form .hs-button {
   line-height: 1.71;
   font-size: 14rem;
@@ -14374,7 +14756,9 @@ section.u4m-drag-and-drop-area form .hs-form-field .input input[type=email] {
   background-color: #fff;
   padding: 19px 20px !important;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 1px solid transparent;
   color: #2c6938;
   outline: none;
@@ -14399,6 +14783,9 @@ section.u4m-drag-and-drop-area form .hs-form-field .input input[type=tel].invali
 section.u4m-drag-and-drop-area form .hs-form-field .input input[type=email].error,
 section.u4m-drag-and-drop-area form .hs-form-field .input input[type=email].invalid {
   border: 1rem solid red;
+}
+section.u4m-drag-and-drop-area form.hs-form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-drag-and-drop-area form.hs-form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-drag-and-drop-area form.hs-form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-drag-and-drop-area form.hs-form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-drag-and-drop-area form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-drag-and-drop-area form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-drag-and-drop-area form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-drag-and-drop-area form .hs-form-field .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-form-field .input input[type=text]::placeholder,
 section.u4m-drag-and-drop-area form.hs-form .hs-form-field .input input[type=number]::placeholder,
@@ -14438,7 +14825,9 @@ section.u4m-drag-and-drop-area form.hs-form .hs-form-field .input input[type=fil
   margin-bottom: 23rem;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-form-field .input select, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-form-field .input select, section.u4m-drag-and-drop-area form .hs-form-field .input select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
   background-size: 16rem 8rem;
   background-position: 97% 51%;
@@ -14580,7 +14969,9 @@ section.u4m-drag-and-drop-area form .form-columns-3 .hs-form-radio input {
   position: relative;
   top: 0rem;
   float: left;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 section.u4m-drag-and-drop-area form.hs-form .hs-form-checkbox label,
 section.u4m-drag-and-drop-area form.hs-form .hs-form-booleancheckbox label,
@@ -14883,6 +15274,11 @@ section.u4m-drag-and-drop-area form.hs-form .form-columns-2 > div:last-of-type, 
     margin-left: 0;
   }
 }
+@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px) {
+  section.u4m-drag-and-drop-area form.hs-form .form-columns-2 > div, section.u4m-drag-and-drop-area form.mixitup-multifilter .form-columns-2 > div, section.u4m-drag-and-drop-area form .form-columns-2 > div {
+    width: 100% !important;
+  }
+}
 section.u4m-drag-and-drop-area form.hs-form .hs-button, section.u4m-drag-and-drop-area form.mixitup-multifilter .hs-button, section.u4m-drag-and-drop-area form .hs-button {
   line-height: 1.71;
   font-size: 14rem;
@@ -15045,7 +15441,9 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
   background-color: #fff;
   padding: 19px 20px !important;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 1px solid transparent;
   color: #2c6938;
   outline: none;
@@ -15094,6 +15492,9 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
 .dnd-section form .hs-form-field .input input[type=email].error,
 .dnd-section form .hs-form-field .input input[type=email].invalid {
   border: 1rem solid red;
+}
+.dnd_padd form.hs-form .hs-form-field .input input[type=text]::-moz-placeholder, .dnd_padd form.hs-form .hs-form-field .input input[type=number]::-moz-placeholder, .dnd_padd form.hs-form .hs-form-field .input input[type=tel]::-moz-placeholder, .dnd_padd form.hs-form .hs-form-field .input input[type=email]::-moz-placeholder, .dnd_padd form.mixitup-multifilter .hs-form-field .input input[type=text]::-moz-placeholder, .dnd_padd form.mixitup-multifilter .hs-form-field .input input[type=number]::-moz-placeholder, .dnd_padd form.mixitup-multifilter .hs-form-field .input input[type=tel]::-moz-placeholder, .dnd_padd form.mixitup-multifilter .hs-form-field .input input[type=email]::-moz-placeholder, .dnd_padd form .hs-form-field .input input[type=text]::-moz-placeholder, .dnd_padd form .hs-form-field .input input[type=number]::-moz-placeholder, .dnd_padd form .hs-form-field .input input[type=tel]::-moz-placeholder, .dnd_padd form .hs-form-field .input input[type=email]::-moz-placeholder, .dnd-section form.hs-form .hs-form-field .input input[type=text]::-moz-placeholder, .dnd-section form.hs-form .hs-form-field .input input[type=number]::-moz-placeholder, .dnd-section form.hs-form .hs-form-field .input input[type=tel]::-moz-placeholder, .dnd-section form.hs-form .hs-form-field .input input[type=email]::-moz-placeholder, .dnd-section form.mixitup-multifilter .hs-form-field .input input[type=text]::-moz-placeholder, .dnd-section form.mixitup-multifilter .hs-form-field .input input[type=number]::-moz-placeholder, .dnd-section form.mixitup-multifilter .hs-form-field .input input[type=tel]::-moz-placeholder, .dnd-section form.mixitup-multifilter .hs-form-field .input input[type=email]::-moz-placeholder, .dnd-section form .hs-form-field .input input[type=text]::-moz-placeholder, .dnd-section form .hs-form-field .input input[type=number]::-moz-placeholder, .dnd-section form .hs-form-field .input input[type=tel]::-moz-placeholder, .dnd-section form .hs-form-field .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
 }
 .dnd_padd form.hs-form .hs-form-field .input input[type=text]::placeholder,
 .dnd_padd form.hs-form .hs-form-field .input input[type=number]::placeholder,
@@ -15160,7 +15561,9 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
 .dnd-section form.hs-form .hs-form-field .input select,
 .dnd-section form.mixitup-multifilter .hs-form-field .input select,
 .dnd-section form .hs-form-field .input select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
   background-size: 16rem 8rem;
   background-position: 97% 51%;
@@ -15389,7 +15792,9 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
   position: relative;
   top: 0rem;
   float: left;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .dnd_padd form.hs-form .hs-form-checkbox label,
 .dnd_padd form.hs-form .hs-form-booleancheckbox label,
@@ -15929,6 +16334,14 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
     margin-left: 0;
   }
 }
+@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px) {
+  .dnd_padd form.hs-form .form-columns-2 > div, .dnd_padd form.mixitup-multifilter .form-columns-2 > div, .dnd_padd form .form-columns-2 > div,
+  .dnd-section form.hs-form .form-columns-2 > div,
+  .dnd-section form.mixitup-multifilter .form-columns-2 > div,
+  .dnd-section form .form-columns-2 > div {
+    width: 100% !important;
+  }
+}
 .dnd_padd form.hs-form .hs-button, .dnd_padd form.mixitup-multifilter .hs-button, .dnd_padd form .hs-button,
 .dnd-section form.hs-form .hs-button,
 .dnd-section form.mixitup-multifilter .hs-button,
@@ -16050,7 +16463,8 @@ section.u4m-drag-and-drop-area form.hs-form .hs-button:disabled, section.u4m-dra
 .visually-hidden,
 .sr-only {
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -16544,7 +16958,9 @@ section.u4m-blog-post div.comments div.content form .hs-form-field .input input[
   background-color: #fff;
   padding: 19px 20px !important;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 1px solid transparent;
   color: #2c6938;
   outline: none;
@@ -16569,6 +16985,9 @@ section.u4m-blog-post div.comments div.content form .hs-form-field .input input[
 section.u4m-blog-post div.comments div.content form .hs-form-field .input input[type=email].error,
 section.u4m-blog-post div.comments div.content form .hs-form-field .input input[type=email].invalid {
   border: 1rem solid red;
+}
+section.u4m-blog-post div.comments div.content form.hs-form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.hs-form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.hs-form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.hs-form .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-form-field .input input[type=email]::-moz-placeholder, section.u4m-blog-post div.comments div.content form .hs-form-field .input input[type=text]::-moz-placeholder, section.u4m-blog-post div.comments div.content form .hs-form-field .input input[type=number]::-moz-placeholder, section.u4m-blog-post div.comments div.content form .hs-form-field .input input[type=tel]::-moz-placeholder, section.u4m-blog-post div.comments div.content form .hs-form-field .input input[type=email]::-moz-placeholder {
+  color: #2c6938;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-field .input input[type=text]::placeholder,
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-field .input input[type=number]::placeholder,
@@ -16608,7 +17027,9 @@ section.u4m-blog-post div.comments div.content form.hs-form .hs-form-field .inpu
   margin-bottom: 23rem;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-field .input select, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-form-field .input select, section.u4m-blog-post div.comments div.content form .hs-form-field .input select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: url("https://www.l2l.com/hubfs/L2L-u4m/images/arrowdownGreen.png") no-repeat;
   background-size: 16rem 8rem;
   background-position: 97% 51%;
@@ -16750,7 +17171,9 @@ section.u4m-blog-post div.comments div.content form .form-columns-3 .hs-form-rad
   position: relative;
   top: 0rem;
   float: left;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-checkbox label,
 section.u4m-blog-post div.comments div.content form.hs-form .hs-form-booleancheckbox label,
@@ -17053,6 +17476,11 @@ section.u4m-blog-post div.comments div.content form.hs-form .form-columns-2 > di
     margin-left: 0;
   }
 }
+@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px) {
+  section.u4m-blog-post div.comments div.content form.hs-form .form-columns-2 > div, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .form-columns-2 > div, section.u4m-blog-post div.comments div.content form .form-columns-2 > div {
+    width: 100% !important;
+  }
+}
 section.u4m-blog-post div.comments div.content form.hs-form .hs-button, section.u4m-blog-post div.comments div.content form.mixitup-multifilter .hs-button, section.u4m-blog-post div.comments div.content form .hs-button {
   line-height: 1.71;
   font-size: 14rem;
@@ -17208,7 +17636,8 @@ section.u4m-blog-post .post_content .post-share {
     text-align: left;
     width: 100%;
     flex-direction: row;
-    column-gap: 17px;
+    -moz-column-gap: 17px;
+         column-gap: 17px;
     align-items: center;
     margin-bottom: 20px;
   }
@@ -17265,13 +17694,15 @@ section.u4m-blog-post .author-section {
 section.u4m-blog-post .author-section .author-wrap {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 46px;
+  -moz-column-gap: 46px;
+       column-gap: 46px;
   flex-direction: row;
 }
 @media (max-width: 767px) {
   section.u4m-blog-post .author-section .author-wrap {
     flex-direction: column;
-    column-gap: 0;
+    -moz-column-gap: 0;
+         column-gap: 0;
     row-gap: 40px;
   }
 }
@@ -17334,7 +17765,8 @@ section.u4m-blog-post .author-section .author-wrap .author-link {
   line-height: 1.57;
   text-align: left;
   text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 @media (max-width: 767px) {
   section.u4m-blog-post .author-section .author-wrap .author-link {
@@ -17351,7 +17783,8 @@ section.u4m-blog-post .author-section .author-wrap .author-link .author-share {
 section.u4m-blog-post .author-section .author-wrap .author-link .author-share .author-share-inn {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   line-height: 1;
 }
 section.u4m-blog-post .author-section .author-wrap .author-link .author-share .author-share-inn svg {
@@ -17664,7 +18097,8 @@ footer.ftr_wrpp .top_wrp .right_wrpp .inner_wrp .cm_ratings .plateform_rate ul l
   height: 24px;
 }
 footer.ftr_wrpp .top_wrp .right_wrpp .inner_wrp .cm_ratings .plateform_rate ul li a .img img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   vertical-align: baseline;
 }
 footer.ftr_wrpp .top_wrp .right_wrpp .inner_wrp .cm_ratings .plateform_rate ul li a:hover {
@@ -17728,7 +18162,7 @@ footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
 }
 footer.ftr_wrpp .page-center .copyright .topCntt .hs_cos_wrapper p {
   margin: 0;
@@ -17889,7 +18323,8 @@ footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li 
 }
 footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a .img img {
   vertical-align: super;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a:hover {
   color: #c0fc95;
@@ -17972,6 +18407,8 @@ footer.ftr_wrpp .middle_wrp .rhtCnt .hs-button {
   border: none;
   padding: 15rem 30rem;
   background: linear-gradient(308.96deg, #b8ffd2 -8.65%, #d0f76e 81.32%);
+  background: linear-gradient(260.94deg, #d0f76e 3.36%, #b8ffd2 98.11%);
+  background: linear-gradient(260.94deg, #d0f76e 3.36%, #b8ffd2 98.11%);
   color: #2e2e2e;
   font-family: "Inter";
 }
@@ -18010,7 +18447,8 @@ header .hd_hgh .hd_wrap {
   left: 0;
   right: 0;
   z-index: 99;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   box-shadow: 0 0.6021873018px 0.6021873018px -1.25px rgba(0, 0, 0, 0.9), 0 2.2885333032px 2.2885333032px -2.5px rgba(0, 0, 0, 0.8), 0 10px 10px -3.75px rgba(0, 0, 0, 0.3);
 }
 header .hd_hgh .hd_wrap .hd_inr {
@@ -18137,10 +18575,10 @@ header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .bt_row .bt_btn a {
   gap: 9px;
 }
 header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .bt_row .bt_btn a svg line {
-  STROKE: #c0fc95 !important;
+  stroke: #c0fc95 !important;
 }
 header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .bt_row .bt_btn a svg polyline {
-  STROKE: #c0fc95 !important;
+  stroke: #c0fc95 !important;
 }
 header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .bt_row .bt_btn a:hover {
   color: #c0fc95;
@@ -18188,6 +18626,7 @@ header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .
   letter-spacing: 0;
   line-height: 1.7;
   font-weight: 600;
+  transition: color 0.2s ease;
 }
 header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .child_menuitems > a > div {
   display: flex;
@@ -18216,6 +18655,9 @@ header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .
   margin: 0;
   margin-top: 3px;
 }
+header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .child_menuitems > a:hover {
+  color: #c0fc95;
+}
 header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .hdcard_img {
   margin-bottom: 16px;
 }
@@ -18224,6 +18666,15 @@ header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .
     max-width: 300px;
   }
 }
+header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .card_title {
+  font-size: 14rem;
+  color: #fff;
+  letter-spacing: 0;
+  line-height: 1.7;
+}
+header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .child_card:hover .card_title {
+  color: #c0fc95;
+}
 header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .hdcard_cnt p {
   font-size: 14rem;
   color: #fff;
@@ -18231,8 +18682,6 @@ header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .
   line-height: 1.7;
   margin: 0;
   margin-top: 3px;
-}
-header .hd_hgh .hd_wrap .hd_inr .hd_menu .child_wrapper .child_flex .child_col .hdcard_cnt p span {
   color: #e3f5e6;
   opacity: 0.79;
 }
@@ -18356,6 +18805,8 @@ header .hd_hgh .hd_wrap .hd_inr .hd_right .hd_btn .hs-button {
   border: none;
   padding: 15rem 30rem;
   background: linear-gradient(308.96deg, #b8ffd2 -8.65%, #d0f76e 81.32%);
+  background: linear-gradient(260.94deg, #d0f76e 3.36%, #b8ffd2 98.11%);
+  background: linear-gradient(260.94deg, #d0f76e 3.36%, #b8ffd2 98.11%);
   color: #2e2e2e;
   font-family: "Inter";
 }

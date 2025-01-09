@@ -1,3 +1,4 @@
+/* Rectangle */
 html {
   font-size: 1px;
 }
@@ -73,7 +74,8 @@ html {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 2px;
+  -moz-column-gap: 2px;
+       column-gap: 2px;
 }
 @media (max-width: 1024px) {
   .u4m-animated-stats .statistics .statistics__item .statistics_count {
