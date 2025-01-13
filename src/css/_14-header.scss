@@ -45,6 +45,10 @@ header {
               margin: 0;
               line-height: normal;
 
+              &.no-megamenu{
+                position: relative;
+              }
+
               &:hover .child_wrapper {
                 display: block;
                 visibility: visible;

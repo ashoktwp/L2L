@@ -1,9 +1,11 @@
+{% if is_in_previewer %} {{ require_css (get_asset_url('../../css/styles.css')) }} {% endif %}
+
 <div class="megamenu_mdl">
   <div class="megamenu_inr">
 
     <ul class="main_menu">
       {% for item in module.add_menus %}
-      <li class="{{ item.menu_text|lower|replace(' ','') }}">
+      <li class="{{ item.menu_text|lower|replace(' ','') }}{% if item.enable_single_column_position %} no-megamenu {% endif %}">
         {% set href = item.menu_link.url.href %}
         {% if item.menu_link.url.type is equalto "EMAIL_ADDRESS" %}
         {% set href = "mailto:" + href %}
@@ -218,3 +220,7 @@
 
   </div>
 </div>
+
+
+
+

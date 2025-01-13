@@ -18,6 +18,7 @@ section.u4m-hero-left-aligned {
   &.u4m-hero-center {
     padding-top: 307px;
     min-height: 1024px;
+    min-height: auto;
 
     @include tabletvert {
       padding: 50px 0;

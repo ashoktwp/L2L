@@ -9,6 +9,16 @@
     }
   }
 
+  &.reverse-text {
+    .blog-banner {
+      .page-title {
+        h1 {
+          color: $white;
+        }
+      }
+    }
+  }
+
   .intro_content {
     max-width: 860rem;
   }
@@ -31,7 +41,7 @@
 
       h1 {
         margin-bottom: 60px;
-        color: $white;
+        // color: $white;
       }
     }
 
@@ -482,5 +492,11 @@
 
   .dropdownopen .filter_dropdown {
     display: block;
+  }
+
+  &.no_bannercontent {
+    .u4m-resources-listing {
+      display: none;
+    }
   }
 }

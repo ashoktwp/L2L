@@ -115,10 +115,6 @@
     border: none;
     display: block;
   }
-
-  .hs-embed-content-wrapper {
-    border: 1px solid #fff;
-  }
 }
 blockquote {
   line-height: 33px;
@@ -191,5 +187,23 @@ table {
   }
   .tooltip {
     display: none;
+  }
+}
+
+.u4m-rich-text {
+  &.reverse-text {
+    * {
+      color: $white;
+    }
+    table th,
+    table td,
+    table,
+    hr {
+      border-color: $white;
+    }
+
+    blockquote {
+      border-left-color: $white;
+    }
   }
 }

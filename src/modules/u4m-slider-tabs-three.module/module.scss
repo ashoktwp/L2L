@@ -124,7 +124,7 @@
       line-height: 1.91;
       letter-spacing: 0.5px;
       font-weight: 600;
-      color: $White;
+      // color: $White;
       @include size14;
       opacity: 0.45;
       mix-blend-mode: plus-lighter;
@@ -139,7 +139,7 @@
       line-height: 1.78125;
       font-weight: 500;
       letter-spacing: -0.67px;
-      color: $White;
+      // color: $White;
       margin-bottom: 11px;
     }
     .tabs-content {
@@ -147,7 +147,7 @@
       margin: 0 auto;
       text-align: center;
       font-family: $secondaryFont;
-      color: $Very_Pale_Green;
+      // color: $Very_Pale_Green;
       line-height: 1.57142857;
       p {
         margin-top: 0;
@@ -361,6 +361,22 @@
       margin-bottom: 60px;
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  &.reverse-text {
+    .slider-tabs-items {
+      .tabs-subheading {
+        color: $White;
+      }
+
+      .tabs-heading {
+        color: $White;
+      }
+
+      .tabs-content {
+        color: $Very_Pale_Green;
       }
     }
   }

@@ -43,6 +43,16 @@
       "no_follow" : false
     }
   }, {
+    "id" : "76b1da8e-3c02-86c4-cf46-9a8866c78737",
+    "name" : "enable_single_column_position",
+    "display_width" : null,
+    "label" : "Enable Single Column Position",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
     "id" : "322f84e2-78d1-ae4a-8d63-aa1a96cb68e2",
     "name" : "mega_menu",
     "display_width" : null,
