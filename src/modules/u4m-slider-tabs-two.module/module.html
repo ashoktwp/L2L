@@ -153,7 +153,9 @@
 
 {% require_css %}
 <style>
-
+  .u4m-slider-tabs-two-wrap .slick-disabled .circle-go {
+    transition: stroke-dashoffset 0s linear !important;
+  }
 </style>
 {% end_require_css %}
 
@@ -217,7 +219,6 @@
       asNavFor: '.sslider-for',
       dots: false, 
       infinite: false,
-      autoplay: true,
       autoplaySpeed: 5000,
       arrows: false,
       responsive: [
@@ -264,14 +265,24 @@
     }
 
 
-    $('.sslider-for').on('afterChange', function(event, slick, currentSlide) {
-    // Remove class from all slides
-    $('.sslider-for .slick-slide').removeClass('slick-now');
 
-    // Add class to the current slide
+    $('.sslider-for').on('afterChange', function(event, slick, currentSlide) {
+    $('.sslider-for .slick-slide').removeClass('slick-now');
     $('.sslider-for .slick-slide').eq(currentSlide).addClass('slick-now');
+      
     startProgressBar();
     hideVideos();
+      if (currentSlide === slick.$slides.length - 1) {
+        slick.slickPause();
+        slick.slickSetOption('centerMode', true);
+        setTimeout(function(){
+          slick.slickPlay();
+          slick.slickSetOption('centerMode', false); 
+        }, 5000)
+      } else {
+        slick.slickPlay();
+        slick.slickSetOption('centerMode', false); 
+      }
   });
 
 
@@ -293,12 +304,9 @@
       hideVideos();
     });
 
-    $('.sslider-nav').on('click', '.slick-slide', function () {
+    $('.sslider-nav').on('click', '.slick-slide', function (event) {
       const index = $(this).data('slick-index');
       $('.sslider-for').slick('slickGoTo', index);
-      {# $('.sslider-for,.sslider-nav').slick('slickPlay'); #}
-      handleSlideChange();
-      hideVideos();
     });
 
     $('.ctvb-btnicon').each(function () {
