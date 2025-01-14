@@ -265,26 +265,31 @@
     }
 
 
-
+function setupSlickSliderForDesktop() {
     $('.sslider-for').on('afterChange', function(event, slick, currentSlide) {
     $('.sslider-for .slick-slide').removeClass('slick-now');
     $('.sslider-for .slick-slide').eq(currentSlide).addClass('slick-now');
-      
-    startProgressBar();
-    hideVideos();
-      if (currentSlide === slick.$slides.length - 1) {
-        slick.slickPause();
-        slick.slickSetOption('centerMode', true);
-        setTimeout(function(){
+    if ($(window).width() > 767) {  
+      startProgressBar();
+      hideVideos();
+        if (currentSlide === slick.$slides.length - 1) {
+          slick.slickPause();
+          slick.slickSetOption('centerMode', true);
+          setTimeout(function(){
+            slick.slickPlay();
+            slick.slickSetOption('centerMode', false); 
+          }, 5000)
+        } else {
           slick.slickPlay();
           slick.slickSetOption('centerMode', false); 
-        }, 5000)
-      } else {
-        slick.slickPlay();
-        slick.slickSetOption('centerMode', false); 
-      }
+        }
+        }
   });
-
+  }
+setupSlickSliderForDesktop();
+$(window).on('resize', function () {
+  setupSlickSliderForDesktop();
+});
 
     function handleSlideChange() {
       startProgressBar();
