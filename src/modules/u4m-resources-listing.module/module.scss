@@ -9,6 +9,16 @@
     }
   }
 
+  &.reverse-text {
+    .blog-banner {
+      .page-title {
+        h1 {
+          color: $white;
+        }
+      }
+    }
+  }
+
   .intro_content {
     max-width: 860rem;
   }
@@ -31,7 +41,7 @@
 
       h1 {
         margin-bottom: 60px;
-        color: $white;
+        // color: $white;
       }
     }
 
@@ -40,6 +50,35 @@
       flex-wrap: wrap;
       align-items: center;
       column-gap: 70px;
+    }
+
+    .featured-tag {
+      @include size14;
+      font-family: $secondaryFont;
+      margin: 0;
+      position: absolute;
+      font-weight: 600;
+      background: $headingColor;
+      color: $white;
+      letter-spacing: 0.47px;
+      display: flex;
+      gap: 11px;
+      align-items: center;
+      line-height: 17px;
+      padding: 4px 6px 5px 10px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      left: 29px;
+      top: 29px;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 100%;
+        background-color: $white;
+      }
     }
 
     .featured-img-col {
@@ -121,35 +160,6 @@
           min-height: auto;
         }
       }
-
-      .featured-tag {
-        @include size14;
-        font-family: $secondaryFont;
-        margin: 0;
-        position: absolute;
-        font-weight: 600;
-        background: $headingColor;
-        color: $white;
-        letter-spacing: 0.47px;
-        display: flex;
-        gap: 11px;
-        align-items: center;
-        line-height: 17px;
-        padding: 4px 6px 5px 10px;
-        border-radius: 3px;
-        text-transform: uppercase;
-        left: 29px;
-        top: 29px;
-
-        &:before {
-          content: "";
-          display: inline-block;
-          width: 7px;
-          height: 7px;
-          border-radius: 100%;
-          background-color: $white;
-        }
-      }
     }
 
     .featured-content-col {
@@ -228,6 +238,12 @@
     background-color: $Mint_cream;
     padding-top: 80px;
     padding-bottom: 110px;
+    opacity: 0;
+    transition: 0.1s ease 0.3s;
+
+    &.loaddedList {
+      opacity: 1;
+    }
 
     @include tabletvert {
       padding: 50px 0;
@@ -305,6 +321,7 @@
             background-repeat: no-repeat;
             background-size: 12px;
             appearance: none;
+            background-color: $white;
           }
         }
       }
@@ -317,36 +334,46 @@
     .flex-row {
       .post-item {
         .post-item-inner {
-          .featured-img {
-            .featured-tag {
-              @include size14;
-              font-family: $secondaryFont;
-              margin: 0;
-              position: absolute;
-              font-weight: 600;
-              background: $headingColor;
-              color: $white;
-              letter-spacing: 0.47px;
-              display: flex;
-              gap: 11px;
-              align-items: center;
-              line-height: 17px;
-              padding: 4px 6px 5px 10px;
-              border-radius: 3px;
-              text-transform: uppercase;
-              left: 11px;
-              top: 11px;
+          .featured-tag {
+            @include size14;
+            font-family: $secondaryFont;
+            margin: 0;
+            position: absolute;
+            font-weight: 600;
+            background: $headingColor;
+            color: $white;
+            letter-spacing: 0.47px;
+            display: flex;
+            gap: 11px;
+            align-items: center;
+            line-height: 17px;
+            padding: 4px 6px 5px 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            left: 11px;
+            top: 11px;
 
-              &:before {
-                content: "";
-                display: inline-block;
-                width: 7px;
-                height: 7px;
-                border-radius: 100%;
-                background-color: $white;
-              }
+            &:before {
+              content: "";
+              display: inline-block;
+              width: 7px;
+              height: 7px;
+              border-radius: 100%;
+              background-color: $white;
             }
+          }
 
+          &.noImage {
+            .featured-tag {
+              position: relative;
+              display: inline-flex;
+              top: 0;
+              left: auto;
+              margin-bottom: 17px;
+            }
+          }
+
+          .featured-img {
             margin-bottom: 17px;
           }
 
@@ -359,6 +386,7 @@
 
             .post-item-topic {
               line-height: 1.2142857142857142;
+              line-height: 1.4;
               margin-bottom: 15px;
             }
 
@@ -465,5 +493,11 @@
 
   .dropdownopen .filter_dropdown {
     display: block;
+  }
+
+  &.no_bannercontent {
+    .u4m-resources-listing {
+      display: none;
+    }
   }
 }

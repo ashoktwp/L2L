@@ -8,6 +8,10 @@ section.u4m-cta-row-1 {
       overflow: hidden;
       position: relative;
 
+      .bg_overlay.bg_color {
+        border-radius: 40px;
+      }
+
       &.bg_image {
         .bg_overlay.bg_image {
           @include tablet {

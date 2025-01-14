@@ -1,28 +1,37 @@
 {% set moduleName = 'u4m-logo-trustmarks' %}
 {% include "../partials/u4-module-includes.html" %}
 
+
+
 <div class="page-center  {{ module.module_settings.theme }}">
   <div class="intro_wrapp">
     {{macros.introGroup(module.intro_content)}}
 
   </div>
-  <div id="gallery" class="btm MainsliderCnntt">
-    {% for item in module.items_group %}
-    <div  class="items {{ module.module_settings.logo_theme }}">
-      <div  class="img">
-        {% if item.image_field.src %}
-        {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
-        {% if item.image_field.size_type == 'auto' %}
-        {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-        {% elif item.image_field.size_type == 'auto_custom_max' %}
-        {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-        {% endif %}
-        {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
-        <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
-        {% endif %}
+  <div id="gallery" class="btm MainsliderCnntt splide">
+
+    <div class="splide__track" id="splide-track">
+      <div class="splide__list" >
+        {% for item in module.items_group %}
+        <div  class="items {{ module.module_settings.logo_theme }} splide__slide">
+          <div  class="img">
+            {% if item.image_field.src %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+            {% if item.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+            <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
       </div>
     </div>
-    {% endfor %}
+
+
   </div>
 </div>
 </section>

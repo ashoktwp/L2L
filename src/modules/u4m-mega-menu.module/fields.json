@@ -43,6 +43,16 @@
       "no_follow" : false
     }
   }, {
+    "id" : "76b1da8e-3c02-86c4-cf46-9a8866c78737",
+    "name" : "enable_single_column_position",
+    "display_width" : null,
+    "label" : "Enable Single Column Position",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
     "id" : "322f84e2-78d1-ae4a-8d63-aa1a96cb68e2",
     "name" : "mega_menu",
     "display_width" : null,
@@ -236,6 +246,18 @@
             "loading" : "lazy"
           }
         }, {
+          "id" : "fafdd4df-ec5c-a3cb-4af0-4a43a1e5743c",
+          "name" : "title",
+          "display_width" : null,
+          "label" : "Title",
+          "required" : false,
+          "locked" : false,
+          "validation_regex" : "",
+          "allow_new_line" : false,
+          "show_emoji_picker" : false,
+          "type" : "text",
+          "default" : "Latest Product Updates"
+        }, {
           "id" : "8da4755c-72f2-010b-002b-b46da55ad990",
           "name" : "content",
           "display_width" : null,
@@ -243,7 +265,26 @@
           "required" : false,
           "locked" : false,
           "type" : "richtext",
-          "default" : "<p><strong>Latest product updates</strong></p>\n<p>Elit labore laborum veniam labore cillum. Quis enim Lorem nulla excepteur dolor adipisicing eu aliquip commodo incididunt aliqua.</p>"
+          "default" : "<p>Elit labore laborum veniam labore cillum. Quis enim Lorem nulla excepteur dolor adipisicing eu aliquip commodo incididunt aliqua.</p>"
+        }, {
+          "id" : "6e002ea1-e0e3-19b1-d816-cbd44ada8a8b",
+          "name" : "link",
+          "display_width" : null,
+          "label" : "Link",
+          "required" : false,
+          "locked" : false,
+          "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "PHONE_NUMBER" ],
+          "show_advanced_rel_options" : false,
+          "type" : "link",
+          "default" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
         } ],
         "tab" : "CONTENT",
         "expanded" : false,
@@ -256,7 +297,17 @@
             "alt" : null,
             "loading" : "lazy"
           },
-          "content" : "<p><strong>Latest product updates</strong></p>\n<p>Elit labore laborum veniam labore cillum. Quis enim Lorem nulla excepteur dolor adipisicing eu aliquip commodo incididunt aliqua.</p>"
+          "title" : "Latest Product Updates",
+          "content" : "<p>Elit labore laborum veniam labore cillum. Quis enim Lorem nulla excepteur dolor adipisicing eu aliquip commodo incididunt aliqua.</p>",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
         }
       }, {
         "id" : "b3baaba2-2a36-932d-8ae6-06a8730b513e",

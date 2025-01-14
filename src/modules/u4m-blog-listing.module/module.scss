@@ -251,6 +251,25 @@ section.u4m-blog-listing {
   }
   .listing-wrap {
     @include CardItems;
+
+    .overlayLink {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9;
+    }
+
+    .post-content {
+      position: static !important;
+
+      .post-item-topic a {
+        position: relative;
+        z-index: 10;
+      }
+    }
+
     .blog-pagination {
       @include blogPagination;
     }

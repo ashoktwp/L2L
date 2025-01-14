@@ -108,6 +108,18 @@
       color: $headingColor;
     }
   }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+  @include tabletvert {
+    .hs-embed-content-wrapper > div[style] {
+      min-height: 520px;
+    }
+  }
 }
 blockquote {
   line-height: 33px;
@@ -180,5 +192,23 @@ table {
   }
   .tooltip {
     display: none;
+  }
+}
+
+.u4m-rich-text {
+  &.reverse-text {
+    * {
+      color: $white;
+    }
+    table th,
+    table td,
+    table,
+    hr {
+      border-color: $white;
+    }
+
+    blockquote {
+      border-left-color: $white;
+    }
   }
 }

@@ -51,7 +51,11 @@
   @include button;
   border: none;
   padding: 15rem 30rem;
-  background: linear-gradient(308.96deg, $Prismic_mint -8.65%, $Pale_Yellow_Green 81.32%);
+  background: linear-gradient(
+    308.96deg,
+    $Prismic_mint -8.65%,
+    $Pale_Yellow_Green 81.32%
+  );
   color: $baseColor;
 
   &:hover {
@@ -64,6 +68,40 @@
     color: $baseColor;
   }
 }
+
+//
+
+@mixin buttonTwoRevrse {
+  @include button;
+  border: none;
+  padding: 15rem 30rem;
+  background: linear-gradient(
+    308.96deg,
+    $Prismic_mint -8.65%,
+    $Pale_Yellow_Green 81.32%
+  );
+  background: linear-gradient(260.94deg, #d0f76e 3.36%, #b8ffd2 98.11%);
+  background: linear-gradient(
+    260.94deg,
+    $Pale_Yellow_Green 3.36%,
+    $Prismic_mint 98.11%
+  );
+  color: $baseColor;
+
+  &:hover {
+    background: linear-gradient(308.96deg, $Menthol 0%, $Menthol 100%);
+    color: $baseColor;
+  }
+
+  &:active {
+    background: $Lime_Green;
+    color: $baseColor;
+  }
+}
+
+/* Rectangle */
+
+//
 
 @mixin buttonThree {
   @include button;
@@ -250,14 +288,13 @@
     }
   }
 
-  >li:only-child {
+  > li:only-child {
     display: none;
   }
 }
 
 // Arrow navigation for slick.js
 @mixin slickArrows {
-
   &.slick-next,
   &.slick-prev {
     &:before {

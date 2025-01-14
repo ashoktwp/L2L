@@ -45,6 +45,10 @@ header {
               margin: 0;
               line-height: normal;
 
+              &.no-megamenu{
+                position: relative;
+              }
+
               &:hover .child_wrapper {
                 display: block;
                 visibility: visible;
@@ -262,6 +266,21 @@ header {
                   }
                 }
 
+                .card_title {
+                  @include size14;
+                  color: $white;
+                  letter-spacing: 0;
+                  line-height: 1.7;
+                }
+
+                .child_card {
+                  &:hover {
+                    .card_title {
+                      color: $Menthol;
+                    }
+                  }
+                }
+
                 .hdcard_cnt p {
                   @include size14;
                   color: $white;
@@ -269,11 +288,8 @@ header {
                   line-height: 1.7;
                   margin: 0;
                   margin-top: 3px;
-
-                  span {
-                    color: $Pale_Mint;
-                    opacity: 0.79;
-                  }
+                  color: $Pale_Mint;
+                  opacity: 0.79;
                 }
               }
 
@@ -342,7 +358,8 @@ header {
 
           .hd_btn {
             .hs-button {
-              @include buttonTwo;
+              // @include buttonTwo;
+              @include buttonTwoRevrse;
               font-family: $secondaryFont;
 
               @include tablet {

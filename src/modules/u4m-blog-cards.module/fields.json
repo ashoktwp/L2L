@@ -541,7 +541,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "gradient"
+    "default" : "theme"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -563,7 +563,7 @@
     "button_style" : "arrow-link",
     "button_theme" : "theme1",
     "enable_arrow" : true,
-    "card_border_style" : "gradient"
+    "card_border_style" : "theme"
   }
 }, {
   "id" : "module_overrides",

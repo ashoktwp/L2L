@@ -12,6 +12,9 @@ section.u4m-quote-cards-slider {
   .page-center {
     border-radius: 13px;
     padding: 54px 0;
+    .intro_wrapp {
+      padding: 0 10px;
+    }
   }
   .quote-cards-inner {
     position: relative;
@@ -65,11 +68,8 @@ section.u4m-quote-cards-slider {
       }
       .slide-content {
         margin-bottom: 24px;
-        background: linear-gradient(
-          to bottom,
-          $Forest_Green 0%,
-          rgba($Forest_Green, 0.66) 100%
-        );
+        font-size: 18rem;
+        background: linear-gradient(to bottom, $Forest_Green 0%, rgba($Forest_Green, 0.66) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -166,5 +166,66 @@ section.u4m-quote-cards-slider {
     @include tabletvert {
       right: -5px;
     }
+  }
+
+  //
+
+  .quote-cards-slider {
+    .slick-track:after,
+    .slick-track:before {
+      display: none;
+    }
+
+    .slick-track {
+      display: flex;
+
+      .quote-cards-slide {
+        height: auto;
+        display: flex;
+      }
+
+      .quote-cards-slide-inner {
+        width: 100%;
+      }
+    }
+  }
+
+  .quote-cards-inner {
+    .slick-arrow {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  //
+
+  .quote-cards-slider.lessSlides {
+    padding: 0 204px;
+
+    @media (max-width: 1200px) {
+      padding: 0 204px;
+    }
+    @media (max-width: 991px) {
+      padding: 0 50px;
+    }
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
+
+  .quote-cards-slider.slick-slider .quote-cards-slide.slick-slide {
+    transition: 0.2s ease 0.2s;
+  }
+
+  .quote-cards-slider.slick-slider .quote-cards-slide:not(.slick-current.slick-active) {
+    opacity: 0.45;
+  }
+
+  .quote-cards-slider.slick-slider .quote-cards-slide:not(.slick-current.slick-active) .quote-cards-slide-inner > div {
+    opacity: 0;
+  }
+
+  .quote-cards-slider.slick-slider .quote-cards-slide .quote-cards-slide-inner > div {
+    transition: 0.5s ease 0.1s;
   }
 }

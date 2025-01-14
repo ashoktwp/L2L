@@ -143,6 +143,7 @@
 					{% for content in contents %}
 					<div class='post-item'>
 					<div class='post-item-inner'>
+					<a href="{{ content.absolute_url }}" class="overlayLink"></a>
 						{% if module.blog_listing.featured_image %}
 						{% if content.post_list_summary_featured_image %}
 						<div class="featured-img">

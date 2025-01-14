@@ -113,7 +113,7 @@
       "access" : null
     },
     "type" : "richtext",
-    "default" : "<p>Nisi officia adipisicing non do sunt irure pariatur non exercitation aliqua eiusmod adipisicing quis.</p>"
+    "default" : "<p>We won't spam you, we promise. Only sporadic informative stuff about manufacturing, that's all.</p>"
   }, {
     "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
     "name" : "include_button",
@@ -332,7 +332,7 @@
     "heading_size" : "h2",
     "heading" : "Subscribe to Our Blog",
     "include_content" : true,
-    "content" : "<p>Nisi officia adipisicing non do sunt irure pariatur non exercitation aliqua eiusmod adipisicing quis.</p>",
+    "content" : "<p>We won't spam you, we promise. Only sporadic informative stuff about manufacturing, that's all.</p>",
     "include_button" : false,
     "button_group" : [ {
       "button_type" : "std",

@@ -8,6 +8,11 @@
   .intro_desc {
     opacity: 0.66;
   }
+  .intro_wrapp {
+    .intro_btn_wrap {
+      gap: 20px 36px;
+    }
+  }
 
   .card_wrap {
     .arrow-link {
@@ -55,6 +60,34 @@
           width: 100%;
         }
 
+        &.cardinRow_two {
+          width: calc(50% - 20px);
+
+          @include tablet {
+            width: calc(50% - 15px);
+          }
+
+          @include tabletvert {
+            width: 100%;
+          }
+        }
+
+        &.cardinRow_four {
+          width: calc(25% - 25px);
+
+          @include midlaptop {
+            width: calc(33.3% - 20px);
+          }
+
+          @include tablet {
+            width: calc(50% - 15px);
+          }
+
+          @include tabletvert {
+            width: 100%;
+          }
+        }
+
         .item_inr {
           background-image: $gradient6;
           padding: 30px 36px;
@@ -75,7 +108,7 @@
 
           .item_top_flex {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             gap: 18px;
             padding-bottom: 24px;
             border-bottom: 1px solid $Menthol;
@@ -100,6 +133,7 @@
               background: rgba($Nori_Green, 0.34);
               border: 1px solid $Dark_Green;
               box-shadow: 0 3px 5px 0 rgba($black, 0.5);
+              flex-shrink: 0;
 
               &.type1 {
                 background-image: $iconbg1;

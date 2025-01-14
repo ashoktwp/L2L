@@ -24,7 +24,11 @@ html {
   font-size: 1px;
 }
 
-.u4m-slider-tabs-left {
+.u4m-slider-tabs-two-wrap {
+  .section_relative {
+    position: relative;
+  }
+
   &.reverse-text {
     .ctvb-toprow {
       ul {
@@ -99,9 +103,9 @@ html {
       .arrow-section {
         .tab-prev-arrow {
           position: absolute;
-          top: 36%;
+          top: 150px;
           z-index: 9;
-          transform: translateY(-50%);
+          transform: none;
           left: -10px;
           cursor: pointer;
 
@@ -123,13 +127,17 @@ html {
               }
             }
           }
+
+          @include phone {
+            left: -16px;
+          }
         }
 
         .tab-next-arrow {
           position: absolute;
-          top: 36%;
+          top: 150px;
           z-index: 9;
-          transform: translateY(-50%);
+          transform: none;
           left: -10px;
           cursor: pointer;
           left: auto;
@@ -152,6 +160,10 @@ html {
                 fill: $white;
               }
             }
+          }
+
+          @include phone {
+            right: -9px;
           }
         }
       }
@@ -438,6 +450,10 @@ html {
           color: $baseColor;
           text-transform: uppercase;
         }
+        @include phone {
+          width: 50%;
+          text-align: center;
+        }
       }
 
       li.active {
@@ -627,6 +643,7 @@ html {
       min-width: auto;
       display: block;
       max-width: 100%;
+      margin-top: 26px;
     }
   }
 
@@ -660,6 +677,10 @@ html {
     margin-top: 30px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include phone {
+      margin-top: 20px;
+    }
 
     .saprator {
       color: $L2L_green;
@@ -824,21 +845,7 @@ html {
     font-size: 1px;
   }
 
-  .u4m-slider-tabs-left {
-    .ctvb-section {
-      .sec-inner {
-        .arrow-section {
-          .tab-prev-arrow {
-            top: 50%;
-          }
-
-          .tab-next-arrow {
-            top: 50%;
-          }
-        }
-      }
-    }
-
+  .u4m-slider-tabs-two-wrap {
     .ctvb-tabcol.slick-current {
       max-width: 295px;
       .ctvb-tabimage {
@@ -877,7 +884,7 @@ html {
 }
 
 @include navbreakMin {
-  .u4m-slider-tabs-left {
+  .u4m-slider-tabs-two-wrap {
     .ctvb-tabcol.slick-current {
       .ctvb-tabtn {
         padding-top: 10px;
@@ -887,7 +894,7 @@ html {
 }
 
 @include midlaptop {
-  .u4m-slider-tabs-left {
+  .u4m-slider-tabs-two-wrap {
     .ctvb-toprow {
       ul {
         gap: 20px;

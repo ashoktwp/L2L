@@ -1,0 +1,943 @@
+@import "../../css/_module-imports";
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html {
+  font-size: 1px;
+}
+
+.u4m-slider-tabs-two-wrap {
+  .section_relative {
+    position: relative;
+  }
+
+  &.reverse-text {
+    .ctvb-toprow {
+      ul {
+        li {
+          a {
+            color: $White;
+
+            &:before {
+              background-color: $White;
+            }
+          }
+        }
+      }
+    }
+
+    .ctvb-tabname {
+      .saprator {
+        color: $White;
+      }
+    }
+
+    .splide__list {
+      display: flex;
+      align-items: center;
+    }
+
+    .splide__track {
+      overflow: visible;
+    }
+
+    .ctvb-section {
+      .ctvb-tabcol {
+        .ctvb-tabcontent {
+          .ctvb-tabtxt {
+            p {
+              sup {
+                color: $White;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tab-prev-arrow *,
+  .tab-next-arrow * {
+    pointer-events: none;
+  }
+
+  .progress-bar {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    opacity: 0;
+  }
+
+  .progress-svg {
+    transform: rotate(-90deg);
+    width: 40px;
+    height: 40px;
+    overflow: visible;
+  }
+
+  .circle-base {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 2;
+  }
+
+  .circle-go {
+    fill: none;
+    stroke: #4caf50;
+    stroke-width: 2;
+    stroke-dasharray: 106.76;
+    stroke-dashoffset: 106.76;
+  }
+
+  .ctvb-section {
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+
+    .sec-inner {
+      position: relative;
+
+      .arrow-section {
+        .tab-prev-arrow {
+          position: absolute;
+          top: 150px;
+          z-index: 9;
+          transform: none;
+          left: -10px;
+          cursor: pointer;
+
+          .tab-arrow {
+            width: 35px;
+            border-radius: 50px;
+            background: #0e2514;
+            height: 35px;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              width: 18px;
+
+              path {
+                fill: $white;
+              }
+            }
+          }
+
+          @include phone {
+            left: -16px;
+          }
+        }
+
+        .tab-next-arrow {
+          position: absolute;
+          top: 150px;
+          z-index: 9;
+          transform: none;
+          left: -10px;
+          cursor: pointer;
+          left: auto;
+          right: 0;
+
+          .tab-arrow {
+            width: 35px;
+            border-radius: 50px;
+            background: #0e2514;
+            height: 35px;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              width: 18px;
+
+              path {
+                fill: $white;
+              }
+            }
+          }
+
+          @include phone {
+            right: -9px;
+          }
+        }
+      }
+    }
+
+    //==================
+
+    div#expanding-slider-track {
+      overflow: visible;
+    }
+    //==================
+
+    .ctvb-tabcol {
+      @include tabletvertmin {
+        min-width: 230px;
+      }
+
+      .ctvb-tabcontent {
+        .ctvb-tabname {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 27px;
+        }
+
+        .ctvb-tabcompany {
+          font-size: 14px;
+          line-height: 27px;
+        }
+
+        .ctvb-tabtxt {
+          p {
+            sup {
+              font-size: 32px;
+              top: -5px;
+
+              @include tabletvert {
+                top: -3px;
+              }
+            }
+          }
+        }
+      }
+
+      &:not(.slick-now) {
+        .ctvb-playbtn {
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  .ctvb-tabcol {
+    width: 230px;
+    max-width: 100%;
+    transition: none;
+    transition: 0.4s ease;
+    @include tabletvertmin {
+      padding: 0 15px;
+      position: relative;
+      // transition: 0.3s all;
+      // transition-delay: 0.6s;
+    }
+
+    @include tabletvert {
+      padding: 0 15px;
+    }
+
+    &.slick-now {
+      width: 582px;
+    }
+
+    &:not(.slick-now) {
+      .ctvb-tabottom {
+        opacity: 1;
+      }
+
+      .ctvb-tabplaceholder {
+        opacity: 1;
+
+        &:before {
+          opacity: 1;
+        }
+      }
+
+      span.ctvb-playbtn {
+        opacity: 1;
+      }
+
+      .ctvb-vdo {
+        z-index: -2;
+        opacity: 0;
+      }
+    }
+    &:hover {
+      .ctvb-tabimage {
+        opacity: 1;
+      }
+    }
+    @include tabletvertmin {
+      &:hover {
+        padding: 0 15px;
+
+        .ctvb-tabplaceholder {
+          transform: scale(1.1667, 1);
+        }
+      }
+    }
+  }
+
+  .ctvb-tabs {
+    ul {
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 36px;
+
+      li.slick-now {
+        a {
+          opacity: 1;
+          font-weight: 700;
+
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+
+      li {
+        a {
+          letter-spacing: 0.25px;
+
+          &:before {
+            opacity: 0;
+            content: "";
+            position: absolute;
+            top: auto;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            background-color: $L2L_green;
+          }
+        }
+      }
+    }
+  }
+
+  .hs-inline-edit {
+    .element_fade-in {
+      opacity: 1;
+    }
+  }
+  .ctvb-tabcol.slick-now {
+    @include tabletvertmin {
+      // max-width: 582px;
+    }
+  }
+
+  .ctvb-tabcol {
+    .ctvb-tabtn {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 0;
+      opacity: 0;
+      visibility: visible;
+      transition: 0.4s ease 0.4s;
+    }
+  }
+
+  .ctvb-tabcol.slick-now {
+    .ctvb-tabimage {
+      opacity: 1;
+    }
+
+    .topCat {
+      display: block;
+    }
+    @include tabletvertmin {
+      &:hover {
+        padding: 0 15px;
+
+        .ctvb-tabplaceholder {
+          transform: unset;
+        }
+      }
+    }
+
+    .ctvb-tabcontent {
+      display: block;
+    }
+
+    .ctvb-tabtn {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-bottom: 0;
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transition: 0.4s ease 1s;
+      a {
+        color: $white;
+        font-size: 14px;
+
+        &:hover {
+          svg.ctvb-tablink-hover {
+            transform: translate(0, 0);
+          }
+
+          svg.ctvb-tablink-normal {
+            transform: translate(30px, -30px);
+          }
+        }
+
+        svg.ctvb-tablink-hover {
+          transform: translate(-30px, 30px);
+        }
+      }
+    }
+
+    span.ctvb-playbtn {
+      background-color: $Medium_Sea_Green;
+      border-color: $Medium_Sea_Green;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $Fern_green;
+      }
+    }
+
+    .ctvb-tabplaceholder {
+      &:before {
+        background: linear-gradient(
+          rgba(0, 0, 0, 0) 0,
+          rgba(0, 0, 0, 0.77) 100%
+        );
+      }
+    }
+
+    span.ctvb-plusicon {
+      background-color: $L2L_green;
+
+      &:before {
+        background-color: $L2L_green;
+      }
+    }
+
+    .ctvb-vdo {
+      width: 100%;
+      background-color: $darkBack;
+    }
+  }
+
+  .ctvb-toprow {
+    padding-bottom: 34px;
+    margin-top: 0;
+    margin-top: 60px;
+    width: 100%;
+    justify-content: space-between;
+    .sslider-nav .slick-track {
+      transform: none !important;
+      width: auto !important;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &:before,
+      &:after {
+        display: none !important;
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 36px;
+      @include tabletvert {
+        column-gap: 0;
+      }
+
+      li {
+        margin: 0;
+        padding-right: 35px;
+        &:last-child {
+          padding-right: 0;
+        }
+        @include tabletvert {
+          padding-right: 15px;
+          flex-grow: 1;
+        }
+
+        a {
+          display: inline-block;
+          padding-bottom: 15px;
+          transition: all 0.3s ease;
+          font-size: 14px;
+          position: relative;
+          color: $baseColor;
+          text-transform: uppercase;
+        }
+        @include phone {
+          width: 50%;
+          text-align: center;
+        }
+      }
+
+      li.active {
+        a {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .ctvb-tabbingrow.slick-nowlast {
+    justify-content: flex-end;
+  }
+
+  .row--justify-flex-end {
+    justify-content: flex-end;
+  }
+
+  .ctvb-btn {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    justify-content: flex-end;
+
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
+      line-height: 20px;
+      font-weight: 700;
+      font-family: $secondaryFont;
+      font-size: 16px;
+
+      span {
+        overflow: hidden;
+        vertical-align: middle;
+        margin-left: 5px;
+        height: 24px;
+        width: 24px;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        display: inline-block;
+        position: relative;
+
+        svg {
+          fill: #f08c1f;
+          width: 24px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 24px;
+          overflow: hidden;
+          transition: 0.3s;
+          -webkit-transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  .ctvb-tabimage {
+    display: flex;
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 324px;
+    opacity: 0.45;
+    transition: all 0.3s linear;
+    @include tabletvert {
+      max-width: 100%;
+    }
+    .topCat {
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.66);
+      padding: 7.5px 12px;
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      color: #fff;
+      line-height: 1.4;
+      text-transform: uppercase;
+      display: none;
+      font-size: 15rem;
+      font-weight: bold;
+    }
+  }
+
+  .ctvb-tabtn {
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
+      line-height: 20px;
+      font-weight: 700;
+      font-family: $secondaryFont;
+      font-size: 16px;
+
+      span {
+        overflow: hidden;
+        vertical-align: middle;
+        margin-left: 5px;
+        height: 24px;
+        width: 24px;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        display: inline-block;
+        position: relative;
+
+        svg {
+          fill: $L2L_green;
+          width: 24px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 24px;
+          overflow: hidden;
+          transition: 0.3s;
+          -webkit-transition: 0.3s;
+        }
+      }
+
+      &:hover {
+        color: $white;
+
+        span {
+          .ctvb-tablink-hover {
+            transform: translate(0, 0);
+            fill: #f08c1f;
+          }
+        }
+      }
+    }
+  }
+
+  .ctvb-tabbingrow {
+    // width: calc(100% + 30px);
+    // margin-left: -15px;
+    // margin-right: -15px;
+    margin-top: 0;
+    // display: flex;
+    overflow: visible;
+    @include tabletvert {
+      margin: 0;
+      width: 100%;
+      width: calc(100% + 20px);
+      margin-left: -10px;
+    }
+    &::-webkit-scrollbar {
+      height: 6px;
+      background-color: $white;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $L2L_green;
+      border-radius: 3px;
+    }
+
+    .slick-list {
+      overflow: visible;
+      width: 100%;
+      @include tabletvert {
+        overflow: hidden;
+      }
+      .slick-track {
+        @include tabletvertmin {
+          // transition: transform .5s linear;
+        }
+      }
+    }
+  }
+
+  .ctvb-tabcontent {
+    display: none;
+    margin-top: 36px;
+    min-width: 540px;
+
+    @include tabletmid {
+      min-width: 320px;
+    }
+
+    @include tabletvert {
+      min-width: auto;
+      display: block;
+      max-width: 100%;
+      margin-top: 26px;
+    }
+  }
+
+  .ctvb-tabtxt {
+    font-family: $secondaryFont;
+    font-size: 30px;
+    line-height: 42px;
+    font-weight: 400;
+
+    p {
+      font-family: $secondaryFont;
+      font-size: 30px;
+      line-height: 42px;
+      font-weight: 400;
+    }
+  }
+
+  .ctvb-tabcompany {
+    font-family: $secondaryFont;
+    font-size: 15px;
+    line-height: 27px;
+    letter-spacing: 0.25px;
+    font-weight: 400;
+  }
+
+  .ctvb-tabname {
+    font-family: $secondaryFont;
+    font-size: 15px;
+    line-height: 27px;
+    letter-spacing: 0.25px;
+    margin-top: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include phone {
+      margin-top: 20px;
+    }
+
+    .saprator {
+      color: $L2L_green;
+    }
+  }
+
+  .ctvb-tabottom {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: space-between;
+    overflow: hidden;
+    .tab_bottom_inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      @include navbreak {
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+    }
+
+    .ctvb-tabtn {
+      a {
+        color: $white;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  span.ctvb-playbtn {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid $white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+    svg {
+      margin-left: 4px;
+      width: 18px;
+      fill: $white;
+    }
+  }
+
+  span.ctvb-plusicon {
+    flex-wrap: wrap;
+    top: 50%;
+    left: 50%;
+    background-color: $white;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    width: 6px;
+    height: 40px;
+
+    &:before {
+      flex-wrap: wrap;
+      top: 50%;
+      left: 50%;
+      background-color: $white;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      display: flex;
+      content: "";
+      align-items: center;
+      justify-content: center;
+      height: 6px;
+      width: 40px;
+    }
+  }
+
+  .ctvb-tabplaceholder {
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      border-radius: inherit;
+      -o-object-position: center center;
+      object-position: center center;
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%;
+      height: 100% !important;
+      image-rendering: auto;
+    }
+
+    &:before {
+      transition: all 0.3s linear;
+      -webkit-transition: all 0.3s linear;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.66) 0%,
+        rgba(0, 0, 0, 0.79) 100%
+      );
+    }
+  }
+
+  .ctvb-vdo {
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    iframe {
+      border-radius: inherit;
+      -o-object-position: center center;
+      object-position: center center;
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .ctvb-tablogo {
+    img {
+      max-width: 140px !important;
+    }
+  }
+
+  .ft-section {
+    .sec-top {
+      h2 {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include phone {
+  html {
+    font-size: 1px;
+  }
+
+  .u4m-slider-tabs-two-wrap {
+    .ctvb-tabcol.slick-now {
+      max-width: 295px;
+      .ctvb-tabimage {
+        opacity: 1;
+      }
+      @include tabletvert {
+        max-width: 100%;
+      }
+
+      .ctvb-tabtn {
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .ctvb-tabtxt {
+      font-size: 20px;
+      line-height: 32px;
+
+      p {
+        font-size: 20px;
+        line-height: 32px;
+        sup {
+          font-size: inherit !important;
+        }
+      }
+    }
+  }
+}
+
+@include large {
+  html {
+    font-size: 1px;
+  }
+}
+
+@include navbreakMin {
+  .u4m-slider-tabs-two-wrap {
+    .ctvb-tabcol.slick-now {
+      .ctvb-tabtn {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+@include midlaptop {
+  .u4m-slider-tabs-two-wrap {
+    .ctvb-toprow {
+      ul {
+        gap: 20px 0;
+        flex-wrap: wrap;
+
+        li {
+          a {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

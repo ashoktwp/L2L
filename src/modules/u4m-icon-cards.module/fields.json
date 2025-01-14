@@ -796,6 +796,35 @@
     } ]
   } ]
 }, {
+  "id" : "8437904d-0b52-ad6b-1e2e-d5780352fb2d",
+  "name" : "module_settings",
+  "display_width" : null,
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "1e54d92a-268c-2c95-7cfe-0430cc976c6b",
+    "name" : "cards_in_row",
+    "display_width" : null,
+    "label" : "Cards In Row",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "two", "Two" ], [ "three", "Three" ], [ "four", "Four" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "four"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "cards_in_row" : "four"
+  }
+}, {
   "id" : "module_overrides",
   "name" : "module_overrides",
   "display_width" : null,

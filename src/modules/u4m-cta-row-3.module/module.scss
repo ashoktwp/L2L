@@ -11,6 +11,9 @@ section.u4m-cta-row-3 {
       @include tablet {
         padding: 65px 30px 77px;
       }
+      @include phone {
+        padding: 65px 20px 77px;
+      }
       &.bg_image {
         .bg_overlay.bg_image {
           width: 832px;
@@ -34,16 +37,16 @@ section.u4m-cta-row-3 {
           margin-bottom: 33rem;
           .intro__inner {
             .intro_title {
-              color: $white;
+              // color: $white;
             }
             .intro_desc {
-              color: $Frostee;
+              // color: $Frostee;
             }
             .intro_btn_wrap {
               justify-content: flex-start;
               .arrow-link {
                 &:not(:hover) {
-                  color: $white;
+                  // color: $white; 
                 }
               }
             }
@@ -62,6 +65,15 @@ section.u4m-cta-row-3 {
                 padding: 22px 144px 22px 30px !important;
                 @include tabletvert {
                   padding: 22px 159px 22px 16px !important;
+                }
+                @include phone {
+                  padding: 22px 16px !important;
+                }
+
+                &::placeholder {
+                  @include phone {
+                    font-size: 12px;
+                  }
                 }
               }
               ul.inputs-list {
@@ -123,8 +135,40 @@ section.u4m-cta-row-3 {
                 }
               }
             }
+            .hs_submit.hs-submit {
+              @include phone {
+                position: static;
+              }
+            }
             .hs_error_rollup {
               display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.rverse-text {
+    .page-center {
+      .cta-content-row {
+        .cta-content-flex {
+          .intro_content {
+            .intro__inner {
+              .intro_title {
+                color: $white;
+              }
+              .intro_desc {
+                color: $Frostee;
+              }
+              .intro_btn_wrap {
+                justify-content: flex-start;
+                .arrow-link {
+                  &:not(:hover) {
+                    color: $white;
+                  }
+                }
+              }
             }
           }
         }

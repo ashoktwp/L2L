@@ -2,7 +2,7 @@
 
 
 
-<div class="u4m-split-form-wrapper splitOuter{{name}} {% if module.form_settings.override_form_style %}form_style_override{% endif %} {% if module.include_form and  module.form_group.select_form.form_id %}formAdded{% endif %}">
+<div class="u4m-split-form-wrapper {% if module.bottom_group.content == "" %}no_bottomSection{% endif %} splitOuter{{name}} {% if module.form_settings.override_form_style %}form_style_override{% endif %} {% if module.include_form and  module.form_group.select_form.form_id %}formAdded{% endif %}">
   <div class="splitform_topwrap">
     {% include "../partials/u4-module-includes.html" %}
     <div class="page-center">
@@ -162,6 +162,7 @@
   </section>
 </div>
 
+{% if module.bottom_group.content %}
 <div class=" splitFormbotom Bnrr dnd_padd bott{{name}}"> 
   <div class="bottom_content_inner">
     <div class="{% if module.module_overrides.container_full_width %}full-width-container{% else %}page-center{% endif %}">
@@ -174,7 +175,7 @@
   </div>
 
 </div>
-
+{% endif %}
 
 </div>
 

@@ -18,7 +18,7 @@ footer.ftr_wrpp {
       width: 100%;
 
       .hs-menu-wrapper {
-        >ul {
+        > ul {
           display: flex;
           flex-wrap: wrap;
           margin: 0;
@@ -29,7 +29,7 @@ footer.ftr_wrpp {
           width: auto;
           row-gap: 50px;
 
-          >li {
+          > li {
             margin: 0;
             float: unset;
             max-width: 20%;
@@ -37,8 +37,7 @@ footer.ftr_wrpp {
             padding: 0 15px;
             letter-spacing: normal;
 
-
-            >a {
+            > a {
               margin: 0;
               padding: 0;
               margin-bottom: 17px;
@@ -305,7 +304,7 @@ footer.ftr_wrpp {
           justify-content: space-between;
           gap: 20px;
           flex-wrap: wrap;
-          align-items: center;
+          align-items: flex-end;
 
           p {
             margin: 0;
@@ -412,12 +411,14 @@ footer.ftr_wrpp {
               max-width: 174px;
               width: 100%;
 
+              .inner_row,
               a {
                 margin: 0;
                 letter-spacing: normal;
                 display: flex;
                 align-items: center;
                 gap: 12px;
+                pointer-events: none;
 
                 p {
                   margin: 0;
@@ -506,7 +507,8 @@ footer.ftr_wrpp {
     .rhtCnt {
       .hs-button {
         margin: 0;
-        @include buttonTwo;
+        // @include buttonTwo;
+        @include buttonTwoRevrse;
         font-family: $secondaryFont;
       }
     }

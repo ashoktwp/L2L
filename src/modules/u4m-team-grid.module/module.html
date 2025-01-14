@@ -2,19 +2,19 @@
 {% include "../partials/u4-module-includes.html" %}
 
 <div class="page-center  {{ module.module_settings.theme }}">
-	<div class="intro_wrapp">
-		{{macros.introGroup(module.intro_content)}}
-	</div>
+  <div class="intro_wrapp">
+    {{macros.introGroup(module.intro_content)}}
+  </div>
 
   <div class="team_grid_row flex_row intro_content">
     {% for item in module.member_group %}
     <div class="team_item {{ module.module_settings.select_number_of_column }} {% if module.module_settings.card_group.dark_theme %} card_reverse_text {% else %} theme_text{% endif %}">
       <div class="team_item_inn  {{ module.module_settings.card_group.cards_background_color }}">
-    
+
 
         <div class="team_content">
           <div class="team_content_inn">
-          {% if item.image_field.src %}
+            {% if item.image_field.src %}
             <div class="team_img">
               <div class="team_img_inn">
                 {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
@@ -22,7 +22,7 @@
               </div>
             </div>
             {% endif %}
-             {% if item.member_position %}
+            {% if item.member_position %}
             <div class="member_position eyebrow_text">
               {{ item.member_position }}
             </div>
@@ -33,7 +33,7 @@
               {{ item.member_name }}
             </h4>
             {% endif %}    
-           
+
             <div class="member_btm">
               {% if item.popup_button_text %}
               <div class="bio_popup_text">
@@ -47,8 +47,8 @@
                     </svg>
                   </span>
                 </a>
-            
-                
+
+
               </div>
               {% endif %}   
             </div>
@@ -62,11 +62,11 @@
     {% endfor %}
 
   </div>
-  
+
 </div>
 
 {% for item in module.member_group %}
-  <div class="team_popup {% if module.module_settings.card.reverse_text %} card_reverse_text {% else %} theme_text {% endif %}" id="data{{loop.index}}">
+<div class="team_popup {% if module.module_settings.card.reverse_text %} card_reverse_text {% else %} theme_text {% endif %}" id="data{{loop.index}}">
   <div class="team_popup_overlay"></div>
   <div class="team_popup_container">
     <div class="team_popup_row {{ module.module_settings.card.select_background_color }}">
@@ -82,14 +82,14 @@
               </div>
             </div>
             {% endif %}
-           
+
           </div>
         </div>
         {% if item.description %}
         <div class="popup_cnt">
-          
+
           <div class="popup_cnt_inn">
-             {% if item.member_name %}
+            {% if item.member_name %}
             <h2 class="member_name">
               {{ item.member_name }}
             </h2>
@@ -100,7 +100,7 @@
             </div>
             {% endif %} 
             <div class="des">
-            {{ item.description }}
+              {{ item.description }}
             </div>
             <div class="member_share">
               <ul>
@@ -136,7 +136,7 @@
                     {% endif %}
                     {% endif %}
                     {% if item2.select_icon_type == "fontawesome" %}
-                      {% icon
+                    {% icon
         name="{{ item2.icon_field.name }}"
         style="{{ item2.icon_field.type }}"
         unicode="{{ item2.icon_field.unicode }}"
@@ -161,33 +161,42 @@
 </section>
 
 
-
+{% require_css %}
+<style>
+  .{{name}} .team_popup .team_popup_overlay{
+    backdrop-filter: none;
+    background: none;
+    opacity: 1;
+    background-image: url('{{ get_asset_url('../../templates/images/team_modalBG.png') }}');
+      }
+</style>
+{% end_require_css %}
 
 {% require_js %}
 <script>
 
   $('.{{name}} .popup_close').click(function(){
     $('.team_popup').removeClass('team_open')
-    $('body').removeClass('overflow-hidden');
+  $('body').removeClass('overflow-hidden');
   });
 
   $('.{{name}} .team_popup_overlay').click(function(){
     $('.team_popup').removeClass('team_open')
-    $('body').removeClass('overflow-hidden');
+  $('body').removeClass('overflow-hidden');
   });
 
   $(document).ready(function() {
     $('.{{name}} a.bio_popup').on('click', function(event) {
       event.preventDefault();
-      var index = $(this).attr('data_index');
-      $('.{{name}} .team_popup').each(function(){
-          var popup = $(this).attr('id');
-          if (index === popup){
-          $(this).addClass('team_open');
-          $('body').addClass('overflow-hidden');
-        }
-      })
-    });
+    var index = $(this).attr('data_index');
+    $('.{{name}} .team_popup').each(function(){
+      var popup = $(this).attr('id');
+    if (index === popup){
+      $(this).addClass('team_open');
+      $('body').addClass('overflow-hidden');
+    }
+  })
+  });
   });
 
 </script>

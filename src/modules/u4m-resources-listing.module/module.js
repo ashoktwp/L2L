@@ -1,3 +1,13 @@
+window.addEventListener("DOMContentLoaded", function () {
+  let getLIstingWrap = document.querySelector(
+    ".resourcesListingWrap .main-listing"
+  );
+
+  setTimeout(function () {
+    getLIstingWrap.classList.add("loaddedList");
+  });
+});
+
 var filterlabeln = document.querySelectorAll(".filter_label");
 
 filterlabeln.forEach((label) => {
@@ -334,3 +344,60 @@ document.addEventListener("click", (e) => {
 });
 
 setHTML(filteredItems);
+
+//
+
+// Function to get text after /resources/ from the URL
+// function getTextAfterResources(url) {
+//   const path = new URL(url).pathname;
+//   const parts = path.split('/resources/');
+//   return parts.length > 1 ? parts[1] : null;
+// }
+
+// Function to match select option and trigger change event
+// function matchAndLoadData() {
+//   const url = window.location.href;
+//   const resourceText = getTextAfterResources(url);
+
+//   console.log(resourceText)
+
+//   MainLogic( typeArray?.length > 0 || getValue?.length > 0 ? false : true, inputValue, typeArray,getValue);
+
+//   if (resourceText) {
+//     const selectElement = document.querySelector('.resourceSelect');
+//     const options = selectElement.options;
+
+//     for (let i = 0; i < options.length; i++) {
+//       if (options[i].value === resourceText) {
+//         selectElement.value = resourceText;
+
+//         // Trigger change event to load data
+//         const event = new Event('change');
+//         selectElement.dispatchEvent(event);
+//         console.log(selectElement.value,'selectElement.value')
+//         break;
+//         console.log("break")
+//       }
+//     }
+//   }
+// }
+
+// Call the function on page load
+window.addEventListener("DOMContentLoaded", function () {
+  const url = window.location.href;
+
+  const path = new URL(url).pathname;
+  const parts = path.split("/resources");
+
+  var topicText = parts.length > 1 ? parts[1].replace("/", "") : null;
+
+  if (topicText != "") {
+    TopicSelect.value = topicText;
+    TopicSelect.dispatchEvent(new Event("change"));
+  }
+  if (topicText == "") {
+    TopicSelect.value = "Filter by Type";
+    TopicSelect.dispatchEvent(new Event("change"));
+    TopicSelect.selectedIndex = 0;
+  }
+});

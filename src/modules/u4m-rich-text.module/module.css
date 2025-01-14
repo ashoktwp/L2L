@@ -1,3 +1,4 @@
+/* Rectangle */
 html {
   font-size: 1px;
 }
@@ -16,6 +17,11 @@ html {
   }
 }
 
+.u4m-rich-text .inner_wrpp p,
+.u4m-rich-text .inner_wrpp ul,
+.u4m-rich-text .inner_wrpp ol {
+  opacity: 0.79;
+}
 .u4m-rich-text code.hljs {
   background-color: #0e2514;
 }
@@ -44,7 +50,7 @@ html {
   text-decoration: none;
 }
 .u4m-rich-text hr {
-  border: 2px solid #409650;
+  border: 1px solid #409650;
   margin-top: 45px;
   margin-bottom: 30px;
 }
@@ -112,6 +118,15 @@ html {
   font-size: 14rem;
   line-height: 1.42857143;
   color: #0e2514;
+}
+.u4m-rich-text iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+.u4m-rich-text .hs-embed-content-wrapper {
+  border: 1px solid #fff;
 }
 
 blockquote {

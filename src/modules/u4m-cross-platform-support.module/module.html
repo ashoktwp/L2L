@@ -1,49 +1,54 @@
 <div class="cross-platform-support">
-	<div class="inner_wrpp">
-		<p class="left">
-			{{ module.title }}
-		</p>
-		<ul>
-			{% for item in module.items_group %}
-			<li>
-				{% set href = item.link_field.url.href %}
-				{% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
-				{% set href = "mailto:" + href %}
-				{% endif %}
-				<a
-					 {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
-					 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
-					 {% else %}
-					 href="{{ href|escape_url }}"
-					 {% endif %}
-					 {% if item.link_field.open_in_new_tab %}
-					 target="_blank"
-					 {% endif %}
-					 {% if item.link_field.rel %}
-					 rel="{{ item.link_field.rel|escape_attr }}"
-					 {% endif %}
-					 >
-					<div class="img">
-						{% if item.image_field.src %}
-						{% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
-						{% if item.image_field.size_type == 'auto' %}
-						{% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-						{% elif item.image_field.size_type == 'auto_custom_max' %}
-						{% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-						{% endif %}
-						{% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
-						<img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
-						{% endif %}
-					</div>
-					<div class="cnt"> 
-						<p>
-							{{ item.title }}
-						</p>
-					</div>
-				</a>
-			</li>
-			{% endfor %}
-		</ul>
-	</div>
+  <div class="inner_wrpp">
+    <p class="left">
+      {{ module.title }}
+    </p>
+    <ul>
+      {% for item in module.items_group %}
+      <li>
+        {# {% set href = item.link_field.url.href %}
+        {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a
+           {% if item.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+           href="{{ href }}" 
+           {% else %}
+           href="{{ href|escape_url }}"
+           {% endif %}
+           {% if item.link_field.open_in_new_tab %}
+           target="_blank"
+           {% endif %}
+           {% if item.link_field.rel %}
+           rel="{{ item.link_field.rel|escape_attr }}"
+           {% endif %}
+           >#}
+        <div class="inner_row">
+          <div class="img">
+            {% if item.image_field.src %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+            {% if item.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+            <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+          </div>
+          <div class="cnt"> 
+            <p>
+              {{ item.title }}
+            </p>
+          </div>
+        </div>
+
+
+        {#	</a>
+          #}	
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
