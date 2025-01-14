@@ -115,9 +115,8 @@
     border: none;
     display: block;
   }
-
-  .hs-embed-content-wrapper > div[style] {
-    @include tabletvert {
+  @include tabletvert {
+    .hs-embed-content-wrapper > div[style] {
       min-height: 520px;
     }
   }
