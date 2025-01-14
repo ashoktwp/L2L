@@ -1,7 +1,6 @@
 {
   "global" : false,
   "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
-  "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
   "host_template_types" : [ "PAGE" ],
   "module_id" : 184028710247,
   "js_assets" : [ {
@@ -10,5 +9,6 @@
     "name" : "stacktable.min.js"
   } ],
   "label" : "Rich Text",
+  "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
   "is_available_for_new_content" : true
 }

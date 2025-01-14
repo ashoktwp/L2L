@@ -3,6 +3,11 @@
 .u4m-split-form-wrapper {
   background-color: $Off-White;
   padding-bottom: 33px;
+
+  &.no_bottomSection {
+    padding-bottom: 0;
+  }
+
   .u4m-split-landing-page {
     padding-top: 20px;
     padding-bottom: 102px;

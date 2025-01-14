@@ -98,6 +98,12 @@
     position: relative;
     padding-bottom: 173px;
     padding-top: 135px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 642px;
+    padding-bottom: 187px;
+    padding-top: 187px;
+    position: relative;
     .tab-btn {
       @include buttonBase;
       font-weight: 600;

@@ -1,14 +1,11 @@
-<div class="resourcesListingWrap">
+<div class="resourcesListingWrap   {% if not module.intro_content.include_eyebrow_text and not  module.intro_content.include_button and not  module.intro_content.include_content and not  module.intro_content.include_heading  %}no_bannercontent{% endif %}">
   {% set moduleName = 'u4m-resources-listing' %}
   {% include "../partials/u4-module-includes.html" %}
 
-  {% set table =  module.filtered_content.select_hubdb_table  %}
-  {% set query = '-hs_created_at' %}
-  {% set resouces = hubdb_table_rows(table,query) %}
 
-  {% set ft_query = '-hs_created_at&limit=10000' %}
-  {% set ft_resouces = hubdb_table_rows(table,ft_query) %}
 
+
+  {% if module.intro_content.include_eyebrow_text or module.intro_content.include_button or module.intro_content.include_content or module.intro_content.include_heading  %}
   <div class='blog-banner'>
     <div class='page-center'>
       <div class='page-title'>
@@ -59,7 +56,20 @@
       {% endif %}
     </div>
   </div>
+  {% endif %}
+
   </section>
+
+
+{% set table =  module.filtered_content.select_hubdb_table  %}
+{% set query = '-hs_created_at' %}
+{% set resouces = hubdb_table_rows(table,query) %}
+
+{% set ft_query = '-hs_created_at&limit=10000' %}
+{% set ft_resouces = hubdb_table_rows(table,ft_query) %}
+
+
+
 <div class="main-listing {{ module.filtered_content.select_bg_color }}">
   <div class='site-search-wrap'>
     <div class='page-center'>
@@ -115,14 +125,14 @@
             </div>
 
             {% else%}
-              {% if row.type.name %}
-                <div class='featured-tag tag_{{ row.type.name|lower|replace(' ','-') }}'>{{ row.type.name }}</div>
-                {% endif %}
+            {% if row.type.name %}
+            <div class='featured-tag tag_{{ row.type.name|lower|replace(' ','-') }}'>{{ row.type.name }}</div>
+            {% endif %}
             {% endif %}
 
             <div class="post-content">
-              <div class='post-item-topic'>{{ row.type.name }}
-                {% for tag in row.topics_tags %}{% if loop.index == 1%}{{ tag.name|lower|replace(' ','-') }}{% endif %}{% endfor %}
+              <div class='post-item-topic'>
+                {% for tag in row.topics_tags %}{{ tag.name|lower|replace(' ','-')|replace('-',' ') }}{% if not loop.last%} • {% endif %}{% endfor %}
               </div>
               <h4 class="restitle">
                 <a href="{{ row.page_url }}">{{ row.name }}</a>
@@ -149,6 +159,7 @@
   </div>
 </div>
 </div>
+
 
 
 

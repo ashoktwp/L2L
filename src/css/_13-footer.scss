@@ -411,12 +411,14 @@ footer.ftr_wrpp {
               max-width: 174px;
               width: 100%;
 
+              .inner_row,
               a {
                 margin: 0;
                 letter-spacing: normal;
                 display: flex;
                 align-items: center;
                 gap: 12px;
+                pointer-events: none;
 
                 p {
                   margin: 0;

@@ -229,7 +229,7 @@
   }
 
   .u4m-slider-tabs-left .slider-tabs-wrapper   .acc-items:not(.media_video) .progress-line {
-    transition-duration: 3000ms;
+    transition-duration: 4000ms;
   }
 
   .u4m-slider-tabs-left .slider-tabs-wrapper .acc-open .progress-line {
@@ -266,6 +266,8 @@
     fade: true,
     dots: false,
     autoplay : isPlaying,
+    speed : 2000,
+    autoplaySpeed: 4000,
     pauseOnHover: false,
     asNavFor: '.{{name}} .slider_navbar',
     });
@@ -279,6 +281,7 @@
     verticalSwiping:true,
     infinite: false,
     pauseOnHover: false,
+    speed : 2000,
     arrows: false,
     responsive: [
     {

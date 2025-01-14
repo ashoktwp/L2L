@@ -1,24 +1,22 @@
 [ {
   "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
   "name" : "intro_content",
-  "display_width" : null,
   "label" : "Content Group",
   "required" : false,
   "locked" : false,
   "children" : [ {
     "id" : "290c22c1-7b9c-4ce0-6c7a-e8b9135ff1aa",
     "name" : "include_logo",
-    "display_width" : null,
     "label" : "Include Logo",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
+    "display_width" : null,
     "default" : false
   }, {
     "id" : "cb3997b3-3dd3-d2f3-1b1e-ffde45061688",
     "name" : "logo",
-    "display_width" : null,
     "label" : "Logo",
     "required" : false,
     "locked" : false,
@@ -34,6 +32,7 @@
     "resizable" : false,
     "show_loading" : false,
     "type" : "image",
+    "display_width" : null,
     "default" : {
       "size_type" : "auto",
       "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/L2L-1.png",
@@ -47,7 +46,6 @@
   }, {
     "id" : "1d3ae6c9-2062-51bb-0331-a656cee055e4",
     "name" : "logo_link",
-    "display_width" : null,
     "label" : "Logo Link",
     "required" : false,
     "locked" : false,
@@ -62,6 +60,7 @@
     "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
     "show_advanced_rel_options" : false,
     "type" : "link",
+    "display_width" : null,
     "default" : {
       "url" : {
         "content_id" : null,
@@ -74,17 +73,16 @@
   }, {
     "id" : "c5ccdda8-6960-e255-a51f-c61077a633ca",
     "name" : "include_eyebrow_text",
-    "display_width" : null,
     "label" : "Include Eyebrow Text",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
+    "display_width" : null,
     "default" : true
   }, {
     "id" : "5baff6ad-02e1-6b84-3429-260a0ded7ef6",
     "name" : "eyebrow_text",
-    "display_width" : null,
     "label" : "Eyebrow Text",
     "required" : false,
     "locked" : false,
@@ -100,21 +98,21 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
+    "display_width" : null,
     "default" : "CASE STUDY"
   }, {
     "id" : "60c6c44c-5b96-ddb4-2ac1-ced58d8bbbd1",
     "name" : "include_eyebrowtext_icon",
-    "display_width" : null,
     "label" : "Include Eyebrowtext Icon",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
+    "display_width" : null,
     "default" : true
   }, {
     "id" : "5816840c-4dac-2d90-e3c6-b838a85c262c",
     "name" : "eyebrow_text_icon",
-    "display_width" : null,
     "label" : "Eyebrow Text Icon",
     "required" : false,
     "locked" : false,
@@ -129,7 +127,6 @@
     "children" : [ {
       "id" : "705a3b78-caef-b696-91fd-de91909b5351",
       "name" : "select_icon_type",
-      "display_width" : null,
       "label" : "Select Icon Type",
       "required" : false,
       "locked" : false,
@@ -147,11 +144,11 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
+      "display_width" : null,
       "default" : "image"
     }, {
       "id" : "a1eebd37-e594-13ad-50e6-2262dd02310a",
       "name" : "icom_image",
-      "display_width" : null,
       "label" : "Icom Image",
       "required" : false,
       "locked" : false,
@@ -167,6 +164,7 @@
       "resizable" : false,
       "show_loading" : false,
       "type" : "image",
+      "display_width" : null,
       "default" : {
         "size_type" : "auto",
         "src" : "https://www.l2l.com/hubfs/L2L-u4m/images/chart_icon.svg",
@@ -180,7 +178,6 @@
     }, {
       "id" : "8ebaa0d4-980e-2e5d-0f8b-5896201e33b6",
       "name" : "icon",
-      "display_width" : null,
       "label" : "Icon",
       "required" : false,
       "locked" : false,
@@ -194,6 +191,7 @@
       },
       "icon_set" : "fontawesome-5.14.0",
       "type" : "icon",
+      "display_width" : null,
       "default" : {
         "name" : "Check",
         "unicode" : "f00c",
@@ -204,6 +202,7 @@
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
+    "display_width" : null,
     "default" : {
       "select_icon_type" : "image",
       "icom_image" : {
@@ -225,17 +224,16 @@
   }, {
     "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
     "name" : "include_heading",
-    "display_width" : null,
     "label" : "Include Heading",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
+    "display_width" : null,
     "default" : true
   }, {
     "id" : "aef5e961-e297-2654-68e0-6128687770bf",
     "name" : "heading_size",
-    "display_width" : null,
     "label" : "Heading Size",
     "required" : false,
     "locked" : false,
@@ -253,11 +251,11 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "h2"
   }, {
     "id" : "c7aa6b72-58e0-4caa-9b63-4da765e70069",
     "name" : "heading",
-    "display_width" : null,
     "label" : "Heading",
     "required" : false,
     "locked" : false,
@@ -273,21 +271,21 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
+    "display_width" : null,
     "default" : "Nunc et libero egestas heit ur feugiat mauris"
   }, {
     "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
     "name" : "include_content",
-    "display_width" : null,
     "label" : "Include Content",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
+    "display_width" : null,
     "default" : true
   }, {
     "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
     "name" : "content",
-    "display_width" : null,
     "label" : "Content",
     "required" : false,
     "locked" : false,
@@ -300,21 +298,21 @@
       "access" : null
     },
     "type" : "richtext",
+    "display_width" : null,
     "default" : "<p>Donec tempor sollicitudin diam, at luctus velit dignissim ut. Praesent feugiat, tellus non dictum commodo, nisl velit gravida turpis non.</p>"
   }, {
     "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
     "name" : "include_button",
-    "display_width" : null,
     "label" : "Include Button",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
+    "display_width" : null,
     "default" : false
   }, {
     "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
     "name" : "button_group",
-    "display_width" : null,
     "label" : "Button Group",
     "required" : false,
     "locked" : false,
@@ -335,7 +333,6 @@
     "children" : [ {
       "id" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
       "name" : "button_type",
-      "display_width" : null,
       "label" : "Button Type",
       "required" : false,
       "locked" : false,
@@ -345,11 +342,11 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
+      "display_width" : null,
       "default" : "std"
     }, {
       "id" : "9d5fe057-d461-68d1-9845-607ec6d892ff",
       "name" : "button_style",
-      "display_width" : null,
       "label" : "Button Style",
       "required" : false,
       "locked" : false,
@@ -367,11 +364,11 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
+      "display_width" : null,
       "default" : "hs-button"
     }, {
       "id" : "819d4b45-006f-1b23-11ba-72b2c39b6f6e",
       "name" : "button_theme",
-      "display_width" : null,
       "label" : "Button Theme",
       "required" : false,
       "locked" : false,
@@ -389,11 +386,11 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
+      "display_width" : null,
       "default" : "theme1"
     }, {
       "id" : "105bbd69-dccc-fd6b-3d3d-3f4063128744",
       "name" : "button_text",
-      "display_width" : null,
       "label" : "Button Text",
       "required" : false,
       "locked" : false,
@@ -409,11 +406,11 @@
       "allow_new_line" : false,
       "show_emoji_picker" : false,
       "type" : "text",
+      "display_width" : null,
       "default" : "Button"
     }, {
       "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
       "name" : "link",
-      "display_width" : null,
       "label" : "Link",
       "required" : false,
       "locked" : false,
@@ -428,6 +425,7 @@
       "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
       "show_advanced_rel_options" : false,
       "type" : "link",
+      "display_width" : null,
       "default" : {
         "url" : {
           "content_id" : null,
@@ -440,7 +438,6 @@
     }, {
       "id" : "d2f74da7-e18a-7c36-926e-f71b30005ccb",
       "name" : "enable_arrow",
-      "display_width" : null,
       "label" : "Enable Arrow",
       "required" : false,
       "locked" : false,
@@ -454,11 +451,11 @@
       },
       "display" : "checkbox",
       "type" : "boolean",
+      "display_width" : null,
       "default" : false
     }, {
       "id" : "ef46548d-bcc7-841c-4635-d4d035ae7022",
       "name" : "cta",
-      "display_width" : null,
       "label" : "CTA",
       "required" : false,
       "locked" : false,
@@ -470,12 +467,14 @@
         "operator" : "EQUAL",
         "access" : null
       },
-      "type" : "cta"
+      "type" : "cta",
+      "display_width" : null
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
+    "display_width" : null,
     "default" : [ {
       "button_type" : "std",
       "button_style" : "hs-button",
@@ -512,6 +511,7 @@
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "include_logo" : false,
     "logo" : {
@@ -595,17 +595,16 @@
 }, {
   "id" : "06937227-a395-2c56-54cc-125af8816380",
   "name" : "include_form",
-  "display_width" : null,
   "label" : "Include Form",
   "required" : false,
   "locked" : false,
   "display" : "checkbox",
   "type" : "boolean",
+  "display_width" : null,
   "default" : true
 }, {
   "id" : "b8e7ce5f-7487-e216-d58d-ce2a1a3974a5",
   "name" : "form_group",
-  "display_width" : null,
   "label" : "Form Group",
   "required" : false,
   "locked" : false,
@@ -620,11 +619,11 @@
   "children" : [ {
     "id" : "9e678e3d-259a-0069-28a3-5dd87681d5be",
     "name" : "select_form",
-    "display_width" : null,
     "label" : "Select Form",
     "required" : false,
     "locked" : false,
     "type" : "form",
+    "display_width" : null,
     "default" : {
       "form_id" : "ab04cf87-8a9f-4543-bb22-6341614fbef4",
       "response_type" : "inline",
@@ -639,6 +638,7 @@
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "select_form" : {
       "form_id" : "ab04cf87-8a9f-4543-bb22-6341614fbef4",
@@ -653,31 +653,30 @@
 }, {
   "id" : "945e4ab4-bc16-6299-e0a7-7583a1493b00",
   "name" : "bottom_group",
-  "display_width" : null,
   "label" : "Bottom Group",
   "required" : false,
   "locked" : false,
   "children" : [ {
     "id" : "51f0b649-f809-d721-a2c7-c4fe4faba70f",
     "name" : "content",
-    "display_width" : null,
     "label" : "Content",
     "required" : false,
     "locked" : false,
     "type" : "richtext",
+    "display_width" : null,
     "default" : "<h3>Tempor esse elit aliquip minim</h3>\n<p>Sunt sunt aute esse aliquip occaecat labore enim. Ipsum veniam aliquip commodo amet et incididunt labore reprehenderit ad sint. Exercitation pariatur adipisicing eiusmod. Id laboris ullamco nisi nostrud duis fugiat eiusmod ea mollit officia. Ad officia cillum ad incididunt. Minim proident amet incididunt elit exercitation eu culpa labore.</p>\n<ul>\n<li>Sunt sunt aute esse aliquip occaecat</li>\n<li>Eveniam aliquip commodo amet et incididunt labore</li>\n<li>Areprehenderit ad sint. Exercitation pariatur adipisicing</li>\n</ul>"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "content" : "<h3>Tempor esse elit aliquip minim</h3>\n<p>Sunt sunt aute esse aliquip occaecat labore enim. Ipsum veniam aliquip commodo amet et incididunt labore reprehenderit ad sint. Exercitation pariatur adipisicing eiusmod. Id laboris ullamco nisi nostrud duis fugiat eiusmod ea mollit officia. Ad officia cillum ad incididunt. Minim proident amet incididunt elit exercitation eu culpa labore.</p>\n<ul>\n<li>Sunt sunt aute esse aliquip occaecat</li>\n<li>Eveniam aliquip commodo amet et incididunt labore</li>\n<li>Areprehenderit ad sint. Exercitation pariatur adipisicing</li>\n</ul>"
   }
 }, {
   "id" : "b1ad819f-ba8f-5c63-262f-a7eeeef4283c",
   "name" : "form_settings",
-  "display_width" : null,
   "label" : "Form Settings",
   "required" : false,
   "locked" : false,
@@ -692,17 +691,16 @@
   "children" : [ {
     "id" : "16761754-bd6c-6ecc-bdcf-d28c3e7cde3d",
     "name" : "override_form_style",
-    "display_width" : null,
     "label" : "Override Form Style",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
+    "display_width" : null,
     "default" : true
   }, {
     "id" : "7abaddf5-b935-3dc3-392d-fb0bbe88cdb6",
     "name" : "select_color",
-    "display_width" : null,
     "label" : "Background Color",
     "required" : false,
     "locked" : false,
@@ -720,11 +718,11 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "white_bg"
   }, {
     "id" : "0ca744cd-84f6-215d-a12e-f7351b9fe46d",
     "name" : "color",
-    "display_width" : null,
     "label" : "Color",
     "required" : false,
     "locked" : false,
@@ -737,6 +735,7 @@
       "access" : null
     },
     "type" : "color",
+    "display_width" : null,
     "default" : {
       "color" : null,
       "opacity" : null
@@ -744,7 +743,6 @@
   }, {
     "id" : "770943fc-412e-a7d9-4df3-3605b51b74ef",
     "name" : "input_background_color",
-    "display_width" : null,
     "label" : "Input Background Color",
     "required" : false,
     "locked" : false,
@@ -762,12 +760,14 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "white_bg"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "override_form_style" : true,
     "select_color" : "white_bg",
@@ -780,25 +780,23 @@
 }, {
   "id" : "module_overrides",
   "name" : "module_overrides",
-  "display_width" : null,
   "label" : "Module Overrides",
   "required" : false,
   "locked" : false,
   "children" : [ {
     "id" : "enable_overrides",
     "name" : "enable_overrides",
-    "display_width" : null,
     "label" : "Enable Overrides",
     "help_text" : "Toggle to override section ID and vertical margin. ",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
+    "display_width" : null,
     "default" : true
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
-    "display_width" : null,
     "label" : "Section ID",
     "help_text" : "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
     "required" : false,
@@ -814,11 +812,11 @@
     },
     "allow_new_line" : false,
     "show_emoji_picker" : false,
-    "type" : "text"
+    "type" : "text",
+    "display_width" : null
   }, {
     "id" : "module_overrides.top_margin",
     "name" : "top_margin",
-    "display_width" : null,
     "label" : "Top Margin",
     "required" : false,
     "locked" : false,
@@ -836,11 +834,11 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "top-margin-none"
   }, {
     "id" : "custom_top_margin",
     "name" : "custom_top_margin",
-    "display_width" : null,
     "label" : "Custom Top Margin",
     "required" : false,
     "locked" : false,
@@ -855,11 +853,11 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
+    "display_width" : null,
     "default" : 100
   }, {
     "id" : "custom_top_margin_mobile",
     "name" : "custom_top_margin_mobile",
-    "display_width" : null,
     "label" : "Custom Top Margin Mobile",
     "required" : false,
     "locked" : false,
@@ -874,11 +872,11 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
+    "display_width" : null,
     "default" : 50
   }, {
     "id" : "module_overrides.bottom_margin",
     "name" : "bottom_margin",
-    "display_width" : null,
     "label" : "Bottom Margin",
     "required" : false,
     "locked" : false,
@@ -896,11 +894,11 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "bottom-margin-none"
   }, {
     "id" : "custom_bottom_margin",
     "name" : "custom_bottom_margin",
-    "display_width" : null,
     "label" : "Custom Bottom Margin",
     "required" : false,
     "locked" : false,
@@ -915,11 +913,11 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
+    "display_width" : null,
     "default" : 100
   }, {
     "id" : "custom_bottom_margin_mobile",
     "name" : "custom_bottom_margin_mobile",
-    "display_width" : null,
     "label" : "Custom Bottom Margin Mobile",
     "required" : false,
     "locked" : false,
@@ -934,11 +932,11 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
+    "display_width" : null,
     "default" : 50
   }, {
     "id" : "module_overrides.top_padding",
     "name" : "top_padding",
-    "display_width" : null,
     "label" : "Top Padding",
     "required" : false,
     "locked" : false,
@@ -956,11 +954,11 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "top-padding-custom"
   }, {
     "id" : "custom_top_padding",
     "name" : "custom_top_padding",
-    "display_width" : null,
     "label" : "Custom Top Padding",
     "required" : false,
     "locked" : false,
@@ -975,11 +973,11 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
+    "display_width" : null,
     "default" : 194
   }, {
     "id" : "custom_top_padding_mobile",
     "name" : "custom_top_padding_mobile",
-    "display_width" : null,
     "label" : "Custom Top Padding Mobile",
     "required" : false,
     "locked" : false,
@@ -994,11 +992,11 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
+    "display_width" : null,
     "default" : 50
   }, {
     "id" : "module_overrides.bottom_padding",
     "name" : "bottom_padding",
-    "display_width" : null,
     "label" : "Bottom Padding",
     "required" : false,
     "locked" : false,
@@ -1016,11 +1014,11 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
+    "display_width" : null,
     "default" : "bottom-padding-default"
   }, {
     "id" : "custom_bottom_padding",
     "name" : "custom_bottom_padding",
-    "display_width" : null,
     "label" : "Custom Bottom Padding",
     "required" : false,
     "locked" : false,
@@ -1035,11 +1033,11 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
+    "display_width" : null,
     "default" : 100
   }, {
     "id" : "custom_bottom_padding_mobile",
     "name" : "custom_bottom_padding_mobile",
-    "display_width" : null,
     "label" : "Custom Bottom Padding Mobile",
     "required" : false,
     "locked" : false,
@@ -1054,11 +1052,11 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
+    "display_width" : null,
     "default" : 50
   }, {
     "id" : "3eccf45d-b0dc-4bac-42a0-f923e4405158",
     "name" : "reverse_text",
-    "display_width" : null,
     "label" : "Dark Theme",
     "required" : false,
     "locked" : false,
@@ -1072,11 +1070,11 @@
     },
     "display" : "checkbox",
     "type" : "boolean",
+    "display_width" : null,
     "default" : true
   }, {
     "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
     "name" : "background_settings",
-    "display_width" : null,
     "label" : "Background Settings",
     "required" : false,
     "locked" : false,
@@ -1091,7 +1089,6 @@
     "children" : [ {
       "id" : "3c812905-0c66-421d-6e7e-7a7109acdd49",
       "name" : "background_type",
-      "display_width" : null,
       "label" : "Background Type",
       "required" : false,
       "locked" : false,
@@ -1101,11 +1098,11 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
+      "display_width" : null,
       "default" : "gradient"
     }, {
       "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
       "name" : "background_image",
-      "display_width" : null,
       "label" : "Background Image",
       "required" : false,
       "locked" : false,
@@ -1121,6 +1118,7 @@
       "resizable" : false,
       "show_loading" : false,
       "type" : "image",
+      "display_width" : null,
       "default" : {
         "size_type" : "auto",
         "src" : "",
@@ -1130,7 +1128,6 @@
     }, {
       "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
       "name" : "select_color",
-      "display_width" : null,
       "label" : "Select Color",
       "required" : false,
       "locked" : false,
@@ -1148,11 +1145,11 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
+      "display_width" : null,
       "default" : "prismic_mango_bg"
     }, {
       "id" : "2659085b-598d-e346-643e-6a9ebb3bae70",
       "name" : "select_gradient",
-      "display_width" : null,
       "label" : "Select Gradient",
       "required" : false,
       "locked" : false,
@@ -1170,12 +1167,14 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
+      "display_width" : null,
       "default" : "gradient3"
     } ],
     "tab" : "CONTENT",
     "expanded" : true,
     "group_occurrence_meta" : null,
     "type" : "group",
+    "display_width" : null,
     "default" : {
       "background_type" : "gradient",
       "background_image" : {
@@ -1190,7 +1189,6 @@
   }, {
     "id" : "c813f3af-99b7-d54e-7ce2-b074f008a27c",
     "name" : "container",
-    "display_width" : null,
     "label" : "Container",
     "required" : false,
     "locked" : false,
@@ -1205,7 +1203,6 @@
     "children" : [ {
       "id" : "87361475-d2b5-329d-45b2-227103ad95d9",
       "name" : "size",
-      "display_width" : null,
       "label" : "Size",
       "required" : false,
       "locked" : false,
@@ -1215,11 +1212,11 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
+      "display_width" : null,
       "default" : "theme"
     }, {
       "id" : "b9865f26-0901-d5ad-66a2-7c6ecacec658",
       "name" : "custom_size",
-      "display_width" : null,
       "label" : "Custom Size",
       "required" : false,
       "locked" : false,
@@ -1237,12 +1234,14 @@
       "step" : 1,
       "suffix" : "px",
       "type" : "number",
+      "display_width" : null,
       "default" : 1296
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
+    "display_width" : null,
     "default" : {
       "size" : "theme",
       "custom_size" : 1296
@@ -1252,6 +1251,7 @@
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
+  "display_width" : null,
   "default" : {
     "enable_overrides" : true,
     "top_margin" : "top-margin-none",

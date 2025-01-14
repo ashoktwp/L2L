@@ -35,7 +35,7 @@
           <div class='post-item-inner  {% if not row.select_resource.columns.image.url %}noImage{% endif %}'>
               {% if row.select_resource.columns.image.url %}
               <div class="featured-img">
-                <a href="{{row.select_resource.columns.page_url}}">
+                <a href="{{row.select_resource.columns.link}}">
                   <img src="{{ row.select_resource.columns.image.url }}" alt="{{ row.select_resource.columns.name | striptags }}">
                 </a>
                 {% if row.select_resource.columns.type.name %}
@@ -56,14 +56,14 @@
               <div class="post-content">
                 {% if row.select_resource.columns.topics_tags %}
                 <div class='post-item-topic'>
-                  {% for tag in row.select_resource.columns.topics_tags %}{% if loop.index == 1%}{{ tag.name|lower|replace(' ','-') }}{% endif %}{% endfor %} 
+                  {% for tag in row.select_resource.columns.topics_tags %}{{ tag.name|lower|replace(' ','-') }}{% if not loop.last%} • {% endif %}{% endfor %} 
                 </div>
                 {% endif %}
                 <h4 class="resourcetitle">
-                  <a href="{{ row.select_resource.columns.page_url }}">{{ row.select_resource.columns.name }}</a>
+                  <a href="{{ row.select_resource.columns.link }}">{{ row.select_resource.columns.name }}</a>
                 </h4>
                 <div class='read-more'>
-                  <a class="more-link arrow-link" href="{{ row.select_resource.columns.page_url }}">{{ row.select_resource.columns.page_url_text }}
+                  <a class="more-link arrow-link" href="{{ row.select_resource.columns.link }}">{{ row.select_resource.columns.link_text }}
                     <span class="arrowbtn">
                       <svg class="btnArrow1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                         <path d="M14 0.777754V10.8886C14 11.0948 13.9181 11.2927 13.7722 11.4385C13.6263 11.5844 13.4285 11.6663 13.2222 11.6663C13.016 11.6663 12.8181 11.5844 12.6723 11.4385C12.5264 11.2927 12.4445 11.0948 12.4445 10.8886V2.65506L1.32845 13.7721C1.18251 13.918 0.984574 14 0.778186 14C0.571798 14 0.373864 13.918 0.227925 13.7721C0.0819872 13.6261 0 13.4282 0 13.2218C0 13.0154 0.0819872 12.8175 0.227925 12.6716L11.3449 1.55551H3.11145C2.90517 1.55551 2.70735 1.47357 2.56149 1.32771C2.41564 1.18185 2.33369 0.984027 2.33369 0.777754C2.33369 0.571481 2.41564 0.373656 2.56149 0.227799C2.70735 0.0819418 2.90517 0 3.11145 0H13.2222C13.4285 0 13.6263 0.0819418 13.7722 0.227799C13.9181 0.373656 14 0.571481 14 0.777754Z" fill="#C0FC95"/>
@@ -107,7 +107,7 @@
 
               <div class="post-content">
                 <div class='post-item-topic'>
-                  {% for tag in row.topics_tags %}{% if loop.index == 1%}{{ tag.name|lower|replace(' ','-') }}{% endif %}{% endfor %}
+                  {% for tag in row.topics_tags %}{{ tag.name|lower|replace(' ','-') }}{% if not loop.last%} • {% endif %}{% endfor %}
                 </div>
                 <h4 class="resourcetitle">
                   <a href="{{ row.page_url }}">{{ row.name }}</a>

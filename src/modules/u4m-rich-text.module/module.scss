@@ -115,6 +115,12 @@
     border: none;
     display: block;
   }
+
+  .hs-embed-content-wrapper > div[style] {
+    @include tabletvert {
+      min-height: 520px;
+    }
+  }
 }
 blockquote {
   line-height: 33px;
