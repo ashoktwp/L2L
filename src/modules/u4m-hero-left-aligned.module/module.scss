@@ -32,6 +32,10 @@ section.u4m-hero-left-aligned {
     min-height: auto;
   }
 
+  @include phone {
+    padding-top: 50px;
+  }
+
   .hero-align-center {
     .intro_wrapp {
       flex-direction: column-reverse;
@@ -144,9 +148,15 @@ section.u4m-hero-left-aligned {
 
     .intro_btn_wrap {
       justify-content: flex-start;
+
       .hs-button {
         min-width: 184px;
         justify-content: center;
+      }
+
+      .btn_item .arrow-link {
+        margin-left: 13px;
+        margin-top: 20px;
       }
     }
 

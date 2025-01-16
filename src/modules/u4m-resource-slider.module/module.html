@@ -56,7 +56,10 @@
               <div class="post-content">
                 {% if row.select_resource.columns.topics_tags %}
                 <div class='post-item-topic'>
-                  {% for tag in row.select_resource.columns.topics_tags %}{{ tag.name|lower|replace(' ','-') }}{% if not loop.last%} • {% endif %}{% endfor %} 
+                  {% for tag in row.select_resource.columns.topics_tags %}
+                      {{ tag.name|lower|replace(' ','-') }}
+                      {% if not loop.last%} • {% endif %}
+                  {% endfor %} 
                 </div>
                 {% endif %}
                 <h4 class="resourcetitle">

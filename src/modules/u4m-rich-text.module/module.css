@@ -125,8 +125,10 @@ html {
   border: none;
   display: block;
 }
-.u4m-rich-text .hs-embed-content-wrapper {
-  border: 1px solid #fff;
+@media (max-width: 767px) {
+  .u4m-rich-text .hs-embed-content-wrapper > div[style] {
+    min-height: 520px;
+  }
 }
 
 blockquote {
@@ -200,4 +202,17 @@ table + p {
 }
 .table-container .tooltip {
   display: none;
+}
+
+.u4m-rich-text.reverse-text * {
+  color: #fff;
+}
+.u4m-rich-text.reverse-text table th,
+.u4m-rich-text.reverse-text table td,
+.u4m-rich-text.reverse-text table,
+.u4m-rich-text.reverse-text hr {
+  border-color: #fff;
+}
+.u4m-rich-text.reverse-text blockquote {
+  border-left-color: #fff;
 }

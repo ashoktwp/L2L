@@ -5,45 +5,56 @@ section.u4m-blog-listing {
     .blog-banner {
       .page-title h1 {
         margin-bottom: 0;
+        text-transform: capitalize;
       }
     }
   }
+
   .blog-banner {
     position: relative;
     padding-top: 94px;
     padding-bottom: 94px;
+
     @include tabletvert {
       padding: 50px 0;
     }
+
     .page-center {
       max-width: 1340px;
     }
+
     .page-title {
       text-align: center;
+
       h1 {
         margin-bottom: 60px;
         color: $white;
       }
     }
+
     .featured-post {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       column-gap: 70px;
     }
+
     .featured-img-col {
       max-width: 722px;
       position: relative;
       border-radius: 13px;
       padding: 18px;
       overflow: hidden;
+
       @include laptop {
         width: calc(50% - 35px);
       }
+
       @include tabletvert {
         width: 100%;
         margin-bottom: 30px;
       }
+
       &::before,
       &:after {
         content: "";
@@ -54,23 +65,18 @@ section.u4m-blog-listing {
         width: calc(100% + 4px);
         z-index: 2;
       }
+
       &::before {
-        background: linear-gradient(
-          180deg,
-          $Medium_Aquamarine 0%,
-          rgba($Medium_Aquamarine, 0.0001) 100%
-        );
+        background: linear-gradient(180deg,
+            $Medium_Aquamarine 0%,
+            rgba($Medium_Aquamarine, 0.0001) 100%);
         border: 1px solid transparent;
-        -o-border-image: linear-gradient(
-          180deg,
-          $Medium_Aquamarine 0%,
-          rgba($Medium_Aquamarine, 0.0001) 100%
-        );
-        border-image: linear-gradient(
-          180deg,
-          $Medium_Aquamarine 0%,
-          rgba($Medium_Aquamarine, 0.0001) 100%
-        );
+        -o-border-image: linear-gradient(180deg,
+            $Medium_Aquamarine 0%,
+            rgba($Medium_Aquamarine, 0.0001) 100%);
+        border-image: linear-gradient(180deg,
+            $Medium_Aquamarine 0%,
+            rgba($Medium_Aquamarine, 0.0001) 100%);
         border-image-slice: 1;
         border-radius: 13px;
         bottom: 0;
@@ -82,6 +88,7 @@ section.u4m-blog-listing {
         transition: none;
         width: 100%;
       }
+
       &::after {
         border: 2px solid $Medium_Aquamarine;
         border-radius: 100px;
@@ -93,59 +100,74 @@ section.u4m-blog-listing {
         transition: none;
         width: 100%;
       }
+
       img {
         width: 100%;
         border-radius: 8px;
         min-height: 397px;
         object-fit: cover;
+
         @include tabletvert {
           min-height: auto;
         }
       }
     }
+
     .featured-content-col {
       width: calc(100% - 792px);
       @include size16;
       line-height: 1.75;
+
       @include laptop {
         width: calc(50% - 35px);
       }
+
       @include tabletvert {
         width: 100%;
       }
+
       .featured-topic {
         padding-bottom: 13px;
+
         a {
           @include eyebrow2;
         }
       }
+
       h3 {
         margin: 0;
         margin-bottom: 11px;
         color: $white;
+
         a {
           color: inherit;
         }
       }
+
       p {
         color: $white;
         margin-top: 0;
       }
+
       .read-more {
         margin-top: 30px;
+
         a {
           letter-spacing: 0.47px;
           color: $Menthol;
           line-height: 1.2;
           gap: 15px;
+
           .arrowbtn {
             width: 14px;
             height: 14px;
             margin-left: 0;
           }
+
           svg {
             width: 14px;
             height: 14px;
+
             path {
               fill: currentColor;
             }
@@ -154,32 +176,40 @@ section.u4m-blog-listing {
       }
     }
   }
+
   .main-listing {
     background-color: $Mint_cream;
     padding-top: 78px;
     padding-bottom: 100px;
+
     @include tabletvert {
       padding: 50px 0;
     }
+
     .site-search-wrap {
       margin-bottom: 85px;
+
       @include tabletvert {
         margin-bottom: 50px;
       }
+
       .page-center {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         column-gap: 30px;
+
         @include tabletvert {
           row-gap: 30px;
         }
+
         .search-col,
         .tag-col {
           max-width: 300px;
           width: 100%;
         }
+
         .search-col {
           form {
             background: transparent;
@@ -188,6 +218,7 @@ section.u4m-blog-listing {
             max-width: 100%;
             padding: 0;
             position: relative;
+
             .hs-search-field__input {
               border-radius: 8px;
               border: 1px solid $border_color;
@@ -196,10 +227,12 @@ section.u4m-blog-listing {
               @include size18;
               line-height: 1.56;
               outline: none;
+
               &::placeholder {
                 color: $baseColor;
               }
             }
+
             button {
               position: absolute;
               top: 0;
@@ -210,9 +243,11 @@ section.u4m-blog-listing {
               height: 70px;
             }
           }
+
           .hs-search-field {
             position: relative;
           }
+
           .hs-search-field__suggestions {
             margin: 0;
             background: $white;
@@ -224,12 +259,14 @@ section.u4m-blog-listing {
             width: 100%;
             z-index: 9;
           }
+
           .hs-search-field--open .hs-search-field__suggestions {
             padding: 15px;
             border: 1px solid $border_color;
             border-radius: 8px;
           }
         }
+
         .tag-col {
           select {
             border-radius: 8px;
@@ -244,11 +281,13 @@ section.u4m-blog-listing {
             background-repeat: no-repeat;
             background-size: 12px;
             appearance: none;
+            background-color: $white;
           }
         }
       }
     }
   }
+
   .listing-wrap {
     @include CardItems;
 
@@ -267,6 +306,7 @@ section.u4m-blog-listing {
       .post-item-topic a {
         position: relative;
         z-index: 10;
+        line-height: 1.7;
       }
     }
 

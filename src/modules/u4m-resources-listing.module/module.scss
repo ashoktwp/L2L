@@ -109,22 +109,16 @@
       }
 
       &::before {
-        background: linear-gradient(
-          180deg,
-          $Medium_Aquamarine 0%,
-          rgba($Medium_Aquamarine, 0.0001) 100%
-        );
+        background: linear-gradient(180deg,
+            $Medium_Aquamarine 0%,
+            rgba($Medium_Aquamarine, 0.0001) 100%);
         border: 1px solid transparent;
-        -o-border-image: linear-gradient(
-          180deg,
-          $Medium_Aquamarine 0%,
-          rgba($Medium_Aquamarine, 0.0001) 100%
-        );
-        border-image: linear-gradient(
-          180deg,
-          $Medium_Aquamarine 0%,
-          rgba($Medium_Aquamarine, 0.0001) 100%
-        );
+        -o-border-image: linear-gradient(180deg,
+            $Medium_Aquamarine 0%,
+            rgba($Medium_Aquamarine, 0.0001) 100%);
+        border-image: linear-gradient(180deg,
+            $Medium_Aquamarine 0%,
+            rgba($Medium_Aquamarine, 0.0001) 100%);
         border-image-slice: 1;
         border-radius: 13px;
         bottom: 0;
@@ -268,6 +262,10 @@
           max-width: 300px;
           width: 100%;
 
+          @include tablet {
+            max-width: 30%;
+          }
+
           @include tabletvert {
             max-width: 100%;
           }
@@ -402,10 +400,12 @@
       @include blogPagination;
       padding-left: 20rem;
       padding-right: 20rem;
+
       nav {
         flex-wrap: wrap;
         row-gap: 15px;
         padding-left: 0;
+
         button {
           padding: 0;
         }
@@ -423,6 +423,7 @@
   .selctArrow {
     position: relative;
   }
+
   .filter_label {
     background-color: $white;
     cursor: pointer;
@@ -462,9 +463,10 @@
     overflow-y: auto;
     z-index: 9;
 
-    & > div {
+    &>div {
       border-bottom: 1px solid $border_color;
       cursor: pointer;
+
       label {
         display: block;
         padding: 10px;
