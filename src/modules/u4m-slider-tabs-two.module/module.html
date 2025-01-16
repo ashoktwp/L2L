@@ -179,7 +179,7 @@
       });
     }
 
-    $('.sslider-for').slick({
+    const $slider = $('.sslider-for').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       variableWidth: true,
@@ -241,8 +241,17 @@
 
     $('[data-slick-index="0"]').addClass('slick-now');
 
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        $slider.slick('slickGoTo', 0, true);
+        $slider.slick('slickPlay');
+      }
+    });
+  });
 
- 
+  const sliderElement = document.querySelector('.sslider-for');
+  observer.observe(sliderElement);
 
 
     function startProgressBar() {
