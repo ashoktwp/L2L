@@ -157,6 +157,9 @@ section.u4m-hero-left-aligned {
       .btn_item .arrow-link {
         margin-left: 13px;
         margin-top: 20px;
+        @include tabletvert {
+          margin: 0;
+        }
       }
     }
 

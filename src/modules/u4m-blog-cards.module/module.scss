@@ -24,9 +24,9 @@
       width: calc(33.333% - 20px);
       transition: all 0.3s ease-in-out;
 
-      @include tabletmid {
-        width: calc(50% - 15px);
-      }
+      // @include tabletmid {
+      //   width: calc(50% - 15px);
+      // }
 
       @include tabletvert {
         width: 100%;

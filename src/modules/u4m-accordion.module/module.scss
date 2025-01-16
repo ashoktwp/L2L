@@ -44,7 +44,11 @@
       }
 
       &.active .plus {
-        transform: rotate(45deg);
+        transform: rotate(45deg) translateY(-20%) translateX(-50%);
+        right: 12px;
+        @include tabletvert {
+          right: 15px;
+        }
       }
 
       .plus {
@@ -59,7 +63,8 @@
         top: 29px;
         right: 20px;
         transition: all 0.3s linear;
-
+        top: 50%;
+        transform: translateY(-50%);
         @include tabletvert {
           width: 25px;
           height: 25px;
