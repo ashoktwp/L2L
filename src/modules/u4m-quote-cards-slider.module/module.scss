@@ -29,6 +29,19 @@ section.u4m-quote-cards-slider {
   }
   .quote-cards-slide {
     padding: 0 12px;
+
+    @include tabletvert {
+      .desktop_name {
+        display: none;
+      }
+    }
+
+    @include tabletvertmin {
+      .mobile_name {
+        display: none;
+      }
+    }
+
     .quote-cards-slide-inner {
       background-color: $white;
       border-radius: 8px;
@@ -69,7 +82,11 @@ section.u4m-quote-cards-slider {
       .slide-content {
         margin-bottom: 24px;
         font-size: 18rem;
-        background: linear-gradient(to bottom, $Forest_Green 0%, rgba($Forest_Green, 0.66) 100%);
+        background: linear-gradient(
+          to bottom,
+          $Forest_Green 0%,
+          rgba($Forest_Green, 0.66) 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -84,8 +101,18 @@ section.u4m-quote-cards-slider {
         align-items: center;
         justify-content: center;
         margin-top: auto;
+
+        @include tabletvert {
+          margin-top: auto;
+          max-width: 300px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+        }
+
         .author-img {
           margin-right: 10px;
+          flex-shrink: 0;
           img {
             border-radius: 50%;
             width: 25px;
@@ -217,15 +244,22 @@ section.u4m-quote-cards-slider {
     transition: 0.2s ease 0.2s;
   }
 
-  .quote-cards-slider.slick-slider .quote-cards-slide:not(.slick-current.slick-active) {
+  .quote-cards-slider.slick-slider
+    .quote-cards-slide:not(.slick-current.slick-active) {
     opacity: 0.45;
   }
 
-  .quote-cards-slider.slick-slider .quote-cards-slide:not(.slick-current.slick-active) .quote-cards-slide-inner > div {
+  .quote-cards-slider.slick-slider
+    .quote-cards-slide:not(.slick-current.slick-active)
+    .quote-cards-slide-inner
+    > div {
     opacity: 0;
   }
 
-  .quote-cards-slider.slick-slider .quote-cards-slide .quote-cards-slide-inner > div {
+  .quote-cards-slider.slick-slider
+    .quote-cards-slide
+    .quote-cards-slide-inner
+    > div {
     transition: 0.5s ease 0.1s;
   }
 }
