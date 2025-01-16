@@ -1,8 +1,10 @@
 @import "../../css/_module-imports";
+
 section.u4m-cta-row-1 {
   .page-center {
     padding-left: 15rem;
     padding-right: 15rem;
+
     .cta-content-row {
       border-radius: 34px;
       overflow: hidden;
@@ -18,38 +20,43 @@ section.u4m-cta-row-1 {
             max-height: 380px;
             background-position: right;
           }
+
           @include phone {
             max-height: 54vw;
           }
         }
+
         .bg_overlay.bg_color {
-          background-image: linear-gradient(
-            250deg,
-            rgba(23, 32, 27, 0) 2%,
-            #101813 42%
-          );
+          background-image: linear-gradient(250deg,
+              rgba(23, 32, 27, 0) 2%,
+              #101813 42%);
           width: 100%;
           max-width: 50%;
           height: 100%;
           top: 50%;
           transform: translateY(-50%);
+
           @include tablet {
             max-width: 100%;
           }
         }
       }
+
       .cta-content-flex {
         &.full_width {
           flex-direction: column-reverse;
           flex-wrap: wrap;
+
           .col6 {
             width: 100%;
             max-width: 100%;
             background: transparent;
+
             .intro_wrapp_inn {
               .intro_content {
                 max-width: 100%;
                 text-align: center;
+
                 .intro__inner {
                   .intro_btn_wrap {
                     justify-content: center;
@@ -59,53 +66,66 @@ section.u4m-cta-row-1 {
             }
           }
         }
+
         @include tablet {
           flex-direction: column-reverse;
         }
+
         .intro_wrapp {
           padding: 65px 10px 77px 72px;
           max-width: 565px;
+
           @include tablet {
             padding: 65px 20px 77px;
             max-width: 100%;
             width: 100%;
           }
+
           @include phone {
             padding: 35px 20px;
           }
+
           .intro_wrapp_inn {
             .intro_content {
               max-width: 504rem;
               text-align: left;
               margin: 0;
+
               .intro__inner {
                 .intro_title {
                   font-weight: 500;
                 }
+
                 .intro_btn_wrap {
                   justify-content: flex-start;
                 }
               }
             }
+
             .cta-form {
               @include subscribeForm;
               margin-top: 36px;
+
               form {
                 .hs-form-field {
                   margin-bottom: 24rem;
+
                   .hs-form-field.hs-fieldtype-booleancheckbox {
                     margin-bottom: 0;
                   }
+
                   .hs-input {
                     border: none;
                     padding: 22px 144px 22px 30px !important;
                   }
+
                   ul.inputs-list {
                     li {
                       label {
                         position: relative;
                         padding-left: 36px;
                         cursor: pointer;
+
                         input.hs-input {
                           padding: 0 !important;
                           width: 0;
@@ -119,6 +139,7 @@ section.u4m-cta-row-1 {
                           left: 0;
                           top: 50%;
                           transform: translateY(-50%);
+
                           &:before {
                             position: relative;
                             display: block;
@@ -130,6 +151,7 @@ section.u4m-cta-row-1 {
                             border-radius: 5px;
                             min-width: 24px;
                           }
+
                           &:after {
                             position: relative;
                             display: block;
@@ -141,6 +163,7 @@ section.u4m-cta-row-1 {
                             top: 6px;
                             left: 6px;
                           }
+
                           &:checked::after {
                             background-image: url("https://www.l2l.com/hubfs/L2L-u4m/images/Arrow.svg");
                             background-repeat: no-repeat no-repeat;
@@ -148,8 +171,10 @@ section.u4m-cta-row-1 {
                             background-size: cover;
                           }
                         }
+
                         span {
                           color: inherit;
+
                           a {
                             text-decoration: underline;
                           }
@@ -158,22 +183,27 @@ section.u4m-cta-row-1 {
                     }
                   }
                 }
+
                 .hs_error_rollup {
                   display: none;
                 }
               }
             }
           }
+
           &.col12 {
             padding: 65px 72px 77px;
             background: transparent;
             max-width: 100%;
+
             @include tablet {
               padding: 65px 20px 77px;
             }
+
             .intro_content {
               max-width: 100%;
               text-align: center;
+
               .intro__inner {
                 .intro_btn_wrap {
                   justify-content: center;
@@ -182,14 +212,20 @@ section.u4m-cta-row-1 {
             }
           }
         }
+
         .right_col {
           @include tablet {
-            width: 100%;
-            min-height: 350px;
+            width: 80%;
+            min-height: 250px;
+            margin: 0 auto;
+
           }
+
           @include phone {
+            width: 100%;
             min-height: 50vw;
           }
+
           .media_col_inn {
             position: relative;
             height: 100%;
@@ -197,11 +233,13 @@ section.u4m-cta-row-1 {
             align-items: center;
             justify-content: center;
             padding: 20px;
+
             .videoWrap {
               width: 100%;
               display: flex;
               align-items: center;
-              > * {
+
+              >* {
                 width: 100%;
               }
             }

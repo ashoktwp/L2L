@@ -9185,7 +9185,8 @@ img.mfp-img {
   visibility: hidden;
 }
 
-.splide.is-initialized, .splide.is-rendered {
+.splide.is-initialized,
+.splide.is-rendered {
   visibility: visible;
 }
 
@@ -9194,7 +9195,7 @@ img.mfp-img {
   box-sizing: border-box;
   flex-shrink: 0;
   list-style-type: none !important;
-  margin: 0;
+  margin: 0 20px;
   position: relative;
 }
 
@@ -9230,7 +9231,8 @@ img.mfp-img {
   width: 1px;
 }
 
-.splide__toggle.is-active .splide__toggle__play, .splide__toggle__pause {
+.splide__toggle.is-active .splide__toggle__play,
+.splide__toggle__pause {
   display: none;
 }
 
@@ -17998,7 +18000,7 @@ footer.ftr_wrpp .top_wrp .right_wrpp .btn a {
   color: #fff;
   border-color: #409650;
   width: 100%;
-  padding: 18px 54px;
+  padding: 18px 30px;
   line-height: 17px;
   font-family: "Inter";
   justify-content: center;
@@ -18289,13 +18291,16 @@ footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li 
   max-width: 174px;
   width: 100%;
 }
+footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li .inner_row,
 footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a {
   margin: 0;
   letter-spacing: normal;
   display: flex;
   align-items: center;
   gap: 12px;
+  pointer-events: none;
 }
+footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li .inner_row p,
 footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a p {
   margin: 0;
   font-style: normal;
@@ -18313,22 +18318,27 @@ footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li 
   letter-spacing: normal;
 }
 @media (max-width: 580px) {
+  footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li .inner_row p,
   footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a p {
     font-size: 14rem;
   }
 }
+footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li .inner_row .img,
 footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a .img {
   width: 18px;
   height: 18px;
 }
+footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li .inner_row .img img,
 footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a .img img {
   vertical-align: super;
   -o-object-fit: cover;
      object-fit: cover;
 }
+footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li .inner_row:hover,
 footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a:hover {
   color: #c0fc95;
 }
+footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li .inner_row:hover p,
 footer.ftr_wrpp .page-center .btm_wrp .cross-platform-support .inner_wrpp ul li a:hover p {
   color: #c0fc95;
 }
@@ -18343,6 +18353,10 @@ footer.ftr_wrpp .middle_wrp {
   gap: 40px;
   justify-content: space-between;
   margin-bottom: 81px;
+}
+body.hs-landing-page footer.ftr_wrpp .middle_wrp {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 100px;
 }
 footer.ftr_wrpp .middle_wrp .leftCnt .custom_logo {
   height: 57px;
@@ -18480,6 +18494,9 @@ header .hd_hgh .hd_wrap .hd_inr .hd_menu .megamenu_inr > ul > li {
   letter-spacing: normal;
   margin: 0;
   line-height: normal;
+}
+header .hd_hgh .hd_wrap .hd_inr .hd_menu .megamenu_inr > ul > li.no-megamenu {
+  position: relative;
 }
 header .hd_hgh .hd_wrap .hd_inr .hd_menu .megamenu_inr > ul > li:hover .child_wrapper {
   display: block;
