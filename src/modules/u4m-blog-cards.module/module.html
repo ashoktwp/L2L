@@ -1,196 +1,195 @@
 {% set moduleName = 'u4m-blog-cards' %}
-  {% include "../partials/u4-module-includes.html" %}
-  
-  <div class="page-center  {{ module.module_settings.theme }}">
-    <div class="intro_wrapp ">
-      {{macros.introGroup(module.intro_content)}}
-    </div>
-  
-    {% set max_posts = module.blog_feed.number_of_posts %}
-    {% set rec_posts = [] %}
-  
-    {% if module.blog_feed.blog_post_type != "title" %}
-  
-    {% if  module.blog_feed.blog_post_type == "recent" %}
-    {% set rec_posts = rec_posts + blog_recent_posts(module.blog_feed.select_blog , max_posts) %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center  {{ module.module_settings.theme }}">
+  <div class="intro_wrapp ">
+    {{macros.introGroup(module.intro_content)}}
+  </div>
+
+  {% set max_posts = module.blog_feed.number_of_posts %}
+  {% set rec_posts = [] %}
+
+  {% if module.blog_feed.blog_post_type != "title" %}
+
+  {% if  module.blog_feed.blog_post_type == "recent" %}
+  {% set rec_posts = rec_posts + blog_recent_posts(module.blog_feed.select_blog , max_posts) %}
+  {% endif %}
+
+  {% if module.blog_feed.blog_post_type == "tag" %}
+    {% if module.blog_feed.enable_manually_select_tag %}
+      {% if content.tag_list and not is_listing_view %} {# for post page - skipping active post #}
+        {% set rec_posts = blog_recent_tag_posts(module.blog_feed.select_blog, module.blog_feed.select_tag, max_posts + 1) %}
+      {% else %}
+        {% set rec_posts = blog_recent_tag_posts(module.blog_feed.select_blog, module.blog_feed.select_tag, max_posts) %}
+      {% endif %}
     {% endif %}
   
-    {% if module.blog_feed.blog_post_type == "tag" %}
-      {% if module.blog_feed.enable_manually_select_tag %}
+      {% if module.blog_feed.enable_manually_select_tag == "false" %}
+        {% set posts_tag = content.tag_list %}
         {% if content.tag_list and not is_listing_view %} {# for post page - skipping active post #}
-          {% set rec_posts = blog_recent_tag_posts(module.blog_feed.select_blog, module.blog_feed.select_tag, max_posts + 1) %}
+        {% set rec_posts =  rec_posts + blog_recent_tag_posts('group.id', posts_tag, max_posts + 1 ) %}
         {% else %}
-          {% set rec_posts = blog_recent_tag_posts(module.blog_feed.select_blog, module.blog_feed.select_tag, max_posts) %}
+        {% set rec_posts =  rec_posts + blog_recent_tag_posts('group.id', posts_tag, max_posts ) %}
         {% endif %}
       {% endif %}
-    
-        {% if module.blog_feed.enable_manually_select_tag == "false" %}
-          {% set posts_tag = content.tag_list %}
-          {% if content.tag_list and not is_listing_view %} {# for post page - skipping active post #}
-          {% set rec_posts =  rec_posts + blog_recent_tag_posts('group.id', posts_tag, max_posts + 1 ) %}
-          {% else %}
-          {% set rec_posts =  rec_posts + blog_recent_tag_posts('group.id', posts_tag, max_posts ) %}
-          {% endif %}
-        {% endif %}
-    
-    {% endif %}
-    
-    
-      {% set checkCount = rec_posts|length%}
-    <div class="blog_posts_row {% if checkCount == 0%}nofeed{% endif %}">
-      <div class="blog_posts_items">
-      
-      
-        {% set i = 0 %}
   
-        {% for post in rec_posts %}
-        {% set postURL = post.absolute_url %}
-          {% if content.absolute_url != post.absolute_url and i < max_posts %}
-            <div class="blog_posts_item  border_{{ module.blog_feed.card_border_style }}">
-              <div class="blog_item_inn">
-                <div class="feature_img">
-                  <img src="{{ resize_image_url( post.post_list_summary_featured_image,767 ) }}" alt="{{ post.name}}">
-                </div>
-                <div class="post_body">
-                  <div class="post_meta eyebrow_text">
-                    {% for tag in post.tag_list %}
-                    {% if loop.first %}
-                    <a href="{{ blog_tag_url(module.blog_feed.select_blog, tag.slug) }}">
-                      {{tag.name}}</a>
-                    {% endif %}
-                    {% endfor %}
-                  </div>
-                  <div class="post_title">
-                    <h4>
-                      <a href="{{ postURL }}">{{ post.name}}</a>
-                    </h4>
-                  </div>
-                  <div class="post-read-more">
-                    <a class="more-link {{ module.blog_feed.button_style }} {{ module.blog_feed.button_theme }}" href="{{ postURL }}">
-                      <span>{{ module.blog_feed.read_more_text }}</span>
-                      {% if module.blog_feed.button_style == "arrow-link" %}
-                  
-                      <span class="arrowbtn">
-                      <svg class="btnArrow1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
-                      <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                      <svg class="btnArrow2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
-                      <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    </span>
-                      {% elif module.blog_feed.button_style == "hs-button" %}
-                      {% if module.blog_feed.enable_arrow %}
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 12H20.25Z" fill="currentcolor"/>
-                        <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      {% endif %}
-                      {% else %}
-                      {% endif %}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% set i = i + 1 %}
-            {% endif %}
-        {% endfor %}
+  {% endif %}
+  
+  
+    {% set checkCount = rec_posts|length%}
+  <div class="blog_posts_row {% if checkCount == 0%}nofeed{% endif %}">
+    <div class="blog_posts_items">
+    
+    
+      {% set i = 0 %}
 
-      </div>
-    </div>
-    {% endif %}
-  
-    {% if module.blog_feed.blog_post_type == "title" %}
-    <div class="blog_posts_row {% if module.blog_feed.post_items|length == 0%}nofeed{% endif %}">
-      <div class="blog_posts_items">
-        {% set checkCount = module.blog_feed.post_items|length %}
-        {% for item in module.blog_feed.post_items %}
-        {% set postURL = post.absolute_url %}
-        {% set post = content_by_id(item.select_post) %}
-        <div class="blog_posts_item title_item border_{{ module.blog_feed.card_border_style }}">
-          <div class="blog_item_inn">
-            {% if post.post_list_summary_featured_image %}
-            <div class="feature_img">
-              <img src="{{ resize_image_url( post.post_list_summary_featured_image,767 ) }}" alt="{{ post.name}}">
-            </div>
-            {% endif %}
-            <div class="post_body">
-              {% if post.tag_list %}
-              <div class="post_meta eyebrow_text">
-                {% for tag in post.tag_list %}
-                {% if loop.first %}
-                 <a href="{{ blog_tag_url(post.content_group_id, tag.slug) }}">
-                  {{tag.name}}</a>
-                {% endif %}
-                {% endfor %}
+      {% for post in rec_posts %}
+      {% set postURL = post.absolute_url %}
+        {% if content.absolute_url != post.absolute_url and i < max_posts %}
+          <div class="blog_posts_item  border_{{ module.blog_feed.card_border_style }}">
+            <div class="blog_item_inn">
+              <div class="feature_img">
+                <img src="{{ resize_image_url( post.post_list_summary_featured_image,767 ) }}" alt="{{ post.name}}">
               </div>
-              {% endif %}
-              {% if post.name %}
-              <div class="post_title">
-   <h4>
-                  <a href="{{ postURL }}">{{ post.name}}</a>
-                </h4>
-              </div>
-              {% endif %}
-             <div class="post-read-more">
-                <a class="more-link {{ module.blog_feed.button_style }} {{ module.blog_feed.button_theme }}" href="{{ postURL }}">
-                  <span>{{ module.blog_feed.read_more_text }}</span>
-                  {% if module.blog_feed.button_style == "arrow-link" %}
-                  
-                      <span class="arrowbtn">
-                      <svg class="btnArrow1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
-                      <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <div class="post_body">
+                <div class="post_meta eyebrow_text">
+                  {% for tag in post.tag_list %}
+                  {% if loop.first %}
+                  <a href="{{ blog_tag_url(module.blog_feed.select_blog, tag.slug) }}">
+                    {{tag.name}}</a>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+                <div class="post_title">
+                  <h4>
+                    <a href="{{ postURL }}">{{ post.name}}</a>
+                  </h4>
+                </div>
+                <div class="post-read-more">
+                  <a class="more-link {{ module.blog_feed.button_style }} {{ module.blog_feed.button_theme }}" href="{{ postURL }}">
+                    <span>{{ module.blog_feed.read_more_text }}</span>
+                    {% if module.blog_feed.button_style == "arrow-link" %}
+                
+                    <span class="arrowbtn">
+                    <svg class="btnArrow1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
+                    <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                    <svg class="btnArrow2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
+                    <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  </span>
+                    {% elif module.blog_feed.button_style == "hs-button" %}
+                    {% if module.blog_feed.enable_arrow %}
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 12H20.25Z" fill="currentcolor"/>
+                      <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                      <svg class="btnArrow2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
-                      <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    </span>
-                      {% elif module.blog_feed.button_style == "hs-button" %}
-                      {% if module.blog_feed.enable_arrow %}
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 12H20.25Z" fill="currentcolor"/>
-                        <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      {% endif %}
-                      {% else %}
-                      {% endif %}
-                </a>
+                    {% endif %}
+                    {% else %}
+                    {% endif %}
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        {% endfor %}
-      </div>
+          {% set i = i + 1 %}
+          {% endif %}
+      {% endfor %}
+
     </div>
-    {% endif %}
-  
-  
   </div>
-  </section>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  {% endif %}
+
+  {% if module.blog_feed.blog_post_type == "title" %}
+  <div class="blog_posts_row">
+    <div class="blog_posts_items">
+
+      {% for item in module.blog_feed.post_items %}
+      
+      {% set post = content_by_id(item.select_post) %}
+      <div class="blog_posts_item title_item border_{{ module.blog_feed.card_border_style }}">
+        <div class="blog_item_inn">
+          {% if post.post_list_summary_featured_image %}
+          <div class="feature_img">
+            <img src="{{ resize_image_url( post.post_list_summary_featured_image,767 ) }}" alt="{{ post.name}}">
+          </div>
+          {% endif %}
+          <div class="post_body">
+            {% if post.tag_list %}
+            <div class="post_meta eyebrow_text">
+              {% for tag in post.tag_list %}
+              {% if loop.first %}
+                <a href="{{ blog_tag_url(post.content_group_id, tag.slug) }}">
+                {{tag.name}}</a>
+              {% endif %}
+              {% endfor %}
+            </div>
+            {% endif %}
+            {% if post.name %}
+            <div class="post_title">
+            <h4>
+                <a href="{{ post.absolute_url }}">{{ post.name}}</a>
+              </h4>
+            </div>
+            {% endif %}
+            <div class="post-read-more">
+              <a class="more-link {{ module.blog_feed.button_style }} {{ module.blog_feed.button_theme }}" href="{{ post.absolute_url }}">
+                <span>{{ module.blog_feed.read_more_text }}</span>
+                {% if module.blog_feed.button_style == "arrow-link" %}
+                
+                    <span class="arrowbtn">
+                    <svg class="btnArrow1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
+                    <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                    <svg class="btnArrow2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6Z" fill="#6ABE7A"/>
+                    <path d="M6 18L18 6" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.25 6H18V15.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  </span>
+                    {% elif module.blog_feed.button_style == "hs-button" %}
+                    {% if module.blog_feed.enable_arrow %}
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 12H20.25Z" fill="currentcolor"/>
+                      <path d="M3.75 12H20.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    {% endif %}
+                    {% else %}
+                    {% endif %}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -61,9 +61,11 @@
           cursor: pointer;
           padding-bottom: 17px;
           border-bottom: 2px solid transparent;
+
           @include tabletmid {
             padding-bottom: 0;
           }
+
           .tab-title {
             @include size14;
             font-weight: 600;
@@ -72,6 +74,7 @@
             margin-bottom: 12px;
             display: flex;
             gap: 12px;
+            min-height: 44px;
             color: $headingColor;
 
             span.title-icon {
@@ -120,9 +123,11 @@
         flex-direction: column;
         gap: 24px;
         width: 80%;
+
         @include tabletmid {
           margin-bottom: 17px;
         }
+
         .cnt {
           color: $headingColor;
           opacity: 0.79;
@@ -134,9 +139,9 @@
           margin-bottom: 0;
         }
 
-        h3 + p,
-        h2 + p,
-        h1 + p {
+        h3+p,
+        h2+p,
+        h1+p {
           margin-top: 0;
         }
       }

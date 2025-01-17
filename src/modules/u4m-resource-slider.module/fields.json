@@ -444,6 +444,14 @@
     "label" : "Count",
     "required" : false,
     "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "resources.resource_type",
+      "controlling_value_regex" : "recent|tag",
+      "property" : null,
+      "operator" : "MATCHES_REGEX",
+      "access" : null
+    },
     "display" : "text",
     "step" : 1,
     "type" : "number",

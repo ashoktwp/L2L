@@ -9,8 +9,8 @@
 // //   slidesToShow: 8,
 // //   cssEase: 'linear',
 // //   pauseOnFocus: false,
-// //   pauseOnHover: true,   
-// //   rtl: false,   
+// //   pauseOnHover: true,
+// //   rtl: false,
 // //   arrows: false,
 // //   swipe: false,
 // //   slidesToShow: 8,
@@ -18,7 +18,7 @@
 // //   autoplay: true,
 // //   autoplaySpeed: 0,
 // //   speed: 2000,
-// //   pauseOnHover: true,  
+// //   pauseOnHover: true,
 // //   cssEase: 'linear',
 
 // //   responsive: [
@@ -43,15 +43,11 @@
 // //   ]
 // // });
 
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  new Splide('.MainsliderCnntt.splide', {
-    type   : 'loop',
-    drag   : 'free',
-    focus  : 'center',
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".MainsliderCnntt.splide", {
+    type: "loop",
+    drag: "free",
+    focus: "center",
     perPage: 6,
     autoScroll: {
       speed: 2.4,
@@ -59,24 +55,18 @@ document.addEventListener('DOMContentLoaded', function () {
     arrows: false,
     pagination: false,
     breakpoints: {
-      650: {
-        perPage: 1,
-
+      680: {
+        perPage: 2,
       },
       768: {
-        perPage: 2,
-
+        perPage: 3,
       },
       992: {
-        perPage: 3,
-
+        perPage: 4,
       },
       1200: {
         perPage: 5,
-
       },
-    }
-  }).mount( window.splide.Extensions );
+    },
+  }).mount(window.splide.Extensions);
 });
-
-

@@ -38,6 +38,10 @@
         height: 67px !important;
         width: auto !important;
       }
+      @include tabletvert {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     .slick-slide {

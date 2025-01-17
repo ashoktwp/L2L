@@ -32,6 +32,10 @@ section.u4m-hero-left-aligned {
     min-height: auto;
   }
 
+  @include phone {
+    padding-top: 50px;
+  }
+
   .hero-align-center {
     .intro_wrapp {
       flex-direction: column-reverse;
@@ -144,9 +148,18 @@ section.u4m-hero-left-aligned {
 
     .intro_btn_wrap {
       justify-content: flex-start;
+
       .hs-button {
         min-width: 184px;
         justify-content: center;
+      }
+
+      .btn_item .arrow-link {
+        margin-left: 13px;
+        margin-top: 20px;
+        @include tabletvert {
+          margin: 0;
+        }
       }
     }
 
@@ -157,7 +170,8 @@ section.u4m-hero-left-aligned {
     .list-item ul {
       margin: 0;
       padding: 0;
-      padding-left: 20px;
+      padding-left: 0;
+      list-style-type: none;
     }
 
     .list-item ul .icon svg {

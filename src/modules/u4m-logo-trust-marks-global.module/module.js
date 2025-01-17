@@ -32,16 +32,13 @@
 //   ]
 // });
 
-
-
 // const $gallery = $('.MainsliderCnntt');
 
-
-document.addEventListener('DOMContentLoaded', function () {
-  new Splide('.MainsliderCnntt.splide', {
-    type   : 'loop',
-    drag   : 'free',
-    focus  : 'center',
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".MainsliderCnntt.splide", {
+    type: "loop",
+    drag: "free",
+    focus: "center",
     perPage: 6,
     autoScroll: {
       speed: 2.4,
@@ -49,23 +46,18 @@ document.addEventListener('DOMContentLoaded', function () {
     arrows: false,
     pagination: false,
     breakpoints: {
-      650: {
-        perPage: 1,
-
+      680: {
+        perPage: 2,
       },
       768: {
-        perPage: 2,
-
+        perPage: 3,
       },
       992: {
-        perPage: 3,
-
+        perPage: 4,
       },
       1200: {
         perPage: 5,
-
       },
-    }
-  }).mount( window.splide.Extensions );
+    },
+  }).mount(window.splide.Extensions);
 });
-
