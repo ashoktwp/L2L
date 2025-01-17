@@ -2,9 +2,6 @@
   {% set moduleName = 'u4m-resources-listing' %}
   {% include "../partials/u4-module-includes.html" %}
 
-
-
-
   {% if module.intro_content.include_eyebrow_text or module.intro_content.include_button or module.intro_content.include_content or module.intro_content.include_heading  %}
   <div class='blog-banner'>
     <div class='page-center'>
@@ -62,55 +59,131 @@
 
 
 {% set table =  module.filtered_content.select_hubdb_table  %}
-{% set query = '-hs_created_at' %}
-{% set resouces = hubdb_table_rows(table,query) %}
+{% set query = ""%}
 
-{% set ft_query = '-hs_created_at&limit=10000' %}
-{% set ft_resouces = hubdb_table_rows(table,ft_query) %}
+
+{% set batch_num = module.filtered_content.post_count %}
+
+
+
+{% if not request.query_dict.page_num %}
+{% set page_num = 1 %}
+{% set offset_num = 0 %}
+{% elif request.query_dict.page_num %}
+{% set page_num = request.query_dict.page_num %}
+{% set offset_num = page_num|add(-1) * batch_num %}
+{% endif %}
+
+
+{% set limit = "&limit=" ~ batch_num ~ "&offset=" ~ offset_num %}
+
+
+{% set query =  "orderBy=hs_created_at" %}
+
+
+
+{% if request.query_dict.topic %}
+{% set query = query ~ '&type__in=' ~ request.query_dict.topic|urlencode %}
+{% endif %}
+
+{% if request.query_dict.type %}
+{% set query = query  ~ '&topics_tags__in=' ~ request.query_dict.type|urlencode %}
+{% endif %}
+
+
+{% if request.query_dict.search %}
+{% set query = query  ~ '&name__icontains=' ~ request.query_dict.search|urlencode %}
+{% endif %}
+
+
+{% set resouces = hubdb_table_rows(table,query ~ limit) %}
+{% set rowType = [] %}
+{% set rowTagsType = [] %}
+
+
+{#  <p> request.query_dict.topic -  {{request.query_dict.topic|urlencode}}</p> #}
+
+{% set query2 = "orderBy=hs_created_at" %}
+
+{% set ft_resouces = hubdb_table_rows(table,query~"&limit=1000") %}
+
+{% for tableData in ft_resouces %}
+{% if   tableData.type.name == request.query_dict.topic %} 
+
+{% for tag in tableData.topics_tags %}
+{% do rowTagsType.append(tag.name) %}
+{% endfor %}
+
+{% else %}
+
+{% for tag in tableData.topics_tags %}
+{% do rowTagsType.append(tag.name) %}
+{% endfor %}
+
+{% endif %}
+{% endfor %}
+
+
+
+{#<ul> {% for tags in rowTagsType|unique  %}
+  <li> {{loop.index}} <span> {{tags}} &nbsp;</span></li>
+  {% endfor %}</ul>#}
 
 
 
 <div class="main-listing {{ module.filtered_content.select_bg_color }}">
   <div class='site-search-wrap'>
     <div class='page-center'>
+
       <div class=" SearchBtn search-col">
         <div class="srchSection">
-          <input type="text" id="filterTitle{{ name|replace('widget_','')|replace('module_','') }}" placeholder="Search..." class="resourceInput">
+          <input type="text" value="" id="filterTitle{{ name|replace('widget_','')|replace('module_','') }}" name="search" placeholder="Search..." class="resourceInput">
           <div class="Searchbtn">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.29922C0 2.82065 2.82065 0 6.29923 0C9.7778 0 12.5985 2.82065 12.5985 6.29922C12.5985 7.78304 12.0805 9.15487 11.2196 10.2327L13.7953 12.8084C14.0682 13.0814 14.0682 13.5223 13.7953 13.7953C13.5223 14.0683 13.0814 14.0683 12.8084 13.7953L10.2327 11.2196C9.15487 12.0805 7.79004 12.5984 6.29923 12.5984C2.82065 12.5984 0 9.7778 0 6.29922ZM6.29923 1.39983C3.59056 1.39983 1.39983 3.59056 1.39983 6.29922C1.39983 9.00789 3.59056 11.1986 6.29923 11.1986C7.65006 11.1986 8.87487 10.6527 9.76377 9.76381C10.6527 8.87492 11.1986 7.65006 11.1986 6.29922C11.1986 3.59056 9.00789 1.39983 6.29923 1.39983Z" fill="#00161D"></path>
             </svg></div>
         </div>
       </div> 
+
       <div class=" selctArrow tag-col">   
         <div class="filter_label type_filter_label" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
           Filter by Topic
         </div>
         <div class="filter_dropdown typeSelect resourceSelect type_filter">
-          {% for tag in hubdb_table_column(table, 'topics_tags').options %}
+          {% for tag in rowTagsType|unique  %}
           <div>
             <label for="type{{loop.index}}">
-              <input type="checkbox" class="filter_input" id="type{{loop.index}}" name="type" label="{{ tag.name }}" value="{{ tag.name|lower|replace(' ','-') }}" data-query="{{ request.query_dict.type }}" {% if request.query_dict.type is containing tag.name|lower|replace(' ','-') %}checked{% endif %} />
-              <span class="tag_name">{{ tag.name }}</span>
+              <input type="checkbox" class="filter_input" id="type{{loop.index}}" name="type" label="{{ tag }}" value="{{ tag|urlencode }}" data-query="{{ request.query_dict.type }}" {% if request.query_dict.type is containing tag|urlencode %}checked{% endif %} />
+              <span class="tag_name">{{ tag }}</span>
             </label>
           </div>
           {% endfor %}
         </div>
-
       </div>   
-      <div class=" selctArrow tag-col">  
-        <select name="topic" id="topic" class="topicSelect resourceSelect" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
-          <option value="" selected>Filter by Type</option> 
+
+
+      <div class=" selctArrow tag-col">   
+        <div class="filter_label topic_filter_label" style="background-image: url({{ get_asset_url('../../templates/images/dropdownArrow.png') }});">
+          Filter by Type
+        </div>
+        <div class="filter_dropdown topicSelect resourceSelect topic_filter" data-value="">
+          <div class="topic_ele" data-topic="" data-topic-label>
+            <span class="tag_name">Filter by Type</span>
+          </div>
           {% for type in hubdb_table_column(table, 'type').options %}
-          <option value="{{ type.name|lower|replace(' ','-') }}">{{ type.name }}</option>
+          <div class="topic_ele" data-topic="{{ type.name|urlencode }}" data-topic-label="{{ type.name }}">
+            <span class="tag_name">{{ type.name }}</span>
+          </div>
           {% endfor %}
-        </select> 
+        </div>
       </div>  
+
     </div>
   </div>
   <div class='listing-wrap'>
     <div class='page-center cardSctn'>
       <div class='flex-row resourceList'>
+        {% set resouceCount = resouces|length%}
         {% for row in resouces %}
         <div class='resourceCard post-item {{ row.type.name|lower|replace(' ','-') }} {% for tag in row.topics_tags %}{{ tag.name|lower|replace(' ','-') }} {% endfor %}'>
           <div class='post-item-inner  {% if not row.image.url %}noImage{% endif %}'>
@@ -153,16 +226,79 @@
           </div>
         </div>
         {% endfor %}
+
+
+        {% if resouceCount == 0%}
+        <div class="blank_contentWrap">
+          <h4>
+            Nothing found, Try another combination.
+          </h4>
+        </div>
+        {% endif %}
+
       </div>
     </div>
-    <ul id="pagination{{ name|replace('widget_','')|replace('module_','') }}" class="pagination"></ul> 
+
+    <div class="pagi_wranation" >
+
+      {% set nav = hubdb_table_rows(table, query) %}
+      {% set total_pages = nav|length|divide(batch_num)%} 
+      {% set more_pages = nav|length % batch_num %}
+
+      <nav  id="pagination{{ name|replace('widget_','')|replace('module_','') }}" class="hbdb_dsp_table_pagination pagination" data-total="{{total_pages}}" data-page="{{page_num}}">
+        <div class="nav-links">
+
+
+          {% if page_num > 1 %}
+          <a class="prev page-numbers" href="{{ content.absolute_url }}?topic={{request.query_dict.topic|urlencode}}&type={{request.query_dict.type|urlencode}}&page_num={{ page_num|add(-1) }}" data-page-num="{{ page_num|add(-1) }}">
+            <svg style="
+                        transform: rotate(180deg);
+                        " xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+              <path d="M6.85403 0.145971L11.854 5.14597C11.9005 5.19241 11.9374 5.24755 11.9626 5.30825C11.9877 5.36895 12.0007 5.43401 12.0007 5.49972C12.0007 5.56543 11.9877 5.63049 11.9626 5.69119C11.9374 5.75189 11.9005 5.80704 11.854 5.85347L6.85403 10.8535C6.76021 10.9473 6.63296 11 6.50028 11C6.3676 11 6.24035 10.9473 6.14653 10.8535C6.05271 10.7597 6 10.6324 6 10.4997C6 10.367 6.05271 10.2398 6.14653 10.146L10.7934 5.49972L6.14653 0.853472C6.10007 0.807016 6.06322 0.751866 6.03808 0.69117C6.01294 0.630473 6 0.565419 6 0.499722C6 0.434024 6.01294 0.36897 6.03808 0.308273C6.06322 0.247577 6.10007 0.192427 6.14653 0.145971C6.19298 0.0995159 6.24813 0.0626669 6.30883 0.0375252C6.36953 0.0123835 6.43458 -0.000556946 6.50028 -0.000556946C6.56598 -0.000556946 6.63103 0.0123835 6.69173 0.0375252C6.75242 0.0626669 6.80757 0.0995159 6.85403 0.145971Z" fill="#2E2E2E"></path>
+              <path d="M0.854028 0.145971L5.85403 5.14597C5.90052 5.19241 5.9374 5.24755 5.96256 5.30825C5.98772 5.36895 6.00067 5.43401 6.00067 5.49972C6.00067 5.56543 5.98772 5.63049 5.96256 5.69119C5.9374 5.75189 5.90052 5.80704 5.85403 5.85347L0.854028 10.8535C0.760208 10.9473 0.63296 11 0.500278 11C0.367596 11 0.240348 10.9473 0.146528 10.8535C0.0527074 10.7597 0 10.6324 0 10.4997C0 10.367 0.0527074 10.2398 0.146528 10.146L4.7934 5.49972L0.146528 0.853472C0.100073 0.807016 0.0632225 0.751866 0.0380812 0.69117C0.0129398 0.630473 0 0.565419 0 0.499722C0 0.434024 0.0129398 0.36897 0.0380812 0.308273C0.0632225 0.247577 0.100073 0.192427 0.146528 0.145971C0.192983 0.0995159 0.248133 0.0626669 0.30883 0.0375252C0.369526 0.0123835 0.434581 -0.000556946 0.500278 -0.000556946C0.565975 -0.000556946 0.63103 0.0123835 0.691726 0.0375252C0.752423 0.0626669 0.807573 0.0995159 0.854028 0.145971Z" fill="#2E2E2E"></path>
+            </svg>
+          </a>
+          {% endif %}
+
+
+          {% set page_list = [-2, -1, 0, 1, 2] %}
+          {% if total_pages - page_num == 1 %}{% set offset = -1 %}
+          {% elif total_pages - page_num == 0 %}{% set offset = -2 %}
+          {% elif page_num == 2 %}{% set offset = 1 %}
+          {% elif page_num == 1 %}{% set offset = 2 %}
+          {% else %}{% set offset = 0 %}{% endif %}
+
+
+          {% for page in page_list %}
+          {% set this_page = page_num|add(page)|add(offset) %}
+          {% if this_page > 0 and this_page <= total_pages %}
+          <a {% if this_page == page_num %}class="active"{% endif %} href="{{ content.absolute_url }}?topic={{request.query_dict.topic|urlencode}}&type={{request.query_dict.type|urlencode}}&page_num={{ this_page }}">{{ this_page }}</a>
+          {% endif %}
+          {% endfor %}
+
+
+
+          {% if total_pages > page_num %}
+          <a class="next page-numbers {% if page_num >= total_pages %}hide page_num{% endif %}" href="{{ content.absolute_url }}?topic={{request.query_dict.topic|urlencode}}&type={{request.query_dict.type|urlencode}}&page_num={{ page_num|add(1) }}" data-page-num="{{ page_num|add(1) }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+              <path d="M6.85403 0.145971L11.854 5.14597C11.9005 5.19241 11.9374 5.24755 11.9626 5.30825C11.9877 5.36895 12.0007 5.43401 12.0007 5.49972C12.0007 5.56543 11.9877 5.63049 11.9626 5.69119C11.9374 5.75189 11.9005 5.80704 11.854 5.85347L6.85403 10.8535C6.76021 10.9473 6.63296 11 6.50028 11C6.3676 11 6.24035 10.9473 6.14653 10.8535C6.05271 10.7597 6 10.6324 6 10.4997C6 10.367 6.05271 10.2398 6.14653 10.146L10.7934 5.49972L6.14653 0.853472C6.10007 0.807016 6.06322 0.751866 6.03808 0.69117C6.01294 0.630473 6 0.565419 6 0.499722C6 0.434024 6.01294 0.36897 6.03808 0.308273C6.06322 0.247577 6.10007 0.192427 6.14653 0.145971C6.19298 0.0995159 6.24813 0.0626669 6.30883 0.0375252C6.36953 0.0123835 6.43458 -0.000556946 6.50028 -0.000556946C6.56598 -0.000556946 6.63103 0.0123835 6.69173 0.0375252C6.75242 0.0626669 6.80757 0.0995159 6.85403 0.145971Z" fill="#2E2E2E"></path>
+              <path d="M0.854028 0.145971L5.85403 5.14597C5.90052 5.19241 5.9374 5.24755 5.96256 5.30825C5.98772 5.36895 6.00067 5.43401 6.00067 5.49972C6.00067 5.56543 5.98772 5.63049 5.96256 5.69119C5.9374 5.75189 5.90052 5.80704 5.85403 5.85347L0.854028 10.8535C0.760208 10.9473 0.63296 11 0.500278 11C0.367596 11 0.240348 10.9473 0.146528 10.8535C0.0527074 10.7597 0 10.6324 0 10.4997C0 10.367 0.0527074 10.2398 0.146528 10.146L4.7934 5.49972L0.146528 0.853472C0.100073 0.807016 0.0632225 0.751866 0.0380812 0.69117C0.0129398 0.630473 0 0.565419 0 0.499722C0 0.434024 0.0129398 0.36897 0.0380812 0.308273C0.0632225 0.247577 0.100073 0.192427 0.146528 0.145971C0.192983 0.0995159 0.248133 0.0626669 0.30883 0.0375252C0.369526 0.0123835 0.434581 -0.000556946 0.500278 -0.000556946C0.565975 -0.000556946 0.63103 0.0123835 0.691726 0.0375252C0.752423 0.0626669 0.807573 0.0995159 0.854028 0.145971Z" fill="#2E2E2E"></path>
+            </svg>
+          </a>
+          {% endif %}
+
+
+
+        </div>
+      </nav>
+
+
+
+    </div>
+
   </div>
 </div>
 </div>
-
-
-
-
 
 
 
