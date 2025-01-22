@@ -82,24 +82,16 @@ var typeArray = typeParam?.length > 0 ? typeParam?.split(",") : [];
 
 // ========================
 
-
-
 // ========================
-
-function initEventListeners() {
-  console.log("init initialized");
-}
 
 $(document).on("change", ".typeSelect .filter_input", function (event) {
   const value = $(this).val();
-  //   console.log(value, "value");
 
   var url = window.location.href.split("?")[0];
   var newUrl;
 
   const inputValue = searchField.value;
   let topicSelectValue = $(".topicSelect").attr("data-value");
-  //   console.log(topicSelectValue, "topicSelectValue");
 
   if ($(this).is(":checked")) {
     if (value?.length > 0) {
@@ -111,13 +103,8 @@ $(document).on("change", ".typeSelect .filter_input", function (event) {
   }
 
   var printValue = typeArray;
-  //   console.log(typeArray, "typeArray");
-
-  //   console.log(typeArray.length, "typeArray");
-  //   console.log(topicSelectValue.length, "topicSelectValue");
 
 
-  //   
 
   var printValue = typeArray;
   if (typeArray != "") {
@@ -273,6 +260,26 @@ $('.srchSection .resourceInput').on('keyup', function(event) {
 
 
 // ==============
+function loadEvents() {
+  const url = window.location.href;
+  const path = new URL(url).pathname;
+  const parts = path.split("/resources");
 
+  var topicText = parts.length > 1 ? parts[1].replace("/", "") : null;
 
+  console.log('topicText', topicText);
+
+  $(".topic_ele").each(function() {
+    var getTopic = $(this).attr("data-topic-url");
+    if (getTopic === topicText) {
+      $(this).click();
+    }
+  });
+
+  console.log('loadEvents loaded');
+}
+
+$(document).ready(function() {
+  loadEvents();
+});
 
