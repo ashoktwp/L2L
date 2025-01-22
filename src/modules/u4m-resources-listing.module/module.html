@@ -171,7 +171,7 @@
             <span class="tag_name">Filter by Type</span>
           </div>
           {% for type in hubdb_table_column(table, 'type').options %}
-          <div class="topic_ele" data-topic="{{ type.name|urlencode }}" data-topic-label="{{ type.name }}">
+          <div class="topic_ele" data-topic="{{ type.name|urlencode }}" data-topic-label="{{ type.name }}" data-topic-url="{{ type.name|replace(' ','-')|lower }}">
             <span class="tag_name">{{ type.name }}</span>
           </div>
           {% endfor %}
