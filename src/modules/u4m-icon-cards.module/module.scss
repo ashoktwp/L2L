@@ -136,15 +136,18 @@
               flex-shrink: 0;
 
               &.type1 {
-                background-image: $iconbg1;
+                // background-image: $iconbg1;
+                background-image: $iconbg1New;
               }
 
               &.type2 {
-                background-image: $iconbg2;
+                // background-image: $iconbg2;
+                background-image: $iconbg2New;
               }
 
               &.type3 {
-                background-image: $iconbg3;
+                // background-image: $iconbg3;
+                background-image: $iconbg3New;
               }
 
               .title-icon {

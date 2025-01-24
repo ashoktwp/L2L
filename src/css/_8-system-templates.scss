@@ -116,8 +116,32 @@ section.u4m-search-results {
   margin: 100rem auto;
 
   ul.hs-search-results__listing {
+    li {
+      &:after {
+        content: "";
+        display: block;
+        border-bottom: 2px solid $Forest_Green;
+        margin-bottom: 30px;
+      }
+    }
     a {
+      @include h3;
+      color: $Forest_Green;
+      margin-bottom: 10rem;
+      text-decoration: underline;
+    }
+    p.hs-search-results__description {
+      margin-top: 0;
+      letter-spacing: 0;
+      font-family: inherit;
       font-size: 20rem;
+      line-height: 1.4;
+    }
+  }
+
+  .hs-search-results__pagination {
+    a {
+      color: $Forest_Green;
     }
   }
 }
