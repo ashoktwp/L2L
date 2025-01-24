@@ -41,7 +41,6 @@
 
       h1 {
         margin-bottom: 60px;
-        // color: $white;
       }
     }
 
@@ -424,8 +423,6 @@
     }
   }
 
-  //
-
   .selctArrow {
     position: relative;
   }
@@ -509,15 +506,19 @@
     }
   }
 
-  //
-
   .nav-links {
     display: flex;
   }
 
-  .filter_dropdown > div {
-    border-bottom: 1px solid $border_color;
-    cursor: pointer;
+  .filter_dropdown {
+    & > div {
+      border-bottom: 1px solid $border_color;
+      cursor: pointer;
+    }
+
+    &.active_tag_url_matched {
+      display: none;
+    }
   }
 
   .filter_dropdown .topic_ele {

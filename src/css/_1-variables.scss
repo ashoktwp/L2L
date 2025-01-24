@@ -106,6 +106,54 @@ $iconbg3: linear-gradient(
   rgba($Menthol, 0.45) 100%
 );
 
+//
+
+// iconbg1New
+// linear-gradient(
+//   225deg,
+//   rgba($grey, 0.45) 0%,
+//   rgba($Dark_jungle, 0.45) 38%,
+//   rgba($Dark_jungle, 0.45) 66%,
+//   rgba($L2L_green, 0.45) 100%
+//     linear-gradient(
+//       225deg,
+//       rgba(191, 191, 191, 1) 0%,
+//       rgba(14, 37, 20, 1) 38%,
+//       rgba(14, 37, 20, 1) 66%,
+//       rgba(64, 150, 80, 1) 100%
+//     )
+//     ;
+// );
+
+$iconbg1New: linear-gradient(
+  225deg,
+  $grey 0%,
+  $Nori_Green 38%,
+  $Nori_Green 66%,
+  $L2L_green 100%
+);
+
+// linear-gradient(225deg, rgba(182, 182, 182, 1) 0%, rgba(14, 37, 20, 1) 38%, rgba(14, 37, 20, 1) 66%, rgba(247, 195, 110, 1) 100%);
+
+$iconbg2New: linear-gradient(
+  225deg,
+  $grey2 0%,
+  $Dark_jungle 38%,
+  $Dark_jungle 66%,
+  $Prismic_mango 100%
+);
+
+// linear-gradient(225deg, rgba(191, 191, 191, 1) 0%, rgba(14, 37, 20, 1) 38%, rgba(14, 37, 20, 1) 66%, rgba(192, 252, 149, 1) 100%);
+$iconbg3New: linear-gradient(
+  225deg,
+  $grey 0%,
+  $Nori_Green 38%,
+  $Nori_Green 66%,
+  $Menthol 100%
+);
+
+//
+
 $darkBack: #000000;
 $arrowDots: #f08c1f;
 // ==============

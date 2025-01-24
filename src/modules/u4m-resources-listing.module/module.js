@@ -272,7 +272,9 @@ function loadEvents() {
   $(".topic_ele").each(function() {
     var getTopic = $(this).attr("data-topic-url");
     if (getTopic === topicText) {
+      $('.filter_dropdown.topicSelect').addClass('active_tag_url_matched pageis_',+getTopic)
       $(this).click();
+      console.log(getTopic ,'===', topicText)
     }
   });
 
