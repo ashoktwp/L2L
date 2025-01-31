@@ -229,7 +229,7 @@
   }
 
   .u4m-slider-tabs-left .slider-tabs-wrapper   .acc-items:not(.media_video) .progress-line {
-    transition-duration: 5000ms;
+    transition-duration: {{ module.module_settings.slider_duration * 1000 }}ms;
   }
 
   .u4m-slider-tabs-left .slider-tabs-wrapper .acc-open .progress-line {
@@ -264,7 +264,7 @@
     dots: false,
     autoplay: isPlaying,
     speed: 1000,
-    autoplaySpeed: 6000,
+    autoplaySpeed: {{ module.module_settings.slider_duration * 1000 }},
     pauseOnHover: true,
     asNavFor: '.{{name}} .slider_navbar',
   });
@@ -279,7 +279,7 @@
     infinite: false,
     pauseOnHover: true,
     speed: 1000,
-    autoplaySpeed: 6000,
+    autoplaySpeed: {{ module.module_settings.slider_duration * 1000 }},
     arrows: false,
     responsive: [
       {
