@@ -656,6 +656,20 @@
     "type" : "boolean",
     "display_width" : null,
     "default" : false
+  }, {
+    "id" : "00cd6057-bbfa-27ac-7d9d-098dee6cc406",
+    "name" : "slider_duration",
+    "label" : "Slider Duration",
+    "help_text" : "Duration in Seconds",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 1,
+    "max" : 30,
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 15
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -664,7 +678,8 @@
   "display_width" : null,
   "default" : {
     "top_content_left_align" : false,
-    "make_content_full_width" : false
+    "make_content_full_width" : false,
+    "slider_duration" : 15
   }
 }, {
   "id" : "module_overrides",
