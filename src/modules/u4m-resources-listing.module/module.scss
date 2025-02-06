@@ -213,16 +213,18 @@
           }
 
           svg {
+            color: $Olive_Green;
             width: 14px;
             height: 14px;
 
             path {
-              fill: currentColor;
+              fill: $Olive_Green;
             }
           }
 
-          &:not(:hover) {
+          &:hover {
             svg {
+              color: $Prismic_mango;
               path {
                 fill: $Prismic_mango;
               }
@@ -541,5 +543,31 @@
   .blank_contentWrap h4 {
     margin: 0;
     padding: 30px 10px;
+  }
+
+  a.more-link.arrow-link {
+    .arrowbtn {
+      svg {
+        fill: $Olive_Green;
+        color: $Olive_Green;
+
+        path {
+          fill: currentColor;
+        }
+      }
+    }
+
+    &:hover {
+      .arrowbtn {
+        svg {
+          fill: $Prismic_mango;
+          color: $Prismic_mango;
+
+          path {
+            fill: currentColor;
+          }
+        }
+      }
+    }
   }
 }

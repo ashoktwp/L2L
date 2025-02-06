@@ -1,7 +1,8 @@
 {% set moduleName = 'u4m-icon-card' %}
 {% include "../partials/u4-module-includes.html" %}
 
-  {#check command #}
+{#check command #}
+{% set settings_iconbg = module.module_settings.remove_cards_icon_background %}
 
 <div class="page-center  {{ module.module_settings.theme }}">
   <div class="intro_wrapp">
@@ -11,32 +12,33 @@
   <div class="card_wrap">
     <div class="card_flex flex_row ">
       {% for item in module.add_items %}
-      <div class="card_item cardinRow_{{ module.module_settings.cards_in_row }}">
+      {% set item_iconbg =  item.remove_icon_background %}
+      <div class="card_item cardinRow_{{ module.module_settings.cards_in_row }} {% if settings_iconbg %}  no_icon_bg setticonbg {% else %} {% if item_iconbg %} no_icon_bg itemiconbg{% endif %}{% endif %}">
         <div class="item_inr">
           <div class="item_inr_top">
             <div class="item_top_flex flex{{ item.icon_background }}">
               <div class="item_iconwrap {{ item.icon_background }}">
-              
-                  {% if item.select_icon_type %}
-                  <span class="title-icon">
-                    {% if item.select_icon_type == "image" %}
-                    {% if item.icon_image.src %}
-                    {% set loadingAttr = item.icon_image.loading != 'disabled' ? 'loading="{{ item.icon_image.loading|escape_attr }}"' : '' %}
-                    <img src="{{ item.icon_image.src|escape_url }}" alt="{{ item.icon_image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
-                    {% endif %}
-                    {% elif item.select_icon_type == "icon" %}
-                    {% icon
+
+                {% if item.select_icon_type %}
+                <span class="title-icon">
+                  {% if item.select_icon_type == "image" %}
+                  {% if item.icon_image.src %}
+                  {% set loadingAttr = item.icon_image.loading != 'disabled' ? 'loading="{{ item.icon_image.loading|escape_attr }}"' : '' %}
+                  <img src="{{ item.icon_image.src|escape_url }}" alt="{{ item.icon_image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                  {% elif item.select_icon_type == "icon" %}
+                  {% icon
 		name="{{ item.icon_field.name }}"
 		style="{{ item.icon_field.type }}"
 		unicode="{{ item.icon_field.unicode }}"
 		icon_set="{{ item.icon_field.icon_set }}"
 	%}
-                    {% elif item.select_icon_type == "custom" %}
-                    <i class="ph ph-{{ item.custom_icon }}"></i>
-                    {% endif %}
-                  </span>
+                  {% elif item.select_icon_type == "custom" %}
+                  <i class="ph ph-{{ item.custom_icon }}"></i>
                   {% endif %}
-                
+                </span>
+                {% endif %}
+
 
               </div>
               <div class="item_ttl">
@@ -70,4 +72,3 @@
 
 
 
- 
