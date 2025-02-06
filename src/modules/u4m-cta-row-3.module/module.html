@@ -1,8 +1,11 @@
 {% set moduleName = 'u4m-cta-row-3' %}
 {% include "../partials/u4-module-includes.html" %}
 
+
+
+
 <div class="page-center  {{ module.module_settings.theme }}">
-  <div class="cta-content-row flex_row bg_{{ module.container_background_settings.background_type }} bg_pos_{{ module.container_background_settings.select_background_position }}">
+  <div class="cta-content-row flex_row {% if module.container_background_settings.background_type == "image" %}gradient3{% endif %} bg_{{ module.container_background_settings.background_type }} bg_pos_{{ module.container_background_settings.select_background_position }}">
     {% if module.container_background_settings.background_type == "color" %}
     <div
          class="bg_overlay bg_color {{ module.container_background_settings.select_color }}"></div>

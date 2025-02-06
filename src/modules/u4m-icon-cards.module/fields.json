@@ -381,7 +381,7 @@
   "children" : [ {
     "id" : "22e18d90-0cd1-dff0-1f98-be0f49fccf11",
     "name" : "icon_background",
-    "label" : "Select Icon Background",
+    "label" : "Select Theme",
     "required" : false,
     "locked" : false,
     "display" : "select",
@@ -392,6 +392,16 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "type1"
+  }, {
+    "id" : "efa12ddd-a5b7-c8ea-69a2-8c2b3857fde8",
+    "name" : "remove_icon_background",
+    "label" : "Remove Icon Background",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
   }, {
     "id" : "1695bd86-626a-8b52-16fe-64e627ccb0bf",
     "name" : "select_icon_type",
@@ -725,7 +735,8 @@
         "no_follow" : false
       },
       "enable_arrow" : false
-    } ]
+    } ],
+    "boolean_field" : false
   }, {
     "icon_background" : "type1",
     "select_icon_type" : "icon",
@@ -759,7 +770,8 @@
         "no_follow" : false
       },
       "enable_arrow" : false
-    } ]
+    } ],
+    "boolean_field" : false
   }, {
     "icon_background" : "type1",
     "select_icon_type" : "icon",
@@ -793,7 +805,8 @@
         "no_follow" : false
       },
       "enable_arrow" : false
-    } ]
+    } ],
+    "boolean_field" : false
   } ]
 }, {
   "id" : "8437904d-0b52-ad6b-1e2e-d5780352fb2d",
@@ -815,6 +828,16 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "two"
+  }, {
+    "id" : "19b19d0d-9d3d-e9b9-f472-a80132e51dd1",
+    "name" : "remove_cards_icon_background",
+    "label" : "Remove Cards Icon Background",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -822,7 +845,8 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
-    "cards_in_row" : "two"
+    "cards_in_row" : "two",
+    "remove_cards_icon_background" : false
   }
 }, {
   "id" : "module_overrides",
