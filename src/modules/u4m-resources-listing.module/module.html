@@ -133,7 +133,7 @@
 
 <div class="main-listing {{ module.filtered_content.select_bg_color }}">
   <div class='site-search-wrap'>
-    <div class='page-center'>
+    <div class='page-center updated'>
 
       <div class=" SearchBtn search-col">
         <div class="srchSection">
@@ -242,7 +242,7 @@
     <div class="pagi_wranation" >
 
       {% set nav = hubdb_table_rows(table, query) %}
-      {% set total_pages = nav|length|divide(batch_num)%} 
+      {% set total_pages = (nav|length/batch_num)|round(0, 'ceil') %} 
       {% set more_pages = nav|length % batch_num %}
 
       <nav  id="pagination{{ name|replace('widget_','')|replace('module_','') }}" class="hbdb_dsp_table_pagination pagination" data-total="{{total_pages}}" data-page="{{page_num}}">
